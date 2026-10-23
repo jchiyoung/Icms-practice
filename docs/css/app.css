@@ -219,6 +219,17 @@ textarea { min-height: 90px; resize: vertical; }
 }
 .setup p { margin: 0; font-weight: 750; }
 .mode-note { color: var(--muted); font-weight: 500; }
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 0;
+  font-weight: 650;
+}
+.check input { width: 22px; height: 22px; margin-top: 2px; flex: none; }
+.domain-block { display: grid; gap: 2px; margin: 4px 0 10px; }
+.domain-check { font-weight: 800; color: var(--navy); }
+button:disabled { opacity: 0.55; cursor: default; }
 
 .topics { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .topic {

@@ -110,6 +110,45 @@
     return attempt.correct === true && attempt.confidence === "sure";
   }
 
+  function isTestMode(mode) {
+    return mode === "timed" || mode === "test";
+  }
+
+  function testAttempts(attempts) {
+    return (attempts || []).filter(function (attempt) {
+      return isTestMode(attempt.mode);
+    });
+  }
+
+  function selectCustomPool(items, attempts, spec) {
+    const topicIds = spec.topicIds || [];
+    const levels = spec.levels || [];
+    const latest = latestByItem(attempts || []);
+    const unseen = [];
+    const missed = [];
+    const known = [];
+    (items || []).forEach(function (item) {
+      if (topicIds.indexOf(item.topicId) < 0) return;
+      if (levels.indexOf(item.level) < 0) return;
+      const prev = latest.get(item.id);
+      if (!prev) unseen.push(item);
+      else if (prev.correct === false) missed.push(item);
+      else known.push(item);
+    });
+    const pool = spec.preferUnseen ? unseen.slice() : unseen.concat(known);
+    if (spec.includeMissed) missed.forEach(function (item) { pool.push(item); });
+    return pool;
+  }
+
+  function sessionModeLabel(session) {
+    session = session || {};
+    if (session.kind === "custom" || session.mode === "test") {
+      return session.mode === "timed" ? "Custom test, timed" : "Custom test";
+    }
+    if (session.mode === "timed") return "Practice test";
+    return "Question bank";
+  }
+
   function analyze(attempts, subject) {
     const list = Array.from(latestByItem(attempts).values());
     const attempted = list.length;
@@ -421,7 +460,7 @@
     lines.push("Student: " + (options.name || "Student"));
     lines.push("Subject: " + (options.subject ? options.subject.title : ""));
     lines.push("Set: " + (session.title || "Practice"));
-    lines.push("Mode: " + (session.mode === "timed" ? "Timed set" : session.mode === "retry" ? "Retry" : "Practice"));
+    lines.push("Mode: " + sessionModeLabel(session));
     lines.push("Level: " + (session.levelLabel || session.level || "All"));
     const wrong = [];
     const flagged = [];
@@ -455,6 +494,10 @@
 
   return {
     analyze: analyze,
+    isTestMode: isTestMode,
+    testAttempts: testAttempts,
+    selectCustomPool: selectCustomPool,
+    sessionModeLabel: sessionModeLabel,
     formatAnalysisReport: formatAnalysisReport,
     formatSessionReport: formatSessionReport,
     topicTitle: topicTitle,

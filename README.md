@@ -8,14 +8,15 @@ There is no login and no server-side code. The same app can be hosted as a stati
 
 Open [dist/icms-sat-practice.html](dist/icms-sat-practice.html) in Chrome. Double-click the file. It works offline, including the math fonts and the figures.
 
-A student types a first name, picks a level and a mode, then taps a topic.
+A student types a first name, then follows the home flow: practice test, My Analysis, Question Bank, Build My Test.
 
-- **Practice** checks each question immediately.
-- **Timed set** gives 2 minutes per question. A countdown stays pinned at the top and the set ends at 0:00.
+- **Practice test** is a timed set on one topic (2 minutes per question). It counts toward My Analysis.
+- **Question bank** checks each question immediately and keeps a done count per topic. It does not change My Analysis.
+- **Build My Test** mixes chosen topics and levels. Timed or untimed, it counts toward My Analysis.
 - **Sure / 50-50 / Guessed** is required before an answer counts. Right and sure is mastered. A correct guess is not.
 - After the explanation, **Did this make sense?** is saved.
 - **Copy results** produces plain text for the teacher: score, wrong item ids, time, mistake patterns, weak spots, and any problem notes.
-- **My analysis** and **Print** show the same picture for everything that student has done in the subject.
+- **My analysis** is built only from practice tests and custom tests.
 
 Switching the name on the device keeps a separate record for each student.
 

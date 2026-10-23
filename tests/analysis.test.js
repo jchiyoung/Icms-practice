@@ -1,6 +1,6 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { analyze, formatSessionReport, strip } = require("../js/analysis.js");
+const { analyze, formatSessionReport, strip, testAttempts, selectCustomPool } = require("../js/analysis.js");
 
 const subject = {
   title: "SAT Math",
@@ -118,4 +118,39 @@ test("session report includes the score, wrong ids, and the mistake", () => {
   assert.match(text, /Took the sign the wrong way/);
   assert.match(text, /QB-A1-003: The wording is confusing/);
   assert.match(text, /Killer|Mastered/);
+  assert.match(text, /Mode: Question bank/);
+});
+
+test("My Analysis counts practice tests and custom tests, not the question bank", () => {
+  const kept = testAttempts([
+    { itemId: "bank", mode: "practice", correct: false, ts: 1 },
+    { itemId: "again", mode: "retry", correct: false, ts: 2 },
+    { itemId: "old", correct: false, ts: 3 },
+    { itemId: "timed", mode: "timed", topicId: "A1", level: "M", correct: true, confidence: "sure", ts: 4 },
+    { itemId: "custom", mode: "test", topicId: "A1", level: "H", correct: false, confidence: "sure", ts: 5, errorType: "concept", misconception: "D4", feedback: "Mixed the steps." },
+  ]);
+  assert.deepEqual(kept.map((row) => row.itemId), ["timed", "custom"]);
+  const analysis = analyze(kept, subject);
+  assert.equal(analysis.attempted, 2);
+  assert.equal(analysis.correct, 1);
+});
+
+test("a custom test prefers unseen questions and can add misses", () => {
+  const items = [
+    { id: "new", topicId: "A1", level: "M" },
+    { id: "miss", topicId: "A1", level: "M" },
+    { id: "ok", topicId: "A1", level: "M" },
+    { id: "other", topicId: "A2", level: "M" },
+    { id: "hard", topicId: "A1", level: "H" },
+  ];
+  const attempts = [
+    { itemId: "miss", correct: false, ts: 1 },
+    { itemId: "ok", correct: true, ts: 2 },
+    { itemId: "miss", correct: true, ts: 0 },
+  ];
+  const spec = { topicIds: ["A1"], levels: ["M"] };
+  assert.deepEqual(selectCustomPool(items, attempts, Object.assign({ preferUnseen: true, includeMissed: false }, spec)).map((item) => item.id), ["new"]);
+  assert.deepEqual(selectCustomPool(items, attempts, Object.assign({ preferUnseen: true, includeMissed: true }, spec)).map((item) => item.id), ["new", "miss"]);
+  assert.deepEqual(selectCustomPool(items, attempts, Object.assign({ preferUnseen: false, includeMissed: false }, spec)).map((item) => item.id), ["new", "ok"]);
+  assert.deepEqual(selectCustomPool(items, attempts, Object.assign({ preferUnseen: false, includeMissed: true }, spec)).map((item) => item.id), ["new", "ok", "miss"]);
 });

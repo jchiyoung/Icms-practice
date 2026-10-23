@@ -95,7 +95,7 @@
   }
 
   function loadPrefs() {
-    const base = { level: "all", mode: "practice", count: 10 };
+    const base = { level: "all", mode: "timed", count: 10 };
     if (typeof localStorage === "undefined") return base;
     try {
       return Object.assign(base, JSON.parse(localStorage.getItem(PREFS_KEY) || "{}"));

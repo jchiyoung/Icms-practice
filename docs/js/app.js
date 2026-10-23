@@ -8,7 +8,7 @@
     view: "loading",
     error: "",
     session: null,
-    prefs: { level: "all", mode: "practice", count: 10 },
+    prefs: { level: "all", mode: "timed", count: 10 },
     name: "",
     nameDraft: "",
     nameError: "",
@@ -70,6 +70,20 @@
     return data.subjects[subjectId].attempts || [];
   }
 
+  function testAttemptsOf(subjectId) {
+    return ICMS.testAttempts(attemptsOf(subjectId));
+  }
+
+  function bankAttemptsOf(subjectId) {
+    return attemptsOf(subjectId).filter(function (attempt) {
+      return !ICMS.isTestMode(attempt.mode);
+    });
+  }
+
+  function isTestMode(mode) {
+    return ICMS.isTestMode(mode);
+  }
+
   function reportsOf(subjectId) {
     const data = profile();
     if (!data || !data.subjects[subjectId]) return [];
@@ -121,7 +135,7 @@
   function isRevealed(session, itemId) {
     const response = session.responses[itemId];
     if (response && response.forceHidden) return false;
-    if (session.mode === "timed") return !!session.finalized;
+    if (isTestMode(session.mode)) return !!session.finalized;
     return !!(response && response.revealed);
   }
 
@@ -268,7 +282,7 @@
   function sessionStillOpen(session) {
     if (!session || !session.itemIds || !session.itemIds.length) return false;
     if (session.completed || session.finalized) return false;
-    if (session.mode !== "timed") {
+    if (!isTestMode(session.mode)) {
       const allRevealed = session.itemIds.every(function (id) {
         const response = session.responses && session.responses[id];
         return response && response.revealed;
@@ -319,6 +333,7 @@
       topicId: spec.topicId || "",
       level: spec.level || "all",
       levelLabel: spec.levelLabel || (spec.level === "all" ? "All" : ICMS.levelInfo(subject, spec.level).label),
+      kind: spec.kind || (spec.mode === "timed" ? "topic" : "bank"),
       itemIds: spec.itemIds,
       index: 0,
       startedAt: startedAt,
@@ -433,7 +448,7 @@
       render();
       return;
     }
-    if (session.mode === "timed" && !session.finalized) {
+    if (isTestMode(session.mode) && !session.finalized) {
       response.topicId = item.topicId;
       response.level = item.level;
       saveSession();
@@ -472,7 +487,7 @@
     const session = state.session;
     if (!session) return;
     if (session.completed && session.finalized && state.view === "results") return;
-    if (session.mode === "timed" && !session.finalized) finalizeTimed();
+    if (isTestMode(session.mode) && !session.finalized) finalizeTimed();
     else freezeElapsed(session);
     session.completed = true;
     session.finalized = true;
@@ -603,10 +618,8 @@
 
   function renderHome() {
     const subject = currentSubject();
-    const latest = ICMS.latestByItem(attemptsOf(subject.id));
-    const rows = Array.from(latest.values());
-    const right = rows.filter(function (row) { return row.correct; }).length;
-    const mastered = rows.filter(function (row) { return row.correct && row.confidence === "sure"; }).length;
+    const bankLatest = ICMS.latestByItem(bankAttemptsOf(subject.id));
+    const rows = Array.from(bankLatest.values());
     const wrongIds = rows.filter(function (row) { return !row.correct; }).map(function (row) { return row.itemId; });
     let sizes = subject.setSizes && subject.setSizes.length ? subject.setSizes.slice() : [5, 10, 20];
     if (state.prefs.mode === "timed" && sizes.indexOf(3) < 0) sizes.unshift(3);
@@ -621,14 +634,14 @@
         return '<button type="button" class="chip" data-action="set-pref" data-pref="level" data-value="' + h(level.id) + '" aria-pressed="' + (state.prefs.level === level.id ? "true" : "false") + '">' + h(level.label) + "</button>";
       }).join("");
     const modeChips =
-      '<button type="button" class="chip" data-action="set-pref" data-pref="mode" data-value="practice" aria-pressed="' + (state.prefs.mode === "practice" ? "true" : "false") + '">Practice</button>' +
-      '<button type="button" class="chip" data-action="set-pref" data-pref="mode" data-value="timed" aria-pressed="' + (state.prefs.mode === "timed" ? "true" : "false") + '">Timed set</button>';
+      '<button type="button" class="chip" data-action="set-pref" data-pref="mode" data-value="timed" aria-pressed="' + (state.prefs.mode === "timed" ? "true" : "false") + '">Practice test</button>' +
+      '<button type="button" class="chip" data-action="set-pref" data-pref="mode" data-value="practice" aria-pressed="' + (state.prefs.mode === "practice" ? "true" : "false") + '">Question bank</button>';
     const countChips = sizes.map(function (size) {
       return '<button type="button" class="chip" data-action="set-pref" data-pref="count" data-value="' + size + '" aria-pressed="' + (String(state.prefs.count) === String(size) ? "true" : "false") + '">' + size + "</button>";
     }).join("") + '<button type="button" class="chip" data-action="set-pref" data-pref="count" data-value="all" aria-pressed="' + (state.prefs.count === "all" ? "true" : "false") + '">All</button>';
     const modeNote = state.prefs.mode === "timed"
-      ? "2 minutes per question. The clock counts down at the top and the set ends at 0:00."
-      : "You check each question before the next one.";
+      ? "Practice test on one topic. 2 minutes per question. It counts toward My Analysis."
+      : "Question bank. You check each question right away. It does not change My Analysis.";
     let topics = "";
     (subject.domains || []).forEach(function (domain) {
       topics += '<h2 class="domain-title">' + h(domain.title) + "</h2>";
@@ -636,10 +649,9 @@
         const pool = subject.items.filter(function (item) {
           return item.topicId === topic.id && (state.prefs.level === "all" || item.level === state.prefs.level);
         });
-        const mine = rows.filter(function (row) { return row.topicId === topic.id; });
-        const mineRight = mine.filter(function (row) { return row.correct; }).length;
+        const done = rows.filter(function (row) { return row.topicId === topic.id; }).length;
         const detail = pool.length
-          ? pool.length + " questions" + (mine.length ? " · " + mineRight + "/" + mine.length + " right" : "")
+          ? pool.length + " questions" + (done ? " · " + done + " done" : "")
           : "None at this level";
         topics += '<button type="button" class="topic" data-action="start-topic" data-topic="' + h(topic.id) + '"' + (pool.length ? "" : " disabled") + "><span class=\"code\">" + h(topic.id) + "</span><strong>" + h(topic.title) + "</strong><em>" + h(detail) + "</em></button>";
       });
@@ -652,16 +664,18 @@
     return (
       subjectsHtml +
       "<h1>Hi, " + h(state.name.split(" ")[0]) + ".</h1>" +
-      '<p class="screen-hint">Choose a level and a mode, then tap a topic.</p>' +
+      '<p class="screen-hint">Take a practice test, check My Analysis, practice weak topics in the Question Bank, then Build My Test.</p>' +
       (state.notice ? '<p class="notice">' + h(state.notice) + "</p>" : "") +
       resume +
-      (rows.length ? '<div class="stats"><div class="stat"><b>' + rows.length + '</b><span>Answered</span></div><div class="stat"><b>' + right + "/" + rows.length + '</b><span>Right</span></div><div class="stat"><b>' + mastered + '</b><span>Mastered</span></div><div class="stat"><b>' + (rows.length ? Math.round((100 * mastered) / rows.length) : 0) + '%</b><span>Mastery</span></div></div>' : "") +
       '<section class="card setup">' +
+      "<p>Start with</p><div class=\"chips\">" + modeChips + "</div><p class=\"mode-note\">" + modeNote + "</p>" +
       "<p>Level</p><div class=\"chips\">" + levelChips + "</div>" +
-      "<p>How to practice</p><div class=\"chips\">" + modeChips + "</div><p class=\"mode-note\">" + modeNote + "</p>" +
       "<p>How many</p><div class=\"chips\">" + countChips + "</div>" +
-      (wrongIds.length ? '<button type="button" class="btn ghost" data-action="retry-wrong">Retry ' + wrongIds.length + " missed question" + (wrongIds.length === 1 ? "" : "s") + "</button>" : "") +
+      (state.prefs.mode !== "timed" && wrongIds.length ? '<button type="button" class="btn ghost" data-action="retry-wrong">Retry ' + wrongIds.length + " missed question" + (wrongIds.length === 1 ? "" : "s") + "</button>" : "") +
+      '<button type="button" class="btn primary" data-action="build-test">Build My Test</button>' +
+      '<p class="mode-note">Or mix topics and levels into your own test. A custom test counts toward My Analysis.</p>' +
       "</section>" +
+      "<h2>Topics</h2>" +
       '<div class="topics">' + topics + "</div>" +
       offline
     );
@@ -787,11 +801,11 @@
     const last = session.index >= session.itemIds.length - 1;
     const hint = revealed
       ? "Read the explanation, then say if it made sense."
-      : session.mode === "timed"
-        ? "Time left is at the top. You'll see results at the end."
+      : isTestMode(session.mode)
+        ? (session.mode === "timed" ? "Time left is at the top. You'll see results at the end." : "This is a test. You'll see results at the end.")
         : "Choose an answer and how sure you are, then check.";
     let submitLabel = "Check";
-    if (session.mode === "timed" && !session.finalized) submitLabel = last ? "Finish" : "Save and next";
+    if (isTestMode(session.mode) && !session.finalized) submitLabel = last ? "Finish" : "Save and next";
     const endButton = !revealed
       ? '<button type="button" class="btn primary" id="submit-btn" data-action="submit">' + submitLabel + "</button>"
       : '<button type="button" class="btn primary" id="next-btn" data-action="next">' + (last ? "See results" : "Next") + "</button>";
@@ -880,11 +894,169 @@
     );
   }
 
+  const CUSTOM_KEY = "icms.customTest.v1";
+
+  function defaultCustom() {
+    return {
+      topics: [],
+      levels: ["M", "H", "H+"],
+      count: 10,
+      customCount: 10,
+      timed: true,
+      preferUnseen: true,
+      includeMissed: false,
+    };
+  }
+
+  function loadCustom() {
+    const base = defaultCustom();
+    try {
+      const saved = JSON.parse(localStorage.getItem(CUSTOM_KEY) || "{}");
+      const next = Object.assign(base, saved || {});
+      if (!Array.isArray(next.topics)) next.topics = [];
+      if (!Array.isArray(next.levels)) next.levels = base.levels.slice();
+      next.preferUnseen = next.preferUnseen !== false;
+      next.includeMissed = !!next.includeMissed;
+      next.timed = next.timed !== false;
+      const count = String(next.count);
+      if (count !== "custom" && ["5", "10", "15", "20"].indexOf(count) < 0) next.count = 10;
+      else next.count = count === "custom" ? "custom" : Number(count);
+      return next;
+    } catch (err) {
+      return base;
+    }
+  }
+
+  function saveCustom() {
+    if (!state.custom) return;
+    localStorage.setItem(CUSTOM_KEY, JSON.stringify(state.custom));
+  }
+
+  function customLevelName(subject, id) {
+    if (id === "H+") return "H+";
+    const info = ICMS.levelInfo(subject, id);
+    return info.name || info.label || id;
+  }
+
+  function customWanted() {
+    const custom = state.custom || defaultCustom();
+    if (String(custom.count) === "custom") {
+      const n = parseInt(custom.customCount, 10);
+      return n > 0 ? n : 0;
+    }
+    return Number(custom.count) || 0;
+  }
+
+  function withoutId(list, id) {
+    return (list || []).filter(function (entry) { return entry !== id; });
+  }
+
+  function customAvailability() {
+    const subject = currentSubject();
+    const custom = state.custom || defaultCustom();
+    const pool = ICMS.selectCustomPool(subject.items || [], attemptsOf(subject.id), {
+      topicIds: custom.topics,
+      levels: custom.levels,
+      preferUnseen: !!custom.preferUnseen,
+      includeMissed: !!custom.includeMissed,
+    });
+    const available = pool.length;
+    const wanted = customWanted();
+    const startCount = wanted > 0 ? Math.min(available, wanted) : 0;
+    const ready = !!(custom.topics.length && custom.levels.length && startCount > 0);
+    let note = available + (available === 1 ? " question available" : " questions available");
+    if (!custom.topics.length || !custom.levels.length) note = "Choose at least one topic and one level. " + note;
+    else if (wanted > available && available > 0) note += ". This test will use " + available + ".";
+    else if (!available) note = "0 questions available for those choices.";
+    return {
+      pool: pool,
+      ready: ready,
+      note: note,
+      button: ready ? "Start " + startCount + (startCount === 1 ? " question" : " questions") : "Start test",
+    };
+  }
+
+  function openBuild() {
+    state.custom = loadCustom();
+    state.view = "build";
+    state.notice = "";
+    setHash("#/build");
+    render();
+  }
+
+  function startCustom() {
+    const custom = state.custom || loadCustom();
+    state.custom = custom;
+    const live = customAvailability();
+    if (!live.ready) {
+      state.notice = "Choose topics, levels, and a number of questions.";
+      render();
+      return;
+    }
+    const count = Math.min(live.pool.length, customWanted());
+    const ids = shuffle(live.pool).slice(0, count).map(function (item) { return item.id; });
+    const subject = currentSubject();
+    beginSession({
+      mode: custom.timed ? "timed" : "test",
+      kind: "custom",
+      title: "Custom test",
+      topicId: "",
+      level: "custom",
+      levelLabel: custom.levels.map(function (id) { return customLevelName(subject, id); }).join(", "),
+      itemIds: ids,
+    });
+  }
+
+  function renderBuild() {
+    const subject = currentSubject();
+    const custom = state.custom || loadCustom();
+    state.custom = custom;
+    const live = customAvailability();
+    const levelChips = (subject.levels || []).map(function (level) {
+      const on = custom.levels.indexOf(level.id) >= 0;
+      return '<button type="button" class="chip" data-action="custom-level" data-level="' + h(level.id) + '" aria-pressed="' + (on ? "true" : "false") + '">' + h(customLevelName(subject, level.id)) + "</button>";
+    }).join("");
+    const counts = [5, 10, 15, 20];
+    const countChips = counts.map(function (size) {
+      return '<button type="button" class="chip" data-action="custom-count" data-count="' + size + '" aria-pressed="' + (String(custom.count) === String(size) ? "true" : "false") + '">' + size + "</button>";
+    }).join("") + '<button type="button" class="chip" data-action="custom-count" data-count="custom" aria-pressed="' + (String(custom.count) === "custom" ? "true" : "false") + '">Custom</button>';
+    let topics = "";
+    (subject.domains || []).forEach(function (domain) {
+      const ids = (domain.topics || []).map(function (topic) { return topic.id; });
+      const allOn = ids.length > 0 && ids.every(function (id) { return custom.topics.indexOf(id) >= 0; });
+      topics += '<div class="domain-block"><label class="check domain-check"><input type="checkbox" data-action="custom-domain" data-domain="' + h(domain.id) + '"' + (allOn ? " checked" : "") + "><span>Select all " + h(domain.title) + "</span></label>";
+      (domain.topics || []).forEach(function (topic) {
+        const on = custom.topics.indexOf(topic.id) >= 0;
+        topics += '<label class="check"><input type="checkbox" data-action="custom-topic" data-topic="' + h(topic.id) + '"' + (on ? " checked" : "") + "><span><strong>" + h(topic.id) + "</strong> " + h(topic.title) + "</span></label>";
+      });
+      topics += "</div>";
+    });
+    const customField = String(custom.count) === "custom"
+      ? '<label class="field"><span>How many</span><input id="custom-count" type="number" min="1" inputmode="numeric" value="' + h(custom.customCount) + '"></label>'
+      : "";
+    return (
+      "<h1>Build My Test</h1>" +
+      '<p class="screen-hint">Mix topics and levels. Timed or untimed, this test counts toward My Analysis.</p>' +
+      (state.notice ? '<p class="notice">' + h(state.notice) + "</p>" : "") +
+      '<section class="card stack">' +
+      "<h2>Topics</h2>" + topics +
+      "<h2>Levels</h2><div class=\"chips\">" + levelChips + "</div>" +
+      "<h2>How many</h2><div class=\"chips\">" + countChips + "</div>" + customField +
+      '<p class="mode-note" id="custom-available">' + h(live.note) + "</p>" +
+      '<label class="check"><input type="checkbox" data-action="custom-flag" data-flag="timed"' + (custom.timed ? " checked" : "") + "><span>Timed (2 minutes per question)</span></label>" +
+      '<label class="check"><input type="checkbox" data-action="custom-flag" data-flag="preferUnseen"' + (custom.preferUnseen ? " checked" : "") + "><span>Prefer questions I haven't seen</span></label>" +
+      '<label class="check"><input type="checkbox" data-action="custom-flag" data-flag="includeMissed"' + (custom.includeMissed ? " checked" : "") + "><span>Include questions I missed before</span></label>" +
+      '<div class="row"><button type="button" class="btn primary" id="start-custom" data-action="start-custom"' + (live.ready ? "" : " disabled") + ">" + h(live.button) + '</button><button type="button" class="btn ghost" data-action="topics">Back</button></div>' +
+      "</section>"
+    );
+  }
+
   function renderResults() {
     const session = state.session;
     const subject = subjectById(session.subjectId) || currentSubject();
     const analysis = ICMS.analyze(sessionAttempts(session), subject);
-    const all = ICMS.analyze(attemptsOf(subject.id), subject);
+    const testing = isTestMode(session.mode);
+    const all = testing ? ICMS.analyze(testAttemptsOf(subject.id), subject) : null;
     const reports = reportsOf(subject.id).filter(function (report) {
       return session.itemIds.indexOf(report.itemId) >= 0;
     });
@@ -914,24 +1086,24 @@
       '<p class="screen-hint">Copy this and paste it to your teacher.</p>' +
       (state.notice ? '<p class="notice">' + h(state.notice) + "</p>" : "") +
       '<div class="stats"><div class="stat"><b>' + analysis.correct + "/" + analysis.attempted + '</b><span>Score</span></div><div class="stat"><b>' + analysis.mastered + '</b><span>Mastered</span></div><div class="stat"><b>' + h(ICMS.duration(session.elapsedMs || 0)) + '</b><span>Time</span></div><div class="stat"><b>' + analysis.stillConfused + '</b><span>Still confused</span></div></div>' +
-      '<div class="card stack"><p><strong>' + h(session.title) + "</strong> · " + h(session.levelLabel || "All") + " · " + (session.mode === "timed" ? "Timed set" : "Practice") + "</p>" +
+      '<div class="card stack"><p><strong>' + h(session.title) + "</strong> · " + h(session.levelLabel || "All") + " · " + h(ICMS.sessionModeLabel(session)) + "</p>" +
       "<p>Wrong item IDs: " + h(wrongIds.length ? wrongIds.join(", ") : "none") + "</p>" +
       '<div class="row no-print"><button type="button" class="btn primary" id="copy-btn" data-action="copy" data-copy="session">Copy results</button><button type="button" class="btn ghost" data-action="print">Print</button>' +
       (wrongIds.length ? '<button type="button" class="btn ghost" data-action="retry-ids">Retry wrong</button>' : "") +
       '<button type="button" class="btn ghost" data-action="topics">Topics</button></div>' +
       '<details class="no-print"><summary>Preview the text</summary><pre class="copy-block" id="copy-block">' + h(text) + "</pre></details></div>" +
-      analysisTables(analysis) +
+      (testing ? analysisTables(analysis) : '<p class="teacher-note">Question bank practice is not added to My Analysis.</p>') +
       '<h2>Review questions</h2><div class="topics">' + list + "</div>"
     );
   }
 
   function renderAnalysis() {
     const subject = currentSubject();
-    const analysis = ICMS.analyze(attemptsOf(subject.id), subject);
+    const analysis = ICMS.analyze(testAttemptsOf(subject.id), subject);
     const reports = reportsOf(subject.id);
     state.practiceSets = { patterns: analysis.patterns, concepts: analysis.concepts };
     const text = ICMS.formatAnalysisReport({ name: state.name, subject: subject, analysis: analysis, reports: reports });
-    const notMastered = Array.from(ICMS.latestByItem(attemptsOf(subject.id)).values()).filter(function (row) {
+    const notMastered = Array.from(ICMS.latestByItem(testAttemptsOf(subject.id)).values()).filter(function (row) {
       return !(row.correct && row.confidence === "sure");
     }).map(function (row) { return row.itemId; });
     return (
@@ -945,7 +1117,7 @@
       (notMastered.length ? '<button type="button" class="btn ghost" data-action="retry-unmastered">Retry not mastered</button>' : "") +
       '<button type="button" class="btn ghost" data-action="topics">Topics</button></div>' +
       '<details class="no-print"><summary>Preview the text</summary><pre class="copy-block">' + h(text) + "</pre></details></div>" +
-      (analysis.attempted ? analysisTables(analysis) + '<p class="teacher-note">Keep missing the same type? Bring this report to your ICMS teacher.</p>' : '<section class="card"><h2>Nothing to analyze yet</h2><p>Answer a few questions and this page will fill in.</p><button type="button" class="btn primary" data-action="topics">Back to topics</button></section>') +
+      (analysis.attempted ? analysisTables(analysis) + '<p class="teacher-note">Keep missing the same type? Bring this report to your ICMS teacher.</p>' : '<section class="card"><h2>Nothing from a test yet</h2><p>Finish a practice test or use Build My Test. Question bank practice stays off this page.</p><button type="button" class="btn primary" data-action="topics">Back to topics</button></section>') +
       (reports.length ? "<h2>Problem reports</h2><div class=\"card\"><ul>" + reports.map(function (report) {
         return "<li><strong>" + h(report.itemId) + "</strong> " + h(report.text) + "</li>";
       }).join("") + "</ul></div>" : "")
@@ -967,10 +1139,11 @@
     else if (state.view === "error") body = renderError();
     else if (state.view === "name") body = renderName();
     else if (state.view === "home") body = renderHome();
+    else if (state.view === "build") body = renderBuild();
     else if (state.view === "session") body = renderSession();
     else if (state.view === "results") body = renderResults();
     else if (state.view === "analysis") body = renderAnalysis();
-    if (state.view === "home" || state.view === "results" || state.view === "analysis") body += siteFooter();
+    if (state.view === "home" || state.view === "results" || state.view === "analysis" || state.view === "build") body += siteFooter();
     app.innerHTML = header() + '<main class="wrap' + (state.view === "session" ? " session-pad" : "") + '" id="main">' + body + "</main>";
     ICMS.mountRich(app);
     if (state.keepScroll) {
@@ -1057,6 +1230,19 @@
         count.textContent = sprCount(target.value) + (note ? " ·" + note : "");
       }
     }
+    if (target.id === "custom-count" && state.custom) {
+      state.custom.customCount = target.value;
+      state.custom.count = "custom";
+      saveCustom();
+      const live = customAvailability();
+      const note = document.getElementById("custom-available");
+      const button = document.getElementById("start-custom");
+      if (note) note.textContent = live.note;
+      if (button) {
+        button.disabled = !live.ready;
+        button.textContent = live.button;
+      }
+    }
     if (target.id === "report-text" && state.session) {
       const itemId = state.session.itemIds[state.session.index];
       ensureResponse(itemId).reportDraft = target.value;
@@ -1097,6 +1283,56 @@
       return;
     }
     if (action === "start-topic") return startTopic(node.getAttribute("data-topic"));
+    if (action === "build-test") return openBuild();
+    if (action === "start-custom") return startCustom();
+    if (action === "custom-topic" && state.custom) {
+      const topicId = node.getAttribute("data-topic");
+      state.custom.topics = withoutId(state.custom.topics, topicId);
+      if (node.checked) state.custom.topics.push(topicId);
+      saveCustom();
+      state.keepScroll = true;
+      render();
+      return;
+    }
+    if (action === "custom-domain" && state.custom) {
+      const subject = currentSubject();
+      const domainId = node.getAttribute("data-domain");
+      const domain = (subject.domains || []).filter(function (entry) { return entry.id === domainId; })[0];
+      const ids = domain ? (domain.topics || []).map(function (topic) { return topic.id; }) : [];
+      const allOn = ids.length > 0 && ids.every(function (id) { return state.custom.topics.indexOf(id) >= 0; });
+      ids.forEach(function (id) {
+        state.custom.topics = withoutId(state.custom.topics, id);
+        if (!allOn) state.custom.topics.push(id);
+      });
+      saveCustom();
+      state.keepScroll = true;
+      render();
+      return;
+    }
+    if (action === "custom-level" && state.custom) {
+      const id = node.getAttribute("data-level");
+      const on = state.custom.levels.indexOf(id) < 0;
+      state.custom.levels = on ? state.custom.levels.concat(id) : withoutId(state.custom.levels, id);
+      saveCustom();
+      state.keepScroll = true;
+      render();
+      return;
+    }
+    if (action === "custom-count" && state.custom) {
+      const count = node.getAttribute("data-count");
+      state.custom.count = count === "custom" ? "custom" : Number(count);
+      saveCustom();
+      state.keepScroll = true;
+      render();
+      return;
+    }
+    if (action === "custom-flag" && state.custom) {
+      state.custom[node.getAttribute("data-flag")] = !!node.checked;
+      saveCustom();
+      state.keepScroll = true;
+      render();
+      return;
+    }
     if (action === "analysis") {
       if (state.session) saveSession();
       state.view = "analysis";
@@ -1117,11 +1353,11 @@
     }
     if (action === "results") return showResults();
     if (action === "retry-wrong") {
-      const ids = Array.from(ICMS.latestByItem(attemptsOf(currentSubject().id)).values()).filter(function (row) { return !row.correct; }).map(function (row) { return row.itemId; });
+      const ids = Array.from(ICMS.latestByItem(bankAttemptsOf(currentSubject().id)).values()).filter(function (row) { return !row.correct; }).map(function (row) { return row.itemId; });
       return startIds(ids, "Missed questions");
     }
     if (action === "retry-unmastered") {
-      const ids = Array.from(ICMS.latestByItem(attemptsOf(currentSubject().id)).values()).filter(function (row) {
+      const ids = Array.from(ICMS.latestByItem(testAttemptsOf(currentSubject().id)).values()).filter(function (row) {
         return !(row.correct && row.confidence === "sure");
       }).map(function (row) { return row.itemId; });
       return startIds(ids, "Not mastered yet");
@@ -1155,14 +1391,14 @@
           subject: subjectById(state.session.subjectId) || subject,
           session: state.session,
           analysis: ICMS.analyze(sessionAttempts(state.session), subjectById(state.session.subjectId) || subject),
-          allAnalysis: ICMS.analyze(attemptsOf(state.session.subjectId), subjectById(state.session.subjectId) || subject),
+          allAnalysis: isTestMode(state.session.mode) ? ICMS.analyze(testAttemptsOf(state.session.subjectId), subjectById(state.session.subjectId) || subject) : null,
           reports: reports,
         });
       } else {
         text = ICMS.formatAnalysisReport({
           name: state.name,
           subject: subject,
-          analysis: ICMS.analyze(attemptsOf(subject.id), subject),
+          analysis: ICMS.analyze(testAttemptsOf(subject.id), subject),
           reports: reportsOf(subject.id),
         });
       }
@@ -1210,7 +1446,7 @@
     }
     if (action === "submit") return submitCurrent();
     if (action === "next") {
-      if (session.mode === "timed" && !session.finalized) return submitCurrent();
+      if (isTestMode(session.mode) && !session.finalized) return submitCurrent();
       if (!revealed) {
         response.formMsg = "Check this question first. You can also jump with the numbers above.";
         render();
@@ -1295,6 +1531,12 @@
     }
     if (hash === "#/analysis") {
       state.view = "analysis";
+      render();
+      return;
+    }
+    if (hash === "#/build") {
+      state.custom = loadCustom();
+      state.view = "build";
       render();
       return;
     }
