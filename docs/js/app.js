@@ -205,6 +205,13 @@
     response.attemptSaved = true;
   }
 
+  function freezeElapsed(session) {
+    if (!session || session.elapsedFrozen) return;
+    const started = session.startedAt || Date.now();
+    session.elapsedMs = Math.max(0, Date.now() - started);
+    session.elapsedFrozen = true;
+  }
+
   function finalizeTimed() {
     const session = state.session;
     if (!session || session.finalized) return;
@@ -220,8 +227,27 @@
       storeGrade(item, response, graded);
     });
     session.finalized = true;
-    session.elapsedMs = Date.now() - session.startedAt;
+    freezeElapsed(session);
     saveSession();
+  }
+
+  function sessionStillOpen(session) {
+    if (!session || !session.itemIds || !session.itemIds.length) return false;
+    if (session.completed || session.finalized) return false;
+    if (session.mode !== "timed") {
+      const allRevealed = session.itemIds.every(function (id) {
+        const response = session.responses && session.responses[id];
+        return response && response.revealed;
+      });
+      if (allRevealed) return false;
+    }
+    return true;
+  }
+
+  function desmosDismissed(html) {
+    const text = ICMS.strip(html).toLowerCase();
+    if (!text) return true;
+    return /not needed|not useful|nothing to graph|no numbers to graph|no equation|no numeric|no coordinates are given|no single graph|cannot be applied|is not useful|desmos cannot/.test(text);
   }
 
   function sessionAttempts(session) {
@@ -248,7 +274,10 @@
   }
 
   function beginSession(spec) {
+    clearInterval(timerId);
+    timerId = 0;
     const subject = currentSubject();
+    const startedAt = Date.now();
     state.session = {
       subjectId: subject.id,
       mode: spec.mode,
@@ -258,8 +287,10 @@
       levelLabel: spec.levelLabel || (spec.level === "all" ? "All" : ICMS.levelInfo(subject, spec.level).label),
       itemIds: spec.itemIds,
       index: 0,
-      startedAt: Date.now(),
+      startedAt: startedAt,
       elapsedMs: 0,
+      elapsedFrozen: false,
+      completed: false,
       finalized: false,
       reviewing: false,
       responses: {},
@@ -406,7 +437,9 @@
     const session = state.session;
     if (!session) return;
     if (session.mode === "timed" && !session.finalized) finalizeTimed();
-    else session.elapsedMs = Date.now() - session.startedAt;
+    else freezeElapsed(session);
+    session.completed = true;
+    session.finalized = true;
     session.reviewing = false;
     saveSession();
     state.view = "results";
@@ -483,9 +516,10 @@
     if (state.view === "session" && session) {
       const item = itemById(subjectById(session.subjectId), session.itemIds[session.index]);
       const response = item ? session.responses[item.id] || {} : {};
-      if (session.mode === "timed" && !session.finalized) {
+      if (session.mode === "timed" && !session.finalized && !session.completed) {
         tools += '<span id="timer" class="header-btn">' + h(ICMS.duration(Date.now() - session.startedAt)) + "</span>";
       }
+      if (state.name) tools += '<button type="button" class="header-btn" data-action="analysis">My analysis</button>';
       if (item) {
         tools += '<button type="button" class="header-btn" data-action="flag" aria-pressed="' + (response.flagged ? "true" : "false") + '">' + (response.flagged ? "Flagged" : "Flag") + "</button>";
       }
@@ -529,7 +563,8 @@
     const right = rows.filter(function (row) { return row.correct; }).length;
     const mastered = rows.filter(function (row) { return row.correct && row.confidence === "sure"; }).length;
     const wrongIds = rows.filter(function (row) { return !row.correct; }).map(function (row) { return row.itemId; });
-    const sizes = subject.setSizes && subject.setSizes.length ? subject.setSizes : [5, 10, 20];
+    let sizes = subject.setSizes && subject.setSizes.length ? subject.setSizes.slice() : [5, 10, 20];
+    if (state.prefs.mode === "timed" && sizes.indexOf(3) < 0) sizes.unshift(3);
     let subjectsHtml = "";
     if (state.subjects.length > 1) {
       subjectsHtml = '<div class="subject-row">' + state.subjects.map(function (entry) {
@@ -565,9 +600,8 @@
       });
     });
     let resume = "";
-    if (state.session && state.session.itemIds && state.session.itemIds.length) {
-      const open = !state.session.finalized && state.session.index < state.session.itemIds.length;
-      resume = '<div class="card continue-card"><div><strong>' + (open ? "Continue" : "Last set") + "</strong><div class=\"muted\">" + h(state.session.title) + " · question " + (state.session.index + 1) + " of " + state.session.itemIds.length + "</div></div><button type=\"button\" class=\"btn primary\" data-action=\"" + (open && !state.session.finalized ? "resume" : "results") + "\">" + (open && !state.session.finalized ? "Continue" : "See results") + "</button></div>";
+    if (sessionStillOpen(state.session)) {
+      resume = '<div class="card continue-card"><div><strong>Continue</strong><div class="muted">' + h(state.session.title) + " · question " + (state.session.index + 1) + " of " + state.session.itemIds.length + "</div></div><button type=\"button\" class=\"btn primary\" data-action=\"resume\">Continue</button></div>";
     }
     const offline = window.ICMS_DATA ? "" : '<p class="muted no-print"><a href="dist/icms-sat-practice.html">Offline single-file copy</a></p>';
     return (
@@ -628,12 +662,12 @@
         return '<div class="' + cls + '" role="button" tabindex="0" data-action="choice" data-choice="' + h(choice.key) + '" aria-pressed="' + (selected ? "true" : "false") + '"><span class="letter">' + h(choice.key) + '</span><span>' + (choice.text ? rich(choice.text, "span") : "") + fig + "</span></div>";
       }).join("") + "</div>";
     } else {
-      const limitNote = (item.decimalRule || "bluebook") === "bluebook"
-        ? "Fraction or decimal. Up to 5 characters, or 6 if it starts with a minus."
-        : "Type the value as a fraction or a decimal.";
+      const limitNote = "Type a number, fraction (like 3/4), or decimal.";
       answerUi =
         '<label class="field"><span>Your answer</span><input id="spr-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" value="' + h(response.response || "") + '"' + (revealed ? " readonly" : "") + "></label>" +
-        '<p class="muted" id="spr-count">' + h(sprCount(response.response || "")) + " · " + limitNote + "</p>";
+        (revealed
+          ? '<p class="muted">' + limitNote + "</p>"
+          : '<p class="muted" id="spr-count">' + h(sprCount(response.response || "")) + " · " + limitNote + "</p>");
     }
     const conf = ["sure", "Sure", "fifty", "50-50", "guess", "Guessed"];
     let confHtml = '<div class="confidence' + (response.need === "confidence" ? " need" : "") + '"><p>How sure are you?</p><div class="conf-row">';
@@ -657,35 +691,42 @@
         title = "Right, but you guessed. That is not mastered yet.";
       } else if (correct && response.confidence === "fifty") {
         tone = "warn";
-        title = "Right, but you were only 50-50. That is not mastered yet.";
+        title = "Correct! Since you weren't sure, try one more like this later.";
       }
       const preview = response.acceptedPreview || (hidden && hidden.answer && (hidden.answer.key || (hidden.answer.values || [])[0])) || "";
       banner = '<div class="banner ' + tone + '" id="result-banner" role="status">' + h(title) + (preview ? "<div>Answer: " + h(preview) + "</div>" : "") + "</div>";
       if (response.feedback) {
         explanation += '<div class="callout"><strong>Why that answer comes up</strong>' + rich(response.feedback) + "</div>";
       } else if (!correct && !noAnswer) {
-        explanation += '<div class="callout"><strong>Not a listed mistake.</strong><p>Read the explanation and compare it with the step you took.</p></div>';
+        explanation += '<div class="callout"><p>Compare your answer with the steps below.</p></div>';
       }
       if (hidden && hidden.solution) {
-        const blocks = [
+        const primary = [
           ["keyIdea", "Key idea"],
           ["steps", "Steps"],
           ["why", "Why this works"],
+        ];
+        const more = [
           ["check", "Check"],
           ["beCareful", "Be careful"],
           ["anotherWay", "Another way"],
           ["desmos", "Desmos tip"],
         ];
-        explanation += '<div class="explain" id="explain"><h3>Explanation</h3>';
-        blocks.forEach(function (block) {
+        function solutionBlock(block) {
           const html = hidden.solution[block[0]];
-          if (!html) return;
-          explanation += '<section class="sol-block"><h4>' + block[1] + "</h4>" + rich(html) + "</section>";
-        });
+          if (!html) return "";
+          if (block[0] === "desmos" && desmosDismissed(html)) return "";
+          return '<section class="sol-block"><h4>' + block[1] + "</h4>" + rich(html) + "</section>";
+        }
+        explanation += '<div class="explain" id="explain"><h3>Explanation</h3>';
+        primary.forEach(function (block) { explanation += solutionBlock(block); });
+        let moreHtml = "";
+        more.forEach(function (block) { moreHtml += solutionBlock(block); });
         (hidden.solution.extra || []).forEach(function (extra) {
           if (!extra || !extra.html) return;
-          explanation += '<section class="sol-block"><h4>' + h(extra.label || "Note") + "</h4>" + rich(extra.html) + "</section>";
+          moreHtml += '<section class="sol-block"><h4>' + h(extra.label || "Note") + "</h4>" + rich(extra.html) + "</section>";
         });
+        if (moreHtml) explanation += '<details class="sol-more"><summary>Show more</summary>' + moreHtml + "</details>";
         explanation += "</div>";
       }
       const sense = response.sense || "";
@@ -704,8 +745,10 @@
       : session.mode === "timed"
         ? "A timer is running. You'll see results at the end."
         : "Choose an answer and how sure you are, then check.";
+    let submitLabel = "Check";
+    if (session.mode === "timed" && !session.finalized) submitLabel = last ? "Finish" : "Save and next";
     const endButton = !revealed
-      ? '<button type="button" class="btn primary" id="submit-btn" data-action="submit">' + (session.mode === "timed" && !session.finalized ? "Save and next" : "Check") + "</button>"
+      ? '<button type="button" class="btn primary" id="submit-btn" data-action="submit">' + submitLabel + "</button>"
       : '<button type="button" class="btn primary" id="next-btn" data-action="next">' + (last ? "See results" : "Next") + "</button>";
     return (
       '<p class="screen-hint">' + hint + "</p>" +
@@ -745,31 +788,41 @@
     const levelRows = analysis.byLevel.length ? analysis.byLevel.map(function (row) {
       return "<tr><td>" + h(row.label) + "</td><td>" + row.correct + "/" + row.attempted + " (" + row.accuracy + "%)</td><td>" + row.mastered + "</td><td>" + bar(row.mastery, "mastery") + "</td></tr>";
     }).join("") : '<tr><td colspan="4">No answers yet.</td></tr>';
+    function feedbackCell(row) {
+      const main = row.feedbackHtml ? rich(row.feedbackHtml) : h(row.feedbackText || "Compare your answer with the steps below.");
+      const extra = row.alsoHtml && row.alsoHtml.length ? '<div class="muted">Also: ' + rich(row.alsoHtml[0]) + "</div>" : "";
+      return main + extra;
+    }
     const maxMistake = analysis.mistakes.reduce(function (max, row) { return Math.max(max, row.count); }, 1);
     const mistakeRows = analysis.mistakes.slice(0, 8).map(function (row) {
-      return "<tr><td>" + (row.feedbackHtml ? rich(row.feedbackHtml) : h(row.feedbackText || "No extra note")) + (row.also && row.also.length ? '<div class="muted">Also: ' + h(row.also[0]) + "</div>" : "") + "</td><td>" + h(row.errorLabel) + "</td><td>" + row.count + "</td><td>" + bar(Math.round((100 * row.count) / maxMistake), "bad") + "</td></tr>";
+      return "<tr><td>" + feedbackCell(row) + "</td><td>" + h(row.errorLabel) + "</td><td>" + row.count + "</td><td>" + bar(Math.round((100 * row.count) / maxMistake), "bad") + "</td></tr>";
     }).join("") || '<tr><td colspan="4">No listed mistakes yet.</td></tr>';
     const maxWeak = analysis.concepts.reduce(function (max, row) { return Math.max(max, row.notMastered); }, 1);
     const conceptRows = analysis.concepts.slice(0, 8).map(function (row, index) {
-      return "<tr><td>" + h(row.label) + '<div class="muted">' + h(row.topicTitle) + "</div></td><td>" + row.notMastered + " of " + row.attempted + "</td><td>" + bar(Math.round((100 * row.notMastered) / maxWeak), "warn") + '</td><td><button type="button" class="btn small" data-action="practice-set" data-kind="concepts" data-index="' + index + '">Practice these</button></td></tr>';
+      const sub = row.topicTitle ? '<div class="muted">' + h(row.topicTitle) + "</div>" : "";
+      return "<tr><td>" + h(row.label) + sub + "</td><td>" + row.notMastered + " of " + row.attempted + "</td><td>" + bar(Math.round((100 * row.notMastered) / maxWeak), "warn") + '</td><td><button type="button" class="btn small" data-action="practice-set" data-kind="concepts" data-index="' + index + '">Practice these</button></td></tr>';
     }).join("") || '<tr><td colspan="4">No weak spots yet.</td></tr>';
     const typeMax = analysis.errorTypes.reduce(function (max, row) { return Math.max(max, row.count); }, 1);
     const typeRows = analysis.errorTypes.map(function (row) {
       return "<tr><td>" + h(row.label) + "</td><td>" + row.count + "</td><td>" + bar(Math.round((100 * row.count) / typeMax), row.id === "slip" ? "warn" : "bad") + "</td></tr>";
     }).join("") || '<tr><td colspan="3">None yet.</td></tr>';
     const patterns = analysis.patterns.slice(0, 5).map(function (row, index) {
-      return '<article class="pattern"><p><strong>You missed ' + row.count + " questions with the same mistake.</strong> " + h(row.feedbackText || "See the explanation.") + "</p>" +
-        (row.also && row.also.length ? '<p class="muted">Also showed up as: ' + h(row.also[0]) + "</p>" : "") +
+      return '<article class="pattern"><p><strong>You missed ' + row.count + " questions with the same mistake.</strong></p>" +
+        "<div>" + feedbackCell(row) + "</div>" +
         '<p class="muted">' + h(row.errorLabel) + " · " + h(row.itemIds.join(", ")) + "</p>" +
         '<button type="button" class="btn primary" data-action="practice-set" data-kind="patterns" data-index="' + index + '">Practice these again</button></article>';
     }).join("");
+    const other = analysis.otherMistakes && analysis.otherMistakes.count
+      ? '<h2>Other mistakes</h2><article class="pattern"><p>Compare your answer with the steps below.</p><p class="muted">' + h(analysis.otherMistakes.itemIds.join(", ")) + "</p></article>"
+      : "";
     return (
       "<h2>Accuracy by topic</h2><div class=\"table-wrap\"><table class=\"data\"><thead><tr><th>Topic</th><th>Right</th><th>Mastered</th><th></th></tr></thead><tbody>" + topicRows + "</tbody></table></div>" +
       "<h2>Accuracy by level</h2><div class=\"table-wrap\"><table class=\"data\"><thead><tr><th>Level</th><th>Right</th><th>Mastered</th><th>Mastery</th></tr></thead><tbody>" + levelRows + "</tbody></table></div>" +
       "<h2>Mistake types</h2><div class=\"table-wrap\"><table class=\"data\"><thead><tr><th>Type</th><th>Count</th><th></th></tr></thead><tbody>" + typeRows + "</tbody></table></div>" +
       "<h2>Most frequent mistakes</h2><div class=\"table-wrap\"><table class=\"data\"><thead><tr><th>What went wrong</th><th>Type</th><th>Count</th><th></th></tr></thead><tbody>" + mistakeRows + "</tbody></table></div>" +
       (patterns ? "<h2>Same mistake, more than once</h2><div class=\"stack\">" + patterns + "</div>" : "") +
-      "<h2>Weak spots</h2><div class=\"table-wrap\"><table class=\"data\"><thead><tr><th>Question type</th><th>Not mastered</th><th></th><th></th></tr></thead><tbody>" + conceptRows + "</tbody></table></div>"
+      other +
+      "<h2>Weak spots</h2><div class=\"table-wrap\"><table class=\"data\"><thead><tr><th>Skill</th><th>Not mastered</th><th></th><th></th></tr></thead><tbody>" + conceptRows + "</tbody></table></div>"
     );
   }
 
@@ -832,8 +885,8 @@
       '<p class="screen-hint">Mastered means you were right and sure. A correct guess still needs practice.</p>' +
       (state.notice ? '<p class="notice">' + h(state.notice) + "</p>" : "") +
       "<p><strong>" + h(state.name) + "</strong> · " + h(subject.title) + "</p>" +
-      '<div class="stats"><div class="stat"><b>' + analysis.attempted + '</b><span>Answered</span></div><div class="stat"><b>' + analysis.accuracy + '%</b><span>Right</span></div><div class="stat"><b>' + analysis.mastery + '%</b><span>Mastered</span></div><div class="stat"><b>' + analysis.stillConfused + '</b><span>Still confused</span></div></div>' +
-      '<div class="card stack"><p>Right and sure: ' + analysis.mastered + ". Right but guessed: " + analysis.shakyGuess + ". Right but 50-50: " + analysis.shakyFifty + ". Missed: " + analysis.missed + ". Sure but missed: " + analysis.sureButMissed + ".</p>" +
+      '<div class="stats"><div class="stat"><span class="stat-num">' + analysis.attempted + '</span><span>Answered</span></div><div class="stat"><span class="stat-num">' + analysis.accuracy + '%</span><span>Right</span></div><div class="stat"><span class="stat-num">' + analysis.mastery + '%</span><span>Mastered</span></div><div class="stat"><span class="stat-num">' + analysis.stillConfused + '</span><span>Still confused</span></div></div>' +
+      '<div class="card stack"><p class="tally"><span>Right and sure: ' + analysis.mastered + '</span><span>Right but guessed: ' + analysis.shakyGuess + '</span><span>Right but 50-50: ' + analysis.shakyFifty + '</span><span>Missed: ' + analysis.missed + '</span><span>Sure but missed: ' + analysis.sureButMissed + "</span></p>" +
       '<div class="row no-print"><button type="button" class="btn primary" id="copy-btn" data-action="copy" data-copy="analysis">Copy results</button><button type="button" class="btn ghost" data-action="print">Print</button>' +
       (notMastered.length ? '<button type="button" class="btn ghost" data-action="retry-unmastered">Retry not mastered</button>' : "") +
       '<button type="button" class="btn ghost" data-action="topics">Topics</button></div>' +
@@ -937,6 +990,10 @@
       let value = node.getAttribute("data-value");
       if (key === "count" && value !== "all") value = Number(value);
       state.prefs[key] = value;
+      if (key === "mode" && value !== "timed" && state.prefs.count === 3) {
+        const base = (currentSubject().setSizes || []).map(Number);
+        if (base.indexOf(3) < 0) state.prefs.count = base[0] || 5;
+      }
       ICMS.savePrefs(state.prefs);
       state.keepScroll = true;
       render();
@@ -944,6 +1001,7 @@
     }
     if (action === "start-topic") return startTopic(node.getAttribute("data-topic"));
     if (action === "analysis") {
+      if (state.session) saveSession();
       state.view = "analysis";
       state.notice = "";
       setHash("#/analysis");

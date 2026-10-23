@@ -177,12 +177,92 @@
     });
   }
 
+  function parenPart(part) {
+    const text = String(part || "").trim();
+    if (!text) return text;
+    if (/^[A-Za-z0-9.]+$/.test(text)) return text;
+    if (/^[+-]?\d+(?:\.\d+)?$/.test(text)) return text;
+    return "(" + text + ")";
+  }
+
+  function latexToPlain(src) {
+    let text = String(src || "");
+    text = text.replace(/\\[,;:!]/g, " ").replace(/\\ /g, " ");
+    text = text.replace(/\\(?:quad|qquad)/g, " ");
+    let guard = 0;
+    let prev;
+    while (text !== prev && guard < 24) {
+      prev = text;
+      guard += 1;
+      text = text.replace(/\\(?:d|t)?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}/g, function (_match, a, b) {
+        return parenPart(a) + "/" + parenPart(b);
+      });
+      text = text.replace(/\\sqrt\s*\[([^{}\]]+)\]\s*\{([^{}]*)\}/g, "root($1, $2)");
+      text = text.replace(/\\sqrt\s*\{([^{}]*)\}/g, "sqrt($1)");
+      text = text.replace(/\\(?:text|mathrm|operatorname|textbf|textit|textrm)\s*\{([^{}]*)\}/g, "$1");
+      text = text.replace(/\\(?:overline|underline|bar|hat|vec|widehat)\s*\{([^{}]*)\}/g, "$1");
+    }
+    const words = {
+      angle: "angle",
+      triangle: "triangle",
+      times: "×",
+      cdot: "·",
+      div: "÷",
+      pm: "±",
+      mp: "∓",
+      pi: "π",
+      theta: "θ",
+      rho: "ρ",
+      ell: "l",
+      le: "≤",
+      leq: "≤",
+      ge: "≥",
+      geq: "≥",
+      ne: "≠",
+      neq: "≠",
+      approx: "≈",
+      sin: "sin",
+      cos: "cos",
+      tan: "tan",
+      circ: "°",
+      degree: "°",
+      to: "→",
+      ldots: "…",
+      dots: "…",
+      parallel: "parallel",
+      perp: "perpendicular",
+      sim: "~",
+      sum: "sum",
+      infty: "infinity",
+      left: "",
+      right: "",
+      big: "",
+      Big: "",
+    };
+    text = text.replace(/\\([a-zA-Z]+)/g, function (_match, name) {
+      if (Object.prototype.hasOwnProperty.call(words, name)) return words[name];
+      return name;
+    });
+    text = text.replace(/\^\{([^{}]*)\}/g, "^$1");
+    text = text.replace(/_\{([^{}]*)\}/g, "_$1");
+    text = text.replace(/[{}]/g, "");
+    return text;
+  }
+
+  function toPlainText(src) {
+    const currency = "\uE000";
+    let text = decodeEntities(String(src || "").replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, " "));
+    text = text.replace(/\\\$/g, currency);
+    text = text.replace(/\$([^$]*)\$/g, function (_match, inner) {
+      return latexToPlain(inner);
+    });
+    text = latexToPlain(text);
+    text = text.split(currency).join("$");
+    return text.replace(/\s+/g, " ").trim();
+  }
+
   function stripHtml(src) {
-    return decodeEntities(String(src || "").replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, " "))
-      .replace(/\\\$/g, "$")
-      .replace(/\$/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
+    return toPlainText(src);
   }
 
   return {
@@ -192,6 +272,7 @@
     mountRich,
     renderMathTree,
     stripHtml,
+    toPlainText,
     katexOptions,
   };
 });

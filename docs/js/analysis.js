@@ -5,18 +5,29 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   "use strict";
 
+  const COMPARE = "Compare your answer with the steps below.";
+  const ERROR_LABELS = {
+    slip: "Careless slip",
+    concept: "Concept mix-up",
+    setup: "Set-up error",
+    "set-up": "Set-up error",
+    setup_error: "Set-up error",
+    reading: "Reading error",
+    calculation: "Calculation error",
+    arithmetic: "Arithmetic error",
+  };
+
   function strip(src) {
-    return String(src || "")
-      .replace(/<br\s*\/?>/gi, " ")
-      .replace(/<[^>]+>/g, " ")
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">")
-      .replace(/&amp;/g, "&")
-      .replace(/&quot;/g, '"')
-      .replace(/\\\$/g, "$")
-      .replace(/\$/g, "")
-      .replace(/\s+/g, " ")
-      .trim();
+    const host = typeof globalThis !== "undefined" ? globalThis : this;
+    if (host.ICMS && typeof host.ICMS.toPlainText === "function") return host.ICMS.toPlainText(src);
+    if (typeof require === "function") {
+      try {
+        return require("./rich.js").toPlainText(src);
+      } catch (err) {
+        /* fall through */
+      }
+    }
+    return String(src || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   }
 
   function latestByItem(attempts) {
@@ -69,12 +80,30 @@
   }
 
   function errorLabel(subject, id) {
-    if (!id) return "Other miss";
+    const key = String(id || "").trim();
+    if (!key) return "Other mistakes";
+    if (ERROR_LABELS[key]) return ERROR_LABELS[key];
     const map = (subject && subject.errorTypes) || {};
-    if (map[id]) return map[id];
-    return String(id).replace(/[-_]+/g, " ").replace(/\b\w/g, function (ch) {
+    if (map[key]) return map[key];
+    return key.replace(/[-_]+/g, " ").replace(/\b\w/g, function (ch) {
       return ch.toUpperCase();
     });
+  }
+
+  function isDCode(code) {
+    return /^D\d+$/i.test(String(code || "").trim());
+  }
+
+  function groupErrorLabel(subject, types) {
+    const ids = [];
+    (types || []).forEach(function (typeId) {
+      const key = String(typeId || "").trim();
+      if (ids.indexOf(key) < 0) ids.push(key);
+    });
+    const named = ids.filter(Boolean);
+    if (!named.length) return "Other mistakes";
+    if (named.length === 1) return errorLabel(subject, named[0]);
+    return named.map(function (typeId) { return errorLabel(subject, typeId); }).join(", ");
   }
 
   function isMastered(attempt) {
@@ -139,76 +168,117 @@
 
     const errorCounts = new Map();
     const mistakeMap = new Map();
+    const other = { itemIds: [] };
     list.forEach(function (attempt) {
       if (attempt.correct) return;
       const typeId = attempt.errorType || "";
       errorCounts.set(typeId, (errorCounts.get(typeId) || 0) + 1);
-      const code = attempt.misconception || "";
-      const key = code || ("text:" + strip(attempt.feedback).slice(0, 80));
+      const feedback = attempt.feedback || "";
+      const code = String(attempt.misconception || "").trim();
+      if (!String(feedback).trim()) {
+        other.itemIds.push(attempt.itemId);
+        return;
+      }
+      if (!isDCode(code)) {
+        const key = "item:" + attempt.itemId;
+        mistakeMap.set(key, {
+          key: key,
+          misconception: "",
+          dCode: false,
+          feedbacks: [feedback],
+          errorTypes: [typeId],
+          itemIds: [attempt.itemId],
+        });
+        return;
+      }
+      const key = code.toUpperCase();
       if (!mistakeMap.has(key)) {
-        mistakeMap.set(key, { key: key, misconception: code, feedbacks: [], errorTypes: [], itemIds: [] });
+        mistakeMap.set(key, {
+          key: key,
+          misconception: key,
+          dCode: true,
+          feedbacks: [],
+          errorTypes: [],
+          itemIds: [],
+        });
       }
       const group = mistakeMap.get(key);
-      group.feedbacks.push(attempt.feedback || "");
+      group.feedbacks.push(feedback);
       group.errorTypes.push(typeId);
       group.itemIds.push(attempt.itemId);
     });
 
     const mistakes = Array.from(mistakeMap.values()).map(function (group) {
       const feedbackHtml = mode(group.feedbacks.filter(Boolean)) || "";
-      const errorType = mode(group.errorTypes);
       const distinct = [];
+      const distinctHtml = [];
       group.feedbacks.forEach(function (feedback) {
         const text = strip(feedback);
         if (!text || text === strip(feedbackHtml) || distinct.indexOf(text) >= 0) return;
         distinct.push(text);
+        distinctHtml.push(feedback);
       });
       return {
         key: group.key,
         misconception: group.misconception,
-        errorType: errorType,
-        errorLabel: errorLabel(subject, errorType),
+        dCode: !!group.dCode,
+        errorType: mode(group.errorTypes.filter(Boolean)),
+        errorLabel: groupErrorLabel(subject, group.errorTypes),
         count: group.itemIds.length,
         feedbackHtml: feedbackHtml,
-        feedbackText: strip(feedbackHtml),
+        feedbackText: strip(feedbackHtml) || COMPARE,
         also: distinct.slice(0, 2),
+        alsoHtml: distinctHtml.slice(0, 2),
         itemIds: group.itemIds.slice(),
       };
-    }).sort(function (a, b) { return b.count - a.count; });
+    }).sort(function (a, b) { return b.count - a.count || String(a.key).localeCompare(String(b.key)); });
 
     const conceptMap = new Map();
     list.forEach(function (attempt) {
-      const tags = attempt.concepts && attempt.concepts.length ? attempt.concepts : [attempt.familyLabel || "General"];
-      tags.forEach(function (tag) {
-        if (!conceptMap.has(tag)) conceptMap.set(tag, []);
-        conceptMap.get(tag).push(attempt);
-      });
+      const key = (attempt.topicId || "") + "\0" + (attempt.level || "");
+      if (!conceptMap.has(key)) conceptMap.set(key, []);
+      conceptMap.get(key).push(attempt);
     });
-    const concepts = Array.from(conceptMap.entries()).map(function (entry) {
+    const conceptRows = Array.from(conceptMap.entries()).map(function (entry) {
       const rows = entry[1];
       const weak = rows.filter(function (attempt) { return !isMastered(attempt); });
-      const families = [];
-      weak.forEach(function (attempt) {
-        const label = attempt.familyLabel || "";
-        if (label && families.indexOf(label) < 0) families.push(label);
-      });
-      const fromSubject = subject && subject.conceptLabels ? subject.conceptLabels[entry[0]] : "";
-      const label = families.slice(0, 2).join(" · ") || fromSubject || entry[0];
-      const topicIds = [];
-      rows.forEach(function (attempt) {
-        if (topicIds.indexOf(attempt.topicId) < 0) topicIds.push(attempt.topicId);
-      });
+      const sample = rows[0] || {};
+      const title = topicTitle(subject, sample.topicId);
+      const info = levelInfo(subject, sample.level);
+      const levelName = info.name || info.label || "";
+      let label = title || "This skill";
+      if (title && levelName) label = title + " · " + levelName;
+      else if (levelName) label = levelName;
       return {
         key: entry[0],
         label: label,
-        code: entry[0],
-        topicTitle: topicIds.map(function (id) { return topicTitle(subject, id); }).join(", "),
+        topicTitle: "",
         attempted: rows.length,
         notMastered: weak.length,
-        families: families,
         itemIds: weak.map(function (attempt) { return attempt.itemId; }),
       };
-    }).filter(function (row) { return row.notMastered > 0; })
+    }).filter(function (row) { return row.notMastered > 0; });
+    const mergedConcepts = new Map();
+    conceptRows.forEach(function (row) {
+      const prev = mergedConcepts.get(row.label);
+      if (!prev) {
+        mergedConcepts.set(row.label, {
+          key: row.label,
+          label: row.label,
+          topicTitle: "",
+          attempted: row.attempted,
+          notMastered: row.notMastered,
+          itemIds: row.itemIds.slice(),
+        });
+        return;
+      }
+      prev.attempted += row.attempted;
+      prev.notMastered += row.notMastered;
+      row.itemIds.forEach(function (id) {
+        if (prev.itemIds.indexOf(id) < 0) prev.itemIds.push(id);
+      });
+    });
+    const concepts = Array.from(mergedConcepts.values())
       .sort(function (a, b) { return b.notMastered - a.notMastered || a.label.localeCompare(b.label); });
 
     const errorTypes = Array.from(errorCounts.entries()).map(function (entry) {
@@ -230,7 +300,13 @@
       byLevel: byLevel,
       errorTypes: errorTypes,
       mistakes: mistakes,
-      patterns: mistakes.filter(function (row) { return row.count >= 2; }),
+      patterns: mistakes.filter(function (row) { return row.dCode && row.count >= 2; }),
+      otherMistakes: {
+        count: other.itemIds.length,
+        itemIds: other.itemIds.slice(),
+        label: "Other mistakes",
+        feedbackText: COMPARE,
+      },
       concepts: concepts,
     };
   }
@@ -273,17 +349,25 @@
       lines.push("");
       lines.push("Repeated mistakes");
       analysis.patterns.forEach(function (row) {
-        lines.push("- Missed " + row.count + " questions with the same mistake (" + row.errorLabel + "): " + (row.feedbackText || "See the explanation."));
+        lines.push("- Missed " + row.count + " questions with the same mistake (" + row.errorLabel + "): " + (row.feedbackText || COMPARE));
         if (row.also && row.also.length) lines.push("  Also: " + row.also[0]);
         lines.push("  Items: " + row.itemIds.join(", "));
       });
-    } else if (analysis.mistakes.length) {
+    }
+    const noted = analysis.mistakes.filter(function (row) { return !(row.dCode && row.count >= 2); });
+    if (noted.length) {
       lines.push("");
       lines.push("Mistake notes");
-      analysis.mistakes.slice(0, 8).forEach(function (row) {
-        lines.push("- " + row.errorLabel + " (" + row.count + "): " + (row.feedbackText || "No extra note."));
+      noted.slice(0, 8).forEach(function (row) {
+        lines.push("- " + row.errorLabel + " (" + row.count + "): " + (row.feedbackText || COMPARE));
         lines.push("  Items: " + row.itemIds.join(", "));
       });
+    }
+    if (analysis.otherMistakes && analysis.otherMistakes.count) {
+      lines.push("");
+      lines.push("Other mistakes");
+      lines.push("- " + (analysis.otherMistakes.feedbackText || COMPARE));
+      lines.push("  Items: " + analysis.otherMistakes.itemIds.join(", "));
     }
     if (analysis.errorTypes.length) {
       lines.push("");
@@ -296,7 +380,7 @@
       lines.push("");
       lines.push("Weak spots");
       analysis.concepts.slice(0, 8).forEach(function (row) {
-        lines.push("- " + row.label + " — " + row.topicTitle + " — not mastered " + row.notMastered + " of " + row.attempted);
+        lines.push("- " + row.label + " — not mastered " + row.notMastered + " of " + row.attempted);
       });
     }
   }

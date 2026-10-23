@@ -1,6 +1,6 @@
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { analyze, formatSessionReport } = require("../js/analysis.js");
+const { analyze, formatSessionReport, strip } = require("../js/analysis.js");
 
 const subject = {
   title: "SAT Math",
@@ -33,13 +33,58 @@ test("a correct guess is not mastered and repeated mistakes group by code", () =
   assert.equal(analysis.sureButMissed, 1);
   assert.equal(analysis.patterns.length, 1);
   assert.equal(analysis.patterns[0].count, 2);
-  assert.equal(analysis.patterns[0].errorLabel, "Concept gap");
+  assert.equal(analysis.patterns[0].misconception, "D4");
+  assert.equal(analysis.patterns[0].errorLabel, "Concept mix-up");
   assert.match(analysis.patterns[0].feedbackText, /Sign error/);
   assert.equal(analysis.byLevel.find((row) => row.levelId === "H+").label, "Killer");
-  const weak = analysis.concepts.find((row) => row.code === "A1.C4");
+  const weak = analysis.concepts.find((row) => row.label.includes("Hard"));
   assert.ok(weak);
   assert.equal(weak.notMastered, 2);
-  assert.match(weak.label, /Identity constant/);
+  assert.match(weak.label, /Linear equations in one variable/);
+  assert.doesNotMatch(weak.label, /Identity|A1\.C|given-solution|family/i);
+  assert.equal(analysis.concepts.some((row) => /A1\.C|Identity constant|given-solution/i.test(row.label)), false);
+});
+
+test("same mistake follows the D-code, and a missing note is not a careless slip", () => {
+  const analysis = analyze([
+    { itemId: "p", topicId: "A1", level: "M", correct: false, confidence: "sure", ts: 1, errorType: "slip", misconception: "D4", feedback: "Sign error.", concepts: ["A1.C1"], familyLabel: "old-slug" },
+    { itemId: "q", topicId: "A1", level: "M", correct: false, confidence: "sure", ts: 2, errorType: "slip", misconception: "D9", feedback: "A different slip.", concepts: ["A1.C2"], familyLabel: "other-slug" },
+    { itemId: "r", topicId: "A1", level: "H", correct: false, confidence: "guess", ts: 3, errorType: "", misconception: "", feedback: "", concepts: ["A1.C9"], familyLabel: "hidden-family" },
+    { itemId: "s", topicId: "A1", level: "H", correct: false, confidence: "sure", ts: 4, errorType: "slip", misconception: "D2", feedback: "", concepts: ["A1.C8"], familyLabel: "another-slug" },
+  ], subject);
+  assert.equal(analysis.patterns.length, 0);
+  assert.equal(analysis.otherMistakes.count, 2);
+  assert.deepEqual(analysis.otherMistakes.itemIds, ["r", "s"]);
+  assert.equal(analysis.otherMistakes.feedbackText, "Compare your answer with the steps below.");
+  assert.equal(analysis.errorTypes.some((row) => row.label === "Other miss"), false);
+  assert.equal(analysis.errorTypes.find((row) => row.id === "other").label, "Other mistakes");
+  assert.equal(analysis.mistakes.some((row) => row.itemIds.includes("p") && row.itemIds.includes("q")), false);
+  const text = formatSessionReport({
+    name: "Sam",
+    subject: subject,
+    session: { title: "Set", mode: "practice", levelLabel: "All", elapsedMs: 1000, itemIds: ["p", "q", "r", "s"], responses: {} },
+    analysis: analysis,
+    reports: [],
+  });
+  assert.match(text, /Other mistakes/);
+  assert.match(text, /Compare your answer with the steps below/);
+  assert.doesNotMatch(text, /No extra note|Other miss/);
+  assert.doesNotMatch(text, /old-slug|hidden-family|A1\.C/);
+});
+
+test("plain text keeps currency dollars and reads LaTeX", () => {
+  assert.equal(
+    strip("80 is the money from paperbacks: 20 paperbacks at \\$4 each."),
+    "80 is the money from paperbacks: 20 paperbacks at $4 each."
+  );
+  assert.equal(
+    strip("36° is $\\angle  A$ (and $\\angle  ABD$), not $\\angle  ABC$."),
+    "36° is angle A (and angle ABD), not angle ABC."
+  );
+  assert.equal(strip("$\\frac{a}{b}$"), "a/b");
+  assert.equal(strip("gives $x = \\frac{12}{7}$."), "gives x = 12/7.");
+  assert.match(strip("more than the \\$140 the store received"), /\$140/);
+  assert.doesNotMatch(strip("$\\angle ABC$"), /\\/);
 });
 
 test("session report includes the score, wrong ids, and the mistake", () => {

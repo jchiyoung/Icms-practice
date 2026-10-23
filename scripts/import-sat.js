@@ -213,7 +213,8 @@ function main() {
     ],
     errorTypes: {
       slip: "Careless slip",
-      concept: "Concept gap",
+      concept: "Concept mix-up",
+      setup: "Set-up error",
     },
     domains,
     conceptLabels,

@@ -74,7 +74,8 @@ The home screen lists every subject in the registry. Progress and analysis are s
   ],
   "errorTypes": {
     "slip": "Careless slip",
-    "concept": "Concept gap"
+    "concept": "Concept mix-up",
+    "setup": "Set-up error"
   },
   "conceptLabels": { "STOICH.1": "Limiting reactant" },
   "domains": [

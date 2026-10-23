@@ -219,8 +219,10 @@ textarea { min-height: 90px; resize: vertical; }
   padding: 12px;
   box-shadow: var(--shadow);
 }
-.stat b { display: block; font-size: 1.4rem; color: var(--navy); letter-spacing: -0.03em; }
-.stat span { color: var(--muted); font-size: 0.88rem; }
+.stat b, .stat .stat-num { display: block; font-size: 1.4rem; color: var(--navy); letter-spacing: -0.03em; font-weight: 750; }
+.tally { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0; font-weight: 400; }
+.tally span { font-weight: 400; }
+.stat span:not(.stat-num) { color: var(--muted); font-size: 0.88rem; font-weight: 400; }
 
 .question { outline: none; }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
@@ -279,6 +281,12 @@ textarea { min-height: 90px; resize: vertical; }
   overflow-x: auto;
 }
 .svg-host svg, .choice-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+.svg-host svg text[font-size="9"],
+.svg-host svg text[font-size="10"],
+.svg-host svg text[font-size="10.5"],
+.choice-figure svg text[font-size="9"],
+.choice-figure svg text[font-size="10"],
+.choice-figure svg text[font-size="10.5"] { font-size: 12px; }
 .choices { display: grid; gap: 10px; margin: 14px 0; }
 .choice {
   width: 100%;
@@ -340,7 +348,9 @@ textarea { min-height: 90px; resize: vertical; }
 .sol-block h4 { margin-bottom: 6px; color: var(--navy); font-size: 0.95rem; }
 .sense { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .sense p { margin: 0; font-weight: 750; width: 100%; }
-details.report { margin-top: 8px; }
+details.report, details.sol-more { margin-top: 8px; }
+details.sol-more summary { cursor: pointer; font-weight: 750; min-height: 44px; display: flex; align-items: center; color: var(--navy); }
+details.sol-more[open] summary { margin-bottom: 8px; }
 details.report summary { cursor: pointer; font-weight: 750; min-height: 44px; display: flex; align-items: center; }
 .saved-note { color: var(--good); font-weight: 700; }
 
