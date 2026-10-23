@@ -582,7 +582,7 @@
     }
     return (
       '<header class="app-header' + (countdown ? " has-countdown" : "") + '">' +
-      '<div class="brand"><span class="mark">IC</span><span><span class="brand-text">ICMS Practice</span><span class="brand-sub">IC Math &amp; Science</span></span></div>' +
+      '<div class="brand"><span class="mark">IC</span><span><span class="brand-text">ICMS Practice</span><span class="brand-sub">by IC Math &amp; Science</span></span></div>' +
       (tools ? '<div class="header-tools">' + tools + "</div>" : "") +
       countdown +
       "</header>"
@@ -871,6 +871,15 @@
     );
   }
 
+  function siteFooter() {
+    return (
+      '<footer class="site-footer">' +
+      "<p>© 2026 IC Math &amp; Science · Fullerton, CA</p>" +
+      '<p>Need extra help? Ask your ICMS teacher or visit <a href="https://www.icmathandscience.com" target="_blank" rel="noopener noreferrer">icmathandscience.com</a> · <a href="mailto:info@icmathandscience.com">info@icmathandscience.com</a></p>' +
+      "</footer>"
+    );
+  }
+
   function renderResults() {
     const session = state.session;
     const subject = subjectById(session.subjectId) || currentSubject();
@@ -936,7 +945,7 @@
       (notMastered.length ? '<button type="button" class="btn ghost" data-action="retry-unmastered">Retry not mastered</button>' : "") +
       '<button type="button" class="btn ghost" data-action="topics">Topics</button></div>' +
       '<details class="no-print"><summary>Preview the text</summary><pre class="copy-block">' + h(text) + "</pre></details></div>" +
-      (analysis.attempted ? analysisTables(analysis) : '<section class="card"><h2>Nothing to analyze yet</h2><p>Answer a few questions and this page will fill in.</p><button type="button" class="btn primary" data-action="topics">Back to topics</button></section>') +
+      (analysis.attempted ? analysisTables(analysis) + '<p class="teacher-note">Keep missing the same type? Bring this report to your ICMS teacher.</p>' : '<section class="card"><h2>Nothing to analyze yet</h2><p>Answer a few questions and this page will fill in.</p><button type="button" class="btn primary" data-action="topics">Back to topics</button></section>') +
       (reports.length ? "<h2>Problem reports</h2><div class=\"card\"><ul>" + reports.map(function (report) {
         return "<li><strong>" + h(report.itemId) + "</strong> " + h(report.text) + "</li>";
       }).join("") + "</ul></div>" : "")
@@ -961,6 +970,7 @@
     else if (state.view === "session") body = renderSession();
     else if (state.view === "results") body = renderResults();
     else if (state.view === "analysis") body = renderAnalysis();
+    if (state.view === "home" || state.view === "results" || state.view === "analysis") body += siteFooter();
     app.innerHTML = header() + '<main class="wrap' + (state.view === "session" ? " session-pad" : "") + '" id="main">' + body + "</main>";
     ICMS.mountRich(app);
     if (state.keepScroll) {

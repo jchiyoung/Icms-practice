@@ -461,6 +461,21 @@ pre.copy-block {
 }
 .error-card h1 { margin-bottom: 8px; }
 .loading { padding: 48px 0; text-align: center; color: var(--navy); font-weight: 750; }
+.site-footer {
+  margin: 28px 0 12px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: center;
+}
+.site-footer p { margin: 0; }
+.site-footer a { color: inherit; }
+.teacher-note {
+  margin: 4px 0 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
 
 @media (min-width: 800px) {
   .topics { grid-template-columns: 1fr 1fr; }
@@ -470,7 +485,7 @@ pre.copy-block {
   .wrap { padding-top: 26px; }
 }
 @media (max-width: 640px) {
-  .brand-sub { display: none; }
+  .app-header.has-countdown .brand-sub { display: none; }
   .conf-row { grid-template-columns: 1fr; }
   .header-link, .header-btn { padding: 6px 8px; font-size: 0.9rem; }
   .table-wrap { overflow-x: auto; }
