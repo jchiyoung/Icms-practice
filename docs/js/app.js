@@ -205,10 +205,44 @@
     response.attemptSaved = true;
   }
 
+  const PER_QUESTION_MS = 2 * 60 * 1000;
+
+  function timedLimitMs(count) {
+    return Math.max(1, count || 1) * PER_QUESTION_MS;
+  }
+
+  function ensureLimit(session) {
+    if (!session || session.mode !== "timed") return;
+    if (!(session.limitMs > 0)) session.limitMs = timedLimitMs((session.itemIds || []).length);
+  }
+
+  function remainingMs(session) {
+    if (!session) return 0;
+    ensureLimit(session);
+    const started = session.startedAt || Date.now();
+    return Math.max(0, session.limitMs - (Date.now() - started));
+  }
+
+  function formatClock(ms) {
+    const sec = Math.ceil(Math.max(0, ms) / 1000);
+    const minutes = Math.floor(sec / 60);
+    const seconds = sec % 60;
+    return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  }
+
+  function countdownActive(session) {
+    return !!(session && session.mode === "timed" && !session.finalized && !session.completed && state.view !== "name" && state.view !== "loading" && state.view !== "error");
+  }
+
   function freezeElapsed(session) {
     if (!session || session.elapsedFrozen) return;
     const started = session.startedAt || Date.now();
-    session.elapsedMs = Math.max(0, Date.now() - started);
+    let elapsed = Math.max(0, Date.now() - started);
+    if (session.mode === "timed") {
+      ensureLimit(session);
+      if (session.limitMs > 0) elapsed = Math.min(elapsed, session.limitMs);
+    }
+    session.elapsedMs = elapsed;
     session.elapsedFrozen = true;
   }
 
@@ -288,6 +322,7 @@
       itemIds: spec.itemIds,
       index: 0,
       startedAt: startedAt,
+      limitMs: spec.mode === "timed" ? timedLimitMs(spec.itemIds.length) : 0,
       elapsedMs: 0,
       elapsedFrozen: false,
       completed: false,
@@ -436,6 +471,7 @@
   function showResults() {
     const session = state.session;
     if (!session) return;
+    if (session.completed && session.finalized && state.view === "results") return;
     if (session.mode === "timed" && !session.finalized) finalizeTimed();
     else freezeElapsed(session);
     session.completed = true;
@@ -516,9 +552,6 @@
     if (state.view === "session" && session) {
       const item = itemById(subjectById(session.subjectId), session.itemIds[session.index]);
       const response = item ? session.responses[item.id] || {} : {};
-      if (session.mode === "timed" && !session.finalized && !session.completed) {
-        tools += '<span id="timer" class="header-btn">' + h(ICMS.duration(Date.now() - session.startedAt)) + "</span>";
-      }
       if (state.name) tools += '<button type="button" class="header-btn" data-action="analysis">My analysis</button>';
       if (item) {
         tools += '<button type="button" class="header-btn" data-action="flag" aria-pressed="' + (response.flagged ? "true" : "false") + '">' + (response.flagged ? "Flagged" : "Flag") + "</button>";
@@ -536,10 +569,22 @@
       tools += '<button type="button" class="header-btn" data-action="analysis">My analysis</button>';
       tools += '<button type="button" class="header-btn" data-action="switch-student">Not ' + h(state.name.split(" ")[0]) + "?</button>";
     }
+    let countdown = "";
+    if (countdownActive(session)) {
+      const left = remainingMs(session);
+      const tone = left <= 30000 ? " danger" : left <= 60000 ? " warn" : "";
+      const progress = (session.index + 1) + "/" + session.itemIds.length;
+      countdown =
+        '<div class="countdown-bar' + tone + '" id="countdown" role="timer" aria-label="' + h(formatClock(left) + " remaining, question " + (session.index + 1) + " of " + session.itemIds.length) + '">' +
+        '<span class="countdown-time" id="timer">' + formatClock(left) + "</span>" +
+        '<span class="countdown-progress" id="countdown-progress">' + progress + "</span>" +
+        "</div>";
+    }
     return (
-      '<header class="app-header">' +
+      '<header class="app-header' + (countdown ? " has-countdown" : "") + '">' +
       '<div class="brand"><span class="mark">IC</span><span><span class="brand-text">ICMS Practice</span><span class="brand-sub">IC Math &amp; Science</span></span></div>' +
-      tools +
+      (tools ? '<div class="header-tools">' + tools + "</div>" : "") +
+      countdown +
       "</header>"
     );
   }
@@ -582,7 +627,7 @@
       return '<button type="button" class="chip" data-action="set-pref" data-pref="count" data-value="' + size + '" aria-pressed="' + (String(state.prefs.count) === String(size) ? "true" : "false") + '">' + size + "</button>";
     }).join("") + '<button type="button" class="chip" data-action="set-pref" data-pref="count" data-value="all" aria-pressed="' + (state.prefs.count === "all" ? "true" : "false") + '">All</button>';
     const modeNote = state.prefs.mode === "timed"
-      ? "A timer runs. You get the score and explanations at the end."
+      ? "2 minutes per question. The clock counts down at the top and the set ends at 0:00."
       : "You check each question before the next one.";
     let topics = "";
     (subject.domains || []).forEach(function (domain) {
@@ -743,7 +788,7 @@
     const hint = revealed
       ? "Read the explanation, then say if it made sense."
       : session.mode === "timed"
-        ? "A timer is running. You'll see results at the end."
+        ? "Time left is at the top. You'll see results at the end."
         : "Choose an answer and how sure you are, then check.";
     let submitLabel = "Check";
     if (session.mode === "timed" && !session.finalized) submitLabel = last ? "Finish" : "Save and next";
@@ -906,6 +951,7 @@
   }
 
   function render() {
+    if (finishIfTimeUp()) return;
     const y = state.keepScroll ? window.scrollY : 0;
     let body = "";
     if (state.view === "loading") body = '<p class="loading">Loading questions…</p>';
@@ -933,13 +979,54 @@
       if (el) el.scrollIntoView({ block: "nearest", behavior: "smooth" });
       state.scrollTo = "";
     }
-    clearInterval(timerId);
-    if (state.view === "session" && state.session && state.session.mode === "timed" && !state.session.finalized) {
-      timerId = setInterval(function () {
-        const el = document.getElementById("timer");
-        if (el && state.session) el.textContent = ICMS.duration(Date.now() - state.session.startedAt);
-      }, 1000);
+    armCountdown();
+  }
+
+  function paintCountdown() {
+    const session = state.session;
+    if (!countdownActive(session)) return;
+    const left = remainingMs(session);
+    const el = document.getElementById("timer");
+    const bar = document.getElementById("countdown");
+    const progress = document.getElementById("countdown-progress");
+    if (el) el.textContent = formatClock(left);
+    if (progress) progress.textContent = (session.index + 1) + "/" + session.itemIds.length;
+    if (bar) {
+      bar.classList.toggle("warn", left <= 60000 && left > 30000);
+      bar.classList.toggle("danger", left <= 30000);
+      bar.setAttribute("aria-label", formatClock(left) + " remaining, question " + (session.index + 1) + " of " + session.itemIds.length);
     }
+  }
+
+  function finishIfTimeUp() {
+    const session = state.session;
+    if (!countdownActive(session) || remainingMs(session) > 0) return false;
+    showResults();
+    return true;
+  }
+
+  function armCountdown() {
+    clearInterval(timerId);
+    timerId = 0;
+    if (!countdownActive(state.session)) return;
+    if (remainingMs(state.session) <= 0) {
+      showResults();
+      return;
+    }
+    timerId = setInterval(function () {
+      if (!countdownActive(state.session)) {
+        clearInterval(timerId);
+        timerId = 0;
+        return;
+      }
+      if (remainingMs(state.session) <= 0) {
+        clearInterval(timerId);
+        timerId = 0;
+        showResults();
+        return;
+      }
+      paintCountdown();
+    }, 250);
   }
 
   function sprCount(value) {
@@ -1253,6 +1340,11 @@
     }
   }
 
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden || !countdownActive(state.session)) return;
+    if (remainingMs(state.session) <= 0) showResults();
+    else paintCountdown();
+  });
   app.addEventListener("click", onClick);
   app.addEventListener("input", onInput);
   app.addEventListener("keydown", onKey);

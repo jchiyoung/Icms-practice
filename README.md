@@ -11,7 +11,7 @@ Open [dist/icms-sat-practice.html](dist/icms-sat-practice.html) in Chrome. Doubl
 A student types a first name, picks a level and a mode, then taps a topic.
 
 - **Practice** checks each question immediately.
-- **Timed set** runs a timer and shows the score at the end.
+- **Timed set** gives 2 minutes per question. A countdown stays pinned at the top and the set ends at 0:00.
 - **Sure / 50-50 / Guessed** is required before an answer counts. Right and sure is mastered. A correct guess is not.
 - After the explanation, **Did this make sense?** is saved.
 - **Copy results** produces plain text for the teacher: score, wrong item ids, time, mistake patterns, weak spots, and any problem notes.

@@ -35,7 +35,7 @@
 
 * { box-sizing: border-box; }
 html {
-  scroll-padding-top: 76px;
+  scroll-padding-top: 156px;
   scroll-padding-bottom: 120px;
 }
 html, body { margin: 0; padding: 0; }
@@ -67,6 +67,7 @@ button { cursor: pointer; }
   top: 0;
   z-index: 20;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   min-height: 60px;
@@ -74,6 +75,57 @@ button { cursor: pointer; }
   background: var(--navy);
   color: white;
 }
+.app-header.has-countdown {
+  padding: 8px 0 0;
+  gap: 8px 10px;
+}
+.header-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.app-header.has-countdown .brand { padding-left: 14px; }
+.app-header.has-countdown .header-tools { padding-right: 14px; }
+.countdown-bar {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 16px 10px;
+  background: #12375f;
+  color: white;
+}
+.countdown-time {
+  font-size: clamp(2rem, 8vw, 2.7rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.countdown-progress {
+  font-size: clamp(1.2rem, 4.5vw, 1.45rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 8px 14px;
+  min-width: 4.6rem;
+  text-align: center;
+}
+.countdown-bar.warn {
+  background: #e8a317;
+  color: #1c1400;
+}
+.countdown-bar.warn .countdown-progress { background: rgba(28, 20, 0, 0.14); }
+.countdown-bar.danger {
+  background: #c4233a;
+  color: white;
+}
+.countdown-bar.danger .countdown-progress { background: rgba(255, 255, 255, 0.2); }
 .brand {
   display: flex;
   align-items: center;
@@ -130,7 +182,7 @@ h2 { font-size: 1.15rem; color: var(--navy); margin: 8px 0; }
 }
 .stack { display: grid; gap: 14px; }
 .btn, .choice, .chip, .qnum, .topic, .subject-card, input, textarea, summary {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 160px;
   scroll-margin-bottom: 128px;
 }
 .btn, .choice, .chip, .qnum, .topic, .subject-card {
@@ -436,7 +488,7 @@ pre.copy-block {
 }
 @media print {
   body { background: white; }
-  .app-header, .footer-bar, .no-print, .setup, .qstrip { display: none !important; }
+  .app-header, .countdown-bar, .footer-bar, .no-print, .setup, .qstrip { display: none !important; }
   .wrap { width: 100%; }
   .card, .pattern, .sol-block, .stat { box-shadow: none; break-inside: avoid; }
   a { color: inherit; text-decoration: none; }
@@ -1849,10 +1901,44 @@ pre.copy-block {
     response.attemptSaved = true;
   }
 
+  const PER_QUESTION_MS = 2 * 60 * 1000;
+
+  function timedLimitMs(count) {
+    return Math.max(1, count || 1) * PER_QUESTION_MS;
+  }
+
+  function ensureLimit(session) {
+    if (!session || session.mode !== "timed") return;
+    if (!(session.limitMs > 0)) session.limitMs = timedLimitMs((session.itemIds || []).length);
+  }
+
+  function remainingMs(session) {
+    if (!session) return 0;
+    ensureLimit(session);
+    const started = session.startedAt || Date.now();
+    return Math.max(0, session.limitMs - (Date.now() - started));
+  }
+
+  function formatClock(ms) {
+    const sec = Math.ceil(Math.max(0, ms) / 1000);
+    const minutes = Math.floor(sec / 60);
+    const seconds = sec % 60;
+    return (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  }
+
+  function countdownActive(session) {
+    return !!(session && session.mode === "timed" && !session.finalized && !session.completed && state.view !== "name" && state.view !== "loading" && state.view !== "error");
+  }
+
   function freezeElapsed(session) {
     if (!session || session.elapsedFrozen) return;
     const started = session.startedAt || Date.now();
-    session.elapsedMs = Math.max(0, Date.now() - started);
+    let elapsed = Math.max(0, Date.now() - started);
+    if (session.mode === "timed") {
+      ensureLimit(session);
+      if (session.limitMs > 0) elapsed = Math.min(elapsed, session.limitMs);
+    }
+    session.elapsedMs = elapsed;
     session.elapsedFrozen = true;
   }
 
@@ -1932,6 +2018,7 @@ pre.copy-block {
       itemIds: spec.itemIds,
       index: 0,
       startedAt: startedAt,
+      limitMs: spec.mode === "timed" ? timedLimitMs(spec.itemIds.length) : 0,
       elapsedMs: 0,
       elapsedFrozen: false,
       completed: false,
@@ -2080,6 +2167,7 @@ pre.copy-block {
   function showResults() {
     const session = state.session;
     if (!session) return;
+    if (session.completed && session.finalized && state.view === "results") return;
     if (session.mode === "timed" && !session.finalized) finalizeTimed();
     else freezeElapsed(session);
     session.completed = true;
@@ -2160,9 +2248,6 @@ pre.copy-block {
     if (state.view === "session" && session) {
       const item = itemById(subjectById(session.subjectId), session.itemIds[session.index]);
       const response = item ? session.responses[item.id] || {} : {};
-      if (session.mode === "timed" && !session.finalized && !session.completed) {
-        tools += '<span id="timer" class="header-btn">' + h(ICMS.duration(Date.now() - session.startedAt)) + "</span>";
-      }
       if (state.name) tools += '<button type="button" class="header-btn" data-action="analysis">My analysis</button>';
       if (item) {
         tools += '<button type="button" class="header-btn" data-action="flag" aria-pressed="' + (response.flagged ? "true" : "false") + '">' + (response.flagged ? "Flagged" : "Flag") + "</button>";
@@ -2180,10 +2265,22 @@ pre.copy-block {
       tools += '<button type="button" class="header-btn" data-action="analysis">My analysis</button>';
       tools += '<button type="button" class="header-btn" data-action="switch-student">Not ' + h(state.name.split(" ")[0]) + "?</button>";
     }
+    let countdown = "";
+    if (countdownActive(session)) {
+      const left = remainingMs(session);
+      const tone = left <= 30000 ? " danger" : left <= 60000 ? " warn" : "";
+      const progress = (session.index + 1) + "/" + session.itemIds.length;
+      countdown =
+        '<div class="countdown-bar' + tone + '" id="countdown" role="timer" aria-label="' + h(formatClock(left) + " remaining, question " + (session.index + 1) + " of " + session.itemIds.length) + '">' +
+        '<span class="countdown-time" id="timer">' + formatClock(left) + "</span>" +
+        '<span class="countdown-progress" id="countdown-progress">' + progress + "</span>" +
+        "</div>";
+    }
     return (
-      '<header class="app-header">' +
+      '<header class="app-header' + (countdown ? " has-countdown" : "") + '">' +
       '<div class="brand"><span class="mark">IC</span><span><span class="brand-text">ICMS Practice</span><span class="brand-sub">IC Math &amp; Science</span></span></div>' +
-      tools +
+      (tools ? '<div class="header-tools">' + tools + "</div>" : "") +
+      countdown +
       "</header>"
     );
   }
@@ -2226,7 +2323,7 @@ pre.copy-block {
       return '<button type="button" class="chip" data-action="set-pref" data-pref="count" data-value="' + size + '" aria-pressed="' + (String(state.prefs.count) === String(size) ? "true" : "false") + '">' + size + "</button>";
     }).join("") + '<button type="button" class="chip" data-action="set-pref" data-pref="count" data-value="all" aria-pressed="' + (state.prefs.count === "all" ? "true" : "false") + '">All</button>';
     const modeNote = state.prefs.mode === "timed"
-      ? "A timer runs. You get the score and explanations at the end."
+      ? "2 minutes per question. The clock counts down at the top and the set ends at 0:00."
       : "You check each question before the next one.";
     let topics = "";
     (subject.domains || []).forEach(function (domain) {
@@ -2387,7 +2484,7 @@ pre.copy-block {
     const hint = revealed
       ? "Read the explanation, then say if it made sense."
       : session.mode === "timed"
-        ? "A timer is running. You'll see results at the end."
+        ? "Time left is at the top. You'll see results at the end."
         : "Choose an answer and how sure you are, then check.";
     let submitLabel = "Check";
     if (session.mode === "timed" && !session.finalized) submitLabel = last ? "Finish" : "Save and next";
@@ -2550,6 +2647,7 @@ pre.copy-block {
   }
 
   function render() {
+    if (finishIfTimeUp()) return;
     const y = state.keepScroll ? window.scrollY : 0;
     let body = "";
     if (state.view === "loading") body = '<p class="loading">Loading questions…</p>';
@@ -2577,13 +2675,54 @@ pre.copy-block {
       if (el) el.scrollIntoView({ block: "nearest", behavior: "smooth" });
       state.scrollTo = "";
     }
-    clearInterval(timerId);
-    if (state.view === "session" && state.session && state.session.mode === "timed" && !state.session.finalized) {
-      timerId = setInterval(function () {
-        const el = document.getElementById("timer");
-        if (el && state.session) el.textContent = ICMS.duration(Date.now() - state.session.startedAt);
-      }, 1000);
+    armCountdown();
+  }
+
+  function paintCountdown() {
+    const session = state.session;
+    if (!countdownActive(session)) return;
+    const left = remainingMs(session);
+    const el = document.getElementById("timer");
+    const bar = document.getElementById("countdown");
+    const progress = document.getElementById("countdown-progress");
+    if (el) el.textContent = formatClock(left);
+    if (progress) progress.textContent = (session.index + 1) + "/" + session.itemIds.length;
+    if (bar) {
+      bar.classList.toggle("warn", left <= 60000 && left > 30000);
+      bar.classList.toggle("danger", left <= 30000);
+      bar.setAttribute("aria-label", formatClock(left) + " remaining, question " + (session.index + 1) + " of " + session.itemIds.length);
     }
+  }
+
+  function finishIfTimeUp() {
+    const session = state.session;
+    if (!countdownActive(session) || remainingMs(session) > 0) return false;
+    showResults();
+    return true;
+  }
+
+  function armCountdown() {
+    clearInterval(timerId);
+    timerId = 0;
+    if (!countdownActive(state.session)) return;
+    if (remainingMs(state.session) <= 0) {
+      showResults();
+      return;
+    }
+    timerId = setInterval(function () {
+      if (!countdownActive(state.session)) {
+        clearInterval(timerId);
+        timerId = 0;
+        return;
+      }
+      if (remainingMs(state.session) <= 0) {
+        clearInterval(timerId);
+        timerId = 0;
+        showResults();
+        return;
+      }
+      paintCountdown();
+    }, 250);
   }
 
   function sprCount(value) {
@@ -2897,6 +3036,11 @@ pre.copy-block {
     }
   }
 
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden || !countdownActive(state.session)) return;
+    if (remainingMs(state.session) <= 0) showResults();
+    else paintCountdown();
+  });
   app.addEventListener("click", onClick);
   app.addEventListener("input", onInput);
   app.addEventListener("keydown", onKey);
