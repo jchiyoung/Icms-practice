@@ -1,0 +1,3462 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "P5",
+ "skill": "Probability and conditional probability",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-P5-001",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "count-from-prob",
+   "signature": "red 12, blue 18, P(green)=1/4 -> total 40; traps 10 (green only), 72 (18 as one fourth), 120 (30 as one fourth)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A bag contains only red, blue, and green marbles. There are 12 red marbles and 18 blue marbles in the bag. If one marble is selected at random from the bag, the probability that it is green is $\\frac{1}{4}$. How many marbles are in the bag?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "10 is the number of green marbles. The question asks for all the marbles in the bag."
+    },
+    {
+     "key": "B",
+     "text": "$40$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$72$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats the 18 blue marbles as one fourth of the bag. One fourth of the bag is green."
+    },
+    {
+     "key": "D",
+     "text": "$120$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats the 30 red and blue marbles as one fourth of the bag. They are the other three fourths."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "If one fourth of the marbles are green, then the red and blue marbles together make up the other three fourths.",
+    "steps": "The question asks for the total number of marbles. Let $t$ = the number of marbles in the bag.<br>red and blue together: $12 + 18 = 30$ <span class=\"nt\">(the marbles that are not green)</span><br>$\\frac{3}{4}t = 30$ <span class=\"nt\">(not green is $1 - \\frac{1}{4} = \\frac{3}{4}$ of the bag)</span><br>$t = 40$ <span class=\"nt\">(multiply both sides by $\\frac{4}{3}$)</span>",
+    "check": "Green marbles: $40 - 30 = 10$, and $\\frac{10}{40} = \\frac{1}{4}$ ✓",
+    "be_careful": "The 30 red and blue marbles are the part that is NOT green, so they match $\\frac{3}{4}$, not $\\frac{1}{4}$.",
+    "desmos": "Not needed. The setup is the whole problem.",
+    "another_way": "Try a choice: 40 marbles leaves $40 - 30 = 10$ green, and $\\frac{10}{40} = \\frac{1}{4}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-002",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "row-conditional",
+   "signature": "3-activity table by grade, P(sports | grade 10)=26/55; traps 13/50 grand total, 13/24 column, 18/55 wrong cell",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the activity chosen by each of 100 students in grades 9 and 10. Each student chose exactly one activity.<table class=\"dt\"><tr><th></th><th>Band</th><th>Sports</th><th>Art</th><th>Total</th></tr><tr><th>Grade 9</th><td>14</td><td>22</td><td>9</td><td>45</td></tr><tr><th>Grade 10</th><td>18</td><td>26</td><td>11</td><td>55</td></tr><tr><th>Total</th><td>32</td><td>48</td><td>20</td><td>100</td></tr></table>If a grade 10 student is selected at random, what is the probability that the student chose sports?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{13}{50}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 26 out of all 100 students. The student is already known to be in grade 10."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{18}{55}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "18 is the number of grade 10 students who chose band, not sports."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{26}{55}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{13}{24}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 26 out of the 48 sports students. That is the probability that a sports student is in grade 10."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "“A grade 10 student is selected” means only the grade 10 row counts. Its total is the denominator.",
+    "steps": "The question asks: among grade 10 students only, what fraction chose sports?<br>grade 10 total $= 18 + 26 + 11 = 55$ <span class=\"nt\">(the new whole)</span><br>grade 10 and sports $= 26$ <span class=\"nt\">(the favorable cell)</span><br>probability $= \\frac{26}{55}$ <span class=\"nt\">(favorable over the row total)</span><br>So about half of the grade 10 students chose sports. The grade 10 row total, 55, is the bottom of the fraction, not the 100 students in the whole table.",
+    "check": "The fraction cannot be simplified, and $\\frac{26}{55}$ is a little less than $\\frac{1}{2}$, which fits 26 of 55 ✓",
+    "be_careful": "The total of 100 is the denominator only when a student is chosen from everyone.",
+    "desmos": "Not needed.",
+    "another_way": "Cover the grade 9 row with a hand. What remains is a 55-student group, and 26 of them chose sports."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-003",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "column-conditional",
+   "signature": "fertilizer x flowered table, P(B | flowered)=35/80=7/16; traps 7/10 row, 7/24 grand, 5/12 P(B)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A gardener tested three fertilizers on 120 plants. The table shows the number of plants that flowered and did not flower for each fertilizer.<table class=\"dt\"><tr><th></th><th>Flowered</th><th>Did not flower</th><th>Total</th></tr><tr><th>Fertilizer A</th><td>21</td><td>9</td><td>30</td></tr><tr><th>Fertilizer B</th><td>35</td><td>15</td><td>50</td></tr><tr><th>Fertilizer C</th><td>24</td><td>16</td><td>40</td></tr><tr><th>Total</th><td>80</td><td>40</td><td>120</td></tr></table>If one of the plants that flowered is selected at random, what is the probability that it received fertilizer B?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{7}{24}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 35 out of all 120 plants. Only the plants that flowered are in the group."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{5}{12}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is 50 out of 120, the probability that any plant received B. It ignores the condition that the plant flowered."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{7}{16}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{7}{10}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 35 out of 50, the probability that a plant with fertilizer B flowered. The condition is reversed."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The plant is chosen from the plants that flowered, so the Flowered column total is the denominator.",
+    "steps": "The question asks: among plants that flowered, what fraction received B?<br>flowered total $= 21 + 35 + 24 = 80$ <span class=\"nt\">(the Flowered column)</span><br>flowered with B $= 35$ <span class=\"nt\">(the favorable cell)</span><br>probability $= \\frac{35}{80} = \\frac{7}{16}$ <span class=\"nt\">(divide top and bottom by 5)</span><br>Only the 80 plants that flowered are in the group, so 80 is the bottom of the fraction. The 50 plants that received B are not the whole here.",
+    "check": "$\\frac{7}{16} \\times 80 = 35$, the number of B plants that flowered ✓",
+    "be_careful": "“A plant that flowered is selected” fixes the column. The fertilizer B row total, 50, belongs to the reverse question.",
+    "desmos": "Not needed.",
+    "another_way": "Read the choices as questions: $\\frac{7}{10}$ answers “given B, did it flower?”, which is the reverse."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-004",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "joint-vs-conditional",
+   "signature": "commute mode x on time table, P(bus AND late)=12/150=2/25; common wrong 3/10 (given bus)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The table shows how 150 employees traveled to work on Monday and whether they arrived on time.<table class=\"dt\"><tr><th></th><th>On time</th><th>Late</th><th>Total</th></tr><tr><th>Bus</th><td>28</td><td>12</td><td>40</td></tr><tr><th>Car</th><td>46</td><td>19</td><td>65</td></tr><tr><th>Bike</th><td>38</td><td>7</td><td>45</td></tr><tr><th>Total</th><td>112</td><td>38</td><td>150</td></tr></table>If one of the 150 employees is selected at random, what is the probability that the employee traveled by bus and arrived late? (Express the answer as a fraction or a decimal.)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2/25",
+      ".08",
+      "0.08"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3/10",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "12 out of the 40 bus riders answers “given that the employee rode the bus.” Here the employee is chosen from all 150."
+    },
+    {
+     "value": "6/19",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "12 out of the 38 late employees uses the Late column as the whole."
+    }
+   ],
+   "solution": {
+    "key_idea": "“Bus and late” is one cell, and the employee is chosen from everyone, so the denominator is the grand total.",
+    "steps": "The question asks for the probability of both: bus AND late, from all 150 employees.<br>bus and late $= 12$ <span class=\"nt\">(one cell of the table)</span><br>total $= 150$ <span class=\"nt\">(no condition shrinks the group)</span><br>probability $= \\frac{12}{150} = \\frac{2}{25}$ <span class=\"nt\">(divide top and bottom by 6)</span>",
+    "check": "$\\frac{2}{25} = 0.08$, and $0.08 \\times 150 = 12$ ✓",
+    "be_careful": "“And” is not “given.” Nothing in the question says the employee is known to be a bus rider.",
+    "desmos": "Not needed.",
+    "another_way": "Find the grand total by adding all six cells: $40 + 65 + 45 = 150$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-005",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C6"
+   ],
+   "family": "expected-count-sample",
+   "signature": "40 of 250 sampled chose oat milk; expected among 1,800 = 288; traps 250 sample size, 40 sample count, 1512 complement",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A coffee shop asked a random sample of 250 of its customers which milk they prefer. Of those surveyed, 40 chose oat milk. Based on the sample, about how many of the shop’s 1,800 customers would be expected to prefer oat milk?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$40$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "40 is the count in the sample, not in all 1,800 customers."
+    },
+    {
+     "key": "B",
+     "text": "$250$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "250 is the size of the sample, not a number of customers who prefer oat milk."
+    },
+    {
+     "key": "C",
+     "text": "$288$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$1,512$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "1,512 is the number expected NOT to prefer oat milk, $1,800 - 288$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A random sample gives an estimate of the probability. Multiply that probability by the size of the whole group.",
+    "steps": "The question asks for the expected number of oat milk customers among 1,800.<br>probability $= \\frac{40}{250} = 0.16$ <span class=\"nt\">(the sample fraction)</span><br>expected count $= 0.16 \\times 1,800$ <span class=\"nt\">(apply it to all customers)</span><br>$= 288$ <span class=\"nt\">(multiply)</span><br>The sample says 16% of customers prefer oat milk. The same 16% of all 1,800 customers is about 288.",
+    "check": "$\\frac{288}{1,800} = 0.16 = \\frac{40}{250}$ ✓",
+    "be_careful": "A count from the sample is not a count for the whole group.",
+    "desmos": "Not needed.",
+    "another_way": "Scale up: $1,800$ is $7.2$ times $250$, so $40 \\times 7.2 = 288$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-006",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C3"
+   ],
+   "family": "of-those-prose",
+   "signature": "club 120, seniors 45, of the seniors 18 play chess; P(chess | senior)=2/5; traps 3/20, 3/8, 3/5",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A club has 120 members, and 45 of the members are seniors. Of the seniors, 18 play chess. If a senior in the club is selected at random, what is the probability that the senior plays chess?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{20}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 18 out of all 120 members. The person chosen is known to be a senior."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{8}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 45 out of 120, the probability that a member is a senior."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2}{5}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{3}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "This is 27 out of 45, the probability that the senior does NOT play chess."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "“A senior is selected” makes the 45 seniors the whole group.",
+    "steps": "The question asks: among the seniors, what fraction play chess?<br>group $= 45$ seniors <span class=\"nt\">(the condition)</span><br>favorable $= 18$ <span class=\"nt\">(seniors who play chess)</span><br>probability $= \\frac{18}{45} = \\frac{2}{5}$ <span class=\"nt\">(divide top and bottom by 9)</span><br>Once a senior is chosen, the other 75 members no longer matter. The 45 seniors are the whole group.",
+    "check": "$\\frac{2}{5} \\times 45 = 18$ ✓",
+    "be_careful": "The 120 members are the whole club, but the question already narrows the choice to seniors.",
+    "desmos": "Not needed.",
+    "another_way": "Make a 2-row table (senior or not, chess or not); only the senior row is used."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-007",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "remove-items-forward",
+   "signature": "60 tokens P(gold)=0.15 -> 9 gold; remove 6 silver -> P(gold)=9/54=1/6; common wrong .15 not updated",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A jar contains 60 tokens, and each token is gold or silver. If one token is selected at random, the probability that it is gold is $0.15$. Then 6 silver tokens are removed from the jar. If one token is now selected at random, what is the probability that it is gold?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1/6",
+      ".1666",
+      ".1667",
+      "0.166",
+      "0.167"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": ".15",
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "0.15 is the probability before any tokens were removed. The total changed."
+    },
+    {
+     "value": "3/20",
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "This is 0.15 written as a fraction. The 6 removed tokens make the total smaller."
+    }
+   ],
+   "solution": {
+    "key_idea": "A probability gives a count first. Then the new probability uses the new total.",
+    "steps": "The question asks for the probability of gold after the removal.<br>gold tokens $= 0.15 \\times 60 = 9$ <span class=\"nt\">(count from the probability)</span><br>new total $= 60 - 6 = 54$ <span class=\"nt\">(only silver tokens left)</span><br>gold tokens are still $9$ <span class=\"nt\">(no gold token was removed)</span><br>probability $= \\frac{9}{54} = \\frac{1}{6}$ <span class=\"nt\">(gold over the new total)</span>",
+    "check": "$54 \\times \\frac{1}{6} = 9$ gold, and $9 + 45 = 54$ ✓",
+    "be_careful": "Removing silver tokens raises the chance of gold, so the answer must be bigger than 0.15.",
+    "desmos": "Not needed.",
+    "another_way": "Silver before: 51. Silver after: 45. Gold stays 9, so 9 out of $9 + 45$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-008",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C3"
+   ],
+   "family": "reverse-direction-table",
+   "signature": "handedness x grade table, P(grade 11 | left)=9/15=3/5; traps 3/20 reversed, 3/40 grand, 2/5 wrong grade",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows whether each of 120 students in grades 11 and 12 is left-handed or right-handed.<table class=\"dt\"><tr><th></th><th>Left-handed</th><th>Right-handed</th><th>Total</th></tr><tr><th>Grade 11</th><td>9</td><td>51</td><td>60</td></tr><tr><th>Grade 12</th><td>6</td><td>54</td><td>60</td></tr><tr><th>Total</th><td>15</td><td>105</td><td>120</td></tr></table>If a left-handed student is selected at random, what is the probability that the student is in grade 11?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{40}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 9 out of all 120 students."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{20}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 9 out of the 60 grade 11 students, the probability that a grade 11 student is left-handed. The condition is reversed."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 6 out of 15, the probability that the left-handed student is in grade 12."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{3}{5}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The words after “If a” name the group the student comes from. Here that group is the left-handed students.",
+    "steps": "The question asks: among left-handed students, what fraction are in grade 11?<br>left-handed total $= 9 + 6 = 15$ <span class=\"nt\">(the Left-handed column)</span><br>left-handed and grade 11 $= 9$ <span class=\"nt\">(the favorable cell)</span><br>probability $= \\frac{9}{15} = \\frac{3}{5}$ <span class=\"nt\">(divide top and bottom by 3)</span><br>The student is chosen from the 15 left-handed students, so 15 is the bottom. Grade 11 has 9 of them, which is 3 out of every 5.",
+    "check": "$\\frac{3}{5} + \\frac{2}{5} = 1$ for the two grades among the 15 left-handed students ✓",
+    "be_careful": "“A grade 11 student is left-handed” and “a left-handed student is in grade 11” share the top, 9, but not the bottom.",
+    "desmos": "Not needed.",
+    "another_way": "Only 15 students are left-handed, so the denominator must be 15."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-009",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "complement-in-row",
+   "signature": "age x book format table, P(not print | under 30)=56/70=4/5; traps 1/5, 28/75 grand, 4/7 reversed",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A library surveyed 150 readers about the book format they prefer. The table shows the results.<table class=\"dt\"><tr><th></th><th>Print</th><th>Audio</th><th>E-book</th><th>Total</th></tr><tr><th>Under 30</th><td>14</td><td>25</td><td>31</td><td>70</td></tr><tr><th>30 or older</th><td>38</td><td>20</td><td>22</td><td>80</td></tr><tr><th>Total</th><td>52</td><td>45</td><td>53</td><td>150</td></tr></table>If a reader under 30 is selected at random, what is the probability that the reader does NOT prefer print?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{1}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "This is 14 out of 70, the probability that the reader DOES prefer print."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{28}{75}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 56 out of all 150 readers. The reader is known to be under 30."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{4}{7}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 56 out of the 98 readers who do not prefer print, the probability that such a reader is under 30."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{4}{5}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Inside the under-30 row, “not print” means audio or e-book. One minus the print share gives the same result.",
+    "steps": "The question asks: among readers under 30, what fraction do not prefer print?<br>under 30 total $= 14 + 25 + 31 = 70$ <span class=\"nt\">(the row is the whole group)</span><br>not print $= 25 + 31 = 56$ <span class=\"nt\">(audio and e-book)</span><br>probability $= \\frac{56}{70} = \\frac{4}{5}$ <span class=\"nt\">(divide top and bottom by 14)</span>",
+    "check": "Print share in the row: $\\frac{14}{70} = \\frac{1}{5}$, and $1 - \\frac{1}{5} = \\frac{4}{5}$ ✓",
+    "be_careful": "The complement is taken inside the row, so it is $1 - \\frac{14}{70}$, not $1 - \\frac{52}{150}$.",
+    "desmos": "Not needed.",
+    "another_way": "$1 - \\frac{14}{70} = 1 - \\frac{1}{5} = \\frac{4}{5}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-010",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "unknown-count-from-cond",
+   "signature": "children group: 7 wear glasses, P(glasses | child)=1/4 -> 28 children, 21 without; common wrong 28",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A group of people at a museum consists of 24 adults and some children. Exactly 7 of the children wear glasses. If a child from the group is selected at random, the probability that the child wears glasses is $\\frac{1}{4}$. How many children in the group do NOT wear glasses?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "21"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "28",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "28 is the number of children in all. The question asks only for those without glasses."
+    },
+    {
+     "value": "45",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This adds the 24 adults to the 21 children. Only children are asked about."
+    }
+   ],
+   "solution": {
+    "key_idea": "The 7 children with glasses are one fourth of all the children, which fixes the number of children.",
+    "steps": "The question asks for children without glasses. Let $c$ = the number of children.<br>$\\frac{7}{c} = \\frac{1}{4}$ <span class=\"nt\">(glasses out of children)</span><br>$c = 28$ <span class=\"nt\">(cross-multiply)</span><br>without glasses $= 28 - 7 = 21$ <span class=\"nt\">(the rest of the children)</span><br>So the group has 28 children, and 21 of them do not wear glasses. The 24 adults are not part of the question.",
+    "check": "$\\frac{7}{28} = \\frac{1}{4}$ ✓, and $7 + 21 = 28$ ✓",
+    "be_careful": "The 24 adults are not part of the probability, because the person chosen is a child.",
+    "desmos": "Not needed.",
+    "another_way": "If 1 out of 4 children wears glasses, then 3 out of 4 do not: $3 \\times 7 = 21$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-011",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "prose-to-table",
+   "signature": "200 students, Spanish 90 / French 110, juniors 30 and 44; P(French | junior)=44/74=22/37; traps 2/5, 11/50, 15/37",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Each of the 200 students at a school takes exactly one language: 90 take Spanish, and the rest take French. Of the Spanish students, 30 are juniors. Of the French students, 44 are juniors. If a junior at the school is selected at random, what is the probability that the junior takes French?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{11}{50}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 44 out of all 200 students."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{2}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 44 out of the 110 French students, the probability that a French student is a junior."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{15}{37}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 30 out of 74, the probability that the junior takes Spanish."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{22}{37}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Collect all the juniors first. The group is juniors from both languages.",
+    "steps": "The question asks: among juniors, what fraction take French?<br>juniors $= 30 + 44 = 74$ <span class=\"nt\">(Spanish juniors plus French juniors)</span><br>French juniors $= 44$ <span class=\"nt\">(favorable)</span><br>probability $= \\frac{44}{74} = \\frac{22}{37}$ <span class=\"nt\">(divide top and bottom by 2)</span><br>The juniors come from both languages, so the whole is all 74 juniors. French juniors are 44 of them, a little more than half.",
+    "check": "$\\frac{22}{37} + \\frac{15}{37} = 1$, the two languages among juniors ✓",
+    "be_careful": "The 110 French students is the right whole only for the reverse question.",
+    "desmos": "Not needed.",
+    "another_way": "Build the table: rows Spanish (90) and French (110), columns junior and not junior. Read the junior column."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-012",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C1"
+   ],
+   "family": "at-least-frequency",
+   "signature": "households by number of pets, P(at least 2)=22/65; traps 12/65 exactly 2, 2/13 more than 2, 43/65 at most 1",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the number of pets in each of 65 households.<table class=\"dt\"><tr><th>Number of pets</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><th>Number of households</th><td>18</td><td>25</td><td>12</td><td>7</td><td>3</td></tr></table>If one of these households is selected at random, what is the probability that it has at least 2 pets?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{2}{13}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This is 10 out of 65, the households with MORE than 2 pets. Households with exactly 2 count too."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{12}{65}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "12 households have exactly 2 pets. “At least 2” also includes 3 and 4 pets."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{22}{65}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{43}{65}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "43 households have at most 1 pet. That is the opposite event."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "“At least 2” means 2 or more, so it includes 2.",
+    "steps": "The question asks for households with 2, 3, or 4 pets.<br>favorable $= 12 + 7 + 3 = 22$ <span class=\"nt\">(add the three columns)</span><br>total $= 18 + 25 + 12 + 7 + 3 = 65$ <span class=\"nt\">(all households)</span><br>probability $= \\frac{22}{65}$ <span class=\"nt\">(favorable over total)</span>",
+    "check": "Complement: 0 or 1 pet is $18 + 25 = 43$, and $22 + 43 = 65$ ✓",
+    "be_careful": "“At least 2” includes 2. “More than 2” would not.",
+    "desmos": "Not needed.",
+    "another_way": "$1 - \\frac{43}{65} = \\frac{22}{65}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-013",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "percent-table-conditional",
+   "signature": "table of percents of all respondents; P(agree | member)=12%/30%=2/5; traps 3/10 column, 3/25 cell, 3/5 not agree",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A town surveyed its residents about a new park plan. The table shows the percent of all survey respondents in each category.<table class=\"dt\"><tr><th></th><th>Agree</th><th>Disagree</th><th>No opinion</th></tr><tr><th>Members</th><td>12%</td><td>13%</td><td>5%</td></tr><tr><th>Nonmembers</th><td>28%</td><td>32%</td><td>10%</td></tr></table>If a respondent who is a member is selected at random, what is the probability that the respondent agrees with the plan?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{25}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 12%, the share of ALL respondents who are members and agree."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{10}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 12% out of the 40% who agree, the probability that someone who agrees is a member."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2}{5}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{3}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "This is 18% out of 30%, the probability that a member does not agree."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Percents of the whole work like counts. The member row adds to 30%, and that is the new whole.",
+    "steps": "The question asks: among members, what fraction agree?<br>members $= 12\\% + 13\\% + 5\\% = 30\\%$ <span class=\"nt\">(the member row)</span><br>members who agree $= 12\\%$ <span class=\"nt\">(favorable)</span><br>probability $= \\frac{12}{30} = \\frac{2}{5}$ <span class=\"nt\">(row share)</span><br>The answer is the members who agree as a share of the members only, not of all respondents.",
+    "check": "Imagine 100 respondents: 30 members, 12 of them agree, and $\\frac{12}{30} = \\frac{2}{5}$ ✓",
+    "be_careful": "12% is a share of everyone. It has to be divided by the member share.",
+    "desmos": "Not needed.",
+    "another_way": "Pretend there were 100 respondents and turn every percent into a count."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-014",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "add-to-target-prob",
+   "signature": "8 red 12 blue, add r red to make P(red)=3/5 -> r=10; common wrong 4 (total held at 20)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A box contains 8 red chips and 12 blue chips. How many red chips must be added to the box so that the probability of selecting a red chip at random is $\\frac{3}{5}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "10"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This makes 12 red chips out of 20. Adding red chips also makes the total bigger."
+    },
+    {
+     "value": "18",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "18 is the number of red chips after adding. The question asks how many are added."
+    }
+   ],
+   "solution": {
+    "key_idea": "Adding red chips changes both the top and the bottom of the probability.",
+    "steps": "The question asks for the number of red chips to add. Let $r$ = that number.<br>$\\frac{8 + r}{20 + r} = \\frac{3}{5}$ <span class=\"nt\">(red over the new total)</span><br>$5(8 + r) = 3(20 + r)$ <span class=\"nt\">(cross-multiply)</span><br>$40 + 5r = 60 + 3r$ <span class=\"nt\">(distribute)</span><br>$2r = 20$, so $r = 10$ <span class=\"nt\">(subtract $3r$ and 40, then divide by 2)</span>",
+    "check": "$\\frac{18}{30} = \\frac{3}{5}$ ✓",
+    "be_careful": "The total is not 20 anymore after chips are added.",
+    "desmos": "Graph $y = \\frac{8 + x}{20 + x}$ and $y = 0.6$; they meet at $x = 10$. It is only a check.",
+    "another_way": "Blue stays 12, and blue must be $\\frac{2}{5}$ of the new total, so the total is 30 and red is 18."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-015",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C1"
+   ],
+   "family": "joint-with-negation",
+   "signature": "3 grades x online/in person; P(not grade 11 AND online)=49/140=7/20; traps 3/20, 1/2, 7/10",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows how 140 students in grades 10 through 12 attended a school workshop.<table class=\"dt\"><tr><th></th><th>Online</th><th>In person</th><th>Total</th></tr><tr><th>Grade 10</th><td>16</td><td>29</td><td>45</td></tr><tr><th>Grade 11</th><td>21</td><td>24</td><td>45</td></tr><tr><th>Grade 12</th><td>33</td><td>17</td><td>50</td></tr><tr><th>Total</th><td>70</td><td>70</td><td>140</td></tr></table>If one of the 140 students is selected at random, what is the probability that the student is NOT in grade 11 and attended online?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{20}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "This is 21 out of 140, the grade 11 online students. The question excludes grade 11."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{7}{20}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is 70 out of 140, everyone who attended online. It ignores “not in grade 11.”"
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{7}{10}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 49 out of 70, which divides by the online total. The student is chosen from all 140."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "“Not in grade 11 and online” is two cells: grade 10 online and grade 12 online.",
+    "steps": "The question asks for students in grade 10 or 12 who attended online, out of all 140.<br>favorable $= 16 + 33 = 49$ <span class=\"nt\">(online cells for grades 10 and 12)</span><br>total $= 140$ <span class=\"nt\">(no condition)</span><br>probability $= \\frac{49}{140} = \\frac{7}{20}$ <span class=\"nt\">(divide top and bottom by 7)</span>",
+    "check": "Online total $70 = 49 + 21$ ✓",
+    "be_careful": "“And” with no “given” keeps the denominator at 140.",
+    "desmos": "Not needed.",
+    "another_way": "All online minus grade 11 online: $70 - 21 = 49$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-016",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C3"
+   ],
+   "family": "interpret-statement",
+   "signature": "P(bike | employee lives within 5 miles)=0.35 meaning; traps reversed, count, complement of wrong group",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a company, the probability that a randomly selected employee who lives within 5 miles of the office bikes to work is $0.35$. Which statement must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Of the employees who bike to work, 35% live within 5 miles of the office.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This reverses the condition. The 0.35 is a share of the employees who live within 5 miles."
+    },
+    {
+     "key": "B",
+     "text": "Exactly 35 employees who live within 5 miles of the office bike to work.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "0.35 is a probability, not a count. The number of employees is not given."
+    },
+    {
+     "key": "C",
+     "text": "Of all the company’s employees, 65% do not bike to work.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "The complement 0.65 applies only to employees within 5 miles, not to the whole company."
+    },
+    {
+     "key": "D",
+     "text": "Of the employees who live within 5 miles of the office, 35% bike to work.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "In “a randomly selected employee who lives within 5 miles,” the group is the employees within 5 miles. The probability is a share of that group.",
+    "steps": "The question asks which statement is forced by the probability.<br>group: employees within 5 miles <span class=\"nt\">(the words after “who” name the group)</span><br>event: bikes to work <span class=\"nt\">(what is counted inside the group)</span><br>$0.35$ = bikers within 5 miles $\\div$ all within 5 miles <span class=\"nt\">(favorable over group)</span><br>So 35% of the nearby employees bike to work.",
+    "check": "Make up numbers: 200 nearby employees, 70 of them bike, and $\\frac{70}{200} = 0.35$ ✓. Nothing tells how many bikers live far away.",
+    "be_careful": "A probability never gives a count unless the size of the group is known.",
+    "desmos": "Not needed.",
+    "another_way": "Test each choice with made-up counts. Only the correct one holds every time."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-017",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "fill-missing-cell",
+   "signature": "cats/dogs indoor/outdoor table with blanks, total 90; P(dog | outdoor)=26/44=13/22; traps 13/20, 13/45, 9/22",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A shelter recorded whether each of its 90 animals is a cat or a dog and whether it stays indoors or outdoors. Some entries of the table are missing.<table class=\"dt\"><tr><th></th><th>Indoor</th><th>Outdoor</th><th>Total</th></tr><tr><th>Cats</th><td></td><td>18</td><td>50</td></tr><tr><th>Dogs</th><td>14</td><td></td><td></td></tr><tr><th>Total</th><td></td><td></td><td>90</td></tr></table>If an outdoor animal is selected at random, what is the probability that it is a dog?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{13}{45}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 26 out of all 90 animals."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{9}{22}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 18 out of 44, the probability that the outdoor animal is a cat."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{13}{22}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{13}{20}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 26 out of the 40 dogs, the probability that a dog stays outdoors."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Fill the table from the totals first. Then use the Outdoor column as the whole.",
+    "steps": "The question asks: among outdoor animals, what fraction are dogs?<br>dogs $= 90 - 50 = 40$ <span class=\"nt\">(grand total minus cats)</span><br>outdoor dogs $= 40 - 14 = 26$ <span class=\"nt\">(dogs minus indoor dogs)</span><br>outdoor total $= 18 + 26 = 44$ <span class=\"nt\">(the Outdoor column)</span><br>probability $= \\frac{26}{44} = \\frac{13}{22}$ <span class=\"nt\">(divide top and bottom by 2)</span>",
+    "check": "Indoor: $32 + 14 = 46$, and $46 + 44 = 90$ ✓",
+    "be_careful": "Fill in the dog total before the outdoor dogs. Every missing cell comes from a row or column total.",
+    "desmos": "Not needed.",
+    "another_way": "Outdoor animals are everyone minus the indoor ones: $90 - (32 + 14) = 44$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-018",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "column-conditional-noncomplete",
+   "signature": "practice vs no-practice x passed; P(no-practice | did not pass)=13/20; traps 13/40 (row), 7/20 (other group), 1/2 (group share)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a study, 80 students were placed in two groups of 40. The table shows how many in each group passed a skills test.<table class=\"dt\"><tr><th></th><th>Passed</th><th>Did not pass</th><th>Total</th></tr><tr><th>Practice group</th><td>33</td><td>7</td><td>40</td></tr><tr><th>No-practice group</th><td>27</td><td>13</td><td>40</td></tr><tr><th>Total</th><td>60</td><td>20</td><td>80</td></tr></table>If a student who did not pass is selected at random, what is the probability that the student was in the no-practice group?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{13}{40}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 13 out of the 40 no-practice students, the probability that a no-practice student did not pass."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{7}{20}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 7 out of 20, the probability that the student was in the practice group."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is 40 out of 80, the share of all students in the no-practice group. It ignores “did not pass.”"
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{13}{20}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The student is chosen from those who did not pass, so the Did not pass column is the whole.",
+    "steps": "The question asks: among students who did not pass, what fraction had no practice?<br>did not pass $= 7 + 13 = 20$ <span class=\"nt\">(the column total)</span><br>no practice and did not pass $= 13$ <span class=\"nt\">(favorable)</span><br>probability $= \\frac{13}{20}$ <span class=\"nt\">(favorable over the column)</span><br>Of the 20 students who did not pass, 13 were in the no-practice group. The 20 students who did not pass are the whole group.",
+    "check": "$\\frac{13}{20} + \\frac{7}{20} = 1$ ✓",
+    "be_careful": "The equal group sizes, 40 and 40, are not the denominator here.",
+    "desmos": "Not needed.",
+    "another_way": "Read only the Did not pass column: 7 and 13."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-019",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C1"
+   ],
+   "family": "integer-counting",
+   "signature": "integers 1-60, P(multiple of 4 but not of 8)=8/60=2/15; traps 1/4, 3/4, 8/15",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An integer from 1 to 60, inclusive, is selected at random. What is the probability that the integer is a multiple of 4 but is NOT a multiple of 8?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{2}{15}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{4}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is 15 out of 60, every multiple of 4. The multiples of 8 must be removed."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{8}{15}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 8 out of 15, which divides by the multiples of 4. The integer is chosen from all 60."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This is 45 out of 60, the probability that the integer is NOT a multiple of 4."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Every multiple of 8 is also a multiple of 4, so take the multiples of 8 away from the multiples of 4.",
+    "steps": "The question asks for the probability of a multiple of 4 that is not a multiple of 8.<br>multiples of 4: $4, 8, \\ldots, 60$, which is 15 integers <span class=\"nt\">($60 \\div 4 = 15$)</span><br>multiples of 8: $8, 16, \\ldots, 56$, which is 7 integers <span class=\"nt\">($56 \\div 8 = 7$)</span><br>favorable $= 15 - 7 = 8$ <span class=\"nt\">(4, 12, 20, …, 60)</span><br>probability $= \\frac{8}{60} = \\frac{2}{15}$ <span class=\"nt\">(out of all 60 integers)</span>",
+    "check": "List them: 4, 12, 20, 28, 36, 44, 52, 60. That is 8 ✓",
+    "be_careful": "The integer comes from all of 1 to 60, so the bottom is 60.",
+    "desmos": "Not needed.",
+    "another_way": "The favorable integers jump by 8 starting at 4: 4, 12, …, 60."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-020",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "M",
+   "concepts": [
+    "P5.C6"
+   ],
+   "family": "expected-count-subgroup",
+   "signature": "sample table by grade x trip choice; 400 grade 12 students expected museum = 12/32*400=150; traps 60 (grand), 210 (all-student rate), 250 park",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of grade 11 and grade 12 students at a large school chose between two field trips. The table shows the results.<table class=\"dt\"><tr><th></th><th>Chose the museum</th><th>Chose the park</th><th>Total</th></tr><tr><th>Grade 11</th><td>30</td><td>18</td><td>48</td></tr><tr><th>Grade 12</th><td>12</td><td>20</td><td>32</td></tr><tr><th>Total</th><td>42</td><td>38</td><td>80</td></tr></table>The school has 400 grade 12 students. Based on the sample, about how many of the grade 12 students would be expected to choose the museum?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This uses 12 out of all 80 sampled students. Only the grade 12 row describes grade 12 students."
+    },
+    {
+     "key": "B",
+     "text": "$150$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$210$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the museum share of ALL sampled students, 42 out of 80. Grade 11 students chose differently, so they must be left out."
+    },
+    {
+     "key": "D",
+     "text": "$250$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "250 is the expected number of grade 12 students who would choose the park."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Use the grade 12 row of the sample to estimate the probability, then apply it to the 400 grade 12 students.",
+    "steps": "The question asks for the expected number of grade 12 students choosing the museum.<br>grade 12 in the sample $= 12 + 20 = 32$ <span class=\"nt\">(the row total)</span><br>probability $= \\frac{12}{32} = \\frac{3}{8}$ <span class=\"nt\">(museum share in that row)</span><br>expected $= \\frac{3}{8} \\times 400 = 150$ <span class=\"nt\">(apply to all grade 12 students)</span>",
+    "check": "$\\frac{150}{400} = \\frac{3}{8} = \\frac{12}{32}$ ✓",
+    "be_careful": "The 400 students are all in grade 12, so the rate must come from the grade 12 row only.",
+    "desmos": "Not needed.",
+    "another_way": "400 is $12.5$ times 32, so $12 \\times 12.5 = 150$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-021",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "reverse-to-negated-target",
+   "signature": "region x yes/no; P(not Central | answered no)=64/83; traps 8/15 reversed, 19/83 Central, 16/45 grand",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A city surveyed 60 residents in each of three regions about a proposed bus route. The table shows the responses.<table class=\"dt\"><tr><th>Region</th><th>Yes</th><th>No</th><th>Total</th></tr><tr><th>North</th><td>34</td><td>26</td><td>60</td></tr><tr><th>Central</th><td>41</td><td>19</td><td>60</td></tr><tr><th>South</th><td>22</td><td>38</td><td>60</td></tr><tr><th>Total</th><td>97</td><td>83</td><td>180</td></tr></table>If a resident who answered no is selected at random, what is the probability that the resident does NOT live in the Central region?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{19}{83}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "This is 19 out of 83, the probability that a resident who answered no DOES live in the Central region."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{16}{45}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 64 out of all 180 residents. Only residents who answered no are in the group."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{8}{15}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 64 out of the 120 residents outside Central, the probability that such a resident answered no. The condition is reversed."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{64}{83}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The person chosen answered no, so the No column is the whole. “Not Central” is the North and South entries of that column.",
+    "steps": "The question asks: among residents who answered no, what fraction live outside Central?<br>Step 1: Find the whole.<br>answered no $= 26 + 19 + 38 = 83$ <span class=\"nt\">(the No column total)</span><br>Step 2: Count the part.<br>no, North or South $= 26 + 38 = 64$ <span class=\"nt\">(leave out the Central 19)</span><br>Step 3: Divide.<br>probability $= \\frac{64}{83}$ <span class=\"nt\">(64 and 83 share no common factor)</span>",
+    "check": "$64 + 19 = 83$ ✓, and $\\frac{64}{83} \\approx 0.77$, which is large because Central has the fewest no answers ✓",
+    "be_careful": "“Given no” makes 83 the whole, not the 120 residents outside Central.",
+    "desmos": "Not needed.",
+    "another_way": "Find the Central share and subtract: $1 - \\frac{19}{83} = \\frac{64}{83}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-022",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "tree-reverse",
+   "signature": "500 voters, 60% support; under 30: 25% of supporters, 40% of others; P(support | under 30)=75/155=15/31; common wrong .25 (reversed)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A poll of 500 voters found that 60% support a new library tax. Of the voters who support the tax, 25% are under the age of 30. Of the voters who do not support the tax, 40% are under the age of 30. If a voter in the poll who is under the age of 30 is selected at random, what is the probability that the voter supports the tax?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "15/31",
+      ".4838",
+      ".4839",
+      "0.483",
+      "0.484"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1/4",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "25% is the share of supporters who are under 30. The question asks for the share of under-30 voters who are supporters."
+    },
+    {
+     "value": "3/5",
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "60% is the share of all voters who support the tax. The condition “under 30” changes the group."
+    }
+   ],
+   "solution": {
+    "key_idea": "Turn every percent into a count. Then the under-30 voters from both groups make the new whole.",
+    "steps": "The question asks: among voters under 30, what fraction support the tax?<br>Step 1: Split the 500 voters.<br>supporters $= 0.60 \\times 500 = 300$ <span class=\"nt\">(the rest, 200, do not support)</span><br>Step 2: Find the under-30 voters in each group.<br>under 30 and support $= 0.25 \\times 300 = 75$ <span class=\"nt\">(a share of supporters)</span><br>under 30 and do not support $= 0.40 \\times 200 = 80$ <span class=\"nt\">(a share of the others)</span><br>all under 30 $= 75 + 80 = 155$ <span class=\"nt\">(the new whole)</span><br>Step 3: Divide.<br>probability $= \\frac{75}{155} = \\frac{15}{31}$ <span class=\"nt\">(divide top and bottom by 5)</span>",
+    "check": "$\\frac{15}{31} \\times 155 = 75$ ✓",
+    "be_careful": "Even though 60% of all voters support the tax, fewer than half of the young voters do, because young voters are more common among those who do not support it.",
+    "desmos": "Not needed. A count table is faster than any graph.",
+    "another_way": "Use a two-way table with rows support / do not support and columns under 30 / 30 or older. Fill 300, 200, then 75 and 80."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-023",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "unknown-cell-then-second-cond",
+   "signature": "shift x trained table with x; P(evening | trained)=2/5 -> x=12; ask P(trained | evening)=12/32=3/8; traps 2/5 given, 6/31 grand, 3/5 morning",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the numbers of workers at a warehouse by shift and by whether they have completed safety training.<table class=\"dt\"><tr><th></th><th>Trained</th><th>Not trained</th></tr><tr><th>Morning shift</th><td>18</td><td>12</td></tr><tr><th>Evening shift</th><td>$x$</td><td>20</td></tr></table>If a worker who has completed the training is selected at random, the probability that the worker is on the evening shift is $\\frac{2}{5}$. If a worker on the evening shift is selected at random, what is the probability that the worker has completed the training?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{6}{31}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 12 out of all 62 workers. The worker is chosen from the evening shift."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{8}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This repeats the given probability, which is about trained workers, not evening workers."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{3}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 18 out of 30, the probability for the morning shift."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The given probability is about the Trained column, so it fixes $x$. The question is about the evening row, a different whole.",
+    "steps": "The question asks: among evening workers, what fraction are trained? First $x$ is needed.<br>Step 1: Use the given probability to find $x$.<br>$\\frac{x}{18 + x} = \\frac{2}{5}$ <span class=\"nt\">(evening trained over all trained)</span><br>$5x = 36 + 2x$ <span class=\"nt\">(cross-multiply and distribute)</span><br>$x = 12$ <span class=\"nt\">(subtract $2x$, divide by 3)</span><br>Step 2: Answer the new question.<br>evening total $= 12 + 20 = 32$ <span class=\"nt\">(the row is the whole)</span><br>probability $= \\frac{12}{32} = \\frac{3}{8}$ <span class=\"nt\">(divide top and bottom by 4)</span>",
+    "check": "Trained total $18 + 12 = 30$, and $\\frac{12}{30} = \\frac{2}{5}$ ✓",
+    "be_careful": "Both probabilities have the same top, 12, but different wholes: 30 trained workers versus 32 evening workers.",
+    "desmos": "Not needed.",
+    "another_way": "If evening is $\\frac{2}{5}$ of the trained workers, morning is $\\frac{3}{5}$ of them: 18 is $\\frac{3}{5}$ of the trained workers, so 30 trained and 12 on the evening shift."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-024",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C3"
+   ],
+   "family": "shared-joint-then-union",
+   "signature": "48 robotics, 120 physics, P(physics | robotics)=5/8 -> both 30 -> robotics or physics = 48 + 120 - 30 = 138 -> P(both | at least one) = 30/138 = 5/23; traps 1/4 (physics bottom), 5/18 (exactly one as bottom), 5/8",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a school, 48 students are in the robotics club and 120 students take physics. If a student in the robotics club is selected at random, the probability that the student takes physics is $\\frac{5}{8}$. If a student who is in the robotics club, takes physics, or both is selected at random, what is the probability that the student is in the robotics club and takes physics?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{5}{23}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 30 out of the 120 physics students. The group also includes the 18 robotics students who do not take physics."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{5}{18}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This divides by 108, the students in exactly one of the two. The students in both belong to the group too."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{5}{8}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This repeats the given probability, which uses only the 48 robotics students as the whole."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The given probability tells how many students are in both. The group “robotics, physics, or both” counts each of those students only once.",
+    "steps": "The question asks: among students in at least one of the two, what fraction are in both?<br>Step 1: Find the students in both.<br>both $= \\frac{5}{8} \\times 48 = 30$ <span class=\"nt\">(robotics students who take physics)</span><br>Step 2: Count the group without double counting.<br>robotics only $= 48 - 30 = 18$ <span class=\"nt\">(in robotics, not physics)</span><br>physics only $= 120 - 30 = 90$ <span class=\"nt\">(in physics, not robotics)</span><br>at least one $= 18 + 90 + 30 = 138$ <span class=\"nt\">(the new whole)</span><br>Step 3: Divide.<br>probability $= \\frac{30}{138} = \\frac{5}{23}$ <span class=\"nt\">(divide top and bottom by 6)</span><br>Adding 48 and 120 would count the 30 students in both twice, so the whole is 138, not 168.",
+    "check": "$48 + 120 - 30 = 138$ ✓ and $\\frac{30}{48} = \\frac{5}{8}$ ✓",
+    "be_careful": "Students in both groups are counted once in the whole.",
+    "desmos": "Not needed.",
+    "another_way": "A two-way table with rows Robotics / Not robotics and columns Physics / Not physics: the three filled cells are 30, 18, and 90."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-025",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "mixture-solve-unknown-rate",
+   "signature": "80 cards: P(red)=3/8 -> 30 red, 12 even red; P(even)=1/2 -> 40 even -> 28 even blue of 50 -> 14/25; common wrong 3/5 plain average, 28",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Each of 80 cards is red or blue, and each card shows one whole number. The probability that a randomly selected card is red is $\\frac{3}{8}$. Of the red cards, $\\frac{2}{5}$ show an even number. The probability that a randomly selected card shows an even number is $\\frac{1}{2}$. If a blue card is selected at random, what is the probability that it shows an even number? (Express the answer as a fraction or a decimal.)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "14/25",
+      ".56",
+      "0.56"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3/5",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This solves $\\frac{1}{2}\\left(\\frac{2}{5} + b\\right) = \\frac{1}{2}$, a plain average of the two rates. There are more blue cards than red cards, so the rates cannot be averaged equally."
+    },
+    {
+     "value": "28",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "28 is the number of even blue cards. The question asks for a probability."
+    }
+   ],
+   "solution": {
+    "key_idea": "Turn every probability into a count of cards. The even cards that are not red must be blue.",
+    "steps": "The question asks: among blue cards, what fraction are even?<br>red cards $= \\frac{3}{8} \\times 80 = 30$ <span class=\"nt\">(so blue cards $= 50$)</span><br>even red $= \\frac{2}{5} \\times 30 = 12$ <span class=\"nt\">(rate inside red)</span><br>even in all $= \\frac{1}{2} \\times 80 = 40$ <span class=\"nt\">(given probability)</span><br>even blue $= 40 - 12 = 28$ <span class=\"nt\">(the rest of the even cards)</span><br>probability $= \\frac{28}{50} = \\frac{14}{25}$ <span class=\"nt\">(out of the 50 blue cards)</span>",
+    "check": "$\\frac{12 + 28}{80} = \\frac{40}{80} = \\frac{1}{2}$ ✓",
+    "be_careful": "The blue rate must be above $\\frac{1}{2}$ to pull the overall rate up from the red rate $\\frac{2}{5}$.",
+    "desmos": "Not needed.",
+    "another_way": "Weighted average: $\\frac{3}{8}(0.4) + \\frac{5}{8}b = 0.5$, so $\\frac{5}{8}b = 0.35$ and $b = 0.56$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-026",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "add-changes-prob-total",
+   "signature": "P(red)=1/3, add 10 red -> P(red)=1/2; r=10,w=20; total after 40; traps 10 red, 20 white, 30 original total",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A bag contains only red beads and white beads. If one bead is selected at random, the probability that it is red is $\\frac{1}{3}$. After 10 more red beads are added to the bag, the probability that a randomly selected bead is red is $\\frac{1}{2}$. How many beads are in the bag after the red beads are added?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "10 is the original number of red beads."
+    },
+    {
+     "key": "B",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "20 is the number of white beads, which never changes."
+    },
+    {
+     "key": "C",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "30 is the number of beads BEFORE the 10 red beads were added."
+    },
+    {
+     "key": "D",
+     "text": "$40$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The white beads do not change. At first they are $\\frac{2}{3}$ of the bag, and at the end they are $\\frac{1}{2}$ of the bag.",
+    "steps": "The question asks for the total after the addition. Let $r$ = the original number of red beads and $w$ = the number of white beads.<br>$w = 2r$ <span class=\"nt\">(red is $\\frac{1}{3}$, so white is twice red)</span><br>after: $r + 10 = w$ <span class=\"nt\">(red is $\\frac{1}{2}$, so red equals white)</span><br>$r + 10 = 2r$ <span class=\"nt\">(substitute)</span><br>$r = 10$ and $w = 20$ <span class=\"nt\">(subtract $r$)</span><br>total after $= 10 + 10 + 20 = 40$ <span class=\"nt\">(the finish line)</span>",
+    "check": "Before: $\\frac{10}{30} = \\frac{1}{3}$ ✓. After: $\\frac{20}{40} = \\frac{1}{2}$ ✓",
+    "be_careful": "The question asks about the bag after the addition, not before.",
+    "desmos": "Only as a check: graph $y = \\frac{x + 10}{3x + 10}$ and $y = 0.5$, where $x$ is the original red count.",
+    "another_way": "The 10 new beads turn red from half of white into equal to white, so they close a gap of half of white: $\\frac{1}{2}w = 10$, $w = 20$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-027",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "row-percent-to-column",
+   "signature": "plan A 200 (30% yes), plan B 300 (50% yes); P(plan A | yes)=60/210=2/7; traps 3/10 reversed, 3/8 percents added, 2/5 group share",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A gym asked the members of two plans whether they would renew. The table shows the number of members in each plan and the percents who said yes and no.<table class=\"dt\"><tr><th></th><th>Number enrolled</th><th>Percent who said yes</th><th>Percent who said no</th></tr><tr><th>Plan A</th><td>200</td><td>30%</td><td>70%</td></tr><tr><th>Plan B</th><td>300</td><td>50%</td><td>50%</td></tr></table>If a member who said yes is selected at random, what is the probability that the member is in Plan A?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{2}{7}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{10}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 30%, the probability that a Plan A member said yes. The condition is reversed."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{3}{8}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This is 30 out of $30 + 50$. The two percents are shares of different-sized groups and cannot be added."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{2}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is 200 out of 500, the share of all members in Plan A. It ignores “said yes.”"
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Row percents only describe each row. To use the Yes column as the whole, turn the percents into counts first.",
+    "steps": "The question asks: among members who said yes, what fraction are in Plan A?<br>Step 1: Change percents to counts.<br>Plan A yes $= 0.30 \\times 200 = 60$ <span class=\"nt\">(percent of Plan A)</span><br>Plan B yes $= 0.50 \\times 300 = 150$ <span class=\"nt\">(percent of Plan B)</span><br>Step 2: Use all yes answers as the whole.<br>yes total $= 60 + 150 = 210$ <span class=\"nt\">(the new whole)</span><br>probability $= \\frac{60}{210} = \\frac{2}{7}$ <span class=\"nt\">(divide top and bottom by 30)</span>",
+    "check": "Plan B share of yes: $\\frac{150}{210} = \\frac{5}{7}$, and $\\frac{2}{7} + \\frac{5}{7} = 1$ ✓",
+    "be_careful": "30% and 50% are out of 200 and 300, so they are not on the same base.",
+    "desmos": "Not needed.",
+    "another_way": "Write the full count table: Plan A 60 yes, 140 no; Plan B 150 yes, 150 no. Read the Yes column."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-028",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C1"
+   ],
+   "family": "ratio-chain-prob",
+   "signature": "red:blue=2:3, blue:green=4:5 -> 8:12:15, P(green)=15/35=3/7; common wrong 5/12 (ratios added directly)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A bag contains only red, blue, and green tiles. The ratio of red tiles to blue tiles is $2$ to $3$, and the ratio of blue tiles to green tiles is $4$ to $5$. If one tile is selected at random from the bag, what is the probability that it is green?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "3/7",
+      ".4285",
+      ".4286",
+      "0.428",
+      "0.429"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5/12",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the numbers $2 + 3$ and $4 + 5$ loosely as $3 + 4 + 5$. The blue parts, 3 and 4, must first be made equal."
+    },
+    {
+     "value": "5/9",
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This uses only the blue-to-green ratio and forgets the red tiles."
+    }
+   ],
+   "solution": {
+    "key_idea": "Two ratios can be combined only after the shared item, blue, has the same number of parts in both.",
+    "steps": "The question asks for green tiles out of all tiles.<br>red : blue $= 2 : 3 = 8 : 12$ <span class=\"nt\">(multiply by 4)</span><br>blue : green $= 4 : 5 = 12 : 15$ <span class=\"nt\">(multiply by 3)</span><br>red : blue : green $= 8 : 12 : 15$ <span class=\"nt\">(blue is 12 in both)</span><br>total parts $= 8 + 12 + 15 = 35$ <span class=\"nt\">(all tiles)</span><br>probability $= \\frac{15}{35} = \\frac{3}{7}$ <span class=\"nt\">(green parts over total parts)</span>",
+    "check": "$8 : 12 = 2 : 3$ ✓ and $12 : 15 = 4 : 5$ ✓",
+    "be_careful": "The 3 in “2 to 3” and the 4 in “4 to 5” are both blue, so they must be matched first.",
+    "desmos": "Not needed.",
+    "another_way": "Pick a number of blue tiles that works for both ratios, such as 12. Then red is 8 and green is 15."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-029",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C6"
+   ],
+   "family": "stratified-expected",
+   "signature": "school 600 grade 9 + 400 grade 10; samples 20/50 and 33/50; expected 240+264=504; traps 240/264 one grade, 496 complement",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A school has 600 students in grade 9 and 400 students in grade 10. A random sample of students from each grade was asked whether they want school to start later. The table shows the results.<table class=\"dt\"><tr><th></th><th>Number sampled</th><th>Number who want the later start</th></tr><tr><th>Grade 9</th><td>50</td><td>20</td></tr><tr><th>Grade 10</th><td>50</td><td>33</td></tr></table>Based on the samples, about how many of the 1,000 students in the two grades would be expected to want the later start?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$240$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "240 is the expected number from grade 9 only. Grade 10 students must be added."
+    },
+    {
+     "key": "B",
+     "text": "$264$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "264 is the expected number from grade 10 only."
+    },
+    {
+     "key": "C",
+     "text": "$496$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "496 is the expected number who would NOT want the later start."
+    },
+    {
+     "key": "D",
+     "text": "$504$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Each grade has its own rate, and the grades are different sizes, so each rate must be applied to its own grade.",
+    "steps": "The question asks for the expected number in both grades together.<br>grade 9 rate $= \\frac{20}{50} = 0.4$ <span class=\"nt\">(from the grade 9 sample)</span><br>grade 9 expected $= 0.4 \\times 600 = 240$ <span class=\"nt\">(apply to grade 9)</span><br>grade 10 rate $= \\frac{33}{50} = 0.66$ <span class=\"nt\">(from the grade 10 sample)</span><br>grade 10 expected $= 0.66 \\times 400 = 264$ <span class=\"nt\">(apply to grade 10)</span><br>total $= 240 + 264 = 504$ <span class=\"nt\">(add the grades)</span>",
+    "check": "The answer must fall between $0.4 \\times 1,000 = 400$ and $0.66 \\times 1,000 = 660$, closer to 400 because grade 9 is bigger ✓",
+    "be_careful": "The samples are the same size, but the grades are not. Pooling the samples gives 530.",
+    "desmos": "Not needed.",
+    "another_way": "Weighted rate: $0.6(0.4) + 0.4(0.66) = 0.504$, then $0.504 \\times 1,000 = 504$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-030",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C7"
+   ],
+   "family": "which-group-given-event-from-rates",
+   "signature": "games played and percent won by team: X 50 at 60% (30 wins), Y 80 at 45% (36), Z 30 at 70% (21); given a WON game, most likely team = Y; traps Z (best rate), X (60% and fewer games), equal",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the number of games played last season by each of three teams in a league and the percent of those games that each team won.<table class=\"dt\"><tr><th>Team</th><th>Games played</th><th>Percent won</th></tr><tr><th>Team X</th><td>50</td><td>60%</td></tr><tr><th>Team Y</th><td>80</td><td>45%</td></tr><tr><th>Team Z</th><td>30</td><td>70%</td></tr></table>One game is selected at random from all the games that were won by these three teams. For which team is the probability greatest that the selected game was won by that team?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Team X",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "Team X won $0.60 \\times 50 = 30$ games, fewer than Team Y’s 36."
+    },
+    {
+     "key": "B",
+     "text": "Team Y",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Team Z",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "Team Z has the highest percent, 70%, but it played only 30 games, so it won only 21. The percent answers “given a Team Z game, was it won?”, the reverse question."
+    },
+    {
+     "key": "D",
+     "text": "All three teams are equally likely.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Each won game is equally likely to be chosen, but the teams won different numbers of games."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The game is chosen from the won games, so every team’s probability has the same bottom. Turn each percent into a number of wins; the team with the most wins has the largest probability.",
+    "steps": "The question asks which team has the largest share of all won games.<br>Step 1: Change percents to wins.<br>X: $0.60 \\times 50 = 30$, Y: $0.45 \\times 80 = 36$, Z: $0.70 \\times 30 = 21$ <span class=\"nt\">(percent of each team’s own games)</span><br>Step 2: Use all won games as the whole.<br>won games $= 30 + 36 + 21 = 87$ <span class=\"nt\">(same bottom for every team)</span><br>Team X: $\\frac{30}{87}$, Team Y: $\\frac{36}{87}$, Team Z: $\\frac{21}{87}$ <span class=\"nt\">(compare the tops)</span><br>Team Y has the lowest winning percent but the most wins, so a randomly chosen won game is most likely one of Team Y’s.",
+    "check": "$\\frac{30}{87} + \\frac{36}{87} + \\frac{21}{87} = 1$ ✓",
+    "be_careful": "A team’s winning percent is a share of its own games. The won games of all teams are a different whole.",
+    "desmos": "Not needed.",
+    "another_way": "With a fixed whole (all won games), comparing probabilities is the same as comparing numbers of wins."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-031",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "count-from-percent-chain",
+   "signature": "60% adults; 60% of adults yes, 25% of teens yes; 54 adults said yes -> N=150 -> teens 60, teens no 45; traps 90, 81, 60",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a survey, 60% of the respondents were adults and the rest were teens. Of the adults, 60% answered yes to a question. Of the teens, 25% answered yes. Exactly 54 of the respondents were adults who answered yes. How many of the respondents were teens who answered no?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$45$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "60 is the number of teens in all. Only those who answered no are asked for."
+    },
+    {
+     "key": "C",
+     "text": "$81$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "81 is everyone who answered no, adults (36) and teens (45) together."
+    },
+    {
+     "key": "D",
+     "text": "$90$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "90 is the number of adults in all."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "“Adults who answered yes” is 60% of 60% of everyone. That links the count 54 to the total.",
+    "steps": "The question asks for teens who answered no. Let $N$ = the number of respondents.<br>Step 1: Find the total.<br>adults who answered yes $= 0.6 \\times 0.6N = 0.36N$ <span class=\"nt\">(a share of a share)</span><br>$0.36N = 54$ <span class=\"nt\">(given count)</span><br>$N = 150$ <span class=\"nt\">(divide by 0.36)</span><br>Step 2: Work inside the teens.<br>teens $= 0.4 \\times 150 = 60$ <span class=\"nt\">(the rest are teens)</span><br>teens who answered no $= 0.75 \\times 60 = 45$ <span class=\"nt\">($100\\% - 25\\% = 75\\%$)</span>",
+    "check": "Adults: 90, adults yes $= 0.6 \\times 90 = 54$ ✓",
+    "be_careful": "54 is not 60% of the respondents. It is 60% of the adults, who are themselves 60% of the respondents.",
+    "desmos": "Not needed.",
+    "another_way": "Teens no is $0.4 \\times 0.75 = 0.30$ of everyone, and adults yes is $0.36$ of everyone, so teens no $= 54 \\times \\frac{0.30}{0.36} = 45$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-032",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "merged-columns-condition-missing-cells",
+   "signature": "order method x rating (1-2, 3, 4-5), two cells missing (online 3 = 18, in store 4-5 = 35) from row totals; P(online | rating 3 or higher)=58/160=29/80; traps 29/100 grand, 2/5 only 4-5, 29/35 reversed",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A store asked 200 customers to rate their experience from 1 to 5. The table shows the ratings by how each customer ordered. Two entries are missing.<table class=\"dt\"><tr><th>Order method</th><th>1 or 2</th><th>3</th><th>4 or 5</th><th>Total</th></tr><tr><th>Online</th><td>12</td><td></td><td>40</td><td>70</td></tr><tr><th>Phone</th><td>20</td><td>15</td><td>25</td><td>60</td></tr><tr><th>In store</th><td>8</td><td>27</td><td></td><td>70</td></tr><tr><th>Total</th><td>40</td><td>60</td><td>100</td><td>200</td></tr></table>If a customer who gave a rating of 3 or higher is selected at random, what is the probability that the customer ordered online?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{29}{100}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 58 out of all 200 customers."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{29}{80}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is 40 out of 100, which uses only the “4 or 5” column. A rating of 3 also counts."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{29}{35}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 58 out of 70, the probability that an online customer rated 3 or higher."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "“3 or higher” merges two columns, 3 and 4 or 5. The missing entries come from the row totals, and the merged column total is the whole.",
+    "steps": "The question asks: among customers who rated 3 or higher, what fraction ordered online?<br>Step 1: Fill in the missing entries.<br>online, rating 3 $= 70 - 12 - 40 = 18$ <span class=\"nt\">(from the Online row total)</span><br>in store, rating 4 or 5 $= 70 - 8 - 27 = 35$ <span class=\"nt\">(from the In store row total)</span><br>Step 2: Find the merged whole.<br>3 or higher $= 200 - 40 = 160$ <span class=\"nt\">(everyone except ratings of 1 or 2)</span><br>Step 3: Count the part and divide.<br>online and 3 or higher $= 18 + 40 = 58$ <span class=\"nt\">(the online row, last two columns)</span><br>probability $= \\frac{58}{160} = \\frac{29}{80}$ <span class=\"nt\">(divide top and bottom by 2)</span>",
+    "check": "Rating 3 column: $18 + 15 + 27 = 60$ ✓; rating 4 or 5 column: $40 + 25 + 35 = 100$ ✓; $60 + 100 = 160$ ✓",
+    "be_careful": "“3 or higher” includes 3. Leaving out the rating 3 column gives $\\frac{2}{5}$.",
+    "desmos": "Not needed.",
+    "another_way": "Only the Online row matters for the top: $70 - 12 = 58$ online customers rated 3 or higher."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-033",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "reverse-from-group-rates",
+   "signature": "200 passengers, 2/5 business; 1/4 of business and 1/3 of others checked a bag; P(business | no bag)=60/140=3/7; traps 3/10, 2/5, 3/4",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An airline surveyed 200 passengers on one flight. Of these passengers, $\\frac{2}{5}$ were traveling for business. One fourth of the business travelers checked a bag, and one third of the other passengers checked a bag. If a passenger who did NOT check a bag is selected at random, what is the probability that the passenger was traveling for business?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{10}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 60 out of all 200 passengers."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{2}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "$\\frac{2}{5}$ is the business share of all passengers. It ignores that the passenger did not check a bag."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{3}{7}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{3}{4}$ is the share of business travelers who did not check a bag. The condition is reversed."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Each fraction belongs to its own group. Count the no-bag passengers in each group; their total is the whole.",
+    "steps": "The question asks: among passengers without a checked bag, what fraction travel for business?<br>business $= \\frac{2}{5} \\times 200 = 80$ <span class=\"nt\">(others $= 120$)</span><br>business, no bag $= \\frac{3}{4} \\times 80 = 60$ <span class=\"nt\">($1 - \\frac{1}{4}$ of business)</span><br>others, no bag $= \\frac{2}{3} \\times 120 = 80$ <span class=\"nt\">($1 - \\frac{1}{3}$ of others)</span><br>no bag in all $= 60 + 80 = 140$ <span class=\"nt\">(the new whole)</span><br>probability $= \\frac{60}{140} = \\frac{3}{7}$ <span class=\"nt\">(divide top and bottom by 20)</span>",
+    "check": "Checked bags: $20 + 40 = 60$, and $60 + 140 = 200$ ✓",
+    "be_careful": "“One third of the other passengers” is a share of 120, not of 200.",
+    "desmos": "Not needed.",
+    "another_way": "With shares: $\\frac{0.4(0.75)}{0.4(0.75) + 0.6(\\frac{2}{3})} = \\frac{0.3}{0.7} = \\frac{3}{7}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-034",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "count-from-prob-then-conditional",
+   "signature": "cards 1..n, P(at most 12)=2/5 -> n=30; P(greater than 20 | greater than 12)=10/18=5/9; traps 1/3 unconditional, 3/5 greater than 12, 2/3 at most 20",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A box contains $n$ cards numbered with the integers from 1 to $n$, one number on each card. If a card is selected at random, the probability that its number is at most 12 is $\\frac{2}{5}$. If a card whose number is greater than 12 is selected at random, what is the probability that its number is greater than 20?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{1}{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is 10 out of all 30 cards. The card is known to be greater than 12."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{5}{9}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{3}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "$\\frac{3}{5}$ is the probability that a card is greater than 12, the condition itself."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{2}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This is 20 out of 30, the probability that a number is at most 20."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Cards 1 to 12 are $\\frac{2}{5}$ of all the cards, which fixes $n$. Then the cards above 12 become the whole.",
+    "steps": "The question asks: among cards above 12, what fraction are above 20? First find $n$.<br>$\\frac{12}{n} = \\frac{2}{5}$ <span class=\"nt\">(cards 1 to 12 out of all)</span><br>$n = 30$ <span class=\"nt\">(cross-multiply: $2n = 60$)</span><br>greater than 12: 13 to 30, which is $30 - 12 = 18$ cards <span class=\"nt\">(the new whole)</span><br>greater than 20: 21 to 30, which is 10 cards <span class=\"nt\">(the part)</span><br>probability $= \\frac{10}{18} = \\frac{5}{9}$ <span class=\"nt\">(divide top and bottom by 2)</span>",
+    "check": "$\\frac{12}{30} = \\frac{2}{5}$ ✓, and $10 + 8 = 18$ cards above 12 ✓",
+    "be_careful": "“Greater than 12” starts at 13 and “greater than 20” starts at 21.",
+    "desmos": "Not needed.",
+    "another_way": "Every card above 20 is also above 12, so the answer is $\\frac{10/30}{18/30} = \\frac{5}{9}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-035",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C3"
+   ],
+   "family": "two-conditionals-same-joint",
+   "signature": "1/3 of seniors play chess, 2/5 of chess players are seniors, 12 both -> seniors 36, chess 30, difference 6; common wrong -6 reversed",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In a club, $\\frac{1}{3}$ of the seniors play chess, and $\\frac{2}{5}$ of the members who play chess are seniors. Exactly 12 members are seniors who play chess. How many more seniors than chess players are in the club?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "6"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-6",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This swaps the two fractions: it uses $\\frac{1}{3}$ for chess players and $\\frac{2}{5}$ for seniors."
+    },
+    {
+     "value": "18",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "18 is the number of chess players who are not seniors."
+    }
+   ],
+   "solution": {
+    "key_idea": "The 12 senior chess players are the top of both fractions. Each fraction has its own whole: all seniors, or all chess players.",
+    "steps": "The question asks for (number of seniors) minus (number of chess players).<br>$\\frac{1}{3}$(seniors) $= 12$ <span class=\"nt\">(seniors who play chess are one third of the seniors)</span><br>seniors $= 36$ <span class=\"nt\">(multiply by 3)</span><br>$\\frac{2}{5}$(chess players) $= 12$ <span class=\"nt\">(senior chess players are two fifths of chess players)</span><br>chess players $= 30$ <span class=\"nt\">(multiply by $\\frac{5}{2}$)</span><br>difference $= 36 - 30 = 6$ <span class=\"nt\">(the finish line)</span>",
+    "check": "$\\frac{12}{36} = \\frac{1}{3}$ ✓ and $\\frac{12}{30} = \\frac{2}{5}$ ✓",
+    "be_careful": "Read which group comes after “of the.” That group is the whole for that fraction.",
+    "desmos": "Not needed.",
+    "another_way": "A smaller share of a group means a bigger group: $\\frac{1}{3} < \\frac{2}{5}$, so there are more seniors than chess players."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-036",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C2"
+   ],
+   "family": "integer-conditional",
+   "signature": "integers 1-90 given multiple of 4, P(multiple of 6)=7/22 (multiples of 12); traps 7/90 grand, 1/6 condition ignored, 7/15 reversed",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An integer from 1 to 90, inclusive, is selected at random. Given that the integer is a multiple of 4, what is the probability that it is also a multiple of 6?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{7}{90}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 7 out of all 90 integers. The integer is known to be a multiple of 4."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{6}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is 15 out of 90, the chance of a multiple of 6 with no condition."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{7}{22}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{7}{15}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 7 out of the 15 multiples of 6, the reverse condition."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A number that is a multiple of both 4 and 6 is a multiple of 12, not of 24.",
+    "steps": "The question asks: among multiples of 4, what fraction are multiples of 6?<br>multiples of 4 from 1 to 90: $4, 8, \\ldots, 88$, which is 22 <span class=\"nt\">($88 \\div 4 = 22$)</span><br>multiples of both 4 and 6: multiples of 12 <span class=\"nt\">(smallest number both divide)</span><br>$12, 24, \\ldots, 84$, which is 7 <span class=\"nt\">($84 \\div 12 = 7$)</span><br>probability $= \\frac{7}{22}$ <span class=\"nt\">(out of the 22 multiples of 4)</span>",
+    "check": "List: 12, 24, 36, 48, 60, 72, 84 are all multiples of 4 and of 6 ✓",
+    "be_careful": "$4 \\times 6 = 24$, but 12 is already a multiple of both. Using 24 gives only 3.",
+    "desmos": "Not needed.",
+    "another_way": "Among multiples of 4, every third one (12, 24, 36, …) is a multiple of 6, but 22 is not a multiple of 3, so count: 7 of 22."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-037",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C6"
+   ],
+   "family": "expected-count-reverse-pooled",
+   "signature": "sample 14 of 50 own an EV; town expected 392 owners -> population 1,400; second sample 13 of 40; pooled 27/90 = 0.3 -> 420; traps 392 (first only), 455 (second only), 424 (average of rates 28% and 32.5%, rounded)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a random sample of 50 residents of a town, 14 own an electric car. Based on this sample, the town is expected to have 392 residents who own an electric car. A second random sample of 40 residents of the same town found that 13 own an electric car. Based on the two samples combined, about how many residents of the town are expected to own an electric car?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$392$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This uses only the first sample."
+    },
+    {
+     "key": "B",
+     "text": "$420$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$424$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This averages the two sample rates, 28% and 32.5%. The samples have different sizes, so combine the counts: 27 out of 90."
+    },
+    {
+     "key": "D",
+     "text": "$455$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This uses only the second sample, $\\frac{13}{40} \\times 1,400$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The first sample and its expected count give the size of the town. Then combine the two samples by adding their counts, not by averaging their rates.",
+    "steps": "The question asks for the expected number of owners based on both samples. Let $N$ = the number of residents.<br>Step 1: Find the size of the town.<br>$\\frac{14}{50}N = 392$ <span class=\"nt\">(first sample rate times town size)</span><br>$N = 392 \\times \\frac{50}{14} = 1,400$ <span class=\"nt\">(undo the rate)</span><br>Step 2: Combine the samples.<br>owners $= 14 + 13 = 27$ out of $50 + 40 = 90$ <span class=\"nt\">(add counts and sizes)</span><br>rate $= \\frac{27}{90} = 0.3$ <span class=\"nt\">(the combined sample rate)</span><br>Step 3: Apply the rate to the town.<br>$0.3 \\times 1,400 = 420$ <span class=\"nt\">(expected owners)</span><br>The combined rate, 30%, lies between 28% and 32.5% but closer to 28%, because the first sample is larger.",
+    "check": "$\\frac{420}{1,400} = \\frac{27}{90} = 0.3$ ✓",
+    "be_careful": "Averaging two percents treats the samples as the same size. Add the counts instead.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled resident stands for $\\frac{1,400}{90}$ town residents, so $27 \\times \\frac{1,400}{90} = 420$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-038",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "equal-rates-unknown-cell",
+   "signature": "X 12 yes 18 no, Y k yes 36 no, equal P(yes | group) -> k=24; P(X | yes)=12/36=1/3; common wrong 24, 1/2",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The table shows how the members of two groups answered a question.<table class=\"dt\"><tr><th></th><th>Answered yes</th><th>Answered no</th></tr><tr><th>Group X</th><td>12</td><td>18</td></tr><tr><th>Group Y</th><td>$k$</td><td>36</td></tr></table>The probability that a randomly selected member of Group X answered yes is equal to the probability that a randomly selected member of Group Y answered yes. If a member who answered yes is selected at random from the two groups, what is the probability that the member is in Group X?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1/3",
+      ".3333",
+      "0.333"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "24",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "24 is the value of $k$. The question asks for a probability."
+    },
+    {
+     "value": "1/2",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This assumes the two groups are equally likely because their rates are equal. Group Y is bigger."
+    }
+   ],
+   "solution": {
+    "key_idea": "Equal yes-rates mean each group gives yes answers in proportion to its size.",
+    "steps": "The question asks: among yes answers, what fraction came from Group X? First find $k$.<br>$\\frac{12}{30} = \\frac{k}{k + 36}$ <span class=\"nt\">(equal yes-rates)</span><br>$12k + 432 = 30k$ <span class=\"nt\">(cross-multiply)</span><br>$k = 24$ <span class=\"nt\">(subtract $12k$, divide by 18)</span><br>yes total $= 12 + 24 = 36$ <span class=\"nt\">(the Yes column)</span><br>probability $= \\frac{12}{36} = \\frac{1}{3}$ <span class=\"nt\">(Group X yes over all yes)</span>",
+    "check": "Group Y rate: $\\frac{24}{60} = \\frac{2}{5}$, same as Group X ✓",
+    "be_careful": "Equal rates do not make equal counts. The bigger group gives more yes answers.",
+    "desmos": "Not needed.",
+    "another_way": "Equal rates mean the Yes column splits like the group sizes: $\\frac{30}{30 + 60} = \\frac{1}{3}$, without finding $k$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-039",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C1"
+   ],
+   "family": "above-median-conditional",
+   "signature": "score frequency table 6-10 (26 students), median 8; P(score 10 | score above median)=4/10=2/5; traps 2/13 grand, 2/9 includes median, 3/5 score 9",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the quiz scores of 26 students.<table class=\"dt\"><tr><th>Score</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr><tr><th>Number of students</th><td>3</td><td>5</td><td>8</td><td>6</td><td>4</td></tr></table>A student whose score is greater than the median score is selected at random. What is the probability that the student scored 10?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{2}{13}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This is 4 out of all 26 students."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{2}{9}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This is 4 out of 18, which includes the students who scored 8. A score equal to the median is not greater than it."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2}{5}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{3}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 6 out of 10, the probability of a score of 9."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "First find the median to know which students form the group. Then the probability uses that group only.",
+    "steps": "The question asks: among students above the median, what fraction scored 10?<br>Step 1: Find the median of 26 scores.<br>median is the mean of the 13th and 14th scores <span class=\"nt\">(26 is even)</span><br>running totals: 3, 8, 16, … <span class=\"nt\">(scores 6, 7, 8)</span><br>13th and 14th scores are both 8, so median $= 8$ <span class=\"nt\">(they fall in the score 8 group)</span><br>Step 2: Build the group.<br>above 8: $6 + 4 = 10$ students <span class=\"nt\">(scores 9 and 10)</span><br>probability $= \\frac{4}{10} = \\frac{2}{5}$ <span class=\"nt\">(score 10 out of the group)</span>",
+    "check": "Below the median: $3 + 5 = 8$, at the median: 8, above: 10. $8 + 8 + 10 = 26$ ✓",
+    "be_careful": "“Greater than the median” leaves out the students who scored exactly 8.",
+    "desmos": "Not needed.",
+    "another_way": "Only scores 9 and 10 are above 8, so read just those two columns: 6 and 4."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-040",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "equal-reverse-conditionals-cell",
+   "signature": "swims x runs with k; P(runs | swims)=P(swims | runs) -> k=10; P(runs)=24/64=3/8; traps 3/4 non-swimmer row, 7/12 given cond, 5/8 complement",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The members of a fitness club were asked whether they swim and whether they run. The table shows the results.<table class=\"dt\"><tr><th></th><th>Runs</th><th>Does not run</th></tr><tr><th>Swims</th><td>14</td><td>10</td></tr><tr><th>Does not swim</th><td>$k$</td><td>30</td></tr></table>The probability that a randomly selected member who swims also runs is equal to the probability that a randomly selected member who runs also swims. If a member of the club is selected at random, what is the probability that the member runs?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{8}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{7}{12}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 14 out of 24, the shared conditional probability, not the probability of running."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{5}{8}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "This is 40 out of 64, the probability that the member does not run."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This is 30 out of 40, the probability that a member who does not swim also does not run."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The two conditional probabilities share the top, 14. If they are equal, their bottoms are equal: as many members run as swim.",
+    "steps": "The question asks for runners out of all members. First find $k$.<br>runs, given swims: $\\frac{14}{24}$ <span class=\"nt\">(the Swims row)</span><br>swims, given runs: $\\frac{14}{14 + k}$ <span class=\"nt\">(the Runs column)</span><br>$14 + k = 24$ <span class=\"nt\">(same top, so same bottom)</span><br>$k = 10$ <span class=\"nt\">(subtract 14)</span><br>members $= 14 + 10 + 10 + 30 = 64$ <span class=\"nt\">(all four cells)</span><br>probability $= \\frac{24}{64} = \\frac{3}{8}$ <span class=\"nt\">(runners out of all members)</span>",
+    "check": "$\\frac{14}{24} = \\frac{14}{24}$ ✓, and runners $= 14 + 10 = 24$ ✓",
+    "be_careful": "The question asks for the probability of running among everyone, not the conditional probability.",
+    "desmos": "Not needed.",
+    "another_way": "Equal reverse conditionals mean equal group sizes, so runners $=$ swimmers $= 24$ at once."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-041",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "two-conditionals-fix-table",
+   "signature": "table with only totals (70 morning, 50 evening); P(trained | morning)=3/5 and P(morning | trained)=7/10 fix all cells; P(evening | not trained)=32/60=8/15; traps 3/10 trained-evening, 7/15 morning, 2/5 = 1-3/5",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A factory has 120 workers on two shifts. Each worker either has or has not completed a training course. The table shows only the shift totals.<table class=\"dt\"><tr><th></th><th>Trained</th><th>Not trained</th><th>Total</th></tr><tr><th>Morning shift</th><td></td><td></td><td>70</td></tr><tr><th>Evening shift</th><td></td><td></td><td>50</td></tr><tr><th>Total</th><td></td><td></td><td>120</td></tr></table>If a worker on the morning shift is selected at random, the probability that the worker has completed the training is $\\frac{3}{5}$. If a worker who has completed the training is selected at random, the probability that the worker is on the morning shift is $\\frac{7}{10}$. If a worker who has NOT completed the training is selected at random, what is the probability that the worker is on the evening shift?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{10}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 18 out of 60, the probability that a trained worker is on the evening shift. The condition is wrong: the worker chosen is NOT trained."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{2}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This is $1 - \\frac{3}{5}$, the share of morning workers who are not trained. It reuses a given number for a different group."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{7}{15}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is 28 out of 60, the probability that an untrained worker is on the morning shift."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{8}{15}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The first probability is a share of the morning row. The second is a share of the Trained column. Together they fill the whole table.",
+    "steps": "The question asks: among untrained workers, what fraction work evenings? The inside of the table must be built first.<br>Step 1: Use the morning row.<br>morning trained $= \\frac{3}{5} \\times 70 = 42$ <span class=\"nt\">(a share of the 70 morning workers)</span><br>morning not trained $= 70 - 42 = 28$ <span class=\"nt\">(the rest of the row)</span><br>Step 2: Use the Trained column.<br>42 is $\\frac{7}{10}$ of all trained workers <span class=\"nt\">(morning trained is $\\frac{7}{10}$ of all trained)</span><br>trained total $= 42 \\times \\frac{10}{7} = 60$ <span class=\"nt\">(solve)</span><br>evening trained $= 60 - 42 = 18$ <span class=\"nt\">(the rest of the column)</span><br>Step 3: Finish the evening row and answer.<br>evening not trained $= 50 - 18 = 32$ <span class=\"nt\">(evening row total is 50)</span><br>not trained total $= 28 + 32 = 60$ <span class=\"nt\">(the new whole)</span><br>probability $= \\frac{32}{60} = \\frac{8}{15}$ <span class=\"nt\">(divide top and bottom by 4)</span>",
+    "check": "All four cells: 42, 28, 18, 32 add to 120 ✓. $\\frac{42}{70} = \\frac{3}{5}$ ✓, $\\frac{42}{60} = \\frac{7}{10}$ ✓",
+    "be_careful": "Each given probability has its own whole: the first uses the 70 morning workers, the second uses all trained workers. Mixing them up stalls the table.",
+    "desmos": "Not needed. Desmos has nothing to graph here; the table is the solution.",
+    "another_way": "Untrained workers total $120 - 60 = 60$, and the morning part is $70 - 42 = 28$, so evening is $60 - 28 = 32$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-042",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "tree-reverse-negated",
+   "signature": "25% own a dog; 60% of owners and 30% of non-owners walk daily; P(dog | not walk daily)=0.10/0.625=4/25; common wrong 2/5 reversed, 1/10 grand",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In a town, 25% of the adults own a dog. Of the adults who own a dog, 60% walk outdoors every day. Of the adults who do not own a dog, 30% walk outdoors every day. If an adult in the town who does NOT walk outdoors every day is selected at random, what is the probability that the adult owns a dog? (Express the answer as a fraction or a decimal.)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "4/25",
+      ".16",
+      "0.16"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2/5",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "0.4 is the share of dog owners who do not walk every day. The question asks the reverse: the share of non-walkers who own a dog."
+    },
+    {
+     "value": "1/10",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "0.10 is the share of ALL adults who own a dog and do not walk every day. It still has to be divided by all non-walkers."
+    }
+   ],
+   "solution": {
+    "key_idea": "Picture 1,000 adults and build the table. The group is everyone who does not walk every day, from both dog owners and non-owners.",
+    "steps": "The question asks: among adults who do not walk every day, what fraction own a dog? Imagine 1,000 adults.<br>Step 1: Split by dog ownership.<br>dog owners $= 0.25 \\times 1,000 = 250$ <span class=\"nt\">(non-owners $= 750$)</span><br>Step 2: Find the non-walkers in each group.<br>owners who do not walk daily $= 0.40 \\times 250 = 100$ <span class=\"nt\">($100\\% - 60\\% = 40\\%$)</span><br>non-owners who do not walk daily $= 0.70 \\times 750 = 525$ <span class=\"nt\">($100\\% - 30\\% = 70\\%$)</span><br>all who do not walk daily $= 100 + 525 = 625$ <span class=\"nt\">(the new whole)</span><br>Step 3: Divide.<br>probability $= \\frac{100}{625} = \\frac{4}{25}$ <span class=\"nt\">(divide top and bottom by 25)</span>",
+    "check": "$\\frac{4}{25} = 0.16$, and $0.16 \\times 625 = 100$ ✓",
+    "be_careful": "The complement must be taken inside each group (40% and 70%) before anything is added.",
+    "desmos": "Not needed. A made-up total of 1,000 adults is the fastest route.",
+    "another_way": "With shares: owner and non-walker $= 0.25 \\times 0.4 = 0.1$; non-owner and non-walker $= 0.75 \\times 0.7 = 0.525$; $\\frac{0.1}{0.625} = 0.16$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-043",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "merged-condition-from-percents",
+   "signature": "plans 50/30/20 percent, watch rates 20/40/70 percent; P(watched | not basic)=(12+14)/50=52%; traps 55% averaged, 60% plan share, 72% reversed",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The subscribers of a streaming service are on one of three plans: 50% are on the basic plan, 30% are on the standard plan, and 20% are on the premium plan. Last month, 20% of basic subscribers, 40% of standard subscribers, and 70% of premium subscribers watched a live event. If a subscriber who is NOT on the basic plan is selected at random, what is the probability that the subscriber watched a live event?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.52$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$0.55$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This averages 40% and 70%. The standard plan has more subscribers than the premium plan, so the average must lean toward 40%."
+    },
+    {
+     "key": "C",
+     "text": "$0.60$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "0.60 is the share of non-basic subscribers who are on the standard plan, 30 out of 50. It does not use the watch rates."
+    },
+    {
+     "key": "D",
+     "text": "$0.72$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is 26 out of 36, the probability that a subscriber who watched is not on the basic plan."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "“Not basic” merges standard and premium. Count watchers in each of those two plans and divide by the size of the merged group.",
+    "steps": "The question asks: among standard and premium subscribers, what fraction watched? Imagine 100 subscribers.<br>Step 1: Size of the merged group.<br>standard $+$ premium $= 30 + 20 = 50$ <span class=\"nt\">(not basic)</span><br>Step 2: Watchers inside the group.<br>standard watchers $= 0.40 \\times 30 = 12$ <span class=\"nt\">(rate inside standard)</span><br>premium watchers $= 0.70 \\times 20 = 14$ <span class=\"nt\">(rate inside premium)</span><br>watchers in the group $= 12 + 14 = 26$ <span class=\"nt\">(add)</span><br>Step 3: Divide.<br>probability $= \\frac{26}{50} = 0.52$ <span class=\"nt\">(watchers over the merged group)</span>",
+    "check": "0.52 lies between 0.40 and 0.70 and is closer to 0.40, because standard is the bigger plan ✓",
+    "be_careful": "The 50% basic share decides only what is left out. The 20% basic rate is not used at all.",
+    "desmos": "Not needed.",
+    "another_way": "Weighted average with weights $\\frac{30}{50}$ and $\\frac{20}{50}$: $0.6(0.40) + 0.4(0.70) = 0.52$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-044",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "transfer-equal-prob",
+   "signature": "box A 10 red 20 blue, box B 15 red 15 blue; n blue moved A->B; then P(red from A)=P(blue from B) -> n=15; ask P(red from B)=15/45=1/3; common wrong 1/2, 15",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Box A contains 10 red marbles and 20 blue marbles. Box B contains 15 red marbles and 15 blue marbles. Some blue marbles are moved from Box A to Box B. After the move, the probability of selecting a red marble at random from Box A is equal to the probability of selecting a blue marble at random from Box B. After the move, what is the probability of selecting a red marble at random from Box B?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1/3",
+      ".3333",
+      "0.333"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1/2",
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "$\\frac{1}{2}$ is the probability of red from Box B BEFORE the move."
+    },
+    {
+     "value": "2/3",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "$\\frac{2}{3}$ is the shared probability in the condition (red from A, blue from B), not red from B."
+    }
+   ],
+   "solution": {
+    "key_idea": "Moving blue marbles changes the total of both boxes. Write each probability with the number moved, $n$, then set them equal.",
+    "steps": "The question asks for red from Box B after the move. Let $n$ = the number of blue marbles moved.<br>Step 1: Write each box after the move.<br>Box A: 10 red, $20 - n$ blue, $30 - n$ in all <span class=\"nt\">(A loses $n$)</span><br>Box B: 15 red, $15 + n$ blue, $30 + n$ in all <span class=\"nt\">(B gains $n$)</span><br>Step 2: Set the probabilities equal.<br>$\\frac{10}{30 - n} = \\frac{15 + n}{30 + n}$ <span class=\"nt\">(red from A equals blue from B)</span><br>$300 + 10n = 450 + 15n - n^{2}$ <span class=\"nt\">(cross-multiply)</span><br>$n^{2} - 5n - 150 = 0$ <span class=\"nt\">(move everything to one side)</span><br>$(n - 15)(n + 10) = 0$, so $n = 15$ <span class=\"nt\">(a count cannot be negative)</span><br>Step 3: Answer.<br>Box B: 15 red out of $30 + 15 = 45$ <span class=\"nt\">(after the move)</span><br>probability $= \\frac{15}{45} = \\frac{1}{3}$ <span class=\"nt\">(the finish line)</span>",
+    "check": "Red from A: $\\frac{10}{15} = \\frac{2}{3}$. Blue from B: $\\frac{30}{45} = \\frac{2}{3}$ ✓",
+    "be_careful": "The red marbles in Box B do not change, but the total does, so the chance of red drops from $\\frac{1}{2}$.",
+    "desmos": "Graph $y = \\frac{10}{30 - x}$ and $y = \\frac{15 + x}{30 + x}$ for $0 \\le x \\le 20$; they meet at $x = 15$. This only finds $n$; the probability still has to be built.",
+    "another_way": "Try values of $n$ that make $\\frac{10}{30 - n}$ simple: $n = 10$ gives $\\frac{1}{2}$ vs $\\frac{25}{40}$ (no); $n = 15$ gives $\\frac{2}{3}$ vs $\\frac{30}{45}$ (yes)."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-045",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C5"
+   ],
+   "family": "two-conditionals-fix-prose",
+   "signature": "48 members, P(junior)=3/8 -> 18; 1/3 of juniors play -> 6; P(junior | plays)=1/4 -> 24 players -> 18 senior players; P(not play | senior)=12/30=2/5; common wrong 3/5, 1/4",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A chess club has 48 members, and each member is a junior or a senior. If a member is selected at random, the probability that the member is a junior is $\\frac{3}{8}$. One third of the juniors play in tournaments. If a member who plays in tournaments is selected at random, the probability that the member is a junior is $\\frac{1}{4}$. If a senior in the club is selected at random, what is the probability that the senior does NOT play in tournaments?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2/5",
+      ".4",
+      "0.4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3/5",
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "$\\frac{18}{30}$ is the probability that a senior DOES play in tournaments."
+    },
+    {
+     "value": "1/4",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "12 out of 48 uses all members as the whole. The person chosen is a senior."
+    }
+   ],
+   "solution": {
+    "key_idea": "Each sentence fixes one count: juniors, junior players, then all players. Seniors are what is left in each place.",
+    "steps": "The question asks: among seniors, what fraction do not play in tournaments?<br>Step 1: Juniors and seniors.<br>juniors $= \\frac{3}{8} \\times 48 = 18$ <span class=\"nt\">(seniors $= 48 - 18 = 30$)</span><br>Step 2: Tournament players.<br>junior players $= \\frac{1}{3} \\times 18 = 6$ <span class=\"nt\">(one third of the juniors)</span><br>6 is $\\frac{1}{4}$ of all players <span class=\"nt\">(juniors are one fourth of the players)</span><br>players $= 24$ <span class=\"nt\">(multiply 6 by 4)</span><br>senior players $= 24 - 6 = 18$ <span class=\"nt\">(the rest of the players)</span><br>Step 3: Answer inside the seniors.<br>seniors who do not play $= 30 - 18 = 12$ <span class=\"nt\">(the rest of the seniors)</span><br>probability $= \\frac{12}{30} = \\frac{2}{5}$ <span class=\"nt\">(divide top and bottom by 6)</span>",
+    "check": "$\\frac{18}{48} = \\frac{3}{8}$ ✓, $\\frac{6}{24} = \\frac{1}{4}$ ✓, and $6 + 18 = 24$ players ✓",
+    "be_careful": "$\\frac{1}{4}$ is a share of the players, not of the juniors. The juniors’ own share is $\\frac{1}{3}$.",
+    "desmos": "Not needed.",
+    "another_way": "Make a 2 by 2 table (junior or senior, plays or not). Fill 18 and 30, then 6, then the Plays column total 24."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-046",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C7"
+   ],
+   "family": "within-vs-overall",
+   "signature": "School P 160/200 and 20/50, School Q 42/50 and 90/200: Q higher in each group, P higher overall (0.72 vs 0.528); traps all Q, counts, all P",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Students at two schools took the same exam. The table shows how many students in each of two groups passed.<table class=\"dt\"><tr><th>Students who passed</th><th>Group 1</th><th>Group 2</th></tr><tr><th>School P</th><td>160 of 200</td><td>20 of 50</td></tr><tr><th>School Q</th><td>42 of 50</td><td>90 of 200</td></tr></table>A student is selected at random from a school. For which school is the probability that the student passed greater when the student is selected from Group 1, when the student is selected from Group 2, and when the student is selected from both groups combined (overall)?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Group 1: Q · Group 2: Q · Overall: Q",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This assumes the school that does better in each group must do better overall. The group sizes are very different at the two schools."
+    },
+    {
+     "key": "B",
+     "text": "Group 1: P · Group 2: Q · Overall: P",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This compares the numbers who passed, not the probabilities. School P has more Group 1 students."
+    },
+    {
+     "key": "C",
+     "text": "Group 1: P · Group 2: P · Overall: P",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This uses the overall result for each group. Inside each group, School Q’s rate is higher."
+    },
+    {
+     "key": "D",
+     "text": "Group 1: Q · Group 2: Q · Overall: P",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A school’s overall rate is pulled toward the group where most of its students are. Compare rates inside each group, then compute each overall rate from totals.",
+    "steps": "The question asks which school has the higher passing probability in each group and overall.<br>Step 1: Group 1.<br>P: $\\frac{160}{200} = 0.80$, Q: $\\frac{42}{50} = 0.84$ <span class=\"nt\">(Q is higher)</span><br>Step 2: Group 2.<br>P: $\\frac{20}{50} = 0.40$, Q: $\\frac{90}{200} = 0.45$ <span class=\"nt\">(Q is higher)</span><br>Step 3: Overall.<br>P: $\\frac{160 + 20}{200 + 50} = \\frac{180}{250} = 0.72$ <span class=\"nt\">(add passers and students)</span><br>Q: $\\frac{42 + 90}{50 + 200} = \\frac{132}{250} = 0.528$ <span class=\"nt\">(same way)</span><br>P is higher overall <span class=\"nt\">($0.72 > 0.528$)</span><br>Most of School P’s students are in Group 1, where passing is common; most of School Q’s are in Group 2, where it is not.",
+    "check": "Both schools have 250 students, so overall compare $180 > 132$ ✓",
+    "be_careful": "Winning inside every group does not guarantee winning overall when the groups are mixed in different amounts.",
+    "desmos": "Not needed.",
+    "another_way": "Overall rates are weighted averages: P is $0.8(0.80) + 0.2(0.40)$, Q is $0.2(0.84) + 0.8(0.45)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-047",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C6"
+   ],
+   "family": "stratified-reverse",
+   "signature": "rates 30% under 18, 12% adults; 5,000 residents, expected 960 users -> under 18 = 2,000, adults 3,000; traps 2,000, 3,200, 8,000",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of residents of a town found that 30% of residents under the age of 18 and 12% of residents age 18 or older use the town’s library app. The town has 5,000 residents. Based on these rates, 960 residents of the town are expected to use the app. How many residents of the town are age 18 or older?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2,000$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "2,000 is the number of residents under 18."
+    },
+    {
+     "key": "B",
+     "text": "$3,000$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$3,200$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This divides 960 by 0.30, as if every user were under 18."
+    },
+    {
+     "key": "D",
+     "text": "$8,000$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This divides 960 by 0.12, as if every user were an adult. It is more than the whole town."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The 960 users come from both age groups. Each group contributes its own rate times its own size.",
+    "steps": "The question asks for the number of adults. Let $u$ = residents under 18, so $5,000 - u$ are 18 or older.<br>$0.30u + 0.12(5,000 - u) = 960$ <span class=\"nt\">(users from each group)</span><br>$0.30u + 600 - 0.12u = 960$ <span class=\"nt\">(distribute)</span><br>$0.18u = 360$ <span class=\"nt\">(combine and subtract 600)</span><br>$u = 2,000$ <span class=\"nt\">(divide by 0.18)</span><br>adults $= 5,000 - 2,000 = 3,000$ <span class=\"nt\">(the finish line)</span><br>The equation gives the under-18 count first; the question asks for the other group, so the last subtraction is required.",
+    "check": "$0.30(2,000) + 0.12(3,000) = 600 + 360 = 960$ ✓",
+    "be_careful": "Solving for $u$ gives residents under 18. The question asks for the other group.",
+    "desmos": "Type $0.3u + 0.12(5000 - u) = 960$ to check $u$, but the setup is the real work.",
+    "another_way": "If everyone were an adult, there would be $0.12 \\times 5,000 = 600$ users. Each under-18 resident adds $0.18$ more, and $360 \\div 0.18 = 2,000$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-048",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "column-percent-ratio",
+   "signature": "column percents yes (A 40/B 60), no (A 70/B 30); no = 2 x yes; P(yes | A)=0.4/(0.4+1.4)=2/9; common wrong 4/11 percents added, 2/5 column percent",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A survey asked members of Group A and Group B one question. The table shows, for each answer, the percent of the people giving that answer who are in each group.<table class=\"dt\"><tr><th></th><th>Answered yes</th><th>Answered no</th></tr><tr><th>Group A</th><td>40%</td><td>70%</td></tr><tr><th>Group B</th><td>60%</td><td>30%</td></tr><tr><th>Total</th><td>100%</td><td>100%</td></tr></table>Twice as many people answered no as answered yes. If a person in Group A is selected at random, what is the probability that the person answered yes?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2/9",
+      ".2222",
+      "0.222"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4/11",
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This is $\\frac{40}{40 + 70}$. The two percents are out of different columns, and the No column is twice as big."
+    },
+    {
+     "value": "2/5",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "40% is the share of yes answers that came from Group A. The question asks for the share of Group A that answered yes."
+    }
+   ],
+   "solution": {
+    "key_idea": "Each column percent is a share of a different whole. Give the columns real sizes using “twice as many no,” then read the Group A row.",
+    "steps": "The question asks: among Group A, what fraction answered yes? Suppose 100 people answered yes, so 200 answered no.<br>Step 1: Group A in each column.<br>Group A, yes $= 0.40 \\times 100 = 40$ <span class=\"nt\">(40% of the Yes column)</span><br>Group A, no $= 0.70 \\times 200 = 140$ <span class=\"nt\">(70% of the No column)</span><br>Step 2: Use the Group A row as the whole.<br>Group A total $= 40 + 140 = 180$ <span class=\"nt\">(the new whole)</span><br>probability $= \\frac{40}{180} = \\frac{2}{9}$ <span class=\"nt\">(divide top and bottom by 20)</span>",
+    "check": "Group B: $60 + 60 = 120$ people; $180 + 120 = 300 = 100 + 200$ ✓",
+    "be_careful": "Without “twice as many no,” the answer could not be found, because the column percents hide the column sizes.",
+    "desmos": "Not needed.",
+    "another_way": "Any sizes in the ratio 1 : 2 work: with $y$ yes and $2y$ no, $\\frac{0.4y}{0.4y + 1.4y} = \\frac{0.4}{1.8} = \\frac{2}{9}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-049",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C4"
+   ],
+   "family": "base-rate-test",
+   "signature": "2% defective; scanner flags 90% of defective, 5% of good; P(defective | flagged)=180/670 about 26.9%; traps 95.0%, 73.1%, 90.0%",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a factory, 2% of the parts made are defective. A scanner flags 90% of the defective parts and 5% of the parts that are not defective. If a part that was flagged by the scanner is selected at random, which of the following is closest to the probability that the part is defective?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$26.9\\%$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$73.1\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "73.1% is the probability that a flagged part is NOT defective."
+    },
+    {
+     "key": "C",
+     "text": "$90.0\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "90% is the share of defective parts that get flagged, the reverse condition."
+    },
+    {
+     "key": "D",
+     "text": "$95.0\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "95% is the share of good parts that are NOT flagged. It answers a different question."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Flagged parts come from two places: defective parts that are caught, and good parts flagged by mistake. Good parts are so common that their mistakes outnumber the real catches.",
+    "steps": "The question asks: among flagged parts, what fraction are defective? Imagine 10,000 parts.<br>Step 1: Split the parts.<br>defective $= 0.02 \\times 10,000 = 200$ <span class=\"nt\">(good $= 9,800$)</span><br>Step 2: Flagged parts from each group.<br>defective and flagged $= 0.90 \\times 200 = 180$ <span class=\"nt\">(real catches)</span><br>good and flagged $= 0.05 \\times 9,800 = 490$ <span class=\"nt\">(false alarms)</span><br>all flagged $= 180 + 490 = 670$ <span class=\"nt\">(the new whole)</span><br>Step 3: Divide.<br>probability $= \\frac{180}{670} \\approx 0.269$ <span class=\"nt\">(about 26.9%)</span><br>So only about 27% of flagged parts are defective, because the 490 false alarms outnumber the 180 real catches.",
+    "check": "$0.269 \\times 670 \\approx 180$ ✓, and $26.9\\% + 73.1\\% = 100\\%$ ✓",
+    "be_careful": "A scanner that catches 90% of defective parts can still be wrong most of the time it flags, because good parts are 98% of the parts.",
+    "desmos": "Not needed.",
+    "another_way": "With shares: $\\frac{0.02 \\times 0.9}{0.02 \\times 0.9 + 0.98 \\times 0.05} = \\frac{0.018}{0.067} \\approx 0.269$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P5-050",
+   "version": 1,
+   "skill": {
+    "code": "P5",
+    "domain": "psda",
+    "cb_skill": "Probability and conditional probability"
+   },
+   "level": "H+",
+   "concepts": [
+    "P5.C7"
+   ],
+   "family": "symbolic-probability",
+   "signature": "P(red)=p; number of red beads doubled, blue unchanged; new P(red)=2p/(1+p); traps 2p, 2p/(1+2p), p/(1+p)",
+   "abilities": [
+    "S",
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A jar contains only red beads and blue beads. If one bead is selected at random, the probability that it is red is $p$, where $0 < p < 1$. The number of red beads in the jar is then doubled, and the number of blue beads does not change. Which expression gives the probability that a bead selected at random from the jar is now red?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{2p}{1 + p}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$2p$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This doubles the top but keeps the old total. The total grows when red beads are added."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{p}{1 + p}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the new probability of the ADDED red beads only. All the red beads, old and new, count."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{2p}{1 + 2p}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds $2p$ of the old total to the old total, counting the original red beads twice."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Let the jar start with $N$ beads. Then red is $pN$ and blue is $(1 - p)N$. Doubling red adds $pN$ beads.",
+    "steps": "The question asks for the new chance of red, written with $p$. Let $N$ = the original number of beads.<br>red $= pN$, blue $= (1 - p)N$ <span class=\"nt\">(from the probability)</span><br>new red $= 2pN$ <span class=\"nt\">(doubled)</span><br>new total $= 2pN + (1 - p)N = (1 + p)N$ <span class=\"nt\">(blue does not change)</span><br>new probability $= \\frac{2pN}{(1 + p)N} = \\frac{2p}{1 + p}$ <span class=\"nt\">($N$ cancels)</span><br>The answer depends only on $p$; the starting number of beads cancels, so any jar with the same $p$ gives the same result.",
+    "check": "Try $p = \\frac{1}{2}$: 1 red and 1 blue become 2 red and 1 blue, so $\\frac{2}{3}$. Formula: $\\frac{1}{1.5} = \\frac{2}{3}$ ✓",
+    "be_careful": "Doubling the red beads does not double the probability, because the total also grows. $2p$ can even be bigger than 1.",
+    "desmos": "A number test (any $p$, any bead count) checks the choices, but only after the jar is modeled correctly.",
+    "another_way": "Use a sample jar: 1 red, 3 blue ($p = \\frac{1}{4}$). After doubling: 2 red, 3 blue, $\\frac{2}{5}$. Only $\\frac{2p}{1 + p} = \\frac{0.5}{1.25} = \\frac{2}{5}$ matches."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

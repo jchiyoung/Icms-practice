@@ -1,0 +1,3462 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "G3",
+ "skill": "Right triangles and trigonometry",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-G3-001",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C3"
+   ],
+   "family": "sine-from-two-legs",
+   "signature": "legs AC 20, BC 21 -> AB 29 -> sin A = 21/29; traps 20/29 cos, 21/20 tan, 29/20",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle, $AC = 20$, and $BC = 21$. What is the value of $\\sin A$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{20}{29}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{20}{29}$ is $\\cos A$: side $AC$ is adjacent to angle $A$, not opposite it."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{21}{29}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{21}{20}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{21}{20}$ is $\\tan A$, opposite over adjacent."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{29}{20}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is hypotenuse over adjacent; a sine is never greater than 1."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The sine of an angle is the opposite side over the hypotenuse, so the hypotenuse must be found first.",
+    "steps": "What does the question ask? $\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}}$.<br>The side opposite angle $A$ is $BC = 21$. <span class=\"nt\">(the side across from A)</span><br>$AB^{2} = 20^{2} + 21^{2} = 400 + 441 = 841$ <span class=\"nt\">(Pythagorean theorem)</span><br>$AB = 29$ <span class=\"nt\">(square root)</span><br>$\\sin A = \\frac{21}{29}$ <span class=\"nt\">(opposite over hypotenuse)</span>",
+    "check": "$\\cos A = \\frac{20}{29}$ and $(\\frac{20}{29})^{2} + (\\frac{21}{29})^{2} = \\frac{841}{841} = 1$ ✓",
+    "be_careful": "Opposite means across from the angle. $AC$ touches angle $A$, so it is adjacent.",
+    "desmos": "Not needed.",
+    "another_way": "Sketch the triangle and label each side as opposite, adjacent, or hypotenuse before writing any ratio."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-002",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C3"
+   ],
+   "family": "tan-build-then-scale",
+   "signature": "tan A = 7/24, hypotenuse AB 50 -> scale 2 -> AC 48; traps 14 (BC), 24",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle, $\\tan A = \\frac{7}{24}$, and $AB = 50$. What is the length of $\\overline{AC}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "48"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "14",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "14 is $BC$, the side opposite $A$. Side $AC$ is adjacent to $A$."
+    },
+    {
+     "value": "24",
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "24 comes from the ratio itself. The ratio gives the shape, and $AB = 50$ sets the size."
+    }
+   ],
+   "solution": {
+    "key_idea": "$\\tan A = \\frac{7}{24}$ gives the shape 7, 24, 25. The hypotenuse 50 tells how much the triangle is scaled.",
+    "steps": "What does the question ask? $AC$, the leg adjacent to angle $A$.<br>Opposite $= 7k$ and adjacent $= 24k$ <span class=\"nt\">(from $\\tan A = \\frac{7}{24}$)</span><br>Hypotenuse $= \\sqrt{(7k)^{2} + (24k)^{2}} = \\sqrt{625k^{2}} = 25k$ <span class=\"nt\">(Pythagorean theorem)</span><br>$25k = 50$, so $k = 2$ <span class=\"nt\">(match AB = 50)</span><br>$AC = 24k = 48$ <span class=\"nt\">(adjacent leg)</span>",
+    "check": "$BC = 14$: $14^{2} + 48^{2} = 196 + 2,304 = 2,500 = 50^{2}$ ✓ and $\\frac{14}{48} = \\frac{7}{24}$ ✓",
+    "be_careful": "A ratio of 7 to 24 does not mean the sides are 7 and 24.",
+    "desmos": "Not needed.",
+    "another_way": "$\\cos A = \\frac{24}{25}$, so $AC = AB \\cos A = 50 \\cdot \\frac{24}{25} = 48$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-003",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C4"
+   ],
+   "family": "cofunction-solve-linear",
+   "signature": "sin(x+8) = cos(2x+19), acute -> 3x + 27 = 90 -> x 21; traps -11 (equal), 51 (sum 180), 79",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the angle measures below, both $x + 8$ and $2x + 19$ are between 0 and 90. If $\\sin((x + 8)°) = \\cos((2x + 19)°)$, what is the value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-11$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This sets the two angles equal. Sine of one angle equals cosine of its complement, not of itself."
+    },
+    {
+     "key": "B",
+     "text": "$21$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$51$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This makes the angles add to 180. Complementary angles add to 90."
+    },
+    {
+     "key": "D",
+     "text": "$79$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This sets $2x + 19 = (x + 8) + 90$; the angles must add to 90, not differ by 90."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$\\sin a° = \\cos b°$ for acute angles exactly when $a + b = 90$.",
+    "steps": "What does the question ask? The value of $x$.<br>$(x + 8) + (2x + 19) = 90$ <span class=\"nt\">(sine of an angle equals cosine of its complement)</span><br>$3x + 27 = 90$ <span class=\"nt\">(combine like terms)</span><br>$3x = 63$, so $x = 21$ <span class=\"nt\">(solve)</span>",
+    "check": "Angles $29°$ and $61°$: $29 + 61 = 90$ ✓, both between 0 and 90 ✓",
+    "be_careful": "Do not set the two angles equal; the sine of one matches the cosine of the other only when they are complementary.",
+    "desmos": "Desmos can graph both sides in degree mode, but the window must be chosen; the complement idea is faster.",
+    "another_way": "Write $\\cos((2x + 19)°) = \\sin((71 - 2x)°)$ and set $x + 8 = 71 - 2x$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-004",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "square-diagonal-perimeter",
+   "signature": "square diagonal 12 -> side 6 sqrt2 -> perimeter 24 sqrt2; traps 12 sqrt2, 24, 48",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The length of a diagonal of a square is 12. What is the perimeter of the square?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12\\sqrt{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$12\\sqrt{2}$ is the sum of two sides, half the perimeter."
+    },
+    {
+     "key": "B",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This takes half the diagonal, 6, as the side. A side is the diagonal divided by $\\sqrt{2}$."
+    },
+    {
+     "key": "C",
+     "text": "$24\\sqrt{2}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$48$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This uses the diagonal 12 as the side length."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A diagonal cuts the square into two 45-45-90 triangles, so diagonal $=$ side $\\times \\sqrt{2}$.",
+    "steps": "What does the question ask? Four times the side length $s$.<br>$s\\sqrt{2} = 12$ <span class=\"nt\">(45-45-90 triangle: hypotenuse is a leg times the square root of 2)</span><br>$s = \\frac{12}{\\sqrt{2}} = 6\\sqrt{2}$ <span class=\"nt\">(divide and rationalize)</span><br>Perimeter $= 4(6\\sqrt{2}) = 24\\sqrt{2}$ <span class=\"nt\">(four equal sides)</span>",
+    "check": "$(6\\sqrt{2})^{2} + (6\\sqrt{2})^{2} = 72 + 72 = 144 = 12^{2}$ ✓",
+    "be_careful": "The diagonal is longer than a side, so the side is less than 12.",
+    "desmos": "Not needed.",
+    "another_way": "$2s^{2} = 144$, so $s^{2} = 72$ and $s = 6\\sqrt{2}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-005",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "30-60-90-from-longer-leg",
+   "signature": "longer leg 9 -> short 3 sqrt3 -> hyp 6 sqrt3; traps 3 sqrt3, 9 sqrt2, 18",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $PQR$, angle $R$ is the right angle, the measure of angle $P$ is 30°, and $PR = 9$. What is the length of hypotenuse $\\overline{PQ}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3\\sqrt{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$3\\sqrt{3}$ is $QR$, the shorter leg; the hypotenuse is twice it."
+    },
+    {
+     "key": "B",
+     "text": "$6\\sqrt{3}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$9\\sqrt{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the 45-45-90 rule; the angles here are 30° and 60°."
+    },
+    {
+     "key": "D",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This doubles 9 as if 9 were the shorter leg. $PR$ is adjacent to the 30° angle, so it is the longer leg."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "In a 30-60-90 triangle the sides are $s$, $s\\sqrt{3}$, and $2s$; the longer leg is the one next to the 30° angle.",
+    "steps": "What does the question ask? The hypotenuse $PQ$.<br>$PR$ is adjacent to the 30° angle, so it is opposite the 60° angle: the longer leg. <span class=\"nt\">(which leg is which)</span><br>$s\\sqrt{3} = 9$, so $s = \\frac{9}{\\sqrt{3}} = 3\\sqrt{3}$ <span class=\"nt\">(shorter leg)</span><br>$PQ = 2s = 6\\sqrt{3}$ <span class=\"nt\">(hypotenuse is twice the shorter leg)</span>",
+    "check": "$\\cos 30° = \\frac{9}{6\\sqrt{3}} = \\frac{3}{2\\sqrt{3}} = \\frac{\\sqrt{3}}{2}$ ✓",
+    "be_careful": "Decide which leg 9 is before using any ratio.",
+    "desmos": "Not needed.",
+    "another_way": "$\\cos 30° = \\frac{PR}{PQ}$, so $PQ = \\frac{9}{\\sqrt{3}/2} = 6\\sqrt{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-006",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C3"
+   ],
+   "family": "cosine-hyp-perimeter",
+   "signature": "cos 0.6, hyp 35 -> adjacent 21, opposite 28 -> perimeter 84; traps 56 (two legs), 49",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In right triangle $DEF$, angle $F$ is the right angle, $\\cos D = 0.6$, and $DE = 35$. What is the perimeter of triangle $DEF$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "84"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "49",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "49 is $DF + DE = 21 + 35$; the third side $EF = 28$ is missing."
+    },
+    {
+     "value": "56",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "56 adds only the two legs, 21 and 28."
+    }
+   ],
+   "solution": {
+    "key_idea": "$\\cos D = 0.6 = \\frac{3}{5}$ gives a 3, 4, 5 shape; the hypotenuse 35 is 7 times 5.",
+    "steps": "What does the question ask? $DE + DF + EF$.<br>$DF = DE \\cos D = 35(0.6) = 21$ <span class=\"nt\">(adjacent side = hypotenuse times cosine)</span><br>$EF^{2} = 35^{2} - 21^{2} = 1,225 - 441 = 784$ <span class=\"nt\">(Pythagorean theorem)</span><br>$EF = 28$ <span class=\"nt\">(square root)</span><br>Perimeter $= 35 + 21 + 28 = 84$ <span class=\"nt\">(add the three sides)</span><br>Why this works: the cosine gives one leg directly from the hypotenuse, and the Pythagorean theorem gives the other, so all three sides of the perimeter are known.",
+    "check": "$\\frac{21}{35} = 0.6$ ✓ and $21^{2} + 28^{2} = 1,225 = 35^{2}$ ✓",
+    "be_careful": "Perimeter needs all three sides, including the hypotenuse.",
+    "desmos": "Not needed.",
+    "another_way": "$0.6 = \\frac{3}{5}$; scale 3, 4, 5 by 7: 21, 28, 35."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-007",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C5"
+   ],
+   "family": "similar-triangle-ratio-invariant",
+   "signature": "ABC 16-30-34 right at C; DEF similar, DE 51 decoy; cos D = cos A = 30/34 = 15/17; traps 8/17, 8/15, 17/15",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle, $AB = 34$, $BC = 16$, and $AC = 30$. Triangle $DEF$ is similar to triangle $ABC$, where $D$, $E$, and $F$ correspond to $A$, $B$, and $C$, respectively, and $DE = 51$. What is the value of $\\cos D$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{8}{17}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{8}{17}$ is $\\sin D$: 16 is opposite $A$, not adjacent."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{15}{17}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{17}{15}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is hypotenuse over adjacent, the ratio flipped."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{15}{8}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{15}{8}$ is $\\tan E$, the tangent of the other acute angle."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Corresponding angles of similar triangles are equal, so their trig ratios are equal; the length 51 is not needed.",
+    "steps": "What does the question ask? $\\cos D$.<br>$\\angle  D = \\angle  A$ <span class=\"nt\">(corresponding angles of similar triangles)</span><br>$\\cos D = \\cos A = \\frac{AC}{AB}$ <span class=\"nt\">(adjacent over hypotenuse in triangle ABC)</span><br>$\\cos A = \\frac{30}{34} = \\frac{15}{17}$ <span class=\"nt\">(simplify)</span><br>Why this works: similar triangles have equal corresponding angles, so $\\cos D$ can be read from triangle $ABC$; the length $DE = 51$ only changes the size, not the ratio.",
+    "check": "In $DEF$ the scale factor is $\\frac{51}{34} = 1.5$, so $DF = 45$ and $\\frac{45}{51} = \\frac{15}{17}$ ✓",
+    "be_careful": "Scaling a triangle does not change any trig ratio of its angles.",
+    "desmos": "Not needed.",
+    "another_way": "Compute $DEF$ fully ($DF = 45$, $DE = 51$) and take $\\frac{45}{51}$; same value."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-008",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C1"
+   ],
+   "family": "sliding-ladder-two-heights",
+   "signature": "ladder 25, base 7 -> top 24; base moves to 15 -> top 20; slide 4; traps 8, 20, 24",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A 25-foot ladder leans against a vertical wall on level ground, with its base 7 feet from the wall. The base of the ladder then slides away from the wall until it is 15 feet from the wall, and the ladder still touches the wall. How many feet did the top of the ladder slide down the wall?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 feet is how far the base moved, not the top."
+    },
+    {
+     "key": "C",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "20 feet is the new height of the top, not the change."
+    },
+    {
+     "key": "D",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "24 feet is the original height of the top."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The ladder is the hypotenuse in both positions; find each height, then subtract.",
+    "steps": "What does the question ask? The drop of the top: old height minus new height.<br>Old height $= \\sqrt{25^{2} - 7^{2}} = \\sqrt{576} = 24$ <span class=\"nt\">(Pythagorean theorem, first position)</span><br>New height $= \\sqrt{25^{2} - 15^{2}} = \\sqrt{400} = 20$ <span class=\"nt\">(Pythagorean theorem, second position)</span><br>Drop $= 24 - 20 = 4$ feet <span class=\"nt\">(subtract)</span>",
+    "check": "$7^{2} + 24^{2} = 625$ ✓ and $15^{2} + 20^{2} = 625$ ✓",
+    "be_careful": "The base moved 8 feet, but the top does not move the same distance.",
+    "desmos": "Not needed.",
+    "another_way": "Use the triples 7, 24, 25 and 15, 20, 25 directly."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-009",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "isosceles-right-from-radical-perimeter",
+   "signature": "isosceles right triangle perimeter 12 + 6 sqrt2 -> legs 6 -> area 18; trap 36",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "An isosceles right triangle has a perimeter of $12 + 6\\sqrt{2}$. What is the area of the triangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "18"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "36",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "36 is $6 \\times 6$; the area of a triangle is half of the product of the legs."
+    },
+    {
+     "value": "72",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses the hypotenuse $6\\sqrt{2}$ as a leg."
+    }
+   ],
+   "solution": {
+    "key_idea": "The legs are $s$ and $s$ and the hypotenuse is $s\\sqrt{2}$, so the perimeter is $2s + s\\sqrt{2}$; match the parts.",
+    "steps": "What does the question ask? $\\frac{1}{2}s^{2}$, where $s$ is the leg length.<br>Perimeter $= s + s + s\\sqrt{2} = 2s + s\\sqrt{2}$ <span class=\"nt\">(45-45-90 side pattern)</span><br>$2s + s\\sqrt{2} = 12 + 6\\sqrt{2}$ <span class=\"nt\">(given)</span><br>$s = 6$ <span class=\"nt\">(then $2s = 12$ and $s\\sqrt{2} = 6\\sqrt{2}$)</span><br>Area $= \\frac{1}{2}(6)(6) = 18$ <span class=\"nt\">(the legs are base and height)</span>",
+    "check": "$6 + 6 + 6\\sqrt{2} = 12 + 6\\sqrt{2}$ ✓",
+    "be_careful": "Area of a right triangle uses the two legs, not the hypotenuse.",
+    "desmos": "Not needed.",
+    "another_way": "Factor: $s(2 + \\sqrt{2}) = 6(2 + \\sqrt{2})$, so $s = 6$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-010",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C3"
+   ],
+   "family": "sine-to-tangent",
+   "signature": "sin A 8/17 -> adjacent 15 -> tan A 8/15; traps 15/17, 17/15, 15/8",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $\\sin A = \\frac{8}{17}$. What is the value of $\\tan A$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{8}{15}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{15}{17}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{15}{17}$ is $\\cos A$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{17}{15}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides the hypotenuse by the adjacent side."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{15}{8}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{15}{8}$ is $\\tan B$, adjacent over opposite for angle $A$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Draw a triangle with opposite 8 and hypotenuse 17, find the adjacent side, then take opposite over adjacent.",
+    "steps": "What does the question ask? $\\tan A = \\frac{\\text{opposite}}{\\text{adjacent}}$.<br>Opposite $= 8$, hypotenuse $= 17$ <span class=\"nt\">(from $\\sin A = \\frac{8}{17}$)</span><br>Adjacent $= \\sqrt{17^{2} - 8^{2}} = \\sqrt{225} = 15$ <span class=\"nt\">(Pythagorean theorem)</span><br>$\\tan A = \\frac{8}{15}$ <span class=\"nt\">(opposite over adjacent)</span><br>Why this works: the tangent compares the two legs only, so the hypotenuse is never used once the legs are known.",
+    "check": "$8^{2} + 15^{2} = 289 = 17^{2}$ ✓",
+    "be_careful": "Only the ratio is known; any triangle with sides $8k$, $15k$, $17k$ gives the same tangent.",
+    "desmos": "Not needed.",
+    "another_way": "$\\tan A = \\frac{\\sin A}{\\cos A} = \\frac{8/17}{15/17} = \\frac{8}{15}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-011",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C4"
+   ],
+   "family": "sine-decimal-other-angle",
+   "signature": "sin A 0.28 -> cos A 0.96 -> sin B = cos A = 0.96; traps 0.28 cos B, 0.72, 0.29 tan",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $\\sin A = 0.28$. What is the value of $\\sin B$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.28$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "0.28 is $\\cos B$. The sine of $B$ uses the side opposite $B$."
+    },
+    {
+     "key": "B",
+     "text": "$0.29$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "About 0.29 is $\\tan A = \\frac{0.28}{0.96}$."
+    },
+    {
+     "key": "C",
+     "text": "$0.72$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This is $1 - 0.28$. Sine and cosine of the same angle do not add to 1."
+    },
+    {
+     "key": "D",
+     "text": "$0.96$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$\\sin B = \\cos A$ because $A$ and $B$ are complementary; build the triangle from $\\sin A$ to get $\\cos A$.",
+    "steps": "What does the question ask? $\\sin B$.<br>$\\sin A = 0.28 = \\frac{7}{25}$ <span class=\"nt\">(write as a fraction)</span><br>Opposite $A$: 7, hypotenuse: 25, adjacent: $\\sqrt{625 - 49} = 24$ <span class=\"nt\">(Pythagorean theorem)</span><br>$\\sin B = \\frac{\\text{side opposite } B}{\\text{hypotenuse}} = \\frac{24}{25}$ <span class=\"nt\">(the side opposite B is adjacent to A)</span><br>$\\frac{24}{25} = 0.96$ <span class=\"nt\">(decimal)</span>",
+    "check": "$0.28^{2} + 0.96^{2} = 0.0784 + 0.9216 = 1$ ✓",
+    "be_careful": "$\\cos B = 0.28$, not $\\sin B$.",
+    "desmos": "Not needed.",
+    "another_way": "$\\sin B = \\cos A = \\sqrt{1 - 0.28^{2}} = 0.96$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-012",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C3"
+   ],
+   "family": "ramp-tangent-length",
+   "signature": "ramp rise 15, tan 5/12 -> run 36 -> ramp 39; traps 36 (run), 13",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A straight ramp rises 15 inches from the ground to a landing. The angle that the ramp makes with the level ground has a tangent of $\\frac{5}{12}$. What is the length, in inches, of the ramp?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "39"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "36",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "36 inches is the horizontal run, not the ramp itself."
+    },
+    {
+     "value": "13",
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "13 is the hypotenuse of the ratio triangle 5, 12, 13 before scaling by 3."
+    }
+   ],
+   "solution": {
+    "key_idea": "Tangent is rise over run; the ramp is the hypotenuse.",
+    "steps": "What does the question ask? The ramp length, the hypotenuse.<br>$\\frac{15}{\\text{run}} = \\frac{5}{12}$ <span class=\"nt\">(tangent = opposite over adjacent)</span><br>Run $= 36$ <span class=\"nt\">(cross multiply: 5 run = 180)</span><br>Ramp $= \\sqrt{15^{2} + 36^{2}} = \\sqrt{1,521} = 39$ <span class=\"nt\">(Pythagorean theorem)</span>",
+    "check": "$15 : 36 : 39 = 5 : 12 : 13$ ✓",
+    "be_careful": "The run is a leg; the ramp is the longest side.",
+    "desmos": "Not needed.",
+    "another_way": "Scale 5, 12, 13 by 3 because the rise 15 is $3 \\times 5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-013",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "60-degree-adjacent-hypotenuse",
+   "signature": "figure: angle A 60, adjacent AC 5 -> hyp 10; traps 10 sqrt3/3, 5 sqrt2, 5 sqrt3",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, triangle $ABC$ has a right angle at $C$.",
+   "stem_after_figure": "What is the value of $x$?",
+   "figures": [
+    {
+     "id": "QB-G3-013-fig1",
+     "file": "figures/QB-G3-013-fig1.svg",
+     "alt": "Right triangle ABC with the right angle at C at the lower left. Side CA along the bottom has length 5. The angle at A is 60 degrees. The hypotenuse AB is labeled x."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{10\\sqrt{3}}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This treats 5 as the longer leg. The side next to the 60° angle is the shorter leg."
+    },
+    {
+     "key": "B",
+     "text": "$5\\sqrt{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the 45-45-90 pattern."
+    },
+    {
+     "key": "C",
+     "text": "$5\\sqrt{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$5\\sqrt{3}$ is $BC$, the longer leg, not the hypotenuse."
+    },
+    {
+     "key": "D",
+     "text": "$10$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The side next to the 60° angle is opposite the 30° angle, so it is the shorter leg; the hypotenuse is twice it.",
+    "steps": "What does the question ask? The hypotenuse $AB = x$.<br>$\\angle  B = 180° - 90° - 60° = 30°$ <span class=\"nt\">(angle sum)</span><br>$AC = 5$ is opposite the 30° angle <span class=\"nt\">(shorter leg)</span><br>$x = 2(5) = 10$ <span class=\"nt\">(30-60-90: hypotenuse is twice the shorter leg)</span>",
+    "check": "$\\cos 60° = \\frac{5}{10} = \\frac{1}{2}$ ✓",
+    "be_careful": "Find the angle opposite the given side before choosing the ratio.",
+    "desmos": "Not needed.",
+    "another_way": "$\\cos 60° = \\frac{AC}{AB}$: $\\frac{1}{2} = \\frac{5}{x}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-014",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "coordinate-angle-sine",
+   "signature": "O to P(8,15), angle with +x axis; sin = 15/17; traps 8/17, 8/15, 15/8",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, $O$ is the origin and point $P$ has coordinates $(8, 15)$. Segment $\\overline{OP}$ makes an angle of $\\theta°$ with the positive $x$-axis. What is the value of $\\sin\\theta°$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{8}{17}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{8}{17}$ is $\\cos\\theta°$; the $x$-coordinate is the adjacent side."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{8}{15}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is $\\frac{x}{y}$, the reciprocal of the tangent."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{15}{17}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{15}{8}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{15}{8}$ is $\\tan\\theta°$, the slope of $\\overline{OP}$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Drop a vertical segment from $P$ to the $x$-axis: legs 8 and 15, hypotenuse $OP$.",
+    "steps": "What does the question ask? $\\sin\\theta°$ for the angle at $O$.<br>Right triangle with legs 8 (along the $x$-axis) and 15 (vertical) <span class=\"nt\">(drop a perpendicular from P)</span><br>$OP = \\sqrt{8^{2} + 15^{2}} = \\sqrt{289} = 17$ <span class=\"nt\">(Pythagorean theorem)</span><br>$\\sin\\theta° = \\frac{15}{17}$ <span class=\"nt\">(opposite (the y-coordinate) over hypotenuse)</span>",
+    "check": "$(\\frac{8}{17})^{2} + (\\frac{15}{17})^{2} = 1$ ✓",
+    "be_careful": "The vertical side is opposite the angle at $O$.",
+    "desmos": "Not needed.",
+    "another_way": "Slope $\\frac{15}{8} = \\tan\\theta°$; build the triangle 8, 15, 17 from it."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-015",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C1"
+   ],
+   "family": "radical-hypotenuse-area",
+   "signature": "hyp 2 sqrt13, leg 4 -> other leg 6 -> area 12; traps 24",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A right triangle has a hypotenuse of length $2\\sqrt{13}$ and one leg of length 4. What is the area of the triangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "24",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "24 is $4 \\times 6$; the area of a triangle is half that."
+    },
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is the missing leg; the question asks for the area."
+    }
+   ],
+   "solution": {
+    "key_idea": "Square the hypotenuse to remove the radical: $(2\\sqrt{13})^{2} = 52$.",
+    "steps": "What does the question ask? $\\frac{1}{2}(\\text{leg})(\\text{leg})$.<br>$(2\\sqrt{13})^{2} = 4 \\cdot 13 = 52$ <span class=\"nt\">(square the hypotenuse)</span><br>Other leg$^{2} = 52 - 16 = 36$ <span class=\"nt\">(Pythagorean theorem)</span><br>Other leg $= 6$ <span class=\"nt\">(square root)</span><br>Area $= \\frac{1}{2}(4)(6) = 12$ <span class=\"nt\">(legs are base and height)</span>",
+    "check": "$4^{2} + 6^{2} = 52 = (2\\sqrt{13})^{2}$ ✓",
+    "be_careful": "$(2\\sqrt{13})^{2}$ is $4 \\times 13$, not $2 \\times 13$.",
+    "desmos": "Not needed.",
+    "another_way": "Recognize 4, 6, $2\\sqrt{13}$ as 2, 3, $\\sqrt{13}$ doubled."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-016",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C4"
+   ],
+   "family": "cofunction-must-statements",
+   "signature": "sin x = cos y, x and y acute -> I x + y = 90 and II cos x = sin y both true; traps I only, II only, neither",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For acute angles with measures $x°$ and $y°$, $\\sin x° = \\cos y°$. Which of the following must be true?<br>I. $x + y = 90$<br>II. $\\cos x° = \\sin y°$",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "I only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Statement II also holds: once $x + y = 90$, the cosine of $x$ is the sine of its complement $y$."
+    },
+    {
+     "key": "B",
+     "text": "II only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Statement I is the reason II holds; for acute angles, equal sine and cosine force complementary angles."
+    },
+    {
+     "key": "C",
+     "text": "I and II",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Neither I nor II",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Both statements follow from the complement relation."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "For acute angles, $\\sin x° = \\cos y°$ happens exactly when $x$ and $y$ are complementary, and then every cofunction pair matches.",
+    "steps": "What does the question ask? Which statements are forced by $\\sin x° = \\cos y°$.<br>$\\cos y° = \\sin((90 - y)°)$ <span class=\"nt\">(cofunction relation)</span><br>$\\sin x° = \\sin((90 - y)°)$ with both angles acute, so $x = 90 - y$ <span class=\"nt\">(sine increases on acute angles)</span><br>I: $x + y = 90$ is true <span class=\"nt\">(rearrange)</span><br>II: $\\cos x° = \\sin((90 - x)°) = \\sin y°$ is true <span class=\"nt\">(cofunction again)</span><br>Answer: I and II <span class=\"nt\">(both are forced)</span>",
+    "check": "Example $x = 30$, $y = 60$: $\\sin 30° = \\cos 60° = 0.5$ and $\\cos 30° = \\sin 60°$ ✓",
+    "be_careful": "One example only illustrates; the argument shows both statements hold every time.",
+    "desmos": "Not needed.",
+    "another_way": "In a right triangle with acute angles $x°$ and $y°$, the side opposite $x$ is adjacent to $y$, so both pairs match."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-017",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C3"
+   ],
+   "family": "tan-other-angle-sine",
+   "signature": "AC 12, tan B 3/4 -> BC 16, AB 20 -> sin A = 16/20 = 4/5; traps 3/5, 3/4, 4/3",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle, $AC = 12$, and $\\tan B = \\frac{3}{4}$. What is the value of $\\sin A$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{3}{5}$ is $\\sin B$, the other acute angle."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "$\\frac{3}{4}$ is the given $\\tan B$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{4}{5}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{4}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{4}{3}$ is $\\tan A$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$\\tan B = \\frac{AC}{BC}$ gives $BC$; then $\\sin A$ uses the side opposite $A$, which is $BC$.",
+    "steps": "What does the question ask? $\\sin A = \\frac{BC}{AB}$.<br>$\\tan B = \\frac{AC}{BC} = \\frac{12}{BC} = \\frac{3}{4}$ <span class=\"nt\">(AC is opposite B)</span><br>$BC = 16$ <span class=\"nt\">(cross multiply)</span><br>$AB = \\sqrt{12^{2} + 16^{2}} = 20$ <span class=\"nt\">(Pythagorean theorem)</span><br>$\\sin A = \\frac{16}{20} = \\frac{4}{5}$ <span class=\"nt\">(opposite A over hypotenuse)</span><br>Why this works: the sine of one acute angle equals the cosine of the other, because both use the same opposite leg and hypotenuse.",
+    "check": "$\\sin A = \\cos B = \\frac{16}{20}$ ✓",
+    "be_careful": "Keep track of which angle each ratio belongs to.",
+    "desmos": "Not needed.",
+    "another_way": "$\\sin A = \\cos B$; from $\\tan B = \\frac{3}{4}$, $\\cos B = \\frac{4}{5}$. The length 12 is not needed."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-018",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "30-60-90-difference",
+   "signature": "30-60-90: hyp minus short leg 9 -> short 9, longer 9 sqrt3; traps 9, 9 sqrt2, 18",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a right triangle, one angle measures 30°. The hypotenuse is 9 units longer than the shortest side. What is the length of the longer leg?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "9 is the shortest side; it is also the difference given in the stem."
+    },
+    {
+     "key": "B",
+     "text": "$9\\sqrt{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the 45-45-90 pattern."
+    },
+    {
+     "key": "C",
+     "text": "$9\\sqrt{3}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "18 is the hypotenuse."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The hypotenuse is twice the shortest side, so the difference $2s - s$ equals $s$.",
+    "steps": "What does the question ask? The longer leg $s\\sqrt{3}$.<br>Sides $s$, $s\\sqrt{3}$, $2s$ <span class=\"nt\">(30-60-90 pattern)</span><br>$2s - s = 9$ <span class=\"nt\">(hypotenuse is 9 longer than the shortest side)</span><br>$s = 9$ <span class=\"nt\">(simplify)</span><br>Longer leg $= 9\\sqrt{3}$ <span class=\"nt\">(multiply by the square root of 3)</span>",
+    "check": "$9^{2} + (9\\sqrt{3})^{2} = 81 + 243 = 324 = 18^{2}$ ✓",
+    "be_careful": "The question asks for the longer leg, not the shortest side.",
+    "desmos": "Not needed.",
+    "another_way": "$\\tan 60° = \\frac{\\text{longer leg}}{9} = \\sqrt{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-019",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "rectangle-diagonal-angle",
+   "signature": "rectangle 5 by 5 sqrt3; angle between diagonal and longer side 30; traps 45, 60, 90",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A rectangle has side lengths 5 and $5\\sqrt{3}$. What is the measure of the angle between a diagonal of the rectangle and one of the longer sides?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$30°$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$45°$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "45° would need equal sides, as in a square."
+    },
+    {
+     "key": "C",
+     "text": "$60°$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "60° is the angle between the diagonal and a shorter side."
+    },
+    {
+     "key": "D",
+     "text": "$90°$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "90° is the angle between two sides of the rectangle."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The diagonal makes a right triangle with legs 5 and $5\\sqrt{3}$, the 30-60-90 pattern.",
+    "steps": "What does the question ask? The angle at the vertex where the diagonal meets a longer side.<br>Legs 5 and $5\\sqrt{3}$, ratio $1 : \\sqrt{3}$ <span class=\"nt\">(right triangle cut off by the diagonal)</span><br>Diagonal $= \\sqrt{25 + 75} = 10$ <span class=\"nt\">(Pythagorean theorem)</span><br>The smallest angle is opposite the shortest side 5 <span class=\"nt\">(smallest side, smallest angle)</span><br>That angle is between the diagonal and the longer side: 30° <span class=\"nt\">(the 30° angle sits next to the longer leg)</span>",
+    "check": "$\\tan 30° = \\frac{5}{5\\sqrt{3}} = \\frac{1}{\\sqrt{3}}$ ✓",
+    "be_careful": "The angle next to the longer side is the smaller angle.",
+    "desmos": "Not needed.",
+    "another_way": "$\\sin = \\frac{5}{10} = \\frac{1}{2}$ for the angle opposite the short side, so it is 30°."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-020",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "M",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "isosceles-base-cosine",
+   "signature": "AB = AC = 13, BC 10 -> altitude to midpoint; cos B = 5/13; trap 10/13, 12/13",
+   "abilities": [
+    "R",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In triangle $ABC$, $AB = AC = 13$ and $BC = 10$. What is the value of $\\cos B$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5/13",
+      ".3846",
+      "0.384",
+      "0.385"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "10/13",
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses the whole base 10. The right triangle uses half of it, 5."
+    },
+    {
+     "value": "12/13",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{12}{13}$ is $\\sin B$, the altitude over the hypotenuse."
+    }
+   ],
+   "solution": {
+    "key_idea": "The altitude from $A$ in an isosceles triangle meets $BC$ at its midpoint and makes a right triangle.",
+    "steps": "What does the question ask? $\\cos B$, adjacent over hypotenuse in a right triangle containing angle $B$.<br>Draw the altitude from $A$ to $\\overline{BC}$, meeting it at $M$. <span class=\"nt\">(create a right angle)</span><br>$BM = \\frac{10}{2} = 5$ <span class=\"nt\">(in an isosceles triangle the altitude bisects the base)</span><br>In right triangle $ABM$: adjacent $BM = 5$, hypotenuse $AB = 13$ <span class=\"nt\">(identify sides)</span><br>$\\cos B = \\frac{5}{13}$ <span class=\"nt\">(adjacent over hypotenuse)</span>",
+    "check": "$AM = \\sqrt{169 - 25} = 12$ and $5^{2} + 12^{2} = 13^{2}$ ✓",
+    "be_careful": "Triangle $ABC$ itself has no right angle; the ratio lives in triangle $ABM$.",
+    "desmos": "Not needed.",
+    "another_way": "Coordinates $B(0, 0)$, $C(10, 0)$, $A(5, 12)$: $\\cos B = \\frac{5}{13}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-021",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C5"
+   ],
+   "family": "parallel-cut-angle-transfer",
+   "signature": "right at C, AC 24, BC 10; DE perpendicular to AC, AD 13 decoy; angle ADE = angle B; tan = 12/5; traps 5/13, 5/12, 12/13",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle, $AC = 24$, and $BC = 10$. Point $D$ lies on $\\overline{AB}$ and point $E$ lies on $\\overline{AC}$ so that $\\overline{DE}$ is perpendicular to $\\overline{AC}$ and $AD = 13$. What is the value of $\\tan(\\angle  ADE)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{5}{13}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{5}{13}$ is $\\sin A$, a ratio for the angle at $A$, not at $D$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{5}{12}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{5}{12}$ is $\\tan A$. Angle $ADE$ matches angle $B$, not angle $A$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{12}{13}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{12}{13}$ is $\\sin(\\angle  ADE)$; the tangent divides by the adjacent side $DE$, not by $AD$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{12}{5}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$\\overline{DE}$ and $\\overline{BC}$ are both perpendicular to $\\overline{AC}$, so they are parallel and $\\angle  ADE = \\angle  ABC$; the length $AD = 13$ is not needed.",
+    "steps": "What does the question ask? The tangent of the angle at $D$ in triangle $ADE$.<br>$\\overline{DE} \\parallel \\overline{BC}$ <span class=\"nt\">(two segments perpendicular to the same line)</span><br>$\\angle  ADE = \\angle  ABC$ <span class=\"nt\">(corresponding angles)</span><br>$\\tan B = \\frac{\\text{opposite } B}{\\text{adjacent to } B} = \\frac{AC}{BC}$ <span class=\"nt\">(right angle at C)</span><br>$\\tan B = \\frac{24}{10} = \\frac{12}{5}$ <span class=\"nt\">(simplify)</span><br>$\\tan(\\angle  ADE) = \\frac{12}{5}$ <span class=\"nt\">(equal angles have equal tangents)</span><br>Why this works: the length $AD$ only sets the size of triangle $ADE$, and a trig ratio depends on angles, not on size.",
+    "check": "With $AD = 13$: $AB = 26$, so the scale is $\\frac{1}{2}$; $AE = 12$, $DE = 5$, and $\\frac{AE}{DE} = \\frac{12}{5}$ ✓",
+    "be_careful": "In triangle $ADE$, the side opposite angle $D$ is $AE$, not $DE$.",
+    "desmos": "Not needed.",
+    "another_way": "Use the half-size triangle: $AE = 12$, $DE = 5$, $AD = 13$, then opposite over adjacent at $D$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-022",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C5"
+   ],
+   "family": "altitude-cos-chain-leg",
+   "signature": "altitude CD; AD 9, cos A 3/5 -> AC 15 -> AB 25 -> BC 20; traps 12 (CD), 16 (BD)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle. Point $D$ lies on hypotenuse $\\overline{AB}$ so that $\\overline{CD}$ is perpendicular to $\\overline{AB}$. If $AD = 9$ and $\\cos A = \\frac{3}{5}$, what is the length of $\\overline{BC}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "20"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "12",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is $CD$, the altitude, found in the first small triangle."
+    },
+    {
+     "value": "16",
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "16 is $DB$, the other piece of the hypotenuse."
+    }
+   ],
+   "solution": {
+    "key_idea": "Angle $A$ sits in two right triangles, $ACD$ and $ABC$, so $\\cos A$ can be used twice.",
+    "steps": "What does the question ask? The leg $BC$ of the large triangle.<br>In right triangle $ACD$: $\\cos A = \\frac{AD}{AC}$ <span class=\"nt\">(right angle at D)</span><br>$\\frac{3}{5} = \\frac{9}{AC}$, so $AC = 15$ <span class=\"nt\">(cross multiply)</span><br>In right triangle $ABC$: $\\cos A = \\frac{AC}{AB}$ <span class=\"nt\">(right angle at C)</span><br>$\\frac{3}{5} = \\frac{15}{AB}$, so $AB = 25$ <span class=\"nt\">(cross multiply)</span><br>$BC = \\sqrt{25^{2} - 15^{2}} = \\sqrt{400} = 20$ <span class=\"nt\">(Pythagorean theorem)</span>",
+    "check": "$CD = 12$, $DB = 16$: $CD^{2} + DB^{2} = 144 + 256 = 400 = 20^{2}$ ✓",
+    "be_careful": "The same angle $A$ gives the same cosine in both triangles, but the sides used are different.",
+    "desmos": "Not needed.",
+    "another_way": "$\\sin A = \\frac{4}{5}$ and $BC = AB \\sin A = 25 \\cdot \\frac{4}{5} = 20$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-023",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "30-60-90-radical-perimeter-area",
+   "signature": "30-60-90 perimeter 18 + 6 sqrt3 -> s(3 + sqrt3) -> s 6 -> area 18 sqrt3; traps 9 sqrt3, 18, 36 sqrt3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A right triangle has one angle of measure 60°, and its perimeter is $18 + 6\\sqrt{3}$. What is the area of the triangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$9\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This comes from taking the shortest side as $3\\sqrt{3}$, matching $s\\sqrt{3}$ to $6\\sqrt{3}$ alone."
+    },
+    {
+     "key": "B",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This multiplies the two numbers in the perimeter, $\\frac{1}{2}(18)(2)$; it ignores the side pattern."
+    },
+    {
+     "key": "C",
+     "text": "$18\\sqrt{3}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$36\\sqrt{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$36\\sqrt{3}$ is the product of the legs; the area is half of it."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "With shortest side $s$, the perimeter is $s + s\\sqrt{3} + 2s = 3s + s\\sqrt{3}$; match it to $18 + 6\\sqrt{3}$.",
+    "steps": "What does the question ask? $\\frac{1}{2}(\\text{shorter leg})(\\text{longer leg})$.<br>Sides $s$, $s\\sqrt{3}$, $2s$ <span class=\"nt\">(30-60-90 pattern)</span><br>$3s + s\\sqrt{3} = 18 + 6\\sqrt{3}$ <span class=\"nt\">(perimeter)</span><br>$s = 6$ <span class=\"nt\">(then $3s = 18$ and $s\\sqrt{3} = 6\\sqrt{3}$)</span><br>Legs 6 and $6\\sqrt{3}$ <span class=\"nt\">(shorter and longer leg)</span><br>Area $= \\frac{1}{2}(6)(6\\sqrt{3}) = 18\\sqrt{3}$ <span class=\"nt\">(half the product of the legs)</span><br>Why this works: one unknown $s$ controls all three sides, so matching the whole-number part and the radical part pins it down.",
+    "check": "$6 + 6\\sqrt{3} + 12 = 18 + 6\\sqrt{3}$ ✓",
+    "be_careful": "Combine $s$ and $2s$ before matching parts; the 18 is not a single side.",
+    "desmos": "Not needed.",
+    "another_way": "Factor: $s(3 + \\sqrt{3}) = 6(3 + \\sqrt{3})$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-024",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C3"
+   ],
+   "family": "greatest-ratio-from-sine",
+   "signature": "sin A = 20/29, A smaller acute angle -> sides 20, 21, 29; greatest of sin A, cos A, tan A, tan B is tan B = 21/20",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $\\sin A = \\frac{20}{29}$. Which of the following has the greatest value?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\sin A$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "$\\sin A = \\frac{20}{29}$ is less than 1, and $\\tan B = \\frac{21}{20}$ is greater than 1."
+    },
+    {
+     "key": "B",
+     "text": "$\\cos A$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\cos A = \\frac{21}{29}$; dividing 21 by the hypotenuse gives less than dividing it by 20."
+    },
+    {
+     "key": "C",
+     "text": "$\\tan A$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\tan A = \\frac{20}{21}$ is less than 1 because $A$ is the smaller acute angle."
+    },
+    {
+     "key": "D",
+     "text": "$\\tan B$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Build the triangle from $\\sin A$: sides 20, 21, 29. A sine or cosine is less than 1; a tangent is greater than 1 only for the angle facing the longer leg.",
+    "steps": "What does the question ask? The largest of four ratios.<br>Opposite $A$: 20, hypotenuse: 29 <span class=\"nt\">($\\sin A = \\frac{20}{29}$)</span><br>Adjacent to $A$: $\\sqrt{841 - 400} = 21$ <span class=\"nt\">(Pythagorean theorem)</span><br>$\\sin A = \\frac{20}{29}$, $\\cos A = \\frac{21}{29}$ <span class=\"nt\">(both less than 1)</span><br>$\\tan A = \\frac{20}{21}$ <span class=\"nt\">(less than 1)</span><br>$\\tan B = \\frac{21}{20}$ <span class=\"nt\">(greater than 1, so it is the greatest)</span>",
+    "check": "$\\frac{21}{20} = 1.05 > \\frac{21}{29} \\approx 0.72 > \\frac{20}{29} \\approx 0.69$ and $\\frac{20}{21} \\approx 0.95$ ✓",
+    "be_careful": "Ratios with the hypotenuse in the denominator can never exceed 1.",
+    "desmos": "Not needed.",
+    "another_way": "$\\tan B = \\frac{1}{\\tan A}$; because $\\tan A < 1$, its reciprocal is greater than 1."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-025",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C4",
+    "G3.C3"
+   ],
+   "family": "symbolic-sin-to-tan-complement",
+   "signature": "right triangle, C = 90, sin A = k -> sides k, sqrt(1-k^2), 1 -> tan B = adjacent(B)/... = sqrt(1-k^2)/k; traps k/sqrt(1-k^2) (tan A), 1/k, sqrt(1-k^2) (cos A = sin B)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, the measure of $\\angle  C$ is 90°. If $\\sin A = k$, which of the following is equal to $\\tan B$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{k}{\\sqrt{1 - k^{2}}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is $\\tan A$. For angle $B$, the opposite and adjacent legs switch roles."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{\\sqrt{1 - k^{2}}}{k}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{1}{k}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This divides the hypotenuse by the leg opposite $A$; $\\tan$ uses two LEGS, not the hypotenuse."
+    },
+    {
+     "key": "D",
+     "text": "$\\sqrt{1 - k^{2}}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "This is $\\cos A$, which equals $\\sin B$, not $\\tan B$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Build a triangle with hypotenuse 1: the leg opposite $A$ is $k$, so the other leg is $\\sqrt{1 - k^{2}}$. Then read $\\tan B$ from $B$’s point of view.",
+    "steps": "What does the question ask? $\\tan B$ in terms of $k$.<br>Let $AB = 1$ and $BC = k$ <span class=\"nt\">($\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{k}{1}$)</span><br>$AC = \\sqrt{1 - k^{2}}$ <span class=\"nt\">(Pythagorean theorem)</span><br>From $B$: opposite side is $AC$, adjacent side is $BC$ <span class=\"nt\">(switch point of view)</span><br>$\\tan B = \\frac{AC}{BC} = \\frac{\\sqrt{1 - k^{2}}}{k}$ <span class=\"nt\">(opposite over adjacent)</span><br>Why this works: a sine is a ratio, so any triangle with these angles has the same ratios; choosing hypotenuse 1 just makes the opposite leg equal to $k$ itself.",
+    "check": "$k = \\frac{3}{5}$: a 3, 4, 5 triangle, $\\tan B = \\frac{4}{3}$, and $\\frac{\\sqrt{1 - \\frac{9}{25}}}{\\frac{3}{5}} = \\frac{\\frac{4}{5}}{\\frac{3}{5}} = \\frac{4}{3}$ ✓",
+    "be_careful": "$\\sin A = \\cos B$, but $\\tan B$ is the reciprocal of $\\tan A$, not equal to it.",
+    "desmos": "The choices are expressions, so Desmos helps only by picking a value such as $k = 0.6$ and testing each choice.",
+    "another_way": "$\\tan B = \\frac{1}{\\tan A} = \\frac{\\cos A}{\\sin A} = \\frac{\\sqrt{1 - k^{2}}}{k}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-026",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "rhombus-diagonals-cosine",
+   "signature": "rhombus diagonals 30, 16 -> halves 15, 8 -> side 17; cos(angle side, longer diagonal) 15/17; traps 8/17, 15/8",
+   "abilities": [
+    "R",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The diagonals of a rhombus have lengths 30 and 16. What is the cosine of the angle between a side of the rhombus and the longer diagonal?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "15/17",
+      ".8823",
+      ".8824",
+      "0.882"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "8/17",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{8}{17}$ is the cosine of the angle between a side and the shorter diagonal."
+    },
+    {
+     "value": "15/8",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is a tangent, and it uses the wrong angle."
+    }
+   ],
+   "solution": {
+    "key_idea": "The diagonals of a rhombus bisect each other at right angles, making four right triangles with legs 15 and 8.",
+    "steps": "What does the question ask? The cosine of the angle at a vertex on the longer diagonal, between the side and that diagonal.<br>Half diagonals: $\\frac{30}{2} = 15$ and $\\frac{16}{2} = 8$ <span class=\"nt\">(diagonals bisect each other)</span><br>They meet at a right angle <span class=\"nt\">(rhombus diagonals are perpendicular)</span><br>Side $= \\sqrt{15^{2} + 8^{2}} = \\sqrt{289} = 17$ <span class=\"nt\">(Pythagorean theorem)</span><br>Adjacent to the angle: the half of the longer diagonal, 15 <span class=\"nt\">(the angle sits on the longer diagonal)</span><br>$\\cos = \\frac{15}{17}$ <span class=\"nt\">(adjacent over hypotenuse)</span>",
+    "check": "$(\\frac{15}{17})^{2} + (\\frac{8}{17})^{2} = 1$ ✓; the angle is less than 45° because 15 > 8 ✓",
+    "be_careful": "Use half of each diagonal, not the whole diagonals.",
+    "desmos": "Not needed.",
+    "another_way": "Place the rhombus with vertices $(\\pm 15, 0)$ and $(0, \\pm 8)$; the side from $(15, 0)$ to $(0, 8)$ has length 17."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-027",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C5"
+   ],
+   "family": "altitude-angle-is-other-angle",
+   "signature": "legs AC 9, BC 12, altitude CD; angle ACD = angle B; sin = 9/15 = 3/5; traps 3/4, 4/5, 4/3",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle, $AC = 9$, and $BC = 12$. Point $D$ lies on $\\overline{AB}$ so that $\\overline{CD}$ is perpendicular to $\\overline{AB}$. What is the value of $\\sin(\\angle  ACD)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{5}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{3}{4}$ is $\\tan B$, the tangent, not the sine."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{4}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{4}{5}$ is $\\sin A$. Angle $ACD$ equals angle $B$, not angle $A$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{4}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{4}{3}$ is $\\tan A$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "In triangle $ACD$, $\\angle  ACD = 90° - \\angle  A$, which is $\\angle  B$; so $\\sin(\\angle  ACD) = \\sin B$.",
+    "steps": "What does the question ask? $\\sin(\\angle  ACD)$.<br>$\\angle  ACD + \\angle  A = 90°$ <span class=\"nt\">(triangle ACD has a right angle at D)</span><br>$\\angle  B + \\angle  A = 90°$ <span class=\"nt\">(triangle ABC has a right angle at C)</span><br>$\\angle  ACD = \\angle  B$ <span class=\"nt\">(both are the complement of angle A)</span><br>$AB = \\sqrt{9^{2} + 12^{2}} = 15$ <span class=\"nt\">(Pythagorean theorem)</span><br>$\\sin B = \\frac{AC}{AB} = \\frac{9}{15} = \\frac{3}{5}$ <span class=\"nt\">(side opposite B over the hypotenuse)</span>",
+    "check": "In triangle $ACD$: $AD = AC\\cos A = 9 \\cdot \\frac{9}{15} = 5.4$ and $\\sin(\\angle  ACD) = \\frac{AD}{AC} = \\frac{5.4}{9} = \\frac{3}{5}$ ✓",
+    "be_careful": "The angle at $C$ inside the small triangle is not angle $C$ of the big triangle.",
+    "desmos": "Not needed.",
+    "another_way": "Compute $AD = \\frac{AC^{2}}{AB} = 5.4$, then $\\sin(\\angle  ACD) = \\frac{AD}{AC}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-028",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "equilateral-height-to-square-perimeter",
+   "signature": "equilateral height 9 -> side 6 sqrt3 -> perimeter 18 sqrt3 -> square side 9 sqrt3/2 -> area 243/4; traps 81/4, 729/16, 108",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An equilateral triangle has a height of 9. A square has the same perimeter as the triangle. What is the area of the square?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{81}{4}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This drops the square root: a triangle side of 6 instead of $6\\sqrt{3}$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{729}{16}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses the height 9 as the side length of the triangle."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{243}{4}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$108$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This gives the square the same side length as the triangle, $6\\sqrt{3}$, instead of the same perimeter."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The height splits the equilateral triangle into two 30-60-90 triangles; the height is the longer leg, so it gives the side length.",
+    "steps": "What does the question ask? The area of a square whose perimeter matches the triangle.<br>Height 9 is opposite the 60° angle <span class=\"nt\">(longer leg of each 30-60-90 half)</span><br>Half side $= \\frac{9}{\\sqrt{3}} = 3\\sqrt{3}$ <span class=\"nt\">(shorter leg = longer leg divided by the square root of 3)</span><br>Triangle side $= 6\\sqrt{3}$, perimeter $= 18\\sqrt{3}$ <span class=\"nt\">(three equal sides)</span><br>Square side $= \\frac{18\\sqrt{3}}{4} = \\frac{9\\sqrt{3}}{2}$ <span class=\"nt\">(four equal sides)</span><br>Area $= (\\frac{9\\sqrt{3}}{2})^{2}$ <span class=\"nt\">(side squared)</span><br>$= \\frac{81 \\cdot 3}{4} = \\frac{243}{4}$ <span class=\"nt\">(square the numerator and the denominator)</span>",
+    "check": "$(3\\sqrt{3})^{2} + 9^{2} = 27 + 81 = 108 = (6\\sqrt{3})^{2}$ ✓; $4 \\cdot \\frac{9\\sqrt{3}}{2} = 18\\sqrt{3}$ ✓",
+    "be_careful": "The height is the longer leg, not the hypotenuse and not the shorter leg.",
+    "desmos": "Desmos can square $\\frac{18\\sqrt{3}}{4}$ once it is found; the side length is the real step.",
+    "another_way": "The side of an equilateral triangle with height $h$ is $\\frac{2h}{\\sqrt{3}}$; here $\\frac{18}{\\sqrt{3}} = 6\\sqrt{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-029",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C6",
+    "G3.C3"
+   ],
+   "family": "perpendicular-foot-on-axis",
+   "signature": "line through origin with tan = 5/12; Q on line, OQ 39 -> Q (36, 15); R on x-axis with QR perp line -> OR = OQ/cos = 39*13/12 = 169/4; traps 36 (x of Q), 39 (OQ), 507/12 unsimplified ok",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, line $\\ell$ passes through the origin $O$ and makes an angle $\\theta$ with the positive $x$-axis, where $\\tan\\theta = \\frac{5}{12}$. Point $Q$ lies on $\\ell$ in the first quadrant, and $OQ = 39$. Point $R$ lies on the positive $x$-axis so that $\\overline{QR}$ is perpendicular to $\\ell$. What is the $x$-coordinate of $R$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "169/4",
+      "42.25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "36",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "36 is the $x$-coordinate of $Q$; that point is below $Q$, where a VERTICAL segment meets the axis, not a segment perpendicular to $\\ell$."
+    },
+    {
+     "value": "39",
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "39 is $OQ$, the leg of right triangle $OQR$, not its hypotenuse $OR$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Triangle $OQR$ has its right angle at $Q$, so $OR$ is the hypotenuse and $\\cos\\theta = \\frac{OQ}{OR}$.",
+    "steps": "What does the question ask? The length $OR$ ($R$ is on the positive $x$-axis).<br>$\\tan\\theta = \\frac{5}{12}$ gives a 5, 12, 13 triangle, so $\\cos\\theta = \\frac{12}{13}$ <span class=\"nt\">(hypotenuse $\\sqrt{25 + 144} = 13$)</span><br>In triangle $OQR$, the right angle is at $Q$ <span class=\"nt\">($\\overline{QR} \\perp \\ell$)</span><br>$\\cos\\theta = \\frac{OQ}{OR}$, so $\\frac{12}{13} = \\frac{39}{OR}$ <span class=\"nt\">(adjacent over hypotenuse at $O$)</span><br>$OR = \\frac{39 \\cdot 13}{12} = \\frac{169}{4}$ <span class=\"nt\">(solve)</span>",
+    "check": "$Q = (36, 15)$ and $R = (42.25, 0)$: moving from $Q$ to $R$ changes $x$ by 6.25 and $y$ by $-15$, and $(6.25)(12) + (-15)(5) = 75 - 75 = 0$ ✓, so $QR \\perp \\ell$",
+    "be_careful": "The perpendicular is to the LINE $\\ell$, not to the $x$-axis, so $R$ is past the point $(36, 0)$.",
+    "desmos": "Desmos can graph $\\ell$ and the perpendicular through $(36, 15)$, slope $-\\frac{12}{5}$, but $Q$ and the perpendicular slope must be found first.",
+    "another_way": "Perpendicular slope is $-\\frac{12}{5}$: $0 - 15 = -\\frac{12}{5}(x - 36)$ gives $x = 36 + \\frac{25}{4} = \\frac{169}{4}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-030",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "shared-leg-45-30",
+   "signature": "figure: AC 8, angle ADC 45, angle ABC 30 -> CD 8, BC 8 sqrt3, BD 8 sqrt3 - 8; traps 16 - 8 sqrt3, 8, 8 sqrt3",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, angle $C$ is a right angle and point $D$ lies on $\\overline{BC}$.",
+   "stem_after_figure": "What is the length of $\\overline{DB}$?",
+   "figures": [
+    {
+     "id": "QB-G3-030-fig1",
+     "file": "figures/QB-G3-030-fig1.svg",
+     "alt": "Right triangle ABC with the right angle at C, A above C and B to the right. AC is labeled 8. Point D is on CB between C and B, and segment AD is drawn. The angle ADC is 45 degrees and the angle ABC is 30 degrees."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$16 - 8\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This is $AB - BC$, a difference of the wrong two sides."
+    },
+    {
+     "key": "B",
+     "text": "$8\\sqrt{3} - 8$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 is $CD$, the leg of the 45-45-90 triangle."
+    },
+    {
+     "key": "D",
+     "text": "$8\\sqrt{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "$8\\sqrt{3}$ is all of $\\overline{BC}$; $\\overline{DB}$ is only part of it."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Both triangles $ACD$ and $ACB$ share the leg $AC$; find $CD$ and $CB$ from it, then subtract.",
+    "steps": "What does the question ask? $DB = CB - CD$.<br>$CD = AC = 8$ <span class=\"nt\">(45-45-90 triangle ACD has equal legs)</span><br>In triangle $ACB$, $AC$ is opposite the 30° angle <span class=\"nt\">(shorter leg)</span><br>$CB = 8\\sqrt{3}$ <span class=\"nt\">(30-60-90: longer leg = shorter leg times the square root of 3)</span><br>$DB = 8\\sqrt{3} - 8$ <span class=\"nt\">(subtract)</span>",
+    "check": "$8\\sqrt{3} - 8 \\approx 13.86 - 8 = 5.86 > 0$ ✓ so $D$ lies between $C$ and $B$",
+    "be_careful": "$\\overline{DB}$ is a piece of $\\overline{CB}$, found by subtraction.",
+    "desmos": "Not needed.",
+    "another_way": "$\\tan 30° = \\frac{8}{CB}$ gives $CB = \\frac{8}{1/\\sqrt{3}} = 8\\sqrt{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-031",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C4"
+   ],
+   "family": "sine-twice-cosine-other-tangent",
+   "signature": "sin A = 2 cos A -> tan A 2 -> tan B 1/2; traps 2, sqrt5/5, 2 sqrt5/5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $\\sin A = 2\\cos A$. What is the value of $\\tan B$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{\\sqrt{5}}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{\\sqrt{5}}{5}$ is $\\sin B$ (equal to $\\cos A$), not $\\tan B$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{2}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2\\sqrt{5}}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{2\\sqrt{5}}{5}$ is $\\sin A$."
+    },
+    {
+     "key": "D",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "2 is $\\tan A$. Angle $B$ is the other acute angle."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Dividing by $\\cos A$ gives $\\tan A = 2$; the other acute angle has the reciprocal tangent.",
+    "steps": "What does the question ask? $\\tan B = \\frac{AC}{BC}$.<br>$\\frac{\\sin A}{\\cos A} = 2$ <span class=\"nt\">(divide both sides by $\\cos A$)</span><br>$\\tan A = \\frac{BC}{AC} = 2$ <span class=\"nt\">(tangent is sine over cosine)</span><br>$\\tan B = \\frac{AC}{BC}$ <span class=\"nt\">(B sees the legs the other way around)</span><br>$\\tan B = \\frac{1}{2}$ <span class=\"nt\">(reciprocal)</span><br>Why this works: the two acute angles share the same two legs, and each one uses them in the opposite order, so their tangents are reciprocals.",
+    "check": "Legs 1 and 2, hypotenuse $\\sqrt{5}$: $\\sin A = \\frac{2}{\\sqrt{5}} = 2 \\cdot \\frac{1}{\\sqrt{5}} = 2\\cos A$ ✓",
+    "be_careful": "The question is about angle $B$, not angle $A$.",
+    "desmos": "Not needed.",
+    "another_way": "In terms of sides: $\\frac{BC}{AB} = 2 \\cdot \\frac{AC}{AB}$, so $BC = 2AC$ and $\\tan B = \\frac{AC}{BC} = \\frac{1}{2}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-032",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "isosceles-tan-base-area",
+   "signature": "AB = AC, BC 24, tan B 5/12 -> height 5 -> area 60; traps 30, 120, 156",
+   "abilities": [
+    "R",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, $AB = AC$, $BC = 24$, and $\\tan B = \\frac{5}{12}$. What is the area of triangle $ABC$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "30 is the area of one of the two right triangles made by the height."
+    },
+    {
+     "key": "B",
+     "text": "$60$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$120$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "120 is base times height without the $\\frac{1}{2}$."
+    },
+    {
+     "key": "D",
+     "text": "$156$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses the slanted side 13 as the height."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The height from $A$ splits $BC$ in half, making a right triangle with adjacent leg 12; $\\tan B$ then gives the height.",
+    "steps": "What does the question ask? $\\frac{1}{2}(BC)(\\text{height})$.<br>Height from $A$ meets $\\overline{BC}$ at $M$ with $BM = 12$ <span class=\"nt\">(isosceles: the height bisects the base)</span><br>$\\tan B = \\frac{AM}{BM} = \\frac{AM}{12} = \\frac{5}{12}$ <span class=\"nt\">(opposite over adjacent in triangle ABM)</span><br>$AM = 5$ <span class=\"nt\">(solve)</span><br>Area $= \\frac{1}{2}(24)(5) = 60$ <span class=\"nt\">(area formula)</span><br>Why this works: the height from the top vertex of an isosceles triangle cuts the base into two equal parts and makes two right triangles.",
+    "check": "$AB = \\sqrt{12^{2} + 5^{2}} = 13$, and $\\tan B = \\frac{5}{12}$ ✓",
+    "be_careful": "The right triangle uses half the base, 12, not 24.",
+    "desmos": "Not needed.",
+    "another_way": "Coordinates: $B(0, 0)$, $C(24, 0)$, $A(12, 5)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-033",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "trapezoid-60-area",
+   "signature": "isosceles trapezoid bases 10, 22, base angles 60 -> overhang 6, leg 12, height 6 sqrt3 -> area 96 sqrt3; traps 48 sqrt3, 96, 192 sqrt3",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An isosceles trapezoid has bases of lengths 10 and 22, and each angle at the longer base measures 60°. What is the area of the trapezoid?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$48\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses the whole difference of the bases, 12, as one overhang and then halves the height."
+    },
+    {
+     "key": "B",
+     "text": "$96$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses the overhang 6 as the height."
+    },
+    {
+     "key": "C",
+     "text": "$96\\sqrt{3}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$192\\sqrt{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This adds the bases without averaging them."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Drop heights from the short base; each end is a 30-60-90 triangle whose shorter leg is half the difference of the bases.",
+    "steps": "What does the question ask? $\\frac{10 + 22}{2} \\times \\text{height}$.<br>Each overhang $= \\frac{22 - 10}{2} = 6$ <span class=\"nt\">(the two corner triangles are congruent)</span><br>The overhang is next to the 60° angle <span class=\"nt\">(it is the shorter leg)</span><br>Height $= 6\\sqrt{3}$ <span class=\"nt\">(30-60-90: longer leg)</span><br>Area $= \\frac{10 + 22}{2}(6\\sqrt{3}) = 16(6\\sqrt{3}) = 96\\sqrt{3}$ <span class=\"nt\">(trapezoid area)</span><br>Why this works: the two heights cut the trapezoid into a rectangle and two congruent corner triangles, so each overhang is half the difference.",
+    "check": "Leg $= 2(6) = 12$ and $6^{2} + (6\\sqrt{3})^{2} = 144 = 12^{2}$ ✓",
+    "be_careful": "Split the difference of the bases between the two ends.",
+    "desmos": "Not needed.",
+    "another_way": "$\\tan 60° = \\frac{h}{6}$, so $h = 6\\sqrt{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-034",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "square-midpoint-cosine",
+   "signature": "square side 12, E midpoint of CD; cos(angle EAB) = 6/sqrt180 = sqrt5/5; traps 1/2, 2 sqrt5/5, 2",
+   "abilities": [
+    "R",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Square $ABCD$ has side length 12, and point $E$ is the midpoint of side $\\overline{CD}$. What is the value of $\\cos(\\angle  EAB)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{\\sqrt{5}}{5}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{1}{2}$ is $\\tan(\\angle  DAE)$, the tangent of the other angle at $A$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2\\sqrt{5}}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{2\\sqrt{5}}{5}$ is $\\sin(\\angle  EAB)$."
+    },
+    {
+     "key": "D",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "2 is $\\tan(\\angle  EAB)$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Drop a perpendicular from $E$ to $\\overline{AB}$; it lands at the midpoint of $\\overline{AB}$, making a right triangle with legs 6 and 12.",
+    "steps": "What does the question ask? The cosine of the angle at $A$ between $\\overline{AB}$ and $\\overline{AE}$.<br>Let $F$ be the point on $\\overline{AB}$ directly below $E$; $AF = 6$, $EF = 12$ <span class=\"nt\">(E is above the midpoint of AB)</span><br>$AE = \\sqrt{6^{2} + 12^{2}} = \\sqrt{180} = 6\\sqrt{5}$ <span class=\"nt\">(Pythagorean theorem)</span><br>$\\cos(\\angle  EAB) = \\frac{AF}{AE} = \\frac{6}{6\\sqrt{5}} = \\frac{1}{\\sqrt{5}}$ <span class=\"nt\">(adjacent over hypotenuse)</span><br>$\\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$ <span class=\"nt\">(rationalize)</span>",
+    "check": "$\\cos^{2} + \\sin^{2} = \\frac{1}{5} + \\frac{4}{5} = 1$ ✓ with $\\sin(\\angle  EAB) = \\frac{12}{6\\sqrt{5}}$",
+    "be_careful": "$\\overline{AE}$ is a diagonal path, not a side; it is the hypotenuse.",
+    "desmos": "Not needed.",
+    "another_way": "Coordinates $A(0, 0)$, $B(12, 0)$, $E(6, 12)$: the horizontal change is 6 and the distance is $6\\sqrt{5}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-035",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C3"
+   ],
+   "family": "tan-area-scale-perimeter",
+   "signature": "tan A 8/15, area 240 -> legs 8k, 15k, 60k^2 = 240 -> k 2 -> 16, 30, 34 -> perimeter 80; traps 40, 46",
+   "abilities": [
+    "G",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $\\tan A = \\frac{8}{15}$. The area of triangle $ABC$ is 240. What is the perimeter of triangle $ABC$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "80"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "40",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "40 is the perimeter of the 8, 15, 17 triangle; the area 240 needs a scale factor of 2, not 1."
+    },
+    {
+     "value": "46",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "46 adds only the two legs, 16 and 30."
+    }
+   ],
+   "solution": {
+    "key_idea": "Legs $8k$ and $15k$; area grows with $k^{2}$, so solve for $k$ from the area.",
+    "steps": "What does the question ask? The sum of the three sides.<br>$BC = 8k$, $AC = 15k$ <span class=\"nt\">($\\tan A = \\frac{BC}{AC} = \\frac{8}{15}$)</span><br>$\\frac{1}{2}(8k)(15k) = 60k^{2} = 240$ <span class=\"nt\">(area)</span><br>$k^{2} = 4$, so $k = 2$ <span class=\"nt\">(a length is positive)</span><br>Sides 16, 30, and $\\sqrt{16^{2} + 30^{2}} = 34$ <span class=\"nt\">(Pythagorean theorem)</span><br>Perimeter $= 16 + 30 + 34 = 80$ <span class=\"nt\">(add)</span><br>Why this works: the ratio fixes the shape, and the area fixes the size; when lengths are multiplied by $k$, the area is multiplied by $k^{2}$.",
+    "check": "$\\frac{1}{2}(16)(30) = 240$ ✓ and $\\frac{16}{30} = \\frac{8}{15}$ ✓",
+    "be_careful": "Area scales by $k^{2}$ while sides scale by $k$.",
+    "desmos": "Not needed.",
+    "another_way": "The base triangle 8, 15, 17 has area 60 and perimeter 40; area is 4 times as large, so lengths double."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-036",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "must-be-true-from-sine",
+   "signature": "sin A 3/5 right at C; I cos B = 3/5 must; II AB = 5 could; III tan A = 3/4 must -> I and III only",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $\\sin A = \\frac{3}{5}$. Which of the following must be true?<br>I. $\\cos B = \\frac{3}{5}$<br>II. $AB = 5$<br>III. $\\tan A = \\frac{3}{4}$",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "I only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "III also must hold: every triangle with $\\sin A = \\frac{3}{5}$ has legs in the ratio 3 to 4."
+    },
+    {
+     "key": "B",
+     "text": "I and III only",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "II and III only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "II could be true but need not be: the triangle could have sides 6, 8, 10. Also I must be true."
+    },
+    {
+     "key": "D",
+     "text": "I, II, and III",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "II is only possible: a ratio fixes the shape, not the size."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A trig ratio fixes the shape of the triangle, not its size; anything about angles or ratios is forced, a specific length is not.",
+    "steps": "What does the question ask? Statements true for every triangle with $\\sin A = \\frac{3}{5}$.<br>Sides $3k$, $4k$, $5k$ for some $k > 0$ <span class=\"nt\">(build from $\\sin A = \\frac{3}{5}$)</span><br>I: $\\cos B = \\frac{\\text{adjacent to } B}{\\text{hypotenuse}} = \\frac{3k}{5k} = \\frac{3}{5}$ <span class=\"nt\">(must be true)</span><br>II: $AB = 5k$, which is 5 only when $k = 1$ <span class=\"nt\">(not forced)</span><br>III: $\\tan A = \\frac{3k}{4k} = \\frac{3}{4}$ <span class=\"nt\">(must be true)</span><br>Answer: I and III only <span class=\"nt\">(collect)</span>",
+    "check": "Test $k = 2$: sides 6, 8, 10 give $\\cos B = 0.6$ ✓, $\\tan A = 0.75$ ✓, $AB = 10 \\ne 5$ ✓",
+    "be_careful": "Could be true is not the same as must be true.",
+    "desmos": "Not needed.",
+    "another_way": "I is the cofunction relation $\\cos B = \\sin A$ because $A + B = 90°$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-037",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C1"
+   ],
+   "family": "consecutive-ish-sides-cosine",
+   "signature": "sides x, x + 7, x + 8 right -> x 5 -> 5, 12, 13; cos(smallest angle) 12/13; traps 5/13, 5/12, 12/5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The side lengths of a right triangle are $x$, $x + 7$, and $x + 8$. What is the cosine of the smallest angle of the triangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{5}{13}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{5}{13}$ is the sine of the smallest angle."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{5}{12}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{5}{12}$ is the tangent of the smallest angle."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{12}{13}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{12}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is a tangent of the largest acute angle, adjacent over opposite for the smallest."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The longest side $x + 8$ is the hypotenuse; solve for $x$, then the smallest angle faces the shortest side.",
+    "steps": "What does the question ask? The cosine of the angle opposite the shortest side.<br>$x^{2} + (x + 7)^{2} = (x + 8)^{2}$ <span class=\"nt\">(Pythagorean theorem; x + 8 is the longest side)</span><br>$x^{2} + x^{2} + 14x + 49 = x^{2} + 16x + 64$ <span class=\"nt\">(expand)</span><br>$x^{2} - 2x - 15 = 0$, $(x - 5)(x + 3) = 0$ <span class=\"nt\">(collect and factor)</span><br>$x = 5$; sides 5, 12, 13 <span class=\"nt\">(a length is positive)</span><br>Smallest angle is opposite 5; adjacent side 12 <span class=\"nt\">(smallest side faces the smallest angle)</span><br>$\\cos = \\frac{12}{13}$ <span class=\"nt\">(adjacent over hypotenuse)</span>",
+    "check": "$5^{2} + 12^{2} = 169 = 13^{2}$ ✓",
+    "be_careful": "The smallest angle has the largest cosine of the two acute angles.",
+    "desmos": "Desmos can solve the quadratic; the angle choice is the real step.",
+    "another_way": "Try small values: $x = 5$ gives 5, 12, 13, a known triple."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-038",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C4"
+   ],
+   "family": "cofunction-solve-then-evaluate",
+   "signature": "cos(2x) = sin(x + 15), acute -> 3x + 15 = 90 -> x 25 -> cos(x + 35) = cos 60 = 1/2; traps 25, sqrt3/2",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For the angle measures below, both $2x$ and $x + 15$ are between 0 and 90. If $\\cos((2x)°) = \\sin((x + 15)°)$, what is the value of $\\cos((x + 35)°)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1/2",
+      ".5",
+      "0.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "25",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "25 is $x$; the question asks for a cosine."
+    },
+    {
+     "value": ".8660",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "About 0.866 is $\\sin 60°$ or $\\cos 30°$; the angle is 60° and its cosine is $\\frac{1}{2}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Equal cosine and sine of acute angles means the angles are complementary.",
+    "steps": "What does the question ask? $\\cos((x + 35)°)$.<br>$2x + (x + 15) = 90$ <span class=\"nt\">(complementary angles)</span><br>$3x = 75$, so $x = 25$ <span class=\"nt\">(solve)</span><br>$x + 35 = 60$ <span class=\"nt\">(substitute)</span><br>$\\cos 60° = \\frac{1}{2}$ <span class=\"nt\">(30-60-90 triangle: shorter leg over hypotenuse)</span><br>Why this works: for acute angles, the sine of one angle equals the cosine of another exactly when the two angles add up to 90°. The final value comes from the 30-60-90 triangle, where the side next to the 60° angle is half the hypotenuse.",
+    "check": "$2x = 50$ and $x + 15 = 40$: $50 + 40 = 90$ ✓; $\\cos 50° = \\sin 40°$ ✓",
+    "be_careful": "Finding $x$ is only the middle of the problem.",
+    "desmos": "Desmos in degree mode could graph both sides, but the special-angle value is what finishes it.",
+    "another_way": "$\\cos 60°$: in an equilateral triangle of side 2, half the base is 1 and the side is 2."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-039",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "coordinate-angle-cofunction",
+   "signature": "A(1,1), C(16,9); theta between AC and horizontal; sin(90 - theta) = cos theta = 15/17; traps 8/17, 8/15, 15/8",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, segment $\\overline{AC}$ has endpoints $A(1, 1)$ and $C(16, 9)$. The segment makes an angle of $\\theta°$ with the horizontal line through $A$. What is the value of $\\sin((90 - \\theta)°)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{8}{17}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{8}{17}$ is $\\sin\\theta°$. The sine of the complement is the cosine."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{8}{15}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{8}{15}$ is $\\tan\\theta°$, the slope."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{15}{17}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{15}{8}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{15}{8}$ is $\\tan((90 - \\theta)°)$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The horizontal and vertical changes form a right triangle with hypotenuse $AC$; $\\sin((90 - \\theta)°) = \\cos\\theta°$.",
+    "steps": "What does the question ask? $\\sin((90 - \\theta)°)$.<br>Horizontal change $16 - 1 = 15$, vertical change $9 - 1 = 8$ <span class=\"nt\">(legs)</span><br>$AC = \\sqrt{15^{2} + 8^{2}} = 17$ <span class=\"nt\">(Pythagorean theorem)</span><br>$\\sin((90 - \\theta)°) = \\cos\\theta°$ <span class=\"nt\">(cofunction relation)</span><br>$\\cos\\theta° = \\frac{15}{17}$ <span class=\"nt\">(horizontal leg over hypotenuse)</span><br>Why this works: the horizontal change, the vertical change, and the segment form a right triangle, and the angle at $C$ is the complement of $\\theta$. Its sine is the horizontal leg over the hypotenuse.",
+    "check": "The angle at $C$ is $(90 - \\theta)°$; its opposite side is the horizontal leg 15 ✓",
+    "be_careful": "Subtract coordinates before using them as side lengths.",
+    "desmos": "Not needed.",
+    "another_way": "Work in the triangle directly: the angle at $C$ is $90 - \\theta$, opposite side 15, hypotenuse 17."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-040",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H",
+   "concepts": [
+    "G3.C5"
+   ],
+   "family": "rectangle-diagonal-foot-angle",
+   "signature": "rectangle AB 20, BC 15; BE perpendicular to AC; angle CBE = angle BAC; sin = 15/25 = 3/5; traps 3/4, 4/5, 4/3",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Rectangle $ABCD$ has $AB = 20$ and $BC = 15$. Point $E$ lies on diagonal $\\overline{AC}$ so that $\\overline{BE}$ is perpendicular to $\\overline{AC}$. What is the value of $\\sin(\\angle  CBE)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{5}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{3}{4}$ is $\\tan(\\angle  CBE)$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{4}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{4}{5}$ is $\\cos(\\angle  CBE)$, or the sine of angle $BCA$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{4}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{4}{3}$ is the tangent of angle $BCA$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "In right triangle $BEC$, $\\angle  CBE = 90° - \\angle  BCA = \\angle  BAC$; so its sine is $\\frac{BC}{AC}$.",
+    "steps": "What does the question ask? $\\sin(\\angle  CBE)$.<br>$AC = \\sqrt{20^{2} + 15^{2}} = 25$ <span class=\"nt\">(diagonal, Pythagorean theorem)</span><br>$\\angle  CBE + \\angle  BCA = 90°$ <span class=\"nt\">(triangle BEC has a right angle at E)</span><br>$\\angle  BAC + \\angle  BCA = 90°$ <span class=\"nt\">(triangle ABC has a right angle at B)</span><br>$\\angle  CBE = \\angle  BAC$ <span class=\"nt\">(both are complements of angle BCA)</span><br>$\\sin(\\angle  BAC) = \\frac{BC}{AC} = \\frac{15}{25} = \\frac{3}{5}$ <span class=\"nt\">(opposite over hypotenuse)</span><br>Why this works: two angles that complete the same angle to 90° are equal, so the small angle at $B$ copies angle $A$.",
+    "check": "$BE = \\frac{20 \\cdot 15}{25} = 12$, $CE = 9$; in triangle $BEC$, $\\sin(\\angle  CBE) = \\frac{CE}{BC} = \\frac{9}{15}$ ✓",
+    "be_careful": "The angle at $B$ in triangle $BEC$ is not the right angle of the rectangle.",
+    "desmos": "Not needed.",
+    "another_way": "Find $CE = 9$ by similar triangles and take $\\frac{CE}{BC}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-041",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C5",
+    "G3.C4"
+   ],
+   "family": "equal-segment-from-right-angle",
+   "signature": "right at C, D on AB with CD = BD -> angle BCD = B -> angle ACD = A; AB 26, sin(ACD) 5/13 -> BC 10 -> AC 24; traps 120/13, 10, 13",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $AB = 26$. Point $D$ lies on $\\overline{AB}$ so that $CD = BD$. If $\\sin(\\angle  ACD) = \\frac{5}{13}$, what is the length of $\\overline{AC}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{120}{13}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This treats $\\overline{CD}$ as the altitude to the hypotenuse; nothing says $\\overline{CD}$ is perpendicular to $\\overline{AB}$."
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "10 is $BC$, the side opposite angle $A$; $AC$ is the other leg."
+    },
+    {
+     "key": "C",
+     "text": "$13$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "13 is $CD$; $D$ turns out to be the midpoint of $\\overline{AB}$."
+    },
+    {
+     "key": "D",
+     "text": "$24$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$CD = BD$ makes $\\angle  BCD = \\angle  B$, so the rest of the right angle, $\\angle  ACD$, equals $90° - \\angle  B = \\angle  A$.",
+    "steps": "What does the question ask? The leg $AC$.<br>$\\angle  BCD = \\angle  B$ <span class=\"nt\">(triangle BCD is isosceles with CD = BD)</span><br>$\\angle  ACD = 90° - \\angle  BCD = 90° - \\angle  B$ <span class=\"nt\">(the two parts make the right angle at C)</span><br>$90° - \\angle  B = \\angle  A$ <span class=\"nt\">(acute angles of triangle ABC are complementary)</span><br>So $\\sin A = \\sin(\\angle  ACD) = \\frac{5}{13}$ <span class=\"nt\">(equal angles)</span><br>$\\sin A = \\frac{BC}{AB}$: $\\frac{BC}{26} = \\frac{5}{13}$, so $BC = 10$ <span class=\"nt\">(opposite over hypotenuse)</span><br>$AC = \\sqrt{26^{2} - 10^{2}} = \\sqrt{576} = 24$ <span class=\"nt\">(Pythagorean theorem)</span><br>Why this works: equal sides face equal angles, so $CD = BD$ copies angle $B$ to the right angle at $C$, and the remaining part must be the complement of $B$, which is angle $A$. That is the same move that shows the midpoint of a hypotenuse is equally far from all three vertices.",
+    "check": "$\\angle  ACD = \\angle  A$ makes triangle $ACD$ isosceles too, so $AD = CD = BD = 13$: $D$ is the midpoint ✓; $10^{2} + 24^{2} = 26^{2}$ ✓",
+    "be_careful": "$\\overline{CD}$ is not an altitude. The equal lengths move the angle, not a right angle.",
+    "desmos": "Not needed; there is nothing to graph until the angle transfer is seen.",
+    "another_way": "Coordinates $C(0, 0)$, $A(24, 0)$, $B(0, 10)$: the midpoint $D(12, 5)$ has $CD = 13 = BD$, and the angle between $\\overline{CA}$ and $\\overline{CD}$ has sine $\\frac{5}{13}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-042",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C3",
+    "G3.C1"
+   ],
+   "family": "sine-sum-hypotenuse-area",
+   "signature": "right at C, AB 10, sin A + sin B = 6/5 -> legs sum 12, squares 100 -> product 22 -> area 11; traps 22, 24",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $AB = 10$. If $\\sin A + \\sin B = \\frac{6}{5}$, what is the area of triangle $ABC$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "11"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "22",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "22 is the product of the legs; the area is half of it."
+    },
+    {
+     "value": "24",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "24 assumes the 6, 8, 10 triangle, but then $\\sin A + \\sin B = \\frac{14}{10}$, not $\\frac{6}{5}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "$\\sin A + \\sin B = \\frac{a + b}{10}$ gives the sum of the legs; squaring the sum and using $a^{2} + b^{2} = 100$ gives the product, so the legs never need to be found.",
+    "steps": "What does the question ask? $\\frac{1}{2}ab$, where $a = BC$ and $b = AC$.<br>$\\sin A = \\frac{a}{10}$ and $\\sin B = \\frac{b}{10}$ <span class=\"nt\">(opposite over hypotenuse)</span><br>$\\frac{a + b}{10} = \\frac{6}{5}$, so $a + b = 12$ <span class=\"nt\">(add)</span><br>$a^{2} + b^{2} = 100$ <span class=\"nt\">(Pythagorean theorem)</span><br>$(a + b)^{2} = a^{2} + 2ab + b^{2}$: $144 = 100 + 2ab$ <span class=\"nt\">(square the sum)</span><br>$2ab = 44$, so $ab = 22$ <span class=\"nt\">(subtract)</span><br>Area $= \\frac{1}{2}ab = 11$ <span class=\"nt\">(legs are base and height)</span><br>Why this works: the area needs only the product $ab$, and the square of a sum always contains twice the product. Combining the sum of the legs with the sum of their squares gives the product directly, so the irrational legs never have to be computed.",
+    "check": "The legs are $6 + \\sqrt{14}$ and $6 - \\sqrt{14}$ (both positive): sum 12 ✓, product $36 - 14 = 22$ ✓, squares $2(36 + 14) = 100$ ✓",
+    "be_careful": "The legs are not whole numbers, so guessing a familiar triangle fails.",
+    "desmos": "Desmos can intersect $x + y = 12$ with $x^{2} + y^{2} = 100$ after the setup, giving $x \\approx 9.74$, $y \\approx 2.26$; the product is still needed.",
+    "another_way": "Solve $a + b = 12$, $a^{2} + b^{2} = 100$ for $a = 6 + \\sqrt{14}$, $b = 6 - \\sqrt{14}$, then $\\frac{1}{2}ab = \\frac{1}{2}(36 - 14) = 11$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-043",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C5"
+   ],
+   "family": "double-perpendicular-angle-transfer",
+   "signature": "right at B, AB 15, BC 20, BD perp AC, DE perp BC; DE = BD sin(DBE) = 12 * 4/5 = 48/5; traps 36/5 (BE), 9 (AD), 12 (BD)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $B$ is the right angle, $AB = 15$, and $BC = 20$. Point $D$ lies on $\\overline{AC}$ so that $\\overline{BD}$ is perpendicular to $\\overline{AC}$, and point $E$ lies on $\\overline{BC}$ so that $\\overline{DE}$ is perpendicular to $\\overline{BC}$. What is the length of $\\overline{DE}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{36}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{36}{5}$ is $BE$; it uses the cosine of angle $DBE$ instead of the sine."
+    },
+    {
+     "key": "B",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "9 is $AD$, a piece of the hypotenuse."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{48}{5}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is $BD$, the first perpendicular, not the second."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$\\angle  DBC$ is the complement of $\\angle  C$, so it equals $\\angle  A$; then $DE$ is the side opposite that angle in right triangle $BDE$.",
+    "steps": "What does the question ask? $DE$, the distance from $D$ down to $\\overline{BC}$.<br>$AC = \\sqrt{15^{2} + 20^{2}} = 25$ <span class=\"nt\">(Pythagorean theorem)</span><br>$BD = \\frac{AB \\cdot BC}{AC} = \\frac{15 \\cdot 20}{25} = 12$ <span class=\"nt\">(area of $ABC$ two ways: $\\frac{1}{2}(15)(20) = \\frac{1}{2}(25)(BD)$)</span><br>$\\angle  DBC = 90° - \\angle  C = \\angle  A$ <span class=\"nt\">(triangle BDC has a right angle at D)</span><br>$\\sin A = \\frac{BC}{AC} = \\frac{20}{25} = \\frac{4}{5}$ <span class=\"nt\">(opposite over hypotenuse in ABC)</span><br>In right triangle $BDE$: $DE = BD \\sin(\\angle  DBE)$ <span class=\"nt\">(DE is opposite the angle at B)</span><br>$DE = 12 \\cdot \\frac{4}{5} = \\frac{48}{5}$ <span class=\"nt\">(multiply)</span><br>Why this works: each new perpendicular creates a smaller right triangle with the same angles as the original, so a ratio from the big triangle can be reused inside the smallest one. The side opposite the copied angle in triangle $BDE$ is exactly $DE$.",
+    "check": "Coordinates $B(0, 0)$, $C(20, 0)$, $A(0, 15)$: the foot of the perpendicular is $D(7.2, 9.6)$, so $DE = 9.6 = \\frac{48}{5}$ ✓",
+    "be_careful": "Two different perpendiculars: $BD$ to the hypotenuse, then $DE$ to the leg.",
+    "desmos": "Not needed; the angle transfer is the work.",
+    "another_way": "$DE \\parallel AB$, so triangle $CDE$ is similar to $CAB$ with $\\frac{CD}{CA} = \\frac{16}{25}$: $DE = \\frac{16}{25}(15) = \\frac{48}{5}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-044",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C2",
+    "G3.C3"
+   ],
+   "family": "which-must-be-less-than-one",
+   "signature": "C = 90, sin A > cos A -> a > b; tan A = a/b > 1; sin A / cos B = 1; sin A + cos A = (a + b)/c > 1 (triangle inequality); tan B = b/a < 1 key",
+   "abilities": [
+    "G",
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle, and $\\sin A > \\cos A$. Which of the following must be less than 1?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\tan A$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "$\\tan A = \\frac{BC}{AC}$, and $\\sin A > \\cos A$ means $BC > AC$, so $\\tan A > 1$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{\\sin A}{\\cos B}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "$\\sin A$ and $\\cos B$ are the same ratio, $\\frac{BC}{AB}$, so this is exactly 1."
+    },
+    {
+     "key": "C",
+     "text": "$\\sin A + \\cos A$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "$\\sin A + \\cos A = \\frac{BC + AC}{AB}$, and two sides of a triangle add to more than the third, so this is more than 1."
+    },
+    {
+     "key": "D",
+     "text": "$\\tan B$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Turn every expression into side ratios. $\\sin A > \\cos A$ just says $BC > AC$.",
+    "steps": "What does the question ask? The one value that is less than 1 for EVERY such triangle.<br>Write the given fact with sides: $\\sin A = \\frac{BC}{AB}$ and $\\cos A = \\frac{AC}{AB}$ have the same denominator, so $\\sin A > \\cos A$ means the leg $BC$ is longer than the leg $AC$. <span class=\"nt\">(same denominator)</span><br>Now test each choice: $\\tan A = \\frac{BC}{AC} > 1$ <span class=\"nt\">(bigger over smaller)</span><br>$\\frac{\\sin A}{\\cos B} = \\frac{BC/AB}{BC/AB} = 1$ <span class=\"nt\">(complementary angles)</span><br>$\\sin A + \\cos A = \\frac{BC + AC}{AB} > 1$ <span class=\"nt\">(triangle inequality)</span><br>$\\tan B = \\frac{AC}{BC} < 1$ <span class=\"nt\">(smaller over bigger)</span><br>Only $\\tan B$ is below 1 for every triangle with $BC > AC$, whatever the actual side lengths are; the other three are always at least 1. <span class=\"nt\">(so the answer is $\\tan B$)</span>",
+    "check": "Try $AC = 3$, $BC = 4$, $AB = 5$: $\\tan A = \\frac{4}{3}$, $\\frac{\\sin A}{\\cos B} = 1$, $\\sin A + \\cos A = \\frac{7}{5}$, $\\tan B = \\frac{3}{4}$ ✓",
+    "be_careful": "Being an acute angle does not make a trig value less than 1; tangent can be any positive number.",
+    "desmos": "No numbers are given; every choice must be judged for all triangles.",
+    "another_way": "$\\sin A > \\cos A$ means $A > 45^{\\circ}$, so $B < 45^{\\circ}$ and $\\tan B < \\tan 45^{\\circ} = 1$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-045",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "oblique-triangle-altitude-30-45",
+   "signature": "triangle with A = 30, B = 45, BC = 6 sqrt2: altitude from C splits into 45-45-90 (CD = BD = 6) and 30-60-90 (AD = 6 sqrt3) -> AB = 6 + 6 sqrt3; traps 12 sqrt3, 12 + 6 sqrt3, 6 sqrt2 + 6 sqrt6",
+   "abilities": [
+    "G",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, the measure of angle $A$ is 30°, the measure of angle $B$ is 45°, and $BC = 6\\sqrt{2}$. What is the length of $\\overline{AB}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6 + 6\\sqrt{3}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$12\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This treats both pieces of $\\overline{AB}$ as the longer leg $6\\sqrt{3}$; the piece next to the 45° angle is only 6."
+    },
+    {
+     "key": "C",
+     "text": "$12 + 6\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This adds $AC = 12$ to $AD$; $\\overline{AC}$ is not part of $\\overline{AB}$."
+    },
+    {
+     "key": "D",
+     "text": "$6\\sqrt{2} + 6\\sqrt{6}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This uses $BC = 6\\sqrt{2}$ as the height from $C$; $BC$ is the hypotenuse of the 45-45-90 piece, not a leg."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Triangle $ABC$ has no right angle, so make one: the altitude from $C$ to $\\overline{AB}$ cuts it into a 45-45-90 triangle and a 30-60-90 triangle that share that altitude.",
+    "steps": "What does the question ask? $AB$ in a triangle with no right angle.<br>Draw the altitude from $C$ to $\\overline{AB}$, meeting it at $D$ <span class=\"nt\">(angles A and B are acute, so D lies between A and B)</span><br>Triangle $BCD$: right angle at $D$, $\\angle  B = 45°$, hypotenuse $BC = 6\\sqrt{2}$ <span class=\"nt\">(45-45-90)</span><br>$CD = BD = \\frac{6\\sqrt{2}}{\\sqrt{2}} = 6$ <span class=\"nt\">(leg = hypotenuse divided by the square root of 2)</span><br>Triangle $ACD$: right angle at $D$, $\\angle  A = 30°$, $CD = 6$ is opposite the 30° angle <span class=\"nt\">(shorter leg)</span><br>$AD = 6\\sqrt{3}$ <span class=\"nt\">(30-60-90: longer leg = shorter leg times the square root of 3)</span><br>$AB = AD + DB = 6\\sqrt{3} + 6 = 6 + 6\\sqrt{3}$ <span class=\"nt\">(add the two pieces)</span><br>Why this works: the only right-triangle tools on the SAT need a right angle, and the altitude from the vertex between the two known angles creates two of them at once. The shared altitude $CD$ carries the length from the 45-45-90 piece into the 30-60-90 piece.",
+    "check": "$AC = 2(6) = 12$, and $AC^{2} = AD^{2} + CD^{2} = 108 + 36 = 144$ ✓; $\\angle  C = 105° = 45° + 60°$ ✓",
+    "be_careful": "The 30° angle at $A$ is opposite $CD$, so $CD$ is the SHORTER leg of triangle $ACD$ and $AD$ is the longer leg.",
+    "desmos": "Desmos cannot find $AB$ without first building the right triangles; the construction is the whole problem.",
+    "another_way": "Coordinates: $D(0, 0)$, $C(0, 6)$, $B(6, 0)$, $A(-6\\sqrt{3}, 0)$; then $BC = 6\\sqrt{2}$ and $AB = 6 + 6\\sqrt{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-046",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "isosceles-second-altitude",
+   "signature": "AB = AC, BC 24, cos B 3/5 -> AB 20, AM 16 -> area 192 -> altitude from B to AC 96/5; traps 12, 64/5, 16",
+   "abilities": [
+    "G",
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, $AB = AC$, $BC = 24$, and $\\cos B = \\frac{3}{5}$. What is the length of the altitude from vertex $B$ to side $\\overline{AC}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "12 is half of $BC$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{64}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies the height 16 by $\\frac{4}{5}$, reusing a ratio from angle $B$ at the wrong vertex."
+    },
+    {
+     "key": "C",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "16 is the altitude from $A$ to $\\overline{BC}$, not the one from $B$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{96}{5}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Find the altitude from $A$ first, use it to get the area, then compute the area again with base $AC$.",
+    "steps": "What does the question ask? The altitude $h$ from $B$ to $\\overline{AC}$.<br>Altitude from $A$ meets $\\overline{BC}$ at its midpoint $M$; $BM = 12$ <span class=\"nt\">(isosceles triangle)</span><br>$\\cos B = \\frac{BM}{AB}$: $\\frac{3}{5} = \\frac{12}{AB}$, so $AB = 20$ <span class=\"nt\">(adjacent over hypotenuse)</span><br>$AM = \\sqrt{20^{2} - 12^{2}} = 16$ <span class=\"nt\">(Pythagorean theorem)</span><br>Area $= \\frac{1}{2}(24)(16) = 192$ <span class=\"nt\">(base BC)</span><br>$AC = AB = 20$ <span class=\"nt\">(isosceles)</span><br>$\\frac{1}{2}(20)h = 192$, so $h = \\frac{192}{10} = \\frac{96}{5}$ <span class=\"nt\">(same area with base AC)</span><br>Why this works: a triangle has one area, no matter which side is chosen as the base. Once the area is known from base $BC$, dividing twice the area by the other base gives the other altitude.",
+    "check": "$\\sin C = \\sin B = \\frac{4}{5}$, and the altitude from $B$ is $BC \\sin C = 24 \\cdot \\frac{4}{5} = \\frac{96}{5}$ ✓",
+    "be_careful": "The altitude from $B$ is not the same segment as the altitude from $A$; the triangle is not equilateral.",
+    "desmos": "Not needed.",
+    "another_way": "In the right triangle formed by $B$, $C$, and the foot on $\\overline{AC}$, $BC = 24$ is the hypotenuse and the altitude is $24\\sin C$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-047",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C3",
+    "G3.C1"
+   ],
+   "family": "which-side-is-hypotenuse-cannot-be-sine",
+   "signature": "right triangle with sides 6 and 8: hyp 10 (sines 3/5, 4/5) or hyp 8 (leg 2 sqrt7, sines 3/4, sqrt7/4); sqrt7/3 is a tangent -> CANNOT",
+   "abilities": [
+    "N",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A right triangle has two sides of lengths 6 and 8. Which of the following CANNOT be the sine of one of the acute angles of the triangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "If 6 and 8 are the legs, the hypotenuse is 10 and the angle opposite 6 has sine $\\frac{6}{10} = \\frac{3}{5}$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "If 8 is the hypotenuse, the angle opposite the leg 6 has sine $\\frac{6}{8} = \\frac{3}{4}$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{\\sqrt{7}}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "If 8 is the hypotenuse, the other leg is $2\\sqrt{7}$ and its angle has sine $\\frac{2\\sqrt{7}}{8} = \\frac{\\sqrt{7}}{4}$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{\\sqrt{7}}{3}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The stem does not say which side is the hypotenuse, so there are two triangles; list every possible sine in both.",
+    "steps": "What does the question ask? A value that is not a sine in either possible triangle.<br>Case 1: 6 and 8 are legs; hypotenuse $= \\sqrt{36 + 64} = 10$ <span class=\"nt\">(Pythagorean theorem)</span><br>Sines: $\\frac{6}{10} = \\frac{3}{5}$ and $\\frac{8}{10} = \\frac{4}{5}$ <span class=\"nt\">(opposite over hypotenuse)</span><br>Case 2: 8 is the hypotenuse; other leg $= \\sqrt{64 - 36} = \\sqrt{28} = 2\\sqrt{7}$ <span class=\"nt\">(6 cannot be the hypotenuse because it is shorter than 8)</span><br>Sines: $\\frac{6}{8} = \\frac{3}{4}$ and $\\frac{2\\sqrt{7}}{8} = \\frac{\\sqrt{7}}{4}$ <span class=\"nt\">(opposite over hypotenuse)</span><br>$\\frac{\\sqrt{7}}{3} = \\frac{2\\sqrt{7}}{6}$ is a ratio of two legs in case 2 <span class=\"nt\">(a tangent, not a sine)</span><br>$\\frac{\\sqrt{7}}{3} \\approx 0.88$ matches none of the four sines <span class=\"nt\">(so it CANNOT be a sine)</span>",
+    "check": "The four possible sines are $0.6$, $0.8$, $0.75$, and about $0.661$; $\\frac{\\sqrt{7}}{3} \\approx 0.882$ is not among them ✓",
+    "be_careful": "Being less than 1 does not make a number a possible sine here; it must come from one of the two triangles.",
+    "desmos": "Desmos can give decimals for the choices but cannot decide which triangle is meant.",
+    "another_way": "Every possible sine has a hypotenuse of 10 or 8 in the denominator before simplifying; $\\frac{\\sqrt{7}}{3}$ comes from dividing by the leg 6."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-048",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C6"
+   ],
+   "family": "shared-leg-ratios-given-as-sine-cosine",
+   "signature": "right at C, D on BC, AC 8, cos(ADC) = sqrt5/5 -> tan 2 -> CD 4; sin B = sqrt5/5 -> tan 1/2 -> BC 16; BD 12; area ABD 48; traps 64, 96, 128",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle and $AC = 8$. Point $D$ lies on $\\overline{BC}$ between $B$ and $C$. If $\\cos(\\angle  ADC) = \\frac{\\sqrt{5}}{5}$ and $\\sin(\\angle  ABC) = \\frac{\\sqrt{5}}{5}$, what is the area of triangle $ABD$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$48$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$64$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "64 is the area of triangle $ABC$; triangle $ACD$ (area 16) must be removed."
+    },
+    {
+     "key": "C",
+     "text": "$96$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "96 is $BD \\cdot AC$ without the $\\frac{1}{2}$."
+    },
+    {
+     "key": "D",
+     "text": "$128$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "128 is $BC \\cdot AC$, twice the area of triangle $ABC$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Both acute angles sit in right triangles that share the leg $AC$; turn each given ratio into a tangent, which links $AC$ to the horizontal pieces.",
+    "steps": "What does the question ask? $\\frac{1}{2}(BD)(AC)$, because $AC$ is the height of triangle $ABD$ on base $BD$.<br>$\\cos(\\angle  ADC) = \\frac{1}{\\sqrt{5}}$: adjacent 1, hypotenuse $\\sqrt{5}$, opposite 2 <span class=\"nt\">(build a triangle)</span><br>$\\tan(\\angle  ADC) = \\frac{AC}{CD} = 2$, so $CD = 4$ <span class=\"nt\">(AC = 8)</span><br>$\\sin(\\angle  ABC) = \\frac{1}{\\sqrt{5}}$: opposite 1, hypotenuse $\\sqrt{5}$, adjacent 2 <span class=\"nt\">(build a triangle)</span><br>$\\tan(\\angle  ABC) = \\frac{AC}{BC} = \\frac{1}{2}$, so $BC = 16$ <span class=\"nt\">(AC = 8)</span><br>$BD = 16 - 4 = 12$ <span class=\"nt\">(D lies between B and C)</span><br>Area $= \\frac{1}{2}(12)(8) = 48$ <span class=\"nt\">(base BD, height AC)</span>",
+    "check": "$AD = \\sqrt{64 + 16} = 4\\sqrt{5}$ and $\\cos(\\angle  ADC) = \\frac{4}{4\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$ ✓; $AB = \\sqrt{64 + 256} = 8\\sqrt{5}$ and $\\sin B = \\frac{8}{8\\sqrt{5}}$ ✓",
+    "be_careful": "The two given values are equal, but they belong to different angles and give different tangents (2 and $\\frac{1}{2}$).",
+    "desmos": "Not needed.",
+    "another_way": "$\\angle  ADC$ and $\\angle  ABC$ are complementary in value here: $\\cos(\\angle  ADC) = \\sin(\\angle  ABC)$, so $\\angle  ADC = 90° - \\angle  B$ and $\\tan(\\angle  ADC) = \\frac{1}{\\tan B}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-049",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C1",
+    "G3.C2"
+   ],
+   "family": "tangent-ratio-to-altitude-split",
+   "signature": "C = 90, tan A = 4 tan B -> a/b = 4b/a -> a = 2b; altitude CD: AD = b^2/c, DB = a^2/c -> AD/DB = b^2/a^2 = 1/4; traps 4 (reversed), 1/2 (legs not squared)",
+   "abilities": [
+    "G",
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In right triangle $ABC$, angle $C$ is the right angle, and $\\tan A = 4\\tan B$. Segment $CD$ is the altitude from $C$ to side $AB$. What is the value of $\\frac{AD}{DB}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1/4",
+      ".25",
+      "0.25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is $\\frac{DB}{AD}$. $D$ is closer to $A$, because $AC$ is the shorter leg."
+    },
+    {
+     "value": "1/2",
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "$\\frac{AC}{BC} = \\frac{1}{2}$, but the pieces of the hypotenuse go as the SQUARES of the legs."
+    }
+   ],
+   "solution": {
+    "key_idea": "$\\tan A$ and $\\tan B$ are reciprocal side ratios, which pins down the legs. The altitude makes three similar triangles, so each hypotenuse piece is (adjacent leg)$^{2}$ over the hypotenuse.",
+    "steps": "What does the question ask? $\\frac{AD}{DB}$.<br>$\\tan A = \\frac{BC}{AC}$, $\\tan B = \\frac{AC}{BC}$ <span class=\"nt\">(opposite over adjacent)</span><br>$\\frac{BC}{AC} = 4 \\cdot \\frac{AC}{BC}$, so $BC^{2} = 4AC^{2}$ and $BC = 2AC$ <span class=\"nt\">(cross-multiply)</span><br>$\\triangle ACD ∼ \\triangle ABC$ gives $AD = \\frac{AC^{2}}{AB}$ <span class=\"nt\">(shared angle $A$)</span><br>$\\triangle CBD ∼ \\triangle ABC$ gives $DB = \\frac{BC^{2}}{AB}$ <span class=\"nt\">(shared angle $B$)</span><br>Draw the altitude $CD$: it splits triangle $ABC$ into two smaller right triangles, and each one shares an acute angle with the big triangle, so all three triangles are similar. <span class=\"nt\">(angle-angle)</span><br>$\\frac{AD}{DB} = \\frac{AC^{2}}{BC^{2}} = \\frac{1}{4}$ <span class=\"nt\">(divide)</span><br>The hypotenuse $AB$ cancels, so the answer does not depend on the size of the triangle: $D$ cuts $AB$ in the ratio $1 : 4$. <span class=\"nt\">(any size works)</span>",
+    "check": "$AC = 1$, $BC = 2$, $AB = \\sqrt{5}$: $AD = \\frac{1}{\\sqrt{5}}$, $DB = \\frac{4}{\\sqrt{5}}$, sum $\\sqrt{5}$ ✓, ratio $\\frac{1}{4}$ ✓; $\\tan A = 2 = 4 \\cdot \\frac{1}{2}$ ✓",
+    "be_careful": "$AD$ is next to $A$, so it goes with the leg $AC$, which is the SHORTER leg here.",
+    "desmos": "No numeric equation to graph; the answer comes from the similar triangles.",
+    "another_way": "In triangle $ACD$, $AD = AC\\cos A$; in triangle $CBD$, $DB = BC\\cos B$; with $AC = 1$, $BC = 2$ this is $\\frac{1}{\\sqrt{5}}$ and $\\frac{4}{\\sqrt{5}}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G3-050",
+   "version": 1,
+   "skill": {
+    "code": "G3",
+    "domain": "geo",
+    "cb_skill": "Right triangles and trigonometry"
+   },
+   "level": "H+",
+   "concepts": [
+    "G3.C2"
+   ],
+   "family": "two-right-triangles-shared-hypotenuse",
+   "signature": "ABCD with right angles at B and D, AB = BC, AC 12, angle DAC 30 -> ABC area 36, ACD area 18 sqrt3 -> 36 + 18 sqrt3; traps 36 + 36 sqrt3, 72 + 18 sqrt3, 72 + 36 sqrt3",
+   "abilities": [
+    "G",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In quadrilateral $ABCD$, angles $ABC$ and $ADC$ are right angles, $AB = BC$, and diagonal $\\overline{AC}$ has length 12. If the measure of angle $DAC$ is 30°, what is the area of quadrilateral $ABCD$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$36 + 18\\sqrt{3}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$36 + 36\\sqrt{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This forgets the $\\frac{1}{2}$ in the area of triangle $ACD$."
+    },
+    {
+     "key": "C",
+     "text": "$72 + 18\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This takes 12 as a leg of triangle $ABC$ instead of its hypotenuse."
+    },
+    {
+     "key": "D",
+     "text": "$72 + 36\\sqrt{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This forgets the $\\frac{1}{2}$ in both triangle areas."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Diagonal $\\overline{AC}$ is the hypotenuse of two right triangles: a 45-45-90 triangle $ABC$ and a 30-60-90 triangle $ACD$.",
+    "steps": "What does the question ask? Area of $ABC$ plus area of $ACD$.<br>Triangle $ABC$: right angle at $B$, $AB = BC$, hypotenuse 12 <span class=\"nt\">(45-45-90)</span><br>$AB = BC = \\frac{12}{\\sqrt{2}} = 6\\sqrt{2}$ <span class=\"nt\">(leg = hypotenuse divided by the square root of 2)</span><br>Area $ABC = \\frac{1}{2}(6\\sqrt{2})^{2} = 36$ <span class=\"nt\">(half the product of the legs)</span><br>Triangle $ACD$: right angle at $D$, angle $A = 30°$, hypotenuse 12 <span class=\"nt\">(30-60-90)</span><br>$CD = 6$ and $AD = 6\\sqrt{3}$ <span class=\"nt\">(shorter leg is half the hypotenuse)</span><br>Area $ACD = \\frac{1}{2}(6)(6\\sqrt{3}) = 18\\sqrt{3}$ <span class=\"nt\">(half the product of the legs)</span><br>Total $= 36 + 18\\sqrt{3}$ <span class=\"nt\">(add)</span>",
+    "check": "$(6\\sqrt{2})^{2} \\cdot 2 = 144 = 12^{2}$ ✓ and $6^{2} + (6\\sqrt{3})^{2} = 144$ ✓",
+    "be_careful": "12 is a hypotenuse in both triangles.",
+    "desmos": "Not needed.",
+    "another_way": "Area of a 45-45-90 triangle with hypotenuse $c$ is $\\frac{c^{2}}{4} = 36$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

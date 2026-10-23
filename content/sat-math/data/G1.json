@@ -1,0 +1,3480 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "G1",
+ "skill": "Area and volume",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-G1-001",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C2"
+   ],
+   "family": "cylinder-reverse-diameter",
+   "signature": "cylinder V = 72pi, h = 8 -> r = 3 -> ask diameter 6; traps 3 (radius), 9 (r^2), 4.5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A water tank shaped like a right circular cylinder stands 8 feet tall and holds $72\\pi$ cubic feet of water when it is full. What is the diameter, in feet, of the circular floor of the tank?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "3 is the radius. The question asks for the diameter, which is twice the radius."
+    },
+    {
+     "key": "B",
+     "text": "$4.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This halves $r^{2} = 9$ instead of taking its square root."
+    },
+    {
+     "key": "C",
+     "text": "$6$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "9 is $r^{2}$. The radius is the square root of 9."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Work the volume formula backward to get the radius, then double it.",
+    "steps": "What does the question ask? The diameter, $d = 2r$.<br>$V = \\pi r^{2}h$ <span class=\"nt\">(reference sheet)</span><br>$72\\pi = \\pi r^{2}(8)$ <span class=\"nt\">(substitute)</span><br>$r^{2} = 9$ <span class=\"nt\">(divide both sides by $8\\pi$)</span><br>$r = 3$ <span class=\"nt\">(a radius is positive)</span><br>$d = 2(3) = 6$ <span class=\"nt\">(finish line: diameter)</span>",
+    "check": "Radius 3, height 8: $\\pi(3^{2})(8) = 72\\pi$ ✓",
+    "be_careful": "Stopping at $r = 3$ answers a different question.",
+    "desmos": "Not needed.",
+    "another_way": "Write $V = \\pi(\\frac{d}{2})^{2}h$: $72 = \\frac{d^{2}}{4}(8)$, so $d^{2} = 36$ and $d = 6$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-002",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C3"
+   ],
+   "family": "cone-to-cylinder-double-height",
+   "signature": "cone V = 60; cylinder same radius, twice the height -> 3*60*2 = 360; traps 120, 180",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A right circular cone has a volume of 60 cubic inches. A right circular cylinder has the same base radius as the cone and twice the height of the cone. What is the volume, in cubic inches, of the cylinder?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "360"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "180",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "180 is a cylinder with the same height as the cone. This cylinder is twice as tall."
+    },
+    {
+     "value": "120",
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This doubles 60 but forgets that a cone is only $\\frac{1}{3}$ of its cylinder."
+    }
+   ],
+   "solution": {
+    "key_idea": "A cone holds $\\frac{1}{3}$ of the cylinder with the same base and height; then doubling the height doubles the volume.",
+    "steps": "What does the question ask? The volume of a cylinder that is twice as tall as the cone.<br>$\\frac{1}{3}\\pi r^{2}h = 60$ <span class=\"nt\">(cone, reference sheet)</span><br>$\\pi r^{2}h = 180$ <span class=\"nt\">(multiply by 3: cylinder with the SAME height)</span><br>$\\pi r^{2}(2h) = 2(180) = 360$ <span class=\"nt\">(height doubled)</span>",
+    "check": "Take $r^{2}h = \\frac{180}{\\pi}$: cone $= \\frac{1}{3}(180) = 60$ ✓, cylinder $= 2(180) = 360$",
+    "be_careful": "Two changes happen: cone to cylinder ($\\times 3$) and height doubled ($\\times 2$).",
+    "desmos": "Not needed.",
+    "another_way": "Volume scales with each factor: $60 \\times 3 \\times 2 = 360$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-003",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C5"
+   ],
+   "family": "similar-prisms-surface-k2",
+   "signature": "similar prisms corresponding edges 6 and 9, smaller SA 144 -> 324; traps 216 (k), 189 (added 81-36), 64 (inverted)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two rectangular prisms are similar. An edge of the smaller prism has length 6 centimeters, and the corresponding edge of the larger prism has length 9 centimeters. The surface area of the smaller prism is 144 square centimeters. What is the surface area, in square centimeters, of the larger prism?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$64$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D9",
+     "feedback": "This uses $(\\frac{2}{3})^{2}$, the ratio upside down; the larger prism must have more area."
+    },
+    {
+     "key": "B",
+     "text": "$189$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds $9^{2} - 6^{2} = 45$ to 144. Scaling multiplies areas; it does not add to them."
+    },
+    {
+     "key": "C",
+     "text": "$216$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies by the length ratio $\\frac{3}{2}$. Areas grow by the square of that ratio."
+    },
+    {
+     "key": "D",
+     "text": "$324$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "When lengths are multiplied by $k$, every area is multiplied by $k^{2}$.",
+    "steps": "What does the question ask? The surface area of the larger prism.<br>$k = \\frac{9}{6} = \\frac{3}{2}$ <span class=\"nt\">(length scale factor, small to large)</span><br>area factor $= k^{2} = \\frac{9}{4}$ <span class=\"nt\">(surface area is an area)</span><br>$144 \\times \\frac{9}{4} = 324$ <span class=\"nt\">(scale the smaller surface area)</span>",
+    "check": "$\\frac{324}{144} = \\frac{9}{4} = (\\frac{3}{2})^{2}$ ✓",
+    "be_careful": "Surface area is measured in square units, so use $k^{2}$, not $k$ or $k^{3}$.",
+    "desmos": "Not needed.",
+    "another_way": "Try a cube: edge 6 has surface area $6(36) = 216$ and edge 9 has $6(81) = 486$, a factor of $\\frac{486}{216} = \\frac{9}{4}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-004",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C1"
+   ],
+   "family": "rectangle-minus-semicircle",
+   "signature": "figure: 10 by 6 rectangle, semicircle with diameter = 6-side removed -> 60 - 4.5pi; traps 60 - 9pi (full circle), 60 - 18pi (r = 6), 60 + 4.5pi",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The shaded region shown is formed by removing a semicircle from a rectangle. The diameter of the semicircle is the right side of the rectangle.",
+   "stem_after_figure": "What is the area of the shaded region?",
+   "figures": [
+    {
+     "id": "QB-G1-004-fig1",
+     "file": "figures/QB-G1-004-fig1.svg",
+     "alt": "A shaded rectangle 10 units wide and 6 units tall. A semicircle whose diameter is the 6-unit right side has been cut out of the rectangle, curving inward."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$60 - 9\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$9\\pi$ is the area of a whole circle of radius 3; only half of it is removed."
+    },
+    {
+     "key": "B",
+     "text": "$60 - 18\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses radius 6, the diameter, for a half circle."
+    },
+    {
+     "key": "C",
+     "text": "$60 - 4.5\\pi$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$60 + 4.5\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "The semicircle is cut out of the rectangle, so its area is subtracted."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Shaded area = whole rectangle minus the piece removed, a half circle of radius 3.",
+    "steps": "What does the question ask? The area that remains after the cut.<br>rectangle: $10 \\times 6 = 60$ <span class=\"nt\">(length times width)</span><br>radius $= \\frac{6}{2} = 3$ <span class=\"nt\">(the diameter is the 6-unit side)</span><br>semicircle: $\\frac{1}{2}\\pi(3^{2}) = 4.5\\pi$ <span class=\"nt\">(half of a circle)</span><br>$60 - 4.5\\pi$ <span class=\"nt\">(subtract the removed part)</span>",
+    "check": "$60 - 4.5\\pi \\approx 45.9$, less than 60 and more than half of 60, which matches the picture ✓",
+    "be_careful": "Half the diameter is the radius, and half the circle is removed.",
+    "desmos": "Not needed.",
+    "another_way": "Think of a 7-by-6 rectangle plus a 3-by-6 strip with the semicircle missing: $42 + (18 - 4.5\\pi) = 60 - 4.5\\pi$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-005",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C6"
+   ],
+   "family": "displacement-rise",
+   "signature": "tank base 50 by 40 cm, stone submerged, level rises 1.8 cm -> 3600 cm^3; traps 2000 (base only), 3.6 (?)",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A rectangular tank has a base that is 50 centimeters long and 40 centimeters wide, and it is partly filled with water. When a stone is placed in the tank and is completely under water, the water level rises by 1.8 centimeters and no water spills. What is the volume, in cubic centimeters, of the stone?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "3600"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2000",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "2,000 is the area of the base. The stone’s volume is that area times the rise."
+    },
+    {
+     "value": "180",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This adds the dimensions and multiplies by the rise instead of multiplying length, width, and rise."
+    }
+   ],
+   "solution": {
+    "key_idea": "A submerged object pushes up exactly its own volume of water: the extra water layer is a box.",
+    "steps": "What does the question ask? The stone’s volume.<br>Stone volume = volume of the extra water layer <span class=\"nt\">(water was not added, only pushed up)</span><br>layer: $50 \\times 40 \\times 1.8$ <span class=\"nt\">(a box with height 1.8)</span><br>$2,000 \\times 1.8 = 3,600$ <span class=\"nt\">(cubic centimeters)</span><br>So the stone’s volume is 3,600 cubic centimeters: the same as the layer of water it pushed up.",
+    "check": "$\\frac{3,600}{50 \\times 40} = 1.8$ ✓",
+    "be_careful": "The starting depth of the water is not needed; only the rise matters.",
+    "desmos": "Not needed.",
+    "another_way": "Each centimeter of rise is $2,000$ cubic centimeters, so 1.8 centimeters is $3,600$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-006",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C3"
+   ],
+   "family": "sphere-reverse-cuberoot",
+   "signature": "sphere V = 288pi -> r^3 = 216 -> r = 6; traps 6sqrt6 (square root), 12 (diameter), cube root of 288 (dropped 4/3)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A sphere has a volume of $288\\pi$ cubic meters. What is the radius, in meters, of the sphere?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\sqrt[3]{288}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This drops the factor $\\frac{4}{3}$ from the volume formula."
+    },
+    {
+     "key": "C",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "12 is the diameter of the sphere."
+    },
+    {
+     "key": "D",
+     "text": "$6\\sqrt{6}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This takes the square root of $r^{3} = 216$. The radius is a cube root."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Undo the sphere formula: divide by $\\frac{4}{3}\\pi$, then take a cube root.",
+    "steps": "What does the question ask? The radius $r$.<br><b>Plan.</b> The volume formula for a sphere is on the reference sheet. Set it equal to the given volume and work back to the radius.<br>$\\frac{4}{3}\\pi r^{3} = 288\\pi$ <span class=\"nt\">(reference sheet)</span><br>$r^{3} = 288 \\times \\frac{3}{4} = 216$ <span class=\"nt\">(divide by $\\frac{4}{3}\\pi$)</span><br>$r = \\sqrt[3]{216} = 6$ <span class=\"nt\">($6 \\times 6 \\times 6 = 216$)</span><br>So the radius of the sphere is 6 meters.",
+    "check": "$\\frac{4}{3}\\pi(6^{3}) = \\frac{4}{3}(216)\\pi = 288\\pi$ ✓",
+    "be_careful": "Volume uses $r^{3}$, so the last step is a cube root, not a square root.",
+    "desmos": "Desmos can check: type 4/3*6^3 and see 288.",
+    "another_way": "Test choices: $6^{3} = 216$ and $\\frac{4}{3}(216) = 288$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-007",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C1"
+   ],
+   "family": "semicircle-from-arc",
+   "signature": "semicircle arc length 6pi -> r = 6 -> area 18pi; traps 36pi (whole), 9pi (arc as full circumference), 72pi (r = 12)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The curved part of a semicircle has length $6\\pi$ inches. What is the area, in square inches, of the semicircular region?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$9\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This treats $6\\pi$ as the whole circumference, giving radius 3, and then uses the whole circle."
+    },
+    {
+     "key": "B",
+     "text": "$18\\pi$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$36\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$36\\pi$ is the area of the whole circle of radius 6."
+    },
+    {
+     "key": "D",
+     "text": "$72\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses 12, the diameter, as the radius."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The curved part is half the circumference; find the radius from it, then take half the circle’s area.",
+    "steps": "What does the question ask? The area of the half circle.<br>$\\frac{1}{2}(2\\pi r) = 6\\pi$ <span class=\"nt\">(curved part is half the circumference)</span><br>$\\pi r = 6\\pi$, so $r = 6$ <span class=\"nt\">(simplify)</span><br>$\\frac{1}{2}\\pi(6^{2}) = 18\\pi$ <span class=\"nt\">(half of the circle’s area)</span>",
+    "check": "Radius 6: half circumference $= \\pi(6) = 6\\pi$ ✓, half area $= 18\\pi$",
+    "be_careful": "Both the arc and the area are halves; use the half twice.",
+    "desmos": "Not needed.",
+    "another_way": "A full circle would have circumference $12\\pi$, so $r = 6$ and the full area is $36\\pi$; half is $18\\pi$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-008",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C5"
+   ],
+   "family": "percent-side-area",
+   "signature": "each side of a square +50% -> area x2.25 -> +125%; traps 50, 100, 225",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The length of each side of a square is increased by 50%. By what percent does the area of the square increase?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$50\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This assumes area grows by the same percent as the sides."
+    },
+    {
+     "key": "B",
+     "text": "$100\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the two 50% increases instead of multiplying the factors $1.5 \\times 1.5$."
+    },
+    {
+     "key": "C",
+     "text": "$125\\%$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$225\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "The new area is 225% OF the old area; the increase is $225\\% - 100\\%$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A side factor of $1.5$ gives an area factor of $1.5^{2} = 2.25$.",
+    "steps": "What does the question ask? The percent increase in area.<br>new side $= 1.5s$ <span class=\"nt\">(50% more)</span><br>new area $= (1.5s)^{2} = 2.25s^{2}$ <span class=\"nt\">(square the factor)</span><br>increase $= 2.25s^{2} - s^{2} = 1.25s^{2}$ <span class=\"nt\">(new minus old)</span><br>That is a 125% increase.",
+    "check": "Side 10, area 100. Side 15, area 225. Increase 125 out of 100 = 125% ✓",
+    "be_careful": "225% is the new area as a percent of the old area, not the increase.",
+    "desmos": "Not needed.",
+    "another_way": "Pick $s = 2$: area 4 becomes $3^{2} = 9$, an increase of 5 out of 4, or 125%."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-009",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C2"
+   ],
+   "family": "box-variable-dimension",
+   "signature": "box length 3w, width w, height 5, V = 240 -> w = 4, ask length 12; traps 4, 16, 48",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A rectangular box has a height of 5 feet. The length of the box is 3 times its width, and the volume of the box is 240 cubic feet. What is the length, in feet, of the box?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "4 is the width. The length is 3 times the width."
+    },
+    {
+     "key": "B",
+     "text": "$12$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "16 is $w^{2}$, before taking the square root."
+    },
+    {
+     "key": "D",
+     "text": "$48$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "48 is the area of the base, $240 \\div 5$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Write the volume with one variable, solve, and report the length, not the width.",
+    "steps": "What does the question ask? The length, $3w$.<br>$V = (3w)(w)(5) = 15w^{2}$ <span class=\"nt\">(length times width times height)</span><br>$15w^{2} = 240$, so $w^{2} = 16$ <span class=\"nt\">(divide by 15)</span><br>$w = 4$ <span class=\"nt\">(width is positive)</span><br>length $= 3(4) = 12$ <span class=\"nt\">(finish line)</span>",
+    "check": "$12 \\times 4 \\times 5 = 240$ ✓",
+    "be_careful": "Solving for $w$ is not the end; the length is $3w$.",
+    "desmos": "Not needed.",
+    "another_way": "Base area $= 240 \\div 5 = 48 = 3w^{2}$, so $w^{2} = 16$, $w = 4$, length 12."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-010",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C1"
+   ],
+   "family": "two-corner-triangles-independent",
+   "signature": "figure: 12 by 8 rectangle, P anywhere on top side; shaded = two triangles outside middle triangle -> 48 regardless of P",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the figure, point $P$ lies on the top side of a rectangle that is 12 units long and 8 units tall. Segments are drawn from $P$ to the two bottom corners of the rectangle.",
+   "stem_after_figure": "What is the total area of the two shaded triangles?",
+   "figures": [
+    {
+     "id": "QB-G1-010-fig1",
+     "file": "figures/QB-G1-010-fig1.svg",
+     "alt": "A rectangle 12 units long and 8 units tall. Point P is on the top side, somewhat left of center. Segments from P to the bottom-left and bottom-right corners form a middle triangle; the two triangles above those segments, at the top-left and top-right corners, are shaded."
+    }
+   ],
+   "answer": {
+    "spr": {
+     "values": [
+      "48"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "96",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "96 is the area of the whole rectangle; the middle triangle is not shaded."
+    },
+    {
+     "value": "24",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This halves the answer a second time."
+    }
+   ],
+   "solution": {
+    "key_idea": "The middle triangle has base 12 and height 8 wherever $P$ is, so it always fills half the rectangle.",
+    "steps": "What does the question ask? The area of the two shaded corner triangles together.<br>rectangle: $12 \\times 8 = 96$ <span class=\"nt\">(whole region)</span><br>middle triangle: base 12, height 8 <span class=\"nt\">(height from $P$ down to the bottom side is 8)</span><br>$\\frac{1}{2}(12)(8) = 48$ <span class=\"nt\">(triangle area)</span><br>shaded $= 96 - 48 = 48$ <span class=\"nt\">(what is left)</span>",
+    "check": "Put $P$ 4.5 units from the left: $\\frac{1}{2}(4.5)(8) + \\frac{1}{2}(7.5)(8) = 18 + 30 = 48$ ✓",
+    "be_careful": "The position of $P$ is not given because it is not needed.",
+    "desmos": "Not needed.",
+    "another_way": "The two shaded triangles have bases that add to 12 and the same height 8: $\\frac{1}{2}(12)(8) = 48$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-011",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C7"
+   ],
+   "family": "cone-volume-to-slant",
+   "signature": "cone V = 96pi, r = 6 -> h = 8 -> slant 10; traps 8 (height), 14 (r + h), 2sqrt7",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A right circular cone has a volume of $96\\pi$ cubic centimeters and a base radius of 6 centimeters. What is the slant height, in centimeters, of the cone? (The slant height is the distance from the top of the cone to a point on the edge of its base.)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2\\sqrt{7}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This subtracts the squares: $\\sqrt{8^{2} - 6^{2}}$. The slant height is the longest side, so add the squares."
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 is the height of the cone, found on the way."
+    },
+    {
+     "key": "C",
+     "text": "$10$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the radius and the height. The slant height is the hypotenuse of a right triangle with those legs."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Get the height from the volume, then the slant height is the hypotenuse of the triangle with legs $r$ and $h$.",
+    "steps": "What does the question ask? The slant height $\\ell$.<br>$\\frac{1}{3}\\pi(6^{2})h = 96\\pi$ <span class=\"nt\">(cone volume)</span><br>$12h = 96$, so $h = 8$ <span class=\"nt\">(simplify $\\frac{1}{3}(36) = 12$)</span><br>$\\ell^{2} = 6^{2} + 8^{2} = 100$ <span class=\"nt\">(Pythagorean theorem, $\\ell$ is the hypotenuse)</span><br>$\\ell = 10$ <span class=\"nt\">(positive length)</span>",
+    "check": "$\\frac{1}{3}\\pi(36)(8) = 96\\pi$ ✓ and $6^{2} + 8^{2} = 10^{2}$ ✓",
+    "be_careful": "The height goes straight up the middle; the slant height runs along the side.",
+    "desmos": "Not needed.",
+    "another_way": "Legs 6 and 8 are a 3-4-5 triangle doubled, so the hypotenuse is 10."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-012",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C4"
+   ],
+   "family": "open-box-surface",
+   "signature": "open-top box 10 by 6 base, height 4 -> 60 + 80 + 48 = 188; traps 248 (closed), 240 (volume), 128 (no bottom)",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A box with no top is shaped like a rectangular prism. Its base is 10 inches by 6 inches, and its height is 4 inches. What is the total area, in square inches, of the outside surfaces of the box, including the bottom?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$128$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "128 counts only the four sides and leaves out the bottom."
+    },
+    {
+     "key": "B",
+     "text": "$188$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$240$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "240 is the volume, $10 \\times 6 \\times 4$, not a surface area."
+    },
+    {
+     "key": "D",
+     "text": "$248$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "248 counts a top face, but the box has no top."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Surface area adds the area of each face that is actually there: a bottom and four sides.",
+    "steps": "What does the question ask? The area of 5 faces: bottom and 4 sides.<br>bottom: $10 \\times 6 = 60$ <span class=\"nt\">(one face)</span><br>long sides: $2(10 \\times 4) = 80$ <span class=\"nt\">(front and back)</span><br>short sides: $2(6 \\times 4) = 48$ <span class=\"nt\">(left and right)</span><br>$60 + 80 + 48 = 188$ <span class=\"nt\">(add the faces)</span>",
+    "check": "Closed box: $2(60 + 40 + 24) = 248$; remove the top, $248 - 60 = 188$ ✓",
+    "be_careful": "Only the top is missing; the bottom is still a face.",
+    "desmos": "Not needed.",
+    "another_way": "Find the closed-box surface area, then subtract one 10-by-6 face."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-013",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C6"
+   ],
+   "family": "cube-recast-bar",
+   "signature": "cube edge 6 melted into bar with 3 by 3 square cross-section -> length 24; traps 12, 8",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A solid metal cube with edges 6 centimeters long is melted down, and all of the metal is used to make a bar shaped like a rectangular prism. The end of the bar is a square with sides 3 centimeters long. What is the length, in centimeters, of the bar?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "24"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "12",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This scales one edge by $\\frac{6}{3} = 2$, but both edges of the end were halved, so the length must grow by a factor of 4."
+    },
+    {
+     "value": "72",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This divides 216 by 3 only once instead of by the end’s area, 9."
+    }
+   ],
+   "solution": {
+    "key_idea": "Melting keeps the volume the same; divide that volume by the area of the bar’s end.",
+    "steps": "What does the question ask? The length $L$ of the bar.<br>cube volume: $6^{3} = 216$ <span class=\"nt\">(cubic centimeters)</span><br>bar volume: $3 \\times 3 \\times L = 9L$ <span class=\"nt\">(end area times length)</span><br>$9L = 216$, so $L = 24$ <span class=\"nt\">(volume is unchanged)</span><br>So the bar is 24 centimeters long. Melting changes the shape, not the amount of metal.",
+    "check": "$3 \\times 3 \\times 24 = 216 = 6^{3}$ ✓",
+    "be_careful": "Both sides of the end shrink from 6 to 3, so the end area is $\\frac{1}{4}$ as large.",
+    "desmos": "Not needed.",
+    "another_way": "End area 36 becomes 9, one quarter, so the length 6 becomes $4 \\times 6 = 24$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-014",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C5"
+   ],
+   "family": "similar-cylinders-volume-to-height",
+   "signature": "similar cylinders volumes 54pi and 250pi -> height ratio 5/3; traps 25/9, 125/27, 3/5",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two right circular cylinders are similar. The smaller cylinder has a volume of $54\\pi$ cubic inches, and the larger cylinder has a volume of $250\\pi$ cubic inches. The height of the larger cylinder is how many times the height of the smaller cylinder?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D9",
+     "feedback": "This is the smaller height compared with the larger one."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{5}{3}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{25}{9}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This is the ratio of areas, $(\\frac{5}{3})^{2}$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{125}{27}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This is the ratio of the volumes. Heights are lengths, so take the cube root."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "For similar solids, the volume ratio is $k^{3}$, so the length ratio $k$ is its cube root.",
+    "steps": "What does the question ask? (larger height) $\\div$ (smaller height) $= k$.<br><b>Plan.</b> For similar solids, the volume ratio is the cube of the length ratio. Height is a length, so take a cube root of the volume ratio.<br>$k^{3} = \\frac{250\\pi}{54\\pi} = \\frac{125}{27}$ <span class=\"nt\">(volume ratio, simplified by 2)</span><br>$k = \\sqrt[3]{\\frac{125}{27}} = \\frac{5}{3}$ <span class=\"nt\">($5^{3} = 125$, $3^{3} = 27$)</span><br>So the larger height is $\\frac{5}{3}$ times the smaller height.",
+    "check": "$(\\frac{5}{3})^{3} = \\frac{125}{27}$ and $54 \\times \\frac{125}{27} = 250$ ✓",
+    "be_careful": "Height is a length; it changes by $k$, not by the volume ratio.",
+    "desmos": "Not needed.",
+    "another_way": "Test: a factor of $\\frac{5}{3}$ on lengths multiplies volume by $\\frac{125}{27}$, turning 54 into 250."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-015",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C1"
+   ],
+   "family": "trapezoid-height-reverse",
+   "signature": "trapezoid bases 9 and 15, area 84 -> h = 7; traps 3.5 (no 1/2), 5.6 (one base), 14",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A trapezoid has parallel sides of lengths 9 meters and 15 meters. The area of the trapezoid is 84 square meters. What is the distance, in meters, between the parallel sides?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This divides 84 by $9 + 15 = 24$ and forgets that the trapezoid uses the AVERAGE of the bases."
+    },
+    {
+     "key": "B",
+     "text": "$5.6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses only the longer base, $84 \\div 15$."
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This doubles the height after dividing by the average base."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Trapezoid area = average of the parallel sides times the distance between them.",
+    "steps": "What does the question ask? The height $h$ (distance between the parallel sides).<br>average base: $\\frac{9 + 15}{2} = 12$ <span class=\"nt\">(mean of the parallel sides)</span><br>$12h = 84$ <span class=\"nt\">(area)</span><br>$h = 7$ <span class=\"nt\">(divide by 12)</span>",
+    "check": "$\\frac{1}{2}(9 + 15)(7) = \\frac{1}{2}(24)(7) = 84$ ✓",
+    "be_careful": "Do not forget the $\\frac{1}{2}$ in $\\frac{1}{2}(b_{1} + b_{2})h$.",
+    "desmos": "Not needed.",
+    "another_way": "Split into a 9-wide rectangle and triangles with total base 6: $9h + 3h = 12h = 84$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-016",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C3"
+   ],
+   "family": "hemisphere-bowl-k",
+   "signature": "hemisphere bowl inside radius 6 -> 144pi; ask k; traps 288 (whole sphere), 72",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A bowl is shaped like half of a sphere. The inside radius of the bowl is 6 inches. The volume of the inside of the bowl is $k\\pi$ cubic inches. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "144"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "288",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "288 is the value for a whole sphere of radius 6; the bowl is half a sphere."
+    },
+    {
+     "value": "108",
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "108 is half of $6^{3}$; it drops the $\\frac{4}{3}$ factor of the sphere formula."
+    }
+   ],
+   "solution": {
+    "key_idea": "Half of a sphere holds half of $\\frac{4}{3}\\pi r^{3}$.",
+    "steps": "What does the question ask? $k$ in $k\\pi$.<br><b>Plan.</b> Find the volume of the whole sphere with radius 6, then take half of it for the bowl.<br>sphere: $\\frac{4}{3}\\pi(6^{3}) = \\frac{4}{3}(216)\\pi = 288\\pi$ <span class=\"nt\">(reference sheet)</span><br>bowl: $\\frac{1}{2}(288\\pi) = 144\\pi$ <span class=\"nt\">(half a sphere)</span><br>$k = 144$<br>So the bowl holds $144\\pi$ cubic inches, and $k = 144$.",
+    "check": "$\\frac{2}{3}(216) = 144$ ✓",
+    "be_careful": "Report $k$, not $k\\pi$; type 144.",
+    "desmos": "Not needed.",
+    "another_way": "Half of $\\frac{4}{3}$ is $\\frac{2}{3}$: $\\frac{2}{3}(6^{3}) = 144$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-017",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C3"
+   ],
+   "family": "pyramid-reverse-height",
+   "signature": "square pyramid base area 64, V = 192 -> h = 9; traps 3 (no 1/3), 24 (used side 8), 27",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A pyramid has a square base with an area of 64 square feet. The volume of the pyramid is 192 cubic feet. What is the height, in feet, of the pyramid?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This divides 192 by 64 and forgets that a pyramid is $\\frac{1}{3}$ of its prism."
+    },
+    {
+     "key": "B",
+     "text": "$9$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This divides 192 by the side length 8 instead of by the base area 64."
+    },
+    {
+     "key": "D",
+     "text": "$27$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This multiplies by 3 twice; the base area must still be divided out once."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Pyramid volume = $\\frac{1}{3}$(base area)(height); work it backward.",
+    "steps": "What does the question ask? The height $h$.<br><b>Plan.</b> The base area is given directly, so substitute it into the pyramid formula and solve for the height.<br>$\\frac{1}{3}(64)h = 192$ <span class=\"nt\">(base area is already given)</span><br>$64h = 576$ <span class=\"nt\">(multiply by 3)</span><br>$h = 9$ <span class=\"nt\">(divide by 64)</span><br>So the height of the pyramid is 9 feet.",
+    "check": "$\\frac{1}{3}(64)(9) = \\frac{576}{3} = 192$ ✓",
+    "be_careful": "The base AREA is 64; there is no need for the side length.",
+    "desmos": "Not needed.",
+    "another_way": "A prism with the same base and height would hold $3(192) = 576 = 64h$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-018",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C2"
+   ],
+   "family": "two-cylinders-ratio",
+   "signature": "cylinder r 3 h 10 vs r 6 h 5 -> second is 2 times first; traps 1 (linear), 4 (radius only), 8",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Cylinder P has a radius of 3 centimeters and a height of 10 centimeters. Cylinder Q has a radius of 6 centimeters and a height of 5 centimeters. The volume of cylinder Q is how many times the volume of cylinder P?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This treats the radius like the height: doubling one and halving the other. The radius is squared."
+    },
+    {
+     "key": "B",
+     "text": "$2$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "4 comes from the radius alone; the height was cut in half."
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This cubes the radius factor 2."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Volume $\\pi r^{2}h$: the radius counts twice (squared), the height once.",
+    "steps": "What does the question ask? $\\frac{V_{Q}}{V_{P}}$.<br><b>Plan.</b> Find each volume with the cylinder formula, then divide. The radius is squared, so doubling it matters more than halving the height.<br>$V_{P} = \\pi(3^{2})(10) = 90\\pi$ <span class=\"nt\">(cylinder P)</span><br>$V_{Q} = \\pi(6^{2})(5) = 180\\pi$ <span class=\"nt\">(cylinder Q)</span><br>$\\frac{180\\pi}{90\\pi} = 2$ <span class=\"nt\">(compare)</span><br>So the volume of Q is 2 times the volume of P.",
+    "check": "Factors: radius $\\times 2$ gives $\\times 4$, height $\\times \\frac{1}{2}$ gives $\\times \\frac{1}{2}$; $4 \\times \\frac{1}{2} = 2$ ✓",
+    "be_careful": "Doubling the radius does not cancel halving the height.",
+    "desmos": "Not needed.",
+    "another_way": "$(\\frac{6}{3})^{2} \\times \\frac{5}{10} = 4 \\times \\frac{1}{2} = 2$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-019",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C1"
+   ],
+   "family": "parallelogram-coordinates",
+   "signature": "parallelogram (1,1),(7,1),(9,5),(3,5) -> base 6 height 4 = 24; trap 6*sqrt20 (slant side), 12",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, a parallelogram has vertices at $(1, 1)$, $(7, 1)$, $(9, 5)$, and $(3, 5)$. What is the area of the parallelogram?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "24"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "12",
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This uses $\\frac{1}{2}bh$, the triangle formula. A parallelogram is two such triangles."
+    },
+    {
+     "value": "32",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This uses the horizontal span from $x = 1$ to $x = 9$ as the base."
+    }
+   ],
+   "solution": {
+    "key_idea": "Parallelogram area = base times the PERPENDICULAR height, not the slanted side.",
+    "steps": "What does the question ask? The area.<br>base: from $(1, 1)$ to $(7, 1)$, length $7 - 1 = 6$ <span class=\"nt\">(horizontal side)</span><br>height: from $y = 1$ up to $y = 5$, which is 4 <span class=\"nt\">(perpendicular distance between the horizontal sides)</span><br>$6 \\times 4 = 24$ <span class=\"nt\">(base times height)</span><br>So the area is 24. The slanted side from $(1, 1)$ to $(3, 5)$ is NOT the height; the height is the vertical distance between the horizontal sides.",
+    "check": "The top side, $(3, 5)$ to $(9, 5)$, also has length 6, so the shape really is a parallelogram ✓",
+    "be_careful": "The slanted side, from $(1, 1)$ to $(3, 5)$, has length $\\sqrt{20}$, but it is not the height.",
+    "desmos": "Desmos can plot the points but the area still needs base and height.",
+    "another_way": "Box it in an 8-by-4 rectangle (area 32) and remove two triangles of area $\\frac{1}{2}(2)(4) = 4$ each: $32 - 8 = 24$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-020",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "M",
+   "concepts": [
+    "G1.C5"
+   ],
+   "family": "map-scale-area",
+   "signature": "map 1 cm = 50 m, region 6 cm^2 on map -> 15,000 m^2; traps 300 (linear), 2,500 (scale^2 only), 750,000 (cubed)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "On a map, 1 centimeter represents an actual distance of 50 meters. A park is shown on the map as a region with an area of 6 square centimeters. What is the actual area, in square meters, of the park?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$300$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies by 50 once. One square centimeter on the map is 50 meters by 50 meters."
+    },
+    {
+     "key": "B",
+     "text": "$2,500$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "2,500 is the actual area of just 1 square centimeter of map."
+    },
+    {
+     "key": "C",
+     "text": "$15,000$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$750,000$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies by $50^{3}$, a volume factor."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Each square centimeter on the map stands for a 50-meter by 50-meter square.",
+    "steps": "What does the question ask? The real area of the park.<br><b>Plan.</b> A length scale must be squared to become an area scale. Find the real area of one square centimeter on the map first.<br>$1 \\text{ cm}^{2} \\to 50 \\times 50 = 2,500 \\text{ m}^{2}$ <span class=\"nt\">(square the length scale)</span><br>$6 \\times 2,500 = 15,000$ <span class=\"nt\">(six such squares)</span><br>So the actual area of the park is 15,000 square meters.",
+    "check": "A 2 cm by 3 cm rectangle on the map is 100 m by 150 m: $100 \\times 150 = 15,000$ ✓",
+    "be_careful": "The scale is for lengths; areas use the scale squared.",
+    "desmos": "Not needed.",
+    "another_way": "Area factor $= 50^{2} = 2,500$, so $6 \\times 2,500 = 15,000$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-021",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C7",
+    "G1.C3"
+   ],
+   "family": "pyramid-slant-to-volume",
+   "signature": "figure: square pyramid base 10, slant height 13 (to midpoint of base edge) -> h = 12 -> V = 400; traps 1300/3 (slant as height), 1200, 1300",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The figure shows a pyramid with a square base. Each edge of the base is 10 inches long, and the slant height, drawn from the top of the pyramid to the midpoint of a base edge, is 13 inches.",
+   "stem_after_figure": "What is the volume, in cubic inches, of the pyramid?",
+   "figures": [
+    {
+     "id": "QB-G1-021-fig1",
+     "file": "figures/QB-G1-021-fig1.svg",
+     "alt": "A pyramid with a square base. The front base edge is labeled 10. A segment from the apex to the midpoint of the front base edge, perpendicular to that edge, is labeled 13."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$400$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1,300}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the slant height 13 as the height. The height is measured straight down from the top to the center of the base."
+    },
+    {
+     "key": "C",
+     "text": "$1,200$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This is (base area)(height) with the $\\frac{1}{3}$ left out."
+    },
+    {
+     "key": "D",
+     "text": "$1,300$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This uses 13 as the height and also leaves out the $\\frac{1}{3}$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The slant height, the height, and half a base edge form a right triangle; find the true height first.",
+    "steps": "What does the question ask? The volume, $\\frac{1}{3}(\\text{base area})(h)$.<br>Picture a right triangle inside the pyramid: from the top straight down to the center of the base (the height $h$), from the center out to the midpoint of a base edge (half of 10, which is 5), and back up along the slant height 13.<br>$h^{2} + 5^{2} = 13^{2}$ <span class=\"nt\">(Pythagorean theorem)</span><br>$h^{2} = 169 - 25 = 144$, so $h = 12$ <span class=\"nt\">(positive length)</span><br>base area $= 10^{2} = 100$ <span class=\"nt\">(square base)</span><br>$V = \\frac{1}{3}(100)(12) = 400$ <span class=\"nt\">(pyramid volume)</span>",
+    "check": "$5$, $12$, $13$ is a right-triangle triple, and $\\frac{1}{3}(100)(12) = 400$ ✓",
+    "be_careful": "The labeled 13 runs along a face, so it is not the height.",
+    "desmos": "Not needed.",
+    "another_way": "Spot 5-12-13 at once: half of 10 is 5 and the hypotenuse is 13, so the height is 12."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-022",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C4"
+   ],
+   "family": "cube-tunnel-surface",
+   "signature": "cube edge 6 with 2 by 2 square tunnel through centers of opposite faces -> 216 - 8 + 48 = 256; traps 208 (no tunnel walls), 264 (openings not removed), 192 (volume)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A solid cube has edges 6 centimeters long. A square hole 2 centimeters on each side is cut straight through the cube, from the center of one face to the center of the opposite face, with the sides of the hole parallel to the edges of the cube. What is the total surface area, in square centimeters, of the resulting solid, including the inside walls of the hole?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$192$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "192 is the remaining VOLUME, $216 - 24$, not a surface area."
+    },
+    {
+     "key": "B",
+     "text": "$208$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This removes the two square openings but leaves out the four inside walls of the hole."
+    },
+    {
+     "key": "C",
+     "text": "$256$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$264$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This adds the inside walls but does not remove the two $2 \\times 2$ openings from the faces."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Cutting a hole removes two small squares of surface but adds four inside walls.",
+    "steps": "What does the question ask? All surface area after the cut, inside walls included.<br>original: $6(6 \\times 6) = 216$ <span class=\"nt\">(six faces)</span><br>openings: $2(2 \\times 2) = 8$ removed <span class=\"nt\">(one on each of the two faces)</span><br>inside walls: 4 rectangles, each $2 \\times 6$ <span class=\"nt\">(the hole runs the full 6 cm)</span><br>walls: $4(12) = 48$ added <span class=\"nt\">(new surface)</span><br>$216 - 8 + 48 = 256$ <span class=\"nt\">(combine)</span>",
+    "check": "The cut adds surface overall ($48 > 8$), so the answer must be more than 216; only 256 and 264 qualify, and 264 forgets the openings ✓",
+    "be_careful": "Surface area is not volume: removing material can INCREASE surface area.",
+    "desmos": "Not needed.",
+    "another_way": "Count by face: four untouched faces $4(36) = 144$, two faces with holes $2(36 - 4) = 64$, walls 48; $144 + 64 + 48 = 256$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-023",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C5"
+   ],
+   "family": "similar-solids-area-to-volume",
+   "signature": "similar pyramids SA 50 and 72 -> k = 6/5 -> V 125 -> 216; traps 180 (k^2), 150 (k)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Two pyramids are similar. The surface areas of the pyramids are 50 square inches and 72 square inches. The volume of the smaller pyramid is 125 cubic inches. What is the volume, in cubic inches, of the larger pyramid?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "216"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "180",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies 125 by the area ratio $\\frac{72}{50}$. Volumes scale by $k^{3}$, not $k^{2}$."
+    },
+    {
+     "value": "150",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies by $k = \\frac{6}{5}$ only."
+    }
+   ],
+   "solution": {
+    "key_idea": "Area ratio $= k^{2}$; take its square root to get $k$, then cube $k$ for volume.",
+    "steps": "What does the question ask? The larger volume.<br><b>Plan.</b> Surface area is an area, so its ratio is the square of the length ratio. Take a square root to get the length ratio, then cube it for volume.<br>$k^{2} = \\frac{72}{50} = \\frac{36}{25}$ <span class=\"nt\">(surface areas scale by $k^{2}$)</span><br>$k = \\frac{6}{5}$ <span class=\"nt\">(square root; lengths grow)</span><br>$k^{3} = \\frac{216}{125}$ <span class=\"nt\">(volumes scale by $k^{3}$)</span><br>$125 \\times \\frac{216}{125} = 216$ <span class=\"nt\">(larger volume)</span><br>So the larger pyramid has a volume of 216 cubic inches.",
+    "check": "$\\frac{216}{125} = (\\frac{6}{5})^{3}$ and $\\frac{72}{50} = (\\frac{6}{5})^{2}$ ✓",
+    "be_careful": "Go through $k$: area ratio $\\to$ length ratio $\\to$ volume ratio.",
+    "desmos": "Not needed.",
+    "another_way": "Volume ratio $= (\\text{area ratio})^{\\frac{3}{2}} = (\\frac{36}{25})^{\\frac{3}{2}} = \\frac{216}{125}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-024",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C1",
+    "G1.C2"
+   ],
+   "family": "same-perimeter-square-circle-ratio",
+   "signature": "square and circle with equal perimeter P -> square P^2/16, circle P^2/(4pi) -> ratio pi/4; traps 1/(4pi) (r = P/2), 1 (same perimeter same area), 4/pi (upside down)",
+   "abilities": [
+    "G",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A square and a circle have the same perimeter. The area of the square is what fraction of the area of the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{1}{4\\pi}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses $r = \\frac{P}{2}$, as if the perimeter were a diameter. The circumference is $2\\pi r$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{\\pi}{4}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "Equal perimeters do not give equal areas; a circle encloses the most area for its perimeter."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{4}{\\pi}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D9",
+     "feedback": "This is circle $\\div$ square, the ratio upside down."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "No size is given, so call the common perimeter $P$ and write both areas in terms of $P$.",
+    "steps": "What does the question ask? $\\frac{\\text{area of square}}{\\text{area of circle}}$.<br><b>Plan.</b> No size is given. Call the shared perimeter $P$ and write each area using $P$.<br>square side $= \\frac{P}{4}$, area $= \\frac{P^{2}}{16}$ <span class=\"nt\">(four equal sides)</span><br>$2\\pi r = P$, so $r = \\frac{P}{2\\pi}$ <span class=\"nt\">(circumference)</span><br>circle area $= \\pi(\\frac{P}{2\\pi})^{2} = \\frac{P^{2}}{4\\pi}$ <span class=\"nt\">(square the radius)</span><br>$\\frac{P^{2}}{16} \\div \\frac{P^{2}}{4\\pi} = \\frac{4\\pi}{16} = \\frac{\\pi}{4}$ <span class=\"nt\">(divide)</span><br>So the square has $\\frac{\\pi}{4}$ of the circle’s area, about 79%.",
+    "check": "$P = 8\\pi$: square side $2\\pi$, area $4\\pi^{2}$; circle $r = 4$, area $16\\pi$; $\\frac{4\\pi^{2}}{16\\pi} = \\frac{\\pi}{4} \\approx 0.79$, less than 1 ✓",
+    "be_careful": "The perimeter of a circle is $2\\pi r$, not $2r$.",
+    "desmos": "No numbers are given, so there is nothing to graph.",
+    "another_way": "Pick $P = 4$: square area 1; $r = \\frac{2}{\\pi}$, circle area $\\frac{4}{\\pi}$; ratio $\\frac{\\pi}{4}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-025",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C2"
+   ],
+   "family": "box-from-three-face-areas",
+   "signature": "box faces 24, 30, 20 -> (lwh)^2 = 14,400 -> 120; traps 148 (SA), 720 (product of two), 14,400",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The three faces of a rectangular box that meet at one corner have areas of 24, 30, and 20 square centimeters. What is the volume, in cubic centimeters, of the box?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$120$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$148$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "148 is the total surface area, $2(24 + 30 + 20)$."
+    },
+    {
+     "key": "C",
+     "text": "$720$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This multiplies only two face areas, $24 \\times 30$."
+    },
+    {
+     "key": "D",
+     "text": "$14,400$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This is $(lwh)^{2}$; the volume is its square root."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Multiplying the three face areas gives $(lw)(wh)(lh) = (lwh)^{2}$, the square of the volume.",
+    "steps": "What does the question ask? $V = lwh$.<br><b>Plan.</b> Each face area is a product of two edges. Multiplying all three products uses every edge twice, which gives the square of the volume.<br>$lw = 24$, $wh = 30$, $lh = 20$ <span class=\"nt\">(the three faces)</span><br>$(lw)(wh)(lh) = 24 \\times 30 \\times 20 = 14,400$ <span class=\"nt\">(multiply all three)</span><br>$l^{2}w^{2}h^{2} = (lwh)^{2} = 14,400$ <span class=\"nt\">(each length appears twice)</span><br>$lwh = \\sqrt{14,400} = 120$ <span class=\"nt\">(volume is positive)</span><br>So the volume of the box is 120 cubic centimeters.",
+    "check": "Dimensions 4, 6, 5: $4 \\times 6 = 24$, $6 \\times 5 = 30$, $4 \\times 5 = 20$, and $4 \\times 6 \\times 5 = 120$ ✓",
+    "be_careful": "The product of the three areas is the volume SQUARED.",
+    "desmos": "Not needed.",
+    "another_way": "Find the edges: $\\frac{lw \\cdot lh}{wh} = l^{2} = \\frac{24 \\times 20}{30} = 16$, so $l = 4$, then $w = 6$, $h = 5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-026",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C2"
+   ],
+   "family": "cylinder-volume-over-curved",
+   "signature": "V = 384pi and curved area 96pi -> V/(curved) = r/2 = 4 -> r = 8 -> h = 6; traps 4 (ratio stop), 8 (radius), 12 (ratio taken as r)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A right circular cylinder has a volume of $384\\pi$ cubic feet, and the area of its curved surface is $96\\pi$ square feet. (The area of the curved surface is $2\\pi rh$, where $r$ is the radius and $h$ is the height.) What is the height, in feet, of the cylinder?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "4 is the quotient $\\frac{384\\pi}{96\\pi}$, which equals $\\frac{r}{2}$, not the height."
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "8 is the radius, not the height."
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats the quotient 4 as the radius: $2\\pi(4)h = 96\\pi$ gives 12, but then $\\pi(4^{2})(12) = 192\\pi$, not $384\\pi$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Divide the volume by the curved area: $\\frac{\\pi r^{2}h}{2\\pi rh} = \\frac{r}{2}$. The height cancels, so the radius comes out first.",
+    "steps": "What does the question ask? The height $h$.<br><b>Plan.</b> Both facts contain $r$ and $h$. Dividing one by the other cancels $h$ and leaves the radius alone.<br>$\\frac{\\pi r^{2}h}{2\\pi rh} = \\frac{384\\pi}{96\\pi}$ <span class=\"nt\">(divide volume by curved area)</span><br>$\\frac{r}{2} = 4$ <span class=\"nt\">($\\pi$, $r$, and $h$ cancel)</span><br>$r = 8$ <span class=\"nt\">(multiply by 2)</span><br>$2\\pi(8)h = 96\\pi$ <span class=\"nt\">(curved surface)</span><br>$16h = 96$, so $h = 6$ <span class=\"nt\">(divide by $16\\pi$)</span><br>So the height of the cylinder is 6 feet.",
+    "check": "$\\pi(8^{2})(6) = 384\\pi$ ✓ and $2\\pi(8)(6) = 96\\pi$ ✓",
+    "be_careful": "The quotient 4 is $\\frac{r}{2}$, not $r$ and not $h$. Check both given facts at the end.",
+    "desmos": "Desmos can intersect $\\pi x^{2}y = 384\\pi$ and $2\\pi xy = 96\\pi$, but seeing $\\frac{r}{2}$ is faster.",
+    "another_way": "From $2\\pi rh = 96\\pi$, $rh = 48$. Then $\\pi r(rh) = 48\\pi r = 384\\pi$, so $r = 8$ and $h = 6$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-027",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C5"
+   ],
+   "family": "model-statue-mass-units",
+   "signature": "model 30 cm, statue 4.5 m -> k = 15 -> mass 2 kg x 3375 = 6750 kg; traps 30 (k), 450 (k^2), 3375 (k^3 without 2)",
+   "abilities": [
+    "G",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A sculptor makes a solid model of a statue out of the same material as the statue. The model is similar to the statue. The model is 30 centimeters tall and has a mass of 2 kilograms, and the statue is 4.5 meters tall. Assuming mass is proportional to volume, what is the mass, in kilograms, of the statue?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies 2 by the height ratio 15. Mass follows volume, which grows by $15^{3}$."
+    },
+    {
+     "key": "B",
+     "text": "$450$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies 2 by $15^{2}$, an area factor."
+    },
+    {
+     "key": "C",
+     "text": "$3,375$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "3,375 is $15^{3}$, the volume factor, before multiplying by the model’s 2 kilograms."
+    },
+    {
+     "key": "D",
+     "text": "$6,750$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Convert to the same unit, find the length factor $k$, and scale mass by $k^{3}$.",
+    "steps": "What does the question ask? The statue’s mass.<br><b>Plan.</b> Mass follows volume when the material is the same. Find the length factor in matching units, then cube it.<br>$4.5 \\text{ m} = 450 \\text{ cm}$ <span class=\"nt\">(same units)</span><br>$k = \\frac{450}{30} = 15$ <span class=\"nt\">(length factor)</span><br>volume factor $= 15^{3} = 3,375$ <span class=\"nt\">(same material, so mass factor too)</span><br>$2 \\times 3,375 = 6,750$ <span class=\"nt\">(kilograms)</span><br>So the statue has a mass of 6,750 kilograms.",
+    "check": "$\\frac{6,750}{2} = 3,375 = 15^{3}$ ✓",
+    "be_careful": "Change meters to centimeters first; $\\frac{4.5}{30}$ mixes units.",
+    "desmos": "Not needed.",
+    "another_way": "Each length is 15 times as long, so the statue holds $15 \\times 15 \\times 15$ copies of the model’s material."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-028",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C6",
+    "G1.C3"
+   ],
+   "family": "sphere-in-cylinder-gap-to-surface",
+   "signature": "sphere inscribed in cylinder: h = 2r; gap volume 2pi r^3 - (4/3)pi r^3 = (2/3)pi r^3 = 144pi -> r = 6; total surface 6pi r^2 = 216pi; traps 144 (curved only), 180 (one base)",
+   "abilities": [
+    "M",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A sphere is placed inside a right circular cylinder so that the sphere touches both circular bases of the cylinder and touches the curved surface of the cylinder all the way around. The volume of the space inside the cylinder but outside the sphere is $144\\pi$ cubic units. The total surface area of the cylinder, including both bases, is $k\\pi$ square units. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "216"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "144",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "144 is the curved surface only, $2\\pi r(2r) = 4\\pi r^{2}$. The question includes both bases."
+    },
+    {
+     "value": "180",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This counts only one base: $\\pi r^{2} + 4\\pi r^{2} = 5\\pi r^{2}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "A sphere that touches both bases and the curved side has the same radius as the cylinder, and the cylinder’s height is the sphere’s diameter.",
+    "steps": "What does the question ask? $k$ in the total surface area $k\\pi$ of the cylinder.<br><b>Plan.</b> The amount of water does not change when it is poured. Find the water volume in the cone, then find the depth that holds the same volume in the cylinder.<br>Step 1: Shared measurements.<br>radius $r$ for both; height $= 2r$ <span class=\"nt\">(the sphere touches the curved side and both bases)</span><br>Step 2: Use the volume between them.<br>cylinder: $\\pi r^{2}(2r) = 2\\pi r^{3}$ <span class=\"nt\">(reference sheet)</span><br>sphere: $\\frac{4}{3}\\pi r^{3}$ <span class=\"nt\">(reference sheet)</span><br>$2\\pi r^{3} - \\frac{4}{3}\\pi r^{3} = \\frac{2}{3}\\pi r^{3} = 144\\pi$ <span class=\"nt\">(space outside the sphere)</span><br>$r^{3} = 216$, so $r = 6$ <span class=\"nt\">(multiply by $\f{3}{2}$, then take the cube root)</span><br>Step 3: Total surface area.<br>$2\\pi(6^{2}) + 2\\pi(6)(12) = 72\\pi + 144\\pi = 216\\pi$ <span class=\"nt\">(two bases plus the curved surface)</span><br>So $k = 216$.<br>So the water in the cylinder is 7.5 inches deep.",
+    "check": "Cylinder $2\\pi(216) = 432\\pi$, sphere $\\frac{4}{3}\\pi(216) = 288\\pi$, difference $144\\pi$ ✓",
+    "be_careful": "The height is $2r$, not $r$, and the total surface area has two bases.",
+    "desmos": "Not needed.",
+    "another_way": "With $h = 2r$, the total surface area is $2\\pi r^{2} + 4\\pi r^{2} = 6\\pi r^{2} = 6\\pi(36)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-029",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C1"
+   ],
+   "family": "stadium-region",
+   "signature": "figure: region = rectangle with semicircles on both ends, total length 20, width 8 -> 12*8 + 16pi = 96 + 16pi; traps 96 + 32pi, 160 + 16pi, 96 + 64pi",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The region shown is made of a rectangle with a semicircle attached to each of two opposite sides. Each semicircle has a diameter of 8 units, and the total length of the region, from the end of one semicircle to the end of the other, is 20 units.",
+   "stem_after_figure": "What is the area of the region?",
+   "figures": [
+    {
+     "id": "QB-G1-029-fig1",
+     "file": "figures/QB-G1-029-fig1.svg",
+     "alt": "A shaded running-track shape: a rectangle with a half circle on its left and right ends. The height of the region is labeled 8 and the total length from the left end of one curve to the right end of the other is labeled 20."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$96 + 16\\pi$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$96 + 32\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This counts each semicircle as a full circle. Two halves make ONE circle of area $16\\pi$."
+    },
+    {
+     "key": "C",
+     "text": "$160 + 16\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This uses 20 as the length of the rectangle, but 20 includes the two rounded ends."
+    },
+    {
+     "key": "D",
+     "text": "$96 + 64\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses the diameter 8 as the radius."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The 20 includes a radius at each end; the rectangle is only $20 - 8 = 12$ long, and two semicircles make one circle.",
+    "steps": "What does the question ask? The total area.<br><b>Plan.</b> Split the region into a rectangle and two semicircles. The two semicircles together make one full circle.<br>radius $= 4$ <span class=\"nt\">(half of 8)</span><br>rectangle length $= 20 - 4 - 4 = 12$ <span class=\"nt\">(remove a radius at each end)</span><br>rectangle: $12 \\times 8 = 96$ <span class=\"nt\">(length times width)</span><br>two semicircles $= $ one circle: $\\pi(4^{2}) = 16\\pi$ <span class=\"nt\">(combine the ends)</span><br>$96 + 16\\pi$ <span class=\"nt\">(total)</span><br>So the area of the region is $96 + 16\\pi$ square units.",
+    "check": "$96 + 16\\pi \\approx 146$, which is less than the $20 \\times 8 = 160$ box around the region ✓",
+    "be_careful": "The total length is not the rectangle’s length.",
+    "desmos": "Not needed.",
+    "another_way": "Start from the $20 \\times 8$ box (160) and remove four corner pieces, each a $4 \\times 4$ square minus a quarter circle: $160 - (64 - 16\\pi) = 96 + 16\\pi$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-030",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C5",
+    "G1.C2"
+   ],
+   "family": "cylinder-percent-two-changes",
+   "signature": "cylinder radius +10%, height -10% -> 1.21*0.9 = 1.089 -> +8.9%; traps -1% (1.1*0.9), no change, +21%",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The radius of a right circular cylinder is increased by 10%, and the height of the cylinder is decreased by 10%. Which of the following describes the change in the volume of the cylinder?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It decreases by 1%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses $1.1 \\times 0.9 = 0.99$, treating the radius as if it were not squared."
+    },
+    {
+     "key": "B",
+     "text": "It does not change.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "A 10% increase and a 10% decrease do not cancel, and the radius counts twice."
+    },
+    {
+     "key": "C",
+     "text": "It increases by 8.9%.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "It increases by 21%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "21% is the effect of the radius alone; the height decrease is ignored."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Multiply the factors: the radius factor is squared, the height factor is used once.",
+    "steps": "What does the question ask? The percent change in $V = \\pi r^{2}h$.<br><b>Plan.</b> Write each change as a factor and multiply the factors. The radius is squared in the volume formula.<br>radius factor $1.1$, height factor $0.9$ <span class=\"nt\">(10% up, 10% down)</span><br>$V_{new} = \\pi(1.1r)^{2}(0.9h)$ <span class=\"nt\">(substitute)</span><br>$= (1.21)(0.9)\\pi r^{2}h = 1.089\\pi r^{2}h$ <span class=\"nt\">(multiply the factors)</span><br>$1.089$ means an increase of 8.9%.<br>So the volume increases by 8.9%.",
+    "check": "$r = 10$, $h = 10$: $V = 1,000\\pi$. New: $\\pi(11^{2})(9) = 1,089\\pi$ ✓",
+    "be_careful": "Squaring the radius factor is what makes the volume grow.",
+    "desmos": "Not needed.",
+    "another_way": "$1.1^{2} \\times 0.9 = 1.089$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-031",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C2"
+   ],
+   "family": "pipe-wall-volume",
+   "signature": "pipe inside diameter 6, length 20, material 320pi -> pi(R^2 - 9)20 = 320pi, R = 5, wall 5 - 3 = 2; traps 5 (outer radius), 4 (sqrt of 16)",
+   "abilities": [
+    "M",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A pipe is shaped like a hollow right circular cylinder. The inside diameter of the pipe is 6 centimeters, the pipe is 20 centimeters long, and the volume of the material that makes up the pipe is $320\\pi$ cubic centimeters. What is the thickness, in centimeters, of the wall of the pipe?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "5 is the outside radius. The wall thickness is the outside radius minus the inside radius."
+    },
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This takes $\\sqrt{R^{2} - 9} = \\sqrt{16} = 4$ as the thickness. The thickness is $R - 3$, and $R^{2} - 9 = 16$ gives $R = 5$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Material = outer cylinder minus the hollow inside. Solve for the outer radius, then subtract the inner radius.",
+    "steps": "What does the question ask? The wall thickness, outer radius minus inner radius.<br><b>Plan.</b> The material is the large solid cylinder minus the hollow inside. Find the outer and inner radii first.<br>inner radius $= \\frac{6}{2} = 3$ <span class=\"nt\">(half the inside diameter)</span><br>$\\pi R^{2}(20) - \\pi(3^{2})(20) = 320\\pi$ <span class=\"nt\">(outer cylinder minus the hollow)</span><br>$20(R^{2} - 9) = 320$, so $R^{2} - 9 = 16$ <span class=\"nt\">(divide by $\\pi$, then by 20)</span><br>$R^{2} = 25$, so $R = 5$ <span class=\"nt\">(a radius is positive)</span><br>thickness $= 5 - 3 = 2$ <span class=\"nt\">(finish line)</span><br>So the material has a volume of $320\\pi$ cubic centimeters, and $k = 320$.",
+    "check": "$\\pi(25 - 9)(20) = 320\\pi$ ✓",
+    "be_careful": "$R^{2} - 3^{2} = 16$ does not mean $R - 3 = 4$: solve for $R$ first.",
+    "desmos": "Not needed.",
+    "another_way": "Outside diameter $= 10$ and inside diameter $= 6$, so the wall is $\\frac{10 - 6}{2} = 2$ thick."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-032",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C1"
+   ],
+   "family": "rectangle-growth-area",
+   "signature": "length = 2w + 4; each dimension +3 -> area +75 -> 9w + 21 = 75 -> w = 6 -> area 96; traps 6, 16, 75",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The length of a rectangle is 4 inches more than twice its width. If both the length and the width were increased by 3 inches, the area of the rectangle would increase by 75 square inches. What is the area, in square inches, of the original rectangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "6 is the width, not the area."
+    },
+    {
+     "key": "B",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "16 is the length, not the area."
+    },
+    {
+     "key": "C",
+     "text": "$75$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "75 is the INCREASE in area given in the problem."
+    },
+    {
+     "key": "D",
+     "text": "$96$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Write the new area minus the old area; the squared terms cancel and leave a linear equation.",
+    "steps": "What does the question ask? The original area $w(2w + 4)$.<br><b>Plan.</b> Write the old and new areas in terms of the width, then set their difference equal to the given increase.<br>old: $w(2w + 4) = 2w^{2} + 4w$ <span class=\"nt\">(width $w$)</span><br>new: $(w + 3)(2w + 7) = 2w^{2} + 13w + 21$ <span class=\"nt\">(each side plus 3)</span><br>$(2w^{2} + 13w + 21) - (2w^{2} + 4w) = 9w + 21$ <span class=\"nt\">(increase)</span><br>$9w + 21 = 75$, so $w = 6$ <span class=\"nt\">(solve)</span><br>area $= 6(16) = 96$ <span class=\"nt\">(length $2(6) + 4 = 16$)</span><br>So the original area of the rectangle is 96 square inches.",
+    "check": "New rectangle $9 \\times 19 = 171$, and $171 - 96 = 75$ ✓",
+    "be_careful": "Finish with the AREA; $w = 6$ is only a step.",
+    "desmos": "Desmos can solve $(w+3)(2w+7) - w(2w+4) = 75$, but the area is still one more step.",
+    "another_way": "The extra region is an L-shape: $3w + 3(2w + 4) + 9 = 9w + 21$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-033",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C5"
+   ],
+   "family": "two-changes-then-restore",
+   "signature": "length +20%, width -20% -> area x0.96; restore by raising new width by 1/0.96 = 25/24 -> 4 1/6 %; traps 16 2/3 (undo length), 20 (same percent back), 25 (undo width only)",
+   "abilities": [
+    "G",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The length of a rectangle is increased by 20%, and the width is decreased by 20%. By what percent must the new width then be increased so that the area of the rectangle is the same as the original area?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4\\frac{1}{6}\\%$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$16\\frac{2}{3}\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "$16\\frac{2}{3}\\%$ is the decrease that would undo the 20% increase in LENGTH; the width is what changes now."
+    },
+    {
+     "key": "C",
+     "text": "$20\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "A 20% decrease is not undone by a 20% increase: $0.8 \\times 1.2 = 0.96$."
+    },
+    {
+     "key": "D",
+     "text": "$25\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "A 25% increase restores the original WIDTH, but the length is still 20% longer, so the area would be too big."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Use factors: the area has been multiplied by $1.2 \\times 0.8$. The new factor must bring the product back to 1.",
+    "steps": "What does the question ask? The percent increase of the new width that makes the area factor 1.<br><b>Plan.</b> Write each change as a factor, multiply, and find the factor that brings the product back to 1.<br>area factor so far $= 1.2 \\times 0.8 = 0.96$ <span class=\"nt\">(multiply the factors)</span><br>needed factor $= \\frac{1}{0.96} = \\frac{100}{96} = \\frac{25}{24}$ <span class=\"nt\">(so that $0.96 \\times$ factor $= 1$)</span><br>$\\frac{25}{24} = 1 + \\frac{1}{24}$, and $\\frac{1}{24} = 4\\frac{1}{6}\\%$ <span class=\"nt\">(factor minus 1)</span><br>So the new width must be increased by $4\\frac{1}{6}\\%$.",
+    "check": "$10 \\times 10 = 100$; then $12 \\times 8 = 96$; $8 \\times \\frac{25}{24} = \\frac{25}{3}$, and $12 \\times \\frac{25}{3} = 100$ ✓",
+    "be_careful": "Percents of different bases do not cancel: up 20% then down 20% is a 4% loss, and the fix is a percent of the smaller area.",
+    "desmos": "Not needed; one factor equation does it.",
+    "another_way": "Use 100 for the original area: the new area is 96, and $\\frac{100 - 96}{96} = \\frac{4}{96} = \\frac{1}{24}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-034",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C3"
+   ],
+   "family": "pyramid-to-cube-center-fraction",
+   "signature": "pyramid: base = one face of a cube (edge e), apex at center -> (1/3)e^2(e/2) = e^3/6 -> outside 5/6; traps 1/6 (inside), 2/3 (h = e), 1/2 (no 1/3)",
+   "abilities": [
+    "G",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A pyramid has one face of a cube as its base, and its top vertex is at the center of the cube. What fraction of the cube’s volume is outside the pyramid?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{1}{6}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "$\\frac{1}{6}$ is the part INSIDE the pyramid; the question asks for the part outside."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This leaves out the $\\frac{1}{3}$: $e^{2} \\cdot \\frac{e}{2} = \\frac{e^{3}}{2}$ inside, so $\\frac{1}{2}$ outside."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses a full edge as the height, so the pyramid is $\\frac{1}{3}$ of the cube. The center is only half an edge above the base."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{5}{6}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Call the edge $e$. The center of the cube is $\\frac{e}{2}$ above the base, so the pyramid is $\\frac{1}{3}e^{2}\\cdot\\frac{e}{2} = \\frac{e^{3}}{6}$.",
+    "steps": "What does the question ask? The fraction of the cube NOT in the pyramid.<br><b>Plan.</b> No lengths are given, so call the edge $e$. The pyramid’s height is the distance from a face to the center of the cube.<br>edge $= e$, cube $= e^{3}$ <span class=\"nt\">(no number is given, so name the edge)</span><br>base area $= e^{2}$ <span class=\"nt\">(one face of the cube)</span><br>height $= \\frac{e}{2}$ <span class=\"nt\">(from a face to the center of the cube)</span><br>pyramid $= \\frac{1}{3}(e^{2})(\\frac{e}{2}) = \\frac{e^{3}}{6}$ <span class=\"nt\">(pyramid volume)</span><br>outside $= 1 - \\frac{1}{6} = \\frac{5}{6}$ <span class=\"nt\">(whole cube minus the pyramid)</span><br>So $\\frac{5}{6}$ of the cube’s volume is outside the pyramid.",
+    "check": "Edge 6: cube 216, pyramid $\\frac{1}{3}(36)(3) = 36$, outside $180$, and $\\frac{180}{216} = \\frac{5}{6}$ ✓",
+    "be_careful": "The top is at the CENTER of the cube (height $\\frac{e}{2}$), and the question asks for the part OUTSIDE.",
+    "desmos": "Not needed; there is nothing to graph.",
+    "another_way": "Six such pyramids, one on each face, meet at the center and fill the cube, so one pyramid is $\\frac{1}{6}$ and the rest is $\\frac{5}{6}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-035",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C3"
+   ],
+   "family": "cube-in-sphere-space-diagonal",
+   "signature": "cube with all 8 vertices on a sphere -> sphere diameter = space diagonal s*sqrt3 -> V_cube/V_sphere = 2sqrt3/(3pi); traps 3sqrt2/(2pi) (face diagonal), pi/6 (sphere-in-cube picture), sqrt3 pi/2 (ratio upside down)",
+   "abilities": [
+    "G",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A cube is placed inside a sphere so that all eight vertices of the cube touch the sphere. The volume of the cube is what fraction of the volume of the sphere?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{2\\sqrt{3}}{3\\pi}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{\\pi}{6}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "$\\frac{\\pi}{6}$ is the answer for a sphere inside a cube touching its faces, the opposite picture, and it compares sphere to cube."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{3\\sqrt{2}}{2\\pi}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the diagonal of one FACE, $s\\sqrt{2}$, as the diameter. The two farthest corners of a cube are joined by the space diagonal, $s\\sqrt{3}$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{\\sqrt{3}\\pi}{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D9",
+     "feedback": "This is sphere $\\div$ cube, the ratio upside down. A cube inside the sphere must be less than 1 of it."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The sphere passes through opposite corners of the cube, so its diameter is the cube’s space diagonal, $s\\sqrt{3}$.",
+    "steps": "What does the question ask? $\\frac{V_{cube}}{V_{sphere}}$.<br><b>Plan.</b> The sphere passes through two opposite corners of the cube. Find that corner-to-corner distance in terms of the edge.<br>Let the edge be $s$; face diagonal $= s\\sqrt{2}$ <span class=\"nt\">(Pythagorean theorem on one face)</span><br>space diagonal $= \\sqrt{(s\\sqrt{2})^{2} + s^{2}} = \\sqrt{3s^{2}} = s\\sqrt{3}$ <span class=\"nt\">(face diagonal and a vertical edge)</span><br>$r = \\frac{s\\sqrt{3}}{2}$ <span class=\"nt\">(the space diagonal is a diameter)</span><br>$V_{sphere} = \\frac{4}{3}\\pi(\\frac{s\\sqrt{3}}{2})^{3} = \\frac{4}{3}\\pi \\cdot \\frac{3\\sqrt{3}s^{3}}{8} = \\frac{\\sqrt{3}\\pi s^{3}}{2}$ <span class=\"nt\">(cube the radius)</span><br>$\\frac{s^{3}}{\\frac{\\sqrt{3}\\pi s^{3}}{2}} = \\frac{2}{\\sqrt{3}\\pi} = \\frac{2\\sqrt{3}}{3\\pi}$ <span class=\"nt\">(divide and rationalize)</span><br>So the cube fills $\\frac{2\\sqrt{3}}{3\\pi}$ of the sphere, about 37%.",
+    "check": "$\\frac{2\\sqrt{3}}{3\\pi} \\approx 0.37$: less than 1 ✓, and less than $\\frac{\\pi}{6} \\approx 0.52$, which makes sense because a cube leaves big gaps near the sphere’s surface ✓",
+    "be_careful": "The diameter joins OPPOSITE corners through the inside of the cube, not across one face.",
+    "desmos": "No numbers are given, so there is nothing to graph; Desmos can only turn the choices into decimals after the geometry is done.",
+    "another_way": "Pick $s = 2$: space diagonal $2\\sqrt{3}$, $r = \\sqrt{3}$, sphere $\\frac{4}{3}\\pi(3\\sqrt{3}) = 4\\sqrt{3}\\pi$, cube 8, ratio $\\frac{8}{4\\sqrt{3}\\pi} = \\frac{2}{\\sqrt{3}\\pi}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-036",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C4",
+    "G1.C2"
+   ],
+   "family": "box-surface-quadratic",
+   "signature": "square-base box height 5, total SA 288 -> 2s^2 + 20s = 288 -> s = 8 -> V 320; traps 64 (base area), 40 (side face), 1440",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A closed rectangular box has a square base and a height of 5 inches. The total surface area of the box is 288 square inches. What is the volume, in cubic inches, of the box?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$40$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "40 is the area of one side face, $8 \\times 5$."
+    },
+    {
+     "key": "B",
+     "text": "$64$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "64 is the area of the base, found on the way."
+    },
+    {
+     "key": "C",
+     "text": "$320$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$1,440$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies the surface area by the height, mixing area and volume."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Write the surface area in terms of the base edge $s$, solve the quadratic, then find the volume.",
+    "steps": "What does the question ask? $V = 5s^{2}$, where $s$ is the base edge.<br>top and bottom: $2s^{2}$ <span class=\"nt\">(two squares)</span><br>four sides: $4(5s) = 20s$ <span class=\"nt\">(each side is $s$ by 5)</span><br>$2s^{2} + 20s = 288$ <span class=\"nt\">(total surface area)</span><br>$s^{2} + 10s - 144 = 0$ <span class=\"nt\">(divide by 2)</span><br>$(s + 18)(s - 8) = 0$, so $s = 8$ <span class=\"nt\">(check: $(s + 18)(s - 8) = s^{2} + 10s - 144$; $s > 0$)</span><br>$V = 8^{2}(5) = 320$ <span class=\"nt\">(volume)</span>",
+    "check": "$2(64) + 4(40) = 128 + 160 = 288$ ✓",
+    "be_careful": "Count all six faces: the box is closed.",
+    "desmos": "Desmos can solve $2s^{2} + 20s = 288$ (graph and read $s = 8$), but the setup is the hard part.",
+    "another_way": "Test integer edges: $s = 8$ gives $128 + 160 = 288$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-037",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C5",
+    "G1.C6"
+   ],
+   "family": "cone-tank-fill-time",
+   "signature": "inverted cone filled at constant rate, 8 min to half height -> 1/8 of volume -> total 64 -> 56 more; traps 8 (linear), 24 (k^2), 16 (linear total)",
+   "abilities": [
+    "G",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A tank shaped like a right circular cone, with its vertex pointing down, is being filled with water at a constant rate. It takes 8 minutes for the water to reach half the height of the tank. At this rate, how many more minutes will it take to fill the tank completely?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This assumes the volume grows in step with the depth."
+    },
+    {
+     "key": "B",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "16 is the total time if volume grew with depth, not the additional time."
+    },
+    {
+     "key": "C",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses an area factor, $2^{2} = 4$, so total 32 and 24 more; the water fills a VOLUME."
+    },
+    {
+     "key": "D",
+     "text": "$56$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The water forms a smaller cone similar to the tank; at half the height it holds $(\\frac{1}{2})^{3} = \\frac{1}{8}$ of the tank.",
+    "steps": "What does the question ask? The extra minutes after the first 8.<br>water cone : tank $= 1 : 2$ in every length <span class=\"nt\">(similar cones, vertex down)</span><br>water volume $= (\\frac{1}{2})^{3} = \\frac{1}{8}$ of the tank <span class=\"nt\">(volume scales by $k^{3}$)</span><br>8 minutes $\\to \\frac{1}{8}$ of the tank, so full takes $8 \\times 8 = 64$ minutes <span class=\"nt\">(constant rate)</span><br>$64 - 8 = 56$ <span class=\"nt\">(more minutes)</span>",
+    "check": "In 8 minutes, $\\frac{1}{8}$ fills; in the next 56 minutes, $\\frac{7}{8}$ fills, the same rate ✓",
+    "be_careful": "The bottom half of the height is the NARROW part, so it holds far less than half the water.",
+    "desmos": "Not needed.",
+    "another_way": "Use the formula: $\\frac{\\frac{1}{3}\\pi(\\frac{r}{2})^{2}(\\frac{h}{2})}{\\frac{1}{3}\\pi r^{2}h} = \\frac{1}{8}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-038",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C1"
+   ],
+   "family": "midpoint-triangle-in-rectangle",
+   "signature": "figure: rectangle PQRS area 48, M midpoint of SR, N midpoint of RQ, triangle PMN -> 3/8 * 48 = 18; traps 6, 12, 16",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, $PQRS$ is a rectangle with an area of 48 square units. Point $M$ is the midpoint of side $SR$, and point $N$ is the midpoint of side $RQ$.",
+   "stem_after_figure": "What is the area, in square units, of triangle $PMN$?",
+   "figures": [
+    {
+     "id": "QB-G1-038-fig1",
+     "file": "figures/QB-G1-038-fig1.svg",
+     "alt": "Rectangle PQRS with P at the bottom left, Q bottom right, R top right, S top left. M is the midpoint of the top side SR and N is the midpoint of the right side RQ, both marked with tick marks. Triangle PMN is shaded."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is the area of the small corner triangle $MRN$, one of the pieces to remove."
+    },
+    {
+     "key": "B",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "12 is the area of triangle $PSM$ (or $PQN$), one quarter of the rectangle."
+    },
+    {
+     "key": "C",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This assumes triangle $PMN$ is one third of the rectangle; the pieces around it are not equal."
+    },
+    {
+     "key": "D",
+     "text": "$18$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Subtract the three right triangles around triangle $PMN$; the answer does not depend on the side lengths.",
+    "steps": "What does the question ask? The area of triangle $PMN$.<br>Let the rectangle be $\\ell$ long and $w$ tall, so $\\ell w = 48$.<br>$\\triangle PSM$: $\\frac{1}{2}(\\frac{\\ell}{2})(w) = \\frac{\\ell w}{4} = 12$ <span class=\"nt\">(legs $SM$ and $SP$)</span><br>$\\triangle PQN$: $\\frac{1}{2}(\\ell)(\\frac{w}{2}) = \\frac{\\ell w}{4} = 12$ <span class=\"nt\">(legs $PQ$ and $QN$)</span><br>$\\triangle MRN$: $\\frac{1}{2}(\\frac{\\ell}{2})(\\frac{w}{2}) = \\frac{\\ell w}{8} = 6$ <span class=\"nt\">(corner triangle)</span><br>$48 - 12 - 12 - 6 = 18$ <span class=\"nt\">(what is left)</span>",
+    "check": "Try $\\ell = 8$, $w = 6$ with $P(0, 0)$, $M(4, 6)$, $N(8, 3)$: area $= \\frac{1}{2}|4(3) - 6(8)| = \\frac{1}{2}(36) = 18$ ✓",
+    "be_careful": "The lengths are not given and are not needed; any rectangle of area 48 gives 18.",
+    "desmos": "Not needed.",
+    "another_way": "In fractions of the rectangle: $1 - \\frac{1}{4} - \\frac{1}{4} - \\frac{1}{8} = \\frac{3}{8}$, and $\\frac{3}{8}(48) = 18$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-039",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C2"
+   ],
+   "family": "volume-equals-lateral-must",
+   "signature": "cylinder whose volume (cubic units) equals its curved-surface area 2pi r h (square units) -> pi r^2 h = 2pi r h -> r = 2 for any h; MC must be true",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For a certain right circular cylinder, the volume, in cubic units, is equal to the area of its curved surface, in square units. (The area of the curved surface is $2\\pi rh$, where $r$ is the radius and $h$ is the height.) Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The height is 2 units.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "Height cancels from both sides, so it can be any positive number."
+    },
+    {
+     "key": "B",
+     "text": "The radius is equal to the height.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "A cylinder with $r = h = 2$ works, but so does $r = 2$, $h = 9$; this could be true, not must."
+    },
+    {
+     "key": "C",
+     "text": "The diameter is 2 units.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "The RADIUS is 2; the diameter is 4."
+    },
+    {
+     "key": "D",
+     "text": "The radius is 2 units.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Set the formulas equal and divide by $\\pi rh$; the height cancels and only the radius is fixed.",
+    "steps": "What does the question ask? What is forced by $V = $ curved area.<br>$\\pi r^{2}h = 2\\pi rh$ <span class=\"nt\">(volume equals curved surface)</span><br>$r = 2$ <span class=\"nt\">(divide both sides by $\\pi rh$, which is positive)</span><br>The height never appears in the result, so the height can be any positive value.<br>Only “the radius is 2 units” must be true.",
+    "check": "$r = 2$, $h = 7$: $V = 28\\pi$ and $2\\pi(2)(7) = 28\\pi$ ✓; $r = 3$, $h = 3$: $27\\pi \\ne 18\\pi$",
+    "be_careful": "“Must” means true for EVERY such cylinder; one example is not enough.",
+    "desmos": "Not needed.",
+    "another_way": "Think of $\\pi r^{2}h = 2\\pi rh$ as $(\\pi rh)(r) = (\\pi rh)(2)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-040",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H",
+   "concepts": [
+    "G1.C5",
+    "G1.C1"
+   ],
+   "family": "tiles-to-dimensions-perimeter",
+   "signature": "320 tiles 9 in square -> 180 sq ft; length 3 ft more than width -> w(w+3)=180 -> 12 by 15 -> perimeter 54; traps 72 (tiles around edge), 180 (area), 648 (inches)",
+   "abilities": [
+    "G",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A rectangular floor is covered completely, with no gaps or overlaps, by 320 square tiles that are each 9 inches on a side. The length of the floor is 3 feet more than its width. What is the perimeter, in feet, of the floor? (1 foot = 12 inches)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$54$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$72$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "72 counts TILES around the edge, $2(16 + 20)$. Each tile is only $\\frac{3}{4}$ foot long, so this is not a length in feet."
+    },
+    {
+     "key": "C",
+     "text": "$180$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "180 is the AREA of the floor in square feet, a stopping point."
+    },
+    {
+     "key": "D",
+     "text": "$648$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "648 is the perimeter in INCHES. The question asks for feet."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Tiles give the floor’s AREA. Turn it into square feet, then use the length-and-width relationship to find the two sides.",
+    "steps": "What does the question ask? The perimeter of the floor, in feet.<br><b>Plan.</b> The tiles give the floor’s AREA in square feet. Then the length-and-width rule turns the area into two side lengths.<br>one tile: $\\frac{9}{12} = \\frac{3}{4}$ foot on a side, area $\\frac{9}{16}$ square foot <span class=\"nt\">(change to feet first)</span><br>floor area $= 320 \\times \\frac{9}{16} = 180$ square feet <span class=\"nt\">(tiles cover the floor exactly)</span><br>$w(w + 3) = 180$ <span class=\"nt\">(length is 3 feet more than width)</span><br>$w^{2} + 3w - 180 = 0$, so $(w - 12)(w + 15) = 0$ <span class=\"nt\">(factor)</span><br>$w = 12$, length $= 15$ <span class=\"nt\">(a width must be positive)</span><br>perimeter $= 2(12 + 15) = 54$ feet <span class=\"nt\">(all four sides)</span><br>So the perimeter of the floor is 54 feet.",
+    "check": "$12 \\times 15 = 180$ ✓; along 12 ft fit $\\frac{144}{9} = 16$ tiles and along 15 ft fit $\\frac{180}{9} = 20$ tiles: $16 \\times 20 = 320$ ✓",
+    "be_careful": "A 9-inch side is $\\frac{3}{4}$ foot, so a tile is $\\frac{9}{16}$ square foot, not $\\frac{9}{12}$.",
+    "desmos": "Desmos can solve $w(w + 3) = 180$, but only after the units and area are set up by hand.",
+    "another_way": "Work in inches: area $= 320 \\times 81 = 25,920$ square inches, $\\div 144 = 180$ square feet."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-041",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C4",
+    "G1.C7"
+   ],
+   "family": "sa-slant-height-glued-pyramids",
+   "signature": "pyramid base 16, total SA 576 -> lateral 320 -> slant 10 -> h 6; second pyramid same base, height x2.5 = 15 -> slant 17 -> lateral 544; glued base to base -> 864; traps 1120 (lateral x2.5), 1376 (bases kept), 544",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 200,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Pyramid $P$ has a square base with edges 16 centimeters long, and its total surface area, including the base, is 576 square centimeters. Pyramid $Q$ has a base identical to the base of pyramid $P$, and the height of pyramid $Q$ is 2.5 times the height of pyramid $P$. The two pyramids are glued together base to base, so that the bases match exactly, to form a single solid. What is the total surface area, in square centimeters, of this solid?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "864"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1120",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies the side area of $P$ (320) by 2.5. Side area depends on the SLANT height, which does not grow by 2.5."
+    },
+    {
+     "value": "1376",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This keeps the two bases (256 each), but they are glued together and hidden inside the solid."
+    }
+   ],
+   "solution": {
+    "key_idea": "Peel off the base to get the four side triangles, use them to find the slant height and then the true height; build pyramid $Q$ from its own height, and count only the outside faces.",
+    "steps": "What does the question ask? The outside surface of the glued solid: the 4 side faces of $P$ plus the 4 side faces of $Q$.<br><b>Step 1: slant height of $P$.</b><br>base area $= 16^{2} = 256$ <span class=\"nt\">(square base)</span><br>side faces of $P$: $576 - 256 = 320$ <span class=\"nt\">(remove the base)</span><br>$4 \\cdot \\frac{1}{2}(16)\\ell = 32\\ell = 320$, so $\\ell = 10$ <span class=\"nt\">(four triangles, base 16, slant height $\\ell$)</span><br><b>Step 2: height of $P$.</b> The height, half a base edge (8), and the slant height form a right triangle.<br>$h^{2} + 8^{2} = 10^{2}$, so $h = 6$ <span class=\"nt\">(Pythagorean theorem)</span><br><b>Step 3: pyramid $Q$.</b><br>height of $Q$: $2.5 \\times 6 = 15$ <span class=\"nt\">(given)</span><br>slant height of $Q$: $\\sqrt{15^{2} + 8^{2}} = \\sqrt{289} = 17$ <span class=\"nt\">(same right triangle idea)</span><br>side faces of $Q$: $32(17) = 544$ <span class=\"nt\">(same base edge 16)</span><br><b>Step 4: finish line.</b> The bases are glued together, so neither is on the outside.<br>$320 + 544 = 864$ <span class=\"nt\">(total outside surface)</span>",
+    "check": "Height went up by 2.5 times, but slant height only went from 10 to 17 (1.7 times), so the side area went from 320 to $320 \\times 1.7 = 544$ ✓",
+    "be_careful": "Side area follows the slant height, not the height; and glued faces are not surface.",
+    "desmos": "Not needed; Desmos cannot find the slant height for a student who does not set up the right triangle.",
+    "another_way": "Track the right triangle (8, $h$, $\\ell$): $P$ is the 6-8-10 triangle and $Q$ is the 8-15-17 triangle. Side area $= 32\\ell$, so the total is $32(10 + 17) = 864$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-042",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C3"
+   ],
+   "family": "three-tangent-spheres-in-a-row",
+   "signature": "volumes ratio 27 -> radii r, 3r; middle radius is mean 2r; total volume 48pi r^3 = 384pi -> r 2 -> radii 2,4,6 -> outer centers r1 + 2r2 + r3 = 16; traps 8 (middle diameter), 12 (sum of radii), 24 (row length)",
+   "abilities": [
+    "G",
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Three spheres sit in a straight row, and each sphere touches the next one, so that all three centers lie on one line. The volume of the largest sphere is 27 times the volume of the smallest sphere, and the radius of the middle sphere is the average of the other two radii. The total volume of the three spheres is $384\\pi$ cubic centimeters. What is the distance, in centimeters, between the centers of the smallest and largest spheres?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 is the diameter of the middle sphere, only the middle part of the distance."
+    },
+    {
+     "key": "B",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This adds the three radii. Between the two outer centers lies the WHOLE middle sphere, its diameter."
+    },
+    {
+     "key": "C",
+     "text": "$16$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "24 is the length of the whole row, from end to end; the centers are inside the outer spheres."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A volume ratio of 27 is a radius ratio of 3. Then the total volume gives the actual radii, and the centers are separated by $r_{1} + 2r_{2} + r_{3}$.",
+    "steps": "What does the question ask? The distance between the two outer centers.<br><b>Plan.</b> Turn the volume facts into a radius ratio, use the total volume to get actual radii, then walk from center to center.<br>smallest radius $r$; largest $3r$ <span class=\"nt\">(volume ratio $27 = 3^{3}$)</span><br>middle radius $= \\frac{r + 3r}{2} = 2r$ <span class=\"nt\">(average of the other two)</span><br>$\\frac{4}{3}\\pi(r^{3} + 8r^{3} + 27r^{3}) = 48\\pi r^{3} = 384\\pi$ <span class=\"nt\">(total volume)</span><br>$r^{3} = 8$, so radii 2, 4, 6 <span class=\"nt\">(cube root)</span><br>distance $= 2 + (4 + 4) + 6 = 16$ <span class=\"nt\">(from center 1 to its edge, across the middle sphere, then to center 3)</span><br>So the two outer centers are 16 centimeters apart.",
+    "check": "$\\frac{4}{3}\\pi(8 + 64 + 216) = \\frac{4}{3}\\pi(288) = 384\\pi$ ✓ and $\\frac{216}{8} = 27$ ✓",
+    "be_careful": "From center to center, the middle sphere counts with its full diameter, but each outer sphere only with its radius.",
+    "desmos": "There is no single equation to graph until the radii are set up as $r$, $2r$, $3r$.",
+    "another_way": "Centers at positions 0, $2 + 4 = 6$, and $6 + 4 + 6 = 16$ along the line."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-043",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C5",
+    "G1.C6"
+   ],
+   "family": "sealed-cone-flipped",
+   "signature": "closed cone h 12, vertex up, water depth 6 (half height) -> water = 1 - 1/8 = 7/8 of cone; flipped vertex down -> (d/12)^3 = 7/8 -> d = 6 cbrt7; traps 6, 10.5 (linear), 3sqrt14 (square)",
+   "abilities": [
+    "G",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 200,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A closed container is shaped like a right circular cone with a height of 12 inches. The container rests on its circular base, with its vertex pointing up, and it holds water to a depth of 6 inches. The container is then turned over so that it rests on its vertex, with its base horizontal at the top. What is the depth, in inches, of the water now?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The depth stays 6 only if the shape were the same at the top and the bottom; a cone is not."
+    },
+    {
+     "key": "B",
+     "text": "$10.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This takes $\\frac{7}{8}$ of the height, treating volume as if it grew in step with depth."
+    },
+    {
+     "key": "C",
+     "text": "$3\\sqrt{14}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This is $12\\sqrt{\\frac{7}{8}}$, a square root. Similar cones scale volume by the CUBE of the length factor."
+    },
+    {
+     "key": "D",
+     "text": "$6\\sqrt[3]{7}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The empty space at first is a small cone similar to the container; find the water as a fraction of the whole, then turn the fraction into a depth with a cube root.",
+    "steps": "What does the question ask? The new depth $d$ when the water forms a cone with its vertex down.<br><b>Step 1: how much water?</b> Vertex up, the EMPTY part above the water is a cone similar to the container.<br>empty cone height $= 12 - 6 = 6$, so $k = \\frac{6}{12} = \\frac{1}{2}$ <span class=\"nt\">(length factor)</span><br>empty volume $= (\\frac{1}{2})^{3} = \\frac{1}{8}$ of the container <span class=\"nt\">(volume factor $k^{3}$)</span><br>water $= 1 - \\frac{1}{8} = \\frac{7}{8}$ of the container <span class=\"nt\">(the rest)</span><br><b>Step 2: flip it.</b> Vertex down, the water itself is a cone similar to the container, with height $d$.<br>$(\\frac{d}{12})^{3} = \\frac{7}{8}$ <span class=\"nt\">(its volume fraction)</span><br>$\\frac{d}{12} = \\frac{\\sqrt[3]{7}}{2}$ <span class=\"nt\">(cube root of both sides)</span><br>$d = 6\\sqrt[3]{7}$ <span class=\"nt\">(multiply by 12)</span>",
+    "check": "$6\\sqrt[3]{7} \\approx 11.48$: less than 12 (the container is not full) and more than 6, as expected because $\\frac{7}{8}$ of the water now fills the narrow end ✓",
+    "be_careful": "At first the WATER is not a cone (it is the bottom part); the empty top is the cone to scale.",
+    "desmos": "Not needed; Desmos only helps to evaluate $6\\sqrt[3]{7}$ after the reasoning is done.",
+    "another_way": "Let the full container hold 8 units. Empty top cone: 1 unit, so the water is 7 units. Upside down, a cone of depth $d$ holds $8(\\frac{d}{12})^{3}$ units: $8(\\frac{d}{12})^{3} = 7$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-044",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C3",
+    "G1.C1"
+   ],
+   "family": "sphere-inside-cone-cross-section",
+   "signature": "cone r 6, h 8, slant 10; sphere touches base and curved surface -> cross-section circle in isosceles triangle -> similar triangles r/(8-r) = 6/10 -> r 3 -> volume 36pi; traps 288 (r = 6), 256/3 (r = 4, half height)",
+   "abilities": [
+    "G",
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A right circular cone has a base radius of 6 inches and a height of 8 inches. A sphere is placed inside the cone so that it touches the base of the cone and touches the curved surface of the cone all the way around. The volume of the sphere is $k\\pi$ cubic inches. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "36"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "288",
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses the cone’s base radius, 6, as the sphere’s radius. That sphere would stick out of the cone."
+    },
+    {
+     "value": "256/3",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This puts the center halfway up the cone, $r = 4$. The sphere must also touch the slanted side."
+    }
+   ],
+   "solution": {
+    "key_idea": "Cut the cone through its axis: the sphere becomes a circle inside an isosceles triangle, and the radius to the slanted side makes a small right triangle similar to the big one.",
+    "steps": "What does the question ask? $k$, where the sphere’s volume is $\\frac{4}{3}\\pi r^{3}$.<br><b>Plan.</b> Slice the cone in half through its tip. The sphere becomes a circle inside a triangle, and similar right triangles give its radius.<br>cross-section: triangle with base 12, height 8, slanted sides $\\sqrt{36 + 64} = 10$ <span class=\"nt\">(cut through the apex and the center of the base)</span><br>sphere center on the axis, $r$ above the base, so $8 - r$ below the apex <span class=\"nt\">(it touches the base)</span><br>radius to the slanted side is perpendicular to it <span class=\"nt\">(touching point)</span><br>small right triangle (hypotenuse $8 - r$, leg $r$) is similar to the half-triangle (hypotenuse 10, leg 6) <span class=\"nt\">(same angle at the apex)</span><br>$\\frac{r}{8 - r} = \\frac{6}{10}$, so $10r = 48 - 6r$ and $r = 3$ <span class=\"nt\">(solve)</span><br>$\\frac{4}{3}\\pi(27) = 36\\pi$, so $k = 36$ <span class=\"nt\">(volume of the sphere)</span><br>So the sphere has a volume of $36\\pi$ cubic inches, and $k = 36$.",
+    "check": "Area of the triangle two ways: $\\frac{1}{2}(12)(8) = 48$, and splitting at the center, $\\frac{1}{2}r(10 + 10 + 12) = 16r = 48$ gives $r = 3$ ✓",
+    "be_careful": "The sphere touches the slanted side, so its radius is NOT the cone’s radius and its center is NOT halfway up.",
+    "desmos": "Nothing to graph until the cross-section and the similar triangles are drawn.",
+    "another_way": "Split the triangle into three triangles at the center, each with height $r$: $\\frac{1}{2}r(10) + \\frac{1}{2}r(10) + \\frac{1}{2}r(12) = 48$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-045",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C5",
+    "G1.C3"
+   ],
+   "family": "pyramid-frustum-to-whole",
+   "signature": "pyramid height 12 cut by plane parallel to base 4 above base; lower piece 380 -> top pyramid height 8, ratio 8/27 -> lower 19/27 -> whole 540; traps 570 (linear), 160 (top)",
+   "abilities": [
+    "G",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A pyramid has a height of 12 meters. A plane parallel to the base cuts the pyramid at a height of 4 meters above the base, dividing it into a smaller pyramid on top and a lower piece. The volume of the lower piece is 380 cubic meters. What is the volume, in cubic meters, of the original pyramid?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "540"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "570",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This treats the lower piece as $\\frac{8}{12}$ of the volume, as if volume grew in step with height."
+    },
+    {
+     "value": "160",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "160 is the volume of the small pyramid on top, found on the way."
+    }
+   ],
+   "solution": {
+    "key_idea": "The top piece is a pyramid similar to the original, with height 8 out of 12; its volume is $(\\frac{2}{3})^{3} = \\frac{8}{27}$ of the whole, so the lower piece is $\\frac{19}{27}$.",
+    "steps": "What does the question ask? The volume $V$ of the whole pyramid.<br><b>Plan.</b> The small pyramid cut off at the top is similar to the whole pyramid. Find its share of the volume, then the share left for the lower piece, and use the 380 to find the whole.<br>top pyramid height $= 12 - 4 = 8$ <span class=\"nt\">(the cut is 4 m above the BASE)</span><br>$k = \\frac{8}{12} = \\frac{2}{3}$ <span class=\"nt\">(top pyramid is similar to the whole)</span><br>top volume $= (\\frac{2}{3})^{3}V = \\frac{8}{27}V$ <span class=\"nt\">(volume factor $k^{3}$)</span><br>lower piece $= V - \\frac{8}{27}V = \\frac{19}{27}V$ <span class=\"nt\">(the rest)</span><br>$\\frac{19}{27}V = 380$ <span class=\"nt\">(given)</span><br>$V = 380 \\times \\frac{27}{19} = 20 \\times 27 = 540$ <span class=\"nt\">($380 \\div 19 = 20$)</span><br>So the original pyramid has a volume of 540 cubic meters.",
+    "check": "Top: $\\frac{8}{27}(540) = 160$; lower: $540 - 160 = 380$ ✓",
+    "be_careful": "Measure the small pyramid from the TOP: its height is 8, not 4.",
+    "desmos": "Not needed.",
+    "another_way": "In 27 equal parts of volume, the top holds 8 and the bottom holds 19. So 19 parts $= 380$, one part $= 20$, the whole $= 27 \\times 20 = 540$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-046",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C2"
+   ],
+   "family": "sheet-rolled-two-ways",
+   "signature": "12 by 20 sheet rolled into curved surface two ways (no overlap): taller (h 20, C 12) V = 720/pi; shorter (h 12, C 20) V = 1200/pi; taller/shorter = 3/5; traps 1, 9/25, 5/3",
+   "abilities": [
+    "G",
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A rectangular sheet of paper is 12 inches by 20 inches. It can be rolled to form the curved surface of a right circular cylinder (with no top or bottom) in two ways: by taping the two 12-inch edges together, or by taping the two 20-inch edges together, with no overlap. The volume of the taller cylinder is what fraction of the volume of the shorter cylinder?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{9}{25}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This squares $\\frac{3}{5}$. The height factor $\\frac{5}{3}$ also counts: $\\frac{9}{25} \\times \\frac{5}{3} = \\frac{3}{5}$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{5}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The curved surfaces have the same AREA (240), but equal area does not mean equal volume."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{5}{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D9",
+     "feedback": "This compares the shorter cylinder to the taller one; the taller one holds less."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The edge that goes around becomes the circumference, and volume depends on that length SQUARED but on the height only once.",
+    "steps": "What does the question ask? (taller volume) $\\div$ (shorter volume).<br>Taping the 12-inch edges makes the 12-inch side the height, so the 20-inch side goes around. Taping the 20-inch edges makes the cylinder 20 inches tall.<br>taller: height 20, circumference 12, so $r = \\frac{12}{2\\pi} = \\frac{6}{\\pi}$ <span class=\"nt\">($C = 2\\pi r$)</span><br>$V_{tall} = \\pi(\\frac{6}{\\pi})^{2}(20) = \\frac{720}{\\pi}$ <span class=\"nt\">($\\pi r^{2}h$)</span><br>shorter: height 12, circumference 20, so $r = \\frac{10}{\\pi}$ <span class=\"nt\">(same idea)</span><br>$V_{short} = \\pi(\\frac{10}{\\pi})^{2}(12) = \\frac{1,200}{\\pi}$ <span class=\"nt\">(volume)</span><br>$\\frac{720}{\\pi} \\div \\frac{1,200}{\\pi} = \\frac{720}{1,200} = \\frac{3}{5}$ <span class=\"nt\">(the $\\pi$ cancels)</span>",
+    "check": "In general $V = \\frac{C^{2}h}{4\\pi}$, so the ratio is $\\frac{12^{2}(20)}{20^{2}(12)} = \\frac{12}{20} = \\frac{3}{5}$ ✓",
+    "be_careful": "Same paper, same curved area, different volumes: the wider roll holds more.",
+    "desmos": "Not needed.",
+    "another_way": "Since $V = \\frac{C^{2}h}{4\\pi}$ and $C \\times h = 240$ both ways, $V = \\frac{240C}{4\\pi}$: the volume is proportional to the circumference. Ratio $= \\frac{12}{20} = \\frac{3}{5}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-047",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C3",
+    "G1.C1"
+   ],
+   "family": "sphere-displacement-hidden-level",
+   "signature": "cylinder r 6; sphere lowered in, water rises 1 and just covers the sphere -> sphere volume 36pi*1 -> r^3 27 -> r 3 -> new level = diameter 6 -> original 5; traps 6 (final level), 3 (radius), 7 (6 + 1)",
+   "abilities": [
+    "G",
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A cylindrical tank with a radius of 6 inches contains some water. A solid metal sphere is lowered into the tank and rests on the bottom. The water level rises by exactly 1 inch, and the surface of the water is now exactly at the top of the sphere. What was the depth, in inches, of the water before the sphere was lowered into the tank?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 inches is the water depth AFTER the sphere is in (the sphere’s diameter)."
+    },
+    {
+     "value": "7",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the 1-inch rise to 6. The water rose TO 6 inches, so it started 1 inch lower."
+    }
+   ],
+   "solution": {
+    "key_idea": "The rise gives the sphere’s volume; the sphere’s volume gives its radius; and “just covered” means the new depth equals its diameter.",
+    "steps": "What does the question ask? The original depth of the water.<br><b>Plan.</b> The rise tells the sphere’s volume. Find its radius, then use the fact that the water just covers it.<br>displaced volume $= \\pi(6^{2})(1) = 36\\pi$ <span class=\"nt\">(a 1-inch layer of the cylinder)</span><br>$\\frac{4}{3}\\pi r^{3} = 36\\pi$, so $r^{3} = 27$ and $r = 3$ <span class=\"nt\">(the sphere is fully under water, so it displaces its whole volume)</span><br>new depth $= 2r = 6$ <span class=\"nt\">(water is exactly at the top of the sphere, which sits on the bottom)</span><br>original depth $= 6 - 1 = 5$ <span class=\"nt\">(it rose by 1)</span><br>So the water was 5 inches deep before the sphere went in.",
+    "check": "Water volume: $36\\pi(5) = 180\\pi$; after: $36\\pi(6) - 36\\pi = 180\\pi$ ✓ (the cylinder up to 6 minus the sphere)",
+    "be_careful": "The depth after the sphere goes in is the sphere’s DIAMETER, because the sphere rests on the bottom.",
+    "desmos": "No equation exists until the displacement idea is used; there is nothing to graph.",
+    "another_way": "Original depth $d$: $36\\pi d + 36\\pi = 36\\pi(2r)$ with $r = 3$, so $d + 1 = 6$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-048",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C7",
+    "G1.C3"
+   ],
+   "family": "cylinder-inside-cone-fraction",
+   "signature": "cone r 6 h 12; cylinder height 4 stands on cone base, top rim on cone surface -> radius 4 (similar triangles from apex) -> 64pi of 144pi = 4/9; traps 1/9 (r 2), 4/27 (no 1/3), 1/3 (height ratio)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A right circular cone has a base radius of 6 centimeters and a height of 12 centimeters. A right circular cylinder with a height of 4 centimeters stands inside the cone: the base of the cylinder lies on the base of the cone, and the top circular edge of the cylinder touches the curved surface of the cone all the way around. The volume of the cylinder is what fraction of the volume of the cone?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{1}{9}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses radius $6 \\times \\frac{4}{12} = 2$, scaling from the wrong end. At height 4 the cone is still $\\frac{8}{12}$ as wide as its base."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{4}{27}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This leaves out the $\\frac{1}{3}$ in the cone’s volume."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{1}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "$\\frac{4}{12}$ compares heights only; the volume also depends on the radius, squared."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{4}{9}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Slice the cone through its axis: the cylinder’s top edge sits on the cone’s side, so similar triangles from the vertex give the cylinder’s radius.",
+    "steps": "What does the question ask? $\\frac{V_{cyl}}{V_{cone}}$.<br>Cut the cone straight down through its vertex. The cut shows a triangle (height 12, half-base 6) with the cylinder as a rectangle standing on its base.<br>distance from the vertex down to the cylinder’s top: $12 - 4 = 8$ <span class=\"nt\">(the cylinder is 4 tall)</span><br>$\\frac{\\rho}{6} = \\frac{8}{12}$, so $\\rho = 4$ <span class=\"nt\">(similar right triangles from the vertex; $\\rho$ is the cylinder’s radius)</span><br>$V_{cyl} = \\pi(4^{2})(4) = 64\\pi$ <span class=\"nt\">(cylinder)</span><br>$V_{cone} = \\frac{1}{3}\\pi(6^{2})(12) = 144\\pi$ <span class=\"nt\">(cone)</span><br>$\\frac{64\\pi}{144\\pi} = \\frac{4}{9}$ <span class=\"nt\">(fraction)</span>",
+    "check": "At height 4 the cone’s radius shrinks by $\\frac{4}{12}$ of 6, which is 2, leaving $6 - 2 = 4$ ✓",
+    "be_careful": "The radius at height 4 is measured from the vertex: 8 of the 12 units remain above it.",
+    "desmos": "Not needed.",
+    "another_way": "The cone’s side drops 2 in radius for every 4 in height, so at height 4 the radius is $6 - 2 = 4$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-049",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C3",
+    "G1.C7"
+   ],
+   "family": "cylinder-h-equals-d-in-sphere",
+   "signature": "sphere V 288pi (r 6); cylinder with height = diameter, both circular edges on sphere -> cross-section square with diagonal 12 -> r = 3sqrt2, h = 6sqrt2 -> V = 108sqrt2 pi; traps 432pi (r 6, h 12), 432sqrt2 pi (side as radius; r1 length balance), 216pi (r 3sqrt2, h 12)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 190,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A sphere has a volume of $288\\pi$ cubic inches. A right circular cylinder whose height is equal to the diameter of its base is placed inside the sphere so that both circular edges of the cylinder touch the sphere all the way around. What is the volume, in cubic inches, of the cylinder?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$108\\sqrt{2}\\pi$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$216\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the correct radius $3\\sqrt{2}$ but gives the cylinder height 12, the sphere’s diameter; its edges would stick out of the sphere."
+    },
+    {
+     "key": "C",
+     "text": "$432\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses radius 6 and height 12, the cylinder that would fit AROUND the sphere."
+    },
+    {
+     "key": "D",
+     "text": "$432\\sqrt{2}\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses the square’s side $6\\sqrt{2}$ as the RADIUS. The side is the cylinder’s height and its DIAMETER, so the radius is $3\\sqrt{2}$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Slice through the axis: the cylinder becomes a square whose diagonal is a diameter of the sphere.",
+    "steps": "What does the question ask? $V = \\pi r^{2}h$ for the cylinder.<br>$\\frac{4}{3}\\pi R^{3} = 288\\pi$, so $R^{3} = 216$ and $R = 6$ <span class=\"nt\">(sphere radius)</span><br>Cut through the axis of the cylinder: the sphere shows a circle of diameter 12, and the cylinder shows a rectangle $2r$ wide and $h$ tall whose four corners are on the circle.<br>$h = 2r$, so the rectangle is a square with side $2r$ <span class=\"nt\">(height equals diameter)</span><br>diagonal $= 2r\\sqrt{2} = 12$ <span class=\"nt\">(the diagonal is a diameter of the circle)</span><br>$r = \\frac{6}{\\sqrt{2}} = 3\\sqrt{2}$ and $h = 6\\sqrt{2}$ <span class=\"nt\">(simplify)</span><br>$V = \\pi(3\\sqrt{2})^{2}(6\\sqrt{2}) = \\pi(18)(6\\sqrt{2}) = 108\\sqrt{2}\\pi$ <span class=\"nt\">(cylinder volume)</span>",
+    "check": "Center to a corner: $\\sqrt{(3\\sqrt{2})^{2} + (3\\sqrt{2})^{2}} = \\sqrt{36} = 6 = R$ ✓; and $108\\sqrt{2}\\pi \\approx 480 < 905 \\approx 288\\pi$, as it must be inside the sphere.",
+    "be_careful": "The cylinder’s corners, not its sides, touch the sphere; the radius is not 6.",
+    "desmos": "Not needed.",
+    "another_way": "Pythagorean theorem from the center: $r^{2} + (\\frac{h}{2})^{2} = 6^{2}$ with $\\frac{h}{2} = r$ gives $2r^{2} = 36$, $r^{2} = 18$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G1-050",
+   "version": 1,
+   "skill": {
+    "code": "G1",
+    "domain": "geo",
+    "cb_skill": "Area and volume"
+   },
+   "level": "H+",
+   "concepts": [
+    "G1.C1",
+    "G1.C5"
+   ],
+   "family": "second-equal-width-path",
+   "signature": "garden r 10; first path width w makes path area = garden -> 10+w = 10sqrt2 -> w = 10sqrt2-10; second path of same width around it -> outer radius 20sqrt2-10 -> area (700-400sqrt2)pi = (7-4sqrt2) x garden; traps 1 (equal rings), 2sqrt2-1 (radius ratio, linear), 3-2sqrt2 (w^2/100)",
+   "abilities": [
+    "G",
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A circular garden has a radius of 10 meters. A path of uniform width is built around the garden, and the area of the path is equal to the area of the garden. Later, a second path, with the same width as the first path, is built around the first path. The area of the second path is how many times the area of the garden?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3 - 2\\sqrt{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is $\\frac{w^{2}}{100}$, the square of the width divided by the garden’s $r^{2}$, not a ring area."
+    },
+    {
+     "key": "B",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This assumes every ring of the same width has the same area. A ring farther out is longer, so it has more area."
+    },
+    {
+     "key": "C",
+     "text": "$7 - 4\\sqrt{2}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$2\\sqrt{2} - 1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This compares RADII instead of areas: $\\frac{20\\sqrt{2} - 10}{10} = 2\\sqrt{2} - 1$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "First find the width from “path area = garden area”, then the second path is a ring between radii $10 + w$ and $10 + 2w$.",
+    "steps": "What does the question ask? (area of second path) $\\div$ (area of garden).<br><b>Plan.</b> Use the first path to find the width. Then the second path is the ring between radius $10 + w$ and radius $10 + 2w$.<br>garden $= 100\\pi$; garden + first path $= 200\\pi$ <span class=\"nt\">(first path equals the garden)</span><br>$(10 + w)^{2} = 200$, so $10 + w = 10\\sqrt{2}$ and $w = 10\\sqrt{2} - 10$ <span class=\"nt\">(radius of the first big circle)</span><br>outer radius $= 10 + 2w = 10\\sqrt{2} + (10\\sqrt{2} - 10) = 20\\sqrt{2} - 10$ <span class=\"nt\">(add one more width)</span><br>$(20\\sqrt{2} - 10)^{2} = 800 - 400\\sqrt{2} + 100 = 900 - 400\\sqrt{2}$ <span class=\"nt\">(square carefully: three terms)</span><br>second path $= \\pi(900 - 400\\sqrt{2}) - 200\\pi = (700 - 400\\sqrt{2})\\pi$ <span class=\"nt\">(big circle minus the inside)</span><br>$\\frac{(700 - 400\\sqrt{2})\\pi}{100\\pi} = 7 - 4\\sqrt{2}$ <span class=\"nt\">(compare with the garden)</span><br>So the second path has $7 - 4\\sqrt{2} \\approx 1.34$ times the area of the garden.",
+    "check": "$w \\approx 4.14$, outer radius $\\approx 18.28$; $\\pi(18.28^{2} - 14.14^{2}) \\approx 134.3\\pi$, and $(7 - 4\\sqrt{2}) \\times 100\\pi \\approx 134.3\\pi$ ✓. It is more than 1, as an outer ring of the same width should be ✓",
+    "be_careful": "Same width does NOT mean same area: the outer ring has a longer circumference.",
+    "desmos": "Every quantity must be built from the setup; there is no single equation to graph, and the choices are exact radicals.",
+    "another_way": "A ring with inner radius $a$ and width $w$ has area $\\pi w(2a + w)$. Second ring: $\\pi w(2 \\cdot 10\\sqrt{2} + w) = \\pi(10\\sqrt{2} - 10)(30\\sqrt{2} - 10) = \\pi(700 - 400\\sqrt{2})$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

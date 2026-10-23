@@ -1,0 +1,6 @@
+{
+  "framework": null,
+  "installCommand": "echo static",
+  "buildCommand": "node scripts/import-sat.js && node scripts/build-single.js && node scripts/stage-static.js",
+  "outputDirectory": "public"
+}

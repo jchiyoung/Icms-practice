@@ -1,0 +1,3454 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "A1",
+ "skill": "Linear equations in one variable",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-A1-001",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C1"
+   ],
+   "family": "given-solution-constant",
+   "signature": "substitute a negative solution into a(x)-in-product-and-alone equation, solve for a; MCQ text",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": 2.1,
+   "format": "mcq",
+   "stem": "$5(x + a) = 3x - a + 4$<br>In the given equation, $a$ is a constant. If the solution to the equation is $x = -4$, what is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Subtracts $a$ instead of adding it when moving $-a$ to the left side, which gives $4a = 12$."
+    },
+    {
+     "key": "C",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Takes $3(-4)$ as $+12$, which leads to $6a = 36$. A positive number times a negative number is negative."
+    },
+    {
+     "key": "D",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "Puts $-4$ in for $a$ instead of $x$ and then solves for $x$, getting 14. The given value belongs to $x$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A solution makes the equation true, so substituting $x = -4$ turns the equation into plain arithmetic with only $a$ unknown.",
+    "steps": "The question asks for the value of $a$. Since $x = -4$ is the solution, the equation is true when $x = -4$.<br>$5(-4 + a) = 3(-4) - a + 4$ <span class=\"nt\">(substitute $x = -4$ on both sides)</span><br>$-20 + 5a = 3(-4) - a + 4$ <span class=\"nt\">(distribute 5)</span><br>$-20 + 5a = -12 - a + 4$ <span class=\"nt\">(multiply $3(-4)$)</span><br>$-20 + 5a = -8 - a$ <span class=\"nt\">(combine $-12 + 4$)</span><br>$-20 + 6a = -8$ <span class=\"nt\">(add $a$ to both sides)</span><br>$6a = 12$ <span class=\"nt\">(add 20 to both sides)</span><br>$a = 2$ <span class=\"nt\">(divide both sides by 6)</span>",
+    "check": "With $a = 2$ the equation is $5(x + 2) = 3x + 2$. Then $5x + 10 = 3x + 2$, so $2x = -8$ and $x = -4$ ✓",
+    "be_careful": "Choice D ($14$) is a trap. It puts $-4$ in for $a$ instead of $x$ and then solves for $x$, getting 14. The given value belongs to $x$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-002",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C1"
+   ],
+   "family": "solution-transfer",
+   "signature": "numeric equation gives x, same solution substituted into a fraction equation with k; MCQ text",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": 2.32,
+   "format": "mcq",
+   "stem": "$4x + 9 = x - 6$<br>$\\frac{x + k}{3} = x + 7$<br>In the second equation, $k$ is a constant. The two given equations have the same solution. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$-5$ is the solution the two equations share, not the value of $k$."
+    },
+    {
+     "key": "B",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "Removes the 3 from the left side without multiplying the right side by 3, so it solves $-5 + k = 2$."
+    },
+    {
+     "key": "C",
+     "text": "$11$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$15$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Adds $x$ instead of subtracting it in the first equation ($5x + 9 = -6$), so it uses $x = -3$ and gets $k = 15$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Solve the equation with no unknown constant first; its solution also makes the second equation true, so it can be substituted there to find $k$.",
+    "steps": "The question asks for $k$. The first equation has no unknown constant, so solve it first.<br>$3x + 9 = -6$ <span class=\"nt\">(subtract $x$ from both sides)</span><br>$3x = -15$ <span class=\"nt\">(subtract 9 from both sides)</span><br>$x = -5$ <span class=\"nt\">(divide both sides by 3)</span><br>The second equation has the same solution, so it is true when $x = -5$:<br>$\\frac{-5 + k}{3} = -5 + 7$ <span class=\"nt\">(substitute $x = -5$)</span><br>$\\frac{-5 + k}{3} = 2$ <span class=\"nt\">(combine $-5 + 7$)</span><br>$-5 + k = 6$ <span class=\"nt\">(multiply both sides by 3)</span><br>$k = 11$ <span class=\"nt\">(add 5 to both sides)</span>",
+    "check": "With $k = 11$ and $x = -5$: $\\frac{-5 + 11}{3} = 2$ and $-5 + 7 = 2$ ✓",
+    "be_careful": "Choice A ($-5$) is a trap. $-5$ is the solution the two equations share, not the value of $k$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-003",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C2"
+   ],
+   "family": "straight-solve-distribute-both-sides",
+   "signature": "7 - 2(3x - 4) = 4(x + 1) - 3x: negative factor after a lone constant on the left, distribution on both sides, fraction SPR 11/7; order-of-operations bait 5(3x - 4)",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 80,
+   "difficulty_measured": 2.31,
+   "format": "spr",
+   "stem": "$7 - 2(3x - 4) = 4(x + 1) - 3x$<br>What is the solution to the given equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "11/7",
+      "1.571"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-5/7",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Takes $-2(-4)$ as $-8$, so the left side becomes $-1 - 6x$ and the equation leads to $-5 = 7x$. A negative times a negative is positive: $-2(-4) = 8$."
+    },
+    {
+     "value": "12/7",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Subtracts $7 - 2$ first, which turns the left side into $5(3x - 4)$; then $15x - 20 = x + 4$ gives $x = \\frac{12}{7}$. Multiplication comes before subtraction, so the $-2$ multiplies the parentheses before the 7 is touched."
+    }
+   ],
+   "solution": {
+    "key_idea": "The $-2$ multiplies every term inside its parentheses, sign included, and that multiplication comes before anything is combined with the 7.",
+    "steps": "What does the question ask? It asks for the solution to the given equation.<br>Distribute on each side first, then collect the $x$-terms on one side.<br>$7 - 6x + 8 = 4(x + 1) - 3x$ <span class=\"nt\">(distribute $-2$: $-2(3x) = -6x$ and $-2(-4) = 8$)</span><br>$15 - 6x = 4(x + 1) - 3x$ <span class=\"nt\">(combine $7 + 8$)</span><br>$15 - 6x = 4x + 4 - 3x$ <span class=\"nt\">(distribute 4)</span><br>$15 - 6x = x + 4$ <span class=\"nt\">(combine $4x - 3x$)</span><br>$15 = 7x + 4$ <span class=\"nt\">(add $6x$ to both sides)</span><br>$11 = 7x$ <span class=\"nt\">(subtract 4 from both sides)</span><br>$x = \\frac{11}{7}$ <span class=\"nt\">(divide both sides by 7)</span>",
+    "check": "Substitute $x = \\frac{11}{7}$ into the original equation, using $3x = \\frac{33}{7}$. Left side: $7 - 2(\\frac{33}{7} - \\frac{28}{7}) = 7 - 2  \\cdot  \\frac{5}{7} = \\frac{49}{7} - \\frac{10}{7} = \\frac{39}{7}$. Right side: $4(\\frac{11}{7} + \\frac{7}{7}) - \\frac{33}{7} = \\frac{72}{7} - \\frac{33}{7} = \\frac{39}{7}$ ✓",
+    "be_careful": "A common wrong answer is $-5/7$. It takes $-2(-4)$ as $-8$, so the left side becomes $-1 - 6x$ and the equation leads to $-5 = 7x$. A negative times a negative is positive: $-2(-4) = 8$.",
+    "desmos": "Desmos is the fastest route here. Graph $y = 7 - 2(3x - 4)$ and $y = 4(x + 1) - 3x$, then click the intersection point $(1.571, 5.571)$. Its $x$-coordinate, 1.571, is an accepted answer; the exact value is $\\frac{11}{7}$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-004",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C2"
+   ],
+   "family": "clear-fractions-lone-constant",
+   "signature": "(2x + 5)/6 - 1 = (x - 3)/4, multiply every term by 12 including the lone 1; MCQ text",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 90,
+   "difficulty_measured": 2.24,
+   "format": "mcq",
+   "stem": "$\\frac{2x + 5}{6} - 1 = \\frac{x - 3}{4}$<br>What is the solution to the given equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-18$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Multiplies the fractions by 12 but leaves the lone 1 as 1: $4x + 10 - 1 = 3x - 9$. The 1 is a term too, so it becomes 12."
+    },
+    {
+     "key": "B",
+     "text": "$-7$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$-2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Multiplies the left side by 6 and the right side by 4. Multiplying the two sides by different numbers changes the solution."
+    },
+    {
+     "key": "D",
+     "text": "$11$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Distributes $3(x - 3)$ as $3x + 9$; the product of 3 and $-3$ is $-9$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Clearing fractions means multiplying every term on both sides by the same number, including the lone 1.",
+    "steps": "What does the question ask? It asks for the solution to the given equation.<br>The least common denominator of 6 and 4 is 12, so multiply every term on both sides by 12.<br>$2(2x + 5) - 12 = 3(x - 3)$ <span class=\"nt\">($12 \\div 6 = 2$, $12  \\cdot  1 = 12$, and $12 \\div 4 = 3$)</span><br>$4x + 10 - 12 = 3x - 9$ <span class=\"nt\">(distribute)</span><br>$4x - 2 = 3x - 9$ <span class=\"nt\">(combine $10 - 12$)</span><br>$x - 2 = -9$ <span class=\"nt\">(subtract $3x$ from both sides)</span><br>$x = -7$ <span class=\"nt\">(add 2 to both sides)</span>",
+    "check": "Left side: $\\frac{2(-7) + 5}{6} - 1 = -1.5 - 1 = -2.5$. Right side: $\\frac{-7 - 3}{4} = -2.5$ ✓",
+    "be_careful": "Choice C ($-2$) is a trap. It multiplies the left side by 6 and the right side by 4. Multiplying the two sides by different numbers changes the solution.",
+    "desmos": "Desmos is the fastest route here. Graph $y = \\frac{2x + 5}{6} - 1$ and $y = \\frac{x - 3}{4}$, then click the intersection point $(-7, -2.5)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-005",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C2"
+   ],
+   "family": "equivalent-equation-one-move",
+   "signature": "which equation has the same solution as 6(x + 4) = 2x - 10; choices are one move each (legal halving, one side only, subtract for divide, first-term distribution)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": 2.1,
+   "format": "mcq",
+   "stem": "$6(x + 4) = 2x - 10$<br>Which equation has the same solution as the given equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3(x + 4) = 2x - 10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Divides only the left side by 2. The right side must be divided too; this equation has the solution $x = -22$."
+    },
+    {
+     "key": "B",
+     "text": "$3(x + 4) = x - 5$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$x + 4 = 2x - 16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Subtracts 6 to undo the factor 6, but the 6 multiplies $(x + 4)$, so it is undone by dividing. This equation has the solution $x = 20$."
+    },
+    {
+     "key": "D",
+     "text": "$6x + 4 = 2x - 10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Multiplies only the $x$ inside the parentheses by 6. Distributing gives $6x + 24$; this equation has the solution $x = -3.5$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Doing the same thing to every term on both sides, such as dividing by 2, gives an equation with the same solution.",
+    "steps": "What does the question ask? It asks which equation has the same solution as the given equation.<br>Look for the choice that comes from one legal move on the given equation. Every term is even, so divide both sides by 2.<br>$\\frac{6(x + 4)}{2} = \\frac{2x - 10}{2}$ <span class=\"nt\">(divide both sides by 2)</span><br>$3(x + 4) = x - 5$ <span class=\"nt\">($6 \\div 2 = 3$, $2x \\div 2 = x$, and $-10 \\div 2 = -5$)</span><br>This is choice B. Dividing both whole sides by the same nonzero number keeps the solution.",
+    "check": "Given equation: $6x + 24 = 2x - 10$, so $4x = -34$ and $x = -8.5$. Choice B: $3x + 12 = x - 5$, so $2x = -17$ and $x = -8.5$ ✓",
+    "be_careful": "Choice A ($3(x + 4) = 2x - 10$) is a trap. It divides only the left side by 2. The right side must be divided too; this equation has the solution $x = -22$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-006",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C3"
+   ],
+   "family": "count-close-unequal-slopes",
+   "signature": "M count: (2/3)(x + 6) = (5/8)x + 5, coefficients 16/24 vs 15/24 differ, exactly one solution x = 24 with the crossing (24, 20) off the default Desmos window; fixed count choices Zero / Exactly one / Exactly two / Infinitely many",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": 2.25,
+   "format": "mcq",
+   "stem": "$\\frac{2}{3}(x + 6) = \\frac{5}{8}x + 5$<br>How many solutions does the given equation have?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Zero",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Reads the nearly parallel graphs, or the close coefficients, as parallel lines. The slopes $\\frac{16}{24}$ and $\\frac{15}{24}$ are different, so the lines cross once, at $(24, 20)$, off the default screen."
+    },
+    {
+     "key": "B",
+     "text": "Exactly one",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Exactly two",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "A linear equation never has exactly two solutions. Two different lines cross at most once."
+    },
+    {
+     "key": "D",
+     "text": "Infinitely many",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Judges the two sides to be the same because both are a fraction times $x$ plus a constant. Infinitely many solutions needs equal $x$-coefficients and equal constants, and here neither matches ($\\frac{2}{3} \\ne \\frac{5}{8}$ and $4 \\ne 5$)."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "When the $x$-coefficients on the two sides are different, the $x$-terms cannot cancel, so the equation has exactly one solution, however close the coefficients are.",
+    "steps": "What does the question ask? It asks how many solutions the given equation has.<br>Distribute, then compare the $x$-coefficients.<br>$\\frac{2}{3}x + 4 = \\frac{5}{8}x + 5$ <span class=\"nt\">(distribute $\\frac{2}{3}$: $\\frac{2}{3}  \\cdot  6 = 4$)</span><br>$\\frac{2}{3} = \\frac{16}{24}$ and $\\frac{5}{8} = \\frac{15}{24}$ <span class=\"nt\">(write both coefficients over 24)</span><br>The $x$-coefficients are different, so the $x$-terms cannot cancel: the equation has exactly one solution. To find it:<br>$\\frac{1}{24}x + 4 = 5$ <span class=\"nt\">(subtract $\\frac{5}{8}x$ from both sides: $\\frac{16}{24} - \\frac{15}{24} = \\frac{1}{24}$)</span><br>$\\frac{1}{24}x = 1$ <span class=\"nt\">(subtract 4 from both sides)</span><br>$x = 24$ <span class=\"nt\">(multiply both sides by 24)</span>",
+    "check": "$x = 24$: left side $\\frac{2}{3}(24 + 6) = \\frac{2}{3}(30) = 20$ and right side $\\frac{5}{8}(24) + 5 = 15 + 5 = 20$ ✓",
+    "be_careful": "Choice A (Zero) is a trap. It reads the nearly parallel graphs, or the close coefficients, as parallel lines. The slopes $\\frac{16}{24}$ and $\\frac{15}{24}$ are different, so the lines cross once, at $(24, 20)$, off the default screen.",
+    "desmos": "In the default window, the graphs of $y = \\frac{2}{3}(x + 6)$ and $y = \\frac{5}{8}x + 5$ look parallel and do not meet on the screen, which suggests “Zero.” Zoom out until $x = 24$ is on the screen: the lines cross at $(24, 20)$. Comparing the coefficients settles the count without any window.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-007",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C3"
+   ],
+   "family": "never-equal-same-rate",
+   "signature": "pepper plant and bean plant, equal rates (the bean rate given as 6 cm every 4 weeks), different heights; claim + reason choices, key never equal because the gap is constant",
+   "abilities": [
+    "I",
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": 2.4,
+   "format": "mcq",
+   "stem": "A pepper plant is 14 centimeters tall and grows 1.5 centimeters each week. A bean plant is 23 centimeters tall and grows 6 centimeters every 4 weeks. Each plant continues to grow at its constant rate. Which statement is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The plants will be the same height after 6 weeks, because the pepper plant makes up the 9-centimeter difference at 1.5 centimeters per week.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Divides the 9-centimeter gap by 1.5 as if the bean plant stood still. The bean plant also grows 1.5 centimeters each week, so the gap never shrinks."
+    },
+    {
+     "key": "B",
+     "text": "The plants will never be the same height, because the bean plant is taller and also grows faster than the pepper plant.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Reads “6 centimeters every 4 weeks” as 6 centimeters per week. Per week, the bean plant grows $\\frac{6}{4} = 1.5$ centimeters, the same as the pepper plant."
+    },
+    {
+     "key": "C",
+     "text": "The plants will never be the same height, because the difference between their heights is always 9 centimeters.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The plants will be the same height after 4 weeks, because each plant grows 6 centimeters in those 4 weeks.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Equal growth is not equal height. After 4 weeks the plants are 20 and 29 centimeters tall."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Two amounts that grow at the same rate keep the same gap forever, so they are never equal.",
+    "steps": "The question asks whether the heights are ever equal, and why.<br>Let $w$ = the number of weeks from now.<br>bean plant’s rate: $\\frac{6}{4} = 1.5$ centimeters per week <span class=\"nt\">(6 centimeters every 4 weeks)</span><br>pepper plant’s height: $14 + 1.5w$ <span class=\"nt\">(14 centimeters plus 1.5 for each week)</span><br>bean plant’s height: $23 + 1.5w$ <span class=\"nt\">(23 centimeters plus 1.5 for each week)</span><br>$14 + 1.5w = 23 + 1.5w$ <span class=\"nt\">(set the heights equal)</span><br>$14 = 23$ <span class=\"nt\">(subtract $1.5w$ from both sides)</span><br>This is false for every $w$, so the heights are never equal. Both plants grow 1.5 centimeters each week, so the 9-centimeter gap never changes.",
+    "check": "For any number of weeks $w$: $(23 + 1.5w) - (14 + 1.5w) = 9$. The bean plant is always exactly 9 centimeters taller than the pepper plant, so the heights are never equal ✓",
+    "be_careful": "Choice A is a trap. It divides the 9-centimeter gap by 1.5 as if the bean plant stood still. The bean plant also grows 1.5 centimeters each week, so the gap never shrinks.",
+    "desmos": "Graph $y = 14 + 1.5x$ and $y = 23 + 1.5x$. The lines are parallel, so they never meet.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-008",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C3"
+   ],
+   "family": "which-equation-no-solution-four-shapes",
+   "signature": "which equation has no solution: identity 5(x - 2) + 3 = 5x - 7, x = 0 bait 3(4x - 1) = 13x - 3, key 4(x + 3) - x = 3(x + 5) (3x on both sides only after combining), a hidden -x that makes 6x look matched; MCQ equations",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": 2.32,
+   "format": "mcq",
+   "stem": "Which of the following equations has no solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5(x - 2) + 3 = 5x - 7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Simplifies to $5x - 7 = 5x - 7$. The $x$-terms cancel, but what is left, $-7 = -7$, is true, so every $x$ is a solution: infinitely many, not zero."
+    },
+    {
+     "key": "B",
+     "text": "$3(4x - 1) = 13x - 3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Simplifies to $12x - 3 = 13x - 3$, which gives $x = 0$. A solution equal to 0 is still one solution."
+    },
+    {
+     "key": "C",
+     "text": "$2(3x + 1) - x = 6x + 1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "Sees $6x$ on both sides and misses the $-x$ on the left. The left side is $5x + 2$, so the $x$-terms differ and $x = 1$ is a solution."
+    },
+    {
+     "key": "D",
+     "text": "$4(x + 3) - x = 3(x + 5)$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "An equation has no solution when, after simplifying, the $x$-terms on the two sides match but the constants do not.",
+    "steps": "What does the question ask? It asks which equation has no solution.<br>Simplify each equation, then compare the $x$-terms and the constants on the two sides.<br>A: $5x - 10 + 3 = 5x - 7$ <span class=\"nt\">(distribute 5)</span><br>A: $5x - 7 = 5x - 7$ <span class=\"nt\">(combine $-10 + 3$)</span><br>Same expression on both sides: A has infinitely many solutions.<br>B: $12x - 3 = 13x - 3$ <span class=\"nt\">(distribute 3)</span><br>Different $x$-terms: B has exactly one solution, $x = 0$.<br>C: $6x + 2 - x = 6x + 1$ <span class=\"nt\">(distribute 2)</span><br>C: $5x + 2 = 6x + 1$ <span class=\"nt\">(combine $6x - x$)</span><br>Different $x$-terms: C has exactly one solution, $x = 1$.<br>D: $4x + 12 - x = 3x + 15$ <span class=\"nt\">(distribute on both sides)</span><br>D: $3x + 12 = 3x + 15$ <span class=\"nt\">(combine $4x - x$)</span><br>D: $12 = 15$ <span class=\"nt\">(subtract $3x$ from both sides)</span><br>Same $x$-term, different constants: $12 = 15$ is never true, so D has no solution.",
+    "check": "In D, the right side is always 3 more than the left side: $(3x + 15) - (3x + 12) = 3$ for every $x$, so the two sides are never equal ✓",
+    "be_careful": "Choice A ($5(x - 2) + 3 = 5x - 7$) is a trap. It simplifies to $5x - 7 = 5x - 7$. The $x$-terms cancel, but what is left, $-7 = -7$, is true, so every $x$ is a solution: infinitely many, not zero.",
+    "desmos": "Graph the two sides of D as $y = 4(x + 3) - x$ and $y = 3(x + 5)$. The lines are parallel (same slope 3, different $y$-intercepts), so they never meet.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-009",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C4"
+   ],
+   "family": "identity-constant-is-ab",
+   "signature": "a(x + b) = 4x - 36 infinitely many, ask b (constant is ab); MCQ text",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": 2.25,
+   "format": "mcq",
+   "stem": "$a(x + b) = 4x - 36$<br>In the given equation, $a$ and $b$ are constants. If the equation has infinitely many solutions, what is the value of $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-36$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Takes the constant of $a(x + b)$ to be $b$. After distributing, the constant is $ab$, so $ab = -36$."
+    },
+    {
+     "key": "B",
+     "text": "$-9$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4 is the value of $a$, found in the first matching step. The question asks for $b$."
+    },
+    {
+     "key": "D",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Loses the negative sign: $-36 \\div 4 = -9$, not 9."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Infinitely many solutions means the two sides are the same expression, and the constant term of $a(x + b)$ is $ab$, not $b$.",
+    "steps": "The question asks for $b$.<br>$ax + ab = 4x - 36$ <span class=\"nt\">(distribute $a$)</span><br>For the two sides to be the same expression, the $x$-parts match and the constants match:<br>$a = 4$ <span class=\"nt\">(match the $x$-coefficients)</span><br>$ab = -36$ <span class=\"nt\">(match the constants)</span><br>$4b = -36$ <span class=\"nt\">(substitute $a = 4$)</span><br>$b = -9$ <span class=\"nt\">(divide both sides by 4)</span>",
+    "check": "$4(x - 9) = 4x - 36$ for every $x$, so the two sides are identical ✓",
+    "be_careful": "Choice A ($-36$) is a trap. It takes the constant of $a(x + b)$ to be $b$. After distributing, the constant is $ab$, so $ab = -36$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-010",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C4"
+   ],
+   "family": "identity-two-constants-inside",
+   "signature": "4(x - c) + 2x = dx + 20 infinitely many, ask c (negative integer SPR -5); d = 6 from the first match as the stopped-midway bait",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": 2.39,
+   "format": "spr",
+   "stem": "$4(x - c) + 2x = dx + 20$<br>In the given equation, $c$ and $d$ are constants. If the equation has infinitely many solutions, what is the value of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is the value of $d$, from matching the $x$-coefficients. The question asks for $c$."
+    },
+    {
+     "value": "5",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Divides 20 by 4 instead of $-4$. The constant on the left is $-4c$, so $-4c = 20$ makes $c$ negative."
+    }
+   ],
+   "solution": {
+    "key_idea": "Infinitely many solutions means both sides are the same expression, so the $x$-coefficients match and the constant terms match.",
+    "steps": "The question asks for $c$.<br>$4x - 4c + 2x = dx + 20$ <span class=\"nt\">(distribute 4)</span><br>$6x - 4c = dx + 20$ <span class=\"nt\">(combine $4x + 2x$)</span><br>For infinitely many solutions, the two sides must match term by term:<br>$6 = d$ <span class=\"nt\">(match the $x$-coefficients)</span><br>$-4c = 20$ <span class=\"nt\">(match the constants)</span><br>$c = -5$ <span class=\"nt\">(divide both sides by $-4$)</span>",
+    "check": "With $c = -5$: $4(x + 5) + 2x = 4x + 20 + 2x = 6x + 20$, which is $dx + 20$ with $d = 6$ ✓",
+    "be_careful": "A common wrong answer is $6$. 6 is the value of $d$, from matching the $x$-coefficients. The question asks for $c$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-011",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C4"
+   ],
+   "family": "no-solution-subtracted-parameter",
+   "signature": "4(x + 3) - kx = 7x + 2 no solution, k = -3 with a second negative choice (-7: -k matched to 7 without the 4x from distributing); MCQ text",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": 2.54,
+   "format": "mcq",
+   "stem": "$4(x + 3) - kx = 7x + 2$<br>In the given equation, $k$ is a constant. If the equation has no solution, what is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-7$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "Matches $-k$ with the 7 and forgets the $4x$ that comes from distributing, so it solves $-k = 7$. With $k = -7$ the left side is $11x + 12$, and the equation has the solution $x = -\\frac{5}{2}$."
+    },
+    {
+     "key": "B",
+     "text": "$-3$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Treats $-kx$ as $+kx$, which gives $4 + k = 7$. With $k = 3$ the equation is $x + 12 = 7x + 2$, which has the solution $x = \\frac{5}{3}$."
+    },
+    {
+     "key": "D",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Makes the left $x$-term vanish ($4 - k = 0$) but forgets the $7x$ on the right. With $k = 4$ the equation is $12 = 7x + 2$, which has the solution $x = \\frac{10}{7}$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A linear equation has no solution when the $x$-coefficients on the two sides are equal and the constants are different.",
+    "steps": "The question asks for $k$.<br>$4x + 12 - kx = 7x + 2$ <span class=\"nt\">(distribute 4)</span><br>$(4 - k)x + 12 = 7x + 2$ <span class=\"nt\">(group the $x$-terms)</span><br>No solution needs the same $x$-coefficient and different constants. The constants 12 and 2 already differ, so match the $x$-coefficients:<br>$4 - k = 7$ <span class=\"nt\">(match the $x$-coefficients)</span><br>$-k = 3$ <span class=\"nt\">(subtract 4 from both sides)</span><br>$k = -3$ <span class=\"nt\">(multiply both sides by $-1$)</span>",
+    "check": "With $k = -3$: $4x + 12 + 3x = 7x + 2$, so $7x + 12 = 7x + 2$, which leads to $12 = 2$. That is never true ✓",
+    "be_careful": "Choice D ($4$) is a trap. It makes the left $x$-term vanish ($4 - k = 0$) but forgets the $7x$ on the right. With $k = 4$ the equation is $12 = 7x + 2$, which has the solution $x = \\frac{10}{7}$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-012",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C5"
+   ],
+   "family": "special-value-identity",
+   "signature": "kx + 4x - 20 = 5k at k = -4: statement choices, key infinitely many (not none, not x = 5)",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": 2.4,
+   "format": "mcq",
+   "stem": "$kx + 4x - 20 = 5k$<br>In the given equation, $k$ is a constant. Which of the following is true when $k = -4$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The equation has no solution.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Sees the $x$-terms cancel and stops. The leftover statement $-20 = -20$ is true, so every $x$ is a solution."
+    },
+    {
+     "key": "B",
+     "text": "The equation has exactly one solution, $x = 0$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Reads “$0  \\cdot  x = 0$” as $x = 0$. Every number times 0 is 0, so every $x$ works, not only 0."
+    },
+    {
+     "key": "C",
+     "text": "The equation has exactly one solution, $x = 5$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Solves $(k + 4)x = 5(k + 4)$ by dividing by $k + 4$, which is 0 when $k = -4$. Dividing by 0 is not allowed."
+    },
+    {
+     "key": "D",
+     "text": "The equation has infinitely many solutions.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "When a value of $k$ makes the $x$-terms cancel, the statement that remains decides the count, and a true statement means infinitely many solutions.",
+    "steps": "What does the question ask? It asks which choice is true when $k = -4$.<br>Substitute $k = -4$ first, then simplify.<br>$-4x + 4x - 20 = 5(-4)$ <span class=\"nt\">(substitute $k = -4$)</span><br>$-20 = 5(-4)$ <span class=\"nt\">(combine $-4x + 4x = 0$)</span><br>$-20 = -20$ <span class=\"nt\">(multiply $5(-4)$)</span><br>This statement is true for every value of $x$, so the equation has infinitely many solutions.",
+    "check": "Any $x$ works. For example, $x = 1$: $-4(1) + 4(1) - 20 = -20$ and $5(-4) = -20$ ✓",
+    "be_careful": "Choice A (The equation has no solution.) is a trap. It sees the $x$-terms cancel and stops. The leftover statement $-20 = -20$ is true, so every $x$ is a solution.",
+    "desmos": null,
+    "another_way": "Collect first: $(k + 4)x = 5k + 20$, and $5k + 20 = 5(k + 4)$. At $k = -4$ both sides are 0 for every $x$. Dividing by $k + 4$ to get $x = 5$ is not allowed here, because $k + 4 = 0$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-013",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C7"
+   ],
+   "family": "twice-as-much-two-balances",
+   "signature": "Ava $60 + $10 per week, Ben $480 - $20 per week; week when Ava has exactly twice Ben: 60 + 10w = 2(480 - 20w), w = 18; reversed relation, equal amounts, 2 on the 480 only; MCQ context",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": 2.61,
+   "format": "mcq",
+   "stem": "Ava has \\$60 in savings and adds \\$10 each week. Ben has \\$480 in savings and spends \\$20 each week. After how many weeks will Ava have exactly twice as much money in savings as Ben?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Puts the 2 on Ava’s side: $2(60 + 10w) = 480 - 20w$ gives $w = 9$. That equation says Ben has twice as much as Ava: after 9 weeks Ava has \\$150 and Ben has \\$300."
+    },
+    {
+     "key": "B",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Sets the two amounts equal and drops the word “twice”: $60 + 10w = 480 - 20w$ gives $w = 14$, when both have \\$200."
+    },
+    {
+     "key": "C",
+     "text": "$18$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Doubles only the 480: $60 + 10w = 960 - 20w$ gives $w = 30$. The 2 multiplies both terms of $480 - 20w$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "“Ava has twice as much as Ben” means Ava’s amount equals 2 times Ben’s whole amount, so the 2 multiplies every term of Ben’s expression.",
+    "steps": "The question asks for a number of weeks.<br>Let $w$ = the number of weeks from now.<br>Ava’s savings: $60 + 10w$ <span class=\"nt\">(adds 10 each week)</span><br>Ben’s savings: $480 - 20w$ <span class=\"nt\">(spends 20 each week)</span><br>$60 + 10w = 2(480 - 20w)$ <span class=\"nt\">(Ava’s amount is 2 times Ben’s amount)</span><br>$60 + 10w = 960 - 40w$ <span class=\"nt\">(distribute 2 to both terms)</span><br>$60 + 50w = 960$ <span class=\"nt\">(add $40w$ to both sides)</span><br>$50w = 900$ <span class=\"nt\">(subtract 60 from both sides)</span><br>$w = 18$ <span class=\"nt\">(divide both sides by 50)</span>",
+    "check": "After 18 weeks, Ava has $60 + 10(18) = 240$ dollars and Ben has $480 - 20(18) = 120$ dollars, and $240 = 2(120)$ ✓",
+    "be_careful": "Choice A ($9$) is a trap. It puts the 2 on Ava’s side: $2(60 + 10w) = 480 - 20w$ gives $w = 9$. That equation says Ben has twice as much as Ava: after 9 weeks Ava has \\$150 and Ben has \\$300.",
+    "desmos": "Graph $y = 60 + 10x$ and $y = 2(480 - 20x)$ and click the intersection point $(18, 240)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-014",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C6"
+   ],
+   "family": "target-by-decimal-block",
+   "signature": "0.7x - 1.4 = 2.3 is 0.7(x - 2) = 2.3; ask 2x - 4 = 2(x - 2) = 46/7 (not a whole-number multiple of the left side); fraction choices: block, 0.7 never divided out, x; inline stem",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": 2.39,
+   "format": "mcq",
+   "stem": "If $0.7x - 1.4 = 2.3$, what is the value of $2x - 4$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{23}{7}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\frac{23}{7}$ is the value of the block $x - 2$. The question asks for $2x - 4$, which is twice the block."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{23}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "Doubles 2.3 as if the equation said $x - 2 = 2.3$, which gives $4.6 = \\frac{23}{5}$. The left side is $0.7(x - 2)$, so the 0.7 has to be divided out first."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{37}{7}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\frac{37}{7}$ is the value of $x$. The question asks for $2x - 4$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{46}{7}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Both $0.7x - 1.4$ and $2x - 4$ are multiples of the same block, $x - 2$, so solving for the block leads straight to $2x - 4$.",
+    "steps": "The question asks for $2x - 4$, not $x$. Both expressions contain the block $x - 2$:<br>$0.7x - 1.4 = 0.7(x - 2)$ <span class=\"nt\">(factor out 0.7, since $0.7 \\times 2 = 1.4$)</span><br>$2x - 4 = 2(x - 2)$ <span class=\"nt\">(factor out 2)</span><br>$0.7(x - 2) = 2.3$ <span class=\"nt\">(rewrite the given equation)</span><br>$x - 2 = \\frac{2.3}{0.7}$ <span class=\"nt\">(divide both sides by 0.7)</span><br>$x - 2 = \\frac{23}{7}$ <span class=\"nt\">(multiply the top and bottom by 10)</span><br>$2(x - 2) = \\frac{46}{7}$ <span class=\"nt\">(multiply both sides by 2)</span><br>So $2x - 4 = \\frac{46}{7}$.",
+    "check": "From $x - 2 = \\frac{23}{7}$, $x = \\frac{37}{7}$. Given equation: $0.7 \\times \\frac{37}{7} - 1.4 = 3.7 - 1.4 = 2.3$ ✓. Target: $2 \\times \\frac{37}{7} - 4 = \\frac{74}{7} - \\frac{28}{7} = \\frac{46}{7}$ ✓",
+    "be_careful": "Choice A ($\\frac{23}{7}$) is a trap. $\\frac{23}{7}$ is the value of the block $x - 2$. The question asks for $2x - 4$, which is twice the block.",
+    "desmos": "Graph $y = 0.7x - 1.4$ and $y = 2.3$ and click the intersection: $x \\approx 5.286$, which is $\\frac{37}{7}$ (choice C, the value of $x$, not the answer). Then $2(5.286) - 4$ is about 6.57, which matches $\\frac{46}{7} \\approx 6.57$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-015",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C6"
+   ],
+   "family": "target-block",
+   "signature": "6(x - 5) + 9 = 33 - 2(x - 5), block subtracted on the right, ask x - 5; MCQ text",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 60,
+   "difficulty_measured": 2.24,
+   "format": "mcq",
+   "stem": "$6(x - 5) + 9 = 33 - 2(x - 5)$<br>If $x$ satisfies the given equation, what is the value of $x - 5$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "Ignores the block on the right side and solves $6(x - 5) + 9 = 33$: then $6(x - 5) = 24$ and $x - 5 = 4$. The $-2(x - 5)$ on the right has to be moved to the left too, which makes 8 blocks."
+    },
+    {
+     "key": "C",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Moves the $-2(x - 5)$ to the left side without changing its sign, which gives $4(x - 5) + 9 = 33$, so $4(x - 5) = 24$ and $x - 5 = 6$. Adding $2(x - 5)$ to both sides makes $6 + 2 = 8$ blocks."
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 is the value of $x$. The question asks for $x - 5$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The block $x - 5$ appears on both sides, so it can be treated as one unknown and solved for directly.",
+    "steps": "The question asks for $x - 5$, which appears on both sides. Treat $x - 5$ as one unit.<br>$8(x - 5) + 9 = 33$ <span class=\"nt\">(add $2(x - 5)$ to both sides)</span><br>$8(x - 5) = 24$ <span class=\"nt\">(subtract 9 from both sides)</span><br>$x - 5 = 3$ <span class=\"nt\">(divide both sides by 8)</span>",
+    "check": "Put 3 in for each $x - 5$. Left side: $6(3) + 9 = 27$. Right side: $33 - 2(3) = 27$ ✓",
+    "be_careful": "Choice B ($4$) is a trap. It ignores the block on the right side and solves $6(x - 5) + 9 = 33$: then $6(x - 5) = 24$ and $x - 5 = 4$. The $-2(x - 5)$ on the right has to be moved to the left too, which makes 8 blocks.",
+    "desmos": "Desmos is the fastest route here. Graph $y = 6(x - 5) + 9$ and $y = 33 - 2(x - 5)$ and click the intersection point $(8, 27)$. Desmos gives $x = 8$, so finish with $8 - 5 = 3$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-016",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C6"
+   ],
+   "family": "target-by-negative-fraction-rescale",
+   "signature": "9 - 6x = 4, ask 4x - 6 = -(2/3)(9 - 6x) = -8/3; negative fractional factor, negative fraction SPR; a rounded Desmos x (0.833) shifts the last digit",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": 2.39,
+   "format": "spr",
+   "stem": "If $9 - 6x = 4$, what is the value of $4x - 6$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-8/3",
+      "-2.666",
+      "-2.667"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "8/3",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Loses the sign in the last step: $\\frac{10}{3} - \\frac{18}{3}$ is negative because 6 is greater than $\\frac{10}{3}$. (Scaling by $\\frac{2}{3}$ instead of $-\\frac{2}{3}$ gives the same wrong value, $6 - 4x = \\frac{8}{3}$.)"
+    },
+    {
+     "value": "5/6",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\frac{5}{6}$ is the value of $x$. The question asks for $4x - 6$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The equation fixes the value of $x$, so it also fixes $4x - 6$: find $x$, then substitute.",
+    "steps": "The question asks for $4x - 6$, not $x$. Solve the given equation for $x$ first.<br>$-6x = -5$ <span class=\"nt\">(subtract 9 from both sides)</span><br>$x = \\frac{5}{6}$ <span class=\"nt\">(divide both sides by $-6$)</span><br>Now substitute this value into the asked expression.<br>$4x - 6 = 4  \\cdot  \\frac{5}{6} - 6$ <span class=\"nt\">(substitute $x = \\frac{5}{6}$)</span><br>$4x - 6 = \\frac{20}{6} - 6$ <span class=\"nt\">(multiply $4  \\cdot  \\frac{5}{6}$)</span><br>$4x - 6 = \\frac{10}{3} - 6$ <span class=\"nt\">(reduce by 2)</span><br>$4x - 6 = \\frac{10}{3} - \\frac{18}{3}$ <span class=\"nt\">(write 6 as $\\frac{18}{3}$)</span><br>$4x - 6 = -\\frac{8}{3}$ <span class=\"nt\">(subtract the numerators)</span>",
+    "check": "Work backward from the answer: $4x - 6 = -\\frac{8}{3}$ gives $4x = \\frac{10}{3}$, so $x = \\frac{5}{6}$. Then $9 - 6  \\cdot  \\frac{5}{6} = 9 - 5 = 4$ ✓",
+    "be_careful": "A common wrong answer is $8/3$. It loses the sign in the last step: $\\frac{10}{3} - \\frac{18}{3}$ is negative because 6 is greater than $\\frac{10}{3}$. (Scaling by $\\frac{2}{3}$ instead of $-\\frac{2}{3}$ gives the same wrong value, $6 - 4x = \\frac{8}{3}$.)",
+    "desmos": "Graph $y = 9 - 6x$ and $y = 4$ and click the intersection: $x \\approx 0.833$, which is $\\frac{5}{6}$. Type $4(\\frac{5}{6}) - 6$ to get $-2.667$. Typing the rounded value, $4(0.833) - 6$, gives $-2.668$, which is not an accepted answer.",
+    "another_way": "Rescale the given equation instead of solving for $x$.<br>$\\frac{4}{-6} = -\\frac{2}{3}$ <span class=\"nt\">(the number that turns $-6x$ into $4x$)</span><br>$9  \\cdot  (-\\frac{2}{3}) = -6$ <span class=\"nt\">(the same number turns 9 into $-6$)</span><br>So $4x - 6 = -\\frac{2}{3}(9 - 6x)$.<br>$-\\frac{2}{3}(9 - 6x) = -\\frac{2}{3}(4)$ <span class=\"nt\">(multiply both sides of the given equation by $-\\frac{2}{3}$)</span><br>$4x - 6 = -\\frac{2}{3}(4)$ <span class=\"nt\">(rewrite the left side as $4x - 6$)</span><br>$4x - 6 = -\\frac{8}{3}$ <span class=\"nt\">(multiply $-\\frac{2}{3}  \\cdot  4$)</span>"
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-017",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C7"
+   ],
+   "family": "first-n-free-charged-day-count",
+   "signature": "library fine: first 3 overdue days free, $0.25 for each day after that, $2.75 paid; which equation; charged days d - 3 vs every day d, the off-by-one d - 4 (fines start on day 4), and 3 subtracted from dollars",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": 2.17,
+   "format": "mcq",
+   "stem": "A library charges no fine for the first 3 days a book is overdue and \\$0.25 for each day after that. Maria paid a fine of \\$2.75 for a book that was $d$ days overdue, where $d > 3$. Which equation represents this situation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.25d = 2.75$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Charges \\$0.25 for every overdue day, including the first 3 free days. Only the $d - 3$ days after them are charged."
+    },
+    {
+     "key": "B",
+     "text": "$0.25d - 3 = 2.75$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Subtracts the 3 free days from the dollar amount $0.25d$. The 3 days have to come off the number of days, before multiplying by \\$0.25."
+    },
+    {
+     "key": "C",
+     "text": "$0.25(d - 4) = 2.75$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Subtracts 4 because the fines start on day 4. Days 4 through $d$ number $d - 3$, not $d - 4$: for a book 14 days overdue, days 4 through 14 are 11 days."
+    },
+    {
+     "key": "D",
+     "text": "$0.25(d - 3) = 2.75$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The \\$0.25 fine applies only to the days after the first 3, so the number of charged days is $d - 3$, not $d$.",
+    "steps": "The question asks for an equation for the fine Maria paid.<br>Let $d$ = the number of days the book was overdue.<br>first 3 days: \\$0 <span class=\"nt\">(no fine)</span><br>charged days: $d - 3$ <span class=\"nt\">(days 4 through $d$: all $d$ days except the first 3)</span><br>fine for the charged days: $0.25(d - 3)$ <span class=\"nt\">(\\$0.25 for each charged day)</span><br>$0.25(d - 3) = 2.75$ <span class=\"nt\">(the fine Maria paid)</span>",
+    "check": "The equation gives $d - 3 = 11$, so $d = 14$. A book 14 days overdue is charged for days 4 through 14, which is 11 days, and 11 days at \\$0.25 each is \\$2.75 ✓",
+    "be_careful": "Choice A ($0.25d = 2.75$) is a trap. It charges \\$0.25 for every overdue day, including the first 3 free days. Only the $d - 3$ days after them are charged.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-018",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C7"
+   ],
+   "family": "split-fixed-total-ask-money",
+   "signature": "bookstore: 26 books, $4 paperbacks and $10 hardcovers, $140 total, no variable given; ask the money from hardcovers (60); paperback money, one variable for both kinds, and the paperback count read as hardcovers",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": 2.53,
+   "format": "mcq",
+   "stem": "A bookstore sold 26 used books on Saturday for a total of \\$140. Each book was either a paperback that sold for \\$4 or a hardcover that sold for \\$10. How much money, in dollars, did the store receive from hardcover sales?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$60$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$80$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "80 is the money from paperbacks: 20 paperbacks at \\$4 each. The question asks for the money from hardcovers."
+    },
+    {
+     "key": "C",
+     "text": "$100$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "Uses one variable for both kinds: $4x + 10x = 140$ gives $x = 10$, and then $10(10) = 100$. The two counts are different numbers that add to 26."
+    },
+    {
+     "key": "D",
+     "text": "$200$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "Solves $4x + 10(26 - x) = 140$, where $x = 20$ is the number of paperbacks, then treats 20 as the number of hardcovers: $10(20) = 200$. That is more than the \\$140 the store received in all."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "When a fixed total of 26 books is split into two kinds, one variable covers both: $h$ hardcovers means $26 - h$ paperbacks.",
+    "steps": "The question asks for the money from hardcovers, which is \\$10 times the number of hardcovers.<br>Let $h$ = the number of hardcovers sold.<br>$26 - h$ = the number of paperbacks sold <span class=\"nt\">(26 books in all)</span><br>$10h + 4(26 - h) = 140$ <span class=\"nt\">(hardcover money plus paperback money)</span><br>$10h + 104 - 4h = 140$ <span class=\"nt\">(distribute 4)</span><br>$6h + 104 = 140$ <span class=\"nt\">(combine $10h - 4h$)</span><br>$6h = 36$ <span class=\"nt\">(subtract 104 from both sides)</span><br>$h = 6$ <span class=\"nt\">(divide both sides by 6)</span><br>hardcover money: $10(6) = 60$ dollars <span class=\"nt\">(\\$10 for each hardcover)</span>",
+    "check": "6 hardcovers and 20 paperbacks: $6 + 20 = 26$ books, and $60 + 4(20) = 60 + 80 = 140$ dollars ✓",
+    "be_careful": "Choice C ($100$) is a trap. It uses one variable for both kinds: $4x + 10x = 140$ gives $x = 10$, and then $10(10) = 100$. The two counts are different numbers that add to 26.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-019",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C8"
+   ],
+   "family": "interpret-product-term",
+   "signature": "balloon: 150 + 6.5t = 1,060, best interpretation of 6.5t (meters risen in t seconds)",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": 2.25,
+   "format": "mcq",
+   "stem": "A weather balloon released from a platform 150 meters above the ground rises at a constant rate. The equation $150 + 6.5t = 1,060$ represents this situation, where $t$ is the number of seconds the balloon takes to reach 1,060 meters. What is the best interpretation of $6.5t$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The number of meters the balloon rises during each second",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This describes the rate 6.5 alone. Multiplying the rate by $t$ gives a total for $t$ seconds."
+    },
+    {
+     "key": "B",
+     "text": "The number of meters the balloon rises during the first $t$ seconds",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "The number of seconds it takes the balloon to reach 1,060 meters",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is $t$, the solution of the equation. $6.5t$ is measured in meters, not seconds."
+    },
+    {
+     "key": "D",
+     "text": "The height, in meters, of the balloon $t$ seconds after it is released",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The height after $t$ seconds is the whole left side, $150 + 6.5t$, which includes the starting 150 meters."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A rate times a count is a total: 6.5 meters per second times $t$ seconds is the total rise during those $t$ seconds.",
+    "steps": "What does the question ask? It asks for the best interpretation of $6.5t$ in this context.<br>Read each part of the equation with its units.<br>150: the starting height, in meters <span class=\"nt\">(the platform)</span><br>6.5: the meters the balloon rises in one second <span class=\"nt\">(the constant rate)</span><br>$t$: the number of seconds since the release<br>$6.5t$: meters per second times seconds, which is meters risen in $t$ seconds<br>$150 + 6.5t$: the height after $t$ seconds <span class=\"nt\">(start plus rise)</span><br>So $6.5t$ is the number of meters the balloon rises during the first $t$ seconds.",
+    "check": "The equation gives $6.5t = 1,060 - 150 = 910$: the balloon rises 910 meters to go from 150 to 1,060 meters ✓",
+    "be_careful": "Choice A is a trap. This describes the rate 6.5 alone. Multiplying the rate by $t$ gives a total for $t$ seconds.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-020",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "M",
+   "concepts": [
+    "A1.C8"
+   ],
+   "family": "interpret-solution-left-plus-used",
+   "signature": "food bank: 165 + 35d = 480 (cans left plus cans given out equal the start), solution d = 9; best interpretation of the solution; the model is not printed in start-minus-used form",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": 2.54,
+   "format": "mcq",
+   "stem": "A food bank started with 480 cans of soup and gave out the same number of cans each day. The equation $165 + 35d = 480$ represents this situation at the end of day $d$. The solution to the equation is $d = 9$. What is the best interpretation of the solution in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "At the end of day 9, the food bank had 165 cans of soup left to give out.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "At the end of day 9, the food bank had given out a total of 165 cans of soup.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "165 is the number of cans left, not the number given out. By the end of day 9 the food bank had given out $35(9) = 315$ cans."
+    },
+    {
+     "key": "C",
+     "text": "At the end of day 9, the food bank had given out all of its cans of soup.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Reads $165 + 35d = 480$ as “all 480 cans have been given out.” Only $35d$ counts cans given out, and by the end of day 9 that is $35(9) = 315$, not 480."
+    },
+    {
+     "key": "D",
+     "text": "The food bank gave out 9 cans of soup each day until 165 cans were left.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "Reads the solution as the number given out each day. That number is 35, the coefficient of $d$; the solution 9 is a day number."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The solution is the day number that makes the equation true, so its meaning comes from what each part of the equation stands for.",
+    "steps": "The question asks what $d = 9$ means. Read each part of the equation.<br>480: the number of cans at the start<br>$d$: the day number (by the end of day $d$, cans have been given out on $d$ days)<br>$35d$: the number of cans given out by the end of day $d$ <span class=\"nt\">(35 cans each day for $d$ days)</span><br>$165 = 480 - 35d$ <span class=\"nt\">(subtract $35d$ from both sides)</span><br>$480 - 35d$ is the starting number minus the cans given out, which is the number of cans left. So 165 is the number of cans left at the end of day $d$.<br>The solution, $d = 9$, is the day on which this happens: at the end of day 9, the food bank had 165 cans left.",
+    "check": "By the end of day 9 the food bank had given out $35(9) = 315$ cans, and $480 - 315 = 165$ cans were left ✓",
+    "be_careful": "Choice B is a trap. 165 is the number of cans left, not the number given out. By the end of day 9 the food bank had given out $35(9) = 315$ cans.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-021",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C1"
+   ],
+   "family": "side-difference",
+   "signature": "px + c = qx + r, c unknown; at x = 3 the left side is 10 greater than the right side; find c, then the solution (11/2); SPR text",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": 2.98,
+   "format": "spr",
+   "stem": "$5x + c = 9x - 4$<br>In the given equation, $c$ is a constant. When $x = 3$, the value of the left side of the equation is 10 greater than the value of the right side. What is the solution to the given equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "11/2",
+      "5.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "18",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "18 is the value of the constant $c$. The question asks for the solution $x$."
+    },
+    {
+     "value": "1/2",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Uses right side minus left side: $23 - (15 + c) = 10$ gives $c = -2$, and then $5x - 2 = 9x - 4$ gives $x = \\frac{1}{2}$. The left side is the greater one."
+    }
+   ],
+   "solution": {
+    "key_idea": "Substituting $x = 3$ turns the sentence about the two sides into an equation in $c$; once $c$ is known, the original equation can be solved.",
+    "steps": "The question asks for the solution, so the constant $c$ must be found first.<br>left side at $x = 3$: $5(3) + c = 15 + c$ <span class=\"nt\">(substitute $x = 3$)</span><br>right side at $x = 3$: $9(3) - 4 = 23$ <span class=\"nt\">(substitute $x = 3$)</span><br>$(15 + c) - 23 = 10$ <span class=\"nt\">(left side minus right side is 10)</span><br>$c - 8 = 10$ <span class=\"nt\">(combine $15 - 23$)</span><br>$c = 18$ <span class=\"nt\">(add 8 to both sides)</span><br>Now solve the original equation with this value of $c$.<br>$5x + 18 = 9x - 4$ <span class=\"nt\">(substitute $c = 18$)</span><br>$18 = 4x - 4$ <span class=\"nt\">(subtract $5x$ from both sides)</span><br>$22 = 4x$ <span class=\"nt\">(add 4 to both sides)</span><br>$x = \\frac{22}{4}$ <span class=\"nt\">(divide both sides by 4)</span><br>$x = \\frac{11}{2}$ <span class=\"nt\">(reduce by 2)</span>",
+    "check": "With $c = 18$ and $x = 5.5$: left side $5(5.5) + 18 = 45.5$ and right side $9(5.5) - 4 = 45.5$ ✓. At $x = 3$: $15 + 18 = 33$ and $23$, a difference of 10 ✓",
+    "be_careful": "A common wrong answer is $18$. 18 is the value of the constant $c$. The question asks for the solution $x$.",
+    "desmos": "A slider for $c$ is slow here. After finding $c = 18$, graph $y = 5x + 18$ and $y = 9x - 4$ and click the intersection point $(5.5, 45.5)$ to confirm.",
+    "another_way": "The difference (left side) minus (right side) is $5x + c - (9x - 4) = -4x + c + 4$, so it drops by 4 each time $x$ goes up by 1. It is 10 at $x = 3$ and must be 0 at the solution, so $x$ goes up by $\\frac{10}{4} = 2.5$: the solution is $3 + 2.5 = 5.5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-022",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C3",
+    "A1.C4"
+   ],
+   "family": "two-solutions-force-identity",
+   "signature": "true for two different x so identity: k(x + 1) - 4x = m(x - 2) + 2, coupled matches k - 4 = m and k = 2 - 2m; finish k + m = 8/3, no x-values given; SPR fraction (H copy of old H+ 050)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": 3.42,
+   "format": "spr",
+   "stem": "$k(x + 1) - 4x = m(x - 2) + 2$<br>In the given equation, $k$ and $m$ are constants. At least two different values of $x$ make the equation true. What is the value of $k + m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8/3",
+      "2.666",
+      "2.667"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "10/3",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\frac{10}{3}$ is the value of $k$ alone, reached midway. Adding $m = -\\frac{2}{3}$ gives $\\frac{8}{3}$."
+    },
+    {
+     "value": "8",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Distributes $m(x - 2)$ as $mx + 2m$, which gives $k = 2m + 2$ and then $k = 6$, $m = 2$. The product of $m$ and $-2$ is $-2m$."
+    }
+   ],
+   "solution": {
+    "key_idea": "A linear equation that is true for two different values of $x$ is true for every $x$, so the two sides must be the same expression: the $x$-coefficients match and the constants match.",
+    "steps": "The question asks for $k + m$, and no value of $x$ is given. A linear equation has zero, one, or infinitely many solutions, so two solutions mean infinitely many: the two sides are the same expression.<br>$kx + k - 4x = mx - 2m + 2$ <span class=\"nt\">(distribute $k$ and $m$)</span><br>$(k - 4)x + k = mx + (2 - 2m)$ <span class=\"nt\">(group the $x$-terms on the left)</span><br>$k - 4 = m$ <span class=\"nt\">(match the $x$-coefficients)</span><br>$k = 2 - 2m$ <span class=\"nt\">(match the constants)</span><br>$k = 2 - 2(k - 4)$ <span class=\"nt\">(substitute $m = k - 4$)</span><br>$k = 2 - 2k + 8$ <span class=\"nt\">(distribute $-2$)</span><br>$k = 10 - 2k$ <span class=\"nt\">(combine the constants)</span><br>$3k = 10$ <span class=\"nt\">(add $2k$ to both sides)</span><br>$k = \\frac{10}{3}$ <span class=\"nt\">(divide both sides by 3)</span><br>$m = \\frac{10}{3} - 4 = -\\frac{2}{3}$ <span class=\"nt\">(use $m = k - 4$)</span><br>$k + m = \\frac{10}{3} - \\frac{2}{3} = \\frac{8}{3}$ <span class=\"nt\">(add $k$ and $m$)</span>",
+    "check": "With $k = \\frac{10}{3}$ and $m = -\\frac{2}{3}$: the left side is $\\frac{10}{3}x + \\frac{10}{3} - 4x = -\\frac{2}{3}x + \\frac{10}{3}$ and the right side is $-\\frac{2}{3}x + \\frac{4}{3} + 2 = -\\frac{2}{3}x + \\frac{10}{3}$, the same expression ✓",
+    "be_careful": "A common wrong answer is $10/3$. $\\frac{10}{3}$ is the value of $k$ alone, reached midway. Adding $m = -\\frac{2}{3}$ gives $\\frac{8}{3}$.",
+    "desmos": null,
+    "another_way": "Once the two sides are known to be the same expression, every $x$ is a solution, so any convenient $x$ can be substituted. $x = -1$ makes $k(x + 1)$ zero: $4 = -3m + 2$, so $m = -\\frac{2}{3}$. $x = 2$ makes $m(x - 2)$ zero: $3k - 8 = 2$, so $k = \\frac{10}{3}$. Then $k + m = \\frac{8}{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-023",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C5"
+   ],
+   "family": "reverse-exactly-one-extra-x-term",
+   "signature": "c(x - 3) + 2x = 7x + 6 exactly one solution, CANNOT be c; collects to (c - 5)x = 3c + 6, the extra 2x hides the forbidden 5 (0 = 21); x = 0 bait (-2), visible 7 bait, sign-slip -9 (7x moved as +7x); MCQ text",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": 2.76,
+   "format": "mcq",
+   "stem": "$c(x - 3) + 2x = 7x + 6$<br>In the given equation, $c$ is a constant. The equation has exactly one solution. Which of the following CANNOT be the value of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Moves $7x$ to the left as $+7x$, which gives $(c + 9)x$ and makes $-9$ look forbidden. With $c = -9$ the equation is $-14x = -21$, so $x = 1.5$: exactly one solution."
+    },
+    {
+     "key": "B",
+     "text": "$-2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $c = -2$ the equation becomes $-7x = 0$, so $x = 0$. A solution of 0 is still exactly one solution."
+    },
+    {
+     "key": "C",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Matches $c$ to the visible $7x$ and forgets the $2x$ on the left. With $c = 7$ the left side has $7x + 2x = 9x$, so the $x$-terms do not cancel: the equation becomes $2x = 27$, with the solution $x = 13.5$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A linear equation fails to have exactly one solution only when its $x$-terms cancel, so the only forbidden value of $c$ is the one that makes the $x$-coefficient 0.",
+    "steps": "The question asks which value of $c$ does not give exactly one solution. Collect the $x$-terms.<br>$cx - 3c + 2x = 7x + 6$ <span class=\"nt\">(distribute $c$)</span><br>$cx - 3c - 5x = 6$ <span class=\"nt\">(subtract $7x$ from both sides: $2x - 7x = -5x$)</span><br>$cx - 5x = 3c + 6$ <span class=\"nt\">(add $3c$ to both sides)</span><br>$(c - 5)x = 3c + 6$ <span class=\"nt\">(factor out $x$)</span><br>If $c - 5 \\ne 0$, dividing by $c - 5$ gives exactly one solution. If $c = 5$, the left side is 0:<br>$0 = 3(5) + 6$ <span class=\"nt\">(substitute $c = 5$)</span><br>$0 = 21$ <span class=\"nt\">(multiply and add)</span><br>This is false, so $c = 5$ gives no solution, not exactly one. The value of $c$ CANNOT be 5.<br>The choice $-2$ only looks dangerous. It makes the right side 0, so the equation is $-7x = 0$. The coefficient $-7$ is not 0, so the $x$-term does not cancel, and $x = 0$ is the one value that makes $-7x$ equal to 0. The count depends on the coefficient of $x$, not on the size of the solution.",
+    "check": "The other choices each give one solution: $c = -9$ gives $-14x = -21$, so $x = 1.5$; $c = -2$ gives $-7x = 0$, so $x = 0$; $c = 7$ gives $2x = 27$, so $x = 13.5$ ✓",
+    "be_careful": "Choice B ($-2$) is a trap. With $c = -2$ the equation becomes $-7x = 0$, so $x = 0$. A solution of 0 is still exactly one solution.",
+    "desmos": "Graph $y = c(x - 3) + 2x$ with a slider for $c$, and $y = 7x + 6$. Set $c$ to each choice. At $c = 5$ the left side is $y = 7x - 15$, parallel to $y = 7x + 6$ (both have slope 7), so the lines never meet. At $c = -2$ the left side is the flat line $y = 6$, which crosses $y = 7x + 6$ once, at $(0, 6)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-024",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C3",
+    "A1.C2"
+   ],
+   "family": "hidden-zero-solution-claim-reason",
+   "signature": "(3/4)(8x - 12) + 9 = -(x - 4) + 8x - 4 simplifies to 6x = 7x; claim + reason choices; key exactly one (x = 0); divide-by-x, constants-cancel, and \"right side always greater\" baits",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": 2.84,
+   "format": "mcq",
+   "stem": "$\\frac{3}{4}(8x - 12) + 9 = -(x - 4) + 8x - 4$<br>Which of the following statements about the given equation is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The equation has exactly one solution, because the two sides have different $x$-coefficients.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The equation has no solution, because dividing both sides by $x$ gives a false statement.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "After simplifying to $6x = 7x$, dividing by $x$ gives $6 = 7$. Dividing by $x$ is not allowed when $x$ can be 0, and $x = 0$ makes both sides 0, so the equation does have a solution."
+    },
+    {
+     "key": "C",
+     "text": "The equation has infinitely many solutions, because the constant terms cancel on both sides.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "The constants do cancel ($-9 + 9$ on the left and $4 - 4$ on the right), but infinitely many solutions also needs the $x$-terms to match. $6x$ and $7x$ do not, so only $x = 0$ works."
+    },
+    {
+     "key": "D",
+     "text": "The equation has no solution, because the right side is always greater than the left side.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Compares $7x$ and $6x$ as if $x$ were positive. At $x = 0$ the two sides are equal, and for negative $x$ the left side is greater (at $x = -1$: $-6 > -7$)."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "When the $x$-coefficients on the two sides are different (here $6x$ and $7x$ after simplifying), the equation has exactly one solution, even when that solution is $x = 0$.",
+    "steps": "What does the question ask? It asks which statement about the given equation is true.<br>Simplify each side, then compare.<br>left side: $\\frac{3}{4}  \\cdot  8x - \\frac{3}{4}  \\cdot  12 + 9$ <span class=\"nt\">(distribute $\\frac{3}{4}$)</span><br>left side: $6x - 9 + 9$ <span class=\"nt\">(multiply)</span><br>left side: $6x$ <span class=\"nt\">(combine $-9 + 9$)</span><br>right side: $-x + 4 + 8x - 4$ <span class=\"nt\">(distribute the minus sign)</span><br>right side: $7x$ <span class=\"nt\">(combine like terms)</span><br>$6x = 7x$ <span class=\"nt\">(the simplified equation)</span><br>$0 = x$ <span class=\"nt\">(subtract $6x$ from both sides)</span><br>Only $x = 0$ makes the two sides equal. The coefficients 6 and 7 are different, so the $x$-terms never cancel and the equation has exactly one solution. A solution equal to 0 is still a solution.<br>Dividing both sides of $6x = 7x$ by $x$ would give $6 = 7$, but that step divides by 0 when $x = 0$, so it throws away the one solution.",
+    "check": "$x = 0$: left side $\\frac{3}{4}(-12) + 9 = -9 + 9 = 0$ and right side $-(-4) + 0 - 4 = 0$ ✓. $x = 1$: left side 6 and right side 7, so not every $x$ works ✓",
+    "be_careful": "Choice B is a trap. After simplifying to $6x = 7x$, dividing by $x$ gives $6 = 7$. Dividing by $x$ is not allowed when $x$ can be 0, and $x = 0$ makes both sides 0, so the equation does have a solution.",
+    "desmos": "Graph $y = \\frac{3}{4}(8x - 12) + 9$ and $y = -(x - 4) + 8x - 4$. The two lines cross once, at the origin $(0, 0)$: exactly one solution, $x = 0$. The picture confirms the count; the algebra explains why the crossing is at $x = 0$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-025",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C3"
+   ],
+   "family": "table-sides-uneven-spacing",
+   "signature": "P and Q linear, table at x = -2, 2, 4, 6 (uneven spacing): P = 7 - 2x, Q = 0.5x - 2; solve P = Q (18/5, between columns); fraction choices off the table: Q rate upside down (3), a column value taken as the constant term of Q (16/5) or of P (26/5); MCQ table",
+   "abilities": [
+    "R",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": 2.91,
+   "format": "mcq",
+   "stem": "$P$ and $Q$ are linear expressions in $x$. The table shows some values of $P$ and $Q$.<table class=\"dt\"><tr><th>$x$</th><td>$-2$</td><td>$2$</td><td>$4$</td><td>$6$</td></tr><tr><th>$P$</th><td>$11$</td><td>$3$</td><td>$-1$</td><td>$-5$</td></tr><tr><th>$Q$</th><td>$-3$</td><td>$-1$</td><td>$0$</td><td>$1$</td></tr></table>What is the solution to the equation $P = Q$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Finds the rate of $Q$ upside down. From $x = -2$ to $x = 2$, $Q$ rises 2 while $x$ goes up 4, and $\\frac{4}{2} = 2$ is the change in $x$ over the change in $Q$. With that rate, $Q = 2x - 5$, and $7 - 2x = 2x - 5$ gives $x = 3$. The rate is $\\frac{2}{4} = \\frac{1}{2}$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{16}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Uses $-1$, the value of $Q$ at $x = 2$, as its value at $x = 0$: $Q = \\frac{1}{2}x - 1$, and $7 - 2x = \\frac{1}{2}x - 1$ gives $x = \\frac{16}{5}$. The value at $x = 0$ is two units back from $x = 2$: $-1 - 1 = -2$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{18}{5}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{26}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Uses 11, the value of $P$ at $x = -2$ (the first column), as its value at $x = 0$: $P = 11 - 2x$, and $11 - 2x = \\frac{1}{2}x - 2$ gives $x = \\frac{26}{5}$. The value at $x = 0$ is two units past $x = -2$: $11 - 2(2) = 7$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A solution of $P = Q$ is a value of $x$ at which the two linear expressions are equal, so each expression must first be rebuilt from the table from its change per 1 unit of $x$ and its value at $x = 0$.",
+    "steps": "The question asks for the value of $x$ that makes $P$ equal to $Q$. The $x$-values in the table jump by 4 and then by 2, so each rate must be found per 1 unit of $x$.<br>rate of $P$: $\\frac{-1 - 3}{4 - 2} = \\frac{-4}{2} = -2$ <span class=\"nt\">(change in $P$ divided by change in $x$, from $x = 2$ to $x = 4$)</span><br>$P$ at $x = 0$: $3 + 2(2) = 7$ <span class=\"nt\">(2 units back from $x = 2$, so $P$ is 4 more)</span><br>$P = 7 - 2x$ <span class=\"nt\">(starts at 7, drops 2 per unit of $x$)</span><br>rate of $Q$: $\\frac{0 - (-1)}{4 - 2} = \\frac{1}{2}$ <span class=\"nt\">(change in $Q$ divided by change in $x$)</span><br>$Q$ at $x = 0$: $-1 - 1 = -2$ <span class=\"nt\">(2 units back from $x = 2$, so $Q$ is 1 less)</span><br>$Q = \\frac{1}{2}x - 2$ <span class=\"nt\">(starts at $-2$, rises $\\frac{1}{2}$ per unit of $x$)</span><br>$7 - 2x = \\frac{1}{2}x - 2$ <span class=\"nt\">(set $P$ equal to $Q$)</span><br>$9 - 2x = \\frac{1}{2}x$ <span class=\"nt\">(add 2 to both sides)</span><br>$9 = \\frac{5}{2}x$ <span class=\"nt\">(add $2x$ to both sides)</span><br>$x = \\frac{18}{5}$ <span class=\"nt\">(multiply both sides by $\\frac{2}{5}$)</span>",
+    "check": "At $x = \\frac{18}{5} = 3.6$: $P = 7 - 2(3.6) = -0.2$ and $Q = 0.5(3.6) - 2 = -0.2$ ✓. The formulas also fit the columns not used to build them: $P = 7 - 2(-2) = 11$ and $Q = 0.5(6) - 2 = 1$ ✓",
+    "be_careful": "Choice A ($3$) is a trap. It finds the rate of $Q$ upside down. From $x = -2$ to $x = 2$, $Q$ rises 2 while $x$ goes up 4, and $\\frac{4}{2} = 2$ is the change in $x$ over the change in $Q$. With that rate, $Q = 2x - 5$, and $7 - 2x = 2x - 5$ gives $x = 3$. The rate is $\\frac{2}{4} = \\frac{1}{2}$.",
+    "desmos": "Make a table with $x_{1}$: $-2, 2, 4, 6$ and $y_{1}$: $11, 3, -1, -5$, then type <i>y</i><sub>1</sub> ~ <i>mx</i><sub>1</sub> + <i>b</i> for a linear regression: $m = -2$ and $b = 7$. Do the same for the $Q$ row, graph $y = 7 - 2x$ and $y = 0.5x - 2$, and click the intersection $(3.6, -0.2)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-026",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C1",
+    "A1.C2"
+   ],
+   "family": "linked-solutions-shared-constant",
+   "signature": "two equations share k: 2x - k = 7 and x + k = 8; the first solution is 3 greater than the second; each solution written in terms of k, (7 + k)/2 = (8 - k) + 3, k = 5; reversed relation (1), solutions set equal (3), first solution reported (6); MCQ text",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": 2.91,
+   "format": "mcq",
+   "stem": "$2x - k = 7$<br>$x + k = 8$<br>In the given equations, $k$ is the same constant. The solution to the first equation is 3 greater than the solution to the second equation. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Adds the 3 to the wrong solution: $\\frac{7 + k}{2} + 3 = 8 - k$ gives $k = 1$. That equation says the second solution is 3 greater; with $k = 1$ the solutions are 4 and 7."
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Sets the two solutions equal, $\\frac{7 + k}{2} = 8 - k$, and leaves out “3 greater”: $k = 3$. With $k = 3$ both equations have the solution 5."
+    },
+    {
+     "key": "C",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is the solution to the first equation when $k = 5$. The question asks for $k$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Each solution depends on $k$, so writing both solutions in terms of $k$ turns the sentence about the solutions into an equation in $k$.",
+    "steps": "The question asks for $k$. Solve each equation for $x$, keeping $k$ as a letter.<br>$2x = 7 + k$ <span class=\"nt\">(first equation: add $k$ to both sides)</span><br>$x = \\frac{7 + k}{2}$ <span class=\"nt\">(divide both sides by 2)</span><br>$x = 8 - k$ <span class=\"nt\">(second equation: subtract $k$ from both sides)</span><br>The first solution is 3 greater than the second, so the first solution equals the second solution plus 3:<br>$\\frac{7 + k}{2} = (8 - k) + 3$ <span class=\"nt\">(write the relation)</span><br>$\\frac{7 + k}{2} = 11 - k$ <span class=\"nt\">(combine $8 + 3$)</span><br>$7 + k = 22 - 2k$ <span class=\"nt\">(multiply both sides by 2)</span><br>$7 + 3k = 22$ <span class=\"nt\">(add $2k$ to both sides)</span><br>$3k = 15$ <span class=\"nt\">(subtract 7 from both sides)</span><br>$k = 5$ <span class=\"nt\">(divide both sides by 3)</span>",
+    "check": "With $k = 5$: the first equation is $2x - 5 = 7$, so $2x = 12$ and $x = 6$; the second is $x + 5 = 8$, so $x = 3$. And $6 = 3 + 3$ ✓",
+    "be_careful": "Choice A ($1$) is a trap. It adds the 3 to the wrong solution: $\\frac{7 + k}{2} + 3 = 8 - k$ gives $k = 1$. That equation says the second solution is 3 greater; with $k = 1$ the solutions are 4 and 7.",
+    "desmos": "Desmos can check a choice. With $k = 5$, type $2x - 5 = 7$ and $x + 5 = 8$: Desmos draws the vertical lines $x = 6$ and $x = 3$, so the first solution is 3 greater than the second. Testing choices this way works only if the relation is read the right way: the first solution is the greater one.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-027",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C4"
+   ],
+   "family": "identity-ratio-of-constants",
+   "signature": "(ax - 10)/4 = 3x + b/2 infinitely many; clear the 4, match both parts, ask b/a (-5/12); SPR text",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": 2.98,
+   "format": "spr",
+   "stem": "$\\frac{ax - 10}{4} = 3x + \\frac{b}{2}$<br>In the given equation, $a$ and $b$ are nonzero constants. If the equation has infinitely many solutions, what is the value of $\\frac{b}{a}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-5/12",
+      "-.4166",
+      "-.4167",
+      "-0.416",
+      "-0.417"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-12/5",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This is $\\frac{a}{b}$, the ratio upside down. The question asks for $\\frac{b}{a}$."
+    },
+    {
+     "value": "-5",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$-5$ is the value of $b$ alone. Dividing by $a = 12$ gives $\\frac{b}{a}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Infinitely many solutions means the two sides are the same expression, so the $x$-coefficients match and the constant terms match.",
+    "steps": "The question asks for $\\frac{b}{a}$, so find $a$ and $b$ first.<br>$ax - 10 = 12x + 2b$ <span class=\"nt\">(multiply both sides by 4: $4  \\cdot  \\frac{b}{2} = 2b$)</span><br>For the two sides to be the same expression, they must match term by term:<br>$a = 12$ <span class=\"nt\">(match the $x$-coefficients)</span><br>$2b = -10$ <span class=\"nt\">(match the constants)</span><br>$b = -5$ <span class=\"nt\">(divide both sides by 2)</span><br>$\\frac{b}{a} = \\frac{-5}{12} = -\\frac{5}{12}$ <span class=\"nt\">(divide $b$ by $a$)</span>",
+    "check": "With $a = 12$ and $b = -5$: left side $\\frac{12x - 10}{4} = 3x - \\frac{5}{2}$ and right side $3x + \\frac{-5}{2} = 3x - \\frac{5}{2}$. The same expression ✓",
+    "be_careful": "A common wrong answer is $-12/5$. This is $\\frac{a}{b}$, the ratio upside down. The question asks for $\\frac{b}{a}$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-028",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C4"
+   ],
+   "family": "identity-I-II-III-look-alike",
+   "signature": "p(x - h) = qx + r infinitely many; I p = q, II r = -qh (needs both matches), III p(x + h) = qx + r also infinitely many (false unless ph = 0); key I and II only; I/II/III",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": 3.42,
+   "format": "mcq",
+   "stem": "$p(x - h) = qx + r$<br>In the given equation, $p$, $q$, $r$, and $h$ are constants. If the equation has infinitely many solutions, which of the following must be true?<br>I. $p = q$<br>II. $r = -qh$<br>III. The equation $p(x + h) = qx + r$ also has infinitely many solutions.",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "I only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Matches only the $x$-coefficients. Infinitely many solutions also needs the constants to match, $-ph = r$, and with $p = q$ that is statement II."
+    },
+    {
+     "key": "B",
+     "text": "I and II only",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "I and III only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Skips the match of the constants, so statement II is missed, and accepts statement III because $p(x + h)$ looks like $p(x - h)$. Changing $-h$ to $+h$ changes the constant from $-ph$ to $ph$."
+    },
+    {
+     "key": "D",
+     "text": "I, II, and III",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Statement III can be true (for example when $h = 0$), but it does not have to be. With $p = q = 2$, $h = 1$, and $r = -2$, the given equation has infinitely many solutions while $2(x + 1) = 2x - 2$ has none."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Infinitely many solutions means the two sides are the same expression, so the $x$-coefficients match and the constants match. A statement that holds only for some values of the constants is not a “must.”",
+    "steps": "What does the question ask? It asks what must be true if the equation has infinitely many solutions.<br>Distribute so each side has the form (number)$x$ + (constant).<br>$px - ph = qx + r$ <span class=\"nt\">(distribute $p$)</span><br>Infinitely many solutions means the two sides are the same expression, so they match term by term:<br>$p = q$ <span class=\"nt\">(match the $x$-coefficients: statement I is true)</span><br>$-ph = r$ <span class=\"nt\">(match the constants)</span><br>$r = -qh$ <span class=\"nt\">(replace $p$ with $q$: statement II is true)</span><br>Now test statement III. Its left side has $+h$ instead of $-h$:<br>$px + ph = qx + r$ <span class=\"nt\">(distribute $p$ in $p(x + h)$)</span><br>$ph = r$ <span class=\"nt\">(the $x$-parts already match, so the constants would have to match too)</span><br>$ph = -ph$ <span class=\"nt\">(substitute $r = -ph$)</span><br>$2ph = 0$ <span class=\"nt\">(add $ph$ to both sides)</span><br>$ph = 0$ <span class=\"nt\">(divide both sides by 2)</span><br>So statement III is true only when $ph = 0$, not every time. For example, with $p = q = 2$, $h = 1$, and $r = -2$, the given equation $2(x - 1) = 2x - 2$ is true for every $x$, but $2(x + 1) = 2x - 2$ leads to $2 = -2$, which is never true.<br>Only I and II must be true.",
+    "check": "With $p = q = 2$, $h = 1$, and $r = -2$: statement I ($2 = 2$) ✓, statement II ($-2 = -2(1)$) ✓, and the given equation $2x - 2 = 2x - 2$ is true for every $x$ ✓. Statement III fails for these same values, as shown above.",
+    "be_careful": "Choice A (I only) is a trap. It matches only the $x$-coefficients. Infinitely many solutions also needs the constants to match, $-ph = r$, and with $p = q$ that is statement II.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-029",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C4",
+    "A1.C7"
+   ],
+   "family": "identity-context-delayed-per-visit",
+   "signature": "climbing gyms: $40 sign-up fee + $6 per visit vs a total of f for the first 4 visits combined + $6 per additional visit; same total for every number of visits greater than 4; f = 64; offset ignored (40), f misread as a per-visit price 4f + 6(v - 4) = 40 + 6v (16), \"no such value\" option; MCQ context",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": 2.98,
+   "format": "mcq",
+   "stem": "Summit Climbing Gym charges a \\$40 sign-up fee plus \\$6 per visit. Boulder Hall charges a total of $f$ dollars for the first 4 visits combined, plus \\$6 for each additional visit. For every number of visits greater than 4, the two gyms charge the same total. What is the value of $f$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "Reads $f$ as a price per visit and writes $4f + 6(v - 4) = 40 + 6v$, so $4f = 64$ and $f = 16$. But $f$ is the total for the first 4 visits combined, which is $4(16) = 64$ dollars."
+    },
+    {
+     "key": "B",
+     "text": "$40$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Writes Boulder Hall’s total as $f + 6v$, charging \\$6 for every visit instead of only the visits after the first 4. Then $f = 40$, which matches only the sign-up fee and leaves out the \\$24 that the first 4 visits cost at Summit Climbing Gym."
+    },
+    {
+     "key": "C",
+     "text": "$64$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "There is no such value of $f$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Sees the $v$-terms cancel and reads that as “never equal.” The leftover statement $f - 24 = 40$ is true when $f = 64$, and then the totals match for every number of visits greater than 4."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "“The same total for every number of visits greater than 4” means the two cost expressions are the same expression, so the visit terms cancel and the constants must match.",
+    "steps": "The question asks for the value of $f$ that makes the two totals equal for every number of visits greater than 4.<br>Let $v$ = the number of visits, a whole number greater than 4.<br>Summit Climbing Gym: $40 + 6v$ <span class=\"nt\">(sign-up fee plus 6 dollars for each visit)</span><br>Boulder Hall: $f + 6(v - 4)$ <span class=\"nt\">($f$ pays for the first 4 visits together; 6 dollars for each of the $v - 4$ visits after them)</span><br>$f + 6(v - 4) = 40 + 6v$ <span class=\"nt\">(the totals are equal)</span><br>$f + 6v - 24 = 40 + 6v$ <span class=\"nt\">(distribute 6)</span><br>$f - 24 = 40$ <span class=\"nt\">(subtract $6v$ from both sides)</span><br>$f = 64$ <span class=\"nt\">(add 24 to both sides)</span><br>The $v$-terms cancel, so with $f = 64$ the totals are equal for every $v > 4$, as the question requires.",
+    "check": "5 visits: Summit Climbing Gym charges $40 + 6(5) = 70$ dollars and Boulder Hall charges $64 + 6(1) = 70$ dollars ✓. 10 visits: $40 + 60 = 100$ and $64 + 6(6) = 100$ ✓",
+    "be_careful": "Choice A ($16$) is a trap. It reads $f$ as a price per visit and writes $4f + 6(v - 4) = 40 + 6v$, so $4f = 64$ and $f = 16$. But $f$ is the total for the first 4 visits combined, which is $4(16) = 64$ dollars.",
+    "desmos": null,
+    "another_way": "After the first 4 visits, both gyms add \\$6 per visit, so their totals stay equal only if they are equal at 4 visits. At 4 visits Summit Climbing Gym charges $40 + 4(6) = 64$ dollars and Boulder Hall charges $f$ dollars, so $f = 64$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-030",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C5"
+   ],
+   "family": "exactly-one-for-every-k",
+   "signature": "four parameter equations, which has exactly one solution for every k; collect to A(k)x = B(k); A(k) = 0 at k = 3 (identity), k = 2 (identity), k = 0 (none, C written k(2x + 1) - 1 = k(x + 4)); key k(x + 2) + 4 = (k + 2)x - 6 (kx cancels only after distributing, 2x = 2k + 10, x = k + 5, coefficient 2 has no k); MCQ equations",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": 3.27,
+   "format": "mcq",
+   "stem": "In each of the following equations, $k$ is a constant. Which equation has exactly one solution for every value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$kx + 5 = 3x + 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Solves $(k - 3)x = 0$ as $x = 0$, which is one solution for most values of $k$, and misses $k = 3$. At $k = 3$ the equation is $3x + 5 = 3x + 5$, true for every $x$."
+    },
+    {
+     "key": "B",
+     "text": "$k(x - 2) = 2x - 4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Divides both sides of $(k - 2)x = 2(k - 2)$ by $k - 2$ and gets $x = 2$ for every $k$. That division is not allowed at $k = 2$, where the equation becomes $2x - 4 = 2x - 4$, true for every $x$."
+    },
+    {
+     "key": "C",
+     "text": "$k(2x + 1) - 1 = k(x + 4)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Writes the solution as $x = \\frac{3k + 1}{k}$ without checking $k = 0$. At $k = 0$ the equation becomes $-1 = 0$, which has no solution."
+    },
+    {
+     "key": "D",
+     "text": "$k(x + 2) + 4 = (k + 2)x - 6$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "After collecting, (coefficient)$x$ = (number) has exactly one solution only when the coefficient is not 0, so “for every value of $k$” needs a collected coefficient of $x$ that no value of $k$ can make 0, such as a nonzero number with no $k$ in it.",
+    "steps": "What does the question ask? It asks which equation has exactly one solution for every value of $k$.<br>Collect each equation into the form (coefficient)$x$ = (number), then look for a value of $k$ that makes the coefficient 0.<br>A: $(k - 3)x = 0$ <span class=\"nt\">(collect: $kx - 3x$ on the left, $5 - 5$ on the right)</span><br>At $k = 3$ this is $0 = 0$, true for every $x$: infinitely many solutions.<br>B: $kx - 2k = 2x - 4$ <span class=\"nt\">(distribute $k$)</span><br>$(k - 2)x = 2k - 4$ <span class=\"nt\">(collect the $x$-terms on the left and the rest on the right)</span><br>At $k = 2$ this is $0 = 0$: infinitely many solutions.<br>C: $2kx + k - 1 = kx + 4k$ <span class=\"nt\">(distribute $k$ on both sides)</span><br>$kx = 3k + 1$ <span class=\"nt\">(collect the $x$-terms on the left and the rest on the right)</span><br>At $k = 0$ this is $0 = 1$, never true: no solution.<br>D: $kx + 2k + 4 = kx + 2x - 6$ <span class=\"nt\">(distribute on both sides)</span><br>$2k + 4 = 2x - 6$ <span class=\"nt\">(subtract $kx$ from both sides)</span><br>$2k + 10 = 2x$ <span class=\"nt\">(add 6 to both sides)</span><br>$x = k + 5$ <span class=\"nt\">(divide both sides by 2)</span><br>In D the $kx$-terms cancel, so the collected coefficient of $x$ is 2, a number with no $k$ in it. No value of $k$ can make it 0, so D has exactly one solution, $x = k + 5$, for every value of $k$. Only D does this.",
+    "check": "In D, put $x = k + 5$ back in. Left side: $k(k + 7) + 4 = k^{2} + 7k + 4$. Right side: $(k + 2)(k + 5) - 6 = k^{2} + 7k + 4$. The two sides match for every $k$ ✓",
+    "be_careful": "in D, $k = -2$ makes the factor $k + 2$ equal to 0, but the left side still has $-2x$: the equation becomes $-2x = -6$, which has one solution, $x = 3$. The count depends on the coefficient after both sides are collected.",
+    "desmos": "Graph the two sides of a choice with a slider for $k$ (for example $y = kx + 5$ and $y = 3x + 5$). Setting $k = 3$ in A, $k = 2$ in B, or $k = 0$ in C makes the two lines the same line or parallel lines. In D the two lines have slopes $k$ and $k + 2$, which always differ by 2, so they are never parallel and cross once for every $k$, including $k = -2$. A slider only tests values; the collected form proves “every value of $k$.”",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-031",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C5"
+   ],
+   "family": "no-solution-k-in-both-parts",
+   "signature": "k(x - 5) + 4x = (6 - 2k)x - 7 no solution: k + 4 = 6 - 2k gives 2/3; constants -5k = -10/3 vs -7 checked; SPR text",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": 2.98,
+   "format": "spr",
+   "stem": "$k(x - 5) + 4x = (6 - 2k)x - 7$<br>In the given equation, $k$ is a constant. If the equation has no solution, what is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2/3",
+      ".6666",
+      ".6667",
+      "0.666",
+      "0.667"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7/5",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Sets the constants equal ($-5k = -7$) instead of the $x$-coefficients. With $k = \\frac{7}{5}$ the $x$-coefficients are 5.4 and 3.2, so there is exactly one solution."
+    },
+    {
+     "value": "-2",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Moves $-2k$ across without changing its sign: $k - 2k = 6 - 4$ gives $k = -2$. Adding $2k$ to both sides gives $3k = 2$."
+    }
+   ],
+   "solution": {
+    "key_idea": "No solution means the $x$-coefficients on the two sides are equal while the constant terms are different.",
+    "steps": "The question asks for $k$. Write each side as (number)$x$ + (constant).<br>$kx - 5k + 4x = (6 - 2k)x - 7$ <span class=\"nt\">(distribute $k$)</span><br>$(k + 4)x - 5k = (6 - 2k)x - 7$ <span class=\"nt\">(group the $x$-terms on the left)</span><br>No solution needs equal $x$-coefficients and different constants.<br>$k + 4 = 6 - 2k$ <span class=\"nt\">(match the $x$-coefficients)</span><br>$3k + 4 = 6$ <span class=\"nt\">(add $2k$ to both sides)</span><br>$3k = 2$ <span class=\"nt\">(subtract 4 from both sides)</span><br>$k = \\frac{2}{3}$ <span class=\"nt\">(divide both sides by 3)</span><br>left constant: $-5  \\cdot  \\frac{2}{3} = -\\frac{10}{3}$ <span class=\"nt\">(substitute $k = \\frac{2}{3}$ into $-5k$)</span><br>The left constant $-\\frac{10}{3}$ is not the right constant $-7$, so the equation has no solution.",
+    "check": "With $k = \\frac{2}{3}$, both $x$-coefficients are $\\frac{14}{3}$: $\\frac{2}{3} + 4 = \\frac{14}{3}$ and $6 - \\frac{4}{3} = \\frac{14}{3}$. The equation becomes $\\frac{14}{3}x - \\frac{10}{3} = \\frac{14}{3}x - 7$, which leads to $-\\frac{10}{3} = -7$, never true ✓",
+    "be_careful": "A common wrong answer is $7/5$. It sets the constants equal ($-5k = -7$) instead of the $x$-coefficients. With $k = \\frac{7}{5}$ the $x$-coefficients are 5.4 and 3.2, so there is exactly one solution.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-032",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C5",
+    "A1.C2"
+   ],
+   "family": "solution-formula-in-k-shared-denominator",
+   "signature": "k(x - 6) = 3x + m, k != 3; which expression is the solution (m + 6k)/(k - 3); all four denominators are k - 3, so the condition rules out none; first-term distribution, sign, and 3 - k rewritten as k - 3 without the numerator sign",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": 2.69,
+   "format": "mcq",
+   "stem": "$k(x - 6) = 3x + m$<br>In the given equation, $k$ and $m$ are constants, and $k \\ne 3$. Which expression represents the solution to the given equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{m + 6k}{k - 3}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{m + 6}{k - 3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Takes the constant of $k(x - 6)$ to be $-6$. Distributing multiplies both terms by $k$: $kx - 6k$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{m - 6k}{k - 3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Moves $-6k$ to the right side without changing its sign. Adding $6k$ to both sides gives $m + 6k$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{-m - 6k}{k - 3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Collects the $x$-terms on the right, $-6k - m = (3 - k)x$, and then rewrites the denominator $3 - k$ as $k - 3$ without changing the sign of the numerator. Since $3 - k = -(k - 3)$, the numerator must change sign too."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Collecting the $x$-terms gives $(k - 3)x = m + 6k$, and $k \\ne 3$ is exactly what makes dividing by $k - 3$ allowed.",
+    "steps": "What does the question ask? It asks which expression represents the solution to the given equation.<br>Treat $k$ and $m$ as numbers that are not known, and collect the $x$-terms on one side.<br>$kx - 6k = 3x + m$ <span class=\"nt\">(distribute $k$)</span><br>$kx - 3x - 6k = m$ <span class=\"nt\">(subtract $3x$ from both sides)</span><br>$kx - 3x = m + 6k$ <span class=\"nt\">(add $6k$ to both sides)</span><br>$(k - 3)x = m + 6k$ <span class=\"nt\">(factor out $x$)</span><br>$x = \\frac{m + 6k}{k - 3}$ <span class=\"nt\">(divide both sides by $k - 3$, which is not 0)</span><br>At $k = 3$ the $x$-terms would cancel, which is why the denominator of the solution is 0 exactly there.",
+    "check": "Pick $k = 4$ and $m = 1$: $4(x - 6) = 3x + 1$ gives $4x - 24 = 3x + 1$, so $x = 25$. The expression gives $\\frac{1 + 24}{4 - 3} = 25$ ✓",
+    "be_careful": "Choice B ($\\frac{m + 6}{k - 3}$) is a trap. It takes the constant of $k(x - 6)$ to be $-6$. Distributing multiplies both terms by $k$: $kx - 6k$.",
+    "desmos": null,
+    "another_way": "<b>SAT shortcut:</b> the check above also sorts the choices. With $k = 4$ and $m = 1$ the solution is 25, while choice B gives 7, choice C gives $-23$, and choice D gives $-25$, so only choice A fits. The SAT grades the answer, not the work."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-033",
+   "version": 2,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C6"
+   ],
+   "family": "block-zero-general-denominator",
+   "signature": "(5x - 12)/k = (5x - 12)/7 with k a constant, k != 7, forces 5x - 12 = 0 for every allowed k; ask 10x = 24 (x stop 12/5, sign slip -24); SPR",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": 2.98,
+   "format": "spr",
+   "stem": "$\\frac{5x - 12}{k} = \\frac{5x - 12}{7}$<br>In the given equation, $k$ is a constant and $k \\neq 7$. If $x$ satisfies the given equation, what is the value of $10x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "24"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "12/5",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\frac{12}{5}$ is the value of $x$. The question asks for $10x$."
+    },
+    {
+     "value": "-24",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Moves $-12$ without changing its sign and gets $5x = -12$. Adding 12 to both sides gives $5x = 12$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The same numerator over two different denominators gives equal fractions only when the numerator is 0, so $5x - 12 = 0$ no matter what $k$ is.",
+    "steps": "The question asks for $10x$, so find $x$ first. The value of $k$ is not given, so the answer cannot depend on $k$.<br>$7(5x - 12) = k(5x - 12)$ <span class=\"nt\">(multiply both sides by $7k$)</span><br>$(7 - k)(5x - 12) = 0$ <span class=\"nt\">(subtract $k(5x - 12)$ from both sides and factor)</span><br>$5x - 12 = 0$ <span class=\"nt\">($k \\neq 7$, so $7 - k \\neq 0$; divide both sides by $7 - k$)</span><br>$5x = 12$ <span class=\"nt\">(add 12 to both sides)</span><br>$10x = 24$ <span class=\"nt\">(multiply both sides by 2)</span>",
+    "check": "With $x = \\frac{12}{5}$, $5x - 12 = 0$, so both sides equal 0 for any $k \\neq 7$ (for example $k = 3$: $\\frac{0}{3} = \\frac{0}{7}$) ✓",
+    "be_careful": "dividing both sides by $5x - 12$ gives $\\frac{1}{k} = \\frac{1}{7}$, which looks like “$k = 7$, so no solution,” but that step divides by 0 at the solution.",
+    "desmos": "Desmos checks it: add a slider for $k$, graph $y = \\frac{5x - 12}{k}$ and $y = \\frac{5x - 12}{7}$, and move $k$. The intersection stays at $(2.4, 0)$. Desmos gives $x = 2.4$; the question asks for $10x$, so the answer is 24.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-034",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C6"
+   ],
+   "family": "block-with-letter-fixed-target",
+   "signature": "7(2x - k) - 12 = 3(2x - k) + 6, k a constant; block 2x - k = 9/2; ask 4x - 2k = 9 (x is not determined, the target is); SPR text",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": 2.84,
+   "format": "spr",
+   "stem": "$7(2x - k) - 12 = 3(2x - k) + 6$<br>In the given equation, $k$ is a constant. What is the value of $4x - 2k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "9"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "9/2",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\frac{9}{2}$ is the value of the block $2x - k$. The target $4x - 2k$ is 2 times the block, so it is 9."
+    },
+    {
+     "value": "-3",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Moves $-12$ across without changing its sign: $4(2x - k) = 6 - 12 = -6$, so the block is $-\\frac{3}{2}$ and the target is $-3$. Adding 12 to both sides gives $4(2x - k) = 18$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The expression $2x - k$ appears on both sides, so the equation fixes the value of that block, and $4x - 2k$ is 2 times the block, even though $x$ and $k$ are not fixed on their own.",
+    "steps": "The question asks for $4x - 2k$, not for $x$. The expression $2x - k$ appears on both sides, so work with it as one block.<br>$4(2x - k) - 12 = 6$ <span class=\"nt\">(subtract $3(2x - k)$ from both sides: 7 blocks minus 3 blocks)</span><br>$4(2x - k) = 18$ <span class=\"nt\">(add 12 to both sides)</span><br>$2x - k = \\frac{18}{4}$ <span class=\"nt\">(divide both sides by 4)</span><br>$2x - k = \\frac{9}{2}$ <span class=\"nt\">(reduce by 2)</span><br>$4x - 2k = 2(2x - k)$ <span class=\"nt\">(factor 2 out of the target)</span><br>$4x - 2k = 2  \\cdot  \\frac{9}{2} = 9$ <span class=\"nt\">(substitute the value of the block)</span>",
+    "check": "Pick $k = 1$: the equation becomes $7(2x - 1) - 12 = 3(2x - 1) + 6$, so $14x - 19 = 6x + 3$ and $x = \\frac{11}{4}$. Then $4x - 2k = 11 - 2 = 9$ ✓",
+    "be_careful": "$x$ itself is not determined (it changes when $k$ changes), but $4x - 2k$ is the same for every $k$, so “not enough information” is the wrong conclusion.",
+    "desmos": null,
+    "another_way": "Expanding also works and shows why $k$ drops out.<br>$14x - 7k - 12 = 6x - 3k + 6$ <span class=\"nt\">(distribute 7 and 3)</span><br>$8x - 7k - 12 = -3k + 6$ <span class=\"nt\">(subtract $6x$ from both sides)</span><br>$8x = 4k + 18$ <span class=\"nt\">(add $7k + 12$ to both sides)</span><br>$4x = 2k + 9$ <span class=\"nt\">(divide both sides by 2)</span><br>$4x - 2k = 9$ <span class=\"nt\">(subtract $2k$ from both sides)</span><br>The $k$-terms cancel, so every value of $k$ gives the same 9."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-035",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C6",
+    "A1.C5"
+   ],
+   "family": "determined-ratio",
+   "signature": "6(x - k) = 2x + 9k, k nonzero; x/k = 15/4; inverted ratio, sign slip, and \"cannot be determined\" choices",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": 2.69,
+   "format": "mcq",
+   "stem": "$6(x - k) = 2x + 9k$<br>In the given equation, $k$ is a nonzero constant. What is the value of $\\frac{x}{k}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{4}{15}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This is $\\frac{k}{x}$, the ratio upside down. From $4x = 15k$, dividing by $4k$ gives $\\frac{x}{k} = \\frac{15}{4}$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Moves $-6k$ to the right side as $-6k$ and gets $4x = 3k$. Adding $6k$ to both sides gives $4x = 15k$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{15}{4}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The value cannot be determined from the information given.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Treats the unknown $k$ as missing information. The equation gives $x = \\frac{15}{4}k$ for every nonzero $k$, so the ratio is always $\\frac{15}{4}$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The equation does not fix $x$ or $k$ alone, but it fixes how $x$ compares with $k$: solving for $x$ in terms of $k$ gives the ratio.",
+    "steps": "The question asks for $\\frac{x}{k}$. Solve for $x$ in terms of $k$, then divide by $k$.<br>$6x - 6k = 2x + 9k$ <span class=\"nt\">(distribute 6)</span><br>$4x - 6k = 9k$ <span class=\"nt\">(subtract $2x$ from both sides)</span><br>$4x = 15k$ <span class=\"nt\">(add $6k$ to both sides)</span><br>$\\frac{4x}{4k} = \\frac{15k}{4k}$ <span class=\"nt\">(divide both sides by $4k$, which is not 0)</span><br>$\\frac{x}{k} = \\frac{15}{4}$ <span class=\"nt\">(cancel 4 on the left and $k$ on the right)</span><br>Each value of $k$ gives a different $x$, but $x$ is always $\\frac{15}{4}$ times $k$, so the ratio is the same every time.",
+    "check": "Pick $k = 4$: then $x = 15$, and $6(15 - 4) = 66$ while $2(15) + 9(4) = 66$ ✓. So $\\frac{x}{k} = \\frac{15}{4}$.",
+    "be_careful": "Choice D is a trap. It treats the unknown $k$ as missing information. The equation gives $x = \\frac{15}{4}k$ for every nonzero $k$, so the ratio is always $\\frac{15}{4}$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-036",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C7"
+   ],
+   "family": "rate-from-readings-with-pause",
+   "signature": "hiker: 2,140 ft at 7:40, 2,840 ft at 8:15 (rate 20 ft per minute derived), rest 8:30 to 8:45; clock time at 4,040 ft = 9:30; rest ignored, wrong reference time, both; MCQ context",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": 3.06,
+   "format": "mcq",
+   "stem": "A hiker climbs at a constant rate except during one rest. At 7:40 a.m. the hiker was at an elevation of 2,140 feet, and at 8:15 a.m., 2,840 feet. The hiker rested from 8:30 a.m. to 8:45 a.m. At what time did the hiker reach an elevation of 4,040 feet?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "9:15 a.m.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Uses the rate correctly but ignores the rest: 1,200 feet from 8:15 takes 60 minutes, which gives 9:15. The hiker did not climb from 8:30 to 8:45, so the climb ends 15 minutes later."
+    },
+    {
+     "key": "B",
+     "text": "9:30 a.m.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "9:50 a.m.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "Finds the 95 minutes needed to climb from 2,140 feet but adds them to 8:15. Those 95 minutes of climbing start at 7:40, the time of the 2,140-foot reading, and the rest is skipped too."
+    },
+    {
+     "key": "D",
+     "text": "10:05 a.m.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "Adds the 15-minute rest but counts the 95 minutes of climbing from 8:15. The climb from 2,140 feet starts at 7:40, so 95 minutes of climbing plus the rest ends at 9:30."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The climbing rate comes from the two readings, and the rest adds time without adding elevation, so track the elevation up to the rest and then after it.",
+    "steps": "The question asks for a clock time.<br>time between the readings: 35 minutes <span class=\"nt\">(from 7:40 to 8:15)</span><br>elevation gained: $2,840 - 2,140 = 700$ feet <span class=\"nt\">(subtract the readings)</span><br>rate: $\\frac{700}{35} = 20$ feet per minute <span class=\"nt\">(divide the gain by the time)</span><br>climb from 8:15 to 8:30: $20(15) = 300$ feet <span class=\"nt\">(15 minutes before the rest)</span><br>elevation at 8:30: $2,840 + 300 = 3,140$ feet <span class=\"nt\">(add the gain)</span><br>elevation at 8:45: still 3,140 feet <span class=\"nt\">(no climbing during the rest)</span><br>still to climb: $4,040 - 3,140 = 900$ feet <span class=\"nt\">(subtract)</span><br>time needed: $\\frac{900}{20} = 45$ minutes <span class=\"nt\">(divide the distance by the rate)</span><br>45 minutes after 8:45 is 9:30 a.m. <span class=\"nt\">(the climb restarts at 8:45)</span>",
+    "check": "From 7:40 to 9:30 is 110 minutes, and 15 of them are rest, so the hiker climbs for 95 minutes: $2,140 + 20(95) = 2,140 + 1,900 = 4,040$ feet ✓",
+    "be_careful": "Choice A (9:15 a.m.) is a trap. It uses the rate correctly but ignores the rest: 1,200 feet from 8:15 takes 60 minutes, which gives 9:15. The hiker did not climb from 8:30 to 8:45, so the climb ends 15 minutes later.",
+    "desmos": null,
+    "another_way": "As one equation: let $m$ = the number of minutes after 8:15 when the hiker reaches 4,040 feet. The 15-minute rest falls inside those minutes, so the hiker climbs for $m - 15$ of them.<br>$2,840 + 20(m - 15) = 4,040$<br>$20(m - 15) = 1,200$ <span class=\"nt\">(subtract 2,840 from both sides)</span><br>$m - 15 = 60$ <span class=\"nt\">(divide both sides by 20)</span><br>$m = 75$ <span class=\"nt\">(add 15 to both sides)</span><br>75 minutes after 8:15 is 9:30 a.m."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-037",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C7"
+   ],
+   "family": "counts-from-total-weight",
+   "signature": "soil bags 20, 40, 50 pounds; 3 times as many 20-pound as 50-pound, 4 fewer 40-pound than 50-pound; total weight 2,240 pounds; ask the number of bags (76); weights needed as coefficients; MCQ context",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": 2.98,
+   "format": "mcq",
+   "stem": "A store sells bags of soil that weigh 20, 40, or 50 pounds. One day the store sold 3 times as many 20-pound bags as 50-pound bags and 4 fewer 40-pound bags than 50-pound bags. The bags sold that day weighed 2,240 pounds in all. How many bags did the store sell that day?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "16 is $n$, the number of 50-pound bags only. The question asks for all the bags."
+    },
+    {
+     "key": "B",
+     "text": "$48$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "48 is the number of 20-pound bags only. Adding the 12 forty-pound bags and the 16 fifty-pound bags gives 76."
+    },
+    {
+     "key": "C",
+     "text": "$64$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "Adds only the 20-pound and 50-pound bags, $48 + 16 = 64$, and leaves out the 12 forty-pound bags."
+    },
+    {
+     "key": "D",
+     "text": "$76$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The total given is a weight, so each count must be multiplied by the weight of one bag; the question then asks for the total count, not for one group.",
+    "steps": "The question asks for the total number of bags. The 2,240 is in pounds, so each count is multiplied by the weight of one bag.<br>Let $n$ = the number of 50-pound bags.<br>$3n$ = the number of 20-pound bags <span class=\"nt\">(3 times as many as the 50-pound bags)</span><br>$n - 4$ = the number of 40-pound bags <span class=\"nt\">(4 fewer than the 50-pound bags)</span><br>$20(3n) + 40(n - 4) + 50n = 2,240$ <span class=\"nt\">(pounds from each size add to the total weight)</span><br>$60n + 40n - 160 + 50n = 2,240$ <span class=\"nt\">(distribute)</span><br>$150n - 160 = 2,240$ <span class=\"nt\">(combine like terms)</span><br>$150n = 2,400$ <span class=\"nt\">(add 160 to both sides)</span><br>$n = 16$ <span class=\"nt\">(divide both sides by 150)</span><br>counts: $3(16) = 48$, $16 - 4 = 12$, and 16 <span class=\"nt\">(20-pound, 40-pound, and 50-pound bags)</span><br>total: $48 + 12 + 16 = 76$ bags <span class=\"nt\">(add the three counts)</span>",
+    "check": "Weight: $48(20) + 12(40) + 16(50) = 960 + 480 + 800 = 2,240$ pounds ✓. Also 48 is 3 times 16, and 12 is 4 fewer than 16 ✓",
+    "be_careful": "Choice A ($16$) is a trap. 16 is $n$, the number of 50-pound bags only. The question asks for all the bags.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-038",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C7"
+   ],
+   "family": "first-hour-then-half-hours",
+   "signature": "parking: $5 first hour, $1.50 per additional half hour, paid $24.50; 13 half hours = 6.5 hours, plus the first hour = 7.5; SPR context",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": 3.05,
+   "format": "spr",
+   "stem": "A parking garage charges \\$5.00 for the first hour and \\$1.50 for each additional half hour. Lena parked for more than 1 hour, and her total time was a whole number of half hours. She paid \\$24.50 in all. For how many hours did Lena park?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "15/2",
+      "7.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "13",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "13 is the number of additional half hours. In hours that is 6.5, and the first hour makes 7.5."
+    },
+    {
+     "value": "6.5",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "6.5 hours is only the time after the first hour. Adding the first hour gives 7.5."
+    }
+   ],
+   "solution": {
+    "key_idea": "The \\$1.50 charge counts half hours after the first hour, so find the number of extra half hours first, then change it to hours and add the first hour.",
+    "steps": "The question asks for Lena’s total time in hours.<br>Let $n$ = the number of additional half hours after the first hour.<br>$5 + 1.5n = 24.5$ <span class=\"nt\">(first hour plus \\$1.50 for each additional half hour)</span><br>$1.5n = 19.5$ <span class=\"nt\">(subtract 5 from both sides)</span><br>$n = 13$ <span class=\"nt\">(divide both sides by 1.5)</span><br>13 additional half hours: $13  \\cdot  \\frac{1}{2} = 6.5$ hours <span class=\"nt\">(2 half hours make 1 hour)</span><br>total time: $1 + 6.5 = 7.5$ hours <span class=\"nt\">(add the first hour)</span>",
+    "check": "7.5 hours is the first hour plus 6.5 hours, and 6.5 hours is 13 half hours. Cost: $5 + 13(1.50) = 5 + 19.50 = 24.50$ dollars ✓",
+    "be_careful": "A common wrong answer is $13$. 13 is the number of additional half hours. In hours that is 6.5, and the first hour makes 7.5.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-039",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C7"
+   ],
+   "family": "walkway-around-rectangle-draw-first",
+   "signature": "garden length 3 m less than twice the width, 1.5-m walkway on all four sides, outer perimeter 78; garden width 12 (outer w + 3 by 2w); no stem figure (draw first), solution figure in the steps; MCQ context",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": 3.12,
+   "format": "mcq",
+   "stem": "The length of a rectangular garden is 3 meters less than twice its width. The garden is bordered on all four sides by a walkway 1.5 meters wide. The outer edge of the walkway has a perimeter of 78 meters. What is the width, in meters, of the garden?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$13$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Adds the walkway width only once to each dimension ($w + 1.5$ and $2w - 1.5$), which gives $6w = 78$ and $w = 13$. The walkway is at both ends of each side, as the sketch shows."
+    },
+    {
+     "key": "C",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Leaves out the walkway and uses the perimeter of the garden itself, $2w + 2(2w - 3) = 78$, which gives $w = 14$. The 78 meters is the perimeter of the outer edge of the walkway."
+    },
+    {
+     "key": "D",
+     "text": "$15$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "15 meters is the outer width, $w + 3$. The question asks for the width of the garden."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A walkway 1.5 meters wide on every side adds 1.5 meters at both ends of each dimension, so each outer dimension is 3 meters more than the garden’s.",
+    "steps": "The question asks for the width of the garden itself.<br>Let $w$ = the width of the garden, in meters.<br>$2w - 3$ = the length of the garden <span class=\"nt\">(3 less than twice the width)</span><br>A sketch of the garden inside the walkway shows each outer side:<svg role=\"img\" aria-label=\"Garden of width w and length 2w minus 3 inside a walkway 1.5 meters wide on every side; the outer rectangle is w plus 3 by 2w.\" width=\"438\" height=\"250\" viewBox=\"0 0 438 250\" style=\"display:block;margin:8px auto\" font-family=\"Helvetica,Arial,sans-serif\"><polygon points=\"40.0,30.0 376.0,30.0 376.0,240.0 40.0,240.0\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><polygon points=\"61.0,51.0 355.0,51.0 355.0,219.0 61.0,219.0\" fill=\"#ffffff\" stroke=\"#1e293b\" stroke-width=\"1.4\"/><text x=\"208.0\" y=\"21.0\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e293b\">2<tspan font-style=\"italic\">w</tspan></text><text x=\"384.0\" y=\"139.0\" font-size=\"12\" text-anchor=\"start\" fill=\"#1e293b\"><tspan font-style=\"italic\">w</tspan> + 3</text><text x=\"50.5\" y=\"69.0\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1e293b\">1.5</text><text x=\"208.0\" y=\"69.0\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e293b\">2<tspan font-style=\"italic\">w</tspan> − 3</text><text x=\"365.5\" y=\"69.0\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1e293b\">1.5</text><text x=\"335.0\" y=\"44.0\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1e293b\">1.5</text><text x=\"335.0\" y=\"139.0\" font-size=\"12\" text-anchor=\"middle\" fill=\"#1e293b\"><tspan font-style=\"italic\">w</tspan></text><text x=\"335.0\" y=\"233.0\" font-size=\"10\" text-anchor=\"middle\" fill=\"#1e293b\">1.5</text><text x=\"188.0\" y=\"151.0\" font-size=\"11\" text-anchor=\"middle\" fill=\"#475569\">garden</text><text x=\"101.0\" y=\"233.0\" font-size=\"10\" text-anchor=\"middle\" fill=\"#475569\">walkway</text></svg>outer width: $w + 1.5 + 1.5 = w + 3$ <span class=\"nt\">(1.5 meters of walkway on each side)</span><br>outer length: $2w - 3 + 1.5 + 1.5 = 2w$ <span class=\"nt\">(1.5 meters at each end)</span><br>$2(w + 3) + 2(2w) = 78$ <span class=\"nt\">(perimeter of the outer rectangle)</span><br>$2w + 6 + 4w = 78$ <span class=\"nt\">(distribute 2)</span><br>$6w + 6 = 78$ <span class=\"nt\">(combine like terms)</span><br>$6w = 72$ <span class=\"nt\">(subtract 6 from both sides)</span><br>$w = 12$ <span class=\"nt\">(divide both sides by 6)</span>",
+    "check": "Garden: 12 by 21 meters. Outer rectangle: 15 by 24 meters. Perimeter: $2(15) + 2(24) = 30 + 48 = 78$ ✓",
+    "be_careful": "Choice B ($13$) is a trap. It adds the walkway width only once to each dimension ($w + 1.5$ and $2w - 1.5$), which gives $6w = 78$ and $w = 13$. The walkway is at both ends of each side, as the sketch shows.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-040",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H",
+   "concepts": [
+    "A1.C8"
+   ],
+   "family": "interpret-grouped-count-delayed-start",
+   "signature": "loan $1,800, first payment at the end of week 3; 1,800 - 45(w - 2) = 1,170 at the end of week w; best interpretation of w - 2 (number of payments made); MCQ context",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": 2.98,
+   "format": "mcq",
+   "stem": "Ravi borrowed \\$1,800 from a relative and repaid it in equal weekly payments, making the first payment at the end of week 3. The equation $1,800 - 45(w - 2) = 1,170$ represents the situation at the end of week $w$, when Ravi still owed \\$1,170. What is the best interpretation of $w - 2$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The number of weeks before Ravi made his first payment",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Describes the 2 in $w - 2$, not $w - 2$ itself. Weeks 1 and 2 had no payment; $w - 2$ counts the payments made after them."
+    },
+    {
+     "key": "B",
+     "text": "The total amount, in dollars, Ravi had repaid when he owed \\$1,170",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The amount repaid is the whole product $45(w - 2)$. $w - 2$ is the number that the \\$45 payment is multiplied by."
+    },
+    {
+     "key": "C",
+     "text": "The number of weeks after Ravi borrowed the money when he owed \\$1,170",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "That is $w$, the number of weeks. $w - 2$ is 2 less because no payment was made in weeks 1 and 2."
+    },
+    {
+     "key": "D",
+     "text": "The number of weekly payments Ravi had made when he owed \\$1,170",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "In $45(w - 2)$, 45 is dollars per payment, so $w - 2$ must count payments: one payment for each week from week 3 through week $w$.",
+    "steps": "What does the question ask? It asks for the best interpretation of $w - 2$ in this context.<br>Read each part of the equation with its units.<br>1,800: the amount borrowed, in dollars<br>45: the amount of each weekly payment, in dollars<br>$w$: the number of weeks since Ravi borrowed the money<br>$45(w - 2)$: the dollars repaid by the end of week $w$ <span class=\"nt\">(1,800 minus this is what he still owes)</span><br>Dollars per payment times $w - 2$ gives dollars, so $w - 2$ is a number of payments.<br>Payments were made at the end of weeks 3, 4, 5, and so on through week $w$: every week except weeks 1 and 2, so $w - 2$ payments. <span class=\"nt\">(count the weeks with a payment)</span><br>So $w - 2$ is the number of weekly payments Ravi had made when he still owed \\$1,170.",
+    "check": "$1,800 - 1,170 = 630$ dollars repaid, and $\\frac{630}{45} = 14$ payments. The solution is $w = 16$, and the payments at the end of weeks 3 through 16 number $16 - 2 = 14$ ✓",
+    "be_careful": "Choice A is a trap. It describes the 2 in $w - 2$, not $w - 2$ itself. Weeks 1 and 2 had no payment; $w - 2$ counts the payments made after them.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-041",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C5",
+    "A1.C4"
+   ],
+   "family": "HP-A-switch-no-solution-trinomial",
+   "signature": "a^2 x - 20x = a(x + 2) - 10 collects to (a - 5)(a + 4)x = 2(a - 5); a = 5 identity, a = -4 none; SPR no-solution value -4 (negative, hidden behind factoring)",
+   "abilities": [
+    "N",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 140,
+   "difficulty_measured": 3.68,
+   "format": "spr",
+   "stem": "$a^{2}x - 20x = a(x + 2) - 10$<br>In the given equation, $a$ is a constant. If the equation has no solution, what is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "At $a = 5$ both sides become $5x$, so every $x$ is a solution. This value makes the $x$-coefficient 0 but also makes the constants match, which gives infinitely many solutions, not none."
+    },
+    {
+     "value": "4",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Solves $a + 4 = 0$ as $a = 4$. At $a = 4$ the coefficient is $(-1)(8) = -8$, not 0, so the equation has exactly one solution."
+    }
+   ],
+   "solution": {
+    "key_idea": "The $x$-terms cancel for two values of $a$, but only one of them leaves a false statement; the other makes the two sides the same expression.",
+    "steps": "The question asks for the value of $a$ that leaves no solution. Collect the $x$-terms on the left side.<br>$a^{2}x - 20x = ax + 2a - 10$ <span class=\"nt\">(distribute $a$)</span><br>$a^{2}x - ax - 20x = 2a - 10$ <span class=\"nt\">(subtract $ax$ from both sides)</span><br>$(a^{2} - a - 20)x = 2a - 10$ <span class=\"nt\">(factor out $x$)</span><br>$(a - 5)(a + 4)x = 2a - 10$ <span class=\"nt\">(factor the trinomial: $(-5)(4) = -20$ and $-5 + 4 = -1$)</span><br>$(a - 5)(a + 4)x = 2(a - 5)$ <span class=\"nt\">(factor out 2 on the right side)</span><br>If $(a - 5)(a + 4)$ is not 0, dividing both sides by it gives exactly one solution. So only the values that make it 0 can fail: $a = 5$ and $a = -4$.<br>$a = 5$: $0  \\cdot  x = 2(0)$ <span class=\"nt\">(substitute $a = 5$)</span><br>$0 = 0$ <span class=\"nt\">(true for every $x$: infinitely many solutions)</span><br>$a = -4$: $0  \\cdot  x = 2(-9)$ <span class=\"nt\">(substitute $a = -4$)</span><br>$0 = -18$ <span class=\"nt\">(never true: no solution)</span><br>The equation has no solution only when $a = -4$.",
+    "check": "With $a = -4$: the left side is $16x - 20x = -4x$ and the right side is $-4(x + 2) - 10 = -4x - 18$. The equation $-4x = -4x - 18$ leads to $0 = -18$, never true ✓",
+    "be_careful": "A common wrong answer is $5$. At $a = 5$ both sides become $5x$, so every $x$ is a solution. This value makes the $x$-coefficient 0 but also makes the constants match, which gives infinitely many solutions, not none.",
+    "desmos": "With a slider for $a$, graph $y = a^{2}x - 20x$ and $y = a(x + 2) - 10$. At $a = 5$ the graphs are the same line, and at $a = -4$ they are parallel. The slider only confirms values the algebra has already found.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-042",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C5",
+    "A1.C4"
+   ],
+   "family": "HP-A-two-switch-values-sign-condition-ask-k",
+   "signature": "k^2 x + 2n = 9x + 4k, n positive: collects to (k - 3)(k + 3)x = 2(2k - n); for most n both k = 3 and k = -3 give no solution; exactly one forces n = 6 (k = 3 an identity) or n = -6; n positive gives n = 6; SPR asks the one no-solution value k = -3; identity matching (k^2 = 9, 2n = 4k) gives the wrong k = 3; wrong 6 (n reported)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": 4.05,
+   "format": "spr",
+   "stem": "$k^{2}x + 2n = 9x + 4k$<br>In the given equation, $k$ and $n$ are constants, and $n$ is positive. There is exactly one value of $k$ for which the equation has no solution. What is that value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Matches the two sides term by term, $k^{2} = 9$ and $2n = 4k$, which gives $k = 3$ with $n = 6$ (the match $k = -3$ would need $n = -6$, which is not positive). That matching is the test for infinitely many solutions: with $n = 6$ and $k = 3$ both sides are $9x + 12$, so every $x$ is a solution. The value with no solution is the other one, $k = -3$."
+    },
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is the value of $n$ that leaves exactly one value of $k$ with no solution. The question asks for that value of $k$, which is $-3$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Only the values of $k$ that cancel the $x$-terms can give no solution, and here there are two of them; for exactly one of them to give no solution, the other must also make the constants match (infinitely many solutions), and the sign of $n$ decides which one that is.",
+    "steps": "The question asks for the one value of $k$ that gives no solution. Collect the $x$-terms on the left side and the other terms on the right side.<br>$k^{2}x - 9x + 2n = 4k$ <span class=\"nt\">(subtract $9x$ from both sides)</span><br>$k^{2}x - 9x = 4k - 2n$ <span class=\"nt\">(subtract $2n$ from both sides)</span><br>$(k^{2} - 9)x = 4k - 2n$ <span class=\"nt\">(factor out $x$)</span><br>$(k - 3)(k + 3)x = 4k - 2n$ <span class=\"nt\">(factor the difference of squares $k^{2} - 9$)</span><br>$(k - 3)(k + 3)x = 2(2k - n)$ <span class=\"nt\">(factor out 2 on the right side)</span><br>If $(k - 3)(k + 3)$ is not 0, dividing both sides by it gives exactly one solution. So only $k = 3$ and $k = -3$ can give no solution. At each of them the left side is 0 for every $x$:<br>$k = 3$: $0 = 2(6 - n)$ <span class=\"nt\">(substitute $k = 3$)</span><br>$k = -3$: $0 = 2(-6 - n)$ <span class=\"nt\">(substitute $k = -3$)</span><br>Each of these statements is false (no solution) unless its right side is 0, and then it reads $0 = 0$ (infinitely many solutions). If both right sides are nonzero, then $k = 3$ and $k = -3$ both give no solution: two values, not one.<br>So for exactly one value, one of the two right sides must be 0:<br>$6 - n = 0$ <span class=\"nt\">(the right side is 0 at $k = 3$)</span><br>$n = 6$ <span class=\"nt\">(add $n$ to both sides)</span><br>$-6 - n = 0$ <span class=\"nt\">(the right side is 0 at $k = -3$)</span><br>$n = -6$ <span class=\"nt\">(add $n$ to both sides)</span><br>The stem says $n$ is positive, so $n = 6$. Now test the two values of $k$ with $n = 6$:<br>$k = 3$: $0 = 2(6 - 6)$ <span class=\"nt\">(substitute $n = 6$)</span><br>$0 = 0$ <span class=\"nt\">(true for every $x$: infinitely many solutions)</span><br>$k = -3$: $0 = 2(-6 - 6)$ <span class=\"nt\">(substitute $n = 6$)</span><br>$0 = -24$ <span class=\"nt\">(never true: no solution)</span><br>The only value of $k$ with no solution is $-3$.",
+    "check": "With $n = 6$ the equation is $k^{2}x + 12 = 9x + 4k$. At $k = -3$ it is $9x + 12 = 9x - 12$, which leads to $12 = -12$, never true ✓. At $k = 3$ it is $9x + 12 = 9x + 12$, true for every $x$, so $k = 3$ gives infinitely many solutions, not none ✓. Every other $k$ makes $(k - 3)(k + 3)$ nonzero and gives exactly one solution.",
+    "be_careful": "A common wrong answer is $3$. It matches the two sides term by term, $k^{2} = 9$ and $2n = 4k$, which gives $k = 3$ with $n = 6$ (the match $k = -3$ would need $n = -6$, which is not positive). That matching is the test for infinitely many solutions: with $n = 6$ and $k = 3$ both sides are $9x + 12$, so every $x$ is a solution. The value with no solution is the other one, $k = -3$.",
+    "desmos": null,
+    "another_way": "Use the sign of $n$ first. At $k = -3$ the equation reads $0 = 2(-6 - n)$.<br>Because $n$ is positive, $-6 - n$ is negative, so the right side is never 0. So $k = -3$ gives no solution for every positive $n$.<br>The stem says exactly one value of $k$ gives no solution, so that value is $-3$. (Then $k = 3$ must give infinitely many solutions, which happens when $n = 6$.)"
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-043",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C5",
+    "A1.C6"
+   ],
+   "family": "HP-B-invariance-excluded-k-found-first",
+   "signature": "4kx - m = 6x + 5k; stem names no excluded value (\"For every value of k for which the equation has exactly one solution, the equation has the same solution\"); collect (4k - 6)x = 5k + m, so k = 3/2 is the only k without exactly one solution, for every m; two allowed k (0 and 1) must give equal solutions: -m/6 = (-5 - m)/2, m = -15/2 (x = 5/4); at k = 3/2 the key m makes an identity; structural view x = (5k + m)/(4k - 6) constant; SPR negative fraction",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 170,
+   "difficulty_measured": 4.05,
+   "format": "spr",
+   "stem": "$4kx - m = 6x + 5k$<br>In the given equation, $k$ and $m$ are constants. For every value of $k$ for which the equation has exactly one solution, the equation has the same solution. What is the value of $m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-15/2",
+      "-7.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5/4",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\frac{5}{4}$ is the common solution $x$ (for example $-\\frac{m}{6}$ with $m = -\\frac{15}{2}$). The question asks for the constant $m$."
+    },
+    {
+     "value": "15/2",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Distributes 3 over $-5 - m$ as $15 - 3m$, which gives $2m = 15$. The product of 3 and $-5$ is $-15$, so $2m = -15$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Only the value of $k$ that makes the $x$-coefficient 0 fails to give exactly one solution; every other value of $k$ gives the same solution, so any two of them give equal solutions, and setting those equal fixes $m$.",
+    "steps": "The question asks for $m$. First find which values of $k$ give exactly one solution. Collect the $x$-terms on the left side and the other terms on the right side.<br>$4kx - 6x - m = 5k$ <span class=\"nt\">(subtract $6x$ from both sides)</span><br>$4kx - 6x = 5k + m$ <span class=\"nt\">(add $m$ to both sides)</span><br>$(4k - 6)x = 5k + m$ <span class=\"nt\">(factor out $x$)</span><br>If $4k - 6$ is not 0, dividing both sides by it gives exactly one solution. The only value of $k$ that can fail makes the $x$-coefficient 0:<br>$4k - 6 = 0$ <span class=\"nt\">(the $x$-coefficient is 0)</span><br>$4k = 6$ <span class=\"nt\">(add 6 to both sides)</span><br>$k = \\frac{3}{2}$ <span class=\"nt\">(divide both sides by 4)</span><br>$0 = \\frac{15}{2} + m$ <span class=\"nt\">(substitute $k = \\frac{3}{2}$: the $x$-terms are gone)</span><br>This statement has no $x$ in it: it is never true (no solution) or always true (infinitely many solutions), so $k = \\frac{3}{2}$ never gives exactly one solution, whatever $m$ is. Every other value of $k$ gives exactly one solution, so the condition in the stem covers every value of $k$ except $\\frac{3}{2}$.<br>So all values of $k$ other than $\\frac{3}{2}$ give the same solution, and any two of them must give the same solution. Use $k = 0$ and $k = 1$, the easiest of them, in the collected form.<br>$k = 0$: $-6x = m$ <span class=\"nt\">(substitute $k = 0$)</span><br>$x = -\\frac{m}{6}$ <span class=\"nt\">(divide both sides by $-6$)</span><br>$k = 1$: $-2x = 5 + m$ <span class=\"nt\">(substitute $k = 1$)</span><br>$x = \\frac{-5 - m}{2}$ <span class=\"nt\">(divide both sides by $-2$)</span><br>$-\\frac{m}{6} = \\frac{-5 - m}{2}$ <span class=\"nt\">(the two solutions are the same number)</span><br>$-m = 3(-5 - m)$ <span class=\"nt\">(multiply both sides by 6)</span><br>$-m = -15 - 3m$ <span class=\"nt\">(distribute 3)</span><br>$2m = -15$ <span class=\"nt\">(add $3m$ to both sides)</span><br>$m = -\\frac{15}{2}$ <span class=\"nt\">(divide both sides by 2)</span>",
+    "check": "With $m = -\\frac{15}{2}$, try a third value, $k = 2$: $8x + \\frac{15}{2} = 6x + 10$ gives $2x = \\frac{5}{2}$, so $x = \\frac{5}{4}$. The values $k = 0$ and $k = 1$ also give $x = \\frac{5}{4}$ ✓. At the excluded value $k = \\frac{3}{2}$ both sides become $6x + \\frac{15}{2}$, which is true for every $x$, so that value does not give exactly one solution ✓",
+    "be_careful": "A common wrong answer is $5/4$. $\\frac{5}{4}$ is the common solution $x$ (for example $-\\frac{m}{6}$ with $m = -\\frac{15}{2}$). The question asks for the constant $m$.",
+    "desmos": "With sliders for $k$ and $m$, graph $y = 4kx - m$ and $y = 6x + 5k$. The crossing point stays fixed as $k$ moves only when $m = -7.5$. Finding that by sliding is slow; two values of $k$ give it directly.",
+    "another_way": "Use the collected form $(4k - 6)x = 5k + m$.<br>For $k \\ne \\frac{3}{2}$, the solution is $x = \\frac{5k + m}{4k - 6}$.<br>This fraction is the same number for every such $k$ only if the top is a fixed multiple of the bottom. The $k$-terms set that multiple: $5k$ is $\\frac{5}{4}$ of $4k$.<br>$5k + m = \\frac{5}{4}(4k - 6) = 5k - \\frac{15}{2}$<br>So $m = -\\frac{15}{2}$, and the solution is $\\frac{5}{4}$ for every $k \\ne \\frac{3}{2}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-044",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C6",
+    "A1.C4"
+   ],
+   "family": "HP-B-statement-every-k-existence",
+   "signature": "k(3x + 5) - 3(2x + 1) = 3k + 1 collects to 3(k - 2)x = -2(k - 2); key B: some x (namely -2/3) is a solution for every k; baits: no solution for one k (D10), exactly one for every k (D17), solution changes with k (D16); no choice names k = 2 or -2/3",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": 3.57,
+   "format": "mcq",
+   "stem": "$k(3x + 5) - 3(2x + 1) = 3k + 1$<br>In the given equation, $k$ is a constant. Which of the following statements is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Exactly one value of $k$ gives the equation no solution.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Finds that $k = 2$ makes the $x$-terms cancel and reads it as “no solution.” At $k = 2$ the constants cancel too: both sides equal 7 for every $x$, so no value of $k$ gives no solution."
+    },
+    {
+     "key": "B",
+     "text": "Some value of $x$ is a solution for every value of $k$.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Every value of $k$ gives the equation exactly one solution.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Divides both sides by $k - 2$ without checking $k = 2$, where that division is division by 0. At $k = 2$ every $x$ is a solution, so the solution is not unique there."
+    },
+    {
+     "key": "D",
+     "text": "Each value of $k$ gives a different solution to the equation.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Writes the solution as $x = \\frac{-2(k - 2)}{3(k - 2)}$ and treats it as a value that changes with $k$. The factor $k - 2$ cancels, so every $k \\ne 2$ gives the same solution, $-\\frac{2}{3}$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "After collecting, both sides share the factor $k - 2$, so $x = -\\frac{2}{3}$ is a solution for every $k$; at $k = 2$ every $x$ is a solution, and $-\\frac{2}{3}$ is one of them.",
+    "steps": "What does the question ask? It asks which statement is true.<br>Collect the $x$-terms on the left side and the other terms on the right side.<br>$3kx + 5k - 6x - 3 = 3k + 1$ <span class=\"nt\">(distribute $k$ and $-3$)</span><br>$3kx - 6x - 3 = -2k + 1$ <span class=\"nt\">(subtract $5k$ from both sides)</span><br>$3kx - 6x = -2k + 4$ <span class=\"nt\">(add 3 to both sides)</span><br>$3(k - 2)x = -2(k - 2)$ <span class=\"nt\">(factor both sides)</span><br>Case $k \\ne 2$: dividing both sides by $3(k - 2)$ gives exactly one solution, $x = -\\frac{2}{3}$.<br>Case $k = 2$: both sides are 0, so the equation reads $0 = 0$ for every $x$. Every value of $x$ is a solution, and $x = -\\frac{2}{3}$ is one of them.<br>So $x = -\\frac{2}{3}$ is a solution for every value of $k$: such a value of $x$ exists.<br>The other statements are false. No value of $k$ gives no solution, $k = 2$ gives infinitely many solutions instead of exactly one, and the values of $k$ other than 2 all give the same solution.",
+    "check": "Substitute $x = -\\frac{2}{3}$ into the original equation: $3x + 5 = 3$ and $2x + 1 = -\\frac{1}{3}$, so the left side is $3k - 3(-\\frac{1}{3}) = 3k + 1$, exactly the right side, for every $k$ ✓",
+    "be_careful": "Choice A is a trap. It finds that $k = 2$ makes the $x$-terms cancel and reads it as “no solution.” At $k = 2$ the constants cancel too: both sides equal 7 for every $x$, so no value of $k$ gives no solution.",
+    "desmos": "With a slider for $k$, the graphs of $y = k(3x + 5) - 3(2x + 1)$ and $y = 3k + 1$ always cross at $x \\approx -0.667$, and at $k = 2$ they are the same horizontal line $y = 7$. The slider supports the algebra but cannot by itself settle a statement about every $k$.",
+    "another_way": "A value of $x$ that works for every $k$ must make the $k$-terms cancel on their own. The $k$-terms are $k(3x + 5)$ on the left and $3k$ on the right, and $k(3x + 5) - 3k = k(3x + 2)$, which is 0 for every $k$ when $x = -\\frac{2}{3}$. The remaining terms then match: $-3(2(-\\frac{2}{3}) + 1) = -3(-\\frac{1}{3}) = 1$ ✓"
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-045",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C4"
+   ],
+   "family": "HP-C-fixed-product-cannot-be-true-key-last",
+   "signature": "(ax + 6)/b = (2/5)x + c, a, b, c nonzero, infinitely many: a = 2b/5, c = 6/b, so ac = 12/5 for every b; CANNOT be true: ac = 2 (key D, the last choice); 5a = 3c (b = 3), a < 0 (any b < 0), a + c = 16/5 (b = 5 or 3) are each possible; the natural b = 5 makes A, B and D all false, so one example cannot decide",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": 3.92,
+   "format": "mcq",
+   "stem": "$\\frac{ax + 6}{b} = \\frac{2}{5}x + c$<br>In the given equation, $a$, $b$, and $c$ are nonzero constants. The equation has infinitely many solutions. Which of the following CANNOT be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5a = 3c$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "With $b = 5$, $5a = 10$ and $3c = \\frac{18}{5}$, so A is false for that example. But $b = 3$ gives $a = \\frac{6}{5}$ and $c = 2$, so $5a = 3c = 6$. Dividing $\\frac{6}{5}x + 6$ by 3 gives $\\frac{2}{5}x + 2$, the right side with $c = 2$, so A can be true."
+    },
+    {
+     "key": "B",
+     "text": "$a < 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Assumes $b$ is positive, as in the example $b = 5$, so $a = \\frac{2b}{5}$ looks positive. But $b$ can be negative: $b = -5$ gives $a = -2$ and $c = -\\frac{6}{5}$, and $\\frac{-2x + 6}{-5} = \\frac{2}{5}x - \\frac{6}{5}$ still has infinitely many solutions."
+    },
+    {
+     "key": "C",
+     "text": "$a + c = \\frac{16}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Tests a value such as $b = 10$, which gives $a = 4$, $c = \\frac{3}{5}$, and $a + c = \\frac{23}{5}$, and reads that one failure as “impossible.” But $b = 5$ gives $a = 2$ and $c = \\frac{6}{5}$, so $a + c = \\frac{16}{5}$ (and $b = 3$ works too)."
+    },
+    {
+     "key": "D",
+     "text": "$ac = 2$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Infinitely many solutions fixes $a$ and $c$ only in terms of $b$, which can be any nonzero number, but the product $ac$ comes out the same for every $b$; a statement CANNOT be true only if no allowed value of $b$ makes it true.",
+    "steps": "The question asks which statement is false for every set of constants that gives infinitely many solutions.<br>$ax + 6 = \\frac{2b}{5}x + bc$ <span class=\"nt\">(multiply both sides by $b$)</span><br>Infinitely many solutions means the two sides are the same expression, so they match term by term:<br>$a = \\frac{2b}{5}$ <span class=\"nt\">(match the $x$-coefficients)</span><br>$bc = 6$ <span class=\"nt\">(match the constants)</span><br>$c = \\frac{6}{b}$ <span class=\"nt\">(divide both sides by $b$)</span><br>Nothing fixes $b$: every nonzero $b$ gives a valid set of constants. So a statement CANNOT be true only if it fails for every nonzero $b$.<br>Choice D: $ac = \\frac{2b}{5}  \\cdot  \\frac{6}{b}$ <span class=\"nt\">(multiply the two results)</span><br>$ac = \\frac{12b}{5b} = \\frac{12}{5}$ <span class=\"nt\">($b$ cancels, since $b \\ne 0$)</span><br>So $ac$ is $\\frac{12}{5}$ for every allowed $b$, and $ac = 2$ is never true.<br>Each other statement is true for some allowed $b$:<br>Choice A: $5a = 2b$ and $3c = \\frac{18}{b}$ <span class=\"nt\">(substitute $a = \\frac{2b}{5}$ and $c = \\frac{6}{b}$)</span><br>These are equal when $b = 3$: then $a = \\frac{6}{5}$ and $c = 2$, so $5a = 3c = 6$.<br>Choice B: $a = \\frac{2b}{5}$ is negative whenever $b$ is negative. With $b = -5$: $a = -2$ and $c = -\\frac{6}{5}$.<br>Choice C: with $b = 5$: $a = 2$ and $c = \\frac{6}{5}$, so $a + c = \\frac{16}{5}$.<br>Only choice D CANNOT be true.",
+    "check": "With $b = -5$: $a = -2$ and $c = -\\frac{6}{5}$, and $\\frac{-2x + 6}{-5} = \\frac{2}{5}x - \\frac{6}{5}$, which is the right side, so there are infinitely many solutions ✓. Here $ac = (-2)(-\\frac{6}{5}) = \\frac{12}{5}$ again, not 2 ✓",
+    "be_careful": "the natural choice $b = 5$ ($a = 2$, $c = \\frac{6}{5}$) makes choices A, B, and D all false at once. A statement that is false for one example can still be true for another, so one example cannot show which statement CANNOT be true.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-046",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C4",
+    "A1.C3"
+   ],
+   "family": "HP-C-shared-factor-never-no-solution-I-II-III",
+   "signature": "a(4x + 6) + b = b(6x + 10), a, b nonzero: collects to 2(2a - 3b)x = -3(2a - 3b); I exactly one (could, not must: a = 3, b = 2), II if 4a = 6b then infinitely many (must), III no values of a and b give no solution (must: the x-terms cancel only when 2a - 3b = 0, and then the right side is 0 too); no statement names a specific pair; choices II only / III only / II and III only / I, II, and III, key C",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 160,
+   "difficulty_measured": 3.68,
+   "format": "mcq",
+   "stem": "$a(4x + 6) + b = b(6x + 10)$<br>In the given equation, $a$ and $b$ are nonzero constants. Which of the following must be true?<br>I. The equation has exactly one solution.<br>II. If $4a = 6b$, the equation has infinitely many solutions.<br>III. There are no values of $a$ and $b$ for which the equation has no solution.",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "II only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Rejects III, assuming that when the $x$-terms cancel the leftover constants can still differ, which would mean no solution. Here they cannot differ. The collected form is $2(2a - 3b)x = -3(2a - 3b)$, so the $x$-terms cancel only when $2a - 3b = 0$, and then the right side is $-3(0) = 0$ too. This is the same fact that makes II true."
+    },
+    {
+     "key": "B",
+     "text": "III only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Rejects II because $4a = 6b$ matches only the $x$-coefficients, while infinitely many solutions also needs equal constants, and the constants are never checked. With $4a = 6b$, $a = \\frac{3}{2}b$, so the left constant is $6a + b = 9b + b = 10b$, the same as the right constant $10b$."
+    },
+    {
+     "key": "C",
+     "text": "II and III only",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "I, II, and III",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Accepts I because most values of $a$ and $b$, such as $a = b = 1$, give exactly one solution. Statement II describes the exception: $a = 3$ and $b = 2$ satisfy $4a = 6b$, and then the equation is true for every $x$, so I could be true but does not have to be."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "After collecting, the same factor $2a - 3b$ sits in the $x$-coefficient and in the constant, so whenever the $x$-terms cancel the constants cancel too (infinitely many solutions, never none); because that case can happen, “exactly one solution” could be true but does not have to be.",
+    "steps": "What does the question ask? It asks which choice must be true.<br>Collect the $x$-terms on the left side and the constant terms on the right side.<br>$4ax + 6a + b = 6bx + 10b$ <span class=\"nt\">(distribute $a$ and $b$)</span><br>$4ax - 6bx + 6a + b = 10b$ <span class=\"nt\">(subtract $6bx$ from both sides)</span><br>$4ax - 6bx = 9b - 6a$ <span class=\"nt\">(subtract the constant terms $6a + b$ from both sides)</span><br>$2(2a - 3b)x = -3(2a - 3b)$ <span class=\"nt\">(factor both sides)</span><br>The same factor $2a - 3b$ is on both sides, so there are only two cases:<br>If $2a - 3b \\ne 0$: dividing both sides by $2(2a - 3b)$ gives exactly one solution.<br>If $2a - 3b = 0$: both sides are 0, so the equation reads $0 = 0$ and every $x$ is a solution.<br>Now read each statement from these two cases.<br>I: not always true. With $a = 3$ and $b = 2$, $2a - 3b = 0$, so there are infinitely many solutions.<br>II: always true.<br>$4a = 6b$ <span class=\"nt\">(the condition in II)</span><br>$2a = 3b$ <span class=\"nt\">(divide both sides by 2)</span><br>$2a - 3b = 0$ <span class=\"nt\">(subtract $3b$ from both sides)</span><br>This is the second case, so every $x$ is a solution: infinitely many solutions.<br>III: always true. No solution would need the $x$-terms to cancel while a nonzero number is left on the right side. The $x$-terms cancel only when $2a - 3b = 0$, and then the right side, $-3(2a - 3b)$, is 0 too. So the $x$-terms never cancel with different constants left over, and no values of $a$ and $b$ give no solution.<br>So II and III must be true, while I only could be true.",
+    "check": "With $a = 3$ and $b = 2$ (here $4a = 12 = 6b$): $3(4x + 6) + 2 = 12x + 20$ and $2(6x + 10) = 12x + 20$, the same expression ✓. With $a = b = 1$ the collected form gives $2(-1)x = -3(-1)$, that is, $-2x = 3$, and the original equation $4x + 7 = 6x + 10$ also leads to $-2x = 3$ ✓",
+    "be_careful": "Choice A (II only) is a trap. It rejects III, assuming that when the $x$-terms cancel the leftover constants can still differ, which would mean no solution. Here they cannot differ. The collected form is $2(2a - 3b)x = -3(2a - 3b)$, so the $x$-terms cancel only when $2a - 3b = 0$, and then the right side is $-3(0) = 0$ too. This is the same fact that makes II true.",
+    "desmos": null,
+    "another_way": "Statement II without the collected form: $4a = 6b$ means $a = \\frac{3}{2}b$. Then the left side is $\\frac{3}{2}b(4x + 6) + b = 6bx + 9b + b = 6bx + 10b$, which is exactly $b(6x + 10)$, the right side, for every nonzero $b$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-047",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C5",
+    "A1.C1"
+   ],
+   "family": "HP-D-never-a-solution-linear-in-k",
+   "signature": "k(2x - 5) = 3(x + 1) + k; the one r that is a solution for no k; substituting x = r gives (2r - 6)k = 3r + 3, solvable for k unless r = 3, where it reads 0 = 12; another way: x = 3 + 12/(2k - 3) never equals 3; SPR 3; wrong 3/2 (the no-solution k), 5/2 (2x - 5 = 0)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": 4.05,
+   "format": "spr",
+   "stem": "$k(2x - 5) = 3(x + 1) + k$<br>In the given equation, $k$ is a constant. For exactly one number $r$, there is no value of $k$ for which $x = r$ is a solution to the equation. What is the value of $r$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3/2",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "$\\frac{3}{2}$ is the value of $k$ that makes the $x$-coefficient $2k - 3$ equal to 0, where the equation has no solution. That is a forbidden value of $k$, not of $x$: the number $x = \\frac{3}{2}$ is the solution when $k = -\\frac{5}{2}$."
+    },
+    {
+     "value": "5/2",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "$\\frac{5}{2}$ makes the visible factor $2x - 5$ equal to 0, so the left side loses its $k$. The $k$ on the right side remains: at $x = \\frac{5}{2}$ the equation is $0 = \\frac{21}{2} + k$, which is true when $k = -\\frac{21}{2}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Substituting $x = r$ turns the equation into a linear equation in $k$, and that equation has no solution for $k$ only when its $k$-terms cancel and a false statement is left.",
+    "steps": "The question asks for the one number $r$ that is not a solution for any value of $k$. Substitute $x = r$ and read the result as an equation in $k$.<br>$k(2r - 5) = 3(r + 1) + k$ <span class=\"nt\">(substitute $x = r$)</span><br>$2rk - 5k = 3r + 3 + k$ <span class=\"nt\">(distribute $k$ and 3)</span><br>$2rk - 6k = 3r + 3$ <span class=\"nt\">(subtract $k$ from both sides)</span><br>$(2r - 6)k = 3r + 3$ <span class=\"nt\">(factor out $k$)</span><br>If $2r - 6$ is not 0, dividing both sides by it gives a value of $k$, and for that $k$ the equation is true at $x = r$. So every such $r$ is a solution for some $k$.<br>The only $r$ that can fail is the one that makes the $k$-terms cancel:<br>$2r - 6 = 0$ <span class=\"nt\">(the coefficient of $k$ is 0)</span><br>$2r = 6$ <span class=\"nt\">(add 6 to both sides)</span><br>$r = 3$ <span class=\"nt\">(divide both sides by 2)</span><br>$0  \\cdot  k = 3(3) + 3$ <span class=\"nt\">(substitute $r = 3$)</span><br>$0 = 12$ <span class=\"nt\">(simplify both sides)</span><br>This is false for every $k$, so $x = 3$ is never a solution. The value of $r$ is 3.",
+    "check": "Substitute $x = 3$ into the original equation: the left side is $k(6 - 5) = k$ and the right side is $3(4) + k = k + 12$. The equation $k = k + 12$ is false for every $k$ ✓. A nearby number does work: $x = 4$ gives $2k = 15$, so $k = \\frac{15}{2}$, and then both sides equal $\\frac{45}{2}$ ✓",
+    "be_careful": "A common wrong answer is $3/2$. $\\frac{3}{2}$ is the value of $k$ that makes the $x$-coefficient $2k - 3$ equal to 0, where the equation has no solution. That is a forbidden value of $k$, not of $x$: the number $x = \\frac{3}{2}$ is the solution when $k = -\\frac{5}{2}$.",
+    "desmos": "Useful only after the solution is written in terms of $k$. Graph $y = \\frac{6x + 3}{2x - 3}$: here the horizontal axis plays the role of $k$ and the height is the solution. The graph gets close to the line $y = 3$ but never touches it, and it reaches every other height.",
+    "another_way": "Solve for $x$ first: $(2k - 3)x = 6k + 3$.<br>At $k = \\frac{3}{2}$ this reads $0 = 12$, so there is no solution.<br>For every other $k$: $x = \\frac{6k + 3}{2k - 3}$.<br>Since $6k + 3 = 3(2k - 3) + 12$, this is $x = 3 + \\frac{12}{2k - 3}$.<br>A fraction with top 12 is never 0, so $x$ is never 3. Every other number is reached: for example, $x = 4$ needs $\\frac{12}{2k - 3} = 1$, so $k = \\frac{15}{2}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-048",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C4",
+    "A1.C5"
+   ],
+   "family": "HP-D-cannot-be-sum-identity-pair-printed-numbers",
+   "signature": "c(2x - 3) + d(x + 1) = 10x - 5 no solution: 2c + d = 10 and d - 3c != -5; both equalities give the identity pair c = 3, d = 4, so c + d != 7; every other sum S from c = 10 - S, d = 2S - 10; choices -5 (printed constant, reached by c = 15, d = -20), 4 (d of the identity pair, reached by c = 6, d = -2), key 7 (third), 10 (printed x-coefficient, reached by c = 0, d = 10); no two wrong choices add or subtract to the key",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": 3.81,
+   "format": "mcq",
+   "stem": "$c(2x - 3) + d(x + 1) = 10x - 5$<br>In the given equation, $c$ and $d$ are constants. The equation has no solution. Which of the following CANNOT be the value of $c + d$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "$-5$ is the constant printed in $10x - 5$. The condition “the constants must differ” says the left constant $d - 3c$ cannot be $-5$; it says nothing about $c + d$. A sum of $-5$ comes from $c = 15$ and $d = -20$, which gives $15(2x - 3) - 20(x + 1) = 10x - 65$, and $10x - 65 = 10x - 5$ has no solution."
+    },
+    {
+     "key": "B",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4 is the value of $d$ in the pair $c = 3$, $d = 4$, the pair that makes the two sides the same expression. The question asks about $c + d$. A sum of 4 comes from $c = 6$ and $d = -2$, which gives $10x - 20 = 10x - 5$, no solution."
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "10 is the $x$-coefficient printed in $10x - 5$, so it looks like a special value, but the conditions do not rule it out. With $c = 0$ and $d = 10$ the equation is $10(x + 1) = 10x - 5$, that is, $10x + 10 = 10x - 5$, which has no solution."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "No solution needs equal $x$-coefficients and different constants; matching the $x$-coefficients leaves many pairs $(c, d)$, and the constants rule out exactly one of them, the pair that would make the two sides the same expression.",
+    "steps": "The question asks which value of $c + d$ is impossible when the equation has no solution. Write the left side as (number)$x$ + (number).<br>$2cx - 3c + dx + d = 10x - 5$ <span class=\"nt\">(distribute $c$ and $d$)</span><br>$(2c + d)x + (d - 3c) = 10x - 5$ <span class=\"nt\">(group the $x$-terms)</span><br>No solution needs equal $x$-coefficients and different constants:<br>$2c + d = 10$ <span class=\"nt\">(match the $x$-coefficients)</span><br>$d - 3c \\ne -5$ <span class=\"nt\">(the constants must differ)</span><br>$d = 10 - 2c$ <span class=\"nt\">(subtract $2c$ from both sides of the first condition)</span><br>$c + d = 10 - c$ <span class=\"nt\">(add $c$ to both sides)</span><br>$10 - 2c - 3c \\ne -5$ <span class=\"nt\">(substitute $d = 10 - 2c$ into the second condition)</span><br>$10 - 5c \\ne -5$ <span class=\"nt\">(combine like terms)</span><br>$-5c \\ne -15$ <span class=\"nt\">(subtract 10 from both sides)</span><br>$c \\ne 3$ <span class=\"nt\">(divide both sides by $-5$)</span><br>So $c$ can be any number except 3, and $c + d = 10 - c$ can be any number except $10 - 3 = 7$.<br>Why 7 fails: $c + d = 7$ forces $c = 3$ and $d = 4$, and then the equation is $10x - 5 = 10x - 5$, which has infinitely many solutions, not none.",
+    "check": "Each other choice comes from a pair with $d = 10 - 2c$ and $c \\ne 3$, using $c = 10 - (c + d)$. Sum $-5$: $c = 15$ and $d = -20$, and the equation is $10x - 65 = 10x - 5$ ✓ (no solution). Sum 4: $c = 6$ and $d = -2$, and $10x - 20 = 10x - 5$ ✓. Sum 10: $c = 0$ and $d = 10$, and $10x + 10 = 10x - 5$ ✓",
+    "be_careful": "Choice A ($-5$) is a trap. $-5$ is the constant printed in $10x - 5$. The condition “the constants must differ” says the left constant $d - 3c$ cannot be $-5$; it says nothing about $c + d$. A sum of $-5$ comes from $c = 15$ and $d = -20$, which gives $15(2x - 3) - 20(x + 1) = 10x - 65$, and $10x - 65 = 10x - 5$ has no solution.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-049",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C3",
+    "A1.C7",
+    "A1.C8"
+   ],
+   "family": "HP-E-two-equal-costs-piecewise-plan-positive-rate",
+   "signature": "storage plans: P = fee a + positive monthly b (stated positive, so \"the same\" cannot also be true); Q = set price s for 2 months or less + r per additional month; equal at 3 and 7 months forces r = b, s = a + 2b (identity for 2+ months); 1-month rental costs b more under Q; text choices: same (rule extended below 2 months), twice b (s - a), not enough information",
+   "abilities": [
+    "M",
+    "S",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": 3.68,
+   "format": "mcq",
+   "stem": "Storage plan P charges a one-time fee plus a fixed positive monthly charge. Storage plan Q charges a set price for any rental of 2 months or less, plus a fixed charge for each additional month. A 3-month rental costs the same under the two plans, and so does a 7-month rental. Which of the following must be true about a 1-month rental?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It costs more under plan Q, by exactly plan P’s monthly charge.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "It costs the same amount under plan P and under plan Q.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Uses plan Q’s rule for longer rentals, $s + r(m - 2)$, at $m = 1$: $s - r = a + b$, the same as plan P. That rule holds only for rentals longer than 2 months; a 1-month rental under plan Q costs the full set price $s$."
+    },
+    {
+     "key": "C",
+     "text": "It costs more under plan Q, by exactly twice plan P’s monthly charge.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "Compares the set price with the one-time fee only: $s - a = 2b$. Plan P’s 1-month cost also includes one monthly charge, so the difference is $(a + 2b) - (a + b) = b$."
+    },
+    {
+     "key": "D",
+     "text": "The information given is not enough to compare the two costs.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Sees four unknown amounts and only two facts. The two facts give $r = b$ and $s = a + 2b$, and then the difference $s - (a + b) = b$ no longer depends on the fee $a$, so the comparison is determined."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "For rentals of 2 months or more both plans follow linear rules, and two linear rules that agree at two lengths are the same rule; a 1-month rental is outside that range, and there plan Q still charges its full set price.",
+    "steps": "The question asks how the two costs of a 1-month rental compare.<br>Let $a$ = plan P’s one-time fee, $b$ = plan P’s monthly charge, $s$ = plan Q’s set price, and $r$ = plan Q’s charge for each additional month, all in dollars. Let $m$ = the number of months.<br>Plan P: $a + bm$ <span class=\"nt\">(fee plus a charge for every month)</span><br>Plan Q, more than 2 months: $s + r(m - 2)$ <span class=\"nt\">(the set price covers the first 2 months)</span><br>$a + 3b = s + r$ <span class=\"nt\">(3 months cost the same)</span><br>$a + 7b = s + 5r$ <span class=\"nt\">(7 months cost the same)</span><br>$4b = 4r$ <span class=\"nt\">(subtract the first equation from the second)</span><br>$r = b$ <span class=\"nt\">(divide both sides by 4)</span><br>$a + 3b = s + b$ <span class=\"nt\">(replace $r$ with $b$ in the first equation)</span><br>$s = a + 2b$ <span class=\"nt\">(subtract $b$ from both sides)</span><br>Now read each plan’s rule for 1 month.<br>Plan P, 1 month: $a + b$ <span class=\"nt\">($m = 1$)</span><br>Plan Q, 1 month: $s = a + 2b$ <span class=\"nt\">(a rental of 2 months or less costs the set price)</span><br>$(a + 2b) - (a + b) = b$ <span class=\"nt\">(subtract the plan P cost from the plan Q cost)</span><br>The stem says the monthly charge $b$ is positive, so a 1-month rental costs more under plan Q, by exactly $b$. This is true for every pair of plans that fits the facts, even though $a$ and $b$ are unknown.",
+    "check": "Example: $a = 20$ and $b = 10$ give $r = 10$ and $s = 40$. 3 months: $20 + 30 = 50$ and $40 + 10 = 50$ ✓. 7 months: $20 + 70 = 90$ and $40 + 50 = 90$ ✓. 1 month: plan P costs $20 + 10 = 30$ and plan Q costs 40, which is $10 = b$ more ✓",
+    "be_careful": "Choice B is a trap. It uses plan Q’s rule for longer rentals, $s + r(m - 2)$, at $m = 1$: $s - r = a + b$, the same as plan P. That rule holds only for rentals longer than 2 months; a 1-month rental under plan Q costs the full set price $s$.",
+    "desmos": null,
+    "another_way": "For 2 months or more, the two costs are $a + bm$ and $s + r(m - 2)$, and both are linear in $m$.<br>They are equal at $m = 3$ and at $m = 7$. A linear equation with two solutions has infinitely many, so the two rules are the same rule, and the plans cost the same for every rental of 2 months or more, including 2 months.<br>Going from 2 months down to 1 month, plan P drops by one monthly charge, $b$, while plan Q stays at its set price.<br>So at 1 month plan Q costs $b$ more."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A1-050",
+   "version": 1,
+   "skill": {
+    "code": "A1",
+    "domain": "alg",
+    "cb_skill": "Linear equations in one variable"
+   },
+   "level": "H+",
+   "concepts": [
+    "A1.C3",
+    "A1.C7",
+    "A1.C8"
+   ],
+   "family": "HP-minimum-charge-bent-rule-count-two",
+   "signature": "towing count MCQ: P = $5 per mile but never less than $72 (flat $72 below 14.4 miles, 5d from 14.4 on), Q = $20 + $4 per mile, both bill the exact distance; minimum rule 72 = 20 + 4d gives 13 (< 14.4, both $72), per-mile rule 5d = 20 + 4d gives 20 (>= 14.4, both $100); both matches are whole miles, so a whole-mile reading keeps the count; fixed count choices, key C Exactly two; the explanation says why two is possible although one linear equation never has exactly two solutions (P = Q is two linear equations); baits: one rule only (Exactly one), P higher at both ends or minimum read as a fee (Zero), two solutions force all (Infinitely many)",
+   "abilities": [
+    "M",
+    "N",
+    "I"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": 3.69,
+   "format": "mcq",
+   "stem": "Towing company P charges \\$5 per mile, but never less than \\$72 for a tow. Towing company Q charges \\$20 plus \\$4 per mile. Both companies charge for the exact distance towed. For how many different tow distances do the two companies charge the same amount?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Zero",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Checks a short tow and a long tow, such as 5 miles (\\$72 for company P, \\$40 for company Q) and 100 miles (\\$500 and \\$420), and decides that P always charges more. Reading the minimum as a fee on top, $72 + 5d = 20 + 4d$, also leads here, since it gives $d = -52$. But the \\$72 is a floor, not an extra charge, and between 13 and 20 miles Q charges more (at 15 miles: \\$75 for P, \\$80 for Q), so the charges match twice."
+    },
+    {
+     "key": "B",
+     "text": "Exactly one",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Solves only one of company P’s rules: the per-mile rule $5d = 20 + 4d$ alone gives $d = 20$, and the minimum rule $72 = 20 + 4d$ alone gives $d = 13$. Both distances lie inside their own ranges, so both count. The habit “a linear equation has at most one solution” is true for one linear equation, but P’s charge is two linear rules, so that fact does not limit the count to one."
+    },
+    {
+     "key": "C",
+     "text": "Exactly two",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Infinitely many",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Finds both matches, 13 and 20 miles, and then uses the fact that a linear equation with two solutions has infinitely many. That fact is about one linear equation, and these two matches come from two different rules of company P. Between them the charges differ: at 15 miles P charges \\$75 and Q charges \\$80."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Company P’s minimum gives its charge two different linear rules, a flat \\$72 for short tows and \\$5 per mile for long ones, so “the charges are equal” is two linear equations, and each one can give its own solution inside its own range of distances.",
+    "steps": "The question asks how many tow distances give equal charges.<br>Let $d$ = the tow distance in miles.<br>Company Q: $20 + 4d$ dollars<br>Company P: $5d$ dollars, but never less than 72 dollars<br>$5d = 72$ <span class=\"nt\">(find where the minimum stops mattering)</span><br>$d = 14.4$ <span class=\"nt\">(divide both sides by 5)</span><br>So company P’s charge follows two rules. For a tow shorter than 14.4 miles, $5d$ is less than 72, so P charges the \\$72 minimum. For 14.4 miles or more, P charges $5d$ dollars. Each rule gives its own equation, and a solution counts only if it lands inside that rule’s range.<br>Minimum rule (shorter than 14.4 miles): $72 = 20 + 4d$ <span class=\"nt\">(P charges the minimum)</span><br>$52 = 4d$ <span class=\"nt\">(subtract 20 from both sides)</span><br>$d = 13$ <span class=\"nt\">(divide both sides by 4)</span><br>13 is less than 14.4, so this distance is inside the minimum rule: both companies charge \\$72 ✓<br>Per-mile rule (14.4 miles or more): $5d = 20 + 4d$ <span class=\"nt\">(P charges by the mile)</span><br>$d = 20$ <span class=\"nt\">(subtract $4d$ from both sides)</span><br>20 is at least 14.4, so this distance is inside the per-mile rule: both companies charge \\$100 ✓<br>In each rule the two sides have different $d$-coefficients (0 and 4 in the minimum rule, 5 and 4 in the per-mile rule), so each rule has exactly one solution, and no other distance can work.<br>This is why exactly two is possible here. One linear equation has zero, one, or infinitely many solutions, never exactly two. But “P’s charge = Q’s charge” is not one linear equation, because P’s charge switches rules at 14.4 miles. It is two linear equations, each on its own range of distances, and here each one supplies a solution. On a graph, P’s charge is a flat segment that bends upward at 14.4 miles, and a bent graph can cross the straight graph of Q twice.<br>The charges are the same for exactly two distances, 13 miles and 20 miles.",
+    "check": "At 13 miles: $5(13) = 65$ is less than 72, so company P charges \\$72, and company Q charges $20 + 4(13) = 72$ dollars ✓. At 20 miles: company P charges $5(20) = 100$ dollars and company Q charges $20 + 4(20) = 100$ dollars ✓. In between, at 15 miles, company P charges $5(15) = 75$ dollars and company Q charges $20 + 4(15) = 80$ dollars, so the charges are not equal for every distance ✓",
+    "be_careful": "Choice A (Zero) is a trap. It checks a short tow and a long tow, such as 5 miles (\\$72 for company P, \\$40 for company Q) and 100 miles (\\$500 and \\$420), and decides that P always charges more. Reading the minimum as a fee on top, $72 + 5d = 20 + 4d$, also leads here, since it gives $d = -52$. But the \\$72 is a floor, not an extra charge, and between 13 and 20 miles Q charges more (at 15 miles: \\$75 for P, \\$80 for Q), so the charges match twice.",
+    "desmos": "Graphing $y = 5x$ and $y = 20 + 4x$ finds only $(20, 100)$, because $y = 5x$ leaves out the minimum. Typing company P’s charge as $y =$ max$(72, 5x)$ and graphing it with $y = 20 + 4x$ shows two intersection points, $(13, 72)$ and $(20, 100)$.",
+    "another_way": "Follow the gap between the two charges as the distance grows.<br>At 0 miles company Q is \\$52 below company P (\\$20 against \\$72).<br>While P stays at \\$72, Q gains \\$4 per mile, so Q catches up after $\\frac{52}{4} = 13$ miles, before P starts charging by the mile at 14.4 miles: the first match.<br>At 14.4 miles Q is \\$5.60 above P (\\$77.60 against \\$72).<br>From there P adds \\$5 per mile and Q only \\$4, so P gains \\$1 per mile and catches up 5.6 miles later, at 20 miles: the second match.<br>After 20 miles P keeps gaining, so it stays above Q and there is no third match."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

@@ -1,0 +1,3456 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "A5",
+ "skill": "Linear inequalities in one or two variables",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-A5-001",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "distribute-then-flip",
+   "signature": "4 - 3(x + 2) >= x - 10; distribute the negative, divide by -4 and reverse; key x <= 2",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following is the solution to the inequality $4 - 3(x + 2) \\ge x - 10$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x \\ge 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "The steps are right until the last one: dividing $-4x \\ge -8$ by $-4$ must reverse the sign."
+    },
+    {
+     "key": "B",
+     "text": "$x \\le 2$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$x \\le 5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This comes from writing $-3(x + 2)$ as $-3x + 6$. The $-3$ multiplies the $+2$ too, giving $-6$."
+    },
+    {
+     "key": "D",
+     "text": "$x \\ge 5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Two slips: $-3(x + 2)$ written as $-3x + 6$, and the sign not reversed when dividing by $-4$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Solve an inequality like an equation, but reverse the inequality sign whenever both sides are multiplied or divided by a negative number.",
+    "steps": "What does the question ask? It asks which choice is the solution to the inequality $4 - 3(x + 2) \\ge x - 10$.<br>$4 - 3x - 6 \\ge x - 10$ <span class=\"nt\">(distribute $-3$ to both $x$ and $2$)</span><br>$-3x - 2 \\ge x - 10$ <span class=\"nt\">(combine 4 and $-6$)</span><br>$-4x - 2 \\ge -10$ <span class=\"nt\">(subtract $x$ from both sides)</span><br>$-4x \\ge -8$ <span class=\"nt\">(add 2 to both sides)</span><br>$x \\le 2$ <span class=\"nt\">(divide by $-4$ and reverse the sign)</span>",
+    "check": "Try $x = 0$ (it should work): $4 - 3(2) = -2$ and $0 - 10 = -10$, and $-2 \\ge -10$ ✓. Try $x = 3$ (it should fail): $4 - 15 = -11$ and $-7$; $-11 \\ge -7$ is false ✓",
+    "be_careful": "Dividing by $-4$ reverses $\\ge$ to $\\le$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-002",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "load-limit-greatest-count",
+   "signature": "van limit 1,800 lb, driver 175 lb, boxes 46 lb; greatest whole number of boxes 35 (1625/46 = 35.3)",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A delivery van can safely carry a total of at most 1,800 pounds, including its driver. The driver weighs 175 pounds, and each box loaded into the van weighs 46 pounds. What is the greatest number of boxes that can be loaded into the van with the driver?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "35"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "36",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "$\\frac{1,625}{46} \\approx 35.3$ was rounded up. With 36 boxes the total is $175 + 1,656 = 1,831$ pounds, over the limit."
+    },
+    {
+     "value": "39",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This divides 1,800 by 46 and forgets that the driver’s 175 pounds count toward the limit."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write “total weight is at most 1,800” as an inequality; a count of boxes must be a whole number that keeps the total within the limit.",
+    "steps": "What does the question ask? It asks for the greatest number of boxes that can be loaded into the van with the driver.<br>Let $b$ = the number of boxes.<br>$175 + 46b \\le 1,800$ <span class=\"nt\">(driver plus boxes is at most 1,800)</span><br>$46b \\le 1,625$ <span class=\"nt\">(subtract 175 from both sides)</span><br>$b \\le \\frac{1,625}{46} \\approx 35.3$ <span class=\"nt\">(divide by 46)</span><br>$b$ is a whole number, so the greatest value is 35.",
+    "check": "35 boxes: $175 + 46(35) = 1,785 \\le 1,800$ ✓. 36 boxes: $175 + 1,656 = 1,831$, too heavy ✓",
+    "be_careful": "Round down here: 35.3 boxes is not allowed, and 36 is over the limit.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-003",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "point-strict-boundary",
+   "signature": "3x - 2y > 12; two choices on the boundary (=12), (5, 2) passes only with the -2y sign slip (15 + 4); key (5, 1)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which point $(x, y)$ is a solution to the inequality $3x - 2y > 12$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(4, 0)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$3(4) - 0 = 12$. The point is on the boundary line, and $12 > 12$ is false."
+    },
+    {
+     "key": "B",
+     "text": "$(5, 2)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "$3(5) - 2(2) = 15 - 4 = 11$, and $11 > 12$ is false. Adding $2y$ instead of subtracting it gives $15 + 4 = 19$, which makes this point look like a solution."
+    },
+    {
+     "key": "C",
+     "text": "$(6, 3)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$3(6) - 2(3) = 18 - 6 = 12$. This point is on the boundary, and the inequality is strict."
+    },
+    {
+     "key": "D",
+     "text": "$(5, 1)$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A point is a solution if substituting its coordinates makes the inequality true; points on the boundary line do not count when the sign is strict ($>$).",
+    "steps": "What does the question ask? It asks which point $(x, y)$ is a solution to the inequality $3x - 2y > 12$.<br>Substitute each point into $3x - 2y$ and compare with 12.<br>$(4, 0)$: $12 - 0 = 12$ <span class=\"nt\">(not greater than 12)</span><br>$(5, 2)$: $15 - 4 = 11$ <span class=\"nt\">(less than 12)</span><br>$(6, 3)$: $18 - 6 = 12$ <span class=\"nt\">(not greater than 12)</span><br>$(5, 1)$: $15 - 2 = 13$ <span class=\"nt\">(greater than 12)</span><br>Only $(5, 1)$ works.",
+    "check": "$3(5) - 2(1) = 13$ and $13 > 12$ ✓",
+    "be_careful": "Two of the points give exactly 12. With $>$, equal is not enough.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-004",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C5"
+   ],
+   "family": "interpret-solution-flat-fee",
+   "signature": "truck rental 40 + 0.6m <= 85; meaning of m <= 75; distractors at least, 85/0.6, 85 - 40",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A truck rental costs a flat fee of \\$40 plus \\$0.60 per mile driven. Ana wants her total cost to be at most \\$85. The inequality $40 + 0.6m \\le 85$ models this situation, where $m$ is the number of miles she drives. Which statement best describes the solution to this inequality?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Ana can drive at most 75 miles.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Ana must drive at least 75 miles.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Solving gives $m \\le 75$, not $m \\ge 75$. Driving more miles costs more, so the limit is an upper limit."
+    },
+    {
+     "key": "C",
+     "text": "Ana can drive at most about 142 miles.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is $\\frac{85}{0.6}$; it ignores the \\$40 flat fee."
+    },
+    {
+     "key": "D",
+     "text": "Ana can drive at most 45 miles.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "45 is the number of dollars left for miles after the fee ($85 - 40$), not the number of miles."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Solve the inequality, then say what the variable means: $m$ is miles, and the cost limit gives an upper bound on $m$.",
+    "steps": "What does the question ask? It asks which statement best describes the solution to this inequality.<br>$0.6m \\le 45$ <span class=\"nt\">(subtract 40 from both sides)</span><br>$m \\le 75$ <span class=\"nt\">(divide by 0.6)</span><br>$m$ is the number of miles, so Ana can drive at most 75 miles and keep the total cost at most \\$85.",
+    "check": "75 miles: $40 + 0.6(75) = 40 + 45 = 85$ ✓ (exactly the limit)",
+    "be_careful": "Choice B (Ana must drive at least 75 miles.) is a trap. Solving gives $m \\le 75$, not $m \\ge 75$. Driving more miles costs more, so the limit is an upper limit.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-005",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "compound-integer-count",
+   "signature": "-7 < 2x - 3 <= 9; integers -1..6, count 8; traps 9 (include -2) and 7",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$-7 < 2x - 3 \\le 9$<br>How many integers $x$ satisfy the given inequality?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "9",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This counts $x = -2$. At $x = -2$, $2x - 3 = -7$, and $-7 < -7$ is false."
+    },
+    {
+     "value": "7",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This leaves out $x = 6$. At $x = 6$, $2x - 3 = 9$, and $9 \\le 9$ is true, so 6 counts."
+    }
+   ],
+   "solution": {
+    "key_idea": "Do the same step to all three parts of a compound inequality, then check which end is included.",
+    "steps": "The question asks how many integers make the inequality true. First find all real solutions.<br>$-4 < 2x \\le 12$ <span class=\"nt\">(add 3 to all three parts)</span><br>$-2 < x \\le 6$ <span class=\"nt\">(divide all three parts by 2)</span><br>The integers are $-1, 0, 1, 2, 3, 4, 5, 6$ <span class=\"nt\">($-2$ is not included, 6 is)</span><br>That is 8 integers.",
+    "check": "$x = 6$: $2(6) - 3 = 9 \\le 9$ ✓; $x = -2$: $2(-2) - 3 = -7$, not greater than $-7$ ✓ (excluded)",
+    "be_careful": "The left end is strict and the right end is not; one end counts and the other does not.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-006",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "point-set-all-satisfy",
+   "signature": "y < -2x + 5; which set of three points are all solutions; one set has a boundary point (1, 3)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y < -2x + 5$<br>For which of the following sets are all of the points $(x, y)$ solutions to the given inequality?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(0, 4)$, $(1, 3)$, $(3, -1)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$(1, 3)$ is on the boundary: $-2(1) + 5 = 3$, and $3 < 3$ is false."
+    },
+    {
+     "key": "B",
+     "text": "$(0, 3)$, $(2, 0)$, $(4, -2)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$(0, 3)$ and $(2, 0)$ work, but at $(4, -2)$: $-2(4) + 5 = -3$, and $-2 < -3$ is false. Every point must be checked."
+    },
+    {
+     "key": "C",
+     "text": "$(-2, 8)$, $(0, 4)$, $(3, -2)$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$(0, 5)$, $(1, 2)$, $(2, 0)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$(0, 5)$ is on the boundary ($y$-intercept 5); a strict inequality does not include it."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Each point must make the inequality true; one failing point rules out the whole set.",
+    "steps": "What does the question ask? It asks for the set in which every point is a solution to $y < -2x + 5$.<br>For each point, compare $y$ with $-2x + 5$.<br>Choice C: $(-2, 8)$: $-2(-2) + 5 = 9$, and $8 < 9$ <span class=\"nt\">(true)</span><br>$(0, 4)$: $0 + 5 = 5$, and $4 < 5$ <span class=\"nt\">(true)</span><br>$(3, -2)$: $-6 + 5 = -1$, and $-2 < -1$ <span class=\"nt\">(true)</span><br>Every other choice has a point where $y$ is not less than $-2x + 5$.",
+    "check": "All three points in C satisfy the inequality ✓; A fails at $(1, 3)$, B at $(-1, 8)$, D at $(0, 5)$.",
+    "be_careful": "Points exactly on the line do not satisfy a strict inequality.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-007",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "write-inequality-batches",
+   "signature": "need at least 120 cupcakes for sale, 38 ready, batches of 12 with 4 per batch kept for tasting: 38 + 8b >= 120; traps 12b (tasting ignored), -4 once, <=",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A baker needs at least 120 cupcakes to sell at an event. She has already baked 38 cupcakes for the event. She will bake the rest in batches of 12 cupcakes each, and from each batch she keeps 4 cupcakes for taste testing, which are not sold. Which inequality can be used to find the number of batches, $b$, she still needs to bake?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$38 + 8b \\le 120$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "“At least 120” means the number to sell is 120 or more, so the sign is $\\ge$."
+    },
+    {
+     "key": "B",
+     "text": "$38 + 8b \\ge 120$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$38 + 12b \\ge 120$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This ignores the 4 cupcakes kept from each batch; only $12 - 4 = 8$ per batch can be sold."
+    },
+    {
+     "key": "D",
+     "text": "$38 + 12b - 4 \\ge 120$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This takes away 4 cupcakes only once. The 4 are kept from EACH batch, so $b$ batches lose $4b$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Count only the cupcakes that can be sold: 38 already baked plus $12 - 4 = 8$ from each batch, and “at least” means $\\ge$.",
+    "steps": "The question asks for an inequality in $b$. Build the number of cupcakes to sell in two parts.<br>Cupcakes already baked: 38.<br>Cupcakes to sell from each batch: $12 - 4 = 8$ <span class=\"nt\">(4 kept from every batch)</span><br>From $b$ batches: $8b$, so the total is $38 + 8b$.<br>The total must be at least 120: $38 + 8b \\ge 120$.<br>Why it works: $12b - 4b$ and $8b$ are the same expression, so writing $38 + 12b - 4b \\ge 120$ is also correct; it simplifies to the same inequality.",
+    "check": "$b = 11$: $38 + 88 = 126 \\ge 120$ ✓, and $b = 10$: $38 + 80 = 118$, not enough, so 11 batches is the least; the inequality behaves as it should.",
+    "be_careful": "The 4 tasting cupcakes are lost from every batch, so they are multiplied by $b$, not subtracted once.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-008",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "graph-to-system",
+   "signature": "shaded region above solid y = x - 1 and below dashed y = -2x + 5; pick the system; distractors strictness swaps and direction",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The shaded region in the $xy$-plane shown represents the solutions to a system of inequalities.",
+   "stem_after_figure": "Which system of inequalities is represented?",
+   "figures": [
+    {
+     "id": "QB-A5-008-fig1",
+     "file": "figures/QB-A5-008-fig1.svg",
+     "alt": "Two lines on a grid. A solid line rises through (0, -1) and (1, 0). A dashed line falls through (0, 5) and (1, 3). The region above the solid line and below the dashed line, to the left of where they cross at (2, 1), is shaded."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y \\le x - 1$ and $y < -2x + 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "The shading is above the solid line, so the first inequality should be $y \\ge x - 1$."
+    },
+    {
+     "key": "B",
+     "text": "$y \\ge x - 1$ and $y \\le -2x + 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "The line $y = -2x + 5$ is dashed, so points on it are not solutions: the sign must be $<$."
+    },
+    {
+     "key": "C",
+     "text": "$y > x - 1$ and $y < -2x + 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "The line $y = x - 1$ is solid, so points on it are solutions: the sign must be $\\ge$."
+    },
+    {
+     "key": "D",
+     "text": "$y \\ge x - 1$ and $y < -2x + 5$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Read each boundary line’s equation, then its style (solid means the line is included, dashed means it is not) and which side is shaded.",
+    "steps": "What does the question ask? It asks which system of inequalities is represented.<br>Solid line: $y$-intercept $-1$, rises 1 for each 1 to the right, so $y = x - 1$.<br>The shading is above it and the line is solid: $y \\ge x - 1$.<br>Dashed line: $y$-intercept 5, falls 2 for each 1 to the right, so $y = -2x + 5$.<br>The shading is below it and the line is dashed: $y < -2x + 5$.",
+    "check": "$(0, 0)$ is in the shaded region: $0 \\ge -1$ ✓ and $0 < 5$ ✓",
+    "be_careful": "Choice A ($y \\le x - 1$ and $y < -2x + 5$) is a trap. The shading is above the solid line, so the first inequality should be $y \\ge x - 1$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-009",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "point-in-system-region",
+   "signature": "y >= x - 3 and y < -x + 5; (4, 1) on the dashed boundary, (2, 2) key",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y \\ge x - 3$<br>$y < -x + 5$<br>Which point $(x, y)$ is a solution to the given system of inequalities?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(4, 1)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$1 \\ge 1$ is true, but $1 < 1$ is false: the point is on the boundary of the strict inequality."
+    },
+    {
+     "key": "B",
+     "text": "$(0, -4)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$-4 < 5$ is true, but $-4 \\ge -3$ is false. A solution of a system must satisfy both inequalities."
+    },
+    {
+     "key": "C",
+     "text": "$(2, 2)$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$(5, 3)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$3 \\ge 2$ is true, but $3 < 0$ is false. Checking only the first inequality is not enough."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A solution to a system makes every inequality in it true at the same time.",
+    "steps": "The question asks which point works in the system, so the point must make BOTH inequalities true.<br>Test each point in both inequalities.<br>$(2, 2)$: $2 \\ge 2 - 3 = -1$ <span class=\"nt\">(true)</span><br>$(2, 2)$: $2 < -2 + 5 = 3$ <span class=\"nt\">(true)</span><br>Each of the other points fails one of the two inequalities.",
+    "check": "$(2, 2)$ satisfies $2 \\ge -1$ ✓ and $2 < 3$ ✓",
+    "be_careful": "Choice A ($(4, 1)$) is a trap. $1 \\ge 1$ is true, but $1 < 1$ is false: the point is on the boundary of the strict inequality.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-010",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "fraction-coefficient-could-be",
+   "signature": "5 - x/3 < 2 gives x > 9; could be x: 12 key, 9 boundary, 6 and 3 from no-flip",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $5 - \\frac{x}{3} < 2$, which of the following could be the value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This also fits $x < 9$ (no sign reversal); at $x = 3$, $5 - 1 = 4$, which is not less than 2."
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This fits $x < 9$, the result when the sign is not reversed after multiplying by $-3$."
+    },
+    {
+     "key": "C",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "At $x = 9$, $5 - 3 = 2$, and $2 < 2$ is false. The boundary is not included."
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Isolate $x$; multiplying both sides by a negative number reverses the sign.",
+    "steps": "The question asks which value could be $x$. First solve the inequality for $x$.<br>$-\\frac{x}{3} < -3$ <span class=\"nt\">(subtract 5 from both sides)</span><br>$x > 9$ <span class=\"nt\">(multiply by $-3$ and reverse the sign)</span><br>Of the choices, only 12 is greater than 9.",
+    "check": "$x = 12$: $5 - 4 = 1 < 2$ ✓",
+    "be_careful": "Choice A ($3$) is a trap. This also fits $x < 9$ (no sign reversal); at $x = 3$, $5 - 1 = 4$, which is not less than 2.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-011",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C6"
+   ],
+   "family": "range-of-linear-expression",
+   "signature": "3 <= x <= 7 gives -4 <= 10 - 2x <= 4 (order reverses); distractors 6..14, 16..24, 3..7 style",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $3 \\le x \\le 7$, which of the following gives all possible values of $10 - 2x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6 \\le 10 - 2x \\le 14$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 and 14 are the values of $2x$; the step of subtracting from 10 was not done."
+    },
+    {
+     "key": "B",
+     "text": "$-4 \\le 10 - 2x \\le 4$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$16 \\le 10 - 2x \\le 24$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "These are the values of $10 + 2x$; the minus sign was dropped."
+    },
+    {
+     "key": "D",
+     "text": "$3 \\le 10 - 2x \\le 7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "These are the given bounds for $x$, not for $10 - 2x$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Build $10 - 2x$ from $x$ one step at a time, doing each step to all three parts; multiplying by a negative reverses the order.",
+    "steps": "The question asks for the values of $10 - 2x$. Start from $3 \\le x \\le 7$ and build the expression.<br>$-6 \\ge -2x \\ge -14$ <span class=\"nt\">(multiply all parts by $-2$ and reverse the signs)</span><br>$4 \\ge 10 - 2x \\ge -4$ <span class=\"nt\">(add 10 to all parts)</span><br>Written from least to greatest: $-4 \\le 10 - 2x \\le 4$.",
+    "check": "$x = 3$ gives $10 - 6 = 4$, and $x = 7$ gives $10 - 14 = -4$ ✓ (the ends swap)",
+    "be_careful": "Choice D ($3 \\le 10 - 2x \\le 7$) is a trap. These are the given bounds for $x$, not for $10 - 2x$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-012",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "membership-less-than-least-count",
+   "signature": "membership 60 + 4n < 9n; n > 12; least whole n 13; trap 12 (equal cost)",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A pottery studio charges \\$9 per class. Members instead pay a one-time fee of \\$60 plus \\$4 per class. What is the least number of classes for which the total cost for a member is less than the total cost for a nonmember?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "13"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "12",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "At 12 classes both pay \\$108; the costs are equal, so the member’s cost is not less."
+    },
+    {
+     "value": "7",
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "$\\frac{60}{9} \\approx 6.7$ ignores the \\$4 per class that members still pay."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write member cost < nonmember cost, solve, and then pick the least whole number that makes it strictly true.",
+    "steps": "What does the question ask? It asks for the least number of classes for which the total cost for a member is less than the total cost for a nonmember.<br>Let $n$ = the number of classes.<br>Member cost: $60 + 4n$. Nonmember cost: $9n$.<br>$60 + 4n < 9n$ <span class=\"nt\">(member cost is less)</span><br>$60 < 5n$ <span class=\"nt\">(subtract $4n$ from both sides)</span><br>$12 < n$ <span class=\"nt\">(divide by 5)</span><br>The least whole number greater than 12 is 13.",
+    "check": "13 classes: member $60 + 52 = 112$, nonmember $117$; $112 < 117$ ✓. 12 classes: both \\$108 (not less) ✓",
+    "be_careful": "At 12 classes the costs are equal; “less than” needs one more class.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-013",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C5"
+   ],
+   "family": "budget-greatest-second-item",
+   "signature": "14s + 9h <= 420, s = 16; greatest h 21 (196/9 = 21.8); distractors 22, 46, 196",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$14s + 9h \\le 420$<br>A club will spend at most \\$420 on $s$ shirts and $h$ hats, as modeled by the given inequality. If the club buys 16 shirts, what is the greatest number of hats it can buy?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$21$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$22$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "$\\frac{196}{9} \\approx 21.8$ was rounded up; 22 hats would cost \\$198, which is more than the \\$196 left."
+    },
+    {
+     "key": "C",
+     "text": "$46$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$\\frac{420}{9} \\approx 46.7$ ignores the money already spent on the 16 shirts."
+    },
+    {
+     "key": "D",
+     "text": "$196$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "196 is the number of dollars left for hats, not the number of hats."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Substitute the known number of shirts, solve for $h$, and round down because the club cannot go over budget.",
+    "steps": "The question asks for the greatest number of hats when $s = 16$.<br>$14(16) + 9h \\le 420$ <span class=\"nt\">($s = 16$)</span><br>$224 + 9h \\le 420$<br>$9h \\le 196$ <span class=\"nt\">(subtract 224 from both sides)</span><br>$h \\le \\frac{196}{9} \\approx 21.8$ <span class=\"nt\">(divide by 9)</span><br>The greatest whole number of hats is 21.",
+    "check": "$224 + 9(21) = 413 \\le 420$ ✓, and $224 + 9(22) = 422 > 420$ ✓",
+    "be_careful": "Choice C ($46$) is a trap. $\\frac{420}{9} \\approx 46.7$ ignores the money already spent on the 16 shirts.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-014",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "describe-half-plane",
+   "signature": "graph of y <= (2/3)x - 1 described in words: solid, slope 2/3, intercept -1, on or below",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which description matches the graph of $y \\le \\frac{2}{3}x - 1$ in the $xy$-plane?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "A solid line with slope $\\frac{2}{3}$ and $y$-intercept $-1$, with the region below the line shaded",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "A dashed line with slope $\\frac{2}{3}$ and $y$-intercept $-1$, with the region below the line shaded",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$\\le$ includes the boundary, so the line is solid, not dashed."
+    },
+    {
+     "key": "C",
+     "text": "A solid line with slope $\\frac{2}{3}$ and $y$-intercept $-1$, with the region above the line shaded",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "$y \\le$ means $y$-values at or below the line, so the shading is below."
+    },
+    {
+     "key": "D",
+     "text": "A solid line with slope $-1$ and $y$-intercept $\\frac{2}{3}$, with the region below the line shaded",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This swaps the slope and the $y$-intercept. In $y = mx + b$, the coefficient of $x$ is the slope."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "In $y \\le mx + b$: the boundary is $y = mx + b$, it is solid because of the equal part, and the solutions are the points at or below it.",
+    "steps": "What does the question ask? It asks which description matches the graph of $y \\le \\frac{2}{3}x - 1$ in the $xy$-plane.<br>Boundary line: $y = \\frac{2}{3}x - 1$, slope $\\frac{2}{3}$, $y$-intercept $-1$.<br>The sign is $\\le$, which includes equality <span class=\"nt\">(line is solid)</span><br>$y$ is less than or equal to the line’s value <span class=\"nt\">(shade below)</span>",
+    "check": "$(0, -2)$ is below the line: $-2 \\le -1$ ✓, so the region below is the solution side.",
+    "be_careful": "Choice B is a trap. $\\le$ includes the boundary, so the line is solid, not dashed.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-015",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "fraction-both-sides",
+   "signature": "(2x - 1)/3 >= (x + 4)/2 gives x >= 14; distractors x >= 2 (multiplied by the wrong denominators), x <= 14, x >= 6",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following is the solution to the inequality $\\frac{2x - 1}{3} \\ge \\frac{x + 4}{2}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x \\ge 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies the left side by 2 and the right side by 3, the wrong way around (it solves $2(2x - 1) \\ge x + 4$). Both sides must be multiplied by the same number, 6."
+    },
+    {
+     "key": "B",
+     "text": "$x \\le 14$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Multiplying by the positive number 6 does not reverse the sign."
+    },
+    {
+     "key": "C",
+     "text": "$x \\ge 6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This comes from $4x - 2 \\ge 3x + 4$: the 4 in $x + 4$ was not multiplied by 3. It must become 12."
+    },
+    {
+     "key": "D",
+     "text": "$x \\ge 14$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Clear the fractions by multiplying BOTH sides by the same positive number (6); the sign stays the same.",
+    "steps": "The question asks for the solution set. The fractions have denominators 3 and 2, so 6 clears both.<br>$6 \\cdot \\frac{2x - 1}{3} \\ge 6 \\cdot \\frac{x + 4}{2}$ <span class=\"nt\">(multiply both sides by 6)</span><br>$2(2x - 1) \\ge 3(x + 4)$<br>$4x - 2 \\ge 3x + 12$ <span class=\"nt\">(distribute)</span><br>$x - 2 \\ge 12$ <span class=\"nt\">(subtract $3x$)</span><br>$x \\ge 14$ <span class=\"nt\">(add 2)</span>",
+    "check": "$x = 14$: $\\frac{27}{3} = 9$ and $\\frac{18}{2} = 9$, equal, so 14 is included ✓; $x = 20$: $13 \\ge 12$ ✓",
+    "be_careful": "Choice A ($x \\ge 2$) is a trap. This multiplies the left side by 2 and the right side by 3, the wrong way around (it solves $2(2x - 1) \\ge x + 4$). Both sides must be multiplied by the same number, 6.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-016",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "vertical-slice-greatest-b",
+   "signature": "y >= 2x - 1 and y <= -x + 11, point (3, b): 5 <= b <= 8; greatest b 8; distractors 5, 11, 14",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y \\ge 2x - 1$<br>$y \\le -x + 11$<br>The point $(3, b)$ is a solution to the given system of inequalities. What is the greatest possible value of $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "5 is the least possible value of $b$, from $b \\ge 2(3) - 1$."
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$11$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "11 is the $y$-intercept of the second boundary line, the bound at $x = 0$, not at $x = 3$."
+    },
+    {
+     "key": "D",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $-x + 11$ with $x = -3$ ($3 + 11$); the sign of $-x$ was handled wrongly."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Substitute $x = 3$ into both inequalities to get a lower and an upper bound for $b$.",
+    "steps": "The question asks for the greatest $b$. A point is in the solution set only if it satisfies both inequalities.<br>$b \\ge 2(3) - 1 = 5$ <span class=\"nt\">(first inequality)</span><br>$b \\le -3 + 11 = 8$ <span class=\"nt\">(second inequality)</span><br>So $5 \\le b \\le 8$, and the greatest value is 8.",
+    "check": "$(3, 8)$: $8 \\ge 5$ ✓ and $8 \\le 8$ ✓",
+    "be_careful": "Choice A ($5$) is a trap. 5 is the least possible value of $b$, from $b \\ge 2(3) - 1$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-017",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "two-constraint-system-write",
+   "signature": "buses 48 seats, vans 8 seats, at least 300 students, at most 9 vehicles; system 48b + 8v >= 300, b + v <= 9",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A school is renting buses and vans for a trip. Each bus holds 48 students, and each van holds 8 students. The school must transport at least 300 students and can rent at most 9 vehicles in all. If $b$ is the number of buses and $v$ is the number of vans, which system of inequalities represents this situation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$48b + 8v \\le 300$ and $b + v \\ge 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Both signs are reversed: the seats must be at least 300, and the vehicles at most 9."
+    },
+    {
+     "key": "B",
+     "text": "$8b + 48v \\ge 300$ and $b + v \\le 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "The seat counts are swapped: buses hold 48, so 48 goes with $b$."
+    },
+    {
+     "key": "C",
+     "text": "$48b + 8v \\ge 300$ and $b + v \\le 9$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$48b + 8v \\ge 300$ and $48b + 8v \\le 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "The second inequality counts vehicles, so each bus or van counts as 1, not as its number of seats."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "One inequality counts seats (each vehicle’s capacity), the other counts vehicles (each vehicle counts once).",
+    "steps": "The question asks for a system. Each sentence about a limit gives one inequality.<br>Seats: $48b + 8v$; at least 300 <span class=\"nt\">($\\ge$)</span><br>Vehicles: $b + v$; at most 9 <span class=\"nt\">($\\le$)</span><br>System: $48b + 8v \\ge 300$ and $b + v \\le 9$.",
+    "check": "6 buses and 2 vans: $288 + 16 = 304 \\ge 300$ and $8 \\le 9$ ✓, a sensible plan the system allows.",
+    "be_careful": "Choice A ($48b + 8v \\le 300$ and $b + v \\ge 9$) is a trap. Both signs are reversed: the seats must be at least 300, and the vehicles at most 9.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-018",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C6"
+   ],
+   "family": "least-integer-of-expression",
+   "signature": "4x - 7 > 21 so 2x + 3 > 17 (x real); least integer value of 2x + 3 is 18; traps 17 boundary, 19 assumes integer x",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $4x - 7 > 21$, what is the least possible integer value of $2x + 3$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$17$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$2x + 3 > 17$ is strict, so $2x + 3$ cannot equal 17."
+    },
+    {
+     "key": "B",
+     "text": "$18$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$19$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This assumes $x$ must be an integer ($x = 8$). $x$ can be 7.5, which gives $2x + 3 = 18$."
+    },
+    {
+     "key": "D",
+     "text": "$31$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This adds 7 and 21 to get 28 and then uses $4x + 3$; the expression asked about is $2x + 3$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Turn the given inequality into one about $2x + 3$ directly; $x$ itself does not have to be an integer.",
+    "steps": "What does the question ask? It asks for the least possible integer value of $2x + 3$ when $4x - 7 > 21$.<br>$4x > 28$ <span class=\"nt\">(add 7)</span><br>$2x > 14$ <span class=\"nt\">(divide by 2)</span><br>$2x + 3 > 17$ <span class=\"nt\">(add 3)</span><br>The least integer greater than 17 is 18. It is possible: $x = 7.5$ gives $4(7.5) - 7 = 23 > 21$ and $2(7.5) + 3 = 18$.",
+    "check": "$x = 7.5$: $4x - 7 = 23 > 21$ ✓ and $2x + 3 = 18$ ✓",
+    "be_careful": "Nothing says $x$ is an integer, so $2x + 3$ can be 18 even though no integer $x$ gives it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-019",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "parameter-point-could-be",
+   "signature": "(k, 3) solution of y > 4 - 2x gives k > 1/2; could be k: 1 key; 1/2 boundary",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the point $(k, 3)$ is a solution to the inequality $y > 4 - 2x$. Which of the following could be the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This fits $k < \\frac{1}{2}$, the result when the sign is not reversed after dividing by $-2$."
+    },
+    {
+     "key": "B",
+     "text": "$0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "At $k = 0$: $4 - 0 = 4$, and $3 > 4$ is false."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "At $k = \\frac{1}{2}$: $4 - 1 = 3$, and $3 > 3$ is false. The point is on the boundary."
+    },
+    {
+     "key": "D",
+     "text": "$1$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Substitute the point and solve the resulting inequality for $k$.",
+    "steps": "The question asks which value could be $k$. Find all values of $k$ that work first.<br>$3 > 4 - 2k$ <span class=\"nt\">($x = k$, $y = 3$)</span><br>$-1 > -2k$ <span class=\"nt\">(subtract 4)</span><br>$\\frac{1}{2} < k$ <span class=\"nt\">(divide by $-2$ and reverse the sign)</span><br>Only 1 is greater than $\\frac{1}{2}$.",
+    "check": "$k = 1$: $4 - 2(1) = 2$, and $3 > 2$ ✓",
+    "be_careful": "Choice A ($-1$) is a trap. This fits $k < \\frac{1}{2}$, the result when the sign is not reversed after dividing by $-2$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-020",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "number-line-to-inequality",
+   "signature": "number line: open circle at -2, ray right; which inequality: -3x + 1 < 7 (x > -2); distractors closed, left rays",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The number line shows the solution set of one of the inequalities below.",
+   "stem_after_figure": "Which inequality has the solution set shown?",
+   "figures": [
+    {
+     "id": "QB-A5-020-fig1",
+     "file": "figures/QB-A5-020-fig1.svg",
+     "alt": "A number line from -6 to 3. There is an open circle at -2 and a thick ray going to the right from it."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-3x + 1 < 7$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3x + 1 < -5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This gives $x < -2$, a ray to the left."
+    },
+    {
+     "key": "C",
+     "text": "$-3x + 1 \\le 7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This gives $x \\ge -2$, with a closed (filled) circle at $-2$."
+    },
+    {
+     "key": "D",
+     "text": "$-3x - 1 > 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This gives $-3x > 6$, so $x < -2$: dividing by $-3$ reverses the sign, so the ray goes left."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The graph shows $x > -2$ (open circle means $-2$ is not included; the ray to the right means greater). Solve each choice and match.",
+    "steps": "The question asks which inequality has the graphed solution set. First read the graph.<br>Graph: $x > -2$.<br>Choice A: $-3x < 6$ <span class=\"nt\">(subtract 1)</span><br>$x > -2$ <span class=\"nt\">(divide by $-3$ and reverse the sign)</span><br>This matches the graph.",
+    "check": "$x = 0$ is on the ray: $-3(0) + 1 = 1 < 7$ ✓; $x = -2$: $7 < 7$ is false, so $-2$ is excluded ✓",
+    "be_careful": "Choice B ($3x + 1 < -5$) is a trap. This gives $x < -2$, a ray to the left.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-021",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "parallel-strip-existence",
+   "signature": "y >= -x/2 + k and x + 2y < 6: same boundary slope disguised in standard form; nonempty iff 2k < 6 (k < 3); could-be k = 2; 3 boundary, 5 (factor 2 lost), 8 (direction reversed)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y \\ge -\\frac{1}{2}x + k$<br>$x + 2y < 6$<br>In the given system of inequalities, $k$ is a constant. For which of the following values of $k$ does the system have at least one solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $k = 3$ the system says $x + 2y \\ge 6$ and $x + 2y < 6$, which no point satisfies. The boundary value itself fails."
+    },
+    {
+     "key": "C",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This compares $k$ with 6 instead of 3: multiplying $y \\ge -\\frac{1}{2}x + k$ by 2 doubles $k$ too, giving $x + 2y \\ge 2k$."
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This treats the “$\\ge$” region as lying below the other one. A larger $k$ moves the first region up, away from the second."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Both boundary lines have slope $-\\frac{1}{2}$, so they are parallel. Write both inequalities in terms of the same expression $x + 2y$ and compare the bounds.",
+    "steps": "The question asks for a value of $k$ that leaves at least one point in both regions.<br>$2y \\ge -x + 2k$ <span class=\"nt\">(multiply the first inequality by 2)</span><br>$x + 2y \\ge 2k$ <span class=\"nt\">(add $x$ to both sides)</span><br>So the system says: $2k \\le x + 2y < 6$.<br>Some value of $x + 2y$ fits between them only if $2k < 6$ <span class=\"nt\">(if $2k \\ge 6$, no number is $\\ge 2k$ and $< 6$)</span><br>$k < 3$ <span class=\"nt\">(divide by 2)</span><br>Of the choices, only 2 is less than 3.",
+    "check": "$k = 2$: the point $(0, 2.5)$ gives $2.5 \\ge 2$ ✓ and $0 + 5 = 5 < 6$ ✓",
+    "be_careful": "$k = 3$ makes the two boundaries the same line, one region includes it and the other excludes it, so there is no solution.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-022",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "integer-sum-reverse-parameter",
+   "signature": "3 - 2x < 9 (x > -3) and 4x - 1 <= 2x + k (x <= (k + 1)/2), k integer; integer sum 7 means integers -2..4, so 4 <= (k + 1)/2 < 5, 7 <= k < 9; greatest k 8; traps 9 (upper end included), 7 (least k)",
+   "abilities": [
+    "S",
+    "R",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$3 - 2x < 9$<br>$4x - 1 \\le 2x + k$<br>In the given inequalities, $k$ is an integer. The sum of all integers $x$ that satisfy both inequalities is 7. What is the greatest possible value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "9",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $k = 9$ the second inequality gives $x \\le 5$, so 5 also works and the sum becomes 12."
+    },
+    {
+     "value": "7",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$k = 7$ works ($x \\le 4$), but it is the least value; $k = 8$ gives $x \\le 4.5$, which allows the same integers."
+    }
+   ],
+   "solution": {
+    "key_idea": "The first inequality fixes the left end, $x > -3$. Find which integers add to 7, then ask how far the right end $\\frac{k + 1}{2}$ may move without letting in the next integer.",
+    "steps": "The question asks for the greatest integer $k$ that keeps the integer sum at 7.<br>First: $-2x < 6$, so $x > -3$ <span class=\"nt\">(divide by $-2$, reverse the sign)</span><br>Second: $2x \\le k + 1$, so $x \\le \\frac{k + 1}{2}$ <span class=\"nt\">(subtract 2x, add 1, divide by 2)</span><br>Integers start at $-2$: $-2 + (-1) + 0 + 1 + 2 + 3 + 4 = 7$ <span class=\"nt\">(the $-2$ and $2$, $-1$ and $1$ cancel)</span><br>So 4 must be allowed and 5 must not: $4 \\le \\frac{k + 1}{2} < 5$<br>$8 \\le k + 1 < 10$, so $7 \\le k < 9$ <span class=\"nt\">(multiply every part by 2, then subtract 1)</span><br>Greatest integer: $k = 8$. <span class=\"nt\">(the largest integer below 9)</span>",
+    "check": "$k = 8$: $x \\le 4.5$, integers $-2$ to 4, sum 7 ✓; $k = 9$: $x \\le 5$, sum 12 ✗",
+    "be_careful": "The right end may be any number from 4 up to (but not including) 5; it does not have to be a whole number.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-023",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "region-vertex-on-dashed",
+   "signature": "graph: solid y = -x + 2, dashed y = 2x - 1, region right of vertex (1, 1); NOT a solution: vertex (1, 1) (lies on the dashed line); (2, 0) on the solid boundary IS a solution",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The shaded region in the $xy$-plane shown, including its solid boundary but not its dashed boundary, represents all solutions to a system of two linear inequalities.",
+   "stem_after_figure": "Which point $(x, y)$ is NOT a solution to the system?",
+   "figures": [
+    {
+     "id": "QB-A5-023-fig1",
+     "file": "figures/QB-A5-023-fig1.svg",
+     "alt": "A solid line falling through (0, 2) and (2, 0) and a dashed line rising through (0, -1) and (1, 1). They meet at (1, 1). The region to the right, above the solid line and below the dashed line, is shaded."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(1, 1)$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$(3, 2)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$(3, 2)$ lies inside the shaded region: it is above the solid line ($2 \\ge -1$) and below the dashed line ($2 < 5$)."
+    },
+    {
+     "key": "C",
+     "text": "$(2, 0)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$(2, 0)$ is on the solid line, and solid boundaries are included, so it IS a solution."
+    },
+    {
+     "key": "D",
+     "text": "$(4, 6)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D28",
+     "feedback": "This point is high on the grid, but the dashed line is even higher there ($2(4) - 1 = 7$), so $(4, 6)$ is inside the region."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A corner point lies on both boundary lines. If one of those lines is dashed, the corner is not a solution, even though it also lies on a solid line.",
+    "steps": "The question asks for a point that does NOT satisfy the system.<br>Solid line: through $(0, 2)$ and $(2, 0)$, so $y = -x + 2$; the region is above it: $y \\ge -x + 2$.<br>Dashed line: through $(0, -1)$ and $(1, 1)$, so $y = 2x - 1$; the region is below it: $y < 2x - 1$.<br>Test $(1, 1)$: $1 \\ge -1 + 2 = 1$ <span class=\"nt\">(true, on the solid line)</span><br>$1 < 2(1) - 1 = 1$ <span class=\"nt\">(false, on the dashed line)</span><br>So $(1, 1)$ is not a solution. The other three points satisfy both inequalities.",
+    "check": "$(2, 0)$: $0 \\ge 0$ ✓, $0 < 3$ ✓; $(3, 2)$: $2 \\ge -1$ ✓, $2 < 5$ ✓; $(4, 6)$: $6 \\ge -2$ ✓, $6 < 7$ ✓",
+    "be_careful": "The corner looks like part of the region, but it sits on the dashed line.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-024",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "three-constraints-binding",
+   "signature": "caterer: at most 1,200 dollars, sandwiches 6, salads 9, at least 50 salads, at most 160 items in all; greatest sandwiches 110 (item cap binds, not the budget 125)",
+   "abilities": [
+    "M",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For an event, a caterer will order sandwiches, which cost \\$6 each, and salads, which cost \\$9 each. The order must include at least 50 salads, it can include at most 160 items in all, and its total cost can be at most \\$1,200. What is the greatest number of sandwiches the order can include?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$110$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$125$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "125 uses only the budget with 50 salads ($6s + 450 \\le 1,200$). Then the order would have 175 items, more than 160."
+    },
+    {
+     "key": "C",
+     "text": "$160$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "160 is the limit on all items together, and at least 50 of them must be salads."
+    },
+    {
+     "key": "D",
+     "text": "$200$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$\\frac{1,200}{6} = 200$ spends the whole budget on sandwiches and ignores both the 50 salads and the 160-item limit."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "To get the most sandwiches, order the fewest salads (50); then every limit must still hold, and the strictest one decides.",
+    "steps": "The question asks for the greatest number of sandwiches, $s$.<br>More salads only lower $s$, so use exactly 50 salads.<br>Item limit: $s + 50 \\le 160$, so $s \\le 110$ <span class=\"nt\">(subtract 50)</span><br>Budget: $6s + 9(50) \\le 1,200$ <span class=\"nt\">(salads cost \\$450)</span><br>$6s \\le 750$, so $s \\le 125$ <span class=\"nt\">(divide by 6)</span><br>Both must hold, so $s \\le 110$. The item limit is the one that stops the order.",
+    "check": "110 sandwiches and 50 salads: 160 items ✓, cost $660 + 450 = 1,110 \\le 1,200$ ✓. 111 sandwiches would need 161 items ✗",
+    "be_careful": "The budget is not the limit that decides here; check every constraint.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-025",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "two-points-parameter-window",
+   "signature": "y < kx - 5 holds at (4, 2) and at (-1, -10): k > 7/4 and k < 5 (negative x reverses); describe all k: 7/4 < k < 5; traps one condition only, reversed second condition",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the points $(4, 2)$ and $(-1, -10)$ are both solutions to the inequality $y < kx - 5$, where $k$ is a constant. Which of the following describes all possible values of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$k > \\frac{7}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses only the point $(4, 2)$. The point $(-1, -10)$ adds an upper limit: $k = 6$ gives $-11$, and $-10 < -11$ is false."
+    },
+    {
+     "key": "B",
+     "text": "$k < 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses only the point $(-1, -10)$. With $k = 1$, $(4, 2)$ gives $2 < -1$, which is false."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{7}{4} < k < 5$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$k < \\frac{7}{4}$ or $k > 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Both conditions are reversed here. Each point must make the inequality TRUE, so $k$ must satisfy both conditions at once, which gives a single interval."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Each point gives its own condition on $k$; the value must satisfy both, and dividing by a negative $x$ reverses the sign.",
+    "steps": "The question asks for every value of $k$ that makes BOTH points solutions.<br>Point $(4, 2)$: $2 < 4k - 5$ <span class=\"nt\">(substitute)</span><br>$7 < 4k$, so $k > \\frac{7}{4}$ <span class=\"nt\">(add 5, then divide by 4)</span><br>Point $(-1, -10)$: $-10 < -k - 5$ <span class=\"nt\">(substitute)</span><br>$-5 < -k$ <span class=\"nt\">(add 5)</span><br>$k < 5$ <span class=\"nt\">(multiply by $-1$ and reverse the sign)</span><br>Both: $\\frac{7}{4} < k < 5$.<br>Why it works: a value of $k$ is possible exactly when it passes both tests, so the answer is the overlap of $k > \\frac{7}{4}$ and $k < 5$, an interval open at both ends.",
+    "check": "$k = 3$ (inside): $2 < 7$ ✓ and $-10 < -8$ ✓. $k = 6$ (outside): $-10 < -11$ ✗. $k = 1$ (outside): $2 < -1$ ✗.",
+    "be_careful": "The point with negative $x$ gives an upper bound on $k$, not a lower one; both ends of the interval are open because the inequality is strict.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-026",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "integer-count-fraction-and-linear",
+   "signature": "(n - 3)/4 - (2n + 1)/6 < -1 gives n > 1 and 3n - 20 <= n gives n <= 10: n = 2..10, 9 integers; traps 5 (minus not distributed: n > 5), 10 (n = 1 included), 8 (10 - 2)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "How many integers $n$ satisfy both of the inequalities $\\frac{n - 3}{4} - \\frac{2n + 1}{6} < -1$ and $3n - 20 \\le n$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This comes from writing $-(4n + 2)$ as $-4n + 2$, which gives $n > 5$ and only $6, 7, 8, 9, 10$."
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "$10 - 2 = 8$ counts the gaps between 2 and 10, not the integers from 2 to 10."
+    },
+    {
+     "key": "C",
+     "text": "$9$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This counts $n = 1$. At $n = 1$ the left side of the first inequality equals $-1$, and $-1 < -1$ is false."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Solve each inequality on its own, then count the integers that are in both solution sets, watching which ends are included.",
+    "steps": "The question asks how many integers make both inequalities true.<br>First: $3(n - 3) - 2(2n + 1) < -12$ <span class=\"nt\">(multiply every term by 12)</span><br>$3n - 9 - 4n - 2 < -12$ <span class=\"nt\">(the minus applies to both $4n$ and $2$)</span><br>$-n - 11 < -12$, so $-n < -1$, so $n > 1$ <span class=\"nt\">(multiply by $-1$, reverse the sign)</span><br>Second: $3n - 20 \\le n$, so $2n \\le 20$, so $n \\le 10$ <span class=\"nt\">(subtract n, divide by 2)</span><br>Both: $1 < n \\le 10$, so $n = 2, 3, \\ldots, 10$. <span class=\"nt\">(both conditions at once)</span><br>Count: $10 - 2 + 1 = 9$ integers. <span class=\"nt\">(count from 2 to 10, including both ends)</span>",
+    "check": "$n = 2$: $-\\frac{1}{4} - \\frac{5}{6} = -\\frac{13}{12} < -1$ ✓ and $-14 \\le 2$ ✓; $n = 10$: $\\frac{7}{4} - \\frac{7}{2} = -\\frac{7}{4} < -1$ ✓ and $10 \\le 10$ ✓; $n = 1$: first gives $-1 < -1$ ✗",
+    "be_careful": "The first end is strict ($n > 1$) and the second is not ($n \\le 10$): 1 is out, 10 is in.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-027",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C5"
+   ],
+   "family": "context-greatest-total-binding-constraint",
+   "signature": "corn c acres 120 dollars, wheat w acres 80 dollars; 120c + 80w <= 9,600, c + w <= 100, c >= 70: best c = 70, w = 15, total 85; traps 80 (all corn), 15 (stops at w), 70 (corn only)",
+   "abilities": [
+    "M",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$120c + 80w \\le 9,600$<br>$c + w \\le 100$<br>A farmer will plant $c$ acres of corn and $w$ acres of wheat. The given system represents the farmer’s limits on planting cost, in dollars, and on land, in acres. If the farmer plants at least 70 acres of corn, what is the greatest total number of acres the farmer can plant?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$15$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "15 is the number of acres of wheat. The question asks for the total, $70 + 15$."
+    },
+    {
+     "key": "B",
+     "text": "$70$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "70 is the least number of acres of corn. The question asks for the greatest total, which also includes the 15 acres of wheat."
+    },
+    {
+     "key": "C",
+     "text": "$80$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "$\\frac{9,600}{120} = 80$ is the acreage if the whole budget goes to corn. Wheat is cheaper, so using the minimum corn leaves room for more acres."
+    },
+    {
+     "key": "D",
+     "text": "$85$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Each acre of corn costs more than an acre of wheat, so the total is greatest when corn is at its minimum, 70 acres; then the budget decides how much wheat fits.",
+    "steps": "The question asks for the greatest value of $c + w$ when $c \\ge 70$.<br>Use the least corn, $c = 70$ <span class=\"nt\">(every acre of corn swapped for wheat saves \\$40)</span><br>Cost: $120(70) + 80w \\le 9,600$, so $80w \\le 1,200$, so $w \\le 15$<br>Land: $70 + 15 = 85 \\le 100$ <span class=\"nt\">(the land limit is not the tight one)</span><br>Total: $70 + 15 = 85$ acres. <span class=\"nt\">(the most wheat goes with the least corn)</span>",
+    "check": "$c = 70$, $w = 15$: cost $8,400 + 1,200 = 9,600 \\le 9,600$ ✓, land $85 \\le 100$ ✓. Trying $c = 71$: $w \\le 13.5$, total at most 84.5 ✗",
+    "be_careful": "The land limit (100) looks like the answer, but the budget runs out first.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-028",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "integer-y-projection-with-x-bound",
+   "signature": "y >= 3x - 4, y <= -x + 10: integers y with some solution having x >= 2 are 2..8 (both bounds at x = 2), 7 values; traps 5, 8, 6",
+   "abilities": [
+    "R",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y \\ge 3x - 4$<br>$y \\le -x + 10$<br>For how many integers $y$ does the given system of inequalities have at least one solution $(x, y)$ with $x \\ge 2$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This leaves out both ends, $y = 2$ and $y = 8$. The point $(2, 2)$ and the point $(2, 8)$ are both solutions."
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "$8 - 2 = 6$ counts the gaps between 2 and 8, not the integers from 2 to 8."
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "8 is the greatest possible $y$, not the number of possible values."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "For $x \\ge 2$ the lower bound $3x - 4$ is at least 2 and the upper bound $-x + 10$ is at most 8. Both extremes happen at $x = 2$, so the possible $y$-values run from 2 to 8.",
+    "steps": "The question asks which integer $y$-values appear in at least one solution with $x \\ge 2$.<br>For $x \\ge 2$: $y \\ge 3x - 4 \\ge 3(2) - 4 = 2$ <span class=\"nt\">(the lower line rises as x grows)</span><br>For $x \\ge 2$: $y \\le -x + 10 \\le -2 + 10 = 8$ <span class=\"nt\">(the upper line falls as x grows)</span><br>So any such solution has $2 \\le y \\le 8$.<br>Every $y$ from 2 to 8 works with $x = 2$, because then $2 \\le y \\le 8$ is exactly the system.<br>Count: $8 - 2 + 1 = 7$ integers.",
+    "check": "$(2, 2)$: $2 \\ge 2$ ✓, $2 \\le 8$ ✓; $(2, 8)$: $8 \\ge 2$ ✓, $8 \\le 8$ ✓; $y = 9$ would need $x \\le 1$ ✗",
+    "be_careful": "Moving to larger $x$ only squeezes the window; $x = 2$ gives the widest range of $y$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-029",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "plan-comparison-with-tax",
+   "signature": "plan A 30 + 0.10m (no tax); plan B (12 + 0.25m) plus 8% tax: 30 + 0.1m < 12.96 + 0.27m, m > 100.2; least whole m 101; traps 100 (rounds down), 120 and 121 (tax ignored)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Phone plan A costs $\\$30$ per month plus $\\$0.10$ per minute of calls, with no tax. Phone plan B costs $\\$12$ per month plus $\\$0.25$ per minute of calls, and an 8% tax is added to the entire plan B bill. What is the least whole number of minutes of calls in a month for which plan A costs less than plan B?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "100",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "The inequality gives $m > 100.2$; 100 is less than that, so plan A is not yet cheaper."
+    },
+    {
+     "key": "B",
+     "text": "101",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "120",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Without the tax, $30 + 0.1m < 12 + 0.25m$ gives $m > 120$, and 120 itself does not satisfy it."
+    },
+    {
+     "key": "D",
+     "text": "121",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This ignores the 8% tax on plan B."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The tax multiplies the whole plan B bill by 1.08, including the per-minute part. Write the inequality, then round to the next whole number.",
+    "steps": "The question asks for the least whole number of minutes $m$ with plan A cheaper.<br>$30 + 0.10m < 1.08(12 + 0.25m)$ <span class=\"nt\">(plan A cost < plan B cost with tax)</span><br>$30 + 0.10m < 12.96 + 0.27m$ <span class=\"nt\">(distribute 1.08)</span><br>$17.04 < 0.17m$ <span class=\"nt\">(subtract $12.96$ and $0.10m$)</span><br>$m > 100.2\\ldots$ <span class=\"nt\">(divide by 0.17)</span><br>The least whole number greater than $100.2\\ldots$ is 101.<br>Why it works: the 8% tax raises the per-minute rate of plan B to $\\$0.27$, so the plans cross later than they would without tax.",
+    "check": "$m = 101$: A costs $\\$40.10$; B costs $1.08(\\$37.25) = \\$40.23$ ✓. $m = 100$: A $\\$40.00$, B $1.08(\\$37.00) = \\$39.96$, so A is not cheaper ✓",
+    "be_careful": "The tax applies to the per-minute charges too, not just the $\\$12$.",
+    "desmos": "Graph $y = 30 + 0.1x$ and $y = 1.08(12 + 0.25x)$; the crossing near $x = 100.2$ confirms the answer.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-030",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "parametric-point-in-system",
+   "signature": "(a, 2a) satisfies y >= x + 3 and y <= -2x + 15: a >= 3 and 4a <= 15; 3 <= a <= 15/4; greatest 15/4; wrong 3 (least), 5 (uses y = a)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$y \\ge x + 3$<br>$y \\le -2x + 15$<br>In the $xy$-plane, the point $(a, 2a)$ is a solution to the given system of inequalities. What is the greatest possible value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "15/4",
+      "3.75"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "3 is the least possible value of $a$, from the first inequality."
+    },
+    {
+     "value": "5",
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "This uses $y = a$ instead of $y = 2a$ in the second inequality."
+    }
+   ],
+   "solution": {
+    "key_idea": "Substitute $x = a$ and $y = 2a$ into both inequalities. Each gives a bound on $a$, and both must hold.",
+    "steps": "The question asks for the greatest $a$ for which the point satisfies both inequalities.<br>$2a \\ge a + 3$, so $a \\ge 3$ <span class=\"nt\">(first inequality)</span><br>$2a \\le -2a + 15$ <span class=\"nt\">(second inequality)</span><br>$4a \\le 15$, so $a \\le \\frac{15}{4}$ <span class=\"nt\">(add $2a$, divide by 4)</span><br>$3 \\le a \\le \\frac{15}{4}$ <span class=\"nt\">(both must hold)</span><br>The greatest value is $\\frac{15}{4}$.<br>Why it works: the point $(a, 2a)$ moves along the line $y = 2x$; the inequalities cut that line down to a segment.",
+    "check": "$a = \\frac{15}{4}$: the point is $(\\frac{15}{4}, \\frac{15}{2})$; $\\frac{15}{2} \\ge \\frac{27}{4}$ ✓ and $\\frac{15}{2} \\le -\\frac{15}{2} + 15 = \\frac{15}{2}$ ✓",
+    "be_careful": "The point must satisfy both inequalities at once; the first gives a lower bound, not the answer.",
+    "desmos": "Graph both inequalities and $y = 2x$; the segment ends at $x = 3.75$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-031",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "which-system-no-solution",
+   "signature": "four systems with boundary slope -2; key y > -2x + 3 with 4x + 2y < 5 (below a lower parallel line) is empty; others overlap or cross",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which system of linear inequalities has no solution $(x, y)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y > -2x + 3$ and $4x + 2y < 5$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$y > -2x + 3$ and $4x + 2y > 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Both regions are above parallel lines, so they overlap: any point high enough, like $(0, 10)$, works."
+    },
+    {
+     "key": "C",
+     "text": "$y < -2x + 3$ and $4x + 2y < 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Both regions are below parallel lines, so they overlap: $(0, 0)$ works."
+    },
+    {
+     "key": "D",
+     "text": "$y > -2x + 3$ and $2x + 4y < 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "$2x + 4y < 5$ means $y < -\\frac{1}{2}x + \\frac{5}{4}$, a different slope. Lines with different slopes cross, so the regions overlap."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A system of two linear inequalities can have no solution only if the boundary lines are parallel and the regions face away from each other with no gap between them.",
+    "steps": "The question asks which system has an empty solution set.<br>Rewrite $4x + 2y < 5$: $2y < -4x + 5$ <span class=\"nt\">(subtract $4x$)</span><br>$y < -2x + 2.5$ <span class=\"nt\">(divide by 2)</span><br>Choice A asks for $y > -2x + 3$ and $y < -2x + 2.5$ at the same time.<br>For every $x$, $-2x + 3$ is greater than $-2x + 2.5$ <span class=\"nt\">(the lines are parallel)</span><br>No $y$ can be above the higher line and below the lower line, so A has no solution.",
+    "check": "For any $x$, the first needs $y > -2x + 3$ and the second $y < -2x + 2.5$; since $2.5 < 3$, no $y$ works ✓",
+    "be_careful": "Choice D looks similar but has $2x + 4y$, a different slope.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-032",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "two-jobs-minimum-hours",
+   "signature": "job 14 dollars/h, tutoring 11 dollars/h, at most 30 h, at least 8 h tutoring, at least 390 dollars; minimum job hours 20 (tutor 10); traps 22 (tutor only 8), 28 (no tutoring)",
+   "abilities": [
+    "M",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Each week, Mina works at a bakery, where she earns \\$14 per hour, and as a tutor, where she earns \\$11 per hour. She works a whole number of hours at each job, works at most 30 hours in all, and tutors for at least 8 hours. If she wants to earn at least \\$390 this week, what is the least number of hours she can work at the bakery?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "20"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "22",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This fixes the tutoring at its minimum, 8 hours. To work fewer bakery hours, Mina should tutor MORE: with 10 tutoring hours, 20 bakery hours are enough."
+    },
+    {
+     "value": "28",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$\\frac{390}{14} \\approx 27.9$ ignores the tutoring income entirely."
+    }
+   ],
+   "solution": {
+    "key_idea": "To use as few bakery hours as possible, fill the rest of the 30 hours with tutoring; then find the least bakery time that still reaches \\$390.",
+    "steps": "The question asks for the least number of bakery hours, $b$.<br>Fewer bakery hours means less pay, so make up for it with as much tutoring as allowed: $30 - b$ hours <span class=\"nt\">(all 30 hours used)</span><br>$14b + 11(30 - b) \\ge 390$ <span class=\"nt\">(earnings at least \\$390)</span><br>$14b + 330 - 11b \\ge 390$ <span class=\"nt\">(distribute)</span><br>$3b \\ge 60$ <span class=\"nt\">(combine, subtract 330)</span><br>$b \\ge 20$ <span class=\"nt\">(divide by 3)</span><br>With $b = 20$, she tutors 10 hours, which meets “at least 8”. The least is 20.",
+    "check": "20 bakery + 10 tutoring: $280 + 110 = 390 \\ge 390$ ✓, 30 hours ✓, $10 \\ge 8$ ✓. With 19 bakery hours, even 11 tutoring hours give $266 + 121 = 387 < 390$ ✗",
+    "be_careful": "The tutoring minimum (8) is not the amount to use; more tutoring lowers the bakery hours needed.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-033",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "greatest-difference-under-constraints",
+   "signature": "club: s >= 2j + 10, s + j <= 70, j >= 8; s - j greatest at j = 8, s = 62: 54; traps 18 (26 - 8), 26 (least seniors), 30 (vertex j = 20, s = 50)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A club has $j$ juniors and $s$ seniors. The number of seniors is at least 10 more than twice the number of juniors, the club has at most 70 members, and the club has at least 8 juniors. What is the greatest possible value of $s - j$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "18",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This uses the least number of seniors for 8 juniors, $26$, and gives $26 - 8$."
+    },
+    {
+     "key": "B",
+     "text": "26",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "26 is the least number of seniors when there are 8 juniors."
+    },
+    {
+     "key": "C",
+     "text": "30",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This uses the corner $j = 20$, $s = 50$, where $s - j$ is smallest along the top boundary."
+    },
+    {
+     "key": "D",
+     "text": "54",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "To make $s - j$ large, take as few juniors as allowed and as many seniors as the total allows; then check every condition.",
+    "steps": "The question asks for the greatest value of $s - j$.<br>$s \\ge 2j + 10$, $s + j \\le 70$, $j \\ge 8$ <span class=\"nt\">(translate the three conditions)</span><br>For a fixed $j$, the largest $s$ is $70 - j$ <span class=\"nt\">(total at most 70)</span><br>$s - j \\le 70 - 2j$, which is largest when $j$ is smallest <span class=\"nt\">($70 - 2j$ decreases as $j$ increases)</span><br>$j = 8$ and $s = 62$ <span class=\"nt\">(least juniors allowed)</span><br>$62 \\ge 2(8) + 10 = 26$ ✓, so this choice is allowed. <span class=\"nt\">(check $s \\ge 2j + 10$)</span><br>$s - j = 62 - 8 = 54$. <span class=\"nt\">(the question asks for this difference)</span>",
+    "check": "$j = 8$, $s = 62$: $62 \\ge 26$ ✓, $70 \\le 70$ ✓, $8 \\ge 8$ ✓; any other allowed pair has $s - j \\le 70 - 2j \\le 54$ ✓",
+    "be_careful": "The corner where the first two boundaries meet, $(20, 50)$, is not the best point for this quantity.",
+    "desmos": "Graphing the region and checking corners works; the reasoning is shorter.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-034",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "must-be-true-order-reversal",
+   "signature": "p < q < 0; must be true: pq > q^2 (multiply p < q by negative q); traps p^2 < q^2 (squares of negatives), 1/p < 1/q (reciprocals), p/q < 1 (no flip)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $p$ and $q$ are numbers such that $p < q < 0$, which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$p^{2} < q^{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "For negative numbers, the one farther from 0 has the larger square: $p = -3$, $q = -1$ give $9 < 1$, which is false."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{p} < \\frac{1}{q}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "With $p = -2$ and $q = -1$: $-\\frac{1}{2} < -1$ is false. Taking reciprocals of two negatives reverses the order."
+    },
+    {
+     "key": "C",
+     "text": "$pq > q^{2}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{p}{q} < 1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Dividing $p < q$ by the negative $q$ reverses the sign: $\\frac{p}{q} > 1$. For example, $\\frac{-2}{-1} = 2$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Multiplying or dividing both sides by a negative number reverses the inequality; here $q$ itself is negative.",
+    "steps": "The question asks which statement holds for every pair with $p < q < 0$.<br>$pq > q \\cdot q$ <span class=\"nt\">(multiply both sides of $p < q$ by $q$, which is negative, so reverse the sign)</span><br>$pq > q^{2}$, so C must be true. <span class=\"nt\">(this is statement C)</span><br>D: dividing $p < q$ by $q$ (negative) gives $\\frac{p}{q} > 1$, the opposite of D.<br>A and B fail for $p = -2$, $q = -1$: $4 < 1$ is false and $-\\frac{1}{2} < -1$ is false.",
+    "check": "$p = -3$, $q = -1$: $pq = 3$ and $q^{2} = 1$, and $3 > 1$ ✓",
+    "be_careful": "Using positive numbers out of habit makes A and B look true; the condition says both numbers are negative.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-035",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "greatest-linear-expression-on-region",
+   "signature": "y <= 2x + 1, y <= -x + 10, y >= 1: vertices (0, 1), (9, 1), (3, 7); x + 2y = 2, 11, 17; greatest 17; wrong 7 (greatest y), 11 (vertex (9, 1))",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$y \\le 2x + 1$<br>$y \\le -x + 10$<br>$y \\ge 1$<br>For the point $(x, y)$ that satisfies the given system of inequalities, what is the greatest possible value of $x + 2y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "17"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "7 is the greatest value of $y$, not of $x + 2y$."
+    },
+    {
+     "value": "11",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "11 comes from the corner $(9, 1)$, which has the greatest $x$; the corner $(3, 7)$ gives more."
+    }
+   ],
+   "solution": {
+    "key_idea": "The region is a triangle. A sum like $x + 2y$ reaches its greatest value at a corner, so find the corners and compare.",
+    "steps": "The question asks for the greatest value of $x + 2y$ on the region.<br>$(3, 7)$ <span class=\"nt\">($2x + 1 = -x + 10$ gives $x = 3$)</span><br>$(0, 1)$ <span class=\"nt\">($2x + 1 = 1$)</span><br>$(9, 1)$ <span class=\"nt\">($-x + 10 = 1$)</span><br>$x + 2y$: $3 + 14 = 17$, $0 + 2 = 2$, $9 + 2 = 11$ <span class=\"nt\">(evaluate at each corner)</span><br>The greatest value is 17.<br>Why corners: along any edge of the triangle $x + 2y$ changes steadily, so its largest value on the region occurs at an endpoint of an edge.",
+    "check": "$(3, 7)$: $7 \\le 7$ ✓, $7 \\le 7$ ✓, $7 \\ge 1$ ✓, and $3 + 2(7) = 17$ ✓",
+    "be_careful": "The corner with the greatest $x$ is not automatically best; $y$ counts twice.",
+    "desmos": "Graph the region and click the corners, then evaluate $x + 2y$ at each.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-036",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "half-plane-graph-to-standard-form",
+   "signature": "graph: solid line through (-2, 0) and (0, 3), shaded below/right: y <= 1.5x + 3 = 3x - 2y >= -6; trap: no flip when moving to standard form",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The shaded region in the $xy$-plane shown, including the line, represents the solutions to an inequality.",
+   "stem_after_figure": "Which inequality is represented?",
+   "figures": [
+    {
+     "id": "QB-A5-036-fig1",
+     "file": "figures/QB-A5-036-fig1.svg",
+     "alt": "A solid line rising through (-2, 0) and (0, 3), both marked. The region below and to the right of the line is shaded."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3x - 2y \\le -6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This is $y \\ge \\frac{3}{2}x + 3$ (dividing by $-2$ reverses the sign), the region ABOVE the line."
+    },
+    {
+     "key": "B",
+     "text": "$3x - 2y \\ge -6$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$2x - 3y \\ge -6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This line passes through $(-3, 0)$ and $(0, 2)$; the intercepts are swapped."
+    },
+    {
+     "key": "D",
+     "text": "$3x + 2y \\ge -6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This line has slope $-\\frac{3}{2}$, falling, but the graphed line rises."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Write the graphed region in slope-intercept form first, then convert; when $y$ ends up with a negative coefficient, the direction of the sign flips.",
+    "steps": "The question asks which standard-form inequality matches the graph.<br>Slope: from $(-2, 0)$ to $(0, 3)$ is $\\frac{3}{2}$; $y$-intercept 3 <span class=\"nt\">(line $y = \\frac{3}{2}x + 3$)</span><br>Shaded below, line included: $y \\le \\frac{3}{2}x + 3$<br>$2y \\le 3x + 6$ <span class=\"nt\">(multiply by 2)</span><br>$-3x + 2y \\le 6$ <span class=\"nt\">(subtract $3x$)</span><br>$3x - 2y \\ge -6$ <span class=\"nt\">(multiply by $-1$ and reverse the sign)</span>",
+    "check": "$(2, 0)$ is shaded: $3(2) - 0 = 6 \\ge -6$ ✓; $(0, 5)$ is not: $0 - 10 = -10 \\ge -6$ is false ✓",
+    "be_careful": "Checking one shaded point, like $(2, 0)$, catches a reversed sign.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-037",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C6"
+   ],
+   "family": "greatest-difference-with-coupling",
+   "signature": "2 <= x <= 5, -3 <= y <= 1, y >= x - 6: greatest x - y = 6 (coupling binds; 5 - (-3) = 8 breaks it); traps 8, 4, 5",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $2 \\le x \\le 5$, $-3 \\le y \\le 1$, and $y \\ge x - 6$, what is the greatest possible value of $x - y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "$5 - 1 = 4$ subtracts the GREATEST $y$. Subtracting a smaller number gives a larger result."
+    },
+    {
+     "key": "B",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$2 - (-3) = 5$ is allowed but not the largest; for example $x = 5$, $y = -1$ gives 6."
+    },
+    {
+     "key": "C",
+     "text": "$6$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$5 - (-3) = 8$ ignores the third condition: with $x = 5$, $y$ must be at least $-1$, so $y = -3$ is not allowed."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The third condition rearranges to $x - y \\le 6$, so 6 is a ceiling; then check that some allowed pair reaches it.",
+    "steps": "The question asks for the largest value of $x - y$.<br>Separately, largest $x$ and smallest $y$ would give $5 - (-3) = 8$, but check the third condition: $-3 \\ge 5 - 6 = -1$ is false.<br>Rewrite $y \\ge x - 6$ as $x - y \\le 6$ <span class=\"nt\">(subtract y, add 6 on both sides)</span><br>So $x - y$ can never exceed 6.<br>Reach it: $x = 5$, $y = -1$ satisfies $2 \\le 5 \\le 5$, $-3 \\le -1 \\le 1$, $-1 \\ge -1$ <span class=\"nt\">(all three hold)</span><br>$x - y = 5 - (-1) = 6$.",
+    "check": "$(5, -1)$: all three conditions hold and $x - y = 6$ ✓; $(5, -3)$ breaks $y \\ge x - 6$ ✗",
+    "be_careful": "The usual “biggest minus smallest” shortcut works only when the variables are independent; here they are linked.",
+    "desmos": null,
+    "another_way": "Also $(3, -3)$ gives $3 - (-3) = 6$: the maximum is reached along a whole edge."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-038",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "parameter-one-point-in-one-out",
+   "signature": "ax + y < 0: (-2, 3) solution gives a > 3/2; (2, -3) not a solution gives a >= 3/2; together a > 3/2; traps a < 3/2 (no flip), a >= 3/2 (boundary), no value (thinks conditions clash)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The inequality $ax + y < 0$, where $a$ is a constant, has $(-2, 3)$ as a solution, but $(2, -3)$ is NOT a solution. Which of the following describes all possible values of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$a < \\frac{3}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This comes from $-2a + 3 < 0$ solved without reversing the sign. With $a = 0$: $0 + 3 < 0$ is false, so $(-2, 3)$ is not a solution."
+    },
+    {
+     "key": "B",
+     "text": "$a \\ge \\frac{3}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This is the condition from the second point only. At $a = \\frac{3}{2}$: $-3 + 3 = 0$, and $0 < 0$ is false, so $(-2, 3)$ would not be a solution."
+    },
+    {
+     "key": "C",
+     "text": "There is no such value of $a$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The two points are opposites, so it can look like they force opposite results. But $a = 2$ works: $-4 + 3 = -1 < 0$ and $4 - 3 = 1$, which is not less than 0."
+    },
+    {
+     "key": "D",
+     "text": "$a > \\frac{3}{2}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Each point turns into a condition on $a$: “is a solution” keeps the strict sign, “is NOT a solution” flips it to $\\ge$.",
+    "steps": "The question asks for every value of $a$ that makes both facts true.<br>$(-2, 3)$ is a solution: $-2a + 3 < 0$, so $-2a < -3$, so $a > \\frac{3}{2}$ <span class=\"nt\">(divide by $-2$, reverse the sign)</span><br>$(2, -3)$ is not a solution: $2a - 3 < 0$ is false, so $2a - 3 \\ge 0$, so $a \\ge \\frac{3}{2}$ <span class=\"nt\">(NOT less than means greater than or equal)</span><br>Both: $a > \\frac{3}{2}$ (the value $\\frac{3}{2}$ itself fails the first condition).",
+    "check": "$a = 2$: $(-2, 3)$ gives $-1 < 0$ ✓; $(2, -3)$ gives $1$, not less than 0 ✓. $a = \\frac{3}{2}$: $(-2, 3)$ gives $0 < 0$ ✗.",
+    "be_careful": "Dividing $-2a < -3$ by $-2$ reverses the sign; $\\frac{3}{2}$ itself puts $(-2, 3)$ on the boundary line.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-039",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "solution-with-positive-x-parameter",
+   "signature": "y >= 2x + 3 and y <= c has a solution with x > 0 iff c > 3 (c = 3 only allows x <= 0); describe all c",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y \\ge 2x + 3$<br>$y \\le c$<br>In the given system of inequalities, $c$ is a constant. The system has at least one solution $(x, y)$ with $x > 0$. Which of the following describes all possible values of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$c \\ge 3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $c = 3$: $2x + 3 \\le y \\le 3$ forces $x \\le 0$, so no solution has $x > 0$."
+    },
+    {
+     "key": "B",
+     "text": "$c > 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This copies the condition on $x$ onto $c$. With $c = 1$, $y \\le 1$ and $y \\ge 2x + 3 > 3$ cannot both hold for $x > 0$."
+    },
+    {
+     "key": "C",
+     "text": "$c > 3$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "All real numbers",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "For $c \\le 3$ there is no solution with $x > 0$, so not every $c$ works."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "For $x > 0$, the first inequality forces $y > 3$; the second then needs room above 3.",
+    "steps": "The question asks which $c$ allow a solution with positive $x$.<br>If $x > 0$, then $2x + 3 > 3$ <span class=\"nt\">($2x$ is positive)</span><br>So $y \\ge 2x + 3 > 3$, and also $y \\le c$.<br>Then $c \\ge y > 3$, so $c > 3$ is needed.<br>And any $c > 3$ works: take $x$ small, for example $x = \\frac{c - 3}{2}$, and $y = c$.",
+    "check": "$c = 4$: $(0.5, 4)$ gives $4 \\ge 4$ ✓, $4 \\le 4$ ✓, and $x = 0.5 > 0$ ✓. $c = 3$: $2x + 3 \\le 3$ means $x \\le 0$ ✗",
+    "be_careful": "At $c = 3$ the only solutions have $x \\le 0$, so the endpoint is not included.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-040",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "two-tanks-count-window",
+   "signature": "tank P 500 L draining 12 L/min, tank Q 80 L filling 9 L/min; whole t with Q > P and P not empty: 80 + 9t > 500 - 12t gives t > 20, 500 - 12t > 0 gives t < 41.67; t = 21..41, 21 values; traps 20 (41 - 21), 22 (includes t = 20)",
+   "abilities": [
+    "M",
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Tank P contains 500 liters of water and is draining at a constant rate of 12 liters per minute. At the same time, Tank Q contains 80 liters of water and is being filled at a constant rate of 9 liters per minute. For how many whole numbers of minutes $t$ after this time does Tank Q contain more water than Tank P while Tank P still contains some water?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "21"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "20",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "$41 - 21 = 20$ counts the gaps between 21 and 41, not the whole numbers from 21 to 41."
+    },
+    {
+     "value": "22",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This includes $t = 20$. After 20 minutes both tanks hold 260 liters; equal is not more."
+    }
+   ],
+   "solution": {
+    "key_idea": "Two conditions give two ends: Tank Q must already be ahead (left end) and Tank P must not yet be empty (right end). Count the whole numbers between, watching both strict signs.",
+    "steps": "The question asks how many whole-number times satisfy both conditions.<br>Q more than P: $80 + 9t > 500 - 12t$ <span class=\"nt\">(amount = start + rate × time)</span><br>$21t > 420$, so $t > 20$ <span class=\"nt\">(add 12t, subtract 80, divide by 21)</span><br>P still has water: $500 - 12t > 0$, so $t < \\frac{500}{12} \\approx 41.7$ <span class=\"nt\">(add $12t$, divide by 12)</span><br>Whole numbers: $t = 21, 22, \\ldots, 41$. <span class=\"nt\">(whole numbers above 20 and below 41.7)</span><br>Count: $41 - 21 + 1 = 21$. <span class=\"nt\">(count from 21 to 41, including both ends)</span>",
+    "check": "$t = 21$: Q 269, P 248 ✓; $t = 41$: P $= 8 > 0$ ✓ and Q $= 449 > 8$ ✓; $t = 42$: P would be $-4$, empty ✗",
+    "be_careful": "At $t = 20$ the tanks are equal (260 L each), so it does not count.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-041",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C6"
+   ],
+   "family": "combine-two-compound-bounds",
+   "signature": "-3 <= 2x - y <= 5 and 1 <= x + y <= 4; greatest y: 3y = 2(x + y) - (2x - y) <= 8 - (-3) = 11, y <= 11/3 (attained at x = 1/3); traps 1 (max minus max), 4, 11",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$-3 \\le 2x - y \\le 5$<br>$1 \\le x + y \\le 4$<br>The numbers $x$ and $y$ satisfy both of the given compound inequalities. What is the greatest possible value of $y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts the greatest values: $\\frac{2(4) - 5}{3} = 1$. To make $3y = 2(x + y) - (2x - y)$ large, subtract the LEAST value of $2x - y$, which is $-3$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{11}{3}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$y \\le 4$ would need $x = 0$, but then $2x - y = -4$, which breaks $-3 \\le 2x - y$."
+    },
+    {
+     "key": "D",
+     "text": "$11$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "11 is the greatest value of $3y$, not of $y$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Build $y$ out of the two given expressions: $2(x + y) - (2x - y) = 3y$. Then make the added part as large as possible and the subtracted part as small as possible.",
+    "steps": "The question asks for the greatest $y$.<br>$2(x + y) - (2x - y) = 2x + 2y - 2x + y = 3y$ <span class=\"nt\">(this removes $x$)</span><br>Greatest $2(x + y)$: $2(4) = 8$ <span class=\"nt\">($x + y \\le 4$)</span><br>Least $2x - y$: $-3$ <span class=\"nt\">(subtracting the least value gives the most)</span><br>$3y \\le 8 - (-3) = 11$, so $y \\le \\frac{11}{3}$ <span class=\"nt\">(divide by 3)</span><br>Is it reachable? $x + y = 4$ and $2x - y = -3$ give $3x = 1$, so $x = \\frac{1}{3}$ and $y = \\frac{11}{3}$ <span class=\"nt\">(add the two equations)</span><br>Both conditions hold there, so the greatest value is $\\frac{11}{3}$.<br>So the two bounds can be reached together, and no larger $y$ is possible.",
+    "check": "$x = \\frac{1}{3}$, $y = \\frac{11}{3}$: $2x - y = \\frac{2}{3} - \\frac{11}{3} = -3$ ✓ and $x + y = 4$ ✓",
+    "be_careful": "Combining bounds is safe only when the needed values can happen at the same time; here the check point shows they can.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-042",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C5"
+   ],
+   "family": "integer-optimum-not-at-bound",
+   "signature": "2c + 3t <= 40, t >= 5, whole numbers; profit 30c + 40t; t = 5 gives c = 12 (39 h, 560); t = 6 gives c = 11 (40 h, 570); t = 7: c = 9, 550; best 570; common wrongs 560 (stops at fewest tables), 600 (12.5 chairs rounded up); ICMS killer hp-alg5-2",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A workshop has at most 40 labor hours available. Each chair takes 2 hours to build and earns \\$30 profit. Each table takes 3 hours to build and earns \\$40 profit. The workshop must build at least 5 tables, and it builds only whole chairs and whole tables. What is the maximum possible profit, in dollars?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "570"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "560",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This builds the fewest tables, 5, and then 12 chairs. That leaves 1 hour unused. With 6 tables and 11 chairs, all 40 hours are used and the profit is \\$570."
+    },
+    {
+     "value": "575",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This builds 12.5 chairs and 5 tables. Only whole chairs can be built."
+    }
+   ],
+   "solution": {
+    "key_idea": "Per hour, chairs earn more (\\$15 versus about \\$13.33), so build few tables. But whole numbers can leave hours unused, so test the table counts near 5.",
+    "steps": "The question asks for the largest profit with whole numbers.<br>Let $c$ = chairs and $t$ = tables: $2c + 3t \\le 40$, $t \\ge 5$.<br>$t = 5$: $2c \\le 25$, so $c = 12$ <span class=\"nt\">(profit $360 + 200 = 560$; 1 hour left over)</span><br>$t = 6$: $2c \\le 22$, so $c = 11$ <span class=\"nt\">(profit $330 + 240 = 570$; all 40 hours used)</span><br>$t = 7$: $2c \\le 19$, so $c = 9$ <span class=\"nt\">(profit $270 + 280 = 550$)</span><br>Each extra table after that costs more chair profit than it adds, so the maximum is \\$570.<br>Why it works: when the hours run out unevenly, trading one chair for one table can use the spare hour.",
+    "check": "$t = 6$, $c = 11$: $2(11) + 3(6) = 40 \\le 40$ ✓, $6 \\ge 5$ ✓, $30(11) + 40(6) = 570$",
+    "be_careful": "The corner of the region is not a whole-number point here. Check the nearby whole-number choices.",
+    "desmos": "Desmos shows the region, but its corner $(12.5, 5)$ is not allowed. A table of $t = 5, 6, 7$ is the quick check.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-043",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "solution-for-every-k",
+   "signature": "y <= kx - 2k + 3 and y >= -kx + 2k - 5 hold for every k only at x = 2 (pivot), then -5 <= b <= 3: 9 integers; traps 8 (gap count), 1 (unique point), 7 (strict ends)",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y \\le kx - 2k + 3$<br>$y \\ge -kx + 2k - 5$<br>In the given system of inequalities, $k$ is a constant. The point $(a, b)$, where $b$ is an integer, is a solution to the system for every value of $k$. How many different values of $b$ are possible?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$9$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "$3 - (-5) = 8$ counts the gaps between $-5$ and 3. The integers from $-5$ to 3, including both, number 9."
+    },
+    {
+     "key": "C",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This assumes the point must be a single special point. Once $a = 2$, every $b$ from $-5$ to 3 works."
+    },
+    {
+     "key": "D",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This leaves out $-5$ and 3. Both inequalities use $\\le$ or $\\ge$, so the ends are included."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Write the system as $y \\le k(x - 2) + 3$ and $y \\ge -k(x - 2) - 5$. A point works for EVERY $k$ only if $k$ cannot change the result, which forces $x = 2$.",
+    "steps": "The question asks how many integer values of $b$ allow $(a, b)$ to work for every $k$.<br>$y \\le k(x - 2) + 3$ and $y \\ge -k(x - 2) - 5$ <span class=\"nt\">(factor $k$ out)</span><br>If $a \\ne 2$, then $k(a - 2)$ can be made as negative as we like by choosing $k$, so some $k$ breaks the first inequality. <span class=\"nt\">(large k of the right sign)</span><br>So $a = 2$, and the system becomes $b \\le 3$ and $b \\ge -5$ <span class=\"nt\">(k disappears)</span><br>The integers $-5, -4, \\ldots, 3$: that is $3 - (-5) + 1 = 9$ values.",
+    "check": "$(2, -5)$: $-5 \\le 3$ ✓ and $-5 \\ge -5$ ✓ for any $k$; $(2, 3)$: $3 \\le 3$ ✓ and $3 \\ge -5$ ✓.",
+    "be_careful": "Checking one convenient $k$ is not enough; the point has to survive every $k$. Count integers with both ends included.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-044",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "sold-out-revenue-window-integer-count",
+   "signature": "all 280 seats sold, adult 18, student 10, revenue more than 3,400 and at most 3,450: 5,040 - 8s in (3400, 3450] gives 198.75 <= s < 205, s = 199..204, 6 values; traps 7 (more than read as at least), 5 (204 - 199), 8 (rounds 198.75 down / both ends)",
+   "abilities": [
+    "M",
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "All 280 seats were sold for a play. Each ticket was either an adult ticket for \\$18 or a student ticket for \\$10. The total ticket sales were more than \\$3,400 and at most \\$3,450. How many different numbers of student tickets could have been sold?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "$204 - 199 = 5$ counts the gaps between 199 and 204, not the numbers from 199 to 204."
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This includes 205 student tickets. Then sales are exactly \\$3,400, and the sales were MORE than \\$3,400."
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This starts the count at 198, rounding $198.75$ down. With 198 student tickets sales are \\$3,456, more than \\$3,450."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "With every seat sold, the adult count is $280 - s$, so sales depend on $s$ alone: each student ticket replaces an adult ticket and lowers sales by \\$8. Turn the sales window into a window for $s$ and count whole numbers.",
+    "steps": "The question asks how many whole-number values of $s$, the number of student tickets, are possible.<br>Adult tickets: $280 - s$ <span class=\"nt\">(every seat was sold)</span><br>Sales: $18(280 - s) + 10s = 5,040 - 8s$ <span class=\"nt\">(distribute, combine)</span><br>$3,400 < 5,040 - 8s \\le 3,450$ <span class=\"nt\">(sales above \\$3,400 and at most \\$3,450)</span><br>$-1,640 < -8s \\le -1,590$ <span class=\"nt\">(subtract 5,040 from every part)</span><br>$205 > s \\ge 198.75$ <span class=\"nt\">(divide by $-8$; both signs reverse)</span><br>Whole numbers: $s = 199, 200, 201, 202, 203, 204$. <span class=\"nt\">(whole numbers from 199 up to 204)</span><br>That is 6 values. Each one gives sales inside the window, and any other number of student tickets gives sales outside it, either \\$3,400 or less, or more than \\$3,450.",
+    "check": "$s = 199$: $5,040 - 1,592 = 3,448$, between ✓; $s = 204$: $3,408$ ✓; $s = 205$: $3,400$, not more than \\$3,400 ✗; $s = 198$: $3,456 > 3,450$ ✗",
+    "be_careful": "Dividing by $-8$ flips BOTH signs, so the strict end (more than \\$3,400) becomes the strict upper end $s < 205$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-045",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "wedge-constants-from-extremes",
+   "signature": "y >= 2x + p, y <= -3x + q; greatest y at x = 0 is 14 -> q = 14; greatest x of any solution is 3 -> vertex 2(3) + p = -9 + 14 -> p = -1; least y at x = -2 is 2(-2) - 1 = -5; traps 20 (upper line), -3 (p sign), -1 (reports p)",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$y \\ge 2x + p$<br>$y \\le -3x + q$<br>In the given system of inequalities, $p$ and $q$ are constants. Among all solutions $(x, y)$ of the system with $x = 0$, the greatest value of $y$ is 14. Among all solutions of the system, the greatest value of $x$ is 3. Among all solutions of the system with $x = -2$, what is the least value of $y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "20",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "20 is the GREATEST $y$ at $x = -2$, on the upper line $y = -3x + 14$. The least $y$ is on the lower line."
+    },
+    {
+     "value": "-3",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $p = 1$ instead of $p = -1$: from $6 + p = 5$, $p = 5 - 6 = -1$."
+    }
+   ],
+   "solution": {
+    "key_idea": "At a fixed $x$, the solutions run from the lower line up to the upper line. The two lines cross at the corner of the region, which is where $x$ is greatest. Each given fact pins down one constant.",
+    "steps": "The question asks for the lowest point of the region above $x = -2$, which is on the lower line $y = 2x + p$.<br>At $x = 0$ the solutions are $p \\le y \\le q$, so the greatest $y$ is $q$: $q = 14$ <span class=\"nt\">(top of the slice is the upper line)</span><br>A solution needs $2x + p \\le -3x + 14$, so $5x \\le 14 - p$ <span class=\"nt\">(the lower line must stay under the upper line)</span><br>The greatest $x$ is where the lines meet: $2(3) + p = -3(3) + 14$<br>$6 + p = 5$, so $p = -1$<br>Least $y$ at $x = -2$: $2(-2) + (-1) = -5$ <span class=\"nt\">(bottom of the slice is the lower line)</span><br>So the least value of $y$ is $-5$.",
+    "check": "With $p = -1$, $q = 14$: at $x = 0$, $-1 \\le y \\le 14$ (greatest 14 ✓); corner: $2x - 1 = -3x + 14$ gives $x = 3$ ✓; at $x = -2$: $-5 \\le y \\le 20$, least $-5$ ✓",
+    "be_careful": "At $x = -2$ the window is $-5 \\le y \\le 20$; the least value is on the LOWER line, not the upper one.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-046",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C3"
+   ],
+   "family": "true-on-whole-interval-integer-k",
+   "signature": "kx - 6 < 0 for every x in [-1, 3], k integer: endpoints give k < 2 and k > -6; k in {-5, ..., 1}, sum -14; traps -12, -20 (endpoint inclusion)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The inequality $kx - 6 < 0$, where $k$ is an integer, is true for every value of $x$ such that $-1 \\le x \\le 3$. What is the sum of all possible values of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-14"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-12",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This includes $k = 2$. Then at $x = 3$: $2(3) - 6 = 0$, and $0 < 0$ is false."
+    },
+    {
+     "value": "-20",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This includes $k = -6$. Then at $x = -1$: $-6(-1) - 6 = 0$, and $0 < 0$ is false."
+    }
+   ],
+   "solution": {
+    "key_idea": "$kx - 6$ is linear in $x$, so on an interval it is largest at one of the two ends; checking both ends is enough.",
+    "steps": "The question asks for the sum of all integers $k$ that keep $kx - 6$ negative from $x = -1$ to $x = 3$.<br>A linear expression in $x$ is greatest at an end of the interval <span class=\"nt\">(the graph is a line)</span><br>$x = 3$: $3k - 6 < 0$, so $k < 2$ <span class=\"nt\">(the right end; add 6, divide by 3)</span><br>$x = -1$: $-k - 6 < 0$, so $-k < 6$ and $k > -6$ <span class=\"nt\">(divide by $-1$, reverse the sign)</span><br>$-6 < k < 2$: $k = -5, -4, -3, -2, -1, 0, 1$ <span class=\"nt\">(the integers strictly between $-6$ and 2)</span><br>Sum: $-5 + (-4) + (-3) + (-2) + (-1) + 0 + 1 = -14$. <span class=\"nt\">(add the integers in the list)</span><br>Every value in this list keeps the expression negative at both ends, so it is negative on the whole interval.",
+    "check": "$k = 1$: largest value $1(3) - 6 = -3 < 0$ ✓; $k = -5$: largest value $-5(-1) - 6 = -1 < 0$ ✓",
+    "be_careful": "Both ends matter: a negative $k$ makes the left end the dangerous one.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-047",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "parameter-for-nonempty-system",
+   "signature": "x + y <= 6, x - y >= k, y >= 0; largest x - y on the region is 6 at (6, 0), so a solution exists iff k <= 6; traps k <= 3 (uses (3, 3)), k >= -6 (uses (0, 6) as a lower bound), all real k (drops y >= 0); ICMS killer hp-alg5-1",
+   "abilities": [
+    "J",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$x + y \\le 6$<br>$x - y \\ge k$<br>$y \\ge 0$<br>In the given system of inequalities, $k$ is a constant. For which values of $k$ does the system have at least one solution $(x, y)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$k \\le 3$ only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This uses the point $(3, 3)$, where $x - y = 0$... it is not the best point. At $(6, 0)$, $x - y = 6$, so $k = 5$ also works."
+    },
+    {
+     "key": "B",
+     "text": "$k \\ge -6$ only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses $(0, 6)$, where $x - y = -6$, as a lower limit. But a small $k$ makes $x - y \\ge k$ easier, not harder: $k = -100$ works."
+    },
+    {
+     "key": "C",
+     "text": "$k \\le 6$ only",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "All real values of $k$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This ignores $y \\ge 0$. Without it, $x - y$ could be as large as we like; with it, $x - y \\le 6$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The system has a solution exactly when $k$ is at most the largest value of $x - y$ on the region $x + y \\le 6$, $y \\ge 0$.",
+    "steps": "The question asks for every $k$ that leaves at least one point.<br>$x \\le 6 - y$ <span class=\"nt\">(from $x + y \\le 6$)</span><br>$x - y \\le 6 - 2y$ <span class=\"nt\">(subtract $y$ from both sides)</span><br>$6 - 2y \\le 6$ <span class=\"nt\">(because $y \\ge 0$)</span><br>So $x - y$ is never more than 6, and it equals 6 at $(6, 0)$.<br>If $k \\le 6$, the point $(6, 0)$ works. If $k > 6$, no point can have $x - y \\ge k$.<br>Why it works: $x - y \\ge k$ asks for a point where $x - y$ is big enough, so only the largest possible $x - y$ matters.",
+    "check": "$k = 6$: $(6, 0)$ gives $6 + 0 \\le 6$ ✓, $6 - 0 \\ge 6$ ✓, $0 \\ge 0$ ✓. $k = 7$: $x - y \\le 6 < 7$ for every point, so no solution ✓",
+    "be_careful": "A smaller $k$ makes the second inequality easier. Look for the upper limit on $k$, not a lower one.",
+    "desmos": "A slider on $k$ shows the region vanish after $k = 6$, but the choice wording (only, all real) still needs the reasoning.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-048",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C4"
+   ],
+   "family": "solutions-for-every-x-below",
+   "signature": "y > 2x + 5 and y < -3x + c; for every x < 1 some (x, y) works iff 2x + 5 < -3x + c for all x < 1 iff c >= 10; least c 10; trap 5 (intercepts), 11",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$y > 2x + 5$<br>$y < -3x + c$<br>In the given system of inequalities, $c$ is a constant. For every value of $x$ less than 1, there is at least one point $(x, y)$ that satisfies the system. What is the least possible value of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "10"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This compares the $y$-intercepts only ($c \\ge 5$). With $c = 5$, for $x = \\frac{1}{2}$ the system needs $y > 6$ and $y < 3.5$: impossible."
+    },
+    {
+     "value": "11",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$c = 10$ already works: for $x < 1$, $5x < 5 = c - 5$. Because $x = 1$ itself is excluded, equality at $x = 1$ does no harm."
+    }
+   ],
+   "solution": {
+    "key_idea": "For a given $x$, a $y$ exists exactly when the lower bound is below the upper bound: $2x + 5 < -3x + c$. That must hold for every $x < 1$.",
+    "steps": "The question asks for the least $c$ that leaves room for $y$ at every $x$ below 1.<br>A $y$ exists when $2x + 5 < -3x + c$ <span class=\"nt\">(lower boundary under upper boundary)</span><br>$5x < c - 5$ <span class=\"nt\">(add $3x$, subtract 5)</span><br>$x < \\frac{c - 5}{5}$ <span class=\"nt\">(divide by 5)</span><br>This must include every $x < 1$, so $\\frac{c - 5}{5} \\ge 1$ <span class=\"nt\">(equal to 1 is fine, since x = 1 is not required)</span><br>$c - 5 \\ge 5$, so $c \\ge 10$. The least value is 10.<br>For any $c$ less than 10, values of $x$ just below 1 leave no room for $y$, so 10 is the least.",
+    "check": "$c = 10$: at $x = 0.99$, need $6.98 < y < 7.03$, so $y = 7$ works ✓. With $c = 9.9$ and $x = 0.99$: $6.98 < y < 6.93$ ✗",
+    "be_careful": "The boundary case $c = 10$ works because $x = 1$ itself is not in the list of required $x$-values.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-049",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C1"
+   ],
+   "family": "reverse-engineer-coefficient",
+   "signature": "ax + 13 <= 2x + a^2 has solution set x <= -4: (a - 2)x <= a^2 - 13; need a - 2 > 0 and (a^2 - 13)/(a - 2) = -4, a^2 + 4a - 21 = 0, a = 3 or -7; -7 rejected (gives x >= -4); traps -7, -4 (sum of roots)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the inequality $ax + 13 \\le 2x + a^{2}$, $a$ is a constant. The solution set of the inequality is $x \\le -4$. What is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-7",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "$a = -7$ solves the boundary equation, but then the inequality is $-9x \\le 36$, so $x \\ge -4$: the right boundary, the wrong direction."
+    },
+    {
+     "value": "-4",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$-4$ is the sum of the two roots of $a^{2} + 4a - 21 = 0$, not a value of $a$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Collect the $x$-terms to get $(a - 2)x \\le a^{2} - 13$. The boundary must be $-4$, AND the sign of $a - 2$ must keep the direction $\\le$.",
+    "steps": "The question asks which $a$ makes the solution set exactly $x \\le -4$.<br>$(a - 2)x \\le a^{2} - 13$ <span class=\"nt\">(subtract $2x$ and 13)</span><br>To end with $x \\le$, divide by a POSITIVE number: $a - 2 > 0$, and $x \\le \\frac{a^{2} - 13}{a - 2}$.<br>$\\frac{a^{2} - 13}{a - 2} = -4$, so $a^{2} - 13 = -4a + 8$ <span class=\"nt\">(multiply by $a - 2$)</span><br>$a^{2} + 4a - 21 = 0$, so $(a + 7)(a - 3) = 0$ and $a = 3$ or $a = -7$. <span class=\"nt\">(factor: 7 and $-3$ multiply to $-21$ and add to 4)</span><br>Only $a = 3$ makes $a - 2$ positive, so $a = 3$. <span class=\"nt\">(the condition needs $a - 2 > 0$)</span><br>Why it works: the boundary equation only matches the number $-4$; the direction of the final sign is a separate condition, and $a = -7$ makes $a - 2$ negative, which flips the result to $x \\ge -4$.",
+    "check": "$a = 3$: $3x + 13 \\le 2x + 9$, so $x \\le -4$ ✓. $a = -7$: $-9x \\le 36$, so $x \\ge -4$ ✗.",
+    "be_careful": "Solving the boundary equation gives two candidates; the direction condition $a - 2 > 0$ removes one of them.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A5-050",
+   "version": 1,
+   "skill": {
+    "code": "A5",
+    "domain": "alg",
+    "cb_skill": "Linear inequalities in one or two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A5.C2"
+   ],
+   "family": "cannot-be-integer-constraint",
+   "signature": "large boxes 12 kg, small 5 kg, total weight 60 to 80 kg, at most 10 boxes; CANNOT be 1 large box (needs 10 small, 11 boxes); 2 (with 8 small), 4 (3 to 6 small), 6 (0 or 1 small) possible",
+   "abilities": [
+    "M",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A shipment contains large boxes that weigh 12 kilograms each and small boxes that weigh 5 kilograms each. The total weight of the shipment must be at least 60 kilograms and at most 80 kilograms, and the shipment can contain at most 10 boxes. Which of the following CANNOT be the number of large boxes in the shipment?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "2 large and 8 small boxes: $24 + 40 = 64$ kilograms and 10 boxes, which meets every condition."
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "4 large and 3 small boxes: $48 + 15 = 63$ kilograms and 7 boxes, which works."
+    },
+    {
+     "key": "D",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "6 large and 1 small box: $72 + 5 = 77 \\le 80$ kilograms. (Even 6 large boxes alone, 72 kilograms, work.)"
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "For each choice, find the range of small boxes allowed by weight, then check whether any of them also fits the 10-box limit.",
+    "steps": "The question asks which number of large boxes makes the conditions impossible.<br>1 large box: $12 + 5s \\ge 60$, so $5s \\ge 48$ and $s \\ge 9.6$ <span class=\"nt\">(weight at least 60)</span><br>Whole boxes: $s \\ge 10$, so the shipment has at least $1 + 10 = 11$ boxes <span class=\"nt\">(more than 10)</span><br>So 1 large box cannot work.<br>The other choices each have a working shipment: 2 large with 8 small, 4 large with 3 small, 6 large with 1 small.",
+    "check": "1 large + 10 small: 62 kilograms but 11 boxes ✗; 1 large + 9 small: 10 boxes but 57 kilograms ✗",
+    "be_careful": "Fewer large boxes sounds easier, but it forces many small boxes and breaks the box limit.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

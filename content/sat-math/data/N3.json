@@ -1,0 +1,3450 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "N3",
+ "skill": "Nonlinear functions",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-N3-001",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "min-value-from-factored",
+   "signature": "f(x)=2(x-3)(x+7): vertex x = midpoint of zeros = -2, min f(-2)=2(-5)(5)=-50; traps -2 (x-coordinate), -25 (drops the 2), -42 (f(0))",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = 2(x - 3)(x + 7)$. What is the minimum value of $f$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$-2$ is where the minimum happens, the $x$-coordinate of the vertex. The question asks for the value of $f$ there."
+    },
+    {
+     "key": "B",
+     "text": "$-50$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$-25$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This is $(-5)(5)$. The factor 2 in front still multiplies it."
+    },
+    {
+     "key": "D",
+     "text": "$-42$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "$-42$ is $f(0)$, the $y$-intercept, not the lowest point."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The vertex is halfway between the zeros. Find that $x$, then put it into $f$.",
+    "steps": "The question asks for the minimum value of $f$.<br>zeros: $x = 3$ and $x = -7$ <span class=\"nt\">(each factor equals 0)</span><br>vertex: $x = \\frac{3 + (-7)}{2} = -2$ <span class=\"nt\">(halfway between the zeros)</span><br>$f(-2) = 2(-5)(5) = -50$<br>The leading coefficient 2 is positive, so the graph opens up and $-50$ is the lowest value.",
+    "check": "$f(-1) = 2(-4)(6) = -48 > -50$ and $f(-3) = 2(-6)(4) = -48 > -50$ ✓",
+    "be_careful": "The minimum value is a $y$-value; $-2$ is only where it happens.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-002",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "growth-factor-meaning-with-period",
+   "signature": "P(t)=800(1.25)^(t/2): factor 1.25 every 2 hours = 25% every 2 hours; traps 25% each hour (ignores /2), 125% every 2 hours, 12.5% each hour (halves the percent)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A biologist models the number of cells in a sample $t$ hours after the start of an experiment with the function $P(t) = 800(1.25)^{\\frac{t}{2}}$. Which statement is the best interpretation of $1.25$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The number of cells increases by 25% each hour.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "The exponent is $\\frac{t}{2}$, so one factor of 1.25 takes 2 hours, not 1."
+    },
+    {
+     "key": "B",
+     "text": "The number of cells increases by 125% every 2 hours.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "Multiplying by 1.25 keeps 100% and adds 25%. An increase of 125% would be a factor of 2.25."
+    },
+    {
+     "key": "C",
+     "text": "The number of cells increases by 25% every 2 hours.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The number of cells increases by 12.5% each hour.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Two hours of 12.5% growth give $1.125^{2} \\approx 1.27$, not 1.25. Percent growth does not split evenly."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The base is the growth factor, and the exponent tells how long one factor takes.",
+    "steps": "The question asks what 1.25 means.<br>$1.25 = 1 + 0.25$ <span class=\"nt\">(keep 100%, add 25%)</span><br>exponent $\\frac{t}{2}$ goes up by 1 when $t$ goes up by 2 <span class=\"nt\">(one factor every 2 hours)</span><br>So the number of cells increases by 25% every 2 hours.",
+    "check": "$P(0) = 800$ and $P(2) = 800(1.25) = 1{,}000$, which is 25% more ✓",
+    "be_careful": "Read the exponent before choosing the time unit.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-003",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "vertex-given-find-constant",
+   "signature": "y=x^2-8x+c vertex (4,-3): 16-32+c=-3, c=13; wrong -3 (vertex y), 29 (dropped the +16)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The graph of $y = x^{2} - 8x + c$, where $c$ is a constant, has its vertex at $(4, -3)$. What is the value of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "13"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-3",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "$-3$ is the $y$-coordinate of the vertex, not the constant term. The constant is the $y$-intercept."
+    },
+    {
+     "value": "29",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $-3 = -32 + c$ and forgets the $4^{2} = 16$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The vertex is a point on the graph, so its coordinates make the equation true.",
+    "steps": "The question asks for the constant $c$.<br>$-3 = 4^{2} - 8(4) + c$ <span class=\"nt\">(substitute the vertex $(4, -3)$)</span><br>$-3 = 16 - 32 + c$ <span class=\"nt\">(evaluate)</span><br>$-3 = -16 + c$ <span class=\"nt\">(combine)</span><br>$c = 13$ <span class=\"nt\">(add 16)</span><br>Why the vertex works: the vertex is a point on the graph, so its coordinates must satisfy the equation. Here $x = 4$ and $y = -3$ go in together.",
+    "check": "$x^{2} - 8x + 13 = (x - 4)^{2} - 3$, whose vertex is $(4, -3)$ ✓",
+    "be_careful": "The vertex $x$-value is already 4 for every $c$; only the $y$-value fixes $c$.",
+    "desmos": null,
+    "another_way": "Complete the square: $x^{2} - 8x + c = (x - 4)^{2} + (c - 16)$, so $c - 16 = -3$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-004",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "evaluate-inner-linear",
+   "signature": "f(x)=3x^2-2, g(x)=f(2x-1): g(2)=f(3)=25; traps 1 (f(1)), 10 (f(2)), 19 (2f(2)-1, applies 2x-1 to the output)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = 3x^{2} - 2$. The function $g$ is defined by $g(x) = f(2x - 1)$. What is the value of $g(2)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This is $f(1)$. The input of $f$ is $2(2) - 1 = 3$."
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This is $f(2)$; the inner $2x - 1$ was skipped."
+    },
+    {
+     "key": "C",
+     "text": "$19$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This is $2f(2) - 1$. The $2x - 1$ acts on the input, before $f$."
+    },
+    {
+     "key": "D",
+     "text": "$25$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Work from the inside out: first $2x - 1$, then $f$.",
+    "steps": "The question asks for $g(2)$.<br>$2(2) - 1 = 3$ <span class=\"nt\">(inside first)</span><br>$g(2) = f(3) = 3(3)^{2} - 2 = 25$ <span class=\"nt\">(plug $x = 3$ into $f$)</span><br>Why it works: $g$ first turns its input $x$ into $2x - 1$ and only then hands it to $f$. So $g(2)$ is $f$ of whatever $2x - 1$ gives at $x = 2$.",
+    "check": "$g(x) = 3(2x - 1)^{2} - 2$, and $3(3)^{2} - 2 = 25$ ✓",
+    "be_careful": "The $2x - 1$ changes the input, not the output.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-005",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "decay-percent-from-factor",
+   "signature": "V(t)=24000(0.85)^t: decreases 15% per year; wrong 85, 0.15",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The value, in dollars, of a delivery van $t$ years after it was purchased is modeled by $V(t) = 24{,}000(0.85)^{t}$. According to the model, the value of the van decreases by $p\\%$ each year. What is the value of $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "15"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "85",
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "85% is the part of the value that remains each year. The part lost is $100\\% - 85\\% = 15\\%$."
+    },
+    {
+     "value": ".15",
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "0.15 is the decimal. The question asks for the percent $p$, so $p = 15$."
+    }
+   ],
+   "solution": {
+    "key_idea": "A factor of 0.85 keeps 85% of the value each year, so 15% is lost each year.",
+    "steps": "The question asks for the yearly percent decrease.<br>$V(t + 1) = 0.85 \\cdot V(t)$ <span class=\"nt\">(each year multiplies by 0.85)</span><br>$1 - 0.85 = 0.15$ <span class=\"nt\">(the part that is lost)</span><br>$0.15 = 15\\%$, so $p = 15$.<br>Why subtract from 1: a factor of 0.85 means 85% of the value is kept each year. The rest, 15%, is the part that is lost.",
+    "check": "$V(0) = 24{,}000$, $V(1) = 20{,}400$; $\\frac{3{,}600}{24{,}000} = 0.15$ ✓",
+    "be_careful": "0.85 tells what stays, not what is lost.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-006",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "form-displays-x-intercepts",
+   "signature": "(x-5)^2-9 equivalents: (x-2)(x-8) shows x-intercepts; traps vertex form, standard form, x(x-10)+16",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = (x - 5)^{2} - 9$. Which of the following is an equivalent form of $f(x)$ that shows the $x$-intercepts of the graph of $y = f(x)$ as constants or coefficients?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(x - 5)^{2} - 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This form shows the vertex $(5, -9)$, not where the graph meets the $x$-axis."
+    },
+    {
+     "key": "B",
+     "text": "$x^{2} - 10x + 16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Standard form shows the $y$-intercept, 16, but not the $x$-intercepts."
+    },
+    {
+     "key": "C",
+     "text": "$x(x - 10) + 16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This looks factored, but the $+16$ outside means $x = 0$ and $x = 10$ are not zeros."
+    },
+    {
+     "key": "D",
+     "text": "$(x - 2)(x - 8)$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Factored form $(x - r)(x - s)$ shows the zeros $r$ and $s$, because a product is 0 when a factor is 0.",
+    "steps": "The question asks which form displays the $x$-intercepts.<br>$(x - 5)^{2} - 9 = x^{2} - 10x + 25 - 9$ <span class=\"nt\">(expand the square)</span><br>$= x^{2} - 10x + 16$ <span class=\"nt\">(combine)</span><br>$= (x - 2)(x - 8)$ <span class=\"nt\">(two numbers with product 16 and sum $-10$)</span><br>The $x$-intercepts are $(2, 0)$ and $(8, 0)$, and they appear in the factors.",
+    "check": "$(x - 2)(x - 8) = x^{2} - 10x + 16$ ✓ and $f(2) = 9 - 9 = 0$ ✓",
+    "be_careful": "All four choices are equivalent; the question is which one shows the intercepts.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-007",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C5"
+   ],
+   "family": "graph-to-rule-evaluate-outside-window",
+   "signature": "graph of parabola with zeros -1, 5 and vertex (2,-9); f(6)=7 (beyond the window); traps -5, 5, 16",
+   "abilities": [
+    "G",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of the quadratic function $f$ is shown.",
+   "stem_after_figure": "What is the value of $f(6)$?",
+   "figures": [
+    {
+     "id": "QB-N3-007-fig1",
+     "file": "figures/QB-N3-007-fig1.svg",
+     "alt": "A parabola that opens upward, crossing the x-axis at (-1, 0) and (5, 0), with vertex (2, -9). The graph is shown for x from about -1.6 to 5.6."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$-5$ is $f(0)$, the $y$-intercept, not the value at $x = 6$."
+    },
+    {
+     "key": "B",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "5 is a zero shown on the graph, an $x$-value, not $f(6)$."
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is $(6 - 2)^{2}$ and forgets the $-9$ from the vertex."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Read the zeros from the graph, write the rule in factored form, and use the vertex to find the leading coefficient.",
+    "steps": "The question asks for $f(6)$, which is outside the part of the graph shown.<br>$f(x) = a(x + 1)(x - 5)$ <span class=\"nt\">(zeros at $-1$ and 5)</span><br>$-9 = a(3)(-3)$ <span class=\"nt\">(the vertex $(2, -9)$ is on the graph)</span><br>$a = 1$ <span class=\"nt\">(divide by $-9$)</span><br>$f(6) = (7)(1) = 7$ <span class=\"nt\">(substitute 6)</span>",
+    "check": "By symmetry about $x = 2$, $f(6) = f(-2) = (-1)(-7) = 7$ ✓",
+    "be_careful": "Do not skip finding $a$; the zeros alone do not fix the rule.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-008",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "exponential-two-values-extend",
+   "signature": "f(x)=a b^x, f(0)=6, f(1)=18: b=3, f(3)=162; traps 54 (f(2)), 42 (linear), 486 (f(4))",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the exponential function $f$, $f(0) = 6$ and $f(1) = 18$. What is the value of $f(3)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$42$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 12 each step, as for a linear function. An exponential function multiplies."
+    },
+    {
+     "key": "B",
+     "text": "$54$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "54 is $f(2)$. One more factor of 3 is needed."
+    },
+    {
+     "key": "C",
+     "text": "$162$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$486$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "486 is $f(4)$; this multiplies by 3 one time too many."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "An exponential function multiplies by the same factor each time $x$ increases by 1.",
+    "steps": "The question asks for $f(3)$.<br>factor $= \\frac{18}{6} = 3$ <span class=\"nt\">(from $x = 0$ to $x = 1$)</span><br>$f(x) = 6(3)^{x}$ <span class=\"nt\">(start 6, factor 3)</span><br>$f(3) = 6 \\cdot 27 = 162$ <span class=\"nt\">($3^{3} = 27$)</span><br>Why the ratio: an exponential function multiplies by the same factor each time $x$ goes up by 1. From $x = 0$ to $x = 3$ that happens three times.",
+    "check": "$6, 18, 54, 162$: each value is 3 times the one before ✓",
+    "be_careful": "Equal steps in $x$ give equal ratios, not equal differences.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-009",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C2"
+   ],
+   "family": "projectile-max-height",
+   "signature": "h(t)=-16t^2+64t+5: max at t=2, height 69; wrong 2 (time), 5 (start)",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A ball is thrown upward from a platform. Its height above the ground, in feet, $t$ seconds after it is thrown is modeled by $h(t) = -16t^{2} + 64t + 5$. What is the maximum height, in feet, of the ball?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "69"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "2 seconds is when the maximum happens. The question asks for the height at that time."
+    },
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "5 feet is the starting height $h(0)$, not the highest point."
+    }
+   ],
+   "solution": {
+    "key_idea": "The maximum of a downward parabola is at its vertex; the vertex $t$-value is halfway between two times with equal heights.",
+    "steps": "The question asks for the greatest height.<br>$h(t) = -16t(t - 4) + 5$ <span class=\"nt\">(factor $-16t^{2} + 64t$)</span><br>$h(0) = h(4) = 5$ <span class=\"nt\">(equal heights at $t = 0$ and $t = 4$)</span><br>$t = 2$ <span class=\"nt\">(halfway between 0 and 4)</span><br>$h(2) = -64 + 128 + 5 = 69$ <span class=\"nt\">(substitute)</span>",
+    "check": "$h(1) = 53$ and $h(3) = 53$, both less than 69 ✓",
+    "be_careful": "Finish the problem: the time 2 is not the height.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-010",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "translation-then-reflection",
+   "signature": "shift f 3 left, 2 down, then reflect over x-axis: y=-(f(x+3)-2)=-f(x+3)+2; traps -f(x-3)+2 (wrong direction), -f(x+3)-2 (reflects first), f(-x+3)-2 (reflects over y-axis)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of $y = f(x)$ is moved 3 units to the left and 2 units down. The resulting graph is then reflected across the $x$-axis. Which equation represents the final graph?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = -f(x - 3) + 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "$f(x - 3)$ moves the graph 3 units to the right."
+    },
+    {
+     "key": "B",
+     "text": "$y = -f(x + 3) + 2$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$y = -f(x + 3) - 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This reflects first and then moves down. The reflection comes last, so it also flips the $-2$."
+    },
+    {
+     "key": "D",
+     "text": "$y = f(-x + 3) - 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "Changing $x$ to $-x$ reflects across the $y$-axis, not the $x$-axis."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Apply the moves in order. Reflecting across the $x$-axis makes the whole output negative, including the earlier $-2$.",
+    "steps": "The question asks for the equation after all three moves.<br>left 3: $y = f(x + 3)$ <span class=\"nt\">(the old point at $x = a$ is now at $x = a - 3$)</span><br>down 2: $y = f(x + 3) - 2$ <span class=\"nt\">(subtract 2 from every output)</span><br>reflect: $y = -\\left(f(x + 3) - 2\\right) = -f(x + 3) + 2$ <span class=\"nt\">(every output changes sign)</span>",
+    "check": "If $f(0) = 5$, the point $(0, 5)$ goes to $(-3, 3)$, then to $(-3, -3)$; $-f(0) + 2 = -3$ ✓",
+    "be_careful": "The reflection changes the sign of the whole output, including the $-2$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-011",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C6"
+   ],
+   "family": "zeros-to-factors-cubic",
+   "signature": "cubic crossing x-axis exactly at -3,1,4: (x+3)(x-1)(x-4); traps opposite signs, one sign wrong, extra factor x",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of the polynomial function $p$ in the $xy$-plane intersects the $x$-axis at exactly three points: $(-3, 0)$, $(1, 0)$, and $(4, 0)$. Which of the following could define $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$p(x) = (x + 3)(x - 1)(x - 4)$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$p(x) = (x - 3)(x + 1)(x + 4)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "These factors are 0 at $3$, $-1$, and $-4$, the opposites of the intercepts."
+    },
+    {
+     "key": "C",
+     "text": "$p(x) = (x + 3)(x - 1)(x + 4)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "$x + 4 = 0$ at $x = -4$, not 4."
+    },
+    {
+     "key": "D",
+     "text": "$p(x) = x(x + 3)(x - 1)(x - 4)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The extra factor $x$ adds a fourth intercept at $(0, 0)$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "If $p(r) = 0$, then $x - r$ is a factor of $p$.",
+    "steps": "The question asks which rule has zeros exactly $-3$, 1, and 4.<br>$x - (-3) = x + 3$ <span class=\"nt\">(zero at $-3$)</span><br>$x - 1$ <span class=\"nt\">(zero at 1)</span><br>$x - 4$ <span class=\"nt\">(zero at 4)</span><br>So $p(x) = (x + 3)(x - 1)(x - 4)$ works, and it has no other zeros.",
+    "check": "$p(4) = (7)(3)(0) = 0$ ✓ and $p(0) = (3)(-1)(-4) = 12 \\ne 0$ ✓",
+    "be_careful": "\"Exactly three points\" rules out any extra factor.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-012",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "percent-to-growth-factor",
+   "signature": "town 5,000 growing 4% per year, P=5000 b^t: b=1.04; wrong .04, 4",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A town had a population of 5,000 in 2020, and the population increased by 4% each year after that. The population $t$ years after 2020 can be modeled by $P(t) = 5{,}000b^{t}$, where $b$ is a constant. What is the value of $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1.04",
+      "26/25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": ".04",
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "0.04 is the increase only. Each year the town keeps 100% and adds 4%, so $b = 1.04$."
+    },
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "4 is the percent, not the yearly factor."
+    }
+   ],
+   "solution": {
+    "key_idea": "Growing by 4% means each year is multiplied by $1 + 0.04$.",
+    "steps": "The question asks for the yearly factor $b$.<br>$4\\% = 0.04$ <span class=\"nt\">(percent as a decimal)</span><br>$b = 1 + 0.04 = 1.04$ <span class=\"nt\">(keep the whole population and add 4%)</span><br>Why $1 + 0.04$: each year the town keeps all of its people (the 1) and gains 4% more (the 0.04). Multiplying by 1.04 does both at once.",
+    "check": "$P(1) = 5{,}000(1.04) = 5{,}200$, which is $5{,}000 + 200$, and 200 is 4% of 5,000 ✓",
+    "be_careful": "A factor less than 1 would mean the population is shrinking.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-013",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "vertex-from-standard-form-sum",
+   "signature": "y=-x^2-4x+3: h=-b/(2a)=-2, k=f(-2)=7, h+k=5; traps -9 (k=-7), 7 (k only), 9 (h=2)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of $y = -x^{2} - 4x + 3$ in the $xy$-plane has its vertex at $(h, k)$. What is the value of $h + k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $k = -7$. Putting $x = -2$ in gives $-4 + 8 + 3 = 7$."
+    },
+    {
+     "key": "B",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "7 is only $k$; the question asks for $h + k$."
+    },
+    {
+     "key": "D",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D22",
+     "feedback": "This uses $h = 2$. With $a = -1$ and $b = -4$, $-\\frac{b}{2a} = -\\frac{-4}{-2} = -2$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Find $h$ with $x = -\\frac{b}{2a}$, then put $h$ into the equation to get $k$.",
+    "steps": "The question asks for $h + k$.<br>$h = -\\frac{-4}{2(-1)} = -2$ <span class=\"nt\">($x = -\\frac{b}{2a}$)</span><br>$k = -(-2)^{2} - 4(-2) + 3 = -4 + 8 + 3 = 7$ <span class=\"nt\">(plug $x = -2$ into the equation)</span><br>$h + k = -2 + 7 = 5$ <span class=\"nt\">(add the two coordinates)</span><br>Why it works: the vertex is on the axis of symmetry $x = -\\frac{b}{2a}$, and its $y$-value is the output of the equation there.",
+    "check": "$-(x + 2)^{2} + 7 = -x^{2} - 4x - 4 + 7 = -x^{2} - 4x + 3$ ✓",
+    "be_careful": "With $a = -1$, keep both negative signs in $-\\frac{b}{2a}$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-014",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "table-exponential-a-not-first-row",
+   "signature": "table x=1..4: 10,20,40,80; f(x)=5(2)^x; trap 10(2)^x (first value as a), 10x, 2(5)^x",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows four values of $x$ and their corresponding values of $f(x)$ for the exponential function $f$.<br><table class=\"tb\"><tr><td>$x$</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>$f(x)$</td><td>10</td><td>20</td><td>40</td><td>80</td></tr></table>Which equation defines $f$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$f(x) = 10(2)^{x}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D15",
+     "feedback": "10 is $f(1)$, not $f(0)$. This rule gives $f(1) = 20$."
+    },
+    {
+     "key": "B",
+     "text": "$f(x) = 10x$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "$10x$ gives 10, 20, 30, 40. The values double; they do not go up by 10."
+    },
+    {
+     "key": "C",
+     "text": "$f(x) = 5(2)^{x}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$f(x) = 2(5)^{x}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This swaps the start and the factor; $f(2)$ would be 50."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "In $f(x) = a(b)^{x}$, $a = f(0)$ because $b^{0} = 1$. The table starts at $x = 1$, so step back once.",
+    "steps": "The question asks for the rule.<br>$b = \\frac{20}{10} = 2$ <span class=\"nt\">(ratio of consecutive values)</span><br>$f(0) = \\frac{10}{2} = 5$ <span class=\"nt\">(go back one step from $x = 1$)</span><br>$f(x) = 5(2)^{x}$ <span class=\"nt\">($a = f(0)$)</span><br>Why go back one step: the table starts at $x = 1$, but the number in front of $2^{x}$ is the value at $x = 0$. One step back from 10 divides by 2.",
+    "check": "$5(2)^{3} = 40$ ✓ and $5(2)^{4} = 80$ ✓",
+    "be_careful": "The first value in a table is $f(0)$ only when the table starts at $x = 0$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-015",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "other-zero-from-axis",
+   "signature": "zeros -5 and p, vertex x=2: (-5+p)/2=2, p=9; traps 7 (distance), 4 (doubles the vertex)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The graph of a quadratic function $f$ in the $xy$-plane crosses the $x$-axis at $(-5, 0)$ and $(p, 0)$. The vertex of the graph has $x$-coordinate 2. What is the value of $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "9"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "7 is the distance from $-5$ to 2. The other zero is another 7 units past 2."
+    },
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "4 doubles the vertex. The zeros add to twice the vertex: $-5 + p = 4$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The vertex is halfway between the two $x$-intercepts.",
+    "steps": "The question asks for the other $x$-intercept.<br>$\\frac{-5 + p}{2} = 2$ <span class=\"nt\">(vertex is the midpoint)</span><br>$-5 + p = 4$, so $p = 9$<br>Why it works: a parabola is symmetric about its axis, so both intercepts are the same distance from $x = 2$. From $-5$ to 2 is 7 units, and 7 more units past 2 is 9.",
+    "check": "$-5$ and 9 are both 7 units from 2 ✓",
+    "be_careful": "Go the same distance past the vertex, not up to it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-016",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "composition-order",
+   "signature": "f(x)=x^2-4, g(x)=2x+1: f(g(-1))=-3; traps g(f(-1))=-5, 5 (g(-1)=3 slip), -1 (stopped at g(-1))",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The functions $f$ and $g$ are defined by $f(x) = x^{2} - 4$ and $g(x) = 2x + 1$. What is the value of $f(g(-1))$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This is $g(f(-1))$: the functions were used in the wrong order."
+    },
+    {
+     "key": "B",
+     "text": "$-3$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$-1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$-1$ is $g(-1)$, the inside step only."
+    },
+    {
+     "key": "D",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $g(-1) = 3$. In fact $2(-1) + 1 = -1$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "In $f(g(-1))$, work from the inside out: find $g(-1)$, then put that output into $f$.",
+    "steps": "The question asks for $f(g(-1))$.<br>$g(-1) = 2(-1) + 1 = -1$ <span class=\"nt\">(inside first)</span><br>$f(-1) = (-1)^{2} - 4$ <span class=\"nt\">(use the output as the input of $f$)</span><br>$= 1 - 4 = -3$ <span class=\"nt\">(evaluate)</span><br>Why inside first: $f(g(-1))$ means the output of $g$ becomes the input of $f$. So $g$ is evaluated first, and its answer, $-1$, is then put into $f$.",
+    "check": "$f(g(x)) = (2x + 1)^{2} - 4$; at $x = -1$: $1 - 4 = -3$ ✓",
+    "be_careful": "$(-1)^{2} = 1$, not $-1$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-017",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "half-life-exponent-unit",
+   "signature": "m(t)=40(0.5)^(t/6), t=18: 3 halvings -> 5; traps 10 (two), 20 (one), 2.5 (four)",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The mass, in grams, of a substance remaining $t$ hours after a test began is modeled by $m(t) = 40(\\frac{1}{2})^{\\frac{t}{6}}$. According to the model, what is the mass, in grams, remaining 18 hours after the test began?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This halves only twice. 18 hours contains three 6-hour periods."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{40}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides 40 by the 3 periods. Each period halves the amount; it does not subtract a share."
+    },
+    {
+     "key": "D",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This halves once, as if 18 hours were one period."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The exponent $\\frac{t}{6}$ counts 6-hour periods; each period halves the mass.",
+    "steps": "The question asks for $m(18)$.<br>$\\frac{18}{6} = 3$ <span class=\"nt\">(number of 6-hour periods)</span><br>$m(18) = 40(\\frac{1}{2})^{3}$ <span class=\"nt\">(substitute)</span><br>$= 40 \\cdot \\frac{1}{8} = 5$ <span class=\"nt\">(evaluate)</span><br>Why divide 18 by 6: the exponent $\\frac{t}{6}$ counts how many 6-hour periods have passed. Each period halves the mass, so the mass is halved 3 times: 40, 20, 10, 5.",
+    "check": "$40 \\to 20 \\to 10 \\to 5$ after 6, 12, 18 hours ✓",
+    "be_careful": "The exponent is the number of periods, not the number of hours.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-018",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "y-intercept-fixes-zero",
+   "signature": "f(x)=(x-k)(x+5), y-int (0,-20): k=4, other x-intercept (4,0); traps (-4,0), (20,0), (5,0)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = (x - k)(x + 5)$, where $k$ is a constant. The graph of $y = f(x)$ in the $xy$-plane passes through $(0, -20)$. Which point is an $x$-intercept of the graph?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(-4, 0)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D22",
+     "feedback": "$k = 4$, so the factor is $x - 4$, which is 0 at $x = 4$."
+    },
+    {
+     "key": "B",
+     "text": "$(4, 0)$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$(5, 0)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "$x + 5 = 0$ at $x = -5$, so $(5, 0)$ is not on the graph."
+    },
+    {
+     "key": "D",
+     "text": "$(20, 0)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "20 comes from the $y$-intercept. It is the product $5k$, not a zero."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The $y$-intercept is $f(0)$. Use it to find $k$, then read the zeros from the factors.",
+    "steps": "The question asks for an $x$-intercept.<br>$f(0) = (0 - k)(0 + 5) = -5k$ <span class=\"nt\">(substitute $x = 0$)</span><br>$-5k = -20$ <span class=\"nt\">(the graph passes through $(0, -20)$)</span><br>$k = 4$ <span class=\"nt\">(divide by $-5$)</span><br>The zeros are 4 and $-5$, so $(4, 0)$ is an $x$-intercept.",
+    "check": "$f(x) = (x - 4)(x + 5)$: $f(0) = -20$ ✓ and $f(4) = 0$ ✓",
+    "be_careful": "The other $x$-intercept is $(-5, 0)$, not $(5, 0)$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-019",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C2"
+   ],
+   "family": "revenue-max-price",
+   "signature": "R(p)=-5p^2+200p: max revenue at p=20; traps 2000 (max revenue), 40 (zero), 10",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A store models the weekly revenue $R$, in dollars, from selling a lamp at a price of $p$ dollars with $R(p) = -5p^{2} + 200p$. According to the model, what price, in dollars, gives the greatest weekly revenue?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This halves 20. The vertex is midway between the zeros 0 and 40."
+    },
+    {
+     "key": "B",
+     "text": "$20$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$40$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "At \\$40 the revenue is 0; 40 is a zero of $R$."
+    },
+    {
+     "key": "D",
+     "text": "$2{,}000$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "\\$2,000 is the greatest revenue $R(20)$, not the price."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The vertex of a downward parabola gives the greatest value; it is midway between the zeros.",
+    "steps": "The question asks for the price, the input at the vertex.<br>$R(p) = -5p(p - 40)$ <span class=\"nt\">(factor)</span><br>zeros: $p = 0$ and $p = 40$ <span class=\"nt\">(each factor equals 0)</span><br>$p = \\frac{0 + 40}{2} = 20$ <span class=\"nt\">(midway between the zeros)</span>",
+    "check": "$R(20) = -2{,}000 + 4{,}000 = 2{,}000$, and $R(19) = R(21) = 1{,}995$ ✓",
+    "be_careful": "The question asks for the price, not the revenue.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-020",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "exponential-vertical-shift-intercept",
+   "signature": "g(x)=2^x-3: y-intercept (0,-2); traps (0,-3) a^0 as 0, (0,1) shift ignored, (0,-1)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $g$ is defined by $g(x) = 2^{x} - 3$. What is the $y$-intercept of the graph of $y = g(x)$ in the $xy$-plane?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(0, -2)$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$(0, -1)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This uses $2^{0} = 2$, then subtracts 3."
+    },
+    {
+     "key": "C",
+     "text": "$(0, 1)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$(0, 1)$ is the $y$-intercept of $y = 2^{x}$; the $-3$ moves it down."
+    },
+    {
+     "key": "D",
+     "text": "$(0, 4)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This adds 3 to $2^{0} = 1$. The function subtracts 3."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The $y$-intercept is $g(0)$, and $2^{0} = 1$.",
+    "steps": "The question asks for the point where $x = 0$.<br>$g(0) = 2^{0} - 3$ <span class=\"nt\">(substitute 0)</span><br>$= 1 - 3 = -2$ <span class=\"nt\">($2^{0} = 1$)</span><br>Why $x = 0$: every point on the $y$-axis has $x$-coordinate 0, so the $y$-intercept is the output at $x = 0$.<br>The $y$-intercept is the point $(0, -2)$.",
+    "check": "$g(1) = 2 - 3 = -1$ and $g(0) = -2$, so the graph rises through $(0, -2)$ ✓",
+    "be_careful": "$2^{0}$ is 1, not 0 and not 2.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-021",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C2"
+   ],
+   "family": "shift-difference-is-linear",
+   "signature": "f(x)=2x^2-12x+23: f(x+2)-f(x)=2(4x+4)-24=8x-16; traps 4x-20 (drops the 2), 8x-24 (forgets the 4 in (x+2)^2-x^2), 8x+8 (forgets the -12x term shifts)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = 2x^{2} - 12x + 23$. Which of the following is equivalent to $f(x + 2) - f(x)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4x - 20$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This drops the 2 in front of $x^{2}$: $(x + 2)^{2} - x^{2} = 4x + 4$ must be doubled."
+    },
+    {
+     "key": "B",
+     "text": "$8x - 24$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "$(x + 2)^{2} - x^{2}$ is $4x + 4$, not $4x$. The 4 doubled adds 8."
+    },
+    {
+     "key": "C",
+     "text": "$8x + 8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This changes only the $x^{2}$ term. The $-12x$ term also changes, by $-12(2) = -24$."
+    },
+    {
+     "key": "D",
+     "text": "$8x - 16$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Subtract term by term. The $x^{2}$ parts cancel, so the answer is linear, and the constant 23 cancels too.",
+    "steps": "The question asks for a simpler form of $f(x + 2) - f(x)$.<br>$2\\left[(x + 2)^{2} - x^{2}\\right] = 2(4x + 4) = 8x + 8$ <span class=\"nt\">(the $x^{2}$ terms)</span><br>$-12\\left[(x + 2) - x\\right] = -24$ <span class=\"nt\">(the $x$ terms)</span><br>$23 - 23 = 0$ <span class=\"nt\">(the constants)</span><br>$f(x + 2) - f(x) = 8x + 8 - 24 = 8x - 16$<br>Why it works: the difference of two outputs of a quadratic that are a fixed step apart is always linear, because the $x^{2}$ terms cancel.",
+    "check": "$x = 0$: $f(2) - f(0) = (8 - 24 + 23) - 23 = -16$, and $8(0) - 16 = -16$ ✓",
+    "be_careful": "$(x + 2)^{2} - x^{2}$ is $4x + 4$; keep the 4.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-022",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "exponential-rewrite-quarter-period",
+   "signature": "Q = 50(9)^(t/2 - 1) = (50/9)(81)^(t/4); a = 50/9, b = 81, ab = 450 (= Q(4)); traps 1350 (9^-1 read as 3^-1), 4050 (drops the -1), 36450 (multiplies by 9)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $Q$ is defined by $Q(t) = 50(9)^{\\frac{t}{2} - 1}$. The function can be written in the form $Q(t) = a(b)^{\\frac{t}{4}}$, where $a$ and $b$ are positive constants. What is the value of $ab$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$450$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$1{,}350$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This uses $a = \\frac{50}{3}$, reading $9^{-1}$ as $3^{-1}$. The base is 9, so $a = \\frac{50}{9}$."
+    },
+    {
+     "key": "C",
+     "text": "$4{,}050$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This uses $a = 50$ and drops the $-1$ in the exponent. At $t = 0$, $Q(0) = 50 \\cdot 9^{-1} = \\frac{50}{9}$."
+    },
+    {
+     "key": "D",
+     "text": "$36{,}450$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $a = 450$, multiplying by 9 instead of dividing; $9^{-1} = \\frac{1}{9}$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Rewrite the exponent so that $\\frac{t}{4}$ appears: $\\frac{t}{2} = 2 \\cdot \\frac{t}{4}$, so $9^{\\frac{t}{2}} = 81^{\\frac{t}{4}}$.",
+    "steps": "The question asks for the product $ab$ in $Q(t) = a(b)^{\\frac{t}{4}}$.<br>$9^{\\frac{t}{2} - 1} = 9^{-1} \\cdot 9^{\\frac{t}{2}}$ <span class=\"nt\">(product of powers)</span><br>$9^{\\frac{t}{2}} = (9^{2})^{\\frac{t}{4}} = 81^{\\frac{t}{4}}$ <span class=\"nt\">($\\frac{t}{2} = 2 \\cdot \\frac{t}{4}$)</span><br>$Q(t) = \\frac{50}{9}(81)^{\\frac{t}{4}}$ <span class=\"nt\">(so $a = \\frac{50}{9}$ and $b = 81$)</span><br>$ab = \\frac{50}{9} \\cdot 81 = 450$ <span class=\"nt\">(multiply)</span><br>Why it works: $a$ is the value at $t = 0$, and $b$ is the growth factor for each 4 units of $t$. So $ab$ is the value at $t = 4$: $Q(4) = 50(9)^{1} = 450$, which agrees.",
+    "check": "$Q(4) = 50(9)^{2 - 1} = 450$, and $\\frac{50}{9}(81)^{1} = 450$ ✓",
+    "be_careful": "Both the $\\frac{t}{2}$ and the $-1$ change the form. Handle the $-1$ for $a$ and the $\\frac{t}{2}$ for $b$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-023",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "zeros-under-inner-linear-map",
+   "signature": "zeros of f -4 and 6; g(x) = f(3x - 1): 3x - 1 = -4 or 6, x = -1 or 7/3, sum 4/3; wrong 4 (applies 3x - 1 to zeros), 2",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The function $f$ has exactly two zeros, $-4$ and $6$. The function $g$ is defined by $g(x) = f(3x - 1)$. What is the sum of the two zeros of $g$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "4/3",
+      "1.333"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This puts $-4$ and $6$ into $3x - 1$; the zeros of $g$ are the $x$ values that make $3x - 1$ equal those numbers."
+    },
+    {
+     "value": "2",
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "2 is the sum of the zeros of $f$; the inner function was ignored."
+    }
+   ],
+   "solution": {
+    "key_idea": "$g(x) = 0$ exactly when the input $3x - 1$ is a zero of $f$; solve for $x$.",
+    "steps": "The question asks for the sum of the zeros of $g$.<br>$f(3x - 1) = 0$ means $3x - 1 = -4$ or $3x - 1 = 6$ <span class=\"nt\">(the input must be a zero of $f$)</span><br>$x = -1$ or $x = \\frac{7}{3}$ <span class=\"nt\">(solve each)</span><br>$-1 + \\frac{7}{3} = \\frac{4}{3}$ <span class=\"nt\">(add)</span><br>Why it works: $g$ feeds $3x - 1$ into $f$, so the zeros of $g$ are found by undoing $3x - 1$, which means adding 1 and dividing by 3.",
+    "check": "$g(-1) = f(-4) = 0$ ✓ and $g(\\frac{7}{3}) = f(6) = 0$ ✓",
+    "be_careful": "Undo the inner function; do not apply it to the zeros.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-024",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "equal-outputs-axis-then-value",
+   "signature": "f(-1)=f(7) -> axis 3; zero 1 -> other zero 5; f=a(x-1)(x-5), f(0)=5a=10 -> a=2; f(3)=2(2)(-2)=-8; traps -10 (vertex = -f(0)), -4 (a=1), 8 (sign)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the quadratic function $f$, $f(-1) = f(7)$, $f(1) = 0$, and $f(0) = 10$. What is the value of $f(3)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This guesses that the vertex value is the opposite of $f(0)$. Use the factored form to find $f(3)$."
+    },
+    {
+     "key": "B",
+     "text": "$-8$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$-4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This uses $f(x) = (x - 1)(x - 5)$ with $a = 1$. But $f(0) = 10$ means $5a = 10$, so $a = 2$."
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "At $x = 3$, the factor $x - 5$ is $-2$, so the product is negative."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Equal outputs at $-1$ and 7 give the axis $x = 3$. Reflect the zero at 1 to get the other zero, then use $f(0)$ to find $a$.",
+    "steps": "The question asks for $f(3)$.<br>axis: $x = \\frac{-1 + 7}{2} = 3$ <span class=\"nt\">(equal outputs)</span><br>other zero: $3 + (3 - 1) = 5$ <span class=\"nt\">(reflect 1 across $x = 3$)</span><br>$f(x) = a(x - 1)(x - 5)$ <span class=\"nt\">(zeros at 1 and 5 give these factors)</span><br>$f(0) = 5a = 10$, so $a = 2$ <span class=\"nt\">(plug in $x = 0$, then divide by 5)</span><br>$f(3) = 2(2)(-2) = -8$ <span class=\"nt\">(plug $x = 3$ into the factored form)</span><br>Why it works: a quadratic is fixed by its zeros and one more point. The equal outputs give the second zero, and $f(0)$ gives the stretch.",
+    "check": "$f(-1) = 2(-2)(-6) = 24$ and $f(7) = 2(6)(2) = 24$ ✓",
+    "be_careful": "Do not stop at the other zero; the question asks for $f(3)$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-025",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "exponential-two-points-then-solve",
+   "signature": "f(x)=ab^x, f(2)=12, f(5)=96: b^3=8, b=2, a=3; 3(2)^x=768 -> 2^x=256 -> x=8; traps 7 (2 steps past 5), 64 (768/12)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For the function $f$, $f(x) = ab^{x}$, where $a$ and $b$ are positive constants. If $f(2) = 12$ and $f(5) = 96$, for what value of $x$ is $f(x) = 768$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "$768 \\div 96 = 8 = 2^{3}$, so it takes 3 more steps past $x = 5$, not 2."
+    },
+    {
+     "value": "64",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "64 is $768 \\div 12$. That is the growth factor, not the value of $x$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The ratio of two outputs gives the base. Then count how many factors of the base turn 96 into 768.",
+    "steps": "The question asks for the $x$ with $f(x) = 768$.<br>$\\frac{f(5)}{f(2)} = b^{3} = \\frac{96}{12} = 8$ <span class=\"nt\">(the $a$ cancels)</span><br>$b = 2$ <span class=\"nt\">(the cube root of 8)</span><br>$\\frac{768}{96} = 8 = 2^{3}$ <span class=\"nt\">(three more doublings after $x = 5$)</span><br>$x = 5 + 3 = 8$ <span class=\"nt\">(3 more steps after $x = 5$)</span><br>Why it works: each step of 1 in $x$ multiplies the output by $b$. So a ratio of outputs tells how many steps apart the inputs are.",
+    "check": "$a = \\frac{12}{2^{2}} = 3$, and $3(2)^{8} = 3(256) = 768$ ✓",
+    "be_careful": "Find $b$ from a ratio; do not subtract the outputs.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-026",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C5"
+   ],
+   "family": "graph-to-coefficient-signs",
+   "signature": "downward parabola, vertex right of y-axis and above x-axis, positive y-intercept: a<0, b>0 so ab<0; two x-intercepts so b^2>4ac; traps ab>0, b^2<4ac (vertex above axis read as no zeros), bc<0",
+   "abilities": [
+    "G",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of $y = ax^{2} + bx + c$, where $a$, $b$, and $c$ are constants, is shown.",
+   "stem_after_figure": "Which of the following must be true?",
+   "figures": [
+    {
+     "id": "QB-N3-026-fig1",
+     "file": "figures/QB-N3-026-fig1.svg",
+     "alt": "A parabola that opens downward. Its vertex is to the right of the y-axis and above the x-axis, it crosses the y-axis above the origin, near (0, 3), and it crosses the x-axis twice. The axes are marked in units of 1."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$ab < 0$ and $b^{2} > 4ac$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$ab > 0$ and $b^{2} > 4ac$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "If $ab > 0$, then $a$ and $b$ are both negative, and the vertex $x = -\\frac{b}{2a}$ would be left of the $y$-axis."
+    },
+    {
+     "key": "C",
+     "text": "$ab < 0$ and $b^{2} < 4ac$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$b^{2} < 4ac$ means the graph never meets the $x$-axis. This graph crosses it twice; a vertex above the axis does not mean there are no zeros when the parabola opens downward."
+    },
+    {
+     "key": "D",
+     "text": "$bc < 0$ and $b^{2} > 4ac$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$c$ is the $y$-intercept, which is positive, and $b > 0$, so $bc > 0$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "$a$ tells the opening, $c$ is the $y$-intercept, the vertex is at $x = -\\frac{b}{2a}$, and the number of $x$-intercepts tells the sign of $b^{2} - 4ac$.",
+    "steps": "The question asks which facts about the constants are forced by the picture.<br>Step 1: Signs of $a$, $b$, and $c$.<br>$a < 0$ <span class=\"nt\">(the parabola opens downward)</span><br>$c > 0$ <span class=\"nt\">(it crosses the $y$-axis above the origin)</span><br>$-\\frac{b}{2a} > 0$ <span class=\"nt\">(the vertex is right of the $y$-axis)</span><br>$b > 0$ <span class=\"nt\">($2a < 0$, so $-b$ must be negative; $a$ and $b$ have opposite signs)</span><br>$ab < 0$ <span class=\"nt\">(negative times positive)</span><br>Step 2: Count the $x$-intercepts.<br>$b^{2} - 4ac > 0$ <span class=\"nt\">(the graph crosses the $x$-axis twice, so $ax^{2} + bx + c = 0$ has two real solutions)</span><br>So $ab < 0$ and $b^{2} > 4ac$ must both be true.",
+    "check": "Example: $y = -\\frac{1}{2}x^{2} + 2x + 3$: $ab = -1 < 0$ and $b^{2} - 4ac = 4 + 6 = 10 > 0$ ✓",
+    "be_careful": "For a parabola that opens downward, a vertex above the $x$-axis means two $x$-intercepts, not zero.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-027",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "vertical-scale-reflect-extreme",
+   "signature": "f quadratic min -3 at x=2; g(x)=-4f(x)+1 max 13; traps 12, -11, 2",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The quadratic function $f$ has a minimum value of $-3$ at $x = 2$. The function $g$ is defined by $g(x) = -4f(x) + 1$. What is the maximum value of $g$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-11$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $4(-3) + 1$ and drops the negative sign of $-4$."
+    },
+    {
+     "key": "B",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "2 is where the maximum happens, not the maximum value."
+    },
+    {
+     "key": "C",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is $-4(-3)$; the $+1$ was not added."
+    },
+    {
+     "key": "D",
+     "text": "$13$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Multiplying by a negative number flips the graph, so the lowest output of $f$ becomes the highest output of $g$.",
+    "steps": "The question asks for the greatest value of $g$.<br>$f(x) \\ge -3$ for every $x$ <span class=\"nt\">(minimum of $f$)</span><br>$-4f(x) \\le 12$ <span class=\"nt\">(multiply by $-4$ and flip the inequality)</span><br>$-4f(x) + 1 \\le 13$ <span class=\"nt\">(add 1)</span><br>Equality holds at $x = 2$, so the maximum value of $g$ is 13.<br>Why the maximum: multiplying by a negative number turns the lowest value of $f$ into the highest value of $-4f$.",
+    "check": "$g(2) = -4(-3) + 1 = 13$ ✓",
+    "be_careful": "Track the inequality: the minimum of $f$ gives the maximum of $g$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-028",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "exponent-unit-days-to-weeks",
+   "signature": "decreases 20% every 3 days, w weeks: 500(0.8)^(7w/3) rewritten as 500(0.8^7)^(w/3); traps (0.8^3)^(w/7) swapped units, (0.8^(1/3))^(7w)... per-day factor misuse, (0.2^(7/3))^w",
+   "abilities": [
+    "M",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A sample of a medicine contains 500 milligrams. The amount decreases by 20% every 3 days. Which of the following functions gives the amount $A$, in milligrams, after $w$ weeks?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$A(w) = 500\\left(0.8^{3}\\right)^{\\frac{w}{7}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This swaps the 3 and the 7. It equals $500(0.8)^{\\frac{3w}{7}}$, which counts $\\frac{3w}{7}$ periods instead of $\\frac{7w}{3}$."
+    },
+    {
+     "key": "B",
+     "text": "$A(w) = 500\\left(0.8^{\\frac{1}{3}}\\right)^{w}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "$0.8^{\\frac{1}{3}}$ is the factor for one day, so raising it to the power $w$ counts $w$ days, not $w$ weeks."
+    },
+    {
+     "key": "C",
+     "text": "$A(w) = 500\\left(0.2^{\\frac{7}{3}}\\right)^{w}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "The exponent is right, but a factor of 0.2 keeps only 20%. A 20% decrease keeps 80%."
+    },
+    {
+     "key": "D",
+     "text": "$A(w) = 500\\left(0.8^{7}\\right)^{\\frac{w}{3}}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "First write the model with the exponent counting 3-day periods, then use $(b^{m})^{n} = b^{mn}$ to match a choice.",
+    "steps": "The question asks for a model in weeks, written in a rearranged form.<br>each period: multiply by $1 - 0.20 = 0.8$ <span class=\"nt\">(20% decrease keeps 80%)</span><br>$w$ weeks $= 7w$ days <span class=\"nt\">(7 days per week)</span><br>number of periods $= \\frac{7w}{3}$ <span class=\"nt\">(each period is 3 days)</span><br>$A(w) = 500(0.8)^{\\frac{7w}{3}}$ <span class=\"nt\">(start 500, factor 0.8 per period)</span><br>$500\\left(0.8^{7}\\right)^{\\frac{w}{3}} = 500(0.8)^{\\frac{7w}{3}}$ <span class=\"nt\">(multiply the exponents: $7 \\cdot \\frac{w}{3} = \\frac{7w}{3}$)</span>",
+    "check": "$w = \\frac{3}{7}$ week is 3 days: $500\\left(0.8^{7}\\right)^{\\frac{1}{7}} = 500(0.8) = 400$, which is 20% less ✓",
+    "be_careful": "Multiply the two exponents of each choice and compare with $\\frac{7w}{3}$ before choosing.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-029",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "zero-gap-find-coefficient",
+   "signature": "y=x^2+bx+5, b>0, x-intercepts 4 apart: gap = sqrt(b^2-20) = 4 -> b^2=36 -> b=6; traps 4 (the gap), -6 (sign)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, the graph of $y = x^{2} + bx + 5$, where $b$ is a positive constant, has two $x$-intercepts that are 4 units apart. What is the value of $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "6"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "4 is the distance between the intercepts, not $b$."
+    },
+    {
+     "value": "-6",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "$b$ is positive, so take the positive square root of 36."
+    }
+   ],
+   "solution": {
+    "key_idea": "In vertex form, the two intercepts sit the same distance from the axis. That distance is half of 4.",
+    "steps": "The question asks for $b$.<br>$y = \\left(x + \\frac{b}{2}\\right)^{2} + 5 - \\frac{b^{2}}{4}$ <span class=\"nt\">(complete the square)</span><br>intercepts: $x = -\\frac{b}{2} \\pm 2$ <span class=\"nt\">(each is 2 units from the axis)</span><br>$\\left(x + \\frac{b}{2}\\right)^{2} = 4$ at the intercepts, so $\\frac{b^{2}}{4} - 5 = 4$<br>$b^{2} = 36$, and $b = 6$ <span class=\"nt\">(b is positive)</span><br>Why it works: the axis is halfway between the intercepts, so each one is half the gap from it. Squaring that half-gap gives how far the vertex is below the $x$-axis.",
+    "check": "$x^{2} + 6x + 5 = (x + 1)(x + 5)$, intercepts $-1$ and $-5$, 4 apart ✓",
+    "be_careful": "Use half of the gap, 2, from the axis.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-030",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C6"
+   ],
+   "family": "factor-theorem-least-zero",
+   "signature": "x^3+kx^2-4x-12 has factor x-2: k=3, zeros -3,-2,2; least zero -3; traps -2, 3 (k), -12",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The polynomial function $p$ is defined by $p(x) = x^{3} + kx^{2} - 4x - 12$, where $k$ is a constant. If $x - 2$ is a factor of $p(x)$, what is the least zero of $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "$-12$ is the constant term, $p(0)$."
+    },
+    {
+     "key": "B",
+     "text": "$-3$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$-2$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "$-2$ is a zero, but $(x + 3)$ is also a factor, and $-3$ is less."
+    },
+    {
+     "key": "D",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "3 is the value of $k$, not a zero."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "If $x - 2$ is a factor, then $p(2) = 0$. That fixes $k$; then factor completely.",
+    "steps": "The question asks for the smallest zero.<br>Step 1: find $k$.<br>$p(2) = 8 + 4k - 8 - 12 = 0$ <span class=\"nt\">(a factor $x - 2$ means $p(2) = 0$)</span><br>$4k = 12$, so $k = 3$ <span class=\"nt\">(solve)</span><br>Step 2: factor $x^{3} + 3x^{2} - 4x - 12$.<br>$x^{2}(x + 3) - 4(x + 3)$ <span class=\"nt\">(group in pairs)</span><br>$(x + 3)(x^{2} - 4) = (x + 3)(x - 2)(x + 2)$ <span class=\"nt\">(difference of squares)</span><br>The zeros are $-3$, $-2$, and 2. The least is $-3$.",
+    "check": "$p(-3) = -27 + 27 + 12 - 12 = 0$ ✓",
+    "be_careful": "Finish by factoring completely; the given factor is only one of three.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-031",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "equal-ratio-equal-time-exponential",
+   "signature": "A(t)=300(2)^(t/5): 600 to 2400 and 2400 to 9600 are both factor 4 = two doublings = 10 minutes each; traps half as long, twice as long, 4 times as long (thinks in differences)",
+   "abilities": [
+    "J",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The number of bacteria in a dish $t$ minutes after a study began is modeled by $A(t) = 300(2)^{\\frac{t}{5}}$. According to the model, how does the time it takes for the number of bacteria to grow from 600 to 2,400 compare with the time it takes to grow from 2,400 to 9,600?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The first time is half as long as the second.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This treats the growth like a linear one, where a bigger increase takes longer. For exponential growth, multiplying by the same factor always takes the same time."
+    },
+    {
+     "key": "B",
+     "text": "The two times are equal.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "The second time is twice as long as the first.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The second increase (7,200) is bigger, but both increases multiply the number by 4, and a factor of 4 always takes the same time."
+    },
+    {
+     "key": "D",
+     "text": "The second time is 4 times as long as the first.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This compares the increases, 7,200 and 1,800, directly. Time depends on the growth factor, not on the size of the increase."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "In an exponential model, equal growth factors take equal times. Compare the factors, not the differences.",
+    "steps": "What does the question ask? It asks how the time to grow from 600 to 2,400 compares with the time to grow from 2,400 to 9,600.<br>The question compares two waiting times.<br>$\\frac{2{,}400}{600} = 4$ and $\\frac{9{,}600}{2{,}400} = 4$ <span class=\"nt\">(both are a factor of 4)</span><br>$4 = 2^{2}$ <span class=\"nt\">(two doublings each)</span><br>one doubling every 5 minutes <span class=\"nt\">(from the exponent $\\frac{t}{5}$)</span><br>each time $= 2 \\times 5 = 10$ minutes<br>So the two times are equal.<br>Why it works: $A(t + 10) = 300(2)^{\\frac{t}{5} + 2} = 4A(t)$ for every $t$. Any 10-minute stretch multiplies the count by 4, wherever it starts.",
+    "check": "$A(5) = 600$, $A(15) = 2{,}400$, $A(25) = 9{,}600$: 10 minutes each ✓",
+    "be_careful": "A larger increase does not mean a longer time; only the growth factor matters.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-032",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "table-shift-scale-solve-input",
+   "signature": "f table at 1,3,5,7 -> 4,8,2,11; g(x)=2f(x-2)+3, g(k)=25 -> f(k-2)=11 -> k-2=7 -> k=9; traps 7 (f input), 11 (f value), 5 (shift wrong way)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table gives four values of the function $f$.<br><table class=\"tb\"><tr><td>$x$</td><td>1</td><td>3</td><td>5</td><td>7</td></tr><tr><td>$f(x)$</td><td>4</td><td>8</td><td>2</td><td>11</td></tr></table>The function $g$ is defined by $g(x) = 2f(x - 2) + 3$. If $g(k) = 25$, what is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This moves the input the wrong way: from $k - 2 = 7$, $k$ is $7 + 2$, not $7 - 2$."
+    },
+    {
+     "key": "B",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D9",
+     "feedback": "7 is the input of $f$, that is, $k - 2$. The question asks for $k$ itself."
+    },
+    {
+     "key": "C",
+     "text": "$9$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$11$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "11 is the value $f(k - 2)$ that is needed, an output of $f$, not an input of $g$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Work backward through $g$: undo the outside operations first, then use the table backward, then undo the inside shift.",
+    "steps": "The question asks for the input $k$ that makes $g(k) = 25$. This time the output is known and the input is the unknown, so the work runs backward.<br>$2f(k - 2) + 3 = 25$ <span class=\"nt\">(write $g(k)$ with the definition of $g$)</span><br>$2f(k - 2) = 22$ <span class=\"nt\">(subtract 3 from both sides)</span><br>$f(k - 2) = 11$ <span class=\"nt\">(divide both sides by 2)</span><br>Now read the table backward: find the column whose $f(x)$ value is 11. That column is $x = 7$, and it is the only one.<br>$k - 2 = 7$ <span class=\"nt\">(the input of $f$ must be 7)</span><br>$k = 9$ <span class=\"nt\">(add 2 to both sides)</span><br>Notice that 9 is not in the $x$ row of the table. That is fine, because the table describes $f$, and $g$ shifts the inputs by 2.",
+    "check": "$g(9) = 2f(9 - 2) + 3 = 2f(7) + 3 = 2(11) + 3 = 25$ ✓",
+    "be_careful": "Two stopping points look like answers: 11 is the value of $f$ and 7 is the input of $f$. Neither is $k$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-033",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "vertex-form-two-points-min",
+   "signature": "f(x)=a(x-4)^2+k through (2,7),(7,22): 4a+k=7, 9a+k=22, a=3, k=-5; min -5; traps 7, 3, 4",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = a(x - 4)^{2} + k$, where $a$ and $k$ are constants. The graph of $y = f(x)$ passes through $(2, 7)$ and $(7, 22)$. What is the minimum value of $f$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "3 is $a$, the leading coefficient."
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "4 is where the minimum happens, not the minimum value."
+    },
+    {
+     "key": "D",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "7 is $f(2)$, a value at a point that is not the vertex."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Each point gives one equation in $a$ and $k$; subtracting them removes $k$.",
+    "steps": "The question asks for the minimum value, which is $k$ when $a > 0$.<br>$7 = a(2 - 4)^{2} + k = 4a + k$ <span class=\"nt\">(use $(2, 7)$)</span><br>$22 = a(7 - 4)^{2} + k = 9a + k$ <span class=\"nt\">(use $(7, 22)$)</span><br>$15 = 5a$, so $a = 3$ <span class=\"nt\">(subtract the first equation from the second)</span><br>$k = 7 - 12 = -5$ <span class=\"nt\">(substitute into the first)</span><br>$a = 3 > 0$, so the parabola opens up and the minimum value is $k = -5$.",
+    "check": "$f(7) = 3(9) - 5 = 22$ ✓",
+    "be_careful": "Check that $a > 0$; otherwise $k$ would be a maximum.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-034",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C6"
+   ],
+   "family": "radical-domain-after-reflect-shift",
+   "signature": "f(x)=sqrt(x-2)+5, g(x)=f(1-x): (1-x)-2>=0 -> x<=-1; traps x>=-1 (flip lost), x<=3 (sign slip), x>=2 (ignored)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = \\sqrt{x - 2} + 5$. The function $g$ is defined by $g(x) = f(1 - x)$. For which values of $x$ is $g(x)$ a real number?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x \\ge -1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "From $-x - 1 \\ge 0$, dividing by $-1$ reverses the inequality sign. Keeping $\\ge$ gives this choice."
+    },
+    {
+     "key": "B",
+     "text": "$x \\le -1$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$x \\le 3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This writes the inside as $(1 - x) + 2$. Replacing $x$ by $1 - x$ in $x - 2$ gives $(1 - x) - 2$."
+    },
+    {
+     "key": "D",
+     "text": "$x \\ge 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This is where $f$ is defined. The inputs of $g$ are changed by $1 - x$, so the set changes too."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A square root is a real number only when the expression under it is at least 0. Build that expression for $g$ first, then solve.",
+    "steps": "The question asks for every input $x$ that gives a real value of $g(x)$.<br>$g(x) = \\sqrt{(1 - x) - 2} + 5$ <span class=\"nt\">(replace every $x$ in $f$ by $1 - x$)</span><br>$= \\sqrt{-x - 1} + 5$ <span class=\"nt\">(simplify under the root)</span><br>$-x - 1 \\ge 0$ <span class=\"nt\">(the expression under the root cannot be negative)</span><br>$-x \\ge 1$ <span class=\"nt\">(add 1 to both sides)</span><br>$x \\le -1$ <span class=\"nt\">(divide by $-1$, which reverses the inequality sign)</span><br>So $g(x)$ is real exactly when $x \\le -1$. The $+5$ outside the root plays no part in this.",
+    "check": "$x = -3$: $g(-3) = f(4) = \\sqrt{2} + 5$, real ✓; $x = 0$: $g(0) = f(1) = \\sqrt{-1} + 5$, not real ✓",
+    "be_careful": "The input $1 - x$ flips the graph left to right, so the allowed set points the other way from the set for $f$. Watch the sign reversal when dividing by $-1$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-035",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C5"
+   ],
+   "family": "zeros-opposite-signs-must",
+   "signature": "f(x)=(x-a)(x-b), a<0<b: y-intercept ab<0 must; traps vertex right, vertex left, min positive",
+   "abilities": [
+    "J",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = (x - a)(x - b)$, where $a$ and $b$ are constants with $a < 0 < b$. Which of the following must be true about the graph of $y = f(x)$ in the $xy$-plane?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Its vertex is to the right of the $y$-axis.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "The vertex is at $x = \\frac{a + b}{2}$, which could be negative, for example with $a = -3$ and $b = 1$."
+    },
+    {
+     "key": "B",
+     "text": "Its vertex is to the left of the $y$-axis.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "With $a = -1$ and $b = 4$ the vertex is at $x = 1.5$, to the right."
+    },
+    {
+     "key": "C",
+     "text": "Its minimum value is positive.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "The graph crosses the $x$-axis at two points, so it goes below the $x$-axis; the minimum is negative."
+    },
+    {
+     "key": "D",
+     "text": "It crosses the $y$-axis below the $x$-axis.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The $y$-intercept is $f(0) = (0 - a)(0 - b) = ab$. A negative times a positive is negative.",
+    "steps": "The question asks for a statement that is true for every allowed $a$ and $b$.<br>$f(0) = (-a)(-b) = ab$ <span class=\"nt\">(substitute $x = 0$)</span><br>$a < 0$ and $b > 0$ <span class=\"nt\">(given)</span><br>$ab < 0$ <span class=\"nt\">(negative times positive)</span><br>So the $y$-intercept is below the $x$-axis for every choice of $a$ and $b$.<br>The vertex position depends on whether $a + b$ is positive or negative, so it is not forced.",
+    "check": "$a = -3$, $b = 1$: $f(0) = -3 < 0$ ✓; $a = -1$, $b = 4$: $f(0) = -4 < 0$ ✓",
+    "be_careful": "\"Must be true\" means true for every allowed case; one example of each side shows the vertex is not fixed.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-036",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "equal-outputs-symmetric-about-axis",
+   "signature": "f(x)=x^2-6x+c: axis x=3; f(a)=f(a+4) with a != a+4 means a and a+4 are symmetric about 3: a+2=3, a=1; traps 3 (axis), -1, 5",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For a constant $c$, let $f(x) = x^{2} - 6x + c$. The inputs $a$ and $a + 4$ give $f$ the same output. What is $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "3 is the axis of symmetry. The two inputs $a$ and $a + 4$ sit 2 units on either side of it."
+    },
+    {
+     "value": "5",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "5 is $a + 4$, the larger input, not $a$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Two different inputs of a quadratic give the same output exactly when they are the same distance from the axis of symmetry.",
+    "steps": "The question asks for $a$.<br>axis: $x = -\\frac{-6}{2(1)} = 3$ <span class=\"nt\">(the value of $c$ does not move the axis)</span><br>$a \\ne a + 4$ <span class=\"nt\">(two different inputs)</span><br>their midpoint is the axis: $\\frac{a + (a + 4)}{2} = 3$ <span class=\"nt\">(equal outputs)</span><br>$a + 2 = 3$, so $a = 1$<br>Why it works: the graph is a mirror image across $x = 3$, so the only way two different inputs share an output is to be mirror images. The constant $c$ moves the graph up or down, which keeps the axis in place.",
+    "check": "$f(1) = 1 - 6 + c = c - 5$ and $f(5) = 25 - 30 + c = c - 5$ ✓",
+    "be_careful": "$c$ is unknown, but it cancels; do not try to find it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-037",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C6"
+   ],
+   "family": "touch-vs-cross-with-parameter",
+   "signature": "p(x)=-(x+k)^2(x-3k), k>0: touches at -k, crosses at 3k, p(0)=3k^3>0; traps swapped, both cross, both touch",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $p$ is defined by $p(x) = -(x + k)^{2}(x - 3k)$, where $k$ is a positive constant. Which statement describes the graph of $y = p(x)$ in the $xy$-plane?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It crosses the $x$-axis at $x = -k$, and it touches the $x$-axis at $x = 3k$ without crossing.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "The squared factor is $(x + k)^{2}$, so the touch happens at $x = -k$."
+    },
+    {
+     "key": "B",
+     "text": "It crosses the $x$-axis at both $x = -k$ and $x = 3k$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Near $x = -k$ the factor $(x + k)^{2}$ is never negative, so the sign of $p$ does not change there."
+    },
+    {
+     "key": "C",
+     "text": "It touches the $x$-axis at $x = -k$ without crossing, and it crosses the $x$-axis at $x = 3k$.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "It touches the $x$-axis at $x = k$ without crossing, and it crosses the $x$-axis at $x = 3k$.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D22",
+     "feedback": "$(x + k)^{2} = 0$ at $x = -k$, not at $x = k$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A squared factor does not change sign, so the graph touches the axis there. A single factor changes sign, so the graph crosses.",
+    "steps": "The question asks how the graph meets the $x$-axis.<br>$p(x) = 0$ at $x = -k$ and $x = 3k$ <span class=\"nt\">(set each factor to 0)</span><br>$(x + k)^{2} \\ge 0$ on both sides of $-k$ <span class=\"nt\">(a square is never negative)</span><br>So near $x = -k$ the sign of $p$ is the same on both sides: the graph touches.<br>$x - 3k$ changes sign at $3k$ <span class=\"nt\">(negative to the left, positive to the right)</span><br>So the graph crosses at $x = 3k$.",
+    "check": "$k = 1$: $p(-2) = -(1)(-5) = 5$, $p(0) = 3$, so $p$ stays positive around $-1$ ✓; $p(2) = 9 > 0$ and $p(4) = -25 < 0$ ✓",
+    "be_careful": "Read the zero from the factor: $x + k = 0$ gives $x = -k$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-038",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "two-positive-intercepts-parameter-interval",
+   "signature": "g(x)=x^2-6x+c: two x-intercepts needs 36-4c>0 (c<9); both positive needs product c>0 (sum 6 already positive); 0<c<9; traps c<9, c>0, 0<=c<9",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $g$ is defined by $g(x) = x^{2} - 6x + c$, where $c$ is a constant. The graph of $y = g(x)$ in the $xy$-plane has two $x$-intercepts, and both are positive. Which of the following describes all possible values of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$c < 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This makes two intercepts, but for $c \\le 0$ one of them is 0 or negative. For example, $c = -7$ gives $-1$ and 7."
+    },
+    {
+     "key": "B",
+     "text": "$c > 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This keeps both intercepts positive when they exist, but for $c \\ge 9$ the vertex is on or above the $x$-axis, so there are not two intercepts."
+    },
+    {
+     "key": "C",
+     "text": "$0 \\le c < 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "At $c = 0$, $g(x) = x(x - 6)$, and the intercept $x = 0$ is not positive."
+    },
+    {
+     "key": "D",
+     "text": "$0 < c < 9$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Two conditions: the vertex must be below the $x$-axis (two intercepts), and the graph must cross the $y$-axis above 0 (so no intercept is at or left of 0).",
+    "steps": "The question asks for every $c$ that gives two positive $x$-intercepts.<br>$g(x) = (x - 3)^{2} + c - 9$ <span class=\"nt\">(vertex $(3, c - 9)$)</span><br>two intercepts: $c - 9 < 0$, so $c < 9$ <span class=\"nt\">(vertex below the axis, graph opens up)</span><br>$g(0) = c$ <span class=\"nt\">($y$-intercept)</span><br>The vertex is at $x = 3 > 0$. If $g(0) > 0$, the graph is above the axis at $x = 0$, so both crossings are to the right of 0. If $g(0) \\le 0$, one crossing is at or left of 0.<br>$c > 0$<br>So $0 < c < 9$.<br>Why it works: the vertex sets how many intercepts there are, and the $y$-intercept tells which side of the $y$-axis they are on.",
+    "check": "$c = 5$: $(x - 1)(x - 5)$, intercepts 1 and 5 ✓; $c = 0$: 0 and 6 ✗; $c = 9$: one intercept ✗",
+    "be_careful": "Check both ends: $c = 0$ puts an intercept at 0, and $c = 9$ leaves only one intercept.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-039",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "per-period-percent-from-two-period",
+   "signature": "decreases 36% every 2 hours -> per hour factor 0.8, 20%; traps 18, 36, 80",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The concentration of a dye in a tank decreases by 36% every 2 hours. The concentration can also be described as decreasing by the same percent, $p\\%$, every hour. What is the value of $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$20$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$32$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This halves 64%. Percent factors multiply over the hours: $0.8 \\times 0.8 = 0.64$."
+    },
+    {
+     "key": "C",
+     "text": "$36$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "36% is the change over 2 hours, not 1 hour."
+    },
+    {
+     "key": "D",
+     "text": "$80$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "0.8 is the factor that remains each hour. The decrease is 20%."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Two hours of the hourly factor must equal the 2-hour factor: $f \\cdot f = 0.64$.",
+    "steps": "The question asks for the hourly percent decrease.<br>2-hour factor $= 1 - 0.36 = 0.64$ <span class=\"nt\">(36% decrease keeps 64%)</span><br>$f^{2} = 0.64$ <span class=\"nt\">(two hourly factors in a row)</span><br>$f = 0.8$ <span class=\"nt\">($0.8 \\times 0.8 = 0.64$; the factor is positive)</span><br>$1 - 0.8 = 0.2$ <span class=\"nt\">(part lost each hour)</span><br>So $p = 20$.<br>Why not divide 36 by 2: percent decreases multiply, they do not add. Two 18% decreases keep $0.82 \\times 0.82 = 0.6724$, not 0.64.",
+    "check": "$100 \\to 80 \\to 64$ after 1 and 2 hours: a 36% decrease ✓",
+    "be_careful": "Do not halve the percent; take the square root of the factor.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-040",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "N3.C2"
+   ],
+   "family": "hidden-coefficient-from-axis",
+   "signature": "h(t)=-16t^2+bt+4, max at t=1.5: b=48, max height 40; wrong 1.5, 48",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A ball is kicked from a height of 4 feet. Its height, in feet, $t$ seconds after it is kicked is modeled by $h(t) = -16t^{2} + bt + 4$, where $b$ is a constant. The ball reaches its maximum height 1.5 seconds after it is kicked. What is the maximum height, in feet, of the ball?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "40"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "48",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "48 is the value of $b$. The question asks for $h(1.5)$."
+    },
+    {
+     "value": "28",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $b = 24$ by halving instead of using the symmetry of the vertex."
+    }
+   ],
+   "solution": {
+    "key_idea": "The vertex is midway between two times with the same height. Heights at $t = 0$ and $t = \\frac{b}{16}$ are both 4.",
+    "steps": "The question asks for the greatest height.<br>Step 1: find $b$.<br>$h(t) = -16t(t - \\frac{b}{16}) + 4$ <span class=\"nt\">(factor the $t$ terms)</span><br>$h(0) = h(\\frac{b}{16}) = 4$ <span class=\"nt\">(equal heights)</span><br>$\\frac{1}{2} \\cdot \\frac{b}{16} = 1.5$ <span class=\"nt\">(the vertex is halfway)</span><br>$b = 48$ <span class=\"nt\">(multiply by 32)</span><br>Step 2: find the height at $t = 1.5$.<br>$h(1.5) = -16(2.25) + 48(1.5) + 4$ <span class=\"nt\">(substitute)</span><br>$= -36 + 72 + 4 = 40$ <span class=\"nt\">(evaluate)</span><br>Why 1.5 is not the answer: 1.5 is the time when the maximum happens. The question asks for the height at that time.",
+    "check": "$h(1) = -16 + 48 + 4 = 36$ and $h(2) = -64 + 96 + 4 = 36$, both below 40 and equal ✓",
+    "be_careful": "Finding $b$ is a middle step; the answer is the height.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-041",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "axis-plus-difference-find-a",
+   "signature": "f=ax^2+bx+c: f(1)=f(5) -> axis 3 -> b=-6a; f(0)-f(4) = -16a-4b = 8a = 8 -> a=1; traps -2 (b=-3a, drops the 2), -1 (sign of difference), 1/2 (uses 16a=8)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the quadratic function $f$, $f(x) = ax^{2} + bx + c$, where $a$, $b$, and $c$ are constants. If $f(1) = f(5)$ and $f(0) = f(4) + 8$, what is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-2$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This uses $b = -3a$, dropping the 2 in $-\\frac{b}{2a} = 3$. Then $-16a + 12a = 8$ gives $-2$."
+    },
+    {
+     "key": "B",
+     "text": "$-1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This reverses the subtraction. $f(0) - f(4) = 8$, so $8a = 8$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This drops the $b$ term from $f(4)$: $16a = 8$. The term $4b = -24a$ must be included."
+    },
+    {
+     "key": "D",
+     "text": "$1$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The equal outputs give the axis, which ties $b$ to $a$. Then the difference $f(0) - f(4)$ has only $a$ left.",
+    "steps": "The question asks for $a$.<br>axis: $x = \\frac{1 + 5}{2} = 3$ <span class=\"nt\">($f(1) = f(5)$)</span><br>$-\\frac{b}{2a} = 3$, so $b = -6a$ <span class=\"nt\">(the axis of symmetry is $x = -\\frac{b}{2a}$)</span><br>$f(0) - f(4) = c - (16a + 4b + c) = -16a - 4b$ <span class=\"nt\">(the $c$ cancels)</span><br>$-16a - 4(-6a) = 8a$ <span class=\"nt\">(use $b = -6a$)</span><br>$8a = 8$, so $a = 1$ <span class=\"nt\">(divide both sides by 8)</span><br>Why it works: $c$ cancels in any difference of outputs, and the axis turns $b$ into a multiple of $a$. That leaves one unknown and one equation.<br>There is no need to find $c$; any value works, since it moves the whole graph up or down without changing either condition.",
+    "check": "$f(x) = x^{2} - 6x$: $f(1) = -5 = f(5)$; $f(0) = 0$ and $f(4) = -8$, so $f(0) = f(4) + 8$ ✓",
+    "be_careful": "Keep the $4b$ term in $f(4)$; it is where the axis comes in.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-042",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "exponential-plus-constant-comparison-undetermined",
+   "signature": "f(x)=a(2)^x+c, a>0, f(1)=k: f(0)=a+c, k/2=a+c/2, f(0)-k/2=c/2, sign of c unknown -> cannot be determined; traps >, <, = (ignores c, halves backward)",
+   "abilities": [
+    "J",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = a(2)^{x} + c$, where $a$ and $c$ are constants and $a > 0$. If $f(1) = k$, which of the following is true about $f(0)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The value of $f(0)$ is greater than $\\frac{k}{2}$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is true only when $c > 0$. With $c = -2$ and $a = 1$, $f(0) = -1$ and $\\frac{k}{2} = 0$."
+    },
+    {
+     "key": "B",
+     "text": "The value of $f(0)$ is less than $\\frac{k}{2}$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is true only when $c < 0$. With $c = 2$ and $a = 1$, $f(0) = 3$ and $\\frac{k}{2} = 2$."
+    },
+    {
+     "key": "C",
+     "text": "The value of $f(0)$ is equal to $\\frac{k}{2}$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This treats $f$ as a pure exponential, which halves when $x$ goes back by 1. The added constant $c$ does not get halved."
+    },
+    {
+     "key": "D",
+     "text": "It cannot be determined from the given information.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Write both $f(0)$ and $\\frac{k}{2}$ in terms of $a$ and $c$, then subtract.",
+    "steps": "The question asks how $f(0)$ compares with $\\frac{k}{2}$.<br>$f(0) = a(2)^{0} + c = a + c$ <span class=\"nt\">(any nonzero number to the 0 power is 1)</span><br>$k = f(1) = 2a + c$ <span class=\"nt\">(plug in $x = 1$)</span><br>$\\frac{k}{2} = a + \\frac{c}{2}$ <span class=\"nt\">(divide by 2)</span><br>$f(0) - \\frac{k}{2} = \\frac{c}{2}$ <span class=\"nt\">(the $a$ terms cancel)</span><br>The sign of $\\frac{c}{2}$ depends on $c$, and nothing tells us whether $c$ is positive, negative, or 0. So any of the three comparisons can happen.<br>Why it works: only the $a(2)^{x}$ part doubles each step. The constant $c$ stays the same, so going back one step halves the exponential part but not $c$. Whether $f(0)$ is above or below $\\frac{k}{2}$ depends on that leftover $c$.",
+    "check": "$a = 1$: $c = 2$ gives $f(0) = 3 > 2$; $c = -2$ gives $f(0) = -1 < 0$; $c = 0$ gives $1 = 1$. All three happen ✓",
+    "be_careful": "An answer of \"cannot be determined\" needs proof: find one example for each other choice failing.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-043",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "vertex-on-axis-two-cases-greatest",
+   "signature": "y=a(x-h)^2 through (0,8),(6,2): (6-h)^2/h^2=1/4, h=4 or 12; greatest 12; wrong 4 (one case)",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The graph of a quadratic function in the $xy$-plane has its vertex on the $x$-axis at $(h, 0)$ and passes through the points $(0, 8)$ and $(6, 2)$. What is the greatest possible value of $h$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "4 comes from $6 - h = \\frac{h}{2}$ only. The case $6 - h = -\\frac{h}{2}$ gives $h = 12$, which is greater."
+    },
+    {
+     "value": "6",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "6 is an $x$-value of a given point, not the vertex."
+    }
+   ],
+   "solution": {
+    "key_idea": "With the vertex at $(h, 0)$, the function is $y = a(x - h)^{2}$. Dividing the two point equations removes $a$.",
+    "steps": "The question asks for the largest $h$ that works.<br>$8 = a(0 - h)^{2} = ah^{2}$ <span class=\"nt\">(use $(0, 8)$)</span><br>$2 = a(6 - h)^{2}$ <span class=\"nt\">(use $(6, 2)$)</span><br>$\\frac{(6 - h)^{2}}{h^{2}} = \\frac{2}{8} = \\frac{1}{4}$ <span class=\"nt\">(divide; $a$ cancels)</span><br>$\\frac{6 - h}{h} = \\frac{1}{2}$ or $\\frac{6 - h}{h} = -\\frac{1}{2}$ <span class=\"nt\">(both square roots of $\\frac{1}{4}$)</span><br>$12 - 2h = h$, so $h = 4$ <span class=\"nt\">(first case)</span><br>$12 - 2h = -h$, so $h = 12$ <span class=\"nt\">(second case)</span><br>The greatest possible value is 12.<br>Why there are two cases: the equation $(\\frac{6 - h}{h})^{2} = \\frac{1}{4}$ has two square roots, so the graph can touch the $x$-axis on either side of $(6, 2)$. Both values of $h$ give a positive $a$.",
+    "check": "$h = 12$: $a = \\frac{8}{144} = \\frac{1}{18}$, and $\\frac{1}{18}(6 - 12)^{2} = \\frac{36}{18} = 2$ ✓",
+    "be_careful": "Taking a square root gives two cases; \"greatest possible\" signals that both matter.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-044",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "vertex-on-line-parameter-sum",
+   "signature": "f(x)=x^2+bx+6, vertex (-b/2, 6-b^2/4) on y=x: 6-b^2/4=-b/2 -> b^2-2b-24=0 -> b=6 or -4; sum 2; traps 6 (one value), -2 (sign), -24",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The function $f(x) = x^{2} + bx + 6$, where $b$ is a constant, has its vertex on the line $y = x$. What is the sum of all possible values of $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "6",
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "6 is only one of the two values. $b = -4$ also works: the vertex is then $(2, 2)$."
+    },
+    {
+     "value": "-2",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This is a sign slip when solving $b^{2} - 2b - 24 = 0$; the values are 6 and $-4$, which add to 2."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write the vertex in terms of $b$, then make its two coordinates equal.",
+    "steps": "The question asks for the sum of every $b$ that puts the vertex on $y = x$.<br>vertex $x$-coordinate: $-\\frac{b}{2}$ <span class=\"nt\">($x = -\\frac{b}{2a}$ with $a = 1$)</span><br>vertex $y$-coordinate: $\\left(-\\frac{b}{2}\\right)^{2} + b\\left(-\\frac{b}{2}\\right) + 6 = 6 - \\frac{b^{2}}{4}$ <span class=\"nt\">(plug the vertex $x = -\\frac{b}{2}$ into the function)</span><br>$6 - \\frac{b^{2}}{4} = -\\frac{b}{2}$ <span class=\"nt\">(on $y = x$, the two coordinates match)</span><br>$24 - b^{2} = -2b$, so $b^{2} - 2b - 24 = 0$ <span class=\"nt\">(multiply by 4)</span><br>$(b - 6)(b + 4) = 0$ <span class=\"nt\">(factor)</span><br>$b = 6$ or $b = -4$; sum $= 2$ <span class=\"nt\">(each factor can be 0; add the two values)</span><br>Why it works: as $b$ changes, the vertex slides along its own curve. That curve meets the line $y = x$ twice, so there are two good values of $b$.",
+    "check": "$b = 6$: $f(x) = (x + 3)^{2} - 3$, vertex $(-3, -3)$ ✓; $b = -4$: $f(x) = (x - 2)^{2} + 2$, vertex $(2, 2)$ ✓",
+    "be_careful": "Look for every value of $b$; stopping after the first one gives 6.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-045",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C6"
+   ],
+   "family": "cubic-double-zero-from-intercepts",
+   "signature": "cubic p, leading coefficient 1, meets x-axis only at 1 and 3, p(0)=-9: one zero is double; (x-1)(x-3)^2 gives p(0)=-9 (the other gives -3), so p(4)=3; traps 9 (other double), -3 (assumes (x-1)(x-3)), 12",
+   "abilities": [
+    "J",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The polynomial function $p$ is defined by $p(x) = x^{3} + bx^{2} + cx + d$, where $b$, $c$, and $d$ are constants. The graph of $y = p(x)$ in the $xy$-plane meets the $x$-axis only at $x = 1$ and $x = 3$, and $p(0) = -9$. What is the value of $p(4)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This uses $(x - 1)(x - 3)$, which is only degree 2. A cubic needs a third factor."
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This is $(x - 1)^{2}(x - 3)$, but that gives $p(0) = -3$, not $-9$."
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This uses $(x - 1)(x - 3)^{2}$ but evaluates $3 \\times 4 = 12$. At $x = 4$ the factors are 3 and $1^{2} = 1$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A cubic has three zeros counted with repeats. Meeting the axis at only two points means one zero is a double zero. $p(0)$ tells which one.",
+    "steps": "The question asks for $p(4)$.<br>A cubic has three zeros when repeats are counted. Non-real zeros come in pairs, so the third zero is real too. It cannot be a new number, because the graph meets the axis only at 1 and 3. So one factor repeats.<br>$(x - 1)(x - 3)^{2}$ or $(x - 1)^{2}(x - 3)$ <span class=\"nt\">(the two choices)</span><br>$(0 - 1)(0 - 3)^{2} = -9$ <span class=\"nt\">(matches $p(0)$)</span><br>$(0 - 1)^{2}(0 - 3) = -3$ <span class=\"nt\">(does not match)</span><br>$p(x) = (x - 1)(x - 3)^{2}$ <span class=\"nt\">(a double zero at 3 gives the squared factor)</span><br>$p(4) = (3)(1)^{2} = 3$ <span class=\"nt\">(plug $x = 4$ into the factored form)</span><br>Why it works: if the third zero were a different real number, the graph would meet the axis 3 times. If the cubic had only one real zero, it would meet the axis once. Two meeting points force a double zero.",
+    "check": "$(x - 1)(x - 3)^{2} = x^{3} - 7x^{2} + 15x - 9$, leading coefficient 1, $p(0) = -9$ ✓",
+    "be_careful": "Test both double-zero options with $p(0)$; only one fits.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-046",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C2"
+   ],
+   "family": "shifted-factored-form-with-parameter",
+   "signature": "f(x)=(x-h)^2-9: f(x+2)=(x+2-h)^2-9=(x-h-1)(x-h+5); traps (x-h-5)(x-h+1) (shifts the wrong way), (x-h-3)(x-h+3) (no shift), (x-h+2)^2-9 (equivalent but no intercepts shown)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = (x - h)^{2} - 9$, where $h$ is a constant. Which of the following is equivalent to $f(x + 2)$ and displays the $x$-intercepts of the graph of $y = f(x + 2)$ as constants or coefficients?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(x - h - 5)(x - h + 1)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This is $f(x - 2)$: it moves the graph 2 units right instead of 2 units left."
+    },
+    {
+     "key": "B",
+     "text": "$(x - h - 3)(x - h + 3)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This is $f(x)$ itself, factored. The input $x + 2$ was never put in."
+    },
+    {
+     "key": "C",
+     "text": "$(x - h - 1)(x - h + 5)$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$(x - h + 2)^{2} - 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is equivalent to $f(x + 2)$, but it shows the vertex, not the $x$-intercepts."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Replace $x$ with $x + 2$, then use a difference of squares to get factored form.",
+    "steps": "The question asks for a factored form of $f(x + 2)$.<br>$f(x + 2) = (x + 2 - h)^{2} - 9$ <span class=\"nt\">(replace $x$ with $x + 2$)</span><br>$= \\left[(x + 2 - h) - 3\\right]\\left[(x + 2 - h) + 3\\right]$ <span class=\"nt\">($A^{2} - 9 = (A - 3)(A + 3)$)</span><br>$= (x - h - 1)(x - h + 5)$<br>The $x$-intercepts are $h + 1$ and $h - 5$, and they appear as constants in the factors.<br>Why it works: $f$ has intercepts $h + 3$ and $h - 3$. The graph of $f(x + 2)$ is the graph of $f$ moved 2 units left, so each intercept drops by 2: $h + 1$ and $h - 5$.",
+    "check": "$h = 0$: $f(x + 2) = (x + 2)^{2} - 9 = x^{2} + 4x - 5 = (x - 1)(x + 5)$ ✓",
+    "be_careful": "$f(x + 2)$ moves the graph left, so the intercepts get smaller.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-047",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "inner-scale-shrinks-zero-gap",
+   "signature": "f vertex (4,-9) through (6,-5): a=1, zeros 1 and 7 (gap 6); g(x)=f(2x-6): zeros where 2x-6=1 or 7 -> 3.5, 6.5, gap 3; traps 3/2 (divides twice), 6 (gap of f), 12 (multiplies by 2)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of the quadratic function $f$ in the $xy$-plane has its vertex at $(4, -9)$ and passes through the point $(6, -5)$. The function $g$ is defined by $g(x) = f(2x - 6)$. What is the distance between the two $x$-intercepts of the graph of $y = g(x)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This halves the gap twice. The factor 2 inside halves it only once."
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "6 is the gap for $f$. The inside $2x$ squeezes the graph toward the $y$-axis by a factor of 2."
+    },
+    {
+     "key": "C",
+     "text": "$3$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This doubles the gap. Multiplying the input by 2 halves horizontal distances."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Find the zeros of $f$ first. Then $g$ is 0 where $2x - 6$ equals one of those zeros.",
+    "steps": "The question asks for the gap between the zeros of $g$.<br>$f(x) = a(x - 4)^{2} - 9$ <span class=\"nt\">(vertex form)</span><br>$a(2)^{2} - 9 = -5$, so $a = 1$ <span class=\"nt\">(use $(6, -5)$)</span><br>$(x - 4)^{2} = 9$, so $x = 1$ or $x = 7$ <span class=\"nt\">(zeros of $f$)</span><br>$2x - 6 = 1$ gives $x = 3.5$; $2x - 6 = 7$ gives $x = 6.5$ <span class=\"nt\">(zeros of $g$)</span><br>$6.5 - 3.5 = 3$<br>Why it works: the shift by 6 moves both zeros the same way, so it does not change the gap. The factor 2 on $x$ squeezes the graph sideways, which halves every horizontal distance: $6 \\div 2 = 3$.",
+    "check": "$g(x) = (2x - 10)^{2} - 9 = 4(x - 5)^{2} - 9$, which is 0 at $x = 5 \\pm 1.5$ ✓",
+    "be_careful": "Only the 2 changes the gap; the 6 only slides the graph.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-048",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C1"
+   ],
+   "family": "coefficient-sum-is-f1",
+   "signature": "f=ax^2+bx+c zeros 2,-3, max 75/4: a=-3, a+b+c=f(1)=12; wrong -12, 75/4",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The function $f$ is defined by $f(x) = ax^{2} + bx + c$, where $a$, $b$, and $c$ are constants. The graph of $y = f(x)$ crosses the $x$-axis at $x = 2$ and $x = -3$, and the maximum value of $f$ is $\\frac{75}{4}$. What is the value of $a + b + c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-12",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $a = 3$. The graph has a maximum, so it opens down and $a = -3$."
+    },
+    {
+     "value": "-4",
+     "error_type": "concept",
+     "misconception": "D25",
+     "feedback": "This assumes $a = 1$ and computes $(1 - 2)(1 + 3)$. The maximum value fixes $a$."
+    }
+   ],
+   "solution": {
+    "key_idea": "$a + b + c$ is $f(1)$, because $f(1) = a(1)^{2} + b(1) + c$. Factored form makes $f(1)$ quick once $a$ is known.",
+    "steps": "The question asks for $a + b + c$, which equals $f(1)$.<br>$f(x) = a(x - 2)(x + 3)$ <span class=\"nt\">(zeros 2 and $-3$)</span><br>vertex at $x = \\frac{2 + (-3)}{2} = -\\frac{1}{2}$ <span class=\"nt\">(midway between the zeros)</span><br>$f(-\\frac{1}{2}) = a(-\\frac{5}{2})(\\frac{5}{2}) = -\\frac{25}{4}a$ <span class=\"nt\">(substitute)</span><br>$-\\frac{25}{4}a = \\frac{75}{4}$ <span class=\"nt\">(this is the maximum value)</span><br>$a = -3$ <span class=\"nt\">(multiply by $-\\frac{4}{25}$)</span><br>$f(1) = -3(1 - 2)(1 + 3) = -3(-1)(4) = 12$ <span class=\"nt\">(substitute 1)</span><br>So $a + b + c = 12$.<br>Why $a + b + c = f(1)$: substituting $x = 1$ into $ax^{2} + bx + c$ gives $a + b + c$.<br>Why $a$ must be negative: $f$ has a maximum, so the parabola opens down. The value $a = -3$ fits that.",
+    "check": "$f(x) = -3x^{2} - 3x + 18$: $-3 - 3 + 18 = 12$ ✓ and $f(-\\frac{1}{2}) = -\\frac{3}{4} + \\frac{3}{2} + 18 = \\frac{75}{4}$ ✓",
+    "be_careful": "The sum $a + b + c$ is a value of the function; there is no need to expand unless checking.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-049",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C3"
+   ],
+   "family": "vertical-shift-changes-zero-gap",
+   "signature": "f=a(x-h)^2+k, a<0, zeros h-3, h+3 -> k=-9a; g=f-k/2: (x-h)^2 = -k/(2a) = 9/2, gap 2*3/sqrt2 = 3sqrt2; traps 3 (halves the gap), 6 (gap unchanged), cannot be determined",
+   "abilities": [
+    "J",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = a(x - h)^{2} + k$, where $a$, $h$, and $k$ are constants and $a < 0$. The graph of $y = f(x)$ has $x$-intercepts at $x = h - 3$ and $x = h + 3$. The function $g$ is defined by $g(x) = f(x) - \\frac{k}{2}$. What is the distance between the $x$-intercepts of the graph of $y = g(x)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3\\sqrt{2}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This halves the gap along with $k$. The gap depends on a square root, so halving $k$ divides the gap by $\\sqrt{2}$."
+    },
+    {
+     "key": "C",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "A vertical shift is not a sideways move: lowering the graph brings the intercepts closer together."
+    },
+    {
+     "key": "D",
+     "text": "It cannot be determined without the values of $a$ and $k$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The intercepts tie $k$ to $a$: $9a + k = 0$. With that, the gap is the same for every $a$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The intercepts of $f$ give $k = -9a$. Then the intercepts of $g$ satisfy $(x - h)^{2} = \\frac{9}{2}$, with no $a$ left.",
+    "steps": "The question asks for the gap between the intercepts of $g$.<br>$a(3)^{2} + k = 0$, so $k = -9a$ <span class=\"nt\">($f(h + 3) = 0$)</span><br>$g(x) = a(x - h)^{2} + \\frac{k}{2}$ <span class=\"nt\">($k - \\frac{k}{2} = \\frac{k}{2}$)</span><br>$a(x - h)^{2} = -\\frac{k}{2} = \\frac{9a}{2}$ <span class=\"nt\">(set $g(x) = 0$)</span><br>$(x - h)^{2} = \\frac{9}{2}$ <span class=\"nt\">(divide by $a \\ne 0$)</span><br>$x - h = \\pm \\frac{3}{\\sqrt{2}}$ <span class=\"nt\">(take the square root of both sides)</span><br>gap $= \\frac{6}{\\sqrt{2}} = 3\\sqrt{2}$ <span class=\"nt\">(the distance between $h + \\frac{3}{\\sqrt{2}}$ and $h - \\frac{3}{\\sqrt{2}}$)</span><br>Why it works: the maximum of $f$ is $k$, and $g$ has maximum $\\frac{k}{2}$, still above the axis because $k = -9a > 0$. The gap only depends on the ratio $\\frac{k}{a}$, which the intercepts already fixed.",
+    "check": "$a = -1$, $h = 0$: $k = 9$, $g(x) = -x^{2} + 4.5$, zeros $\\pm\\sqrt{4.5} = \\pm 2.12$, gap $4.24 = 3\\sqrt{2}$ ✓",
+    "be_careful": "A vertical shift changes the gap by a square-root factor, not in proportion.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N3-050",
+   "version": 1,
+   "skill": {
+    "code": "N3",
+    "domain": "adv",
+    "cb_skill": "Nonlinear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N3.C4"
+   ],
+   "family": "functional-relation-finds-base",
+   "signature": "f=ab^x, f(x+2)-f(x)=3f(x) for all x, f(1)=10: b^2=4, f(3)=40; traps 30, 20, 160",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = ab^{x}$, where $a$ and $b$ are positive constants. For all values of $x$, $f(x + 2) - f(x) = 3f(x)$. If $f(1) = 10$, what is the value of $f(3)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "20 is $f(2)$; two steps of $b = 2$ are needed from $x = 1$ to $x = 3$."
+    },
+    {
+     "key": "B",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "30 is $3f(1)$, which is $f(3) - f(1)$, the increase only."
+    },
+    {
+     "key": "C",
+     "text": "$40$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$160$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies by $4^{2}$. The factor 4 already covers two steps: $f(3) = 4f(1)$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$f(x + 2) = f(x) \\cdot b^{2}$. The relation says $f(x + 2) = 4f(x)$, so two steps multiply by 4.",
+    "steps": "The question asks for $f(3)$, which is two steps after $f(1)$.<br>$f(x + 2) = 3f(x) + f(x) = 4f(x)$ <span class=\"nt\">(add $f(x)$ to both sides)</span><br>$ab^{x + 2} = 4ab^{x}$ <span class=\"nt\">(use the rule for $f$)</span><br>$b^{2} = 4$ <span class=\"nt\">(divide by $ab^{x}$, which is not 0)</span><br>$f(3) = f(1 + 2) = 4f(1)$ <span class=\"nt\">(use the relation with $x = 1$)</span><br>$= 4(10) = 40$ <span class=\"nt\">(substitute)</span><br>Why $b^{2} = 4$ is enough: we do not need $b$ itself. The relation already tells us that moving 2 steps multiplies $f$ by 4.",
+    "check": "$b = 2$, $a = 5$: $f(1) = 10$, $f(3) = 40$, and $f(3) - f(1) = 30 = 3f(1)$ ✓",
+    "be_careful": "The relation gives the factor for two steps of $x$, not for one.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

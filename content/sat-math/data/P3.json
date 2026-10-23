@@ -1,0 +1,3472 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "P3",
+ "skill": "One-variable data: Distributions and measures of center and spread",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-P3-001",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C1"
+   ],
+   "family": "remove-value-mean",
+   "signature": "mean 14 of 6 values, remove 24 -> 12; traps 10 (count not updated), 16.8 (value not removed), 19 (average of mean and value)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The mean of a list of 6 numbers is 14. When the number 24 is removed from the list, what is the mean of the remaining numbers?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "10",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This divides the new total, 60, by 6. Only 5 numbers remain after the removal."
+    },
+    {
+     "key": "B",
+     "text": "12",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "16.8",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This divides the old total, 84, by 5. The number 24 was never taken out of the total."
+    },
+    {
+     "key": "D",
+     "text": "19",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This averages 14 and 24. A mean changes through the total and the count, not by averaging with the removed number."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A mean is a total divided by a count. Track the total and the count separately when a number leaves the list.",
+    "steps": "The question asks for the mean of the 5 numbers that remain.<br>total of the 6 numbers $= 6(14) = 84$ <span class=\"nt\">(mean times count)</span><br>new total $= 84 - 24 = 60$ <span class=\"nt\">(take out the removed number)</span><br>new count $= 6 - 1 = 5$ <span class=\"nt\">(one number left the list)</span><br>new mean $= \\frac{60}{5} = 12$ <span class=\"nt\">(new total over new count)</span>",
+    "check": "Five numbers with mean 12 total 60, and $60 + 24 = 84 = 6(14)$ ✓",
+    "be_careful": "Both the total and the count change. Updating only one of them gives 10 or 16.8.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-002",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C2"
+   ],
+   "family": "unsorted-even-median",
+   "signature": "10 unsorted values, median 10 after sorting; traps 14.5 (middle of unsorted list), 9 (only 5th value), 10.5 (mean)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The list below shows the number of pages that each of 10 students read in one day.<br>$7, 15, 3, 12, 9, 20, 4, 11, 18, 6$<br>What is the median number of pages read?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "9",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "9 is only the 5th value in order. With 10 values the median is halfway between the 5th and 6th values."
+    },
+    {
+     "key": "B",
+     "text": "10",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "10.5",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "10.5 is the mean, 105 divided by 10, not the median."
+    },
+    {
+     "key": "D",
+     "text": "14.5",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This averages the 5th and 6th numbers as written, 9 and 20. The list has to be put in order first."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The median is the middle of the list after it is put in order. With an even count, it is the mean of the two middle values.",
+    "steps": "The question asks for the median of 10 values.<br>$3, 4, 6, 7, 9, 11, 12, 15, 18, 20$ <span class=\"nt\">(put the values in order)</span><br>middle values: 5th $= 9$ and 6th $= 11$ <span class=\"nt\">(10 values, so two middle values)</span><br>median $= \\frac{9 + 11}{2} = 10$ <span class=\"nt\">(mean of the two middle values)</span>",
+    "check": "Five values (3, 4, 6, 7, 9) are below 10 and five (11, 12, 15, 18, 20) are above 10 ✓",
+    "be_careful": "Taking the middle of the list as written skips the sorting step.",
+    "desmos": "Desmos: type median(7,15,3,12,9,20,4,11,18,6) to confirm 10 after solving.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-003",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C3"
+   ],
+   "family": "table-median-skewed",
+   "signature": "frequency table 0-4 with freq 6,7,3,2,2; median 1; traps 1.35 (mean), 2 (middle listed value), 3 (median of frequencies)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the number of pets owned by each of 20 students.<table class=\"dt\"><tr><th>Number of pets</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>Number of students</th><td>6</td><td>7</td><td>3</td><td>2</td><td>2</td></tr></table>",
+   "stem_after_figure": "What is the median number of pets owned by these 20 students?",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "1",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "1.35",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "1.35 is the mean, 27 pets divided by 20 students, not the median."
+    },
+    {
+     "key": "C",
+     "text": "2",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "2 is the middle entry of the top row. The median depends on how many students have each number."
+    },
+    {
+     "key": "D",
+     "text": "3",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "3 is the median of the frequencies 6, 7, 3, 2, 2. The frequencies count students; they are not data values."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A frequency table is a sorted list written in short form. Count through the frequencies to reach the middle positions.",
+    "steps": "The question asks for the median of 20 values.<br>middle positions: 10th and 11th <span class=\"nt\">(20 values, so two middle positions)</span><br>0 pets: positions 1 to 6 <span class=\"nt\">(first 6 students)</span><br>1 pet: positions 7 to 13 <span class=\"nt\">(next 7 students)</span><br>10th and 11th values are both 1 <span class=\"nt\">(both inside positions 7 to 13)</span><br>So the median is 1 pet.",
+    "check": "Thirteen students own 0 or 1 pet, which is more than half of 20, and only 6 own 0 pets ✓",
+    "be_careful": "The numbers in the bottom row are counts of students, not numbers of pets.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-004",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C1"
+   ],
+   "family": "score-needed-for-new-mean",
+   "signature": "mean of 5 tests 82, sixth test for mean 85 -> 100; trap 88 (85+3)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The mean of Rosa’s scores on 5 tests is 82. What score must Rosa get on a 6th test so that the mean of all 6 scores is 85?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "100"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "88",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Adds 3 to the target mean. The 6th score must raise all 6 scores’ average, so it carries 18 extra points."
+    }
+   ],
+   "solution": {
+    "key_idea": "A required mean fixes the required total. The new score is the gap between the two totals.",
+    "steps": "The question asks for the 6th score.<br>Let $s$ = the score on the 6th test.<br>total of the first 5 scores $= 5(82) = 410$ <span class=\"nt\">(mean times count)</span><br>needed total of 6 scores $= 6(85) = 510$ <span class=\"nt\">(target mean times new count)</span><br>$410 + s = 510$ <span class=\"nt\">(the 6th score fills the gap)</span><br>$s = 100$ <span class=\"nt\">(subtract 410 from both sides)</span>",
+    "check": "$\\frac{410 + 100}{6} = \\frac{510}{6} = 85$ ✓",
+    "be_careful": "Raising the mean by 3 needs 3 points for each of the 6 scores, not just 3 points.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-005",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C5",
+    "P3.C6"
+   ],
+   "family": "corrected-maximum",
+   "signature": "list of 9 with max 95 corrected to 39 (still max); mean down, median same, SD down; claim pairs",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set consists of the 9 values below.<br>$12, 15, 18, 20, 22, 25, 27, 30, 95$<br>The value 95 was a recording error and is changed to 39. Which of the following correctly describes how the mean and the median change?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The mean and the median both decrease.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "The median is the 5th value, 22. Changing the greatest value to 39 keeps it the greatest, so the 5th value does not change."
+    },
+    {
+     "key": "B",
+     "text": "The mean stays the same, and the median decreases.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This switches the two measures. The total drops by 56, so the mean must drop."
+    },
+    {
+     "key": "C",
+     "text": "The mean and the median both stay the same.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The median stays the same, but the total of the values drops by 56, so the mean decreases."
+    },
+    {
+     "key": "D",
+     "text": "The mean decreases, and the median stays the same.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The mean uses every value, so it moves when any value changes. The median uses only the middle position.",
+    "steps": "The question asks how the mean and the median change.<br>change in total $= 39 - 95 = -56$ <span class=\"nt\">(only one value changes)</span><br>change in mean $= -\\frac{56}{9}$ <span class=\"nt\">(same count of 9, so the mean decreases)</span><br>new list in order: $12, 15, 18, 20, 22, 25, 27, 30, 39$ <span class=\"nt\">(39 is still the greatest value)</span><br>median $=$ 5th value $= 22$ <span class=\"nt\">(the same 5th value as before)</span><br>So the mean decreases and the median stays the same.",
+    "check": "Before: 4 values below 22 and 4 above. After: still 4 below and 4 above ✓",
+    "be_careful": "A change to an extreme value moves the mean but leaves the middle value alone, as long as the order of the middle does not change.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-006",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C4"
+   ],
+   "family": "two-class-combined-mean",
+   "signature": "12 students mean 80 and 18 students mean 70 -> 74; traps 75 (average of means), 76 (sizes swapped), 2,220 (total)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In one class, the 12 students have a mean score of 80 on a quiz. In a second class, the 18 students have a mean score of 70 on the same quiz. What is the mean score of all 30 students?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "74",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "75",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This averages 80 and 70. The classes have different sizes, so their means cannot simply be averaged."
+    },
+    {
+     "key": "C",
+     "text": "76",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "This gives the weight of 18 to the mean of 80. The larger class has the lower mean."
+    },
+    {
+     "key": "D",
+     "text": "2,220",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "2,220 is the total of all 30 scores. It still has to be divided by 30."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "To combine groups, add the group totals and divide by the total number of people.",
+    "steps": "The question asks for the mean of all 30 scores.<br>first class total $= 12(80) = 960$ <span class=\"nt\">(mean times count)</span><br>second class total $= 18(70) = 1,260$ <span class=\"nt\">(mean times count)</span><br>combined total $= 960 + 1,260 = 2,220$ <span class=\"nt\">(add the totals)</span><br>mean $= \\frac{2,220}{30} = 74$ <span class=\"nt\">(divide by all 30 students)</span>",
+    "check": "74 is closer to 70 than to 80, which fits because more students have the mean of 70 ✓",
+    "be_careful": "The mean of the two class means is 75, which ignores that the classes have different sizes.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-007",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C2"
+   ],
+   "family": "dotplot-even-median",
+   "signature": "dot plot of 20 values 2-8; median 5.5 between two stacks; traps 5 (10th only), 5.2 (mean), 6 (mode)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The dot plot shows the number of hours that each of 20 volunteers worked last week. Each dot represents one volunteer.",
+   "stem_after_figure": "What is the median number of hours worked?",
+   "figures": [
+    {
+     "id": "QB-P3-007-fig1",
+     "file": "figures/QB-P3-007-fig1.svg",
+     "alt": "A dot plot over the values 2 through 8. The numbers of dots are: 2 has 1, 3 has 3, 4 has 4, 5 has 2, 6 has 5, 7 has 3, and 8 has 2."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "5",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "5 is the 10th value only. With 20 values, the median is halfway between the 10th and 11th values."
+    },
+    {
+     "key": "B",
+     "text": "5.2",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "5.2 is the mean, 104 hours divided by 20, not the median."
+    },
+    {
+     "key": "C",
+     "text": "5.5",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "6",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "6 has the tallest stack, so it is the mode, not the median."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Count dots from the left to find the middle positions. With an even count, the median is halfway between the two middle values.",
+    "steps": "The question asks for the median of 20 values.<br>middle positions: 10th and 11th <span class=\"nt\">(20 values)</span><br>dots at 2, 3, 4: $1 + 3 + 4 = 8$ <span class=\"nt\">(positions 1 to 8)</span><br>dots at 5: positions 9 and 10 <span class=\"nt\">(so the 10th value is 5)</span><br>dots at 6: positions 11 to 15 <span class=\"nt\">(so the 11th value is 6)</span><br>median $= \\frac{5 + 6}{2} = 5.5$ <span class=\"nt\">(halfway between)</span>",
+    "check": "10 dots are at 5 or below and 10 dots are at 6 or above ✓",
+    "be_careful": "The tallest stack is the mode. The median comes from counting positions.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-008",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C1"
+   ],
+   "family": "mean-of-two-from-group-means",
+   "signature": "mean of a,b,c is 20, mean of a..e is 26 -> mean of d,e = 35; traps 70 (total), 6 (difference)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The mean of the numbers $a$, $b$, and $c$ is 20. The mean of the numbers $a$, $b$, $c$, $d$, and $e$ is 26. What is the mean of $d$ and $e$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "35"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "70",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is $d + e$. It still has to be divided by 2."
+    },
+    {
+     "value": "6",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts the two means. Means of groups of different sizes cannot be subtracted directly."
+    }
+   ],
+   "solution": {
+    "key_idea": "Convert each mean into a total. The totals can be subtracted even though the means cannot.",
+    "steps": "The question asks for the mean of $d$ and $e$.<br>$a + b + c = 3(20) = 60$ <span class=\"nt\">(mean times count)</span><br>$a + b + c + d + e = 5(26) = 130$ <span class=\"nt\">(mean times count)</span><br>$d + e = 130 - 60 = 70$ <span class=\"nt\">(subtract the first total)</span><br>mean of $d$ and $e$ $= \\frac{70}{2} = 35$ <span class=\"nt\">(two numbers)</span>",
+    "check": "Totals 60 and 70 give $\\frac{130}{5} = 26$ ✓",
+    "be_careful": "70 is the total of $d$ and $e$. The question asks for their mean.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-009",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C5"
+   ],
+   "family": "sd-same-mean-same-range",
+   "signature": "X 4,4,4,16,16,16 vs Y 4,8,10,10,12,16: same mean and range, X larger SD; claim + reason",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Data set X: $4, 4, 4, 16, 16, 16$<br>Data set Y: $4, 8, 10, 10, 12, 16$<br>The two data sets have the same mean and the same range. Which statement about their standard deviations is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Data set Y has the greater standard deviation, because it has more different values.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The number of different values does not measure spread. Most values in Y are close to 10."
+    },
+    {
+     "key": "B",
+     "text": "The standard deviations are equal, because the means and ranges are equal.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Equal mean and range do not fix the spread. The standard deviation depends on every value’s distance from the mean."
+    },
+    {
+     "key": "C",
+     "text": "Data set X has the greater standard deviation, because its values are farther from the mean.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The standard deviations cannot be compared without calculating them.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "No calculation is needed. Every value in X is 6 away from the mean, and most values in Y are much closer."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Standard deviation measures how far values typically are from the mean.",
+    "steps": "The question asks which data set is more spread out around its mean.<br>both means are 10 <span class=\"nt\">(given, and each total is 60)</span><br>X: every value is 6 away from 10 <span class=\"nt\">(4 and 16 are each 6 from 10)</span><br>Y: distances 6, 2, 0, 0, 2, 6 <span class=\"nt\">(only the ends are 6 away)</span><br>Typical distances are larger in X, so X has the greater standard deviation.",
+    "check": "The distances in Y are never more than those in X, and four of them are smaller ✓",
+    "be_careful": "Range uses only the two ends. Standard deviation uses every value.",
+    "desmos": "Desmos: stdev([4,4,4,16,16,16]) and stdev([4,8,10,10,12,16]) confirm the comparison after reasoning.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-010",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C3"
+   ],
+   "family": "histogram-median-interval",
+   "signature": "histogram of 25 commute times, 13th value in 20-30; traps 10-20 (tallest bar), 30-40 (middle of axis)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The histogram shows how long it took each of 25 students to travel to school. Each interval includes its left endpoint but not its right endpoint.",
+   "stem_after_figure": "Which interval contains the median travel time?",
+   "figures": [
+    {
+     "id": "QB-P3-010-fig1",
+     "file": "figures/QB-P3-010-fig1.svg",
+     "alt": "A histogram with intervals of width 10 from 0 to 60 minutes. The bar heights are 2, 9, 6, 4, 2, and 2 students."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "0 to 10 minutes",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "Only 2 students are in this interval. The 13th time comes much later."
+    },
+    {
+     "key": "B",
+     "text": "10 to 20 minutes",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This is the tallest bar, which shows the most common interval, not the middle position."
+    },
+    {
+     "key": "C",
+     "text": "20 to 30 minutes",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "30 to 40 minutes",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "30 is the middle of the horizontal axis, but the median depends on how many students are in each bar."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The median of 25 values is the 13th value in order. Add bar heights from the left until the total reaches 13.",
+    "steps": "The question asks which interval holds the median.<br>median $=$ 13th value <span class=\"nt\">(25 values, so $\\frac{25 + 1}{2} = 13$)</span><br>0 to 10: values 1 and 2 <span class=\"nt\">(height 2)</span><br>10 to 20: values 3 to 11 <span class=\"nt\">(height 9, running total 11)</span><br>20 to 30: values 12 to 17 <span class=\"nt\">(height 6, running total 17)</span><br>The 13th value is in the interval 20 to 30 minutes.",
+    "check": "11 values are below 20 and 8 values are 30 or more, so 13 is inside the third bar ✓",
+    "be_careful": "The tallest bar shows the mode interval, not the median.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-011",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C6"
+   ],
+   "family": "linear-transform-mean-median",
+   "signature": "mean 15, median 12; each value doubled then 5 subtracted -> 25 and 19; pair choices",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set has a mean of 15 and a median of 12. Each value in the data set is multiplied by 2, and then 5 is subtracted from each result. What are the mean and the median of the new data set?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Mean 25, median 19",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Mean 20, median 14",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This subtracts 5 before doubling. The values are doubled first."
+    },
+    {
+     "key": "C",
+     "text": "Mean 25, median 12",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The median moves too. Every value, including the middle one, is changed the same way."
+    },
+    {
+     "key": "D",
+     "text": "Mean 30, median 24",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This doubles but forgets to subtract 5."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "When every value goes through the same rule, the mean and the median go through that rule too.",
+    "steps": "The question asks for the new mean and median.<br>new mean $= 2(15) - 5 = 25$ <span class=\"nt\">(double, then subtract 5)</span><br>Doubling and subtracting 5 keep the order of the values, so the middle value stays in the middle.<br>new median $= 2(12) - 5 = 19$ <span class=\"nt\">(same rule on the middle value)</span>",
+    "check": "For the list 9, 12, 24 (mean 15, median 12) the new list is 13, 19, 43, with mean 25 and median 19 ✓",
+    "be_careful": "Apply the steps in the stated order: multiply first, then subtract.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-012",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C2"
+   ],
+   "family": "unknown-in-ordered-even-list",
+   "signature": "ordered 3,5,8,x,14,17,20,22 median 12 -> x=10; traps 7 (used mean 12), -2 (no doubling), 12 (median as x)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The numbers $3, 5, 8, x, 14, 17, 20, 22$ are listed in increasing order. The median of the numbers is 12. What is the value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-2$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This sets $x + 14 = 12$. The median is half of $x + 14$, so $x + 14 = 24$."
+    },
+    {
+     "key": "B",
+     "text": "7",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This makes the mean equal 12. The question gives the median."
+    },
+    {
+     "key": "C",
+     "text": "10",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "12",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This takes the median as one of the values. With 8 numbers, the median is halfway between the 4th and 5th values."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "With 8 numbers in order, the median is the mean of the 4th and 5th numbers.",
+    "steps": "The question asks for $x$, the 4th number.<br>median $= \\frac{x + 14}{2}$ <span class=\"nt\">(4th and 5th numbers)</span><br>$\\frac{x + 14}{2} = 12$ <span class=\"nt\">(given median)</span><br>$x + 14 = 24$ <span class=\"nt\">(multiply both sides by 2)</span><br>$x = 10$ <span class=\"nt\">(subtract 14 from both sides)</span>",
+    "check": "$8 \\le 10 \\le 14$, so the order holds, and $\\frac{10 + 14}{2} = 12$ ✓",
+    "be_careful": "7 would break the increasing order, which is a quick sign it is not the median condition.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-013",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C6"
+   ],
+   "family": "mean-above-median-reason",
+   "signature": "town incomes mean > median; reason: a few very large values; claim/reason choices",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the households in a town, the mean annual income is much greater than the median annual income. Which of the following best explains this?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Most households have incomes greater than the mean.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "If most incomes were above the mean, the median would be above the mean, the opposite of what is given."
+    },
+    {
+     "key": "B",
+     "text": "A small number of households have incomes far greater than the rest.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "A small number of households have incomes far less than the rest.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Very small values pull the mean down, below the median."
+    },
+    {
+     "key": "D",
+     "text": "The incomes are spread evenly around the median.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "An even spread on both sides keeps the mean close to the median."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The mean is pulled toward extreme values. The median is not.",
+    "steps": "The question asks why the mean is much larger than the median.<br>The median is the middle income, so half the households earn at most the median.<br>A few very large incomes add a lot to the total but do not change the middle position.<br>A larger total with the same count gives a larger mean.<br>So a few very high incomes pull the mean above the median.",
+    "check": "Example: 30, 32, 35, 38, 41, 44, 250 (thousand dollars) has median 38 and mean about 67 ✓",
+    "be_careful": "The direction matters. Extreme high values pull the mean up; extreme low values pull it down.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-014",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C3"
+   ],
+   "family": "unknown-frequency-from-mean",
+   "signature": "scores 6-10 with freq 2,5,k,4,1, mean 7.8 -> k=3; trap 8 (score value)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The table shows the scores of the members of a club on a 10-point quiz.<table class=\"dt\"><tr><th>Score</th><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><th>Number of members</th><td>2</td><td>5</td><td>$k$</td><td>4</td><td>1</td></tr></table>",
+   "stem_after_figure": "The mean score of the members is 7.8. What is the value of $k$?",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "8",
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "8 is the score in that column. $k$ is the number of members with that score."
+    }
+   ],
+   "solution": {
+    "key_idea": "The mean from a table is (sum of value times frequency) divided by (sum of frequencies).",
+    "steps": "The question asks for $k$, the number of members who scored 8.<br>total score $= 6(2) + 7(5) + 8k + 9(4) + 10(1) = 93 + 8k$ <span class=\"nt\">(value times frequency)</span><br>number of members $= 12 + k$ <span class=\"nt\">(add the frequencies)</span><br>$\\frac{93 + 8k}{12 + k} = 7.8$ <span class=\"nt\">(given mean)</span><br>$93 + 8k = 93.6 + 7.8k$ <span class=\"nt\">(multiply both sides by $12 + k$)</span><br>$0.2k = 0.6$ <span class=\"nt\">(subtract 93 and $7.8k$)</span><br>$k = 3$ <span class=\"nt\">(divide by 0.2)</span>",
+    "check": "$\\frac{93 + 24}{15} = \\frac{117}{15} = 7.8$ ✓",
+    "be_careful": "The count of members is $12 + k$, not 5 (the number of columns).",
+    "desmos": "Desmos is the fastest route here: graph y=(93+8x)/(12+x) and y=7.8 and read the intersection at x=3.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-015",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C5"
+   ],
+   "family": "boxplot-upper-quarter-count",
+   "signature": "box plot of 40 lengths, Q3 = 34; about 10 values above 34; traps 14 (34-20?), 20 (half), 30 (three quarters)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The box plot summarizes the lengths of 40 fish caught in a lake.",
+   "stem_after_figure": "Which of the following is closest to the number of fish with a length greater than 34 centimeters?",
+   "figures": [
+    {
+     "id": "QB-P3-015-fig1",
+     "file": "figures/QB-P3-015-fig1.svg",
+     "alt": "A box plot on a scale from 10 to 55 centimeters. The minimum is 10, the first quartile is 18, the median is 25, the third quartile is 34, and the maximum is 52."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "10",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "18",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "18 is the first quartile on the scale, a length, not a number of fish."
+    },
+    {
+     "key": "C",
+     "text": "20",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "About half the fish are longer than the median, 25 centimeters, not 34."
+    },
+    {
+     "key": "D",
+     "text": "30",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "About 30 fish are shorter than 34 centimeters. The question asks about longer fish."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The third quartile marks the point with about one quarter of the data above it.",
+    "steps": "The question asks about how many fish are longer than 34 centimeters.<br>34 is the right edge of the box <span class=\"nt\">(the third quartile)</span><br>about $\\frac{1}{4}$ of the data lie above the third quartile <span class=\"nt\">(meaning of a quartile)</span><br>$\\frac{1}{4}(40) = 10$ <span class=\"nt\">(40 fish)</span>",
+    "check": "Below 18, 18 to 25, 25 to 34, and above 34 each hold about 10 of the 40 fish ✓",
+    "be_careful": "Sections of a box plot hold about equal numbers of values even when they look different in width.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-016",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C5",
+    "P3.C6"
+   ],
+   "family": "add-value-at-mean",
+   "signature": "22,31,40,47,60 mean 40; add 40 -> mean same, SD decreases; claim pairs",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The data set $22, 31, 40, 47, 60$ has a mean of 40. If the value 40 is added to the data set, which of the following is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The mean stays the same, and the standard deviation decreases.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The mean stays the same, and the standard deviation stays the same.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "A new value at the mean adds a distance of 0, so the typical distance from the mean becomes smaller."
+    },
+    {
+     "key": "C",
+     "text": "The mean decreases, and the standard deviation decreases.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "The new total is 240 and the new count is 6, so the mean is still 40."
+    },
+    {
+     "key": "D",
+     "text": "The mean stays the same, and the standard deviation increases.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "More values do not mean more spread. This value sits exactly at the mean."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A value equal to the mean keeps the mean fixed and adds a zero distance, which lowers the standard deviation.",
+    "steps": "The question asks what happens to the mean and the standard deviation.<br>new total $= 5(40) + 40 = 240$ <span class=\"nt\">(old total plus the new value)</span><br>new mean $= \\frac{240}{6} = 40$ <span class=\"nt\">(the mean stays the same)</span><br>The new value is 0 away from the mean.<br>The other distances do not change, so the typical distance from the mean shrinks.<br>So the standard deviation decreases.",
+    "check": "The five old distances 18, 9, 0, 7, 20 stay the same, and a sixth distance of 0 joins them ✓",
+    "be_careful": "Adding a value does not always add spread. A value at the center reduces it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-017",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C3"
+   ],
+   "family": "count-above-mean-table",
+   "signature": "siblings 0-4 freq 5,9,4,1,1, mean 1.2; students above mean = 6; traps 15 (at least 1), 9 (exactly 1), 3 (categories)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the number of siblings of each of 20 students.<table class=\"dt\"><tr><th>Number of siblings</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>Number of students</th><td>5</td><td>9</td><td>4</td><td>1</td><td>1</td></tr></table>",
+   "stem_after_figure": "How many of these students have more siblings than the mean number of siblings?",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "3",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "3 counts the columns above the mean (2, 3, 4). Each column holds several students."
+    },
+    {
+     "key": "B",
+     "text": "6",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "9",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "9 students have exactly 1 sibling, which is less than the mean of 1.2."
+    },
+    {
+     "key": "D",
+     "text": "15",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "15 students have at least 1 sibling, but 1 is below the mean of 1.2."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "First find the mean from the table, then add the frequencies of the values above it.",
+    "steps": "The question asks how many students are above the mean.<br>total siblings $= 0(5) + 1(9) + 2(4) + 3(1) + 4(1) = 24$ <span class=\"nt\">(value times frequency)</span><br>mean $= \\frac{24}{20} = 1.2$ <span class=\"nt\">(20 students)</span><br>values above 1.2: 2, 3, and 4 <span class=\"nt\">(1 is less than 1.2)</span><br>$4 + 1 + 1 = 6$ <span class=\"nt\">(add their frequencies)</span>",
+    "check": "$5 + 9 + 6 = 20$, so every student is counted once ✓",
+    "be_careful": "The 9 students with 1 sibling are just below the mean, so they are not counted.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-018",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C4"
+   ],
+   "family": "recover-group-mean",
+   "signature": "30 adults mean 6 h, 50 people mean 6.8 -> 20 teens mean 8; traps 7.6 (2*6.8-6), 3.2 (over 50), 5.33 (over 30)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A survey asked 50 people how many hours they spent outdoors last weekend. The 30 adults in the survey had a mean of 6 hours. The mean for all 50 people was 6.8 hours. The other people in the survey were teenagers. What was the mean number of hours for the teenagers?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "3.2",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This divides the teenagers’ total, 160 hours, by all 50 people instead of the 20 teenagers."
+    },
+    {
+     "key": "B",
+     "text": "5.33",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "This divides 160 hours by 30, the number of adults."
+    },
+    {
+     "key": "C",
+     "text": "7.6",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats 6.8 as the average of the two group means. The groups have 30 and 20 people."
+    },
+    {
+     "key": "D",
+     "text": "8",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Totals can be subtracted. Find the teenagers’ total, then divide by the number of teenagers.",
+    "steps": "The question asks for the teenagers’ mean.<br>number of teenagers $= 50 - 30 = 20$ <span class=\"nt\">(the rest of the survey)</span><br>total for all $= 50(6.8) = 340$ <span class=\"nt\">(mean times count)</span><br>total for adults $= 30(6) = 180$ <span class=\"nt\">(mean times count)</span><br>total for teenagers $= 340 - 180 = 160$ <span class=\"nt\">(subtract)</span><br>mean $= \\frac{160}{20} = 8$ <span class=\"nt\">(20 teenagers)</span>",
+    "check": "$\\frac{180 + 20(8)}{50} = \\frac{340}{50} = 6.8$ ✓",
+    "be_careful": "6.8 is not halfway between the group means, because the groups have different sizes.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-019",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C6"
+   ],
+   "family": "right-skew-histogram",
+   "signature": "right-skewed histogram of 24 commute distances; mean > median; claim pairs",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The histogram shows the distance from home to work for each of 24 employees.",
+   "stem_after_figure": "Which of the following is most likely true about the mean and the median of these distances?",
+   "figures": [
+    {
+     "id": "QB-P3-019-fig1",
+     "file": "figures/QB-P3-019-fig1.svg",
+     "alt": "A histogram with intervals of width 10 from 0 to 60 miles. The bar heights are 9, 7, 4, 2, 1, and 1 employees, falling from left to right."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The mean is less than the median.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This is the pattern for data with a long tail to the left. Here the tail is on the right."
+    },
+    {
+     "key": "B",
+     "text": "The mean and the median are equal.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Equal mean and median fit a symmetric shape. These bars fall steadily to the right."
+    },
+    {
+     "key": "C",
+     "text": "The median is greater than 30 miles.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "30 is the middle of the axis. 16 of the 24 employees live less than 20 miles away."
+    },
+    {
+     "key": "D",
+     "text": "The mean is greater than the median.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A long tail of large values pulls the mean toward that tail, past the median.",
+    "steps": "The question asks how the mean and the median compare.<br>median: the 12th and 13th values are in 10 to 20 <span class=\"nt\">(9 values below 10, 16 values below 20)</span><br>The bars fall from left to right, with a few values far out at 40 to 60.<br>Those few large values raise the total, so the mean is pulled to the right.<br>The middle position barely notices them.<br>So the mean is greater than the median.",
+    "check": "Using interval midpoints, the mean is about $\\frac{420}{24} = 17.5$, while the 12th and 13th values sit in the lower half of the 10 to 20 bar (only 3 and 4 values into its 7) ✓",
+    "be_careful": "Skewed right (tail on the right) means the mean is greater than the median.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-020",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "M",
+   "concepts": [
+    "P3.C7"
+   ],
+   "family": "mean-two-more-than-median",
+   "signature": "3,3,5,7,x with x>7, mean = median + 2 -> x=17; traps 9, 10 (count 4), 35 (total)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The data set $3, 3, 5, 7, x$ has a mean that is 2 greater than its median. If $x > 7$, what is the value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "9",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 2 to the greatest known value. The 2 is the gap between the mean and the median."
+    },
+    {
+     "key": "B",
+     "text": "10",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This uses a count of 4. The data set has 5 values, so the total is $5(7) = 35$."
+    },
+    {
+     "key": "C",
+     "text": "17",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "35",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "35 is the total of all 5 values, not $x$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Find the median from the order, then turn the mean into a total.",
+    "steps": "The question asks for $x$.<br>order: $3, 3, 5, 7, x$ <span class=\"nt\">(given that $x > 7$)</span><br>median $= 5$ <span class=\"nt\">(the 3rd of 5 values)</span><br>mean $= 5 + 2 = 7$ <span class=\"nt\">(given)</span><br>total $= 5(7) = 35$ <span class=\"nt\">(mean times count)</span><br>$3 + 3 + 5 + 7 + x = 35$ <span class=\"nt\">(sum of the values)</span><br>$x = 35 - 18 = 17$ <span class=\"nt\">(subtract 18)</span>",
+    "check": "$\\frac{3 + 3 + 5 + 7 + 17}{5} = 7$, and the median is 5, so the mean is 2 greater ✓",
+    "be_careful": "The condition $x > 7$ is what makes 5 the median.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-021",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C4"
+   ],
+   "family": "joiners-count-from-new-mean",
+   "signature": "40 members mean age 30, k joiners mean 18, new mean 26 -> k=20; trap 80 (weights swapped)",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A hiking club has 40 members with a mean age of 30 years. Then some new members join the club. The mean age of the new members is 18 years, and the mean age of all members, old and new, is 26 years. How many new members joined the club?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "20"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "80",
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "Swaps the distances in the balance, $40(8) = 4k$. The old members are 4 years from 26, the new members are 8 years from 26."
+    }
+   ],
+   "solution": {
+    "key_idea": "The combined mean is a weighted balance. The total age of the whole club must equal the sum of the two groups’ totals.",
+    "steps": "The question asks for the number of new members.<br>Let $k$ = the number of new members.<br>total age of old members $= 40(30) = 1,200$ <span class=\"nt\">(mean times count)</span><br>total age of new members $= 18k$ <span class=\"nt\">(mean times count)</span><br>$1,200 + 18k = 26(40 + k)$ <span class=\"nt\">(whole club total, two ways)</span><br>$1,200 + 18k = 1,040 + 26k$ <span class=\"nt\">(distribute)</span><br>$160 = 8k$ <span class=\"nt\">(subtract 1,040 and $18k$)</span><br>$k = 20$ <span class=\"nt\">(divide by 8)</span>",
+    "check": "$\\frac{1,200 + 18(20)}{60} = \\frac{1,560}{60} = 26$ ✓",
+    "be_careful": "The new mean is closer to 30 than to 18, so fewer new members than old members joined.",
+    "desmos": null,
+    "another_way": "Balance: each old member is 4 years above 26 and each new member is 8 years below, so $40(4) = 8k$ and $k = 20$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-022",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C1",
+    "P3.C2"
+   ],
+   "family": "letters-mean-equals-median-bounded",
+   "signature": "data a,2a,3a,4a,40 with 0<a<10, mean = median -> a=8, mean 24; traps 8 (a), 16 (2a), 32 (4a)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set consists of the five values $a$, $2a$, $3a$, $4a$, and 40, where $0 < a < 10$. The mean of the data set is equal to its median. What is the mean of the data set?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "8",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 is the value of $a$. The question asks for the mean, which is $3a$."
+    },
+    {
+     "key": "B",
+     "text": "16",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "16 is $2a$, the mean without the $\\frac{40}{5} = 8$ part."
+    },
+    {
+     "key": "C",
+     "text": "24",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "32",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "32 is $4a$, the 4th value in order, not the middle one."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Use the condition on $a$ to put the values in order, so the median is known in terms of $a$.",
+    "steps": "The question asks for the mean, which equals the median.<br>$4a < 40$ <span class=\"nt\">(because $a < 10$)</span><br>order: $a, 2a, 3a, 4a, 40$ <span class=\"nt\">(so 40 is the greatest)</span><br>median $= 3a$ <span class=\"nt\">(the 3rd of 5 values)</span><br>mean $= \\frac{a + 2a + 3a + 4a + 40}{5} = 2a + 8$ <span class=\"nt\">(total over 5)</span><br>$2a + 8 = 3a$ <span class=\"nt\">(mean equals median)</span><br>$a = 8$ <span class=\"nt\">(subtract $2a$ from both sides)</span><br>mean $= 3(8) = 24$ <span class=\"nt\">(the finish line)</span>",
+    "check": "Values 8, 16, 24, 32, 40: median 24, mean $\\frac{120}{5} = 24$ ✓",
+    "be_careful": "The bound $0 < a < 10$ is what fixes the order. Without it, $a = 16$ (values 16, 32, 40, 48, 64) also works with mean 40.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-023",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C6",
+    "P3.C2"
+   ],
+   "family": "add-two-values-straddling-median",
+   "signature": "15 distinct values median 50 mean 47; add 30 and 66 -> median 50 (one on each side), mean up since (30 + 66)/2 = 48 > 47; trap: mean down because 30 is farther from 50 than 66",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set consists of 15 different values. The median of the data set is 50, and the mean is 47. Two values, 30 and 66, are added to the data set. Which of the following describes the median and the mean of the new data set of 17 values?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The median is still 50, and the mean is still 47.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The two new values have a mean of 48, which is above 47, so they pull the mean up a little."
+    },
+    {
+     "key": "B",
+     "text": "The median decreases, and the mean decreases.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "One new value is below 50 and one is above, so the middle value is still 50."
+    },
+    {
+     "key": "C",
+     "text": "The median is still 50, and the mean decreases.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "30 is farther from 50 than 66 is, but the mean must be compared with the old mean, 47, not with the median."
+    },
+    {
+     "key": "D",
+     "text": "The median is still 50, and the mean increases.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Compare the added values with the old mean to see how the mean moves, and count how many land on each side of the median.",
+    "steps": "The question asks how the median and the mean change.<br>7 values below 50, then 50, then 7 above <span class=\"nt\">(15 different values, median 50)</span><br>30 joins the lower side and 66 the upper side <span class=\"nt\">(now 8 below and 8 above)</span><br>new median $=$ 9th of 17 values $= 50$ <span class=\"nt\">(still the middle)</span><br>old total $= 15(47) = 705$ <span class=\"nt\">(mean times count)</span><br>new mean $= \\frac{705 + 96}{17} = \\frac{801}{17} \\approx 47.1$ <span class=\"nt\">(new total over new count)</span><br>The mean increases, because the two new values average 48, which is more than 47.",
+    "check": "$\\frac{801}{17} - 47 = \\frac{2}{17} > 0$, and the two new values add $96 - 2(47) = 2$ more than two values at the old mean would ✓",
+    "be_careful": "Distances from the median do not decide the mean; compare with the old mean.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-024",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C3"
+   ],
+   "family": "histogram-could-be-mean",
+   "signature": "histogram 20 values in [0,10),[10,20),[20,30) freq 4,6,10; mean in [13,23); 22 only; traps 10, 12, 25",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The histogram summarizes a data set of 20 values. Each interval includes its left endpoint but not its right endpoint.",
+   "stem_after_figure": "Which of the following could be the mean of the data set?",
+   "figures": [
+    {
+     "id": "QB-P3-024-fig1",
+     "file": "figures/QB-P3-024-fig1.svg",
+     "alt": "A histogram with three intervals: 0 to 10 has frequency 4, 10 to 20 has frequency 6, and 20 to 30 has frequency 10."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "10",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "10 is the average of the left endpoints 0, 10, 20 without weighting by the frequencies. Even the least possible mean is 13."
+    },
+    {
+     "key": "B",
+     "text": "12",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "For a mean of 12 the total would be 240, but the least possible total is 260."
+    },
+    {
+     "key": "C",
+     "text": "22",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "25",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "25 is the middle of the tallest bar. Every value is less than 30 and half are less than 20, so the mean is less than 23."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A histogram does not give exact values, but every value lies in its interval, so the total, and the mean, lie between two bounds.",
+    "steps": "The question asks which value is possible for the mean.<br>least possible total $= 4(0) + 6(10) + 10(20) = 260$ <span class=\"nt\">(every value at its left endpoint)</span><br>greatest total is less than $4(10) + 6(20) + 10(30) = 460$ <span class=\"nt\">(every value below its right endpoint)</span><br>$\\frac{260}{20} \\le$ mean $< \\frac{460}{20}$ <span class=\"nt\">(divide by 20 values)</span><br>$13 \\le$ mean $< 23$ <span class=\"nt\">(bounds on the mean)</span><br>Only 22 is in this range.",
+    "check": "Example: 4 values of 9, 6 values of 19, and 10 values of 29 fit the bars, and $\\frac{36 + 114 + 290}{20} = \\frac{440}{20} = 22$ ✓",
+    "be_careful": "Midpoints give only an estimate. The question asks what the mean could be, so use the bounds.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-025",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C5"
+   ],
+   "family": "two-boxplots-class-sizes",
+   "signature": "box plots class X (40 students) and Y (20); at least 10 in X scored 78+; traps mean (D27), count across sizes, exact count",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The box plots summarize the scores on a test for class X, which has 40 students, and class Y, which has 20 students.",
+   "stem_after_figure": "Which of the following must be true?",
+   "figures": [
+    {
+     "id": "QB-P3-025-fig1",
+     "file": "figures/QB-P3-025-fig1.svg",
+     "alt": "Two box plots on a scale from 50 to 100. Class X: minimum 50, first quartile 62, median 70, third quartile 78, maximum 96. Class Y: minimum 55, first quartile 65, median 70, third quartile 85, maximum 90."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "At least 10 students in class X scored 78 or higher.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The mean score of class X is greater than the mean score of class Y.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "A box plot does not show the mean. The two means cannot be compared from this display."
+    },
+    {
+     "key": "C",
+     "text": "More students in class Y than in class X scored above 70.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "At most half of class Y, 10 students, scored above 70, while at least 10 students of class X scored 78 or higher."
+    },
+    {
+     "key": "D",
+     "text": "Exactly 5 students in class Y scored above 85.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "About a quarter of class Y is above 85, but ties at 85 can make the count different from exactly 5."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "At least one quarter of a data set lies at or above the third quartile. Turn that fraction into a number of students for each class.",
+    "steps": "The question asks which statement must be true.<br>class X: third quartile $= 78$ <span class=\"nt\">(right edge of the box)</span><br>at least $\\frac{1}{4}$ of class X scored 78 or higher <span class=\"nt\">(meaning of the third quartile)</span><br>$\\frac{1}{4}(40) = 10$ <span class=\"nt\">(40 students)</span><br>So at least 10 students in class X scored 78 or higher.<br>Why not the others: a box plot shows no mean; class Y has at most 10 students above its median of 70; and \"about a quarter\" is not \"exactly 5\".",
+    "check": "With 40 scores in order, the third quartile 78 is the mean of the 30th and 31st scores, so the 31st through 40th scores (10 scores) are at least 78 ✓",
+    "be_careful": "Box plots show fractions of each class. Compare counts only after multiplying by each class size.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-026",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C1"
+   ],
+   "family": "correct-remove-and-recover-missing-value-spr",
+   "signature": "recorded mean 45 of 12; 36 should be 63, 50 should not be included, and one measurement m was left out; correct mean of 12 is 48 -> 540 + 27 - 50 + m = 576 -> m = 59; wrong 86 (ignores the correction), 9 (ignores the removal)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The mean of 12 recorded measurements was calculated as 45. Later it was found that one measurement recorded as 36 should have been 63, that another measurement, 50, should not have been included, and that one correct measurement had been left out. The mean of the 12 correct measurements is 48. What is the value of the measurement that had been left out?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "59"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "86",
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This skips the correction from 36 to 63: $576 - (540 - 50)$."
+    },
+    {
+     "value": "9",
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This skips the removal of the 50: $576 - 567$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Fix the total step by step: correct one value, remove one, then the missing value is whatever makes the correct total.",
+    "steps": "The question asks for the measurement that was left out.<br>recorded total $= 12(45) = 540$ <span class=\"nt\">(mean times count)</span><br>after the correction: $540 - 36 + 63 = 567$ <span class=\"nt\">(replace 36 with 63; count still 12)</span><br>after the removal: $567 - 50 = 517$ <span class=\"nt\">(now 11 measurements)</span><br>correct total $= 12(48) = 576$ <span class=\"nt\">(11 measurements plus the missing one)</span><br>missing value $= 576 - 517 = 59$ <span class=\"nt\">(subtract)</span><br>Why it works: every change is a change to the total, and the count ends back at 12.",
+    "check": "$\\frac{540 + 27 - 50 + 59}{12} = \\frac{576}{12} = 48$ ✓",
+    "be_careful": "Track the count too: the removal makes it 11, and the missing value brings it back to 12.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-027",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C6",
+    "P3.C5"
+   ],
+   "family": "reflect-and-scale-100-minus-2v",
+   "signature": "new data = 100 - 2v; mean becomes 100 - 2(mean), SD doubles; traps SD unchanged, SD negative, SD 100-2SD",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Each value $v$ in data set P is replaced by $100 - 2v$ to form data set Q. Which of the following correctly compares the mean and the standard deviation of data set Q with those of data set P?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The mean of Q is 100 minus 2 times the mean of P, and the standard deviations are equal.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Shifting by 100 does not change spread, but multiplying by 2 doubles every distance between values."
+    },
+    {
+     "key": "B",
+     "text": "The mean of Q is 100 minus 2 times the mean of P, and the standard deviation of Q is 2 times that of P.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "The mean of Q is 100 minus 2 times the mean of P, and the standard deviation of Q is $-2$ times that of P.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "A standard deviation is a typical distance, so it can never be negative. The sign flip reverses the order, not the size of the gaps."
+    },
+    {
+     "key": "D",
+     "text": "The mean of Q is 100 minus 2 times the mean of P, and the standard deviation of Q is $100 - 2$ times that of P.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "The 100 slides every value by the same amount, which leaves the spread alone."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Track the three moves separately: multiplying by $-2$ flips and stretches, and adding 100 slides. Only the stretch changes the spread.",
+    "steps": "The question asks how the mean and the standard deviation change.<br>mean of Q $= \\frac{\\sum(100 - 2v)}{n} = 100 - 2\\bar{v}$ <span class=\"nt\">(total over count)</span><br>distance of $100 - 2v$ from the new mean $= |(100 - 2v) - (100 - 2\\bar{v})| = 2|v - \\bar{v}|$ <span class=\"nt\">(every distance doubles)</span><br>Every value is twice as far from its mean as before, so the standard deviation doubles.<br>The minus sign only reverses the order of the values, and the 100 only slides them, so neither changes the spread.",
+    "check": "P: 3, 8, 20 becomes Q: 94, 84, 60. The gaps 5 and 12 in P become 10 and 24 in Q, twice as large ✓",
+    "be_careful": "A standard deviation is never negative. Multiplying by $-2$ multiplies it by $|-2| = 2$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-028",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C3",
+    "P3.C2"
+   ],
+   "family": "unknown-frequency-median-could-be",
+   "signature": "values 1-5 freq 4,6,k,3,2, median 3; k=6 works, k=5 gives 2.5 (even count), k=4 gives 2",
+   "abilities": [
+    "R",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The frequency table summarizes a data set.<table class=\"dt\"><tr><th>Value</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><th>Frequency</th><td>4</td><td>6</td><td>$k$</td><td>3</td><td>2</td></tr></table>",
+   "stem_after_figure": "The median of the data set is 3. Which of the following could be the value of $k$?",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "3",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "With $k = 3$ there are 18 values, and the 9th and 10th are both 2."
+    },
+    {
+     "key": "B",
+     "text": "4",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $k = 4$ there are 19 values, and the 10th value is the last 2, so the median is 2."
+    },
+    {
+     "key": "C",
+     "text": "5",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $k = 5$ there are 20 values. The 10th value is 2 and the 11th is 3, so the median is 2.5, not 3."
+    },
+    {
+     "key": "D",
+     "text": "6",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Find which positions are the middle ones for each possible count, then check which value sits there.",
+    "steps": "The question asks which $k$ makes the median exactly 3.<br>values 1 and 2 fill positions 1 to 10 <span class=\"nt\">($4 + 6 = 10$)</span><br>number of values $= 15 + k$ <span class=\"nt\">(add the frequencies)</span><br>For the median to be 3, every middle position must be past position 10.<br>$k = 5$: 20 values, middle positions 10 and 11, median $\\frac{2 + 3}{2} = 2.5$ <span class=\"nt\">(position 10 is still a 2)</span><br>$k = 6$: 21 values, middle position 11, which is a 3 <span class=\"nt\">(median 3)</span><br>So $k = 6$ works and 3, 4, 5 do not.",
+    "check": "$k = 6$: 10 values are less than 3 and 5 are greater, with the 11th of 21 values equal to 3 ✓",
+    "be_careful": "With an even count the median averages two positions. One of them can still be a 2.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-029",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C4"
+   ],
+   "family": "group-size-from-means-and-gap",
+   "signature": "dept means 40k and 70k, overall 52k, second dept has 30 fewer -> 60%/40% split, total 150; traps 60, 90, 30",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A company has employees in two departments. The mean annual salary is $\\$40,000$ in the first department and $\\$70,000$ in the second department. The mean annual salary of all employees in the company is $\\$52,000$. The second department has 30 fewer employees than the first department. How many employees does the company have?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "30",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "30 is the difference between the departments, not the total."
+    },
+    {
+     "key": "B",
+     "text": "60",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "60 is the number of employees in the second department."
+    },
+    {
+     "key": "C",
+     "text": "90",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "90 is the number of employees in the first department."
+    },
+    {
+     "key": "D",
+     "text": "150",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The overall mean fixes what fraction of employees is in each department. The 30-employee gap then fixes the actual numbers.",
+    "steps": "The question asks for the total number of employees.<br>Let $p$ = the fraction of employees in the second department.<br>$40,000(1 - p) + 70,000p = 52,000$ <span class=\"nt\">(weighted mean)</span><br>$30,000p = 12,000$, so $p = 0.4$ <span class=\"nt\">(subtract 40,000 and divide)</span><br>first department $= 0.6n$, second $= 0.4n$ <span class=\"nt\">(for $n$ employees in all)</span><br>$0.6n - 0.4n = 30$ <span class=\"nt\">(the second has 30 fewer)</span><br>$0.2n = 30$, so $n = 150$ <span class=\"nt\">(divide by 0.2)</span>",
+    "check": "90 and 60 employees: $\\frac{90(40,000) + 60(70,000)}{150} = \\frac{7,800,000}{150} = 52,000$ ✓",
+    "be_careful": "52,000 is closer to 40,000, so the first department is the larger one, which matches \"the second has 30 fewer\".",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-030",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C2",
+    "P3.C3"
+   ],
+   "family": "combined-table-median",
+   "signature": "two classes library visits tables 2,3,4,1 and 6,2,1,1; combined median 2; traps 1.75 (mean of medians), 2.05 (mean), 2.5 (first class)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the number of library visits last month for the 10 students in each of two classes.<table class=\"dt\"><tr><th>Number of visits</th><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>First class</th><td>2</td><td>3</td><td>4</td><td>1</td></tr><tr><th>Second class</th><td>6</td><td>2</td><td>1</td><td>1</td></tr></table>",
+   "stem_after_figure": "What is the median number of visits for all 20 students?",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "1.75",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This averages the two class medians, 2.5 and 1. Medians of groups cannot be averaged; the combined list must be used."
+    },
+    {
+     "key": "B",
+     "text": "2",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "2.05",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "2.05 is the mean of all 20 values, 41 visits divided by 20."
+    },
+    {
+     "key": "D",
+     "text": "2.5",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "2.5 is the median of the first class only."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Combine the two classes into one frequency row first. Then count to the middle positions.",
+    "steps": "The question asks for the median of all 20 values.<br>combined counts: 1 visit 8, 2 visits 5, 3 visits 5, 4 visits 2 <span class=\"nt\">(add each column)</span><br>middle positions: 10th and 11th <span class=\"nt\">(20 values)</span><br>1 visit: positions 1 to 8 <span class=\"nt\">(count 8)</span><br>2 visits: positions 9 to 13 <span class=\"nt\">(count 5)</span><br>median $= \\frac{2 + 2}{2} = 2$ <span class=\"nt\">(both middle values are 2)</span>",
+    "check": "8 values are below 2 and 7 values are above 2, so 2 sits in the middle ✓",
+    "be_careful": "The median of a combined group is not the average of the two group medians.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-031",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C1",
+    "P3.C5"
+   ],
+   "family": "range-from-removal-means",
+   "signature": "7 values mean 20; remove greatest -> mean 18; remove least -> mean 21; range 32-14 = 18; trap 3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A data set of 7 values has a mean of 20. If the greatest value is removed, the mean of the remaining values is 18. If instead the least value is removed, the mean of the remaining values is 21. What is the range of the original data set?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "18"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Subtracts the two means, $21 - 18$. The range is a difference of data values, not of means."
+    }
+   ],
+   "solution": {
+    "key_idea": "Each removal tells how much of the total one value carried. The greatest and least values come from total minus remaining total.",
+    "steps": "The question asks for the greatest value minus the least value.<br>total $= 7(20) = 140$ <span class=\"nt\">(mean times count)</span><br>without the greatest: $6(18) = 108$ <span class=\"nt\">(6 values remain)</span><br>greatest value $= 140 - 108 = 32$ <span class=\"nt\">(the part removed)</span><br>without the least: $6(21) = 126$ <span class=\"nt\">(6 values remain)</span><br>least value $= 140 - 126 = 14$ <span class=\"nt\">(the part removed)</span><br>range $= 32 - 14 = 18$ <span class=\"nt\">(greatest minus least)</span>",
+    "check": "The set 14, 16, 18, 20, 20, 20, 32 has mean 20; removing 32 leaves mean 18; removing 14 leaves mean 21 ✓",
+    "be_careful": "Removing the least value raises the mean, which is why 21 is greater than 20.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-032",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C5"
+   ],
+   "family": "least-sd-same-range-options",
+   "signature": "10,20,30,40,50: add 30 three times (var 125) / remove 30 (250) / remove 10 and 50 (66.7) / replace 10 and 50 with 25 and 35 (50); least SD is the replacement; C and D have the same range 20",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set consists of the values $10, 20, 30, 40,$ and $50$. Which of the following changes to the data set would result in a data set with the least standard deviation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Add three values of 30",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Many values at the mean help, but 10 and 50 still sit 20 from the mean."
+    },
+    {
+     "key": "B",
+     "text": "Remove 30",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Removing the value at the mean leaves only values 10 or 20 away, so the spread increases."
+    },
+    {
+     "key": "C",
+     "text": "Remove 10 and 50",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This also gives a range of 20, but it keeps only 20, 30, 40. The replacement keeps the same ends and adds two values 5 from the mean."
+    },
+    {
+     "key": "D",
+     "text": "Replace 10 with 25 and replace 50 with 35",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Standard deviation measures typical distance from the mean. When two choices have the same range, look at how many values sit close to the mean.",
+    "steps": "The question asks which change makes the values closest to their mean.<br>The mean is 30 in every case, since each change is balanced around 30.<br>add three 30s: distances 20, 10, 0, 0, 0, 0, 10, 20 <span class=\"nt\">(the 20s remain)</span><br>remove 30: distances 20, 10, 10, 20 <span class=\"nt\">(the spread grows)</span><br>remove 10 and 50: values 20, 30, 40; distances 10, 0, 10 <span class=\"nt\">(range 20)</span><br>replace: values 20, 25, 30, 35, 40; distances 10, 5, 0, 5, 10 <span class=\"nt\">(same range 20, more values near 30)</span><br>The replacement has the same largest distances as removing 10 and 50, plus two values only 5 from the mean, so its standard deviation is the least.<br>Why it works: values closer to the mean than typical lower the standard deviation.",
+    "check": "Mean squared distance: replacement $\\frac{100 + 25 + 0 + 25 + 100}{5} = 50$; removal $\\frac{100 + 0 + 100}{3} \\approx 66.7$; three 30s $\\frac{1{,}000}{8} = 125$ ✓",
+    "be_careful": "Equal ranges do not mean equal standard deviations.",
+    "desmos": "Desmos: compare stdev([20,25,30,35,40]) with stdev([20,30,40]) after reasoning.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-033",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C6",
+    "P3.C5"
+   ],
+   "family": "replace-max-below-min-must",
+   "signature": "killer hp-psda11-3: 9 different numbers; largest replaced by a number below the smallest -> mean decreases (I), median a5 -> a4 decreases (II), range can increase (III not must); key I and II only",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set consists of 9 different numbers. The greatest number is removed and replaced with a number that is less than the least number in the original data set. Which of the following must be true?<br>I. The mean decreases.<br>II. The median decreases.<br>III. The range decreases.",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "I only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "The median does change: every original value below the old median moves up one position, so the new 5th value is the old 4th value."
+    },
+    {
+     "key": "B",
+     "text": "I and II only",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "I and III only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "The new number can be far below the old least number, so the range can increase. Also the median does decrease."
+    },
+    {
+     "key": "D",
+     "text": "I, II, and III",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "III can fail: if the new number is very small, the range grows."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Write the values in order as $a_1 < a_2 < \\dots < a_9$ and track the positions after the change.",
+    "steps": "The question asks which statements are true in every case.<br>old list: $a_1, a_2, \\dots, a_9$; old median $= a_5$ <span class=\"nt\">(9 values in order)</span><br>new list: $n, a_1, a_2, \\dots, a_8$ with $n < a_1$ <span class=\"nt\">($a_9$ is removed, $n$ goes first)</span><br>new median $=$ 5th value $= a_4 < a_5$ <span class=\"nt\">(II must be true)</span><br>new total $=$ old total $- a_9 + n$, and $n < a_9$ <span class=\"nt\">(the total drops, so I must be true)</span><br>old range $= a_9 - a_1$; new range $= a_8 - n$ <span class=\"nt\">(compare)</span><br>If $n$ is far below $a_1$, then $a_8 - n$ can be greater than $a_9 - a_1$, so III need not be true.<br>Why it works: the mean depends on the total, the median on positions, and the range on both ends.",
+    "check": "Take 1, 2, ..., 9 and replace 9 with $-100$: the mean drops, the median goes from 5 to 4, and the range goes from 8 to 108 ✓",
+    "be_careful": "\"Must be true\" fails with a single counterexample, so test an extreme new value for the range.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-034",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C3",
+    "P3.C2"
+   ],
+   "family": "integer-bins-median-could-be",
+   "signature": "30 integer scores in 60-69,70-79,80-89,90-99 freq 5,9,10,6; median from 15th, 16th in 80s; 84.5 only",
+   "abilities": [
+    "R",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table summarizes the scores of 30 students on a test. Every score is a whole number.<table class=\"dt\"><tr><th>Score</th><td>60 to 69</td><td>70 to 79</td><td>80 to 89</td><td>90 to 99</td></tr><tr><th>Number of students</th><td>5</td><td>9</td><td>10</td><td>6</td></tr></table>",
+   "stem_after_figure": "Which of the following could be the median score?",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "79.5",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This averages the 14th and 15th scores (79 and 80). With 30 scores the middle ones are the 15th and 16th, both in the 80s."
+    },
+    {
+     "key": "B",
+     "text": "84.5",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "89.5",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This needs the 16th score to be 90. The 16th score is in the 80 to 89 row, so it is at most 89."
+    },
+    {
+     "key": "D",
+     "text": "90",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Both middle scores are at most 89, so the median is at most 89."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Locate the middle positions in the table. Then use the fact that each score is a whole number inside its row.",
+    "steps": "The question asks which value is a possible median.<br>middle positions: 15th and 16th <span class=\"nt\">(30 scores)</span><br>scores below 80: $5 + 9 = 14$ <span class=\"nt\">(first two rows)</span><br>15th and 16th scores are in 80 to 89 <span class=\"nt\">(the third row holds positions 15 to 24)</span><br>$80 \\le$ median $\\le 89$ <span class=\"nt\">(average of two whole numbers from 80 to 89)</span><br>Of the choices, only 84.5 fits, for example with 15th score 84 and 16th score 85.",
+    "check": "With 15th score 84 and 16th score 85, $\\frac{84 + 85}{2} = 84.5$, and every row count still holds ✓",
+    "be_careful": "Count positions exactly: 14 scores are below 80, so the 15th score is already in the 80s.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-035",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C1",
+    "P3.C6"
+   ],
+   "family": "transformed-letters-mean-two-unknown-values",
+   "signature": "mean p,q,r,s = 30; mean of 2p+1..2s+1, t, t+4 is 50 -> 244 + 2t + 4 = 300 -> t = 26; traps 28 (drops the four 1s), 52 (counts t once), 56 (ignores t + 4)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The mean of the four numbers $p$, $q$, $r$, and $s$ is 30. The mean of the six numbers $2p + 1$, $2q + 1$, $2r + 1$, $2s + 1$, $t$, and $t + 4$ is 50. What is the value of $t$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "26",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "28",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This drops the four added 1s. The four new numbers total $2(120) + 4 = 244$, not 240."
+    },
+    {
+     "key": "C",
+     "text": "52",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This counts $t$ only once: $244 + t + 4 = 300$. Both $t$ and $t + 4$ contain $t$."
+    },
+    {
+     "key": "D",
+     "text": "56",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This treats the last two numbers as a single number $t$: $300 - 244$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Work with totals. Doubling each number doubles the total, and adding 1 to each of four numbers adds 4.",
+    "steps": "The question asks for $t$.<br>$p + q + r + s = 4(30) = 120$ <span class=\"nt\">(mean times count)</span><br>$(2p + 1) + (2q + 1) + (2r + 1) + (2s + 1) = 2(120) + 4 = 244$ <span class=\"nt\">(double, then add four 1s)</span><br>total of the six numbers $= 6(50) = 300$ <span class=\"nt\">(mean times count)</span><br>$244 + t + (t + 4) = 300$ <span class=\"nt\">(add the last two numbers)</span><br>$2t + 248 = 300$, so $t = 26$ <span class=\"nt\">(solve)</span><br>Why it works: a mean is a total in disguise, and totals add.",
+    "check": "$244 + 26 + 30 = 300$, and $\\frac{300}{6} = 50$ ✓",
+    "be_careful": "The +1 is added four times, and $t$ appears in two of the six numbers.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-036",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C6",
+    "P3.C2"
+   ],
+   "family": "x-makes-mean-less-than-median",
+   "signature": "3,7,7,10,13,x; which x gives mean < median: 10; traps 4 and 9 (median read without re-sorting), 15",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set consists of the six values $3, 7, 7, 10, 13,$ and $x$. For which of the following values of $x$ is the mean of the data set less than its median?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "4",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "With $x = 4$ the sorted list is 3, 4, 7, 7, 10, 13, so the median is 7 and the mean, about 7.33, is greater."
+    },
+    {
+     "key": "B",
+     "text": "9",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Sorted: 3, 7, 7, 9, 10, 13, so the median is 8, and the mean, about 8.17, is greater. Taking 7 and 10 as the middle skips the sorting."
+    },
+    {
+     "key": "C",
+     "text": "10",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "15",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "The median is 8.5, but the mean is $\\frac{55}{6} \\approx 9.17$, which is greater."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Where $x$ lands in the order decides the median, so sort the list again for each value of $x$.",
+    "steps": "The question asks for the $x$ that makes the mean less than the median.<br>mean $= \\frac{40 + x}{6}$ <span class=\"nt\">(total over 6)</span><br>$x = 10$: sorted $3, 7, 7, 10, 10, 13$ <span class=\"nt\">(put $x$ in its place)</span><br>median $= \\frac{7 + 10}{2} = 8.5$ <span class=\"nt\">(3rd and 4th values)</span><br>mean $= \\frac{50}{6} \\approx 8.33$ <span class=\"nt\">(less than 8.5)</span><br>$x = 4$: median 7, mean $\\approx 7.33$; $x = 9$: median 8, mean $\\approx 8.17$; $x = 15$: median 8.5, mean $\\approx 9.17$ <span class=\"nt\">(each mean is greater)</span><br>Only $x = 10$ works.",
+    "check": "For $x = 10$, $8.33 < 8.5$ ✓",
+    "be_careful": "The middle two values change with $x$. Keeping 7 and 10 as the middle values makes 4 and 9 look correct.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-037",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C1"
+   ],
+   "family": "removed-value-then-new-mean",
+   "signature": "10 numbers mean 18; removing n gives remaining mean n-2 -> n = 19.8, mean 17.8; traps 16, 18, 19.8",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The mean of 10 numbers is 18. When one of the numbers, $n$, is removed, the mean of the remaining 9 numbers is $n - 2$. What is the mean of the remaining 9 numbers?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "16",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This assumes the removed number equals the old mean, $n = 18$. Then the remaining mean would still be 18, not $n - 2$."
+    },
+    {
+     "key": "B",
+     "text": "17.8",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "18",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "18 is the old mean. The removed number is above 18, so the mean of the rest drops."
+    },
+    {
+     "key": "D",
+     "text": "19.8",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "19.8 is the removed number $n$. The question asks for $n - 2$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Write the remaining total two ways: total minus $n$, and new mean times new count.",
+    "steps": "The question asks for $n$.<br>total of 10 numbers $= 10(18) = 180$ <span class=\"nt\">(mean times count)</span><br>remaining total $= 180 - n$ <span class=\"nt\">(take out $n$)</span><br>remaining total $= 9(n - 2)$ <span class=\"nt\">(new mean times 9)</span><br>$180 - n = 9n - 18$ <span class=\"nt\">(set equal and distribute)</span><br>$198 = 10n$ <span class=\"nt\">(add $n$ and 18)</span><br>$n = 19.8$ <span class=\"nt\">(divide by 10)</span><br>remaining mean $= n - 2 = 17.8$ <span class=\"nt\">(the finish line)</span>",
+    "check": "Remaining total $180 - 19.8 = 160.2$, and $\\frac{160.2}{9} = 17.8 = 19.8 - 2$ ✓",
+    "be_careful": "Removing a value above the mean (19.8 > 18) lowers the mean, which is consistent with 17.8.",
+    "desmos": "Desmos is the fastest route here: graph y=(180-x)/9 and y=x-2 and read the intersection.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-038",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C2",
+    "P3.C3"
+   ],
+   "family": "least-values-added-for-median",
+   "signature": "dot plot 11 values median 6; least number of 9s added for median 7 -> 4; traps 3 (6.5), 2",
+   "abilities": [
+    "R",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The dot plot shows a data set of 11 values. Each dot represents one value.",
+   "stem_after_figure": "Values of 9 are added to the data set, one at a time. What is the least number of 9s that must be added so that the median of the new data set is 7?",
+   "figures": [
+    {
+     "id": "QB-P3-038-fig1",
+     "file": "figures/QB-P3-038-fig1.svg",
+     "alt": "A dot plot over the values 4 through 9. The numbers of dots are: 4 has 2, 5 has 2, 6 has 3, 7 has 1, 8 has 2, and 9 has 1."
+    }
+   ],
+   "answer": {
+    "spr": {
+     "values": [
+      "4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With 14 values the median averages the 7th and 8th values, 6 and 7, giving 6.5."
+    },
+    {
+     "value": "2",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "With 13 values the median is the 7th value, which is 6."
+    }
+   ],
+   "solution": {
+    "key_idea": "Adding values above the middle slides the middle position to the right. Track the middle position for each new count.",
+    "steps": "The question asks for the least number of 9s that makes the median exactly 7.<br>in order: $4, 4, 5, 5, 6, 6, 6, 7, 8, 8, 9$ <span class=\"nt\">(the 7 is the 8th value)</span><br>each added 9 goes at the end <span class=\"nt\">(positions 1 to 11 keep their values)</span><br>add 3: 14 values, middle 7th and 8th $= 6, 7$, median 6.5 <span class=\"nt\">(not yet 7)</span><br>add 4: 15 values, middle 8th $= 7$ <span class=\"nt\">(median 7)</span><br>So the least number is 4.",
+    "check": "With four 9s added: 7 values below 7 and 7 values above 7 ✓",
+    "be_careful": "Three 9s give an even count, and the median 6.5 is the average of 6 and 7, not 7.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-039",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C3",
+    "P3.C1"
+   ],
+   "family": "letter-values-table-median",
+   "signature": "values x, x+2, x+4 with freq 2,3,5, mean 20 -> x = 17.4, median x+3 = 20.4; traps 20, 19.4",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The table summarizes a data set of 10 values, where $x$ is a constant.<table class=\"dt\"><tr><th>Value</th><td>$x$</td><td>$x + 2$</td><td>$x + 4$</td></tr><tr><th>Frequency</th><td>2</td><td>3</td><td>5</td></tr></table>",
+   "stem_after_figure": "The mean of the data set is 20. What is the median of the data set?",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "20.4",
+      "102/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "20",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "20 is the mean, not the median."
+    },
+    {
+     "value": "19.4",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "19.4 is only the 5th value, $x + 2$. With 10 values the median averages the 5th and 6th values."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find $x$ from the mean, then locate the 5th and 6th values in the table.",
+    "steps": "The question asks for the median of 10 values.<br>total $= 2x + 3(x + 2) + 5(x + 4) = 10x + 26$ <span class=\"nt\">(value times frequency)</span><br>$\\frac{10x + 26}{10} = 20$ <span class=\"nt\">(given mean)</span><br>$10x + 26 = 200$ <span class=\"nt\">(multiply by 10)</span><br>$x = 17.4$ <span class=\"nt\">(subtract 26, divide by 10)</span><br>5th value $= x + 2$ and 6th value $= x + 4$ <span class=\"nt\">(positions 3 to 5 hold $x + 2$; 6 to 10 hold $x + 4$)</span><br>median $= \\frac{(x + 2) + (x + 4)}{2} = x + 3 = 20.4$ <span class=\"nt\">(mean of the middle two)</span>",
+    "check": "Values 17.4, 19.4, 21.4 with counts 2, 3, 5: total $34.8 + 58.2 + 107 = 200$ ✓, and the 5th and 6th values are 19.4 and 21.4 ✓",
+    "be_careful": "The 5th value is the last $x + 2$ and the 6th is the first $x + 4$, so the median is between them.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-040",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H",
+   "concepts": [
+    "P3.C6",
+    "P3.C2"
+   ],
+   "family": "points-added-below-median",
+   "signature": "21 scores median 76, exactly 10 below; add 4 to each below -> mean up 40/21 < 4, median at least 76 (may rise)",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A teacher has 21 test scores. The median score is 76, and exactly 10 of the scores are less than 76. The teacher adds 4 points to each of those 10 scores, and no other score changes. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The mean increases by 4 points, and the median increases by 4 points.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only 10 of the 21 scores change, and the score of 76 itself does not change."
+    },
+    {
+     "key": "B",
+     "text": "The mean increases by less than 4 points, and the median stays exactly 76.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Scores such as 74 or 75 become 78 or 79, which can pass 76 and push the middle score up."
+    },
+    {
+     "key": "C",
+     "text": "The mean increases by less than 4 points, and the median decreases.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "No score goes down, so the middle score cannot go down."
+    },
+    {
+     "key": "D",
+     "text": "The mean increases by less than 4 points, and the median is 76 or greater.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The mean follows the total. The median follows the order, and raised scores can jump past the middle.",
+    "steps": "The question asks what is certain about the new mean and median.<br>increase in total $= 10(4) = 40$ <span class=\"nt\">(10 scores rise by 4)</span><br>increase in mean $= \\frac{40}{21} \\approx 1.9$ <span class=\"nt\">(less than 4)</span><br>No score decreases, and the 11 scores of 76 or more are unchanged.<br>So at least 11 scores are 76 or more, and the median (the 11th score) is at least 76.<br>If some scores were 73 to 75, they become 77 to 79, and the median can rise above 76.<br>So the mean rises by less than 4 and the median is 76 or greater.",
+    "check": "Ten scores of 75, one 76, ten in the 80s: after the change the median is 79. Ten scores in the 60s: the median stays 76. Both fit the key ✓",
+    "be_careful": "\"Must\" means it holds in every case. The median can stay at 76 or rise.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-041",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C4"
+   ],
+   "family": "simpson-two-schools",
+   "signature": "girls higher in each school (90>85, 70>65) but combined boys 81 vs girls 74 -> 7; trap -5",
+   "abilities": [
+    "S",
+    "M",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Two schools gave the same test. At school 1, the 10 girls had a mean score of 90 and the 40 boys had a mean score of 85. At school 2, the 40 girls had a mean score of 70 and the 10 boys had a mean score of 65. For all 100 students together, what is the mean score of the boys minus the mean score of the girls?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "7"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-5",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Uses the within-school gap (girls ahead by 5 at both schools). The combined means must be weighted by the counts."
+    },
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The same within-school gap with the sign flipped."
+    }
+   ],
+   "solution": {
+    "key_idea": "Combine each gender across the schools with weights. Most boys are at the high-scoring school, which can flip the comparison.",
+    "steps": "The question asks for (combined boys’ mean) minus (combined girls’ mean).<br>boys total $= 40(85) + 10(65) = 3,400 + 650 = 4,050$ <span class=\"nt\">(mean times count at each school)</span><br>boys mean $= \\frac{4,050}{50} = 81$ <span class=\"nt\">(50 boys)</span><br>girls total $= 10(90) + 40(70) = 900 + 2,800 = 3,700$ <span class=\"nt\">(mean times count at each school)</span><br>girls mean $= \\frac{3,700}{50} = 74$ <span class=\"nt\">(50 girls)</span><br>$81 - 74 = 7$ <span class=\"nt\">(boys minus girls)</span><br>The girls scored higher at each school, yet the boys have the higher combined mean, because 40 of the 50 boys are at the higher-scoring school.",
+    "check": "Both combined means lie between their two school means: 81 is between 65 and 85, and 74 is between 70 and 90 ✓",
+    "be_careful": "Comparing within each school gives \"girls ahead by 5\". The combined comparison depends on where most of each group is.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-042",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C2",
+    "P3.C1"
+   ],
+   "family": "mean-equals-median-all-cases",
+   "signature": "8,12,15,20,x, mean = median; cases x<=12 (5), 12-15 (13.75), x>=15 (20); sum 38.75; trap 25 (case missed)",
+   "abilities": [
+    "S",
+    "R",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A data set consists of the five values $8, 12, 15, 20,$ and $x$. The mean of the data set is equal to its median. What is the sum of all possible values of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "38.75",
+      "155/4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "25",
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "Finds only the two outside cases, 5 and 20, and misses $x = 13.75$, where $x$ is the median."
+    },
+    {
+     "value": "33.75",
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "Misses the case $x = 5$ below 12."
+    }
+   ],
+   "solution": {
+    "key_idea": "The median depends on where $x$ falls, so split into cases by position and solve in each case. Keep only solutions that fit their case.",
+    "steps": "The question asks for the sum of every $x$ that makes the mean equal the median.<br>mean $= \\frac{55 + x}{5}$ <span class=\"nt\">(total of the five values over 5)</span><br>Case $x \\le 12$: median 12, $55 + x = 60$, $x = 5$ <span class=\"nt\">(5 is at most 12, keep)</span><br>Case $12 \\le x \\le 15$: median $x$, $55 + x = 5x$, $x = 13.75$ <span class=\"nt\">(13.75 is between 12 and 15, keep)</span><br>Case $x \\ge 15$: median 15, $55 + x = 75$, $x = 20$ <span class=\"nt\">(20 is at least 15, keep)</span><br>sum $= 5 + 13.75 + 20 = 38.75$ <span class=\"nt\">(add the three values)</span>",
+    "check": "$x = 5$: mean $\\frac{60}{5} = 12$, median 12 ✓. $x = 13.75$: mean $\\frac{68.75}{5} = 13.75$ ✓. $x = 20$: mean $\\frac{75}{5} = 15$, median 15 ✓",
+    "be_careful": "Each case gives at most one value. Forgetting the middle case, where $x$ itself is the median, loses 13.75.",
+    "desmos": "Desmos: graph y=(55+x)/5 and y=median([8,12,15,20,x]) and read all intersections.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-043",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C3",
+    "P3.C1"
+   ],
+   "family": "greatest-difference-of-means-bins",
+   "signature": "integer bins 0-9,10-19,20-29; P freq 2,5,3, Q freq 1,4,5; max meanQ - meanP = 23 - 11 = 12; trap 3 (midpoints)",
+   "abilities": [
+    "R",
+    "J",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The table summarizes two data sets, P and Q, each with 10 values. Every value is a whole number.<table class=\"dt\"><tr><th>Value</th><td>0 to 9</td><td>10 to 19</td><td>20 to 29</td></tr><tr><th>Number of values in P</th><td>2</td><td>5</td><td>3</td></tr><tr><th>Number of values in Q</th><td>1</td><td>4</td><td>5</td></tr></table>",
+   "stem_after_figure": "What is the greatest possible value of the mean of Q minus the mean of P?",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Uses row midpoints for both sets ($18.5 - 15.5$). That is an estimate, not the greatest possible difference."
+    },
+    {
+     "value": "15",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Uses 10, 20 and 30 as the tops of the rows. A value of 10 is in the 10 to 19 row, so the top of the first row is 9."
+    }
+   ],
+   "solution": {
+    "key_idea": "To make a difference as large as possible, push Q as high as its rows allow and P as low as its rows allow.",
+    "steps": "The question asks for the largest possible (mean of Q) minus (mean of P).<br>The two data sets do not affect each other, so maximize the mean of Q and minimize the mean of P.<br>greatest Q total $= 1(9) + 4(19) + 5(29) = 9 + 76 + 145 = 230$ <span class=\"nt\">(each value at the top of its row)</span><br>greatest mean of Q $= \\frac{230}{10} = 23$ <span class=\"nt\">(10 values)</span><br>least P total $= 2(0) + 5(10) + 3(20) = 0 + 50 + 60 = 110$ <span class=\"nt\">(each value at the bottom of its row)</span><br>least mean of P $= \\frac{110}{10} = 11$ <span class=\"nt\">(10 values)</span><br>$23 - 11 = 12$ <span class=\"nt\">(greatest difference)</span>",
+    "check": "Q = one 9, four 19s, five 29s and P = two 0s, five 10s, three 20s fit every row; means 23 and 11 ✓",
+    "be_careful": "The tops of the rows are 9, 19 and 29, not 10, 20 and 30, because every value is a whole number.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-044",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C6",
+    "P3.C2"
+   ],
+   "family": "negative-parameter-mean-vs-median",
+   "signature": "data -k,0,k,2k,6k with k<0; order reversed, median k, mean 1.6k < k; traps sign (mean>median), cannot determine",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set consists of the five values $-k$, $0$, $k$, $2k$, and $6k$, where $k$ is a negative constant. Which of the following is true about the mean and the median of the data set?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The mean is less than the median.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The mean is greater than the median.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This is the answer for a positive $k$. With $k < 0$, $6k$ is the least value and pulls the mean down."
+    },
+    {
+     "key": "C",
+     "text": "The mean is equal to the median.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The mean is $1.6k$ and the median is $k$; these are equal only when $k = 0$."
+    },
+    {
+     "key": "D",
+     "text": "There is not enough information to compare them.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The sign of $k$ is given, and that is enough to order all five values."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A negative $k$ reverses the order of $k$, $2k$ and $6k$. Order the values first, then compare.",
+    "steps": "The question asks how the mean compares with the median.<br>Because the constant is negative, larger multiples of it are farther to the left on the number line, and its opposite is positive.<br>$6k < 2k < k < 0 < -k$ <span class=\"nt\">(multiplying a negative number by more makes it smaller)</span><br>median $= k$ <span class=\"nt\">(the 3rd value in order, which is negative)</span><br>mean $= \\frac{-k + 0 + k + 2k + 6k}{5} = \\frac{8k}{5} = 1.6k$ <span class=\"nt\">(total over 5)</span><br>$1.6k < k$ <span class=\"nt\">(because $k < 0$, a bigger multiple of a negative number is more negative)</span><br>So the mean is less than the median, because the far negative value $6k$ drags the mean below the middle. A quick test with $k = -1$ agrees: the values become 1, 0, $-1$, $-2$, $-6$, with median $-1$ and mean $-1.6$, so the conclusion does not depend on the particular negative value chosen.",
+    "check": "$k = -1$: values 1, 0, $-1$, $-2$, $-6$. Median $-1$, mean $\\frac{-8}{5} = -1.6$, and $-1.6 < -1$ ✓",
+    "be_careful": "Try a number for $k$ that obeys the condition, such as $k = -1$, before trusting a pattern built on positive numbers.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-045",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C4"
+   ],
+   "family": "class-size-from-means-bound",
+   "signature": "boys 84, girls 76, class 81, fewer than 40 -> 3b = 5g, n = 8t < 40 -> 32; trap 40, 8",
+   "abilities": [
+    "S",
+    "N",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A class has fewer than 40 students. On a test, the mean score of the boys was 84, the mean score of the girls was 76, and the mean score of the whole class was 81. What is the greatest possible number of students in the class?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "32"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "40",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "40 is a multiple of 8, but the class has fewer than 40 students."
+    },
+    {
+     "value": "8",
+     "error_type": "slip",
+     "misconception": "D17",
+     "feedback": "8 is the least possible size. The question asks for the greatest."
+    }
+   ],
+   "solution": {
+    "key_idea": "The means fix the ratio of boys to girls. Whole-number counts then allow only multiples of one class size.",
+    "steps": "The question asks for the largest class size allowed.<br>Let $b$ = the number of boys and $g$ = the number of girls.<br>$84b + 76g = 81(b + g)$ <span class=\"nt\">(whole class total, two ways)</span><br>$3b = 5g$ <span class=\"nt\">(subtract $81b + 76g$)</span><br>$b = 5t$ and $g = 3t$ for a positive integer $t$ <span class=\"nt\">(3 and 5 share no factor)</span><br>class size $= 8t$ <span class=\"nt\">(boys plus girls)</span><br>$8t < 40$, so $t \\le 4$ <span class=\"nt\">(fewer than 40)</span><br>greatest size $= 8(4) = 32$ <span class=\"nt\">(20 boys and 12 girls)</span><br>The next multiple, 40, is not fewer than 40, so 32 is the greatest class size that works.",
+    "check": "$\\frac{20(84) + 12(76)}{32} = \\frac{1,680 + 912}{32} = \\frac{2,592}{32} = 81$ ✓",
+    "be_careful": "\"Fewer than 40\" rules out 40 itself, and the class size must be a multiple of 8.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-046",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C7",
+    "P3.C2"
+   ],
+   "family": "least-minimum-given-median-mean",
+   "signature": "7 integer scores 0-100, median 80, mean 85 -> total 595, least lowest = 595-80-300-160 = 55; trap 15",
+   "abilities": [
+    "S",
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Seven students each earned a whole-number score from 0 to 100 on a quiz. The median score was 80, and the mean score was 85. What is the least possible value of the lowest score?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "55"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "15",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Lets the 2nd and 3rd scores be 100 as well. They must be at most the median, 80."
+    },
+    {
+     "value": "80",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Assumes the lowest score is at least the median. Only the 4th score has to be 80."
+    }
+   ],
+   "solution": {
+    "key_idea": "To make the lowest score as small as possible, make every other score as large as the median and the 100 cap allow.",
+    "steps": "The question asks for the smallest the lowest score can be.<br>total $= 7(85) = 595$ <span class=\"nt\">(mean times count)</span><br>in order $s_1 \\le s_2 \\le s_3 \\le 80 \\le s_5 \\le s_6 \\le s_7$ <span class=\"nt\">(the 4th score is the median 80)</span><br>largest $s_5 + s_6 + s_7 = 3(100) = 300$ <span class=\"nt\">(scores above the median at most 100)</span><br>largest $s_2 + s_3 = 2(80) = 160$ <span class=\"nt\">(scores below the median at most 80)</span><br>$s_1 = 595 - 80 - 300 - 160 = 55$ <span class=\"nt\">(whatever is left)</span><br>Since 55 is at most 80, the order still holds, so the least possible lowest score is 55.",
+    "check": "Scores 55, 80, 80, 80, 100, 100, 100: median 80, total 595, mean 85 ✓",
+    "be_careful": "The 2nd and 3rd scores cannot be above the median, so they top out at 80, not 100.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-047",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C3",
+    "P3.C2"
+   ],
+   "family": "two-unknown-frequencies-median-mean",
+   "signature": "values 1-4 freq 5,k,4,m; median 2.5 and mean 2.5 -> m = k+1, 3m - k = 11 -> k=4, m=5, n=18",
+   "abilities": [
+    "S",
+    "R",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The frequency table summarizes a data set, where $k$ and $m$ are positive integers.<table class=\"dt\"><tr><th>Value</th><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><th>Frequency</th><td>5</td><td>$k$</td><td>4</td><td>$m$</td></tr></table>",
+   "stem_after_figure": "The median and the mean of the data set are both 2.5. How many values are in the data set?",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "5",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "5 is the value of $m$, not the number of values."
+    },
+    {
+     "key": "B",
+     "text": "9",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "9 is $k + m$. The table also has 5 ones and 4 threes."
+    },
+    {
+     "key": "C",
+     "text": "14",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This adds 5, 4 and 5 but leaves out the $k = 4$ twos."
+    },
+    {
+     "key": "D",
+     "text": "18",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A median of 2.5 means the two middle values are a 2 and a 3, so exactly half the values are 1 or 2. That gives one equation; the mean gives another.",
+    "steps": "The question asks for the number of values, $9 + k + m$.<br>$5 + k = \\frac{9 + k + m}{2}$ <span class=\"nt\">(half the values are 1 or 2)</span><br>$m = k + 1$ <span class=\"nt\">(multiply by 2 and simplify)</span><br>$\\frac{5 + 2k + 12 + 4m}{9 + k + m} = 2.5$ <span class=\"nt\">(the mean)</span><br>$17 + 2k + 4m = 22.5 + 2.5k + 2.5m$ <span class=\"nt\">(multiply by $9 + k + m$)</span><br>$3m - k = 11$ <span class=\"nt\">(collect terms and multiply by 2)</span><br>$3(k + 1) - k = 11$, so $k = 4$ and $m = 5$ <span class=\"nt\">(substitute $m = k + 1$)</span><br>number of values $= 5 + 4 + 4 + 5 = 18$ <span class=\"nt\">(add the frequencies)</span><br>With 18 values, positions 1 to 9 are 1s and 2s and positions 10 to 18 are 3s and 4s, so the median 2.5 checks out.",
+    "check": "18 values: the 9th is a 2 and the 10th is a 3, so the median is 2.5; total $5 + 8 + 12 + 20 = 45$, and $\\frac{45}{18} = 2.5$ ✓",
+    "be_careful": "A median halfway between two table values forces an even count with the split exactly between them.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-048",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C6",
+    "P3.C3"
+   ],
+   "family": "least-k-median-exceeds-mean",
+   "signature": "values 2,4,9 freq 6,1,k; least k with median > mean = 7 (median 6.5, mean 79/14); k=6 median 4",
+   "abilities": [
+    "R",
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A data set consists of six values of 2, one value of 4, and $k$ values of 9, where $k$ is a positive integer. What is the least value of $k$ for which the median of the data set is greater than the mean?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "5",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "With $k = 5$ there are 12 values; the 6th and 7th are 2 and 4, so the median is 3, below the mean of about 5.08."
+    },
+    {
+     "key": "B",
+     "text": "6",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "With $k = 6$ there are 13 values and the 7th is the single 4, while the mean is about 5.38."
+    },
+    {
+     "key": "C",
+     "text": "7",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "8",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "At $k = 8$ the median is 9, which works, but $k = 7$ already works with median 6.5."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The median jumps up only when the middle position reaches the 9s. Find that point and compare with the mean there.",
+    "steps": "The question asks for the smallest $k$ that makes the median greater than the mean.<br>number of values $= 7 + k$ <span class=\"nt\">(six 2s, one 4, $k$ 9s)</span><br>positions 1 to 6 are 2, position 7 is 4 <span class=\"nt\">(in order)</span><br>$k \\le 6$: the middle positions are at most position 7, so the median is at most 4 <span class=\"nt\">(too small)</span><br>mean for $k \\le 6$ is more than 4, e.g. $k = 6$: $\\frac{12 + 4 + 54}{13} \\approx 5.38$ <span class=\"nt\">(so these fail)</span><br>$k = 7$: 14 values, median $\\frac{4 + 9}{2} = 6.5$ <span class=\"nt\">(the 7th and 8th values)</span><br>mean $= \\frac{12 + 4 + 63}{14} = \\frac{79}{14} \\approx 5.64$ <span class=\"nt\">(less than 6.5)</span><br>So the least value is $k = 7$.",
+    "check": "$k = 7$: $6.5 > 5.64$ ✓; $k = 6$: median 4, and $4 < 5.38$, so it fails ✓",
+    "be_careful": "The median can sit halfway between 4 and 9. Waiting for the median to reach 9 skips $k = 7$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-049",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C2",
+    "P3.C4"
+   ],
+   "family": "combined-median-bounds",
+   "signature": "9 values median 30, 11 values median 40, combined 20 values median m -> 30 <= m <= 40, both ends reachable",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Data set A has 9 values with a median of 30. Data set B has 11 values with a median of 40. The two data sets are combined into one data set of 20 values with median $m$. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$m = 35$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Averaging the two medians does not give the combined median. For example, $m$ can be exactly 30."
+    },
+    {
+     "key": "B",
+     "text": "$30 < m < 40$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Both ends can happen: nine 30s with B as five 0s and six 40s gives $m = 30$."
+    },
+    {
+     "key": "C",
+     "text": "$m \\le 35$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This can happen, but it need not: A as four 0s, one 30 and four 40s with B as eleven 40s gives $m = 40$."
+    },
+    {
+     "key": "D",
+     "text": "$30 \\le m \\le 40$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Count how many values must be at most 40 and how many must be at least 30 in the combined list.",
+    "steps": "The question asks for the range of possible values of $m$.<br>A: at least 5 values $\\le 30$ and at least 5 values $\\ge 30$ <span class=\"nt\">(median of 9 values is the 5th)</span><br>B: at least 6 values $\\le 40$ and at least 6 values $\\ge 40$ <span class=\"nt\">(median of 11 values is the 6th)</span><br>values $\\le 40$: at least $5 + 6 = 11$ <span class=\"nt\">(A’s low half and B’s low half)</span><br>So the 10th and 11th values are at most 40, and $m \\le 40$.<br>values $\\ge 30$: at least $5 + 6 = 11$ <span class=\"nt\">(A’s high half and B’s high half)</span><br>So the 10th and 11th values are at least 30, and $m \\ge 30$.<br>Both ends are possible, so $30 \\le m \\le 40$ is what must be true.",
+    "check": "A: nine 30s; B: five 0s and six 40s. Combined 10th and 11th values are 30, so $m = 30$. A: four 0s, one 30, four 40s; B: eleven 40s. Then $m = 40$ ✓",
+    "be_careful": "\"Must\" needs a statement true in every case; an exact value like 35 fails at the first example.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P3-050",
+   "version": 1,
+   "skill": {
+    "code": "P3",
+    "domain": "psda",
+    "cb_skill": "One-variable data: Distributions and measures of center and spread"
+   },
+   "level": "H+",
+   "concepts": [
+    "P3.C5"
+   ],
+   "family": "range-must-sd-not",
+   "signature": "class 1 all scores 70-80, class 2 range 30; must: range 2 > range 1; SD comparison can fail (counterexample), mean/median D27",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Every score in class 1 is between 70 and 80, inclusive. The scores in class 2 have a range of 30. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The standard deviation of the scores in class 2 is greater than that of class 1.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Class 2 could have almost every score equal with one far value, giving a small standard deviation, while class 1 is split between 70 and 80."
+    },
+    {
+     "key": "B",
+     "text": "The range of the scores in class 2 is greater than the range of the scores in class 1.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "The mean score of class 2 is less than the mean score of class 1.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "A range says nothing about where the scores are centered."
+    },
+    {
+     "key": "D",
+     "text": "The median score of class 2 is not between 70 and 80.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Class 2 could be centered anywhere, including inside 70 to 80."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A range uses only the two extreme scores. Standard deviation uses every score, so a big range does not force a big standard deviation.",
+    "steps": "The question asks which comparison is certain.<br>class 1 range $\\le 80 - 70 = 10$ <span class=\"nt\">(every score in 70 to 80)</span><br>class 2 range $= 30 > 10$ <span class=\"nt\">(given)</span><br>So the range of class 2 is greater: this must be true.<br>Standard deviation: class 1 with five 70s and five 80s has a typical distance of 5 from its mean.<br>Class 2 with 99 scores of 50 and one score of 80 has range 30 but almost every score at its mean, a typical distance of about 3.<br>So the standard deviation comparison can fail, and the centers are not determined at all.",
+    "check": "The counterexample above has class 2 range exactly 30 and a smaller standard deviation than class 1 ✓",
+    "be_careful": "Range and standard deviation both measure spread, but they can disagree. Only the range is fixed by the given facts.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

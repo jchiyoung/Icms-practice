@@ -1,0 +1,3448 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "A4",
+ "skill": "Systems of two linear equations in two variables",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-A4-001",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "no-solution-partner-slope-form",
+   "signature": "pick the partner of 3x - 5y = 8 that gives no solution; key written as y = (3/5)x - 6/5, equivalent 6x - 10y = 16 bait",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "One equation of a system is $3x - 5y = 8$. Which of the following could be the second equation of the system if the system has no solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3x + 5y = 12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Changing the sign of the $y$-term changes the slope, so these lines cross: exactly one solution."
+    },
+    {
+     "key": "B",
+     "text": "$6x - 10y = 16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This is $3x - 5y = 8$ multiplied by 2. It is the same line, so the system has infinitely many solutions, not none."
+    },
+    {
+     "key": "C",
+     "text": "$y = \\frac{5}{3}x - \\frac{8}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This is $5x - 3y = 8$, with the coefficients swapped. Its slope is $\\frac{5}{3}$, not $\\frac{3}{5}$, so the lines cross once."
+    },
+    {
+     "key": "D",
+     "text": "$y = \\frac{3}{5}x - \\frac{6}{5}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A system has no solution when its two lines are parallel: the same slope with a different $y$-intercept.",
+    "steps": "What does the question ask? It asks which choice could be the second equation of the system if the system has no solution.<br>Write $3x - 5y = 8$ in slope-intercept form.<br>$-5y = -3x + 8$ <span class=\"nt\">(subtract $3x$ from both sides)</span><br>$y = \\frac{3}{5}x - \\frac{8}{5}$ <span class=\"nt\">(divide both sides by $-5$)</span><br>The second line must have slope $\\frac{3}{5}$ and a $y$-intercept other than $-\\frac{8}{5}$.<br>Choice D, $y = \\frac{3}{5}x - \\frac{6}{5}$, has slope $\\frac{3}{5}$ and $y$-intercept $-\\frac{6}{5}$, so the lines are parallel.",
+    "check": "Multiply choice D by 5 and rearrange: $3x - 5y = 6$. The left side matches $3x - 5y = 8$ but the right side does not, and $3x - 5y$ cannot equal both 6 and 8 ✓",
+    "be_careful": "An equation that is a multiple of the first one (like choice B) is the same line, which gives infinitely many solutions.",
+    "desmos": "Graph $3x - 5y = 8$ and each choice. Choice D draws a separate line that never meets the first one.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-002",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C4"
+   ],
+   "family": "tickets-how-many-more",
+   "signature": "adult 14, student 9, 220 tickets, 2580 dollars; asks adult minus student (20); 120 and 100 are the stopped-midway values",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A theater sold 220 tickets for one show. Adult tickets cost \\$14 each and student tickets cost \\$9 each, and the theater collected \\$2,580 from these tickets. How many more adult tickets than student tickets did the theater sell?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "20",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "100",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "100 is the number of student tickets, not the difference."
+    },
+    {
+     "key": "C",
+     "text": "120",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "120 is the number of adult tickets. The question asks how many more adult tickets than student tickets."
+    },
+    {
+     "key": "D",
+     "text": "220",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "220 is the total number of tickets given in the question."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Write one equation for the number of tickets and one for the money, solve, and then answer the question that was asked: the difference.",
+    "steps": "What does the question ask? How many more adult tickets than student tickets were sold.<br>Let $a$ = number of adult tickets and $s$ = number of student tickets.<br>$a + s = 220$ <span class=\"nt\">(220 tickets in all)</span><br>$14a + 9s = 2,580$ <span class=\"nt\">(total dollars)</span><br>$s = 220 - a$ <span class=\"nt\">(from the first equation)</span><br>$14a + 9(220 - a) = 2,580$ <span class=\"nt\">(substitute)</span><br>$14a + 1,980 - 9a = 2,580$ <span class=\"nt\">(distribute)</span><br>$5a = 600$ <span class=\"nt\">(combine and subtract 1,980)</span><br>$a = 120$, so $s = 220 - 120 = 100$.<br>Answer: $a - s = 120 - 100 = 20$.",
+    "check": "$14(120) + 9(100) = 1,680 + 900 = 2,580$ ✓ and $120 + 100 = 220$ ✓",
+    "be_careful": "After finding $a = 120$, the question is not finished: it asks for the difference.",
+    "desmos": "Graph $x + y = 220$ and $14x + 9y = 2,580$ and click the intersection $(120, 100)$; then subtract.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-003",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C3"
+   ],
+   "family": "add-for-sum",
+   "signature": "7x + 3y = 31 and 3x + 7y = 19; add to get 10(x + y) = 50; SPR x + y = 5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$7x + 3y = 31$<br>$3x + 7y = 19$<br>If $(x, y)$ is the solution to the system of equations above, what is the value of $x + y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "50",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "50 is $10x + 10y$, the sum of the two equations. Divide by 10 to get $x + y$."
+    },
+    {
+     "value": "4",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4 is the value of $x$ alone; the question asks for $x + y$."
+    }
+   ],
+   "solution": {
+    "key_idea": "When the coefficients are swapped between the two equations, adding the equations makes the coefficients of $x$ and $y$ equal, which gives $x + y$ directly.",
+    "steps": "What does the question ask? The value of $x + y$, not $x$ and $y$ separately.<br>$10x + 10y = 50$ <span class=\"nt\">(add the two equations)</span><br>$x + y = 5$ <span class=\"nt\">(divide both sides by 10)</span>",
+    "check": "Subtracting the equations gives $4x - 4y = 12$, so $x - y = 3$. Then $x = 4$ and $y = 1$: $7(4) + 3(1) = 31$ ✓ and $3(4) + 7(1) = 19$ ✓, and $4 + 1 = 5$ ✓",
+    "be_careful": "A common wrong answer is $50$. 50 is $10x + 10y$, the sum of the two equations. Divide by 10 to get $x + y$.",
+    "desmos": "Graph both equations and click the intersection $(4, 1)$, then add the coordinates.",
+    "another_way": "Solve for $x$ and $y$ (subtract the equations to get $x - y = 3$, then combine with $x + y = 5$)."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-004",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C1"
+   ],
+   "family": "graph-to-system",
+   "signature": "two lines on a grid (y = 2x - 1 and y = -x + 5, crossing at (2, 3)); choose the system; distractors flip an intercept sign, a slope sign, or use run/rise",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graphs of two lines are shown in the $xy$-plane.",
+   "stem_after_figure": "Which system of equations is represented by the graphs?",
+   "figures": [
+    {
+     "id": "QB-A4-004-fig1",
+     "file": "figures/QB-A4-004-fig1.svg",
+     "alt": "Two lines on a coordinate grid. One line rises and crosses the y-axis at (0, -1), passing through (1, 1) and (2, 3). The other line falls and crosses the y-axis at (0, 5), passing through (2, 3) and (5, 0)."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = 2x + 1$ and $y = -x + 5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "The rising line crosses the $y$-axis below the origin, at $(0, -1)$, so its intercept is $-1$, not 1."
+    },
+    {
+     "key": "B",
+     "text": "$y = \\frac{1}{2}x - 1$ and $y = -x + 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "From $(0, -1)$ to $(1, 1)$ the line rises 2 for a run of 1. The slope is rise over run, 2, not $\\frac{1}{2}$."
+    },
+    {
+     "key": "C",
+     "text": "$y = 2x - 1$ and $y = -x + 5$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$y = 2x - 1$ and $y = x + 5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "The second line falls from left to right, so its slope is negative, $-1$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Read each line’s $y$-intercept where it crosses the $y$-axis and its slope as rise over run between two grid points.",
+    "steps": "What does the question ask? It asks which system of equations is represented by the graphs.<br>Rising line: it crosses the $y$-axis at $(0, -1)$, so the $y$-intercept is $-1$.<br>From $(0, -1)$ to $(1, 1)$: rise 2, run 1, so the slope is $\\frac{2}{1} = 2$.<br>Rising line: $y = 2x - 1$. <span class=\"nt\">(crosses the $y$-axis at $-1$ and rises 2 for each step right)</span><br>Falling line: it crosses the $y$-axis at $(0, 5)$; from $(0, 5)$ to $(5, 0)$ it falls 5 for a run of 5, so the slope is $-1$.<br>Falling line: $y = -x + 5$. <span class=\"nt\">(crosses the $y$-axis at 5 and falls 1 for each step right)</span><br>The system is choice C.",
+    "check": "Both lines in choice C pass through the intersection shown, $(2, 3)$: $2(2) - 1 = 3$ ✓ and $-2 + 5 = 3$ ✓",
+    "be_careful": "Choice B ($y = \\frac{1}{2}x - 1$ and $y = -x + 5$) is a trap. From $(0, -1)$ to $(1, 1)$ the line rises 2 for a run of 1. The slope is rise over run, 2, not $\\frac{1}{2}$.",
+    "desmos": "Type the two equations of each choice and compare with the figure.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-005",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C1"
+   ],
+   "family": "substitute-then-product",
+   "signature": "4x - 3y = 10 with y = 2x - 6: substitution gives (4, 2); asks xy = 8; choices 2, 4, 6 are stopped or wrong-target values",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$4x - 3y = 10$<br>$y = 2x - 6$<br>The solution to the system of equations above is $(x, y)$. What is the value of $xy$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "2",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "2 is the value of $y$; the question asks for the product $xy$."
+    },
+    {
+     "key": "B",
+     "text": "4",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4 is the value of $x$; the question asks for the product $xy$."
+    },
+    {
+     "key": "C",
+     "text": "6",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "6 is $x + y$, the sum instead of the product."
+    },
+    {
+     "key": "D",
+     "text": "8",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The second equation already gives $y$ in terms of $x$, so substitute it into the first equation.",
+    "steps": "What does the question ask? The product $xy$.<br>$4x - 3(2x - 6) = 10$ <span class=\"nt\">(substitute $y = 2x - 6$)</span><br>$4x - 6x + 18 = 10$ <span class=\"nt\">(distribute $-3$: $(-3)(-6) = +18$)</span><br>$-2x = -8$ <span class=\"nt\">(combine and subtract 18)</span><br>$x = 4$ <span class=\"nt\">(divide by $-2$)</span><br>$y = 2(4) - 6 = 2$<br>Answer: $xy = 4 \\times 2 = 8$.",
+    "check": "$4(4) - 3(2) = 16 - 6 = 10$ ✓",
+    "be_careful": "$-3$ times $-6$ is $+18$; writing $-18$ leads to $x = -14$.",
+    "desmos": "Graph both equations and click the intersection $(4, 2)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-006",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "infinite-ratio-from-y",
+   "signature": "ax + 6y = 10 and 3x + 9y = b infinitely many; ratio 3/2 from the y-coefficients; a + b = 17",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$ax + 6y = 10$<br>$3x + 9y = b$<br>In the system of equations above, $a$ and $b$ are constants. If the system has infinitely many solutions, what is the value of $a + b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{26}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies the 10 by $\\frac{2}{3}$ instead of $\\frac{3}{2}$: the scale factor was turned upside down for $b$."
+    },
+    {
+     "key": "B",
+     "text": "15",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "15 is $b$ alone; the question asks for $a + b$."
+    },
+    {
+     "key": "C",
+     "text": "17",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{39}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This takes $a = 3 \\times \\frac{3}{2} = \\frac{9}{2}$: the factor that turns the first equation into the second was applied in the wrong direction for $a$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Infinitely many solutions means the second equation is the first one multiplied by one number, so every coefficient and the constant scale by that same number.",
+    "steps": "What does the question ask? It asks for $a + b$ when the system has infinitely many solutions.<br>The $y$-coefficients are both known: 6 in the first equation and 9 in the second.<br>Scale factor: $\\frac{9}{6} = \\frac{3}{2}$ <span class=\"nt\">(second equation = first equation times this number)</span><br>$x$-terms: $\\frac{3}{2}a = 3$, so $a = 2$ <span class=\"nt\">(multiply both sides by $\\frac{2}{3}$)</span><br>constants: $b = \\frac{3}{2}(10) = 15$<br>Answer: $a + b = 2 + 15 = 17$.",
+    "check": "With $a = 2$: $\\frac{3}{2}(2x + 6y) = 3x + 9y$ and $\\frac{3}{2}(10) = 15$, so the second equation is the first one times $\\frac{3}{2}$ ✓",
+    "be_careful": "Choice A ($\\frac{26}{3}$) is a trap. This multiplies the 10 by $\\frac{2}{3}$ instead of $\\frac{3}{2}$: the scale factor was turned upside down for $b$.",
+    "desmos": "Make sliders for $a$ and $b$; at $a = 2$, $b = 15$ the two lines lie on top of each other.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-007",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "no-solution-k-y-ratio",
+   "signature": "2x - y = 7 and kx - 3y = 5 no solution; ratio 3 from y; k = 6 with constants 21 vs 5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$2x - y = 7$<br>$kx - 3y = 5$<br>In the system of equations above, $k$ is a constant. For what value of $k$ does the system have no solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "With $k = -6$ the slopes are 2 and $-2$, so the lines cross once."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{2}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides 2 by 3 instead of multiplying: the slope of the second line would be $\\frac{2}{9}$, not 2."
+    },
+    {
+     "key": "C",
+     "text": "3",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "3 is the factor between the $y$-coefficients, not the value of $k$. The $x$-coefficient must also be multiplied: $3 \\times 2 = 6$."
+    },
+    {
+     "key": "D",
+     "text": "6",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "No solution means parallel lines: the $x$- and $y$-coefficients are in the same ratio, but the constants are not.",
+    "steps": "What does the question ask? It asks for the value of $k$ that gives the system no solution.<br>Compare the $y$-coefficients: $-3 = 3(-1)$, so the factor is 3.<br>For parallel lines the $x$-coefficient must also be 3 times as large: $k = 3(2) = 6$.<br>Now the constants: 3 times the first equation is $6x - 3y = 21$, and the second equation is $6x - 3y = 5$.<br>Since $21 \\ne 5$, the lines are parallel and different, so there is no solution.<br>Answer: $k = 6$.",
+    "check": "Slopes: $y = 2x - 7$ and $y = 2x - \\frac{5}{3}$, the same slope with different intercepts ✓",
+    "be_careful": "Choice B ($\\frac{2}{3}$) is a trap. This divides 2 by 3 instead of multiplying: the slope of the second line would be $\\frac{2}{9}$, not 2.",
+    "desmos": "Graph $2x - y = 7$ and $kx - 3y = 5$ with a slider for $k$; at $k = 6$ the lines are parallel.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-008",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C4"
+   ],
+   "family": "mixture-then-dilute",
+   "signature": "20% and 50% mixed to 30 L of 40% (system), then water added to reach 30%: salt 12 L stays fixed, 12/0.30 = 40 L, add 10 L; 12 (salt), 20 (50% part), 40 (final volume)",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A chemist mixes a 20% saline solution with a 50% saline solution to make 30 liters of a 40% saline solution. The chemist then adds pure water to the mixture until it is a 30% saline solution. How many liters of water does the chemist add?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "10",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "12",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "12 is the number of liters of salt in the mixture, $0.40 \\times 30$, not liters of water."
+    },
+    {
+     "key": "C",
+     "text": "20",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "20 liters is the amount of the 50% solution in the first mixture, which answers a different question."
+    },
+    {
+     "key": "D",
+     "text": "40",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "40 liters is the volume of the final 30% solution. The water added is the increase, $40 - 30$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Adding water changes the volume but not the amount of salt. Track the salt.",
+    "steps": "What does the question ask? The liters of water added.<br>Salt in the 30-liter mixture: $0.40(30) = 12$ liters <span class=\"nt\">(the two solutions together give 40% of 30 liters)</span><br>Water adds no salt, so the final solution still has 12 liters of salt.<br>Let $V$ = final volume: $0.30V = 12$ <span class=\"nt\">(30% of the final volume is salt)</span><br>$V = 40$ <span class=\"nt\">(divide by 0.30)</span><br>Answer: water added $= 40 - 30 = 10$ liters.<br>Note: the split of the first mixture ($p + q = 30$ and $0.20p + 0.50q = 12$, so 10 liters and 20 liters) is not needed; only the total salt matters.",
+    "check": "$\\frac{12}{30 + 10} = \\frac{12}{40} = 0.30$ ✓",
+    "be_careful": "The amounts of the 20% and 50% solutions are a side path. The question asks only about the water.",
+    "desmos": "Desmos is not needed; one equation in the salt amount finishes it.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-009",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C4"
+   ],
+   "family": "meaning-of-solution-y",
+   "signature": "gym costs y = 25x + 40 and y = 31x + 10, solution (5, 165); what 165 means (cost at each gym, not sum or difference)",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Fitlane gym charges a \\$40 sign-up fee plus \\$25 per month. Corewell gym charges a \\$10 sign-up fee plus \\$31 per month. The system below gives the total cost $y$, in dollars, of a membership for $x$ months at each gym.<br>$y = 25x + 40$<br>$y = 31x + 10$<br>The solution to the system is $(5, 165)$. Which of the following is the best interpretation of 165 in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The total cost, in dollars, of a 5-month membership at Fitlane, which is also the total cost of a 5-month membership at Corewell",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The number of dollars by which the monthly charge at Corewell is greater than the monthly charge at Fitlane",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The difference in monthly charges is $31 - 25 = 6$ dollars, not 165."
+    },
+    {
+     "key": "C",
+     "text": "The difference, in dollars, between the total costs at the two gyms after 5 months",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "At the solution the two total costs are equal, so their difference is 0."
+    },
+    {
+     "key": "D",
+     "text": "The combined total cost, in dollars, of a 5-month membership at both gyms",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The combined cost would be $165 + 165 = 330$ dollars. The 165 is the cost at each gym, read from a point that is on both lines."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The solution is a point on both lines, so its $y$-value is the total cost at Fitlane and also the total cost at Corewell for the same number of months.",
+    "steps": "What does the question ask? It asks which choice is the best interpretation of 165 in this context.<br>The $x$-value 5 means 5 months.<br>Fitlane: $25(5) + 40 = 165$ <span class=\"nt\">(substitute $x = 5$ in the first equation)</span><br>Corewell: $31(5) + 10 = 165$ <span class=\"nt\">(substitute in the second equation)</span><br>So 165 is the total cost, in dollars, of 5 months at either gym: the costs are equal then.<br>Answer: choice A.",
+    "check": "Both equations give 165 at $x = 5$ ✓",
+    "be_careful": "Choice B is a trap. The difference in monthly charges is $31 - 25 = 6$ dollars, not 165.",
+    "desmos": "Not needed; the point is given.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-010",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C3"
+   ],
+   "family": "subtract-for-double-sum",
+   "signature": "5x - 2y = 9 and 3x - 4y = -3; subtracting gives 2x + 2y = 12 directly; SPR 12; 6 (x + y) is the over-finished value",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$5x - 2y = 9$<br>$3x - 4y = -3$<br>If $(x, y)$ is the solution to the system of equations above, what is the value of $2x + 2y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is $x + y$. The question asks for $2x + 2y$, which is twice that."
+    },
+    {
+     "value": "3",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "3 is the value of $x$ (and also of $y$) alone."
+    }
+   ],
+   "solution": {
+    "key_idea": "Subtracting one whole equation from the other can produce the asked expression in one step.",
+    "steps": "What does the question ask? The value of $2x + 2y$.<br>$(5x - 2y) - (3x - 4y) = 9 - (-3)$ <span class=\"nt\">(subtract the second equation from the first)</span><br>$5x - 2y - 3x + 4y = 12$ <span class=\"nt\">(distribute the minus sign: $-(-4y) = +4y$)</span><br>$2x + 2y = 12$ <span class=\"nt\">(combine like terms)</span>",
+    "check": "Solving fully gives $x = 3$, $y = 3$: $5(3) - 2(3) = 9$ ✓, $3(3) - 4(3) = -3$ ✓, and $2(3) + 2(3) = 12$ ✓",
+    "be_careful": "Subtracting $-4y$ gives $+4y$, and subtracting $-3$ gives $+3$.",
+    "desmos": "Graph both equations and click the intersection $(3, 3)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-011",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "which-system-one-solution",
+   "signature": "four systems: parallel with fractions of ratio 2/3, one crossing pair with swapped coefficients (key), a coincident pair in two forms, a doubled-left parallel pair",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following systems of equations has exactly one solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4x - 6y = 3$ and $6x - 9y = 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Both lines have slope $\\frac{2}{3}$ and different intercepts, so they are parallel: no solution."
+    },
+    {
+     "key": "B",
+     "text": "$2x + 3y = 6$ and $3x + 2y = 6$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$y = \\frac{2}{3}x + 1$ and $2x - 3y = -3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Solving $2x - 3y = -3$ for $y$ gives $y = \\frac{2}{3}x + 1$: the same line, so infinitely many solutions."
+    },
+    {
+     "key": "D",
+     "text": "$3x + 2y = 5$ and $6x + 4y = 1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "The left side of the second equation is twice the first, but $1 \\ne 10$: parallel lines, no solution."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Two lines meet in exactly one point when their slopes are different.",
+    "steps": "Find the slope of each line (solve for $y$ or use $-\\frac{A}{B}$ for $Ax + By = C$).<br>A: slopes $\\frac{4}{6} = \\frac{2}{3}$ and $\\frac{6}{9} = \\frac{2}{3}$ <span class=\"nt\">(equal: parallel or the same line)</span><br>B: slopes $-\\frac{2}{3}$ and $-\\frac{3}{2}$ <span class=\"nt\">(different)</span><br>C: slopes $\\frac{2}{3}$ and $\\frac{2}{3}$ <span class=\"nt\">(equal)</span><br>D: slopes $-\\frac{3}{2}$ and $-\\frac{3}{2}$ <span class=\"nt\">(equal)</span><br>Only B has two different slopes, so only B has exactly one solution.",
+    "check": "In B, subtracting the equations gives $x - y = 0$, so $x = y$ and $5x = 6$: the one solution is $(\\frac{6}{5}, \\frac{6}{5})$ ✓",
+    "be_careful": "Swapped coefficients ($2, 3$ and $3, 2$) look alike but give different slopes.",
+    "desmos": "Graph each pair; only B shows two lines crossing.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-012",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C4"
+   ],
+   "family": "boxes-vs-items-setup",
+   "signature": "muffins in boxes of 6 at 15 dollars, scones 4 dollars each; 250 pastries, 775 dollars; b boxes s scones: 6b + s = 250 (count label trap b + s)",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A bakery sells muffins only in boxes of 6, at \\$15 per box, and sells scones individually at \\$4 each. One day the bakery sold 250 pastries in all (muffins and scones) and took in \\$775. If $b$ is the number of boxes of muffins sold and $s$ is the number of scones sold, which system of equations represents this situation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$b + s = 250$ and $15b + 4s = 775$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "The 250 counts pastries, and each box holds 6 muffins, so the boxes contribute $6b$ pastries, not $b$."
+    },
+    {
+     "key": "B",
+     "text": "$6b + s = 250$ and $15b + 4s = 775$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$6b + s = 250$ and $90b + 4s = 775$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The \\$15 is the price of a whole box, so the money from $b$ boxes is $15b$; multiplying by 6 again counts each box 6 times."
+    },
+    {
+     "key": "D",
+     "text": "$b + 6s = 250$ and $15b + 4s = 775$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "The 6 belongs with the boxes of muffins, not with the scones."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Each equation must count one kind of thing: the first counts pastries, the second counts dollars.",
+    "steps": "What does the question ask? It asks which system of equations represents this situation.<br>Pastries: each box has 6 muffins, so $b$ boxes have $6b$ muffins. With $s$ scones: $6b + s = 250$.<br>Dollars: each box costs \\$15, so $b$ boxes bring in $15b$ dollars; $s$ scones bring in $4s$ dollars: $15b + 4s = 775$.<br>The system is choice B.",
+    "check": "Choice B has the solution $b = 25$, $s = 100$: $6(25) + 100 = 250$ pastries ✓ and $15(25) + 4(100) = 375 + 400 = 775$ dollars ✓",
+    "be_careful": "Choice A ($b + s = 250$ and $15b + 4s = 775$) is a trap. The 250 counts pastries, and each box holds 6 muffins, so the boxes contribute $6b$ pastries, not $b$.",
+    "desmos": "Not useful for choosing a model.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-013",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C1"
+   ],
+   "family": "graph-line-plus-equation",
+   "signature": "line l through (0, 4) and (6, 0) on a grid, second line y = 2x - 3 given as an equation; x of intersection 21/8 (off grid)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Line $\\ell$ is shown in the $xy$-plane.",
+   "stem_after_figure": "Line $\\ell$ and the line with equation $y = 2x - 3$ intersect at the point $(a, b)$. What is the value of $a$?",
+   "figures": [
+    {
+     "id": "QB-A4-013-fig1",
+     "file": "figures/QB-A4-013-fig1.svg",
+     "alt": "A line labeled l on a coordinate grid, falling from left to right, passing through the points (0, 4) and (6, 0), which are marked."
+    }
+   ],
+   "answer": {
+    "spr": {
+     "values": [
+      "21/8",
+      "2.625"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "21/4",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses slope $+\\frac{2}{3}$ for line $\\ell$; the line falls, so its slope is $-\\frac{2}{3}$."
+    },
+    {
+     "value": "2",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This uses slope $-\\frac{3}{2}$ (run over rise) for line $\\ell$. Slope is rise over run: $\\frac{-4}{6} = -\\frac{2}{3}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write the equation of line $\\ell$ from the graph; at the intersection both lines have the same $y$-value.",
+    "steps": "What does the question ask? It asks for the value of $a$.<br>Step 1: equation of $\\ell$. It crosses the $y$-axis at $(0, 4)$.<br>slope $= \\frac{0 - 4}{6 - 0} = -\\frac{2}{3}$ <span class=\"nt\">(from $(0, 4)$ to $(6, 0)$)</span><br>$\\ell$: $y = -\\frac{2}{3}x + 4$ <span class=\"nt\">(slope $-\\frac{2}{3}$, $y$-intercept 4)</span><br>Step 2: set the $y$-values equal.<br>$2x - 3 = -\\frac{2}{3}x + 4$ <span class=\"nt\">(at the intersection both $y$-values are equal)</span><br>$\\frac{8}{3}x - 3 = 4$ <span class=\"nt\">(add $\\frac{2}{3}x$ to both sides)</span><br>$\\frac{8}{3}x = 7$ <span class=\"nt\">(add 3)</span><br>$x = \\frac{21}{8}$ <span class=\"nt\">(multiply by $\\frac{3}{8}$)</span><br>Answer: $a = \\frac{21}{8}$ (2.625).",
+    "check": "At $x = \\frac{21}{8}$: $2(\\frac{21}{8}) - 3 = \\frac{9}{4}$ and $-\\frac{2}{3}(\\frac{21}{8}) + 4 = -\\frac{7}{4} + 4 = \\frac{9}{4}$ ✓",
+    "be_careful": "The intersection is not at a grid point, so it cannot be read from the figure.",
+    "desmos": "Type $y = -\\frac{2}{3}x + 4$ and $y = 2x - 3$, then click the intersection: $x = 2.625$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-014",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "infinite-partner-slope-form",
+   "signature": "partner of 6x + 4y = 18 giving infinitely many; key y = -(3/2)x + 9/2; baits 3x + 2y = 18 (only left halved), 12x + 8y = 18, reciprocal slope",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A system is made of the equation $6x + 4y = 18$ and one more linear equation. Every point on the graph of $6x + 4y = 18$ is a solution to the system. Which of the following could be the second equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = -\\frac{3}{2}x + \\frac{9}{2}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3x + 2y = 18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "Only the left side was divided by 2. Dividing the whole equation by 2 gives $3x + 2y = 9$; with 18 the lines are parallel, so there is no solution."
+    },
+    {
+     "key": "C",
+     "text": "$12x + 8y = 18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only the left side was doubled; the constant must be doubled too (36). These lines are parallel."
+    },
+    {
+     "key": "D",
+     "text": "$y = -\\frac{2}{3}x + \\frac{9}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The slope of $6x + 4y = 18$ is $-\\frac{6}{4} = -\\frac{3}{2}$, not $-\\frac{2}{3}$; these lines cross once."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Infinitely many solutions means the two equations describe the same line, so the other equation must be the same line written in any form.",
+    "steps": "What does the question ask? It asks which choice could be the second equation.<br>Write $6x + 4y = 18$ in slope-intercept form.<br>$4y = -6x + 18$ <span class=\"nt\">(subtract $6x$)</span><br>$y = -\\frac{6}{4}x + \\frac{18}{4} = -\\frac{3}{2}x + \\frac{9}{2}$ <span class=\"nt\">(divide by 4 and reduce)</span><br>The other equation must be this same line. Choice A is exactly $y = -\\frac{3}{2}x + \\frac{9}{2}$, so the two equations describe one line and every point on it is a solution.",
+    "check": "Multiply choice A by 4: $4y = -6x + 18$, which rearranges to $6x + 4y = 18$ ✓",
+    "be_careful": "Whatever is done to one side must be done to the constant as well.",
+    "desmos": "Graph $6x + 4y = 18$ and each choice; only choice A lies exactly on top of it.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-015",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C3"
+   ],
+   "family": "fraction-coefficients-eliminate",
+   "signature": "x/2 + y/3 = 5 and x/4 - y/6 = 1; double the second, subtract; y = 9/2; right side not doubled gives 6",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$\\frac{x}{2} + \\frac{y}{3} = 5$<br>$\\frac{x}{4} - \\frac{y}{6} = 1$<br>If $(x, y)$ is the solution to the system of equations above, what is the value of $y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "3",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "3 is the value of $\\frac{2y}{3}$; one more step (multiply by $\\frac{3}{2}$) is needed."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{9}{2}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "6",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This doubles only the left side of the second equation. The right side must become 2, not stay 1."
+    },
+    {
+     "key": "D",
+     "text": "7",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "7 is the value of $x$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Multiplying the second equation by 2 makes its $x$-term match the first one, so subtracting removes $x$.",
+    "steps": "What does the question ask? It asks for the value of $y$ in the solution of the system.<br>$\\frac{x}{2} - \\frac{y}{3} = 2$ <span class=\"nt\">(multiply every term of the second equation by 2)</span><br>$(\\frac{x}{2} + \\frac{y}{3}) - (\\frac{x}{2} - \\frac{y}{3}) = 5 - 2$ <span class=\"nt\">(subtract this from the first equation)</span><br>$\\frac{2y}{3} = 3$ <span class=\"nt\">(the $x$-terms cancel)</span><br>$y = \\frac{9}{2}$ <span class=\"nt\">(multiply by $\\frac{3}{2}$)</span>",
+    "check": "Then $\\frac{x}{2} = 5 - \\frac{3}{2} = \\frac{7}{2}$, so $x = 7$. Second equation: $\\frac{7}{4} - \\frac{9}{12} = \\frac{7}{4} - \\frac{3}{4} = 1$ ✓",
+    "be_careful": "Choice A (3) is a trap. 3 is the value of $\\frac{2y}{3}$; one more step (multiply by $\\frac{3}{2}$) is needed.",
+    "desmos": "Graph both equations and click the intersection $(7, 4.5)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-016",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C1"
+   ],
+   "family": "line-through-intersection-slope",
+   "signature": "y = ax + 3 passes through the intersection of x + y = 9 and x - y = 1, (5, 4); a = 1/5; swapped point (4, 5) gives 1/2",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the line $y = ax + 3$, where $a$ is a constant, passes through the point where the lines $x + y = 9$ and $x - y = 1$ intersect. What is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-\\frac{1}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "A sign slip: $4 = 5a + 3$ gives $5a = 1$, a positive number."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{5}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "This uses the point $(4, 5)$ with the coordinates swapped. The intersection is $(5, 4)$."
+    },
+    {
+     "key": "D",
+     "text": "5",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "From $5a = 1$, $a$ is $1 \\div 5$, not $5 \\div 1$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The intersection point is on all three lines, so find it first and then substitute it into $y = ax + 3$.",
+    "steps": "What does the question ask? It asks for the value of $a$.<br>Step 1: intersection of $x + y = 9$ and $x - y = 1$. <span class=\"nt\">(this point lies on both given lines)</span><br>$2x = 10$ <span class=\"nt\">(add the equations)</span><br>$x = 5$, and $y = 9 - 5 = 4$ <span class=\"nt\">(divide by 2, then use $x + y = 9$)</span><br>Step 2: the point $(5, 4)$ is on $y = ax + 3$. <span class=\"nt\">(a point on a line makes its equation true)</span><br>$4 = 5a + 3$ <span class=\"nt\">(substitute $x = 5$, $y = 4$)</span><br>$5a = 1$ <span class=\"nt\">(subtract 3)</span><br>$a = \\frac{1}{5}$ <span class=\"nt\">(divide by 5)</span>",
+    "check": "$\\frac{1}{5}(5) + 3 = 4$ ✓, and $(5, 4)$ satisfies $5 + 4 = 9$ ✓ and $5 - 4 = 1$ ✓",
+    "be_careful": "Choice D (5) is a trap. From $5a = 1$, $a$ is $1 \\div 5$, not $5 \\div 1$.",
+    "desmos": "Graph $x + y = 9$ and $x - y = 1$, click the intersection $(5, 4)$, then use a slider for $a$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-017",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C4"
+   ],
+   "family": "candles-common-height",
+   "signature": "candle 30 cm burning 1.5 cm/h, candle 22 cm burning 0.7 cm/h; same height after 10 h; asks the height 15",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two candles are lit at the same time. The first candle is 30 centimeters tall and burns down at a constant rate of 1.5 centimeters per hour. The second candle is 22 centimeters tall and burns down at a constant rate of 0.7 centimeter per hour. When the two candles are the same height, what is that height, in centimeters?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "7",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "7 centimeters is how much the second candle has burned in 10 hours, not its height."
+    },
+    {
+     "key": "B",
+     "text": "8",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "8 is the starting difference in heights, $30 - 22$."
+    },
+    {
+     "key": "C",
+     "text": "10",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "10 is the number of hours until the heights are equal, not the height."
+    },
+    {
+     "key": "D",
+     "text": "15",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Each height is a linear function of time; the candles are the same height when the two expressions are equal.",
+    "steps": "What does the question ask? The common height, not the time.<br>Let $t$ = hours since the candles were lit and $h$ = height in centimeters.<br>$h = 30 - 1.5t$ <span class=\"nt\">(first candle)</span><br>$h = 22 - 0.7t$ <span class=\"nt\">(second candle)</span><br>$30 - 1.5t = 22 - 0.7t$ <span class=\"nt\">(same height)</span><br>$8 = 0.8t$ <span class=\"nt\">(add $1.5t$, subtract 22)</span><br>$t = 10$ <span class=\"nt\">(divide by 0.8)</span><br>Answer: $h = 30 - 1.5(10) = 15$ centimeters.",
+    "check": "Second candle: $22 - 0.7(10) = 15$ ✓",
+    "be_careful": "Solving gives the time first; the question asks for the height.",
+    "desmos": "Graph $y = 30 - 1.5x$ and $y = 22 - 0.7x$ and click the intersection $(10, 15)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-018",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C1"
+   ],
+   "family": "table-two-functions-crossing",
+   "signature": "tables of f and g at x = 0, 2, 4 (f 1, 4, 7; g 13, 11, 9); f(x) = g(x) at x = 24/5, between table values",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The table shows three values of $x$ and the corresponding values of $f(x)$ and $g(x)$ for the linear functions $f$ and $g$.<table class=\"dt\"><tr><th>$x$</th><th>$f(x)$</th><th>$g(x)$</th></tr><tr><td>$0$</td><td>$1$</td><td>$13$</td></tr><tr><td>$2$</td><td>$4$</td><td>$11$</td></tr><tr><td>$4$</td><td>$7$</td><td>$9$</td></tr></table>The graphs of $y = f(x)$ and $y = g(x)$ in the $xy$-plane intersect at the point $(r, s)$. What is the value of $r$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "24/5",
+      "4.8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D28",
+     "feedback": "At $x = 4$ the values are 7 and 9, which are not equal. The graphs meet a little later, between table values."
+    },
+    {
+     "value": "41/5",
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "$\\frac{41}{5}$ (8.2) is $s$, the $y$-coordinate of the intersection."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find each function’s rule from the table; the graphs intersect where the two rules give the same output.",
+    "steps": "What does the question ask? It asks for the value of $r$.<br>$f$: starts at 1 when $x = 0$ and rises 3 for every 2 in $x$, so $f(x) = \\frac{3}{2}x + 1$.<br>$g$: starts at 13 when $x = 0$ and falls 2 for every 2 in $x$, so $g(x) = -x + 13$.<br>$\\frac{3}{2}x + 1 = -x + 13$ <span class=\"nt\">(same output at the intersection)</span><br>$\\frac{5}{2}x = 12$ <span class=\"nt\">(add $x$, subtract 1)</span><br>$x = \\frac{24}{5}$ <span class=\"nt\">(multiply by $\\frac{2}{5}$)</span><br>Answer: $r = \\frac{24}{5}$ (4.8).",
+    "check": "$f(\\frac{24}{5}) = \\frac{36}{5} + 1 = \\frac{41}{5}$ and $g(\\frac{24}{5}) = 13 - \\frac{24}{5} = \\frac{41}{5}$ ✓",
+    "be_careful": "A common wrong answer is $4$. At $x = 4$ the values are 7 and 9, which are not equal. The graphs meet a little later, between table values.",
+    "desmos": "Type the rules (or make a table and use regression) and click the intersection: $x = 4.8$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-019",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "solution-with-x-equals-y",
+   "signature": "x + 2y = 10 and 3x - ky = 6 with a solution where x = y; x = 10/3; k = 6/5; slip x = 5 gives 9/5",
+   "abilities": [
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$x + 2y = 10$<br>$3x - ky = 6$<br>In the system of equations above, $k$ is a constant. The system has a solution $(x, y)$ in which $x = y$. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-\\frac{6}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "A sign slip when moving the $k$-term: $10 - \\frac{10}{3}k = 6$ gives a positive $k$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{5}{6}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "From $\\frac{10}{3}k = 4$, $k = 4 \\times \\frac{3}{10}$; this is the reciprocal."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{6}{5}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{9}{5}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This uses $x = y = 5$, from $2x = 10$. With $x = y$, the first equation is $x + 2x = 3x = 10$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Use the extra condition $x = y$ in the equation without $k$ first; that gives the solution, and the second equation then gives $k$.",
+    "steps": "What does the question ask? It asks for the value of $k$.<br>$x + 2x = 10$ <span class=\"nt\">(replace $y$ with $x$ in the first equation)</span><br>$3x = 10$, so $x = \\frac{10}{3}$ and $y = \\frac{10}{3}$ <span class=\"nt\">(divide by 3, and $y = x$)</span><br>$3(\\frac{10}{3}) - k(\\frac{10}{3}) = 6$ <span class=\"nt\">(substitute into the second equation)</span><br>$10 - \\frac{10}{3}k = 6$ <span class=\"nt\">(simplify: $3(\\frac{10}{3}) = 10$)</span><br>$\\frac{10}{3}k = 4$ <span class=\"nt\">(add $\\frac{10}{3}k$, subtract 6)</span><br>$k = \\frac{12}{10} = \\frac{6}{5}$ <span class=\"nt\">(multiply by $\\frac{3}{10}$)</span>",
+    "check": "$3(\\frac{10}{3}) - \\frac{6}{5}(\\frac{10}{3}) = 10 - 4 = 6$ ✓",
+    "be_careful": "Choice A ($-\\frac{6}{5}$) is a trap. A sign slip when moving the $k$-term: $10 - \\frac{10}{3}k = 6$ gives a positive $k$.",
+    "desmos": "Graph $x + 2y = 10$ and $y = x$ to get $(3.33, 3.33)$, then solve for $k$ by hand.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-020",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "no-solution-meaning-context",
+   "signature": "two copy shops y = 12 + 0.05x and y = 15 + 0.05x, no solution means never the same total; 60 pages bait = 3/0.05",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At one copy shop, the total cost $y$, in dollars, to print $x$ pages is given by $y = 12 + 0.05x$. At a second copy shop, the total cost is given by $y = 15 + 0.05x$. The system formed by these two equations has no solution. Which of the following is the best interpretation of this fact in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The two shops charge the same total only when no pages are printed.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "At 0 pages the totals are \\$12 and \\$15, which are different."
+    },
+    {
+     "key": "B",
+     "text": "There is no number of pages for which the two shops charge the same total.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "The two shops charge the same total for every number of pages.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "That would be infinitely many solutions (the same line). Here the second shop always costs \\$3 more."
+    },
+    {
+     "key": "D",
+     "text": "The two shops charge the same total when 60 pages are printed.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "60 is $\\frac{3}{0.05}$, but both shops charge the same \\$0.05 per page, so the \\$3 gap never closes."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A solution of the system would be a number of pages with equal totals; no solution means that never happens.",
+    "steps": "What does the question ask? It asks which choice is the best interpretation of this fact in this context.<br>A solution $(x, y)$ would be a number of pages $x$ at which both shops charge the same total $y$.<br>Both shops charge \\$0.05 per page, so the lines are parallel.<br>The second shop always charges $15 - 12 = 3$ dollars more, whatever $x$ is.<br>So there is no number of pages with equal totals: choice B.",
+    "check": "$12 + 0.05x = 15 + 0.05x$ gives $12 = 15$, which is false for every $x$ ✓",
+    "be_careful": "Choice A is a trap. At 0 pages the totals are \\$12 and \\$15, which are different.",
+    "desmos": "Graph both: two parallel lines.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-021",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "no-solution-quadratic-parameter",
+   "signature": "(t - 1)x + 2y = 4 and 6x + (t + 3)y = 12; slope condition (t - 1)(t + 3) = 12 gives t = 3 or -5; t = 3 is the same line, so only -5; choices are value sets so plugging one value cannot finish it",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$(t - 1)x + 2y = 4$<br>$6x + (t + 3)y = 12$<br>In the system of equations above, $t$ is a constant. Which of the following gives all values of $t$ for which the system has no solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$ only",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3$ only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $t = 3$ the equations are $2x + 2y = 4$ and $6x + 6y = 12$, and the second is 3 times the first: the same line, so infinitely many solutions, not zero."
+    },
+    {
+     "key": "C",
+     "text": "$-5$ and $3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Both roots make the lines parallel or identical. $t = 3$ makes them identical, which is infinitely many solutions, so it must be dropped."
+    },
+    {
+     "key": "D",
+     "text": "$-3$ and $5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "These come from a sign slip when factoring $t^2 + 2t - 15$; the factors are $(t + 5)(t - 3)$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "For no solution the lines must be parallel AND different. The coefficient condition gives two values of $t$; one of them makes the lines identical.",
+    "steps": "What does the question ask? It asks which choice gives all values of $t$ for which the system has no solution.<br>Step 1: parallel lines. The coefficients must be in proportion: $\\frac{t - 1}{6} = \\frac{2}{t + 3}$.<br>$(t - 1)(t + 3) = 12$ <span class=\"nt\">(cross multiply)</span><br>$t^2 + 2t - 3 = 12$ <span class=\"nt\">(expand)</span><br>$t^2 + 2t - 15 = 0$, so $(t + 5)(t - 3) = 0$ <span class=\"nt\">(factor)</span><br>$t = -5$ or $t = 3$. Every other $t$ gives one solution.<br>Step 2: check the constants for each value.<br>$t = 3$: $2x + 2y = 4$ and $6x + 6y = 12$. Multiplying the first by 3 gives the second, so the lines are the same <span class=\"nt\">(infinitely many solutions)</span><br>$t = -5$: $-6x + 2y = 4$ and $6x - 2y = 12$. Multiplying the first by $-1$ gives $6x - 2y = -4$, and $-4 \\ne 12$ <span class=\"nt\">(parallel, different lines)</span><br>Answer: $t = -5$ only.",
+    "check": "With $t = -5$, adding the two equations gives $0 = 16$, which is false, so there is no solution ✓",
+    "be_careful": "Do not stop at the slope condition: always test the constants, because one root can give the same line.",
+    "desmos": "Use a slider for $t$: at $t = 3$ the lines overlap and at $t = -5$ they are parallel. This confirms the answer but does not show that no other value works.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-022",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "coincident-parametric-solutions",
+   "signature": "6x - 4y = 10 and 9x - 6y = 15 are the same line 3x - 2y = 5; all solutions as (2r + 1, 3r - 1); baits: swapped direction (3r + 1, 2r - 1) through (1, -1), right direction wrong point (2r + 1, 3r + 1), no solution",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$6x - 4y = 10$<br>$9x - 6y = 15$<br>Which of the following describes all solutions $(x, y)$ to the system of equations above?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(3r + 1, 2r - 1)$ for every real number $r$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This passes through $(1, -1)$ when $r = 0$, but at $r = 1$ it gives $(4, 1)$: $3(4) - 2(1) = 10$, not 5. When $x$ grows by 2, $y$ must grow by 3, not the other way around."
+    },
+    {
+     "key": "B",
+     "text": "$(2r + 1, 3r + 1)$ for every real number $r$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "The steps are right, but the starting point is wrong: $r = 0$ gives $(1, 1)$, and $3(1) - 2(1) = 1$, not 5."
+    },
+    {
+     "key": "C",
+     "text": "$(2r + 1, 3r - 1)$ for every real number $r$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "There are no solutions.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "The left sides are in the ratio $2 : 3$ and so are the constants, $10 : 15$, so the lines are the same, not parallel."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Both equations are multiples of $3x - 2y = 5$, so the solutions are every point of that line. A correct description must give points on the line, and it must reach every point of it.",
+    "steps": "What does the question ask? It asks which choice describes all solutions $(x, y)$ to the system.<br>$3x - 2y = 5$ <span class=\"nt\">(divide the first equation by 2)</span><br>$3x - 2y = 5$ <span class=\"nt\">(divide the second equation by 3: the same equation)</span><br>So the solutions are all points of the line $3x - 2y = 5$.<br>Test each description by substituting it into $3x - 2y$.<br>$3(3r + 1) - 2(2r - 1) = 5r + 5$ <span class=\"nt\">(equals 5 only when $r = 0$)</span><br>$3(2r + 1) - 2(3r + 1) = 1$ <span class=\"nt\">(never 5)</span><br>$3(2r + 1) - 2(3r - 1) = 5$ <span class=\"nt\">(5 for every $r$)</span><br>As $r$ runs over all real numbers, $x = 2r + 1$ takes every real value, so every point of the line appears.<br>Answer: $(2r + 1, 3r - 1)$ for every real number $r$ (choice C).",
+    "check": "$r = 0$ gives $(1, -1)$: $6 + 4 = 10$ ✓ and $9 + 6 = 15$ ✓. $r = 1$ gives $(3, 2)$: $18 - 8 = 10$ ✓ and $27 - 12 = 15$ ✓",
+    "be_careful": "A description that contains one correct point can still be wrong. Check a second value of $r$.",
+    "desmos": "Graph both equations: only one line appears because they overlap. Plotting the points of a choice for $r = 0$ and $r = 1$ tests it.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-023",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "count-k-positive-integer-solutions",
+   "signature": "x + y = 10 and x - y = k, k an integer; solution has positive integer x and y; k even with -10 < k < 10: 9 values",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$x + y = 10$<br>$x - y = k$<br>In the system of equations above, $k$ is an integer. The solution $(x, y)$ to the system has $x$ and $y$ both positive integers. How many possible values of $k$ are there?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "9"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "19",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "19 counts every integer from $-9$ to 9. Odd values of $k$ make $x$ and $y$ fractions, such as $x = \\frac{11}{2}$ when $k = 1$."
+    },
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "4 counts only $k = 2, 4, 6, 8$. The value $k = 0$ and negative values such as $k = -4$ also work."
+    }
+   ],
+   "solution": {
+    "key_idea": "Solve for $x$ and $y$ in terms of $k$, then turn \"positive integers\" into conditions on $k$.",
+    "steps": "What does the question ask? It asks how many values of $k$ are possible.<br>$2x = 10 + k$, so $x = \\frac{10 + k}{2}$ <span class=\"nt\">(add the equations)</span><br>$2y = 10 - k$, so $y = \\frac{10 - k}{2}$ <span class=\"nt\">(subtract the equations)</span><br>Integers: $10 + k$ must be even, so $k$ must be even.<br>Positive: $10 + k > 0$ and $10 - k > 0$, so $-10 < k < 10$.<br>Even integers strictly between $-10$ and 10: $-8, -6, -4, -2, 0, 2, 4, 6, 8$.<br>Answer: 9 values.",
+    "check": "List $x$ from 1 to 9 (then $y = 10 - x$ is from 9 to 1): that is 9 pairs, each giving one value $k = x - y$ ✓",
+    "be_careful": "A common wrong answer is $19$. 19 counts every integer from $-9$ to 9. Odd values of $k$ make $x$ and $y$ fractions, such as $x = \\frac{11}{2}$ when $k = 1$.",
+    "desmos": "Not helpful for counting.",
+    "another_way": "Positive integer pairs with $x + y = 10$ are $(1, 9), (2, 8), \\ldots, (9, 1)$: 9 pairs, and each gives a different $k$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-024",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C4"
+   ],
+   "family": "mixture-acid-from-one-source",
+   "signature": "15% and 35% acid solutions mixed into 40 L of 24%; 22 L and 18 L; asks liters of acid from the 35% solution, 6.3",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A lab technician makes 40 liters of a 24% acid solution by mixing a 15% acid solution with a 35% acid solution. How many liters of acid in the final mixture come from the 35% solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "3.3",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "3.3 liters is the acid from the 15% solution, $0.15 \\times 22$."
+    },
+    {
+     "key": "B",
+     "text": "6.3",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "9.6",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "9.6 liters is all the acid in the mixture, $0.24 \\times 40$."
+    },
+    {
+     "key": "D",
+     "text": "18",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "18 liters is the amount of 35% solution, not the amount of acid in it."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Set up equations for liters of solution and liters of acid, solve for the liters of 35% solution, and then take 35% of that amount.",
+    "steps": "What does the question ask? Liters of ACID that come from the 35% solution.<br>Let $p$ = liters of 15% solution, $q$ = liters of 35% solution.<br>$p + q = 40$ <span class=\"nt\">(liters of solution)</span><br>$0.15p + 0.35q = 0.24(40) = 9.6$ <span class=\"nt\">(liters of acid)</span><br>$0.15(40 - q) + 0.35q = 9.6$ <span class=\"nt\">(substitute $p = 40 - q$)</span><br>$6 + 0.20q = 9.6$ <span class=\"nt\">(distribute, combine)</span><br>$q = 18$ <span class=\"nt\">(subtract 6, divide by 0.20)</span><br>Acid from the 35% solution: $0.35 \\times 18 = 6.3$ liters.",
+    "check": "$p = 22$: $0.15(22) + 0.35(18) = 3.3 + 6.3 = 9.6$ ✓",
+    "be_careful": "There are three different \"amounts\" here: liters of solution, liters of acid in each part, and total acid.",
+    "desmos": "Graph $x + y = 40$ and $0.15x + 0.35y = 9.6$; the intersection $(22, 18)$ still needs one more step.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-025",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "figure-line-infinite-a-plus-c",
+   "signature": "line l through (-2, 5) and (2, -1) on a grid; ax + 2y = c has infinitely many solutions with l; a = 3, c = 4; a + c = 7",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Line $\\ell$ is shown in the $xy$-plane.",
+   "stem_after_figure": "In the system of equations formed by the equation of line $\\ell$ and the equation $ax + 2y = c$, where $a$ and $c$ are constants, there are infinitely many solutions. What is the value of $a + c$?",
+   "figures": [
+    {
+     "id": "QB-A4-025-fig1",
+     "file": "figures/QB-A4-025-fig1.svg",
+     "alt": "A line labeled l on a coordinate grid, falling from left to right, passing through the marked points (-2, 5) and (2, -1)."
+    }
+   ],
+   "answer": {
+    "spr": {
+     "values": [
+      "7"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "13",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses slope $+\\frac{3}{2}$, which gives $-3x + 2y = 16$. The line falls, so its slope is negative."
+    },
+    {
+     "value": "3",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "3 is $a$ alone; the question asks for $a + c$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Infinitely many solutions means $ax + 2y = c$ is line $\\ell$ itself. Write the equation of $\\ell$ with $2y$ in it.",
+    "steps": "What does the question ask? It asks for the value of $a + c$.<br>Slope of $\\ell$: $\\frac{-1 - 5}{2 - (-2)} = \\frac{-6}{4} = -\\frac{3}{2}$ <span class=\"nt\">(two marked points)</span><br>$y$-intercept: the midpoint of the two points is $(0, 2)$, so $b = 2$ <span class=\"nt\">(or substitute: $5 = -\\frac{3}{2}(-2) + b$)</span><br>$\\ell$: $y = -\\frac{3}{2}x + 2$<br>$2y = -3x + 4$ <span class=\"nt\">(multiply by 2 to match $2y$)</span><br>$3x + 2y = 4$ <span class=\"nt\">(add $3x$)</span><br>So $a = 3$ and $c = 4$.<br>Answer: $a + c = 7$.",
+    "check": "$3(-2) + 2(5) = 4$ ✓ and $3(2) + 2(-1) = 4$ ✓, so both marked points are on $3x + 2y = 4$.",
+    "be_careful": "Because the $y$-coefficient 2 is fixed, the equation of $\\ell$ must be written with $2y$; any other multiple changes $a$ and $c$.",
+    "desmos": "Graph $ax + 2y = c$ with sliders and the two points; adjust until the line passes through both. Slower than the algebra.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-026",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "no-solution-must-be-true",
+   "signature": "3x + 4y = 12 and ax + by = c no solution; must be true: 4a = 3b; c not 12 is the could/must bait (6x + 8y = 12)",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$3x + 4y = 12$<br>$ax + by = c$<br>In the system of equations above, $a$, $b$, and $c$ are constants and $b \\ne 0$. If the system has no solution, which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3a = 4b$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This matches 3 with $b$ and 4 with $a$. Parallel lines need $\\frac{a}{3} = \\frac{b}{4}$, which is $4a = 3b$."
+    },
+    {
+     "key": "B",
+     "text": "$c \\ne 12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "$c$ can equal 12: $6x + 8y = 12$ is parallel to $3x + 4y = 12$ (it is the same as $3x + 4y = 6$), so that system has no solution."
+    },
+    {
+     "key": "C",
+     "text": "$4a = 3b$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$a = 3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$a$ does not have to be 3: $6x + 8y = 5$ also gives no solution."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "No solution means the lines are parallel: equal slopes, $-\\frac{a}{b} = -\\frac{3}{4}$. The constant only has to avoid making the same line.",
+    "steps": "What does the question ask? It asks what must be true if the system has no solution.<br>The slope of $3x + 4y = 12$ is $-\\frac{3}{4}$.<br>The slope of $ax + by = c$ is $-\\frac{a}{b}$ <span class=\"nt\">(possible because $b \\ne 0$)</span><br>No solution requires equal slopes: $\\frac{a}{b} = \\frac{3}{4}$, so $4a = 3b$ <span class=\"nt\">(cross multiply)</span><br>Check the other choices with examples of systems that have no solution:<br>$6x + 8y = 12$ has $c = 12$ <span class=\"nt\">(so B need not be true)</span><br>$6x + 8y = 5$ has $a = 6$ <span class=\"nt\">(so D need not be true)</span><br>Answer: $4a = 3b$ (choice C).",
+    "check": "In $6x + 8y = 12$: $4(6) = 24 = 3(8)$ ✓, and dividing by 2 gives $3x + 4y = 6$, which never equals 12 ✓",
+    "be_careful": "\"Must be true\" means true for EVERY system with no solution; one counterexample rules a choice out.",
+    "desmos": "Not needed.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-027",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C3"
+   ],
+   "family": "target-as-combination",
+   "signature": "3a + 5b + 7c = 41, a + b + c = 11; a + 3b + 5c = (3a + 5b + 7c) - 2(a + b + c) = 41 - 22 = 19; common wrongs 30 (41 - 11), 52 (41 + 11); ICMS killer hp-alg4-3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "If $3a + 5b + 7c = 41$ and $a + b + c = 11$, what is the value of $a + 3b + 5c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "19"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "30",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is $41 - 11$. Subtracting once leaves $2a + 4b + 6c$, not $a + 3b + 5c$."
+    },
+    {
+     "value": "52",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is $41 + 11$, which is $4a + 6b + 8c$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Three unknowns and two equations cannot give each letter, but they can give the asked-for combination. Each coefficient of $a + 3b + 5c$ is 2 less than in $3a + 5b + 7c$.",
+    "steps": "The question asks for $a + 3b + 5c$, not for $a$, $b$, and $c$. There are more unknowns than equations, so look for a way to build the target from the two given equations.<br>$(3a + 5b + 7c) - (a + 3b + 5c) = 2a + 2b + 2c$ <span class=\"nt\">(each coefficient drops by 2)</span><br>$2a + 2b + 2c = 2(11) = 22$ <span class=\"nt\">(use $a + b + c = 11$)</span><br>$a + 3b + 5c = 41 - 22 = 19$<br>Why it works: $a + 3b + 5c = 1(3a + 5b + 7c) - 2(a + b + c)$ for every $a$, $b$, $c$, so it has the same value for every solution.",
+    "check": "One solution is $a = 8$, $b = 2$, $c = 1$: $24 + 10 + 7 = 41$ ✓ and $8 + 2 + 1 = 11$ ✓, and $8 + 6 + 5 = 19$ ✓",
+    "be_careful": "A common wrong answer is $30$. This is $41 - 11$. Subtracting once leaves $2a + 4b + 6c$, not $a + 3b + 5c$.",
+    "desmos": "Desmos cannot solve for three unknowns here. Combining the equations is the way.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-028",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "two-tables-parallel",
+   "signature": "line p table (0,3),(3,9),(7,17) and line q table (-2,-7),(1,-1),(6,9): uneven x-steps hide equal slopes 2; intercepts 3 and -3; zero solutions; shared output 9 is bait",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The tables show three points on line $p$ and three points on line $q$ in the $xy$-plane.<table class=\"dt\"><tr><th colspan=\"2\">Line $p$</th></tr><tr><th>$x$</th><th>$y$</th></tr><tr><td>$0$</td><td>$3$</td></tr><tr><td>$3$</td><td>$9$</td></tr><tr><td>$7$</td><td>$17$</td></tr></table><table class=\"dt\"><tr><th colspan=\"2\">Line $q$</th></tr><tr><th>$x$</th><th>$y$</th></tr><tr><td>$-2$</td><td>$-7$</td></tr><tr><td>$1$</td><td>$-1$</td></tr><tr><td>$6$</td><td>$9$</td></tr></table>How many solutions does the system formed by the equations of lines $p$ and $q$ have?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Zero",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Exactly one",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D28",
+     "feedback": "The jumps in $y$ look different (6 then 8 for $p$, 6 then 10 for $q$) only because the $x$-steps differ; per unit of $x$ both rise 2. The shared value 9 is at $x = 3$ on $p$ but $x = 6$ on $q$, so it is not a common point."
+    },
+    {
+     "key": "C",
+     "text": "Exactly two",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D24",
+     "feedback": "Two different lines can meet at most once; \"two solutions\" is never possible for a linear system."
+    },
+    {
+     "key": "D",
+     "text": "Infinitely many",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Equal slopes alone do not make the same line; the $y$-intercepts are 3 and $-3$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Find each slope as change in $y$ over change in $x$, not from the raw jumps in $y$. Equal slopes with different intercepts mean parallel lines.",
+    "steps": "What does the question ask? It asks how many solutions the system of lines $p$ and $q$ has.<br>Line $p$: from $(0, 3)$ to $(3, 9)$, slope $= \\frac{6}{3} = 2$; the intercept is 3. So $p$: $y = 2x + 3$.<br>Line $q$: from $(1, -1)$ to $(6, 9)$, slope $= \\frac{10}{5} = 2$. <span class=\"nt\">(change in $y$ over change in $x$: $9 - (-1) = 10$ and $6 - 1 = 5$)</span><br>Intercept of $q$: $-1 = 2(1) + b$, so $b = -3$. So $q$: $y = 2x - 3$. <span class=\"nt\">(plug the point $(1, -1)$ into $y = 2x + b$)</span><br>Same slope, different $y$-intercepts: the lines are parallel and never meet.<br>Answer: zero solutions.",
+    "check": "$q$ at $x = -2$: $2(-2) - 3 = -7$ ✓; $2x + 3 = 2x - 3$ gives $3 = -3$, which is false for every $x$ ✓",
+    "be_careful": "Unequal jumps in $y$ do not mean unequal slopes when the $x$-steps are unequal. Divide each jump by its $x$-step.",
+    "desmos": "Enter both tables and graph the points; the two rows of points never meet. Fitting the lines takes longer than reading the slopes.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-029",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "parameter-from-solution-condition",
+   "signature": "2x + y = k and x - 2y = 2k - 14 with solution satisfying y = x + 1: 3x + 1 = k and x = 12 - 2k give 37 = 7k, k = 37/7; traps 37/6 (drops k on right), 7 (sign slip x = 2k - 12), 12 (constant)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$2x + y = k$<br>$x - 2y = 2k - 14$<br>In the given system of equations, $k$ is a constant. The solution $(x, y)$ to the system satisfies $y = x + 1$. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{37}{7}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{37}{6}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This solves $37 - 6k = 0$, dropping the $k$ on the other side of $37 - 6k = k$."
+    },
+    {
+     "key": "C",
+     "text": "7",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This comes from $x = 2k - 12$, a sign slip: $-x - 2 = 2k - 14$ gives $-x = 2k - 12$, so $x = 12 - 2k$."
+    },
+    {
+     "key": "D",
+     "text": "12",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "12 is the constant left after moving $-2$ across in the second equation, not the value of $k$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The condition $y = x + 1$ is a third equation. Substitute it into both given equations to get two expressions in $k$ for the same $x$.",
+    "steps": "The question asks for $k$. Three facts link $x$, $y$, and $k$, so replace $y$ with $x + 1$ in each equation.<br>$3x + 1 = k$ <span class=\"nt\">(substitute $y = x + 1$ into $2x + y = k$)</span><br>$-x - 2 = 2k - 14$, so $x = 12 - 2k$ <span class=\"nt\">(substitute $y = x + 1$ into $x - 2y = 2k - 14$)</span><br>$3(12 - 2k) + 1 = k$ <span class=\"nt\">(replace $x$ in $3x + 1 = k$)</span><br>$37 - 6k = k$, so $37 = 7k$ <span class=\"nt\">(expand and collect)</span><br>$k = \\frac{37}{7}$ <span class=\"nt\">(divide by 7)</span><br>Why it works: once $y = x + 1$ is known, each equation gives $x$ in terms of $k$; both must describe the same $x$, which fixes $k$.",
+    "check": "$k = \\frac{37}{7}$ gives $x = 12 - \\frac{74}{7} = \\frac{10}{7}$ and $y = \\frac{17}{7}$: $\\frac{20}{7} + \\frac{17}{7} = \\frac{37}{7}$ ✓ and $\\frac{10}{7} - \\frac{34}{7} = -\\frac{24}{7} = \\frac{74}{7} - 14$ ✓",
+    "be_careful": "After substituting into $3x + 1 = k$, the variable $k$ appears on both sides.",
+    "desmos": "A slider for $k$ cannot land on $\\frac{37}{7}$ exactly; the substitution takes three lines.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-030",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C6"
+   ],
+   "family": "rectangle-not-enough",
+   "signature": "rectangle perimeter 46; which extra fact does NOT determine the area; key \"length plus width is 23\" (same equation as the perimeter)",
+   "abilities": [
+    "M",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A rectangle has a perimeter of 46 centimeters. Each choice gives one more fact about the rectangle. Which fact is NOT enough to determine the area of the rectangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The ratio of the length to the width is 3 to 2.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "With $L = \\frac{3}{2}W$: $2(\\frac{3}{2}W) + 2W = 46$ gives $W = 9.2$ and $L = 13.8$, so the area can be found."
+    },
+    {
+     "key": "B",
+     "text": "The length is 1 centimeter less than twice the width.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "With $L = 2W - 1$: $2(2W - 1) + 2W = 46$ gives $W = 8$, $L = 15$, area 120."
+    },
+    {
+     "key": "C",
+     "text": "The length is 7 centimeters more than the width.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "With $L = W + 7$: $2(W + 7) + 2W = 46$ gives $W = 8$, $L = 15$, area 120."
+    },
+    {
+     "key": "D",
+     "text": "The length plus the width is 23 centimeters.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A second fact helps only if it is a NEW equation; a fact that is the perimeter equation in disguise leaves infinitely many rectangles.",
+    "steps": "What does the question ask? It asks which fact is NOT enough to determine the area of the rectangle.<br>Perimeter: $2L + 2W = 46$, which is the same as $L + W = 23$ <span class=\"nt\">(divide by 2)</span><br>Choice D says $L + W = 23$: this is the perimeter equation again, so the system has infinitely many solutions.<br>For example, $L = 13$, $W = 10$ gives area 130, and $L = 15$, $W = 8$ gives area 120 <span class=\"nt\">(different areas, so the area is not determined)</span><br>Each of A, B, and C is a different line from $L + W = 23$, so each system has exactly one solution and the area can be found.<br>Answer: choice D.",
+    "check": "Two rectangles from choice D have different areas (130 and 120) ✓",
+    "be_careful": "\"Not enough\" questions are about whether the new fact is new, not about how hard the arithmetic is.",
+    "desmos": "Not needed.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-031",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C3"
+   ],
+   "family": "swapped-coins-difference",
+   "signature": "nickels and dimes worth 4.75 dollars; with counts swapped worth 5.75 dollars; subtract to get 5(n - d) = 100; asks how many more nickels than dimes, 20",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A jar contains only nickels (worth \\$0.05 each) and dimes (worth \\$0.10 each), with a total value of \\$4.75. If the number of nickels and the number of dimes were swapped, the total value would be \\$5.75. How many more nickels than dimes are in the jar?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "20"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "70",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "70 is the total number of coins, $n + d$, which comes from adding the equations."
+    },
+    {
+     "value": "45",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "45 is the number of nickels alone."
+    }
+   ],
+   "solution": {
+    "key_idea": "In cents, the two facts are $5n + 10d = 475$ and $10n + 5d = 575$. Subtracting them gives $5(n - d)$, the asked difference, at once.",
+    "steps": "What does the question ask? How many more nickels than dimes: $n - d$.<br>Work in cents. Let $n$ = nickels and $d$ = dimes.<br>$5n + 10d = 475$ <span class=\"nt\">(actual value)</span><br>$10n + 5d = 575$ <span class=\"nt\">(swapped: the $n$ coins are now dimes and the $d$ coins are now nickels)</span><br>$5n - 5d = 100$ <span class=\"nt\">(subtract the first equation from the second)</span><br>$n - d = 20$ <span class=\"nt\">(divide by 5)</span><br>Answer: 20 more nickels than dimes.",
+    "check": "Adding the equations gives $15(n + d) = 1,050$, so $n + d = 70$; then $n = 45$, $d = 25$. $5(45) + 10(25) = 475$ ✓, $10(45) + 5(25) = 575$ ✓, and $45 - 25 = 20$ ✓",
+    "be_careful": "Swapping raises the value, so there are more nickels than dimes; a negative difference means the subtraction was done in the wrong order.",
+    "desmos": "Graph $0.05x + 0.10y = 4.75$ and $0.10x + 0.05y = 5.75$, click the intersection $(45, 25)$, and subtract.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-032",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C6"
+   ],
+   "family": "remove-and-add-mixture",
+   "signature": "30 L of 20% acid; remove x L, add y L pure acid; result 36 L of 40%: 30 - x + y = 36, 0.2(30 - x) + y = 14.4; x = 3, y = 9; traps 6 (nothing removed, volume), 8.4 (nothing removed, acid), 12 (x + y)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A chemist has 30 liters of a solution that is 20% acid. She removes $x$ liters of the solution and then adds $y$ liters of pure acid. The result is 36 liters of a solution that is 40% acid. What is the value of $y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "6",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This assumes nothing was removed and uses only the volume: $30 + y = 36$."
+    },
+    {
+     "key": "B",
+     "text": "8.4",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This assumes nothing was removed and uses only the acid: $6 + y = 14.4$."
+    },
+    {
+     "key": "C",
+     "text": "9",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "12",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D17",
+     "feedback": "12 is $x + y$, the total amount moved, not the acid added."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Write one equation for the total volume and one for the volume of acid. The removed liters take 20% acid with them.",
+    "steps": "The question asks for $y$, the liters of pure acid added.<br>$30 - x + y = 36$ <span class=\"nt\">(total volume)</span><br>$0.2(30 - x) + y = 0.4(36)$ <span class=\"nt\">(acid: the remaining solution is still 20% acid, and the added acid is 100%)</span><br>$6 - 0.2x + y = 14.4$ <span class=\"nt\">(expand)</span><br>$24 - 0.8x = 21.6$ <span class=\"nt\">(subtract the acid equation from the volume equation: $(30 - x) - (6 - 0.2x) = 36 - 14.4$)</span><br>$x = 3$ <span class=\"nt\">(solve)</span><br>$y = 36 - 30 + 3 = 9$ <span class=\"nt\">(volume equation)</span>",
+    "check": "$27$ liters remain with $5.4$ liters of acid; adding 9 liters gives 36 liters with $14.4$ liters of acid, and $14.4 \\div 36 = 0.4$ ✓",
+    "be_careful": "Removing solution also removes acid; only 80% of the removed liters is non-acid.",
+    "desmos": "Graph both equations with $x$ and $y$ and read the intersection $(3, 9)$, but the setup is the real test.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-033",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "count-parameters-positive-integer-solution",
+   "signature": "x + y = 12 and y = kx with positive integer solution: x = 1..11, k = (12 - x)/x, all different: 11; traps 5 (integer k only), 6 (includes k = 0 from x = 12), 12",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$x + y = 12$<br>$y = kx$<br>In the given system of equations, $k$ is a constant. The system has a solution $(x, y)$ in which $x$ and $y$ are both positive integers. How many different values of $k$ are possible?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "5",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "5 counts only the values of $k$ that are integers. The problem does not require $k$ to be an integer."
+    },
+    {
+     "key": "B",
+     "text": "6",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This includes $x = 12$, $y = 0$, but 0 is not positive."
+    },
+    {
+     "key": "C",
+     "text": "11",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "12",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This counts 12 possible values of $x$, from 1 to 12; $x = 12$ makes $y = 0$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Count the solutions first: each positive integer point on $x + y = 12$ gives one line $y = kx$ through the origin, with $k = \\frac{y}{x}$.",
+    "steps": "The question asks how many values of $k$ are possible.<br>$x = 1, 2, \\ldots, 11$ with $y = 12 - x$ <span class=\"nt\">(both must be positive integers)</span><br>$k = \\frac{12 - x}{x} = \\frac{12}{x} - 1$ <span class=\"nt\">(from $y = kx$)</span><br>Different values of $x$ give different values of $\\frac{12}{x}$, so the 11 points give 11 different values of $k$.<br>Answer: 11.<br>Why it works: the line $y = kx$ passes through the origin, so its slope is fixed by the point where it meets $x + y = 12$. Different points on that line give different slopes.",
+    "check": "$x = 5$: $y = 7$ and $k = \\frac{7}{5}$; $5 + 7 = 12$ ✓ and $\\frac{7}{5}(5) = 7$ ✓",
+    "be_careful": "$k$ may be a fraction; only $x$ and $y$ must be integers.",
+    "desmos": "Desmos can show one line at a time; counting requires the reasoning.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-034",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "three-concurrent-lines-parameter",
+   "signature": "ax + y = 7, x + ay = 5, x - y = a - 2 concurrent: x = y + a - 2; (a + 1)y = 7 - a and (a + 1)y = 7 + 2a - a^2, so a^2 - 3a = 0: a = 0 (point (5, 7)) or a = 3 (point (2, 1)); dividing by a loses 0",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graphs of $ax + y = 7$, $x + ay = 5$, and $x - y = a - 2$, where $a$ is a constant, all pass through the same point. Which of the following gives all possible values of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0$ and $3$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3$ only",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This divides $a^2 = 3a$ by $a$ and loses $a = 0$. With $a = 0$ the lines are $y = 7$, $x = 5$, and $x - y = -2$, which all pass through $(5, 7)$."
+    },
+    {
+     "key": "C",
+     "text": "$-3$ and $0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "A sign slip in $a^2 - 3a = 0$; with $a = -3$ the first two lines meet at $(-\\frac{13}{4}, -\\frac{11}{4})$, which is not on $x - y = -5$."
+    },
+    {
+     "key": "D",
+     "text": "No value of $a$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Three lines can share a point; here two values of $a$ make it happen."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Use the third equation to write $x$ in terms of $y$, substitute into the other two, and compare the two expressions for $(a + 1)y$.",
+    "steps": "The question asks for every $a$ that makes the three lines share one point.<br>$x = y + a - 2$ <span class=\"nt\">(from $x - y = a - 2$)</span><br>Second equation: $y + a - 2 + ay = 5$, so $(a + 1)y = 7 - a$ <span class=\"nt\">(replace $x$ with $y + a - 2$, then group the $y$-terms)</span><br>First equation: $a(y + a - 2) + y = 7$, so $(a + 1)y = 7 - a^2 + 2a$ <span class=\"nt\">(same substitution in the first equation)</span><br>$7 - a = 7 - a^2 + 2a$ <span class=\"nt\">(both equal $(a + 1)y$)</span><br>$a^2 - 3a = 0$, so $a(a - 3) = 0$ <span class=\"nt\">(factor; do not divide by $a$)</span><br>$a = 0$ or $a = 3$. ($a = -1$ is impossible: it would need $0 = 8$.) <span class=\"nt\">(each factor can be 0)</span><br>Answer: $0$ and $3$.",
+    "check": "$a = 3$: point $(2, 1)$; $3(2) + 1 = 7$ ✓, $2 + 3(1) = 5$ ✓, $2 - 1 = 1$ ✓. $a = 0$: point $(5, 7)$; $y = 7$ ✓, $x = 5$ ✓, $5 - 7 = -2$ ✓",
+    "be_careful": "Factor instead of dividing by $a$; dividing by a variable can lose the solution $a = 0$.",
+    "desmos": "A slider for $a$ shows the lines meeting at $a = 3$, but $a = 0$ is easy to miss; the algebra decides.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-035",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "two-systems-common-solution",
+   "signature": "x + y = 7, x - y = 1 has the same solution (4, 3) as ax + by = 5, bx + ay = 13; adding gives 7(a + b) = 18, a + b = 18/7; traps -8 (a - b), 7 (x + y), 18 (stops before dividing by 7)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The system of equations $x + y = 7$ and $x - y = 1$ has the same solution as the system of equations $ax + by = 5$ and $bx + ay = 13$, where $a$ and $b$ are constants. What is the value of $a + b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$-8$ is $a - b$, from subtracting the two equations. The question asks for $a + b$, which comes from adding them."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{18}{7}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "7",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "7 is $x + y$ from the first system, not $a + b$."
+    },
+    {
+     "key": "D",
+     "text": "18",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D17",
+     "feedback": "18 is $7(a + b)$. Divide by 7 to get $a + b$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Solve the system with no constants first. Then substitute that point into the second system; adding the two equations collects $a + b$ in one step.",
+    "steps": "The question asks for $a + b$, not for $a$ and $b$ separately.<br>$2x = 8$, so $x = 4$ <span class=\"nt\">(add $x + y = 7$ and $x - y = 1$)</span><br>$y = 7 - 4 = 3$<br>$4a + 3b = 5$ <span class=\"nt\">(substitute $(4, 3)$ into $ax + by = 5$)</span><br>$4b + 3a = 13$ <span class=\"nt\">(substitute $(4, 3)$ into $bx + ay = 13$)</span><br>$7a + 7b = 18$ <span class=\"nt\">(add the two equations)</span><br>$a + b = \\frac{18}{7}$ <span class=\"nt\">(divide both sides by 7)</span>",
+    "check": "Solving fully gives $a = -\\frac{19}{7}$ and $b = \\frac{37}{7}$: $4(-\\frac{19}{7}) + 3(\\frac{37}{7}) = \\frac{35}{7} = 5$ ✓ and $4(\\frac{37}{7}) + 3(-\\frac{19}{7}) = \\frac{91}{7} = 13$ ✓; $a + b = \\frac{18}{7}$ ✓",
+    "be_careful": "In $bx + ay = 13$ the constants trade places: $b$ goes with $x$ and $a$ goes with $y$.",
+    "desmos": "Graph the first system to get $(4, 3)$. Then the two equations in $a$ and $b$ can be graphed with $a$ as $x$ and $b$ as $y$; adding them by hand is faster.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-036",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "quadrant-one-intersection",
+   "signature": "y = -2x + 8 and y = mx + 2 intersect in Quadrant I; x = 6/(m + 2), need 0 < x < 4, so m > -1/2; key -1/4 (negative slope works); -3 gives x < 0, -1 gives y < 0, -1/2 lands on the x-axis",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Line $\\ell$ has slope $m$ and $y$-intercept 2. Line $\\ell$ crosses the line $2x + y = 8$ at a point whose coordinates $(x, y)$ are both positive. Which of the following could be $m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "With $m = -3$: $-3x + 2 = -2x + 8$ gives $x = -6$, so the point $(-6, 20)$ is in Quadrant II."
+    },
+    {
+     "key": "B",
+     "text": "$-1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "With $m = -1$: $x = 6$ is positive, but $y = -4$ is negative, so the point is in Quadrant IV. Both coordinates must be positive."
+    },
+    {
+     "key": "C",
+     "text": "$-\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $m = -\\frac{1}{2}$ the point is $(4, 0)$, which is on the $x$-axis, not in Quadrant I."
+    },
+    {
+     "key": "D",
+     "text": "$-\\frac{1}{4}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The line $y = mx + 2$ starts at $(0, 2)$, inside Quadrant I. It meets $y = -2x + 8$ in Quadrant I if it reaches that line before $x = 4$, where $y = -2x + 8$ leaves Quadrant I. A negative slope can still do this.",
+    "steps": "Plan: find the intersection in terms of $m$, then require both coordinates to be positive.<br>Line $\\ell$ is $y = mx + 2$, and the other line is $y = -2x + 8$. Solve: $mx + 2 = -2x + 8$, so $(m + 2)x = 6$ and $x = \\frac{6}{m + 2}$.<br>Quadrant I needs $x > 0$: $m + 2 > 0$, so $m > -2$ <span class=\"nt\">(rules out $-3$)</span><br>and $y > 0$: on $y = -2x + 8$ this means $x < 4$ <span class=\"nt\">(the point lies on this line)</span><br>$\\frac{6}{m + 2} < 4$, so $6 < 4(m + 2)$ and $m > -\\frac{1}{2}$ <span class=\"nt\">(rules out $-1$ and $-\f{1}{2}$)</span><br>Answer: $m = -\\frac{1}{4}$.",
+    "check": "$m = -\\frac{1}{4}$: $x = \\frac{6}{1.75} = \\frac{24}{7}$ and $y = -\\frac{48}{7} + 8 = \\frac{8}{7}$, both positive ✓",
+    "be_careful": "A negative $m$ does not rule out Quadrant I here, because the line $y = mx + 2$ starts above the origin.",
+    "desmos": "A slider for $m$ shows the intersection moving; test each choice.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-037",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C4"
+   ],
+   "family": "percent-change-members",
+   "signature": "club of 120 members last year (juniors and seniors); juniors +25 percent, seniors -10 percent, 129 this year; 60 and 60; juniors this year 75",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Last year a club had 120 members, each a junior or a senior. This year the number of juniors increased by 25% and the number of seniors decreased by 10%, and the club now has 129 members. How many juniors are in the club this year?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "15",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "15 is the increase in the number of juniors, not the number this year."
+    },
+    {
+     "key": "B",
+     "text": "54",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "54 is the number of seniors this year, $0.90 \\times 60$."
+    },
+    {
+     "key": "C",
+     "text": "60",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "60 is the number of juniors last year."
+    },
+    {
+     "key": "D",
+     "text": "75",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Let the variables be last year’s numbers; the percent changes become multipliers 1.25 and 0.90.",
+    "steps": "Plan: let the variables count last year’s members, so that both facts are equations in the same two unknowns.<br>Let $j$ = juniors last year, $s$ = seniors last year.<br>$j + s = 120$ <span class=\"nt\">(last year)</span><br>$1.25j + 0.90s = 129$ <span class=\"nt\">(this year)</span><br>$1.25j + 0.90(120 - j) = 129$ <span class=\"nt\">(substitute $s = 120 - j$)</span><br>$0.35j + 108 = 129$ <span class=\"nt\">(distribute, combine)</span><br>$0.35j = 21$, so $j = 60$<br>Answer: juniors this year $= 1.25(60) = 75$.",
+    "check": "Seniors: $0.90(60) = 54$, and $75 + 54 = 129$ ✓",
+    "be_careful": "The variables stand for last year; the question asks about this year.",
+    "desmos": "Graph $x + y = 120$ and $1.25x + 0.9y = 129$; the intersection $(60, 60)$ is last year’s numbers.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-038",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "infinite-negative-factor",
+   "signature": "ax + 3y = 5 and 4x = by - 20 infinitely many; rewrite as 4x - by = -20; factor -4 from the constants; a = -1, b = 12; a + b = 11",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 105,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$ax + 3y = 5$<br>$4x = by - 20$<br>In the system of equations above, $a$ and $b$ are constants. If the system has infinitely many solutions, what is the value of $a + b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "11"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-13",
+     "error_type": "slip",
+     "misconception": "D22",
+     "feedback": "This reads the second equation as $4x + by = -20$ without moving $by$ across, giving $b = -12$. Rewritten correctly it is $4x - by = -20$."
+    },
+    {
+     "value": "-11",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses the factor 4 instead of $-4$: $a = 1$, $b = -12$. Then the constants would be 20, not $-20$."
+    }
+   ],
+   "solution": {
+    "key_idea": "First put both equations in the same form, with the $x$-term and the $y$-term on the left and the constant on the right. Then the constants, 5 and $-20$, give the factor for every term.",
+    "steps": "Plan: infinitely many solutions means one equation is a multiple of the other, so line up the terms and find that multiplier.<br>$4x - by = -20$ <span class=\"nt\">(subtract $by$ from both sides of $4x = by - 20$)</span><br>Constants: $5m = -20$, so $m = -4$ <span class=\"nt\">(the only pair with both values known)</span><br>$x$-terms: $am = 4$, so $a = \\frac{4}{-4} = -1$ <span class=\"nt\">(match the $x$-coefficients after multiplying by $m = -4$)</span><br>$y$-terms: $3m = -b$, so $-b = -12$ and $b = 12$ <span class=\"nt\">(match the $y$-coefficients)</span><br>Answer: $a + b = -1 + 12 = 11$.",
+    "check": "With $a = -1$ and $b = 12$: $-4(-x + 3y) = 4x - 12y$ and $-4(5) = -20$, so $4x - 12y = -20$, which is $4x = 12y - 20$ ✓",
+    "be_careful": "Two sign traps: the factor is negative, and $by$ changes sign when it moves to the left side.",
+    "desmos": "Sliders for $a$ and $b$ can show the overlap at $a = -1$, $b = 12$, but finding both by sliding is slow.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-039",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "statements-parameters",
+   "signature": "ax + 2y = 6 and 3x + y = b; I: a = 6, b = 3 gives infinitely many (true); II: b not 3 gives no solution (false when a is not 6)",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$ax + 2y = 6$<br>$3x + y = b$<br>In the system of equations above, $a$ and $b$ are constants. Which of the following statements must be true?<br>I. If $a = 6$ and $b = 3$, the system has infinitely many solutions.<br>II. If $b \\ne 3$, the system has no solution.",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "I only",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "II only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Statement I is true: with $a = 6$, $b = 3$, the first equation is twice the second."
+    },
+    {
+     "key": "C",
+     "text": "I and II",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Statement II ignores $a$. If $a \\ne 6$, the slopes differ and the system has exactly one solution for any $b$; for example $a = 1$, $b = 0$."
+    },
+    {
+     "key": "D",
+     "text": "Neither I nor II",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Statement I is true: $6x + 2y = 6$ is $2(3x + y) = 2(3)$, the same line."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Multiply the second equation by 2: $6x + 2y = 2b$. Compare with $ax + 2y = 6$ term by term.",
+    "steps": "What does the question ask? It asks which statement must be true.<br>$6x + 2y = 2b$ <span class=\"nt\">(second equation times 2, to match the $2y$)</span><br>I: with $a = 6$ and $b = 3$ the equations are $6x + 2y = 6$ and $6x + 2y = 6$: the same line, so I is true.<br>II: $b \\ne 3$ makes the constants different, but no solution also requires $a = 6$.<br>If $a = 1$ and $b = 0$: $x + 2y = 6$ and $3x + y = 0$ have slopes $-\\frac{1}{2}$ and $-3$, so they cross once <span class=\"nt\">(II is false)</span><br>Answer: I only.",
+    "check": "For $a = 1$, $b = 0$: $y = -3x$ gives $x - 6x = 6$, so $x = -\\frac{6}{5}$ and $y = \\frac{18}{5}$, one solution ✓",
+    "be_careful": "A condition on the constant alone cannot force parallel lines.",
+    "desmos": "Sliders for $a$ and $b$ can test II quickly; this is a reasonable use, but the algebra is short.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-040",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "A4.C6"
+   ],
+   "family": "reciprocal-substitution-rates",
+   "signature": "boat: 36 mi down + 24 mi up takes 7 h; 24 down + 36 up takes 8 h; p = 1/(v + w), q = 1/(v - w): 36p + 24q = 7, 24p + 36q = 8; p = 1/12, q = 1/6; v + w = 12, v - w = 6; v = 9; traps 3 (current), 6 (upstream), 12 (downstream)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A boat travels 36 miles downstream and then 24 miles upstream in a total of 7 hours. On another trip, at the same speeds, it travels 24 miles downstream and then 36 miles upstream in a total of 8 hours. The boat’s speed in still water and the speed of the current are both constant. What is the boat’s speed in still water, in miles per hour?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "3",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "3 is the speed of the current."
+    },
+    {
+     "key": "B",
+     "text": "6",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "6 is the upstream speed, $v - w$."
+    },
+    {
+     "key": "C",
+     "text": "9",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "12",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "12 is the downstream speed, $v + w$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Time is distance divided by speed. Using the reciprocals of the two speeds as the unknowns makes both equations linear.",
+    "steps": "The question asks for the speed in still water, $v$. Let $w$ be the current’s speed, so the downstream speed is $v + w$ and the upstream speed is $v - w$.<br>Let $p = \\frac{1}{v + w}$ and $q = \\frac{1}{v - w}$ (hours per mile).<br>$36p + 24q = 7$ and $24p + 36q = 8$ <span class=\"nt\">(time = distance × hours per mile)</span><br>$60(p + q) = 15$, so $p + q = \\frac{1}{4}$ <span class=\"nt\">(add)</span><br>$12(p - q) = -1$, so $p - q = -\\frac{1}{12}$ <span class=\"nt\">(subtract)</span><br>$p = \\frac{1}{12}$ and $q = \\frac{1}{6}$ <span class=\"nt\">(solve)</span><br>$v + w = 12$ and $v - w = 6$ <span class=\"nt\">(take reciprocals)</span><br>$v = 9$ <span class=\"nt\">(add and divide by 2)</span>",
+    "check": "Downstream 12 mph, upstream 6 mph: $\\frac{36}{12} + \\frac{24}{6} = 3 + 4 = 7$ ✓ and $\\frac{24}{12} + \\frac{36}{6} = 2 + 6 = 8$ ✓",
+    "be_careful": "Solving for $p$ and $q$ gives hours per mile; take reciprocals before finding $v$.",
+    "desmos": "The equations in $v$ and $w$ are not linear; the substitution is the efficient route.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-041",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C6"
+   ],
+   "family": "cafe-redundant-price-fact",
+   "signature": "cafe coffee 4 dollars, muffin 3 dollars, revenue 340 dollars; which added fact does NOT determine the number of coffees: 50 percent price rise giving 510 (a multiple); disguised new prices 5 and 2 giving 320 does determine",
+   "abilities": [
+    "M",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A café sells coffee for \\$4 per cup and muffins for \\$3 each. Yesterday the café’s revenue from coffee and muffins was \\$340. Which of the following additional facts would NOT make it possible to determine the number of cups of coffee the café sold yesterday?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The café sold 100 cups of coffee and muffins in all.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "With $c + m = 100$, the lines cross once: $c = 40$, $m = 60$."
+    },
+    {
+     "key": "B",
+     "text": "If both prices had been 50% higher, the revenue would have been \\$510.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "The café sold 20 more muffins than cups of coffee.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "With $m = c + 20$: $4c + 3(c + 20) = 340$ gives $c = 40$."
+    },
+    {
+     "key": "D",
+     "text": "If coffee had cost \\$5 per cup and muffins \\$2 each, the revenue would have been \\$320.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This also looks like a price change, but $5c + 2m = 320$ is NOT a multiple of $4c + 3m = 340$; together they give $c = 40$, $m = 60$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "An added fact determines the answer only if it is a new equation, one whose line crosses $4c + 3m = 340$ once. A fact that is the same equation multiplied by a number adds nothing.",
+    "steps": "What does the question ask? It asks which additional facts would NOT make it possible to determine the number of cups of coffee the café sold yesterday.<br>Let $c$ = cups of coffee and $m$ = muffins. The given fact is $4c + 3m = 340$.<br>Translate each choice into an equation and compare.<br>A: $c + m = 100$. Its slope differs from that of $4c + 3m = 340$, so there is one solution <span class=\"nt\">($c = 40$)</span><br>B: prices 50% higher are \\$6 and \\$4.50, so $6c + 4.5m = 510$.<br>Divide by 1.5: $4c + 3m = 340$ <span class=\"nt\">(the original equation)</span><br>So B says nothing new: every pair on the original line also satisfies B, for example $(40, 60)$ and $(70, 20)$. The number of coffees is not determined.<br>C: $m = c + 20$ gives $7c + 60 = 340$, so $c = 40$ <span class=\"nt\">(one solution)</span><br>D: $5c + 2m = 320$. The ratios $5 : 2$ and $4 : 3$ differ, so the lines cross once. Solving with $4c + 3m = 340$ gives $c = 40$, $m = 60$ <span class=\"nt\">(determined)</span><br>Answer: choice B.",
+    "check": "$(40, 60)$ and $(70, 20)$ both satisfy $4c + 3m = 340$ ($160 + 180$ and $280 + 60$) and both satisfy $6c + 4.5m = 510$ ($240 + 270$ and $420 + 90$) ✓, so B cannot tell them apart.",
+    "be_careful": "Both B and D describe \"what if the prices were different\". The question is whether the new equation is a multiple of the old one, not how it is worded.",
+    "desmos": "Graphing each new equation with $4x + 3y = 340$ works: for B the lines overlap. Translating the choices is the real work.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-042",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "no-solution-sum-cannot-be",
+   "signature": "cx + 9y = 5 and 4x + dy = 2 no solution with c, d positive; cd = 36 and not the coincident pair (10, 3.6); c + d can be 12, 13.6 (as 3.6 and 10), 15 but not 11",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$cx + 9y = 5$<br>$4x + dy = 2$<br>In the system of equations above, $c$ and $d$ are positive constants. If the system has no solution, which of the following can NOT be the value of $c + d$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "11",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "12",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "12 is possible: $c = d = 6$ gives $6x + 9y = 5$ and $4x + 6y = 2$, which are parallel ($\\frac{2}{3}$ of the first is $4x + 6y = \\frac{10}{3}$)."
+    },
+    {
+     "key": "C",
+     "text": "13.6",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "$c = 10$, $d = 3.6$ gives the same line, but the other order, $c = 3.6$ and $d = 10$, gives parallel lines: $3.6x + 9y = 5$ and $4x + 10y = 2$. So 13.6 is possible."
+    },
+    {
+     "key": "D",
+     "text": "15",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "15 is possible: $c = 12$, $d = 3$ gives $12x + 9y = 5$ and $4x + 3y = 2$, and $\\frac{1}{3}$ of the first is $4x + 3y = \\frac{5}{3} \\ne 2$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "No solution needs proportional coefficients, $\\frac{c}{4} = \\frac{9}{d}$, so $cd = 36$. Then ask which sums are possible for two positive numbers with product 36.",
+    "steps": "What does the question ask? It asks which value $c + d$ can NOT have if the system has no solution.<br>Step 1: parallel lines need $\\frac{c}{4} = \\frac{9}{d}$, so $cd = 36$.<br>Step 2: the lines are the same (not allowed) only if also $\\frac{c}{4} = \\frac{5}{2}$, that is, $c = 10$ and $d = \\frac{36}{10} = 3.6$.<br>Step 3: test each sum $S$. If $c + d = S$ and $cd = 36$, then $c(S - c) = 36$, so $c^2 - Sc + 36 = 0$.<br>$S = 11$: $c^2 - 11c + 36 = 0$ has discriminant $121 - 144 = -23 < 0$ <span class=\"nt\">(no real $c$)</span><br>So no positive $c$ and $d$ have product 36 and sum 11.<br>$S = 12$: $c = d = 6$ works. $S = 15$: $c = 12$, $d = 3$ works.<br>$S = 13.6$: $c$ and $d$ are 10 and 3.6. The pair $c = 10$, $d = 3.6$ is the same line, but $c = 3.6$, $d = 10$ gives parallel, different lines.<br>Answer: 11.",
+    "check": "Product 36 with sum 11 would need $c$ and $11 - c$ with $c(11 - c) = 36$; the largest value of $c(11 - c)$ is $5.5 \\times 5.5 = 30.25 < 36$ ✓",
+    "be_careful": "Ruling out the coincident case removes one ORDERED pair, not every pair with that sum.",
+    "desmos": "Graph $x(S - x) = 36$ for each choice (or $y = x(11 - x)$ against $y = 36$): for 11 there is no intersection. A good check, but the condition $cd = 36$ has to come first.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-043",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "count-a-with-x-equals-2",
+   "signature": "ax + y = 7 and x + ay = 7 have at least one solution with x = 2; substitution gives 2a^2 - 7a + 5 = 0, a = 1 (same line) or 5/2 (point (2, 2)); 2 values",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$ax + y = 7$<br>$x + ay = 7$<br>In the system of equations above, $a$ is a constant. For how many values of $a$ does the system have at least one solution $(x, y)$ with $x = 2$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This finds only $a = \\frac{5}{2}$, usually by assuming the solution is unique (for example $x = y = \\frac{7}{a + 1}$). When $a = 1$ the two equations are both $x + y = 7$, and $(2, 5)$ is one of the solutions."
+    }
+   ],
+   "solution": {
+    "key_idea": "Put $x = 2$ into both equations and solve for $a$ and $y$ together. Do not assume the system has only one solution.",
+    "steps": "What does the question ask? It asks for how many values of $a$ the system has a solution with $x = 2$.<br>If $(2, y)$ is a solution, both equations hold with $x = 2$:<br>$2a + y = 7$, so $y = 7 - 2a$ <span class=\"nt\">(first equation)</span><br>$2 + ay = 7$ <span class=\"nt\">(second equation)</span><br>$2 + a(7 - 2a) = 7$ <span class=\"nt\">(substitute $y$)</span><br>$-2a^2 + 7a - 5 = 0$, so $2a^2 - 7a + 5 = 0$ <span class=\"nt\">(multiply both sides by $-1$)</span><br>$(2a - 5)(a - 1) = 0$ <span class=\"nt\">(factor)</span><br>$a = \\frac{5}{2}$: $y = 7 - 5 = 2$, and the solution is $(2, 2)$. <span class=\"nt\">(plug $a = \\frac{5}{2}$ into $y = 7 - 2a$)</span><br>$a = 1$: $y = 5$. Both equations become $x + y = 7$, so the system has infinitely many solutions, and $(2, 5)$ is one of them.<br>Both values work.<br>Answer: 2 values of $a$.",
+    "check": "$a = \\frac{5}{2}$: $\\frac{5}{2}(2) + 2 = 7$ ✓ and $2 + \\frac{5}{2}(2) = 7$ ✓. $a = 1$: $2 + 5 = 7$ ✓ in both equations.",
+    "be_careful": "\"At least one solution\" includes the case of infinitely many solutions.",
+    "desmos": "A slider for $a$ shows the intersection; at $a = 1$ the lines overlap and the case is easy to miss on screen.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-044",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "b-independent-of-a",
+   "signature": "x - 2y = 3a and 2x + y = a + b; for every a the solution has x + y = 10; x + y = 3b/5 (a cancels); b = 50/3",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$x - 2y = 3a$<br>$2x + y = a + b$<br>In the system of equations above, $a$ and $b$ are constants. For every value of $a$, the solution $(x, y)$ to the system satisfies $x + y = 10$. What is the value of $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "50/3",
+      "16.66",
+      "16.67"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "10",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "10 is the value of $x + y$, not of $b$."
+    },
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This turns $\\frac{3}{5}b = 10$ upside down. Multiply by $\\frac{5}{3}$: $b = \\frac{50}{3}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write $x + y$ in terms of $a$ and $b$. The $a$-terms cancel, which is why the condition can hold for every $a$.",
+    "steps": "Plan: the condition must hold for every $a$, so find $x + y$ as an expression in $a$ and $b$ and see what happens to $a$.<br>Step 1: solve for $x$. Multiply the second equation by 2 and add it to the first:<br>$x - 2y + 4x + 2y = 3a + 2a + 2b$, so $5x = 5a + 2b$ <span class=\"nt\">(the $y$-terms cancel)</span><br>$x = a + \\frac{2b}{5}$ <span class=\"nt\">(divide by 5)</span><br>Step 2: solve for $y$. Multiply the first equation by 2 and subtract it from the second:<br>$5y = (a + b) - 6a = b - 5a$, so $y = \\frac{b}{5} - a$ <span class=\"nt\">(the $x$-terms cancel; then divide by 5)</span><br>Step 3: $x + y = a + \\frac{2b}{5} + \\frac{b}{5} - a = \\frac{3b}{5}$ <span class=\"nt\">($a$ cancels)</span><br>$\\frac{3b}{5} = 10$, so $b = \\frac{50}{3}$. <span class=\"nt\">(multiply both sides by $\\frac{5}{3}$)</span>",
+    "check": "Take $a = 0$: $x - 2y = 0$ and $2x + y = \\frac{50}{3}$ give $y = \\frac{10}{3}$, $x = \\frac{20}{3}$, and $x + y = 10$ ✓. Take $a = 1$: $x = \\frac{23}{3}$, $y = \\frac{7}{3}$, and $x + y = 10$ ✓",
+    "be_careful": "A common wrong answer is $10$. 10 is the value of $x + y$, not of $b$.",
+    "desmos": "Sliders for $a$ and $b$: adjust $b$ until the intersection lies on $x + y = 10$, then move $a$ to see it stays there. Slow but possible.",
+    "another_way": "Since the condition holds for every $a$, use $a = 0$: then $x = 2y$ and $5y = b$, so $x + y = 3y = \\frac{3b}{5} = 10$. (This shortcut is valid only because the question says every $a$.)"
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-045",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C3"
+   ],
+   "family": "swapped-abstract-coefficients",
+   "signature": "ax + by = 11 and bx + ay = 17, x + y = 4 and a - b = 3; subtracting gives (a - b)(x - y) = -6, so x - y = -2; with x + y = 4, x = 1 (a = 5, b = 2); traps 3 (y or sign slip), 7 (a + b)",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$ax + by = 11$<br>$bx + ay = 17$<br>In the system of equations above, $a$ and $b$ are constants with $a - b = 3$. If the solution $(x, y)$ to the system satisfies $x + y = 4$, what is the value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "3",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "3 comes from $x - y = 2$, a sign slip: $11 - 17 = -6$, so $(a - b)(x - y) = -6$ and $x - y = -2$. (3 is the value of $y$.)"
+    },
+    {
+     "value": "7",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "7 is $a + b$, from adding the equations. The question asks for $x$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Adding the equations makes the block $(a + b)(x + y)$; subtracting them makes $(a - b)(x - y)$. The given $a - b$ unlocks $x - y$.",
+    "steps": "Plan: four unknowns ($a$, $b$, $x$, $y$). Instead of solving for each, build blocks that contain the given quantities.<br>$(ax + by) - (bx + ay) = 11 - 17$ <span class=\"nt\">(subtract the second equation from the first)</span><br>$a(x - y) - b(x - y) = -6$ <span class=\"nt\">(group: $ax - ay$ and $by - bx$)</span><br>$(a - b)(x - y) = -6$ <span class=\"nt\">(factor)</span><br>$3(x - y) = -6$, so $x - y = -2$ <span class=\"nt\">(use $a - b = 3$)</span><br>$x + y = 4$ and $x - y = -2$: adding gives $2x = 2$ <span class=\"nt\">(elimination)</span><br>Answer: $x = 1$ (and $y = 3$).<br>Why it works: the two equations swap $a$ and $b$, so their difference collects $a - b$ next to $x - y$, and their sum collects $a + b$ next to $x + y$. The given facts match one block each; neither $a$ nor $b$ is needed on its own.",
+    "check": "Adding the equations: $(a + b)(4) = 28$, so $a + b = 7$; with $a - b = 3$, $a = 5$ and $b = 2$. Then $5(1) + 2(3) = 11$ ✓ and $2(1) + 5(3) = 17$ ✓",
+    "be_careful": "Keep the order when subtracting: first minus second gives $-6$, not 6.",
+    "desmos": "Not useful directly: $a$ and $b$ are unknown, so there are no lines to graph until the block step is done.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-046",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "intersection-quadrant-parameter",
+   "signature": "y = 3x - 7 and y = kx + 5 meet at x = 12/(3 - k); Quadrant IV needs x > 0 (k < 3) and y < 0 (x < 7/3, so k < -15/7); only -3 works; traps -2 (checks x > 0 and k < 0 only), 0, 2; ICMS killer hp-alg4-2",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graphs of $y = 3x - 7$ and $y = kx + 5$, where $k$ is a constant, intersect at a point in Quadrant IV of the $xy$-plane. Which of the following could be the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-3$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$-2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "With $k = -2$, the point is $(2.4, 0.2)$. Its $y$-value is positive, so it is in Quadrant I."
+    },
+    {
+     "key": "C",
+     "text": "$0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "With $k = 0$, the point is $(4, 5)$, in Quadrant I."
+    },
+    {
+     "key": "D",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "With $k = 2$, the point is $(12, 29)$, in Quadrant I."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Quadrant IV needs two things: $x > 0$ and $y < 0$. The line $y = 3x - 7$ is below the $x$-axis only when $x < \\frac{7}{3}$.",
+    "steps": "The question asks which $k$ puts the intersection in Quadrant IV.<br>$3x - 7 = kx + 5$ <span class=\"nt\">(set the two $y$-values equal)</span><br>$x = \\frac{12}{3 - k}$ <span class=\"nt\">(collect $x$ terms, divide by $3 - k$)</span><br>The point is on $y = 3x - 7$, so $y < 0$ means $3x < 7$, or $x < \\frac{7}{3}$.<br>$0 < \\frac{12}{3 - k} < \\frac{7}{3}$ <span class=\"nt\">(both conditions)</span><br>$3 - k > \\frac{36}{7}$, so $k < -\\frac{15}{7} \\approx -2.14$ <span class=\"nt\">(flip both sides; $3 - k$ is positive)</span><br>Only $-3$ is less than $-2.14$, so only $-3$ puts the point below the $x$-axis and to the right of the $y$-axis. Choice A.<br>Why it works: the point moves along $y = 3x - 7$ as $k$ changes, and that line is in Quadrant IV only for $0 < x < \\frac{7}{3}$.",
+    "check": "$k = -3$: $x = \\frac{12}{6} = 2$, $y = 3(2) - 7 = -1$, and $-3(2) + 5 = -1$ ✓. $(2, -1)$ is in Quadrant IV.",
+    "be_careful": "$x > 0$ alone is not enough; $-2$ passes that test but gives a positive $y$.",
+    "desmos": "A slider on $k$ works, but $-2$ and $-3$ give points very close to the $x$-axis, so zoom in to see which side they are on.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-047",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "coincident-two-parameter-branch",
+   "signature": "(k - 1)x + 6y = 8 and 4x + (k + 4)y = m infinitely many; proportional rows: (k - 1)(k + 4) = 24, k = 4 or -7; m = 32/3 or -4; m positive: 32/3",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$(k - 1)x + 6y = 8$<br>$4x + (k + 4)y = m$<br>In the given system of equations, $k$ and $m$ are constants, and $m$ is positive. If the system has infinitely many solutions, what is the value of $m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "32/3",
+      "10.66",
+      "10.67"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-4",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$-4$ comes from $k = -7$. That branch is real, but it gives a negative $m$, and $m$ must be positive."
+    },
+    {
+     "value": "16/3",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This matches the $y$-coefficients the wrong way around: $\\frac{8}{m} = \\frac{k + 4}{6}$ uses the ratio upside down. With $k = 4$, the second equation is 4/3 times the first in every term, so $m = \\frac{4}{3}(8)$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Infinitely many solutions means one equation is a constant multiple of the other, so the ratios of matching coefficients, and of the constants, are all equal.",
+    "steps": "The question asks for $m$. For infinitely many solutions, the two equations must describe the same line.<br>$\\frac{k - 1}{4} = \\frac{6}{k + 4}$ <span class=\"nt\">(the $x$- and $y$-coefficients are in the same ratio)</span><br>$(k - 1)(k + 4) = 24$ <span class=\"nt\">(cross-multiply)</span><br>$k^{2} + 3k - 28 = 0$ <span class=\"nt\">(expand and subtract 24)</span><br>$(k - 4)(k + 7) = 0$, so $k = 4$ or $k = -7$ <span class=\"nt\">(factor)</span><br><b>Case $k = 4$:</b> the first equation is $3x + 6y = 8$ and the second is $4x + 8y = m$. The second has coefficients $\\frac{4}{3}$ times the first, so $m = \\frac{4}{3}(8) = \\frac{32}{3}$.<br><b>Case $k = -7$:</b> the first equation is $-8x + 6y = 8$ and the second is $4x - 3y = m$. The second is $-\\frac{1}{2}$ times the first, so $m = -\\frac{1}{2}(8) = -4$.<br>$m$ is positive, so $m = \\frac{32}{3}$.",
+    "check": "With $k = 4$ and $m = \\frac{32}{3}$: multiplying $3x + 6y = 8$ by $\\frac{4}{3}$ gives $4x + 8y = \\frac{32}{3}$, the second equation ✓, so the two equations are the same line ✓",
+    "be_careful": "The equation for $k$ has two roots, and each gives its own $m$. The condition “$m$ is positive” is what picks one.",
+    "desmos": "Sliders for $k$ and $m$ can make the lines overlap, but finding an exact fraction like $\\frac{32}{3}$ that way is slow; the ratio setup is the real route.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-048",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "locus-of-solutions",
+   "signature": "for each k, x + 2y = k and 3x - y = 2k + 7; x = (5k + 14)/7, y = (k - 7)/7; every solution lies on x - 5y = 7; 3x - y = 7 survives the k = 0 test only",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$x + 2y = k$<br>$3x - y = 2k + 7$<br>For each value of the constant $k$, the system of equations above has exactly one solution $(x, y)$. Which of the following equations is satisfied by the solution for EVERY value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3x - y = 7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This works for $k = 0$, whose solution is $(2, -1)$, but for $k = 7$ the solution is $(7, 0)$ and $3(7) - 0 = 21 \\ne 7$."
+    },
+    {
+     "key": "B",
+     "text": "$x + 2y = 7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This works only for $k = 7$; it is the first equation with one particular $k$."
+    },
+    {
+     "key": "C",
+     "text": "$x + 5y = 7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This works for $k = 7$, where $y = 0$, but for $k = 0$: $2 + 5(-1) = -3 \\ne 7$. The sign of the $y$-term is wrong."
+    },
+    {
+     "key": "D",
+     "text": "$x - 5y = 7$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Eliminate $k$: combine the equations so that the $k$-terms cancel. What remains is true for every $k$.",
+    "steps": "Plan: a statement true for EVERY $k$ cannot depend on $k$, so the goal is to remove $k$ from the system. The first equation gives $k$ directly in terms of $x$ and $y$, which makes substitution the quickest route.<br>The first equation says $k = x + 2y$.<br>$3x - y = 2(x + 2y) + 7$ <span class=\"nt\">(replace $k$ in the second equation)</span><br>$3x - y = 2x + 4y + 7$ <span class=\"nt\">(distribute)</span><br>$x - 5y = 7$ <span class=\"nt\">(subtract $2x + 4y$)</span><br>Every solution, whatever $k$ is, satisfies $x - 5y = 7$.<br>Answer: choice D.",
+    "check": "Solving directly gives $x = \\frac{5k + 14}{7}$ and $y = \\frac{k - 7}{7}$. Then $x - 5y = \\frac{5k + 14 - 5k + 35}{7} = \\frac{49}{7} = 7$ ✓",
+    "be_careful": "Testing only one value of $k$ is not enough for \"every value\"; test two, or eliminate $k$.",
+    "desmos": "With a slider for $k$, the intersection moves along a line; testing choices this way is slower than the substitution.",
+    "another_way": "Find the solutions for $k = 0$, $(2, -1)$, and for $k = 7$, $(7, 0)$. Only choice D passes both tests."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-049",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C5"
+   ],
+   "family": "point-never-a-solution",
+   "signature": "kx + y = 5 and x - y = 1; solution x = 6/(k + 1), y = x - 1; every point of x - y = 1 except x = 0 is reachable; (0, -1) never",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$kx + y = 5$<br>$x - y = 1$<br>In the system of equations above, $k$ is a constant. Which of the following points can NOT be a solution to the system for any value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(-3, -4)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "With $k = 3$: $3(-3) + (-4) = -13$, but with $k = -3$: $-3(-3) + (-4) = 9 - 4 = 5$ ✓, so this point is the solution when $k = -3$."
+    },
+    {
+     "key": "B",
+     "text": "$(0, -1)$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$(2, 1)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $k = 2$: $2(2) + 1 = 5$ ✓ and $2 - 1 = 1$ ✓, so this point is the solution when $k = 2$."
+    },
+    {
+     "key": "D",
+     "text": "$(6, 5)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $k = 0$: $0 + 5 = 5$ ✓ and $6 - 5 = 1$ ✓. A value of 0 for $k$ is allowed."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Every choice is on $x - y = 1$, so test whether some $k$ makes $kx + y = 5$ true. When $x = 0$, the $k$-term disappears and $k$ cannot help.",
+    "steps": "What does the question ask? It asks which point can NOT be a solution to the system for any value of $k$.<br>All four points satisfy $x - y = 1$, so the question is which point never satisfies $kx + y = 5$.<br>Solve $kx + y = 5$ for $k$ at each point: $kx = 5 - y$.<br>$(-3, -4)$: $-3k = 9$, so $k = -3$ <span class=\"nt\">(possible)</span><br>$(0, -1)$: $0 \\cdot k = 6$ <span class=\"nt\">(false for every $k$)</span><br>$(2, 1)$: $2k = 4$, so $k = 2$ <span class=\"nt\">(possible)</span><br>$(6, 5)$: $6k = 0$, so $k = 0$ <span class=\"nt\">(possible)</span><br>Geometrically, every line $kx + y = 5$ passes through $(0, 5)$, so it can meet $x - y = 1$ at $(0, -1)$ only if it is the $y$-axis, which is not of this form.<br>Answer: $(0, -1)$.",
+    "check": "For $(0, -1)$: $k(0) + (-1) = -1 \\ne 5$ for every $k$ ✓",
+    "be_careful": "$k = 0$ is a legitimate value; a zero result for $k$ is not a contradiction.",
+    "desmos": "A slider for $k$ shows the intersection moving along $x - y = 1$; it never reaches the $y$-axis. Checking the choices by hand is quicker.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A4-050",
+   "version": 1,
+   "skill": {
+    "code": "A4",
+    "domain": "alg",
+    "cb_skill": "Systems of two linear equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "A4.C2"
+   ],
+   "family": "symmetric-system-case-analysis",
+   "signature": "3x + ky = 9 and kx + 3y = 9: k = 3 infinitely many, k = -3 none; otherwise subtracting gives x = y = 9/(3 + k), positive iff k > -3; key k > -3 and k != 3; traps k > -3 (misses k = 3), k != 3 and k != -3 (ignores sign), k < -3 or k > 3",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$3x + ky = 9$<br>$kx + 3y = 9$<br>In the given system of equations, $k$ is a constant. For which values of $k$ does the system have exactly one solution $(x, y)$ with $x > 0$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$k > -3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "At $k = 3$ the two equations are identical, so the system has infinitely many solutions, not exactly one."
+    },
+    {
+     "key": "B",
+     "text": "$k > -3$ and $k \\ne 3$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$k \\ne -3$ and $k \\ne 3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "These are the values with exactly one solution, but for $k < -3$ that solution has $x = \\frac{9}{3 + k} < 0$."
+    },
+    {
+     "key": "D",
+     "text": "$k < -3$ or $k > 3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "For $k < -3$, $3 + k$ is negative, so $x$ is negative; and values between $-3$ and $3$ do work, for example $k = 0$ gives $x = 3$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The system is symmetric in $x$ and $y$. Check the special values of $k$ where the lines are parallel or identical; otherwise subtracting forces $x = y$.",
+    "steps": "The question asks for every $k$ that gives exactly one solution with $x > 0$.<br><b>Special cases.</b> The slopes match when $\\frac{3}{k} = \\frac{k}{3}$, so $k^{2} = 9$ and $k = 3$ or $k = -3$.<br>$k = 3$: both equations are $3x + 3y = 9$, so there are infinitely many solutions.<br>$k = -3$: the equations become $x - y = 3$ and $x - y = -3$, so there is no solution.<br><b>Other $k$.</b> $(3 - k)x - (3 - k)y = 0$ <span class=\"nt\">(subtract the second equation from the first)</span><br>$x = y$ <span class=\"nt\">($k \\ne 3$, so divide by $3 - k$)</span><br>$(3 + k)x = 9$, so $x = \\frac{9}{3 + k}$ <span class=\"nt\">(substitute $y = x$ into the first equation)</span><br>$x > 0$ exactly when $3 + k > 0$, so $k > -3$. <span class=\"nt\">(a fraction with positive top is positive exactly when its bottom is)</span><br>Combining: $k > -3$ and $k \\ne 3$. <span class=\"nt\">(both conditions must hold)</span>",
+    "check": "$k = 0$: $3x = 9$ and $3y = 9$ give $(3, 3)$, with $x > 0$ ✓. $k = -5$: $x = \\frac{9}{-2} < 0$ ✗. $k = 3$: infinitely many ✓",
+    "be_careful": "“Exactly one solution” removes $k = 3$ even though $3 > -3$.",
+    "desmos": "A slider for $k$ shows individual cases but cannot describe the full set of values; the case analysis is required.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

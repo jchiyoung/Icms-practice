@@ -1,0 +1,3418 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "N1",
+ "skill": "Equivalent expressions",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-N1-001",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C1"
+   ],
+   "family": "difference-of-two-squared-binomials",
+   "signature": "(3x - 2y)^2 - (3x + 2y)^2 = -24xy; traps -8y^2 (squares terms only), 0 (forgets middle terms), 24xy (sign)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The expression $(3x - 2y)^{2} - (3x + 2y)^{2}$ can be rewritten as which of the following?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-24xy$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$-8y^{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This squares each term separately, $9x^{2} + 4y^{2}$, and loses the middle terms $\\pm 12xy$; it also subtracts $4y^{2}$ twice."
+    },
+    {
+     "key": "C",
+     "text": "$0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This writes $(3x - 2y)^{2}$ as $9x^{2} + 4y^{2}$ (no middle term). Squaring a sum or difference always creates a middle term $2ab$."
+    },
+    {
+     "key": "D",
+     "text": "$24xy$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "The middle terms are $-12xy$ and $+12xy$; subtracting the second square gives $-12xy - 12xy = -24xy$, not $+24xy$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Squaring a binomial creates a middle term: $(m \\pm n)^{2} = m^{2} \\pm 2mn + n^{2}$. When the two squares are subtracted, only the middle terms survive.",
+    "steps": "The question asks for a simpler expression that has the same value for every $x$ and $y$.<br>$(3x - 2y)^{2} = 9x^{2} - 12xy + 4y^{2}$ <span class=\"nt\">(square a difference)</span><br>$(3x + 2y)^{2} = 9x^{2} + 12xy + 4y^{2}$ <span class=\"nt\">(square a sum)</span><br>$(9x^{2} - 12xy + 4y^{2}) - (9x^{2} + 12xy + 4y^{2})$ <span class=\"nt\">(subtract the whole second square)</span><br>$= -12xy - 12xy = -24xy$ <span class=\"nt\">(the $x^{2}$ and $y^{2}$ terms cancel)</span>",
+    "check": "$x = 1$, $y = 1$: $(1)^{2} - (5)^{2} = 1 - 25 = -24$, and $-24(1)(1) = -24$ ✓",
+    "be_careful": "$(3x - 2y)^{2}$ is not $9x^{2} - 4y^{2}$; the middle term $-12xy$ is the whole point.",
+    "desmos": null,
+    "another_way": "Difference of squares: $(m - n)(m + n)$ with $m = 3x - 2y$, $n = 3x + 2y$ gives $(-4y)(6x) = -24xy$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-002",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "radicals-to-one-power",
+   "signature": "cube root of x^2 times sqrt x = x^(7/6); traps x^(1/3) (multiplies exponents), x^(3/5) (adds tops and bottoms), x^3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For all positive values of $x$, which expression is equivalent to $\\sqrt[3]{x^{2}} \\cdot \\sqrt{x}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x^{\\frac{1}{3}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This multiplies the exponents, $\\frac{2}{3} \\cdot \\frac{1}{2}$. When powers of the same base are multiplied, the exponents are added."
+    },
+    {
+     "key": "B",
+     "text": "$x^{\\frac{3}{5}}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This adds tops and bottoms, $\\frac{2 + 1}{3 + 2}$. Fractions are added with a common denominator."
+    },
+    {
+     "key": "C",
+     "text": "$x^{\\frac{7}{6}}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$x^{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This adds the visible numbers $2 + 1$ and ignores that the roots turn into fractional exponents."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A root is a fractional exponent: $\\sqrt[3]{x^{2}} = x^{\\frac{2}{3}}$ and $\\sqrt{x} = x^{\\frac{1}{2}}$. Multiplying powers of the same base adds the exponents.",
+    "steps": "The question asks for the product written as one power of $x$.<br>$\\sqrt[3]{x^{2}} = x^{\\frac{2}{3}}$ <span class=\"nt\">(the cube root divides the exponent by 3)</span><br>$\\sqrt{x} = x^{\\frac{1}{2}}$ <span class=\"nt\">(the square root divides the exponent by 2)</span><br>$x^{\\frac{2}{3}} \\cdot x^{\\frac{1}{2}} = x^{\\frac{2}{3} + \\frac{1}{2}}$ <span class=\"nt\">(same base: add exponents)</span><br>$\\frac{2}{3} + \\frac{1}{2} = \\frac{4}{6} + \\frac{3}{6} = \\frac{7}{6}$ <span class=\"nt\">(common denominator 6)</span><br>So the product is $x^{\\frac{7}{6}}$.",
+    "check": "$x = 64$: $\\sqrt[3]{4096} \\cdot 8 = 16 \\cdot 8 = 128$, and $64^{\\frac{7}{6}} = 2^{7} = 128$ ✓",
+    "be_careful": "Multiply the powers, add the exponents; do not multiply the exponents.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-003",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "identity-two-constants-middle-term",
+   "signature": "(ax + 3)(2x - 5) = 6x^2 + bx - 15 for all x: a = 3, b = -15 + 6 = -9; wrong 9, -21",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For constants $a$ and $b$, the product $(ax + 3)(2x - 5)$ equals $6x^{2} + bx - 15$ for every value of $x$. What is $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-9"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-21",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This adds the two inside products as $-15 - 6$. The $x$-terms are $-5ax = -15x$ and $+6x$, so $b = -15 + 6$."
+    },
+    {
+     "value": "9",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $+15x$ for $-5ax$; with $a = 3$ the product of $3x$ and $-5$ is $-15x$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Two expressions equal for all $x$ must have the same coefficient for each power of $x$. The $x^{2}$ term finds $a$; then the middle term is $b$.",
+    "steps": "The question asks for $b$, the coefficient of $x$ on the right.<br>$x^{2}$ terms: $a \\cdot 2 = 6$, so $a = 3$ <span class=\"nt\">(match the leading coefficients)</span><br>$(3x + 3)(2x - 5) = 6x^{2} - 15x + 6x - 15$ <span class=\"nt\">(expand: four products)</span><br>$= 6x^{2} - 9x - 15$ <span class=\"nt\">(combine the x-terms)</span><br>So $b = -9$.",
+    "check": "$x = 1$: left $(3 + 3)(2 - 5) = -18$; right $6 - 9 - 15 = -18$ ✓",
+    "be_careful": "The middle term has two pieces, the outer product $-15x$ and the inner product $6x$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-004",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "factor-of-trinomial-leading-coefficient",
+   "signature": "6x^2 - 7x - 20 = (3x + 4)(2x - 5): factor 3x + 4; traps 3x - 4 (sign swap gives +7x), 2x + 5, 6x + 5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following is a factor of $6x^{2} - 7x - 20$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3x + 4$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$2x + 5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Same sign swap: $2x + 5$ pairs with $3x - 4$, which gives $+7x$."
+    },
+    {
+     "key": "C",
+     "text": "$6x + 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$6x + 5$ would have to pair with $x - 4$ to make $-20$, but $(6x + 5)(x - 4) = 6x^{2} - 19x - 20$."
+    },
+    {
+     "key": "D",
+     "text": "$3x - 4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "$(3x - 4)(2x + 5) = 6x^{2} + 7x - 20$: the signs are swapped, so the middle term has the wrong sign."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A factor is one piece of a product equal to the expression. Find two binomials whose product gives $6x^{2}$, $-20$, and the middle term $-7x$.",
+    "steps": "The question asks which choice divides $6x^{2} - 7x - 20$ exactly.<br>$6 \\cdot (-20) = -120$ <span class=\"nt\">(AC-method: multiply the outer numbers)</span><br>$-15 \\cdot 8 = -120$ and $-15 + 8 = -7$ <span class=\"nt\">(two numbers with product -120 and sum -7)</span><br>$6x^{2} - 15x + 8x - 20$ <span class=\"nt\">(split the middle term)</span><br>$3x(2x - 5) + 4(2x - 5)$ <span class=\"nt\">(group in pairs)</span><br>$(3x + 4)(2x - 5)$ <span class=\"nt\">(common factor 2x - 5)</span><br>So $3x + 4$ is a factor.",
+    "check": "$(3x + 4)(2x - 5) = 6x^{2} - 15x + 8x - 20 = 6x^{2} - 7x - 20$ ✓",
+    "be_careful": "Both $3x - 4$ and $2x + 5$ come from the sign-swapped product $6x^{2} + 7x - 20$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-005",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C4"
+   ],
+   "family": "rational-cancel-factors-not-terms",
+   "signature": "(x^2 - 9)/(x^2 + x - 6) = (x - 3)/(x - 2); traps -9/(x - 6) (cancels x^2 terms), (x + 3)/(x - 2), (x - 3)/(x + 2)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following is equivalent to $\\frac{x^{2} - 9}{x^{2} + x - 6}$ for $x \\ne -3$ and $x \\ne 2$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{x + 3}{x - 2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This cancels the wrong factor. The numerator is $(x - 3)(x + 3)$ and the denominator is $(x + 3)(x - 2)$; the shared factor is $x + 3$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{-9}{x - 6}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This “cancels” the $x^{2}$ terms. Only common FACTORS cancel, never terms that are added."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{x - 3}{x - 2}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{x - 3}{x + 2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "$x^{2} + x - 6 = (x + 3)(x - 2)$; the sign in $x - 2$ matters: $(x + 3)(x + 2) = x^{2} + 5x + 6$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Factor the top and the bottom completely; only a factor that appears in both can be cancelled.",
+    "steps": "The question asks for a simpler expression with the same value for the allowed $x$.<br>$x^{2} - 9 = (x - 3)(x + 3)$ <span class=\"nt\">(difference of squares)</span><br>$x^{2} + x - 6 = (x + 3)(x - 2)$ <span class=\"nt\">(3 and -2 multiply to -6 and add to 1)</span><br>$\\frac{(x - 3)(x + 3)}{(x + 3)(x - 2)} = \\frac{x - 3}{x - 2}$ <span class=\"nt\">(cancel the common factor $x + 3$)</span>",
+    "check": "$x = 4$: original $\\frac{7}{14} = \\frac{1}{2}$; choice C $\\frac{1}{2}$ ✓",
+    "be_careful": "$x^{2}$ appears in both, but it is a term, not a factor.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-006",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C1"
+   ],
+   "family": "coefficient-from-binomial-times-trinomial",
+   "signature": "(x + 4)(x^2 - 3x + 2): x-coefficient 2 - 12 = -10; traps 2 (one product), 10 (sign of the sum), 14 (sign)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "When $(x + 4)(x^{2} - 3x + 2)$ is written in the form $x^{3} + px^{2} + qx + r$, where $p$, $q$, and $r$ are constants, what is the value of $q$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-10$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$2x$ is only $x \\cdot 2$. The product $4 \\cdot (-3x) = -12x$ also gives an $x$-term."
+    },
+    {
+     "key": "C",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This combines $2x$ and $-12x$ but drops the sign of the result: $2x - 12x = -10x$, not $10x$."
+    },
+    {
+     "key": "D",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This combines $2x$ and $-12x$ as $2 + 12$; the $-12x$ has a negative sign."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Only the products that make exactly one $x$ matter: $x$ times the constant 2, and 4 times $-3x$.",
+    "steps": "The question asks for the coefficient of $x$ after expanding.<br>$x \\cdot 2 = 2x$ <span class=\"nt\">(x from the first factor, constant from the second)</span><br>$4 \\cdot (-3x) = -12x$ <span class=\"nt\">(constant from the first factor, x-term from the second)</span><br>$2x - 12x = -10x$ <span class=\"nt\">(no other pair makes an x to the first power)</span><br>So $q = -10$.",
+    "check": "Full expansion: $x^{3} - 3x^{2} + 2x + 4x^{2} - 12x + 8 = x^{3} + x^{2} - 10x + 8$ ✓",
+    "be_careful": "Two different products land on the $x$-term.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-007",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "fourth-root-of-monomial",
+   "signature": "(16x^8 y^4)^(1/4) = 2x^2 y (x, y > 0); traps 4x^2y (divides 16 by 4), 2x^4 y^0 (subtracts 4 from exponents), 2x^2 y^4",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following is equivalent to $(16x^{8}y^{4})^{\\frac{1}{4}}$, where $x > 0$ and $y > 0$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2x^{2}y$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$4x^{2}y$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This divides 16 by 4. The exponent $\\frac{1}{4}$ means a fourth root, and $\\sqrt[4]{16} = 2$ because $2^{4} = 16$."
+    },
+    {
+     "key": "C",
+     "text": "$2x^{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This subtracts 4 from each exponent ($8 - 4$, $4 - 4$). A power of a power multiplies: $8 \\cdot \\frac{1}{4} = 2$."
+    },
+    {
+     "key": "D",
+     "text": "$2x^{2}y^{4}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "The exponent $\\frac{1}{4}$ applies to every factor inside, including $y^{4}$: $(y^{4})^{\\frac{1}{4}} = y$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "An exponent outside parentheses applies to every factor inside, and a power of a power multiplies the exponents.",
+    "steps": "The question asks for the expression without the outside exponent.<br>$16^{\\frac{1}{4}} = 2$ <span class=\"nt\">($2^{4} = 16$)</span><br>$(x^{8})^{\\frac{1}{4}} = x^{8 \\cdot \\frac{1}{4}} = x^{2}$ <span class=\"nt\">(power of a power: multiply)</span><br>$(y^{4})^{\\frac{1}{4}} = y^{1} = y$ <span class=\"nt\">(same rule)</span><br>So the expression is $2x^{2}y$.",
+    "check": "$(2x^{2}y)^{4} = 16x^{8}y^{4}$ ✓",
+    "be_careful": "The outside exponent reaches the 16 as well as the variables.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-008",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "hidden-degree-difference-of-squares-factor",
+   "signature": "x^4 - 81 = (x^2 + 9)(x + 3)(x - 3); factor x^2 + 9; traps x - 9, x + 9 (treat as x^2 - 81), x^2 + 3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following is a factor of $x^{4} - 81$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x - 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This treats $x^{4} - 81$ like $x^{2} - 81$. Since $x^{4} = (x^{2})^{2}$, the first split is $(x^{2} - 9)(x^{2} + 9)$."
+    },
+    {
+     "key": "B",
+     "text": "$x + 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "Same mistake as $x - 9$: the square root of $x^{4}$ is $x^{2}$, not $x$."
+    },
+    {
+     "key": "C",
+     "text": "$x^{2} + 3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This takes the square root of 81 as 3 (it is 9), or the square root of 9 too early."
+    },
+    {
+     "key": "D",
+     "text": "$x^{2} + 9$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$x^{4}$ is the square of $x^{2}$, and 81 is the square of 9, so $x^{4} - 81$ is a difference of squares.",
+    "steps": "The question asks which choice divides $x^{4} - 81$ exactly.<br>$x^{4} - 81 = (x^{2})^{2} - 9^{2}$ <span class=\"nt\">(write both parts as squares)</span><br>$= (x^{2} - 9)(x^{2} + 9)$ <span class=\"nt\">(difference of squares)</span><br>$= (x - 3)(x + 3)(x^{2} + 9)$ <span class=\"nt\">($x^{2} - 9$ factors again)</span><br>Among the choices, only $x^{2} + 9$ appears.",
+    "check": "$(x^{2} + 9)(x^{2} - 9) = x^{4} - 9x^{2} + 9x^{2} - 81 = x^{4} - 81$ ✓",
+    "be_careful": "$x^{2} + 9$ does not factor further, but it is still a factor.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-009",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C4"
+   ],
+   "family": "add-rational-common-denominator",
+   "signature": "3/x + 2/(x + 1) = (5x + 3)/(x(x + 1)); a + b = 8; traps 5, 6, 7 (own-denominator multiply)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For $x > 0$, the sum $\\frac{3}{x} + \\frac{2}{x + 1}$ can be written as a single fraction $\\frac{ax + b}{x(x + 1)}$, where $a$ and $b$ are constants. What is $a + b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This adds tops and bottoms, $\\frac{3 + 2}{x + x + 1}$, which is not how fractions add; or it stops at $a = 5$."
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This writes $3(x + 1)$ as $3x + 1$, giving $5x + 1$."
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This multiplies each numerator by its OWN denominator, $3x + 2(x + 1) = 5x + 2$. Each numerator gets the factor its denominator is missing."
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "To add fractions, rewrite both over the common denominator $x(x + 1)$; each numerator is multiplied by the factor its denominator is missing.",
+    "steps": "The question asks for $a + b$ after the two fractions become one.<br>$\\frac{3}{x} = \\frac{3(x + 1)}{x(x + 1)}$ <span class=\"nt\">(multiply top and bottom by $x + 1$)</span><br>$\\frac{2}{x + 1} = \\frac{2x}{x(x + 1)}$ <span class=\"nt\">(multiply top and bottom by $x$)</span><br>$\\frac{3x + 3 + 2x}{x(x + 1)} = \\frac{5x + 3}{x(x + 1)}$ <span class=\"nt\">(add the numerators)</span><br>$a = 5$ and $b = 3$, so $a + b = 8$.",
+    "check": "$x = 1$: $3 + 1 = 4$, and $\\frac{5 + 3}{2} = 4$ ✓",
+    "be_careful": "Each fraction gets the factor ITS denominator is missing.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-010",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "identity-outside-factor",
+   "signature": "2(x - 3)(x + k) = 2x^2 + 4x - 30 for all x: k = 5; traps 7 (ignores outside 2 on middle term), 10 (ignores 2 on constant), -5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $2(x - 3)(x + k) = 2x^{2} + 4x - 30$ is true for all values of $x$, where $k$ is a constant. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "With $k = -5$ the constant term is $2(-3)(-5) = 30$, not $-30$."
+    },
+    {
+     "key": "B",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This sets $k - 3 = 4$ and forgets the outside factor 2: the middle coefficient is $2(k - 3)$."
+    },
+    {
+     "key": "D",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This sets $-3k = -30$ and forgets the outside factor 2: the constant is $2(-3k) = -6k$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The outside factor 2 multiplies every term of $(x - 3)(x + k)$, so it must be included when the coefficients are matched.",
+    "steps": "The question asks for $k$.<br>$(x - 3)(x + k) = x^{2} + (k - 3)x - 3k$ <span class=\"nt\">(expand)</span><br>$2(x - 3)(x + k) = 2x^{2} + 2(k - 3)x - 6k$ <span class=\"nt\">(multiply every term by 2)</span><br>$-6k = -30$, so $k = 5$ <span class=\"nt\">(match the constants)</span><br>$2(5 - 3) = 4$ <span class=\"nt\">(the x-terms match too)</span>",
+    "check": "$2(x - 3)(x + 5) = 2(x^{2} + 2x - 15) = 2x^{2} + 4x - 30$ ✓",
+    "be_careful": "Do not forget the 2 in front: both 7 and 10 come from dropping it.",
+    "desmos": null,
+    "another_way": "Divide both sides by 2 first: $(x - 3)(x + k) = x^{2} + 2x - 15 = (x - 3)(x + 5)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-011",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "quotient-with-root-denominator",
+   "signature": "x / fourth-root(x^3) = x^(1/4); traps x^(7/4) (adds), x^(-3/4) (forgets the x), 1/fourth-root x",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For all positive values of $x$, the expression $\\frac{x}{\\sqrt[4]{x^{3}}}$ can be rewritten as which of the following?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x^{\\frac{7}{4}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This adds the exponents, $1 + \\frac{3}{4}$. Dividing powers of the same base subtracts the exponents."
+    },
+    {
+     "key": "B",
+     "text": "$\\sqrt[4]{x}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$x^{-\\frac{3}{4}}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This is only $\\frac{1}{\\sqrt[4]{x^{3}}}$; the numerator $x = x^{1}$ also has to be included."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{1}{\\sqrt[4]{x}}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This subtracts in the wrong order, $\\frac{3}{4} - 1$; the exponent of the numerator comes first."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Write both as powers of $x$: $x = x^{1}$ and $\\sqrt[4]{x^{3}} = x^{\\frac{3}{4}}$. Dividing subtracts the exponents.",
+    "steps": "The question asks for the quotient as a simpler expression.<br>$\\sqrt[4]{x^{3}} = x^{\\frac{3}{4}}$ <span class=\"nt\">(a fourth root divides the exponent by 4)</span><br>$\\frac{x^{1}}{x^{\\frac{3}{4}}} = x^{1 - \\frac{3}{4}}$ <span class=\"nt\">(same base: subtract exponents)</span><br>$= x^{\\frac{1}{4}} = \\sqrt[4]{x}$ <span class=\"nt\">(exponent $\\frac{1}{4}$ is a fourth root)</span>",
+    "check": "$x = 16$: $\\frac{16}{\\sqrt[4]{4096}} = \\frac{16}{8} = 2$, and $\\sqrt[4]{16} = 2$ ✓",
+    "be_careful": "The answer is written as a root; convert $x^{\\frac{1}{4}}$ back to $\\sqrt[4]{x}$ to find it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-012",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "factor-signs-ordered-constants",
+   "signature": "x^2 - 2x - 35 = (x + a)(x + b), a > b: a = 5, b = -7, a - b = 12; wrong 2 (7 - 5), -12",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The expression $x^{2} - 2x - 35$ can be written as $(x + a)(x + b)$, where $a$ and $b$ are constants and $a > b$. What is the value of $a - b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This uses $a = 7$, $b = 5$ (signs dropped). The factors are $(x + 5)(x - 7)$, so $a = 5$ and $b = -7$."
+    },
+    {
+     "value": "-12",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This takes $a = -7$ and $b = 5$, but the condition is $a > b$, so $a = 5$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find two numbers that multiply to $-35$ and add to $-2$; in the form $(x + a)(x + b)$ those numbers ARE $a$ and $b$, signs included.",
+    "steps": "The question asks for $a - b$ with $a$ the larger constant.<br>$ab = -35$ and $a + b = -2$ <span class=\"nt\">($(x + a)(x + b) = x^{2} + (a + b)x + ab$)</span><br>$5 \\cdot (-7) = -35$ and $5 + (-7) = -2$ <span class=\"nt\">(the pair 5 and -7)</span><br>$a = 5$, $b = -7$ <span class=\"nt\">($a > b$)</span><br>$a - b = 5 - (-7) = 12$ <span class=\"nt\">(subtracting a negative adds)</span>",
+    "check": "$(x + 5)(x - 7) = x^{2} - 7x + 5x - 35 = x^{2} - 2x - 35$ ✓",
+    "be_careful": "In $(x - 7)$ the constant $b$ is $-7$, not 7.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-013",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C4"
+   ],
+   "family": "divide-rational-flip-then-cancel",
+   "signature": "(x^2 - 4)/(3x) divided by (x + 2)/(6x^2) = 2x(x - 2); traps (x - 2)(x + 2)^2/(18x^3) (multiplied), 2x(x + 2), 2(x - 2)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For $x > 2$, the quotient $\\frac{x^{2} - 4}{3x} \\div \\frac{x + 2}{6x^{2}}$ can be simplified to which of the following?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2(x - 2)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This cancels $x$ from $6x^{2}$ and $3x$ but leaves no $x$ behind: $\\frac{6x^{2}}{3x} = 2x$, not 2."
+    },
+    {
+     "key": "B",
+     "text": "$2x(x + 2)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This cancels the wrong factor; $x^{2} - 4 = (x - 2)(x + 2)$, and the $x + 2$ is the one that cancels."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{(x - 2)(x + 2)^{2}}{18x^{3}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This multiplies by the second fraction instead of by its reciprocal."
+    },
+    {
+     "key": "D",
+     "text": "$2x(x - 2)$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Dividing by a fraction is multiplying by its reciprocal; then factor and cancel common factors.",
+    "steps": "The question asks for the quotient in simplest form.<br>$\\frac{x^{2} - 4}{3x} \\cdot \\frac{6x^{2}}{x + 2}$ <span class=\"nt\">(flip the second fraction and multiply)</span><br>$= \\frac{(x - 2)(x + 2)}{3x} \\cdot \\frac{6x^{2}}{x + 2}$ <span class=\"nt\">(difference of squares)</span><br>$= (x - 2) \\cdot \\frac{6x^{2}}{3x}$ <span class=\"nt\">(cancel $x + 2$)</span><br>$= (x - 2) \\cdot 2x = 2x(x - 2)$ <span class=\"nt\">($\\frac{6x^{2}}{3x} = 2x$)</span>",
+    "check": "$x = 3$: $\\frac{5}{9} \\div \\frac{5}{54} = \\frac{5}{9} \\cdot \\frac{54}{5} = 6$, and $2(3)(1) = 6$ ✓",
+    "be_careful": "Flip the divisor, not the first fraction.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-014",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "negative-exponent-squared-times-power",
+   "signature": "(2x^-3)^2 * x^7 = 4x; traps 2x (2 not squared), 4x^6 (adds -3 + 2), 4x^13 (sign)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For all nonzero values of $x$, the product $(2x^{-3})^{2} \\cdot x^{7}$ simplifies to which of the following?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2x$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This squares $x^{-3}$ but not the 2: $(2)^{2} = 4$."
+    },
+    {
+     "key": "B",
+     "text": "$4x$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4x^{6}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This adds the outside 2 to the exponent ($-3 + 2 = -1$) instead of multiplying ($-3 \\cdot 2 = -6$)."
+    },
+    {
+     "key": "D",
+     "text": "$4x^{13}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $+6$ for $(-3)(2)$; the exponent is $-6$, and $-6 + 7 = 1$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Square each factor inside, multiply exponents for a power of a power, then add exponents when multiplying by $x^{7}$.",
+    "steps": "The question asks for one simple monomial.<br>$(2x^{-3})^{2} = 2^{2} \\cdot x^{-3 \\cdot 2} = 4x^{-6}$ <span class=\"nt\">(square every factor)</span><br>$4x^{-6} \\cdot x^{7} = 4x^{-6 + 7}$ <span class=\"nt\">(same base: add exponents)</span><br>$= 4x^{1} = 4x$ <span class=\"nt\">()</span><br>The order matters: apply the outside exponent to every factor first, and only then combine with $x^{7}$.",
+    "check": "$x = 2$: $(2 \\cdot \\frac{1}{8})^{2} \\cdot 128 = \\frac{1}{16} \\cdot 128 = 8$, and $4(2) = 8$ ✓",
+    "be_careful": "A power of a power multiplies; a product adds.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-015",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C1"
+   ],
+   "family": "area-expression-subtract-square",
+   "signature": "rectangle (2x + 5) by (x - 3), square of side x removed: x^2 - x - 15; traps 2x^2 - x - 15 (forgot to subtract), x^2 - 11x - 15, 2x^2 - 2x - 15",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A rectangular sheet has length $(2x + 5)$ inches and width $(x - 3)$ inches, where $x > 3$. A square with side length $x$ inches is cut out of the sheet. Which expression represents the area, in square inches, of the sheet that remains?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x^{2} - x - 15$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$2x^{2} - x - 15$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This is the area of the whole sheet. The square’s area, $x^{2}$, still has to be subtracted."
+    },
+    {
+     "key": "C",
+     "text": "$x^{2} - 11x - 15$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $-6x - 5x$ for the middle term. The products are $-6x$ and $+5x$, giving $-x$."
+    },
+    {
+     "key": "D",
+     "text": "$2x^{2} - 2x - 15$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This subtracts the side length $x$ instead of the square’s area $x^{2}$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Remaining area = whole area minus the area cut out; the whole area is a product of two binomials.",
+    "steps": "The question asks for the area left after the square is removed.<br>$(2x + 5)(x - 3) = 2x^{2} - 6x + 5x - 15$ <span class=\"nt\">(expand: four products)</span><br>$= 2x^{2} - x - 15$ <span class=\"nt\">(combine the x-terms)</span><br>Square: $x \\cdot x = x^{2}$ <span class=\"nt\">()</span><br>$2x^{2} - x - 15 - x^{2} = x^{2} - x - 15$ <span class=\"nt\">(subtract the cut-out area)</span>",
+    "check": "$x = 5$: sheet $15 \\cdot 2 = 30$, square $25$, left $5$; $25 - 5 - 15 = 5$ ✓",
+    "be_careful": "The middle terms $-6x$ and $+5x$ have opposite signs.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-016",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C6"
+   ],
+   "family": "remainder-by-evaluation",
+   "signature": "p(x) = 2x^3 - 5x^2 + 4x - 7 divided by x - 2: remainder p(2) = -3; wrong -51 (p(-2)), 7",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$p(x) = 2x^{3} - 5x^{2} + 4x - 7$<br>What is the remainder when $p(x)$ is divided by $x - 2$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-51",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This is $p(-2)$. Dividing by $x - 2$ leaves the remainder $p(2)$, the value where $x - 2 = 0$."
+    },
+    {
+     "value": "-7",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This reads the constant term. The remainder is the value of $p$ at $x = 2$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write $p(x) = (x - 2)q(x) + r$. At $x = 2$ the first part is 0, so the remainder $r$ equals $p(2)$.",
+    "steps": "The question asks for the remainder $r$ in $p(x) = (x - 2)q(x) + r$.<br>$p(2) = (2 - 2)q(2) + r = r$ <span class=\"nt\">(the factor $x - 2$ is 0 at $x = 2$)</span><br>$p(2) = 2(8) - 5(4) + 4(2) - 7$ <span class=\"nt\">(substitute 2)</span><br>$= 16 - 20 + 8 - 7 = -3$ <span class=\"nt\">()</span><br>So the remainder is $-3$.",
+    "check": "Long division: $p(x) = (x - 2)(2x^{2} - x + 2) - 3$; expanding gives $2x^{3} - 5x^{2} + 4x - 4 - 3$ ✓",
+    "be_careful": "Use $x = 2$ (where $x - 2 = 0$), not $x = -2$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-017",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "grouping-not-a-factor",
+   "signature": "x^3 + 3x^2 - 4x - 12 = (x + 3)(x - 2)(x + 2); NOT a factor: x - 3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following is NOT a factor of $x^{3} + 3x^{2} - 4x - 12$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x + 3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "Grouping gives $x^{2}(x + 3) - 4(x + 3)$, so $x + 3$ is a factor."
+    },
+    {
+     "key": "B",
+     "text": "$x - 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$x^{2} - 4 = (x - 2)(x + 2)$, so $x - 2$ is a factor."
+    },
+    {
+     "key": "C",
+     "text": "$x - 3$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$x + 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$x^{2} - 4 = (x - 2)(x + 2)$, so $x + 2$ is a factor."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Group the four terms in pairs; a shared binomial appears, and what is left is a difference of squares.",
+    "steps": "The question asks for the one choice that does not divide the expression.<br>$x^{2}(x + 3) - 4(x + 3)$ <span class=\"nt\">(factor each pair)</span><br>$(x + 3)(x^{2} - 4)$ <span class=\"nt\">(common factor $x + 3$)</span><br>$(x + 3)(x - 2)(x + 2)$ <span class=\"nt\">(difference of squares)</span><br>$x - 3$ is not among the factors.",
+    "check": "At $x = 3$: $27 + 27 - 12 - 12 = 30 \\ne 0$, so $x - 3$ is not a factor ✓",
+    "be_careful": "The pair $-4x - 12$ factors as $-4(x + 3)$; keep the minus sign outside.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-018",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "identity-cubic-sum",
+   "signature": "(x + 2)(x^2 + ax + 4) = x^3 + 8: a = -2 (x^2 and x terms both vanish); traps 2, 4, 8",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $(x + 2)(x^{2} + ax + 4) = x^{3} + 8$ is true for all values of $x$, where $a$ is a constant. What is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-2$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "With $a = 2$ the $x^{2}$ term is $(2 + 2)x^{2} = 4x^{2}$, but the right side has no $x^{2}$ term."
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "4 is the constant inside the trinomial, which already gives $2 \\cdot 4 = 8$; it does not decide $a$."
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "8 is the constant on the right side. It comes from $2 \\cdot 4$, not from $a$; the $x^{2}$ and $x$ terms decide $a$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The right side has no $x^{2}$ term and no $x$ term, so after expanding, those coefficients must be 0.",
+    "steps": "The question asks for $a$.<br>$(x + 2)(x^{2} + ax + 4) = x^{3} + ax^{2} + 4x + 2x^{2} + 2ax + 8$ <span class=\"nt\">(expand)</span><br>$= x^{3} + (a + 2)x^{2} + (4 + 2a)x + 8$ <span class=\"nt\">(collect like terms)</span><br>$a + 2 = 0$, so $a = -2$ <span class=\"nt\">(no x-squared term on the right)</span><br>$4 + 2(-2) = 0$ <span class=\"nt\">(the x-term vanishes too)</span>",
+    "check": "$(x + 2)(x^{2} - 2x + 4) = x^{3} - 2x^{2} + 4x + 2x^{2} - 4x + 8 = x^{3} + 8$ ✓",
+    "be_careful": "A missing term on one side means its coefficient is 0.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-019",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "power-of-power-then-product-exponent",
+   "signature": "(x^(2/3))^(3/2) * x^(-1/2) = x^(1/2), k = 1/2; wrong 5/3 (adds all), -1/2",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For $x > 0$, the expression $(x^{\\frac{2}{3}})^{\\frac{3}{2}} \\cdot x^{-\\frac{1}{2}}$ is equivalent to $x^{k}$, where $k$ is a constant. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1/2",
+      ".5",
+      "0.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5/3",
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This adds all three exponents. A power of a power multiplies: $\\frac{2}{3} \\cdot \\frac{3}{2} = 1$."
+    },
+    {
+     "value": "-1/2",
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This treats $(x^{\\frac{2}{3}})^{\\frac{3}{2}}$ as $x^{0}$; it is $x^{1}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "A power of a power multiplies the exponents; a product of powers adds them.",
+    "steps": "The question asks for the single exponent $k$.<br>$(x^{\\frac{2}{3}})^{\\frac{3}{2}} = x^{\\frac{2}{3} \\cdot \\frac{3}{2}} = x^{1}$ <span class=\"nt\">(power of a power: multiply)</span><br>$x^{1} \\cdot x^{-\\frac{1}{2}} = x^{1 - \\frac{1}{2}}$ <span class=\"nt\">(product: add exponents)</span><br>$= x^{\\frac{1}{2}}$ <span class=\"nt\">()</span><br>So $k = \\frac{1}{2}$.<br>Two different rules appear here, so do the parentheses first and then combine across the multiplication dot.",
+    "check": "$x = 4$: $(4^{\\frac{2}{3}})^{\\frac{3}{2}} = 4$ and $4 \\cdot 4^{-\\frac{1}{2}} = 4 \\cdot \\frac{1}{2} = 2 = 4^{\\frac{1}{2}}$ ✓",
+    "be_careful": "Two different rules in one expression: multiply inside the parentheses, add across the dot.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-020",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "M",
+   "concepts": [
+    "N1.C4"
+   ],
+   "family": "subtract-rational-conjugate-denominators",
+   "signature": "1/(x - 1) - 1/(x + 1) = 2/(x^2 - 1); traps 0 (cancel), -2/(x^2 - 1) (sign), 2x/(x^2 - 1)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For $x > 1$, the difference $\\frac{1}{x - 1} - \\frac{1}{x + 1}$ can be written as which single fraction?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "The two fractions have different denominators, so they do not cancel each other."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{-2}{x^{2} - 1}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This subtracts $(x - 1) - (x + 1)$ in the wrong order. The first numerator is $x + 1$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{2x}{x^{2} - 1}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This ADDS the fractions: $(x + 1) + (x - 1) = 2x$. Subtracting gives $(x + 1) - (x - 1) = 2$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{2}{x^{2} - 1}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Use the common denominator $(x - 1)(x + 1) = x^{2} - 1$, then subtract the whole second numerator.",
+    "steps": "The question asks for one fraction equal to the difference.<br>$\\frac{x + 1}{(x - 1)(x + 1)} - \\frac{x - 1}{(x - 1)(x + 1)}$ <span class=\"nt\">(common denominator)</span><br>$= \\frac{(x + 1) - (x - 1)}{x^{2} - 1}$ <span class=\"nt\">(subtract the numerators)</span><br>$= \\frac{x + 1 - x + 1}{x^{2} - 1} = \\frac{2}{x^{2} - 1}$ <span class=\"nt\">(the minus reaches both terms)</span><br>The minus sign in front of the second fraction applies to its entire numerator once both share one denominator.",
+    "check": "$x = 3$: $\\frac{1}{2} - \\frac{1}{4} = \\frac{1}{4}$, and $\\frac{2}{8} = \\frac{1}{4}$ ✓",
+    "be_careful": "$-(x - 1)$ is $-x + 1$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-021",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "coefficient-sum-by-x-equals-1",
+   "signature": "(3x - 2)^4 = a4x^4 + ... + a0: a4 + a3 + a2 + a1 = p(1) - a0 = 1 - 16 = -15; wrong 1 (includes a0), 17",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The expression $(3x - 2)^{4}$ can be written as $a_{4}x^{4} + a_{3}x^{3} + a_{2}x^{2} + a_{1}x + a_{0}$, where $a_{4}$, $a_{3}$, $a_{2}$, $a_{1}$, and $a_{0}$ are constants. What is the value of $a_{4} + a_{3} + a_{2} + a_{1}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-15"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "1 is the sum of ALL five coefficients, including $a_{0}$. The question leaves $a_{0}$ out."
+    },
+    {
+     "value": "17",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $a_{0} = -16$; $(-2)^{4} = +16$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Substituting $x = 1$ turns every power of $x$ into 1, so the expression at $x = 1$ is the sum of all the coefficients. The constant $a_{0}$ is the value at $x = 0$.",
+    "steps": "The question asks for the sum of every coefficient except $a_{0}$.<br>$x = 1$: $(3 - 2)^{4} = a_{4} + a_{3} + a_{2} + a_{1} + a_{0}$ <span class=\"nt\">(each power of 1 is 1)</span><br>$a_{4} + a_{3} + a_{2} + a_{1} + a_{0} = 1$ <span class=\"nt\">()</span><br>$x = 0$: $(-2)^{4} = a_{0}$, so $a_{0} = 16$ <span class=\"nt\">(every x-term vanishes)</span><br>$a_{4} + a_{3} + a_{2} + a_{1} = 1 - 16 = -15$ <span class=\"nt\">(remove the constant)</span><br>Why this is fast: putting in 1 for $x$ adds up every coefficient at once, and putting in 0 isolates the constant, so the full expansion is never needed.",
+    "check": "Expansion: $81x^{4} - 216x^{3} + 216x^{2} - 96x + 16$; $81 - 216 + 216 - 96 = -15$ ✓",
+    "be_careful": "The sum the question wants does not include $a_{0}$.",
+    "desmos": null,
+    "another_way": "Expand fully (four multiplications) and add; slower but the same result."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-022",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "binomial-block-difference-of-squares",
+   "signature": "(x + 5)^2 - 4(x - 1)^2 = (7 - x)(3x + 3); traps (3 - x)(3x + 7) (uses 2x - 1), (x + 7)(3x + 3) (sign), 12x + 24 (drops the 4)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The expression $(x + 5)^{2} - 4(x - 1)^{2}$ can be rewritten as which of the following products?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(7 - x)(3x + 3)$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$(3 - x)(3x + 7)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses $2x - 1$ for $2(x - 1)$. The second square is $[2(x - 1)]^{2} = (2x - 2)^{2}$."
+    },
+    {
+     "key": "C",
+     "text": "$(x + 7)(3x + 3)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This writes $M - N = x + 5 - (2x - 2)$ as $x + 7$; distributing the minus gives $x + 5 - 2x + 2 = 7 - x$."
+    },
+    {
+     "key": "D",
+     "text": "$12x + 24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This drops the 4 and works with $(x + 5)^{2} - (x - 1)^{2} = (6)(2x + 4)$. The 4 makes the second block $2(x - 1)$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "$4(x - 1)^{2} = [2(x - 1)]^{2}$, so the expression is a difference of two squares of BLOCKS: $M^{2} - N^{2} = (M - N)(M + N)$.",
+    "steps": "The question asks for an equivalent form; the choices are mostly factored.<br>$M = x + 5$, $N = 2(x - 1) = 2x - 2$ <span class=\"nt\">($4(x - 1)^{2} = (2x - 2)^{2}$)</span><br>$M - N = x + 5 - 2x + 2 = 7 - x$ <span class=\"nt\">(distribute the minus)</span><br>$M + N = x + 5 + 2x - 2 = 3x + 3$ <span class=\"nt\">()</span><br>So the expression is $(7 - x)(3x + 3)$.<br>Why this is fast: seeing the 4 as the square of 2 turns the whole expression into one difference of squares, so the two blocks are subtracted and added instead of expanded and refactored.",
+    "check": "$x = 0$: $25 - 4 = 21$, and $(7)(3) = 21$ ✓",
+    "be_careful": "$2(x - 1)$ is $2x - 2$, not $2x - 1$.",
+    "desmos": null,
+    "another_way": "Expand both: $x^{2} + 10x + 25 - 4x^{2} + 8x - 4 = -3x^{2} + 18x + 21$, which equals $(7 - x)(3x + 3)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-023",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C6"
+   ],
+   "family": "quotient-remainder-form",
+   "signature": "(6x^2 + 7x - 1)/(2x + 3) = 3x - 1 + 2/(2x + 3): a + b + c = 4; wrong 2 (no remainder), 6",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The expression $\\frac{6x^{2} + 7x - 1}{2x + 3}$ is equivalent to $ax + b + \\frac{c}{2x + 3}$ for $x > 0$, where $a$, $b$, and $c$ are constants. What is the value of $a + b + c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This stops at $3x - 1$ and leaves out the remainder $c = 2$."
+    },
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This takes $b = +1$; $(2x + 3)(3x + 1) = 6x^{2} + 11x + 3$, which does not match."
+    }
+   ],
+   "solution": {
+    "key_idea": "Multiply through by $2x + 3$: $6x^{2} + 7x - 1 = (2x + 3)(ax + b) + c$. Then match coefficients, or do the long division.",
+    "steps": "The question asks for $a + b + c$ in the quotient-plus-remainder form.<br>$6x^{2} + 7x - 1 = (2x + 3)(ax + b) + c$ <span class=\"nt\">(multiply both sides by $2x + 3$)</span><br>$2a = 6$, so $a = 3$ <span class=\"nt\">(x-squared terms)</span><br>$3a + 2b = 7$: $9 + 2b = 7$, so $b = -1$ <span class=\"nt\">(x-terms)</span><br>$3b + c = -1$: $-3 + c = -1$, so $c = 2$ <span class=\"nt\">(constants)</span><br>$a + b + c = 3 - 1 + 2 = 4$ <span class=\"nt\">()</span><br>Why this works: multiplying through by the divisor turns the division into a polynomial identity, and two polynomials that are equal for every $x$ must match term by term.",
+    "check": "$(2x + 3)(3x - 1) + 2 = 6x^{2} + 7x - 3 + 2 = 6x^{2} + 7x - 1$ ✓",
+    "be_careful": "The remainder $c$ is part of the sum.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-024",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C4"
+   ],
+   "family": "must-be-integer-rational",
+   "signature": "for every positive integer n, which must be an integer: (n^3 + 8)/(n + 2) = n^2 - 2n + 4 (sum of cubes); every choice is an integer at n = 1, choice A also at n = 2",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For every positive integer $n$, which of the following expressions must have an integer value?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{n^{2} + 2n + 7}{n + 1}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This equals $n + 1 + \\frac{6}{n + 1}$. It is an integer for $n = 1$ and $n = 2$, but $n = 3$ gives $\\frac{22}{4}$. Two good examples do not prove “every $n$”."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{n^{3} + 8}{n + 2}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{n^{2} + 3n + 8}{n + 2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This equals $n + 1 + \\frac{6}{n + 2}$. It is an integer for $n = 1$, but $n = 2$ gives $\\frac{18}{4}$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{n^{2} + 2n + 9}{n + 3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This equals $n - 1 + \\frac{12}{n + 3}$. It is an integer for $n = 1$, but $n = 2$ gives $\\frac{17}{5}$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A quotient is an integer for every $n$ when the denominator divides the numerator as polynomials. $n^{3} + 8$ is a sum of cubes, $n^{3} + 2^{3}$, so $n + 2$ is a factor.",
+    "steps": "The question asks which quotient is an integer for EVERY positive integer $n$.<br>$n^{3} + 8 = (n + 2)(n^{2} - 2n + 4)$ <span class=\"nt\">(sum of cubes, $a^{3} + b^{3} = (a + b)(a^{2} - ab + b^{2})$)</span><br>$\\frac{n^{3} + 8}{n + 2} = n^{2} - 2n + 4$ <span class=\"nt\">(cancel $n + 2$)</span><br>$n^{2} - 2n + 4$ is an integer whenever $n$ is.<br>Each other choice is a polynomial plus a leftover fraction: $\\frac{6}{n + 1}$, $\\frac{6}{n + 2}$, $\\frac{12}{n + 3}$ <span class=\"nt\">(divide)</span><br>A leftover fraction is a whole number only when the denominator happens to divide its top, so it fails for some $n$ ($n = 3$, $n = 2$, $n = 2$).",
+    "check": "$n = 3$: $\\frac{27 + 8}{5} = 7 = 9 - 6 + 4$ ✓",
+    "be_careful": "Every choice gives an integer at $n = 1$. Testing one or two small values cannot settle a “for every $n$” question; the structure does.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-025",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "rewrite-power-in-new-base",
+   "signature": "x^(1/3) = a, x > 0: x^(-1/2) = a^(-3/2); traps a^(-1/6) (multiplies), a^(3/2) (sign), a^(-2/3) (flips ratio)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $x^{\\frac{1}{3}} = a$, where $x > 0$, which of the following is equivalent to $x^{-\\frac{1}{2}}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$a^{-\\frac{1}{6}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This multiplies $\\frac{1}{3}$ and $-\\frac{1}{2}$. Since $x = a^{3}$, the exponent of $a$ is $3 \\cdot (-\\frac{1}{2})$."
+    },
+    {
+     "key": "B",
+     "text": "$a^{\\frac{3}{2}}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This drops the negative sign of the exponent; $x^{-\\frac{1}{2}} = \\frac{1}{x^{\\frac{1}{2}}}$."
+    },
+    {
+     "key": "C",
+     "text": "$a^{-\\frac{3}{2}}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$a^{-\\frac{2}{3}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This divides the exponents the wrong way, $\\frac{1}{3} \\div (-\\frac{1}{2})$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Solve for $x$ in terms of $a$ first: cubing $x^{\\frac{1}{3}} = a$ gives $x = a^{3}$. Then raise $a^{3}$ to the power $-\\frac{1}{2}$.",
+    "steps": "The question asks for $x^{-\\frac{1}{2}}$ written with base $a$.<br>$x = a^{3}$ <span class=\"nt\">(cube both sides of $x^{\\frac{1}{3}} = a$)</span><br>$x^{-\\frac{1}{2}} = (a^{3})^{-\\frac{1}{2}}$ <span class=\"nt\">(substitute)</span><br>$= a^{3 \\cdot (-\\frac{1}{2})} = a^{-\\frac{3}{2}}$ <span class=\"nt\">(power of a power: multiply)</span><br>Why this works: once $x$ is written as a power of $a$, every other power of $x$ is also a power of $a$, and the rule for a power of a power gives the new exponent directly.",
+    "check": "$x = 64$: $a = 4$; $64^{-\\frac{1}{2}} = \\frac{1}{8}$, and $4^{-\\frac{3}{2}} = \\frac{1}{8}$ ✓",
+    "be_careful": "$x$ is $a^{3}$, not $a^{\\frac{1}{3}}$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-026",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "identity-evaluate-at-1-hidden-sum",
+   "signature": "(ax + b)(2x - 3) = 6x^2 + cx - 6 for all x: a = 3, b = 2, c = -5, a + b + c = 0 (x = 1 gives -(a+b) = c); traps 5, -5, 10",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Constants $a$, $b$, and $c$ make the two expressions $(ax + b)(2x - 3)$ and $6x^{2} + cx - 6$ equivalent. What is the sum $a + b + c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D17",
+     "feedback": "$-5$ is $c$ alone."
+    },
+    {
+     "key": "B",
+     "text": "$0$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D17",
+     "feedback": "5 is $a + b$; the question also includes $c$."
+    },
+    {
+     "key": "D",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This takes $c = 5$. The $x$-terms are $-9x + 4x = -5x$, so $c = -5$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Match the $x^{2}$ terms and the constants to get $a$ and $b$, then the $x$-terms give $c$. (Shortcut: put $x = 1$ into both sides.)",
+    "steps": "The question asks for $a + b + c$.<br>$x^{2}$-terms: $2a = 6$, so $a = 3$ <span class=\"nt\">($ax \\cdot 2x = 2ax^{2}$)</span><br>constants: $-3b = -6$, so $b = 2$ <span class=\"nt\">($b \\cdot (-3)$)</span><br>$(3x + 2)(2x - 3) = 6x^{2} - 9x + 4x - 6 = 6x^{2} - 5x - 6$ <span class=\"nt\">(expand)</span><br>$c = -5$, so $a + b + c = 3 + 2 - 5 = 0$.<br>Why this works: both terms on the left share the factor $x - 2$, so the left side is already factored; factoring the right side the same way lets the remaining factors be compared directly.",
+    "check": "$x = 1$: left $(a + b)(-1) = -5$, right $6 + c - 6 = c = -5$ ✓",
+    "be_careful": "Do not stop at $a + b = 5$; $c$ is negative.",
+    "desmos": null,
+    "another_way": "Put $x = 1$: $(a + b)(2 - 3) = 6 + c - 6$, so $-(a + b) = c$ and $a + b + c = 0$ with no expanding at all."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-027",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C1"
+   ],
+   "family": "missing-term-then-other-coefficient",
+   "signature": "(x^2 + kx + 3)(x - 2) has no x^2 term: k = 2; x-coefficient 3 - 2k = -1; wrong 2 (k), 3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 105,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "When $(x^{2} + kx + 3)(x - 2)$ is expanded, where $k$ is a constant, the result has no $x^{2}$ term. What is the coefficient of $x$ in the expanded result?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-1"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "2 is the value of $k$. The question asks for the coefficient of $x$, found next."
+    },
+    {
+     "value": "7",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $3 + 2k$; the $x$-terms are $3x$ and $k \\cdot (-2)x = -2kx$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Collect the $x^{2}$ terms to find $k$, then use $k$ in the $x$-term.",
+    "steps": "The question asks for the coefficient of $x$ once $k$ is known.<br>$x^{2}$ terms: $x^{2}(-2) + kx \\cdot x = (k - 2)x^{2}$ <span class=\"nt\">(two products)</span><br>$k - 2 = 0$, so $k = 2$ <span class=\"nt\">(no x-squared term)</span><br>$x$ terms: $kx(-2) + 3 \\cdot x = (3 - 2k)x$ <span class=\"nt\">(two products)</span><br>$3 - 2(2) = -1$ <span class=\"nt\">()</span><br>Why this works: each coefficient of the product comes from only a few pairs of terms, so the condition on the $x^{2}$ term pins down $k$, and that value then feeds into the $x$ term.",
+    "check": "$(x^{2} + 2x + 3)(x - 2) = x^{3} - 2x^{2} + 2x^{2} - 4x + 3x - 6 = x^{3} - x - 6$ ✓",
+    "be_careful": "Two steps: $k$ is a middle answer, not the final one.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-028",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "difference-of-squares-to-sum-of-squares",
+   "signature": "x^2 - y^2 = 48, x - y = 3: x + y = 16; x^2 + y^2 = ((x+y)^2 + (x-y)^2)/2 = 265/2; traps 51, 256, 265",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$x^{2} - y^{2} = 48$<br>$x - y = 3$<br>The numbers $x$ and $y$ satisfy both equations shown. What is the value of $x^{2} + y^{2}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$51$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This adds $48 + 3$; the equations do not combine that way."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{265}{2}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$256$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "256 is $(x + y)^{2}$, a middle step."
+    },
+    {
+     "key": "D",
+     "text": "$265$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "265 is $(x + y)^{2} + (x - y)^{2} = 2(x^{2} + y^{2})$; it still has to be halved."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$x^{2} - y^{2} = (x - y)(x + y)$ gives $x + y$. Then $(x + y)^{2} + (x - y)^{2} = 2x^{2} + 2y^{2}$.",
+    "steps": "The question asks for $x^{2} + y^{2}$.<br>$3(x + y) = 48$, so $x + y = 16$ <span class=\"nt\">($x^{2} - y^{2} = (x - y)(x + y)$)</span><br>$(x + y)^{2} + (x - y)^{2} = 2x^{2} + 2y^{2}$ <span class=\"nt\">(the $2xy$ terms cancel)</span><br>$2(x^{2} + y^{2}) = 256 + 9 = 265$ <span class=\"nt\">()</span><br>$x^{2} + y^{2} = \\frac{265}{2}$.<br>Why this is fast: the question never needs $x$ and $y$ separately. The factored form links the two given equations, so one division gives $x + y$ and squaring finishes the problem.",
+    "check": "$x = 9.5$, $y = 6.5$: $90.25 + 42.25 = 132.5 = \\frac{265}{2}$ ✓",
+    "be_careful": "265 is twice the answer.",
+    "desmos": null,
+    "another_way": "Solve $x + y = 16$, $x - y = 3$: $x = 9.5$, $y = 6.5$, then square and add."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-029",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C4"
+   ],
+   "family": "complex-fraction-simplify",
+   "signature": "(1 - 4/x^2)/(1 + 2/x) = (ax + b)/x: a = 1, b = -2, a - b = 3; traps -1 (a + b), 1 (sign of b), -3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For $x > 2$, the complex fraction $\\frac{1 - \\frac{4}{x^{2}}}{1 + \\frac{2}{x}}$ is equivalent to $\\frac{ax + b}{x}$, where $a$ and $b$ are constants. What is the value of $a - b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This is $b - a$; with $a = 1$ and $b = -2$, $a - b = 1 + 2 = 3$."
+    },
+    {
+     "key": "B",
+     "text": "$-1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$-1$ is $a + b = 1 + (-2)$; the question asks for $a - b$."
+    },
+    {
+     "key": "C",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $b = 2$, from cancelling $x - 2$ instead of $x + 2$ and getting $\\frac{x + 2}{x}$."
+    },
+    {
+     "key": "D",
+     "text": "$3$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Multiply the top and the bottom of the big fraction by $x^{2}$, factor, cancel, then read $a$ and $b$ from the matching form.",
+    "steps": "The question asks for $a - b$ after rewriting the fraction as $\\frac{ax + b}{x}$.<br>$\\frac{x^{2} - 4}{x^{2} + 2x}$ <span class=\"nt\">(multiply top and bottom by $x^{2}$)</span><br>$= \\frac{(x - 2)(x + 2)}{x(x + 2)}$ <span class=\"nt\">(factor)</span><br>$= \\frac{x - 2}{x}$ <span class=\"nt\">(cancel $x + 2$)</span><br>$a = 1$ and $b = -2$ <span class=\"nt\">(match with $\\frac{ax + b}{x}$)</span><br>$a - b = 1 - (-2) = 3$.<br>Why this works: multiplying the top and the bottom of a fraction by the same nonzero expression does not change its value, and $x^{2}$ clears every small denominator at once.",
+    "check": "$x = 4$: $\\frac{1 - \\frac{1}{4}}{1 + \\frac{1}{2}} = \\frac{1}{2}$, and $\\frac{1(4) - 2}{4} = \\frac{1}{2}$ ✓",
+    "be_careful": "$b$ is negative here, so $a - b$ adds 2.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-030",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "combine-radicals-simplify-first",
+   "signature": "sqrt(50x^3) - x sqrt(cx) = x sqrt(2x): 5x sqrt(2x) - x sqrt(cx) = x sqrt(2x), sqrt(cx) = 4 sqrt(2x), c = 32; traps 48 (subtract radicands), 16 (4 not squared), 8",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For all positive values of $x$, $\\sqrt{50x^{3}} - x\\sqrt{cx} = x\\sqrt{2x}$, where $c$ is a positive constant. What is the value of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "With $c = 8$: $5x\\sqrt{2x} - 2x\\sqrt{2x} = 3x\\sqrt{2x}$, not $x\\sqrt{2x}$."
+    },
+    {
+     "key": "B",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This sets $\\sqrt{c} = 4\\sqrt{2}$ and then squares only the 4. $(4\\sqrt{2})^{2} = 16 \\cdot 2 = 32$."
+    },
+    {
+     "key": "C",
+     "text": "$32$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$48$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This subtracts under the root, $50 - 2 = 48$. Roots cannot be subtracted that way."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Rewrite $\\sqrt{50x^{3}}$ with the leftover root $\\sqrt{2x}$, find what $x\\sqrt{cx}$ must be, then square to get $c$.",
+    "steps": "The question asks for $c$.<br>$\\sqrt{50x^{3}} = \\sqrt{25x^{2} \\cdot 2x} = 5x\\sqrt{2x}$ <span class=\"nt\">(pull out the perfect square $25x^{2}$)</span><br>$5x\\sqrt{2x} - x\\sqrt{cx} = x\\sqrt{2x}$, so $x\\sqrt{cx} = 4x\\sqrt{2x}$ <span class=\"nt\">(subtract $x\\sqrt{2x}$ and add $x\\sqrt{cx}$)</span><br>$\\sqrt{cx} = 4\\sqrt{2x} = \\sqrt{16 \\cdot 2x} = \\sqrt{32x}$ <span class=\"nt\">(divide by $x$, move 4 inside the root)</span><br>$c = 32$.<br>Why this works: radicals combine only when the part under the root is the same, so each radical is first rewritten with the largest perfect square pulled out, leaving the same $\\sqrt{2x}$ in both.",
+    "check": "$x = 2$: $\\sqrt{400} - 2\\sqrt{64} = 20 - 16 = 4$, and $2\\sqrt{4} = 4$ ✓",
+    "be_careful": "Moving a factor into a square root squares it: $4\\sqrt{2x} = \\sqrt{32x}$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-031",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C6"
+   ],
+   "family": "remainder-of-shifted-polynomial",
+   "signature": "p divided by x - 3 has remainder 5; g(x) = p(x) + x^2: remainder g(3) = 14; traps 5, 9, 15",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "When the polynomial $p(x)$ is divided by $x - 3$, the remainder is 5. The polynomial $g$ is defined by $g(x) = p(x) + x^{2}$. What is the remainder when $g(x)$ is divided by $x - 3$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This assumes adding $x^{2}$ does not change the remainder. At $x = 3$ the added term is worth 9."
+    },
+    {
+     "key": "B",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "9 is only the value of $x^{2}$ at $x = 3$; the remainder 5 from $p$ is still there."
+    },
+    {
+     "key": "C",
+     "text": "$14$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$15$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This multiplies the remainder 5 by 3. Adding $x^{2}$ adds its value at $x = 3$, which is 9, so the new remainder is $5 + 9$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The remainder when dividing by $x - 3$ is the value at $x = 3$. So the remainder for $g$ is $g(3) = p(3) + 3^{2}$.",
+    "steps": "The question asks for the remainder of $g(x)$ divided by $x - 3$.<br>$p(x) = (x - 3)q(x) + 5$, so $p(3) = 5$ <span class=\"nt\">(quotient-remainder form)</span><br>$g(3) = p(3) + 3^{2} = 5 + 9$ <span class=\"nt\">(evaluate g at 3)</span><br>$= 14$ <span class=\"nt\">()</span><br>The remainder for $g$ is 14.<br>Why this works: the remainder for $x - 3$ is the value at $x = 3$, so the effect of adding $x^{2}$ is simply its value at 3, and $p$ itself never has to be known.",
+    "check": "Example: $p(x) = x + 2$ (remainder 5). $g(x) = x^{2} + x + 2$; $g(3) = 14$, and $g(x) = (x - 3)(x + 4) + 14$ ✓",
+    "be_careful": "The added $x^{2}$ is not a multiple of $x - 3$, so it changes the remainder.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-032",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C4"
+   ],
+   "family": "exponent-difference-of-squares",
+   "signature": "x^(a^2)/x^(b^2) = x^16 so a^2 - b^2 = 16 = (a - b)(a + b) = 8(a - b); a - b = 2, a + b = 8 gives a = 5; traps 2 (a - b), 3 (b), 4 (square root of 16); ICMS killer hp-adv8-3 (asks for a instead of a - b)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For $x > 1$, $\\frac{x^{a^{2}}}{x^{b^{2}}} = x^{16}$, where $a$ and $b$ are constants and $a + b = 8$. What is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "2 is $a - b$. One more step: with $a + b = 8$, $a = 5$."
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "3 is the value of $b$."
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This takes the square root of 16. But $a^{2} - b^{2}$ is not a square of one number; it factors as $(a - b)(a + b)$."
+    },
+    {
+     "key": "D",
+     "text": "$5$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Dividing powers subtracts exponents, so $a^{2} - b^{2} = 16$. Factor it and use $a + b = 8$.",
+    "steps": "The question asks for $a$.<br>$x^{a^{2} - b^{2}} = x^{16}$ <span class=\"nt\">(subtract exponents when dividing)</span><br>$a^{2} - b^{2} = 16$ <span class=\"nt\">(same base $x > 1$, so equal exponents)</span><br>$(a - b)(a + b) = 16$ <span class=\"nt\">(difference of squares)</span><br>$8(a - b) = 16$, so $a - b = 2$ <span class=\"nt\">($a + b = 8$)</span><br>$2a = 10$, so $a = 5$ <span class=\"nt\">(add $a + b = 8$ and $a - b = 2$)</span><br>Why it works: $x > 1$ means different exponents give different values, so the exponents must match.<br>Why this works: in a factored monic quadratic the constant is the product and the middle coefficient is the sum, so listing the short set of factor pairs of 24 shows every possible value of $c$.",
+    "check": "$a = 5$, $b = 3$: $25 - 9 = 16$ ✓ and $5 + 3 = 8$ ✓",
+    "be_careful": "Finding $a - b = 2$ is not the end; the question asks for $a$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-033",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "perfect-square-sign-from-middle-term",
+   "signature": "4x^2 + kx + 25 = (mx + n)^2, m > 0, k < 0: m = 2, n = -5 (2mn = k < 0), m - n = 7; traps -3, -20, 3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 105,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The expression $4x^{2} + kx + 25$ is equivalent to $(mx + n)^{2}$, where $k$, $m$, and $n$ are constants, $m > 0$, and $k < 0$. What is the value of $m - n$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-20$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$-20$ is $k = 2mn$, not $m - n$."
+    },
+    {
+     "key": "B",
+     "text": "$-3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This takes $n = 5$. Since $k = 2mn < 0$ and $m > 0$, $n$ must be negative."
+    },
+    {
+     "key": "C",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This computes $n - m$ with $n = 5$ and $m = 2$, using the wrong sign for $n$."
+    },
+    {
+     "key": "D",
+     "text": "$7$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$(mx + n)^{2} = m^{2}x^{2} + 2mnx + n^{2}$. The sign of $k$ decides the sign of $n$.",
+    "steps": "The question asks for $m - n$.<br>$m^{2} = 4$ and $m > 0$, so $m = 2$ <span class=\"nt\">($x^{2}$-terms)</span><br>$n^{2} = 25$, so $n = 5$ or $n = -5$ <span class=\"nt\">(constants)</span><br>$k = 2mn = 4n < 0$, so $n = -5$ <span class=\"nt\">(the condition $k < 0$ picks the sign)</span><br>$m - n = 2 - (-5) = 7$.<br>Why this works: two expressions that are equal for every $x$ have the same constant term and the same $x$ coefficient, and the sign condition picks one of the two square roots of 49. Remember that the middle term of a squared binomial is twice the product of its two terms, so the coefficient 2 inside the binomial also counts.",
+    "check": "$(2x - 5)^{2} = 4x^{2} - 20x + 25$, and $k = -20 < 0$ ✓",
+    "be_careful": "$k < 0$ is the condition that rules out $n = 5$. Subtracting a negative adds.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-034",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "square-the-reciprocal-sum",
+   "signature": "a^(1/2) - a^(-1/2) = 3: square: a - 2 + 1/a = 9, a + 1/a = 11; traps 9, 7, 3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $a^{\\frac{1}{2}} - a^{-\\frac{1}{2}} = 3$, where $a > 0$, what is the value of $a + a^{-1}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D17",
+     "feedback": "3 is the given value of $a^{\\frac{1}{2}} - a^{-\\frac{1}{2}}$."
+    },
+    {
+     "key": "B",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This subtracts 2 instead of adding it: the middle term is $-2$, so $a + a^{-1} = 9 + 2$."
+    },
+    {
+     "key": "C",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This squares each term separately and drops the middle term $-2$."
+    },
+    {
+     "key": "D",
+     "text": "$11$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$a^{\\frac{1}{2}} \\cdot a^{-\\frac{1}{2}} = 1$, so squaring the given equation makes a constant middle term.",
+    "steps": "The question asks for $a + a^{-1}$.<br>$(a^{\\frac{1}{2}} - a^{-\\frac{1}{2}})^{2} = 9$ <span class=\"nt\">(square both sides)</span><br>$a - 2 \\cdot a^{\\frac{1}{2}} a^{-\\frac{1}{2}} + a^{-1} = 9$ <span class=\"nt\">($(u - v)^{2} = u^{2} - 2uv + v^{2}$)</span><br>$a - 2 + a^{-1} = 9$ <span class=\"nt\">($a^{\\frac{1}{2}} a^{-\\frac{1}{2}} = a^{0} = 1$)</span><br>$a + a^{-1} = 11$.<br>Why this works: writing $\\frac{3}{2}$ as three halves turns the given equation into a cube of $x^{\\frac{1}{2}}$, and the requested power is just the reciprocal of that same square root.",
+    "check": "Let $u = a^{\\frac{1}{2}}$: $u - \\frac{1}{u} = 3$ gives $u^{2} + \\frac{1}{u^{2}} = 9 + 2 = 11$ ✓",
+    "be_careful": "The middle term is $-2$, not 0. Finding $a$ itself is not necessary.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-035",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "exponent-factor-out-lower-power",
+   "signature": "3^(n+2) + 3^(n+1) - 3^n = 11 * 9^4: 3^n(9 + 3 - 1) = 11 * 3^n = 11 * 3^8, n = 8; traps 4 (9^4 read as 3^4), 9 (33 matched with 11), 16 (3^(2^4))",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 105,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $3^{n + 2} + 3^{n + 1} - 3^{n} = 11 \\cdot 9^{4}$, what is the value of $n$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This matches $3^{n}$ with $9^{4}$ by the exponent alone. $9^{4} = (3^{2})^{4} = 3^{8}$."
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This factors out $3^{n - 1}$ correctly, $3^{n - 1}(27 + 9 - 3) = 33 \\cdot 3^{n - 1}$, but then matches 33 with 11 and sets $n - 1 = 8$. Since $33 = 11 \\cdot 3$, the left side is $11 \\cdot 3^{n}$."
+    },
+    {
+     "key": "D",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This reads $9^{4}$ as $3^{16}$, multiplying wrongly ($2^{4}$). $(3^{2})^{4} = 3^{2 \\cdot 4} = 3^{8}$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Factor out the lowest power, $3^{n}$, and write $9^{4}$ as a power of 3.",
+    "steps": "The question asks for $n$.<br>$3^{n + 2} + 3^{n + 1} - 3^{n} = 3^{n}(9 + 3 - 1) = 11 \\cdot 3^{n}$ <span class=\"nt\">(factor out $3^{n}$)</span><br>$11 \\cdot 9^{4} = 11 \\cdot 3^{8}$ <span class=\"nt\">($9^{4} = (3^{2})^{4}$)</span><br>$11 \\cdot 3^{n} = 11 \\cdot 3^{8}$, so $3^{n} = 3^{8}$ <span class=\"nt\">(divide by 11)</span><br>$n = 8$.<br>Why this works: every term contains the factor $2^{n}$, so factoring it out shows that the value does not depend on $n$ at all, and the remaining numbers cancel exactly.",
+    "check": "$n = 8$: $3^{10} + 3^{9} - 3^{8} = 59,049 + 19,683 - 6,561 = 72,171$, and $11 \\cdot 6,561 = 72,171$ ✓",
+    "be_careful": "Both sides must be written with base 3 before comparing exponents.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-036",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "count-integer-middle-coefficients",
+   "signature": "x^2 + kx + 12 factors as (x + m)(x + n) with integers m, n: k in {±7, ±8, ±13}: 6; traps 3 (positives only), 12, 4",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The expression $x^{2} + kx + 12$, where $k$ is a constant, can be written as $(x + m)(x + n)$, where $m$ and $n$ are integers. How many different values of $k$ are possible?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This counts only positive factor pairs. Two negative integers also multiply to 12."
+    },
+    {
+     "key": "B",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This misses a pair; the pairs are $1 \\cdot 12$, $2 \\cdot 6$, $3 \\cdot 4$."
+    },
+    {
+     "key": "C",
+     "text": "$6$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This counts ordered pairs like $(3, 4)$ and $(4, 3)$ separately; both give the same $k$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$mn = 12$ and $k = m + n$. List the integer pairs, including negative pairs, and count distinct sums.",
+    "steps": "The question asks how many different sums $m + n$ there are.<br>$mn = 12$, $k = m + n$ <span class=\"nt\">(match coefficients)</span><br>Positive pairs: $(1, 12)$, $(2, 6)$, $(3, 4)$ give $k = 13, 8, 7$ <span class=\"nt\">()</span><br>Negative pairs: $(-1, -12)$, $(-2, -6)$, $(-3, -4)$ give $k = -13, -8, -7$ <span class=\"nt\">(two negatives multiply to 12)</span><br>That is 6 different values.<br>Why this works: the middle coefficient is the sum of a factor pair, so each unordered pair of integers with product 12 gives one value, and negative pairs give the opposite values.",
+    "check": "$k = -7$: $(x - 3)(x - 4) = x^{2} - 7x + 12$ ✓",
+    "be_careful": "Integers include negatives.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-037",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C1"
+   ],
+   "family": "telescoping-difference-of-squares-chain",
+   "signature": "(x - 2)(x + 2)(x^2 + 4)(x^4 + 16) = x^8 - 256; n + m = 264; wrong 24 (x^8 - 16), 20 (stops at x^4 - 16)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The expression $(x - 2)(x + 2)(x^{2} + 4)(x^{4} + 16)$ is equivalent to $x^{n} - m$, where $n$ and $m$ are positive constants. What is the value of $n + m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "264"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "24",
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This uses $x^{8} - 16$; each step squares the constant: $4$, $16$, then $256$."
+    },
+    {
+     "value": "20",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This stops at $x^{4} - 16$ and leaves out the last factor $x^{4} + 16$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Each new factor pairs with the product so far to make a difference of squares: $(x^{2} - 4)(x^{2} + 4) = x^{4} - 16$, and so on.",
+    "steps": "The question asks for $n + m$ after the product collapses.<br>$(x - 2)(x + 2) = x^{2} - 4$ <span class=\"nt\">(difference of squares)</span><br>$(x^{2} - 4)(x^{2} + 4) = x^{4} - 16$ <span class=\"nt\">(again)</span><br>$(x^{4} - 16)(x^{4} + 16) = x^{8} - 256$ <span class=\"nt\">(again)</span><br>$n = 8$, $m = 256$, so $n + m = 264$.<br>Why this is fast: each new factor is the conjugate of the product so far, so the difference-of-squares pattern repeats three times and the long expansion is never written out.",
+    "check": "$x = 3$: $(1)(5)(13)(97) = 6305$, and $3^{8} - 256 = 6561 - 256 = 6305$ ✓",
+    "be_careful": "Square the constant each time: $2^{2}$, $4^{2}$, $16^{2}$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-038",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C3"
+   ],
+   "family": "difference-of-squares-rational-exponents",
+   "signature": "(x^(3/2) - x^(-1/2))^2 - (x^(3/2) + x^(-1/2))^2 = -4 x^(3/2) x^(-1/2) = -4x; traps -4 (exponents treated as cancelling), 0, -2x",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For all positive values of $x$, which of the following is equivalent to $(x^{\\frac{3}{2}} - x^{-\\frac{1}{2}})^{2} - (x^{\\frac{3}{2}} + x^{-\\frac{1}{2}})^{2}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-4x$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$-4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This treats $x^{\\frac{3}{2}} \\cdot x^{-\\frac{1}{2}}$ as 1; adding the exponents gives $x^{1}$."
+    },
+    {
+     "key": "C",
+     "text": "$0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This drops the middle terms when squaring; they do not cancel, because they have opposite signs."
+    },
+    {
+     "key": "D",
+     "text": "$-2x$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "This uses $2mn$ only once; the difference of the two squares is $-4mn$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "With $m = x^{\\frac{3}{2}}$ and $n = x^{-\\frac{1}{2}}$, the expression is $(m - n)^{2} - (m + n)^{2} = -4mn$. Then multiply powers by adding exponents.",
+    "steps": "The question asks for an equivalent expression.<br>$(m - n)^{2} - (m + n)^{2}$ <span class=\"nt\">($m = x^{\\frac{3}{2}}$, $n = x^{-\\frac{1}{2}}$)</span><br>$= (m^{2} - 2mn + n^{2}) - (m^{2} + 2mn + n^{2}) = -4mn$ <span class=\"nt\">(the squares cancel)</span><br>$mn = x^{\\frac{3}{2} - \\frac{1}{2}} = x^{1}$ <span class=\"nt\">(add exponents)</span><br>So the expression equals $-4x$.<br>Why it works: only the cross terms survive the subtraction, and the cross term is a product of two powers of $x$.<br>Why this works: the expression is the square of a sum, and the two terms being squared are reciprocals of each other, so their product is 1 and the middle term becomes the number 2.",
+    "check": "$x = 4$: $(8 - \\frac{1}{2})^{2} - (8 + \\frac{1}{2})^{2} = 56.25 - 72.25 = -16$, and $-4(4) = -16$ ✓",
+    "be_careful": "$x^{\\frac{3}{2}} \\cdot x^{-\\frac{1}{2}} = x$, not 1.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-039",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "factor-area-then-new-rectangle",
+   "signature": "area 6x^2 + 7x - 20, width 2x + 5: length 3x - 4; new rectangle same length, width x - 1: 3x^2 - 7x + 4; traps sign errors",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Rectangle P has area $(6x^{2} + 7x - 20)$ square units and width $(2x + 5)$ units, where $x > 2$. Rectangle Q has the same length as rectangle P and a width of $(x - 1)$ units. Which expression represents the area of rectangle Q, in square units?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3x^{2} - x - 4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses length $3x + 4$; the factor of $6x^{2} + 7x - 20$ is $3x - 4$, and the product also has the wrong middle term."
+    },
+    {
+     "key": "B",
+     "text": "$3x^{2} + 7x + 4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This is $(3x + 4)(x + 1)$; both signs are wrong."
+    },
+    {
+     "key": "C",
+     "text": "$3x^{2} - 7x - 4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "The constant term is $(-4)(-1) = +4$."
+    },
+    {
+     "key": "D",
+     "text": "$3x^{2} - 7x + 4$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Length = area divided by width. Factor the area, keep the other factor, then multiply by the new width.",
+    "steps": "The question asks for the area of rectangle Q.<br>$6x^{2} + 7x - 20 = (2x + 5)(3x - 4)$ <span class=\"nt\">(AC: $-120 = 15 \\cdot (-8)$, sum 7)</span><br>Length $= 3x - 4$ <span class=\"nt\">(the other factor)</span><br>$(3x - 4)(x - 1) = 3x^{2} - 3x - 4x + 4$ <span class=\"nt\">(area of Q)</span><br>$= 3x^{2} - 7x + 4$ <span class=\"nt\">(combine)</span><br>Why it works: both rectangles share one side, so factoring P reveals that side.<br>Why this works: area is length times width, so dividing the area by the known length gives the width, and factoring is the quickest way to do that division with expressions.",
+    "check": "$x = 3$: P has area $54 + 21 - 20 = 55$ and width 11, so length 5; Q has area $5 \\cdot 2 = 10$, and $27 - 21 + 4 = 10$ ✓",
+    "be_careful": "Check signs in both the factoring and the final product.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-040",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H",
+   "concepts": [
+    "N1.C1"
+   ],
+   "family": "square-identity-with-product",
+   "signature": "3x - y = 5, xy = 2: 9x^2 + y^2 = (3x - y)^2 + 6xy = 25 + 12 = 37; traps 13 (subtracts), 25, 31 (adds 6 only)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The real numbers $x$ and $y$ satisfy $y = 3x - 5$ and $xy = 2$. What is the value of $9x^{2} + y^{2}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$13$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This subtracts $6xy$; from $(3x - y)^{2} = 9x^{2} - 6xy + y^{2}$, the $6xy$ must be added back."
+    },
+    {
+     "key": "B",
+     "text": "$25$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "25 is $(3x - y)^{2}$, which still contains the $-6xy$ term."
+    },
+    {
+     "key": "C",
+     "text": "$31$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "This adds $6$ instead of $6xy = 12$."
+    },
+    {
+     "key": "D",
+     "text": "$37$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$(3x - y)^{2} = 9x^{2} - 6xy + y^{2}$, so $9x^{2} + y^{2} = (3x - y)^{2} + 6xy$.",
+    "steps": "The question asks for $9x^{2} + y^{2}$; $x$ and $y$ need not be found.<br>$(3x - y)^{2} = 9x^{2} - 6xy + y^{2}$ <span class=\"nt\">(rewrite the first equation as $3x - y = 5$ and square)</span><br>$25 = 9x^{2} + y^{2} - 6(2)$ <span class=\"nt\">(substitute $5$ and $xy = 2$)</span><br>$9x^{2} + y^{2} = 25 + 12 = 37$ <span class=\"nt\">()</span><br>Why it works: the square of a difference contains the needed sum of squares plus a cross term, and the cross term is known from $xy$.<br>Why this works: the expression matches the perfect-square pattern with $3x$ and $y$, so it equals the square of the given quantity, and the separate values of $x$ and $y$ are never needed.",
+    "check": "$x = 2$, $y = 1$: $6 - 1 = 5$ ✓, $xy = 2$ ✓, and $36 + 1 = 37$ ✓",
+    "be_careful": "The cross term is $6xy = 12$, not 6.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-041",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "integer-identity-extreme-middle-coefficient",
+   "signature": "(ax + 3)(bx + 5) = 15x^2 + cx + 15, a, b integers: ab = 15, c = 5a + 3b; least c = -78 (a = -15, b = -1); traps -50, -34, 30",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The equation $(ax + 3)(bx + 5) = 15x^{2} + cx + 15$ is true for all values of $x$, where $a$, $b$, and $c$ are integers. What is the least possible value of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-78"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-50",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This pairs $a = -1$, $b = -15$, giving $5(-1) + 3(-15) = -50$. The order matters: $a = -15$, $b = -1$ gives $-78$."
+    },
+    {
+     "value": "30",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses only $a = 3$, $b = 5$ and positive values; the least value needs negative factors."
+    }
+   ],
+   "solution": {
+    "key_idea": "Matching $x^{2}$ terms gives $ab = 15$; the middle coefficient is $c = 5a + 3b$. Because the weights 5 and 3 are different, which factor goes with $a$ matters.",
+    "steps": "The question asks for the smallest $c$ over all integer pairs.<br>$(ax + 3)(bx + 5) = abx^{2} + (5a + 3b)x + 15$ <span class=\"nt\">(expand)</span><br>$ab = 15$ and $c = 5a + 3b$ <span class=\"nt\">(match coefficients)</span><br>Positive pairs $(a, b)$: $(1, 15)$, $(3, 5)$, $(5, 3)$, $(15, 1)$ give $c = 50, 30, 34, 78$ <span class=\"nt\">()</span><br>Negative pairs give the opposites: $-50, -30, -34, -78$ <span class=\"nt\">(both signs flip)</span><br>The least value is $c = -78$, from $a = -15$, $b = -1$.<br>Why the order matters: in $5a + 3b$ the two unknowns carry different weights, so swapping the values of $a$ and $b$ changes $c$. To make $c$ as small as possible, both must be negative, and the larger size must go with the larger weight 5. That is why $a = -15$, $b = -1$ beats $a = -1$, $b = -15$.",
+    "check": "$(-15x + 3)(-x + 5) = 15x^{2} - 75x - 3x + 15 = 15x^{2} - 78x + 15$ ✓",
+    "be_careful": "The constant 15 is fixed by $3 \\cdot 5$, so no extra condition comes from it; $a$ and $b$ can be negative.",
+    "desmos": "No single graph or equation to enter; the solver must enumerate ordered integer pairs and see the asymmetric weights.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-042",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C6"
+   ],
+   "family": "two-remainders-determine-quadratic",
+   "signature": "p(x) = 2x^2 + bx + c; remainder 4 when divided by x - 1 and 10 when divided by x - 3: b = -5, c = 7, p(2) = 5; trap 7 (averages), 9, 3",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $p$ is defined by $p(x) = 2x^{2} + bx + c$, where $b$ and $c$ are constants. When $p(x)$ is divided by $x - 1$, the remainder is 4. When $p(x)$ is divided by $x - 3$, the remainder is 10. What is the value of $p(2)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $b = -6$; from $2b = -10$, $b = -5$."
+    },
+    {
+     "key": "B",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "7 is the average of 4 and 10, which would be right only for a linear function. $p$ is quadratic, so its value at 2 is not halfway."
+    },
+    {
+     "key": "D",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $c = 11$ from $2 + b + c = 4$ with $b = -9$... the two equations give $b = -5$ and $c = 7$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The remainder when dividing by $x - m$ is $p(m)$. So $p(1) = 4$ and $p(3) = 10$ give two equations in $b$ and $c$.",
+    "steps": "The question asks for $p(2)$, which needs $b$ and $c$.<br>$p(1) = 2 + b + c = 4$, so $b + c = 2$ <span class=\"nt\">(remainder by x - 1)</span><br>$p(3) = 18 + 3b + c = 10$, so $3b + c = -8$ <span class=\"nt\">(remainder by x - 3)</span><br>$2b = -10$, so $b = -5$ and $c = 7$ <span class=\"nt\">(subtract the equations)</span><br>$p(2) = 8 - 10 + 7 = 5$ <span class=\"nt\">(evaluate)</span><br>Why the average fails: the remainder for division by $x - m$ is the value $p(m)$, so the problem gives two points on the graph of $p$. A parabola is not straight, so its value at 2 is not the average of its values at 1 and 3; the leading coefficient 2 bends the graph below that line.",
+    "check": "$p(x) = 2x^{2} - 5x + 7$: $p(1) = 4$ ✓, $p(3) = 18 - 15 + 7 = 10$ ✓",
+    "be_careful": "Halfway between the two remainders works only for a line.",
+    "desmos": "Unknown b and c must first be set up from remainder conditions; graphing does not reveal them without that translation.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-043",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "difference-of-shifted-squares-identity",
+   "signature": "(x + a)^2 - (x + b)^2 = 6x - 3 for all x: 2(a - b) = 6, (a - b)(a + b) = -3 so a + b = -1; traps -3, 3, 1",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $(x + a)^{2} - (x + b)^{2} = 6x - 3$ holds for every value of $x$. If $a$ and $b$ are constants, what is $a + b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This sets $a^{2} - b^{2}$ equal to $-3$ and then reads it as $a + b$; it equals $(a - b)(a + b)$ with $a - b = 3$."
+    },
+    {
+     "key": "B",
+     "text": "$-1$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Sign error in $(a - b)(a + b) = -3$: $a + b = -\\frac{3}{3} = -1$."
+    },
+    {
+     "key": "D",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "3 is $a - b$, not $a + b$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The $x^{2}$ terms cancel. The $x$-coefficient gives $a - b$; the constant $a^{2} - b^{2}$ factors as $(a - b)(a + b)$.",
+    "steps": "The question asks for $a + b$, not $a$ and $b$ separately.<br>$(x + a)^{2} - (x + b)^{2} = 2(a - b)x + (a^{2} - b^{2})$ <span class=\"nt\">(expand; the x-squared terms cancel)</span><br>$2(a - b) = 6$, so $a - b = 3$ <span class=\"nt\">(x-terms)</span><br>$a^{2} - b^{2} = -3$ <span class=\"nt\">(constants)</span><br>$(a - b)(a + b) = -3$, so $3(a + b) = -3$ <span class=\"nt\">(difference of squares)</span><br>$a + b = -1$.<br>Why this is fast: the $x^{2}$ terms always cancel in a difference of two squared binomials with the same $x$, so only two equations remain. The second one is a difference of squares in $a$ and $b$, and the first already gives one of its factors, so dividing gives $a + b$ without finding $a$ or $b$.",
+    "check": "$a = 1$, $b = -2$: $(x + 1)^{2} - (x - 2)^{2} = 2x + 1 + 4x - 4 = 6x - 3$ ✓",
+    "be_careful": "Solving for $a$ and $b$ works, but the factored form gets $a + b$ in one step.",
+    "desmos": "Two unknown constants inside an identity; no single equation to graph for a + b.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-044",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "must-be-divisible-by-8",
+   "signature": "for every integer n, (2n + 1)^2 - 1 = 4n(n + 1) is divisible by 8; others fail at n = 0 or 1",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For every integer $n$, which of the following expressions must be divisible by 8?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4n^{2} + 4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$4n^{2} + 4 = 4(n^{2} + 1)$; at $n = 0$ it is 4, which is not divisible by 8."
+    },
+    {
+     "key": "B",
+     "text": "$(2n + 1)^{2} - 1$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$(n + 1)^{2} - 1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$(n + 1)^{2} - 1 = n(n + 2)$; at $n = 1$ it is 3."
+    },
+    {
+     "key": "D",
+     "text": "$(2n)^{2} - 4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$(2n)^{2} - 4 = 4(n - 1)(n + 1)$; at $n = 0$ it is $-4$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Factor: $(2n + 1)^{2} - 1 = (2n)(2n + 2) = 4n(n + 1)$. One of two consecutive integers is even, so $n(n + 1)$ is even and the product is a multiple of 8.",
+    "steps": "The question asks which expression is a multiple of 8 for EVERY integer $n$.<br>$(2n + 1)^{2} - 1 = [(2n + 1) - 1][(2n + 1) + 1]$ <span class=\"nt\">(difference of squares)</span><br>$= 2n(2n + 2) = 4n(n + 1)$ <span class=\"nt\">()</span><br>$n(n + 1)$ is even <span class=\"nt\">(one of two consecutive integers is even)</span><br>$4 \\cdot (\\text{even})$ is a multiple of 8 <span class=\"nt\">()</span><br>Each other choice fails for $n = 0$ or $n = 1$.<br>Why testing is not enough: a few values of $n$ can suggest a pattern, but the question asks about every integer. The factored form $4n(n + 1)$ shows the reason: the 4 supplies two factors of 2, and the even number among $n$ and $n + 1$ supplies a third, so 8 always divides it.",
+    "check": "$n = 1, 2, 3$: $8, 24, 48$, all multiples of 8 ✓",
+    "be_careful": "A few numerical tests can suggest the answer but the factored form proves it for every $n$.",
+    "desmos": "Divisibility for every integer is a structural claim; graphs do not show it.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-045",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "conjugate-trinomial-product-identity",
+   "signature": "(x^2 + bx + c)(x^2 - bx + c) = x^4 + 2x^2 + 81, b, c > 0: c = 9, 2c - b^2 = 2, b = 4; b + c = 13; wrong 25 (b^2 + c), 29",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The equation $(x^{2} + bx + c)(x^{2} - bx + c) = x^{4} + 2x^{2} + 81$ is true for all values of $x$, where $b$ and $c$ are positive constants. What is the value of $b + c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "13"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "25",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This uses $b^{2} = 16$ in place of $b$: $16 + 9 = 25$."
+    },
+    {
+     "value": "29",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $b^{2} = 2c + 2 = 20$, adding 2 instead of subtracting, and then adds $20 + 9$. The $x^{2}$-coefficient gives $2c - b^{2} = 2$, so $b^{2} = 16$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Treat $x^{2} + c$ as one block: the product is $(x^{2} + c)^{2} - (bx)^{2}$. Match the $x^{2}$ and constant terms.",
+    "steps": "The question asks for $b + c$.<br>$[(x^{2} + c) + bx][(x^{2} + c) - bx] = (x^{2} + c)^{2} - b^{2}x^{2}$ <span class=\"nt\">(difference of squares with a block)</span><br>$= x^{4} + (2c - b^{2})x^{2} + c^{2}$ <span class=\"nt\">(expand)</span><br>$c^{2} = 81$ and $c > 0$, so $c = 9$ <span class=\"nt\">(constants)</span><br>$2(9) - b^{2} = 2$, so $b^{2} = 16$ and $b = 4$ <span class=\"nt\">(x-squared terms)</span><br>$b + c = 13$ <span class=\"nt\">()</span><br>Why the block helps: the two factors differ only in the sign of $bx$, so they have the form $(M + N)(M - N)$ with $M = x^{2} + c$ and $N = bx$. That reduces the product to a short expression whose constant term and $x^{2}$ term can be matched to the right side right away.",
+    "check": "$(x^{2} + 4x + 9)(x^{2} - 4x + 9) = (x^{2} + 9)^{2} - 16x^{2} = x^{4} + 2x^{2} + 81$ ✓",
+    "be_careful": "The $x^{2}$ coefficient combines $2c$ and $-b^{2}$.",
+    "desmos": "Two unknown constants; no graph to read.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-046",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "even-power-coefficient-sum",
+   "signature": "(x^2 - 3x + 1)^3: sum of coefficients of even powers = (p(1) + p(-1))/2 = (-1 + 125)/2 = 62; wrong -1, 125, 63",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "When $(x^{2} - 3x + 1)^{3}$ is expanded and written in the form $a_{6}x^{6} + a_{5}x^{5} + a_{4}x^{4} + a_{3}x^{3} + a_{2}x^{2} + a_{1}x + a_{0}$, what is the value of $a_{6} + a_{4} + a_{2} + a_{0}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "62"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-1",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$-1$ is the value at $x = 1$, the sum of ALL seven coefficients."
+    },
+    {
+     "value": "125",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "125 is the value at $x = -1$, which ADDS the even coefficients and SUBTRACTS the odd ones."
+    }
+   ],
+   "solution": {
+    "key_idea": "At $x = 1$ every term counts with a plus sign. At $x = -1$ the odd powers flip sign. Adding the two values doubles the even-power coefficients and cancels the odd ones.",
+    "steps": "The question asks for the sum of the even-power coefficients.<br>$x = 1$: $(1 - 3 + 1)^{3} = -1 = a_{6} + a_{5} + \\ldots + a_{0}$ <span class=\"nt\">(all coefficients)</span><br>$x = -1$: $(1 + 3 + 1)^{3} = 125 = a_{6} - a_{5} + a_{4} - \\ldots + a_{0}$ <span class=\"nt\">(odd powers of -1 are -1)</span><br>Sum: $124 = 2(a_{6} + a_{4} + a_{2} + a_{0})$ <span class=\"nt\">(odd terms cancel)</span><br>$a_{6} + a_{4} + a_{2} + a_{0} = 62$ <span class=\"nt\">()</span><br>Why the two substitutions work: at $x = 1$ every term counts with a plus sign, and at $x = -1$ the even powers still count with a plus sign while the odd powers switch to minus. Adding the two values cancels the odd coefficients and counts each even coefficient twice, so half the sum is the answer.",
+    "check": "Full expansion: $x^{6} - 9x^{5} + 30x^{4} - 45x^{3} + 30x^{2} - 9x + 1$; $1 + 30 + 30 + 1 = 62$ ✓",
+    "be_careful": "Expanding a cube of a trinomial by hand is long; the two substitutions avoid it.",
+    "desmos": "Coefficients are not visible on a graph; Desmos gives values at x = 1 and -1 only once the student knows why those values matter.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-047",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C2"
+   ],
+   "family": "factored-form-must-be-true-bound",
+   "signature": "x^2 + 6x + r = (x + p)(x + q), p, q real: p + q = 6, r = pq = 9 - (p - 3)^2 <= 9",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $x^{2} + 6x + r = (x + p)(x + q)$ is true for all values of $x$, where $p$, $q$, and $r$ are real numbers. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$r > 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$p = 7$, $q = -1$ gives $r = -7$. Real $p$ and $q$ can have opposite signs."
+    },
+    {
+     "key": "B",
+     "text": "$p = q$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$p = 2$, $q = 4$ also works ($r = 8$). Equal values give only the largest $r$."
+    },
+    {
+     "key": "C",
+     "text": "$r \\le 9$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$r \\ge 9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This reverses the bound. $p = 2$, $q = 4$ gives $r = 8 < 9$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$p + q = 6$ and $r = pq$. Writing $q = 6 - p$ gives $r = p(6 - p) = 9 - (p - 3)^{2}$, which is never more than 9.",
+    "steps": "The question asks which statement holds for every possible $p$, $q$, $r$.<br>$p + q = 6$ and $pq = r$ <span class=\"nt\">(match coefficients)</span><br>$r = p(6 - p) = 6p - p^{2}$ <span class=\"nt\">(substitute $q = 6 - p$)</span><br>$= 9 - (p^{2} - 6p + 9) = 9 - (p - 3)^{2}$ <span class=\"nt\">(complete the square)</span><br>$(p - 3)^{2} \\ge 0$, so $r \\le 9$ <span class=\"nt\">(a square is never negative)</span><br>Counterexamples rule out the other three choices.<br>Why the bound appears: $p$ and $q$ must add to 6, and two numbers with a fixed sum have the greatest product when they are equal. Completing the square makes this exact, since $r$ equals 9 minus a square. Every wrong choice can be ruled out with one specific pair $p$, $q$ that adds to 6.",
+    "check": "$p = q = 3$: $(x + 3)^{2} = x^{2} + 6x + 9$, $r = 9$ ✓; $p = 7$, $q = -1$: $r = -7 \\le 9$ ✓",
+    "be_careful": "“Must be true” needs every case; one counterexample rules a choice out.",
+    "desmos": "A family statement over all real p, q; one counterexample per wrong choice plus a completed square, not a graph read.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-048",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C6"
+   ],
+   "family": "quotient-remainder-form-new-divisor",
+   "signature": "p(x) = (x^2 - 1)q(x) + 3x + 5: remainder by x + 1 is p(-1) = 2; wrong 8 (p(1)), 5",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For a polynomial $p$, $p(x) = (x^{2} - 1)q(x) + 3x + 5$, where $q$ is a polynomial. What is the remainder when $p(x)$ is divided by $x + 1$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "8",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "8 is $p(1)$, the remainder for $x - 1$. Dividing by $x + 1$ uses $x = -1$."
+    },
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This reads the constant in $3x + 5$. The remainder by $x + 1$ is a value of $p$, not a coefficient."
+    }
+   ],
+   "solution": {
+    "key_idea": "$x^{2} - 1 = (x - 1)(x + 1)$ is 0 at $x = -1$, so the unknown $q$ drops out of $p(-1)$, which is the remainder for $x + 1$.",
+    "steps": "The question asks for the remainder when $p(x)$ is divided by $x + 1$.<br>That remainder is $p(-1)$ <span class=\"nt\">($x + 1 = 0$ at $x = -1$)</span><br>$p(-1) = ((-1)^{2} - 1)q(-1) + 3(-1) + 5$ <span class=\"nt\">(substitute)</span><br>$= 0 \\cdot q(-1) - 3 + 5 = 2$ <span class=\"nt\">($q$ disappears)</span><br>The remainder is 2.<br>Why this works: the remainder when dividing by $x + 1$ is the value of $p$ at $x = -1$. The given form is useful because its first part has the factor $x + 1$ hidden inside $x^{2} - 1$, so at $x = -1$ the unknown quotient $q$ is multiplied by 0 and disappears completely.",
+    "check": "Example: $q(x) = 1$: $p(x) = x^{2} + 3x + 4$, $p(-1) = 1 - 3 + 4 = 2$ ✓; $p(x) = (x + 1)(x + 2) + 2$ ✓",
+    "be_careful": "$q$ is unknown, so the value must be taken where its multiplier is 0.",
+    "desmos": "q(x) is unknown, so p cannot be graphed.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-049",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C4"
+   ],
+   "family": "count-n-making-quotient-integer",
+   "signature": "(n^2 + 7)/(n + 1) = n - 1 + 8/(n + 1); integer iff n + 1 | 8: n = 1, 3, 7 -> 3; traps 4 (includes n = 0), 2, 7",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "How many positive integers $n$ make $\\frac{n^{2} + 7}{n + 1}$ an integer?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This misses one divisor; $n + 1$ can be 2, 4, or 8."
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This also counts $n + 1 = 1$, which gives $n = 0$, not a positive integer."
+    },
+    {
+     "key": "D",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "7 is the constant in the numerator, not a count."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Divide first: $\\frac{n^{2} + 7}{n + 1} = n - 1 + \\frac{8}{n + 1}$. Since $n - 1$ is an integer, the whole value is an integer exactly when $n + 1$ divides 8.",
+    "steps": "The question asks how many positive $n$ work.<br>$n^{2} + 7 = (n + 1)(n - 1) + 8$ <span class=\"nt\">($(n + 1)(n - 1) = n^{2} - 1$)</span><br>$\\frac{n^{2} + 7}{n + 1} = n - 1 + \\frac{8}{n + 1}$ <span class=\"nt\">(quotient plus remainder)</span><br>$n + 1 = 2$, $4$, or $8$ <span class=\"nt\">(divisors of 8 that are at least 2)</span><br>$n = 1, 3, 7$ <span class=\"nt\">()</span><br>That is 3 values.<br>Why the division matters: checking $n = 1, 2, 3$ one at a time finds the values that work but cannot prove there are no more. Writing the fraction as $n - 1$ plus $\\frac{8}{n + 1}$ shows that the only possible values of $n + 1$ are divisors of 8, so the search is finite and complete.",
+    "check": "$n = 7$: $\\frac{56}{8} = 7$ ✓; $n = 3$: $\\frac{16}{4} = 4$ ✓; $n = 1$: $\\frac{8}{2} = 4$ ✓",
+    "be_careful": "Testing $n = 1, 2, 3, \\ldots$ cannot show that no large $n$ works; the remainder form does.",
+    "desmos": "A table can find 1, 3, 7 but cannot certify there are no more; the division form gives the bound n + 1 <= 8.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N1-050",
+   "version": 1,
+   "skill": {
+    "code": "N1",
+    "domain": "adv",
+    "cb_skill": "Equivalent expressions"
+   },
+   "level": "H+",
+   "concepts": [
+    "N1.C5"
+   ],
+   "family": "two-conditions-two-unknown-coefficients",
+   "signature": "(x^2 + ax + 2)(x^2 + bx - 3): x^3 coefficient 0 and x coefficient 5 -> a = -1, b = 1; x^2 coefficient ab - 1 = -2; wrong -1, 0",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "When $(x^{2} + ax + 2)(x^{2} + bx - 3)$ is expanded, where $a$ and $b$ are constants, the coefficient of $x^{3}$ is 0 and the coefficient of $x$ is 5. What is the coefficient of $x^{2}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-1",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$-1$ is the part $2 - 3$ alone; the $x^{2}$ coefficient also includes $ab = -1$."
+    },
+    {
+     "value": "0",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $ab = +1$; with $a = -1$ and $b = 1$, $ab = -1$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Each coefficient of the product is a short sum of products. Two conditions give two equations in $a$ and $b$.",
+    "steps": "The question asks for the $x^{2}$ coefficient after $a$ and $b$ are found.<br>$x^{3}$: $a + b = 0$ <span class=\"nt\">($x^{2} \\cdot bx + ax \\cdot x^{2}$)</span><br>$x$: $-3a + 2b = 5$ <span class=\"nt\">($ax \\cdot (-3) + 2 \\cdot bx$)</span><br>$b = -a$: $-3a - 2a = 5$, so $a = -1$, $b = 1$ <span class=\"nt\">(substitute)</span><br>$x^{2}$: $-3 + ab + 2 = ab - 1 = -2$ <span class=\"nt\">(three products give x squared)</span><br>Why this works: each coefficient of the product is a short sum of products of one term from each factor. Writing out only the $x^{3}$ and $x$ coefficients gives two linear equations in $a$ and $b$, and once those are solved the $x^{2}$ coefficient follows from its own three products.",
+    "check": "$(x^{2} - x + 2)(x^{2} + x - 3) = x^{4} + 0x^{3} - 2x^{2} + 5x - 6$ ✓",
+    "be_careful": "The $x^{2}$ coefficient has three pieces: $x^{2} \\cdot (-3)$, $ax \\cdot bx$, $2 \\cdot x^{2}$.",
+    "desmos": "Unknown coefficients; needs the product structure, not a graph.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

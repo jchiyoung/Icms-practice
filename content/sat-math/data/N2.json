@@ -1,0 +1,3441 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "N2",
+ "skill": "Nonlinear equations in one variable and systems of equations in two variables",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-N2-001",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "zero-product-sum-with-coefficient",
+   "signature": "(x - 3)(2x + 5) = 0: solutions 3 and -5/2, sum 1/2; traps -1/2 (signs read off), 11/2, 8",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "What is the sum of the solutions to the equation $(x - 3)(2x + 5) = 0$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This reads the solutions as $-3$ and $\\frac{5}{2}$, the numbers in the factors with signs kept. Each factor is 0 at the opposite sign."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{1}{2}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{11}{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This uses $\\frac{5}{2}$ instead of $-\\frac{5}{2}$ for the second solution."
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D25",
+     "feedback": "This adds 3 and 5. The second factor $2x + 5$ is 0 at $x = -\\frac{5}{2}$, not at $-5$ or 5."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A product is 0 exactly when one factor is 0. Set each factor equal to 0 and solve.",
+    "steps": "The question asks for the sum of the two solutions.<br>$x - 3 = 0$, so $x = 3$ <span class=\"nt\">(first factor equals 0)</span><br>$2x + 5 = 0$, so $x = -\\frac{5}{2}$ <span class=\"nt\">(second factor equals 0; divide by 2)</span><br>$3 + (-\\frac{5}{2}) = \\frac{6}{2} - \\frac{5}{2} = \\frac{1}{2}$ <span class=\"nt\">(add)</span>",
+    "check": "$x = -\\frac{5}{2}$: $2(-\\frac{5}{2}) + 5 = 0$, so the product is 0 ✓",
+    "be_careful": "The 2 in front of $x$ matters: the solution is $-\\frac{5}{2}$, not $-5$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-002",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "square-root-method-pair-product",
+   "signature": "2(x + 1)^2 - 18 = 0: (x + 1)^2 = 9, x = 2 or -4, product -8; wrong 2 (only positive root), 8",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Let $p$ and $r$ be the two solutions of $2(x + 1)^{2} - 18 = 0$. What is the value of $pr$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This keeps only $x + 1 = 3$. A square equal to 9 has two square roots, 3 and $-3$."
+    },
+    {
+     "value": "8",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This drops the minus sign: $2 \\times (-4) = -8$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Isolate the square, then take both square roots: if $u^{2} = 9$, then $u = 3$ or $u = -3$.",
+    "steps": "The question asks for the product of the two solutions.<br>$2(x + 1)^{2} = 18$ <span class=\"nt\">(add 18)</span><br>$(x + 1)^{2} = 9$ <span class=\"nt\">(divide by 2)</span><br>$x + 1 = 3$ or $x + 1 = -3$ <span class=\"nt\">(both square roots)</span><br>$x = 2$ or $x = -4$ <span class=\"nt\">(subtract 1)</span><br>The product is $2 \\times (-4) = -8$.",
+    "check": "$x = -4$: $2(-3)^{2} - 18 = 18 - 18 = 0$ ✓",
+    "be_careful": "The negative square root gives the second solution.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-003",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C2"
+   ],
+   "family": "one-solution-constant-term",
+   "signature": "x^2 - 10x + k = 0 exactly one real solution: 100 - 4k = 0, k = 25; traps 5, 10, 100",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $x^{2} - 10x + k = 0$, $k$ is a constant. The equation has exactly one real solution. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "5 is half of 10. The constant must be the square of that number, $5^{2} = 25$."
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "10 is the visible coefficient; it is not the constant that makes a perfect square."
+    },
+    {
+     "key": "C",
+     "text": "$25$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$100$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This sets $k = b^{2} = 100$ and forgets the $4ac$: $100 - 4k = 0$ gives $k = 25$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A quadratic has exactly one real solution when the discriminant $b^{2} - 4ac$ is 0 (it is then a perfect square).",
+    "steps": "The question asks for $k$.<br>$a = 1$, $b = -10$, $c = k$ <span class=\"nt\">(standard form)</span><br>$(-10)^{2} - 4(1)(k) = 0$ <span class=\"nt\">(discriminant 0 for exactly one solution)</span><br>$100 - 4k = 0$, so $k = 25$<br>Why it works: a perfect square trinomial has the form $(x + r)^{2} = x^{2} + 2rx + r^{2}$, so half of the middle coefficient, squared, must equal the constant term.",
+    "check": "$x^{2} - 10x + 25 = (x - 5)^{2}$, which is 0 only at $x = 5$ ✓",
+    "be_careful": "Exactly one solution means discriminant 0, not discriminant less than 0.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-004",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "radical-extraneous-basic",
+   "signature": "sqrt(x + 7) = x - 5: squaring gives x = 2, 9; x = 2 is extraneous (sqrt 9 = 3, not -3); traps {2}, {2,9}, none",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Consider the equation $\\sqrt{x + 7} = x - 5$. Which of the following gives all values of $x$ that satisfy the equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$ only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "At $x = 2$ the right side is $-3$, but a square root is never negative. This keeps the false root and drops the true one."
+    },
+    {
+     "key": "B",
+     "text": "$2$ and $9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Both values solve the squared equation, but $x = 2$ fails the original: $\\sqrt{9} = 3 \\ne -3$."
+    },
+    {
+     "key": "C",
+     "text": "$9$ only",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "There is no solution.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "$x = 9$ works: $\\sqrt{16} = 4$ and $9 - 5 = 4$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Squaring both sides can add a false solution, so every value must be checked in the original equation.",
+    "steps": "The question asks for every value that makes the original equation true.<br>$x + 7 = (x - 5)^{2} = x^{2} - 10x + 25$ <span class=\"nt\">(square both sides)</span><br>$x^{2} - 11x + 18 = 0$ <span class=\"nt\">(move everything to one side)</span><br>$(x - 2)(x - 9) = 0$, so $x = 2$ or $x = 9$ <span class=\"nt\">(factor)</span><br>$x = 2$: $\\sqrt{9} = 3$ but $2 - 5 = -3$ ✗ <span class=\"nt\">(check)</span><br>$x = 9$: $\\sqrt{16} = 4$ and $9 - 5 = 4$ ✓ <span class=\"nt\">(check)</span>",
+    "check": "Only $x = 9$ passes the check, so 9 is the only solution ✓",
+    "be_careful": "The right side $x - 5$ must be at least 0, because it equals a square root.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-005",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C6"
+   ],
+   "family": "literal-square-root-target",
+   "signature": "K = (1/2)mv^2, v > 0: v = sqrt(2K/m); traps sqrt(K/(2m)), 2K/m, sqrt(2Km)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $K = \\frac{1}{2}mv^{2}$ relates the quantities $K$, $m$, and $v$, where all three are positive. Which equation gives $v$ in terms of $K$ and $m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$v = \\sqrt{\\frac{K}{2m}}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This divides by 2 instead of multiplying by 2 when removing $\\frac{1}{2}$."
+    },
+    {
+     "key": "B",
+     "text": "$v = \\frac{2K}{m}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "$\\frac{2K}{m}$ is $v^{2}$; a square root is still needed."
+    },
+    {
+     "key": "C",
+     "text": "$v = \\sqrt{2Km}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This multiplies by $m$; to undo multiplying by $m$, divide by $m$."
+    },
+    {
+     "key": "D",
+     "text": "$v = \\sqrt{\\frac{2K}{m}}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Undo the operations on $v$ in reverse order: remove the $\\frac{1}{2}$, divide by $m$, then take the square root.",
+    "steps": "The question asks for $v$ alone on one side.<br>$2K = mv^{2}$ <span class=\"nt\">(multiply both sides by 2)</span><br>$v^{2} = \\frac{2K}{m}$ <span class=\"nt\">(divide by $m$)</span><br>$v = \\sqrt{\\frac{2K}{m}}$ <span class=\"nt\">(square root; $v > 0$)</span><br>Why it works: each step undoes one operation on $v$, in the reverse of the order in which they were applied ($v$ was squared, multiplied by $m$, then halved). Because $v > 0$, only the positive square root is kept.",
+    "check": "$m = 2$, $v = 3$: $K = \\frac{1}{2}(2)(9) = 9$, and $\\sqrt{\\frac{2(9)}{2}} = 3$ ✓",
+    "be_careful": "$\\frac{2K}{m}$ is $v^{2}$, not $v$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-006",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C4"
+   ],
+   "family": "absolute-two-cases-difference",
+   "signature": "|3x - 6| = 12: x = 6 or -2, positive difference 8; wrong 4 (sum), 6 (one case)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The equation $|3x - 6| = 12$ has two solutions. What is the positive difference between the two solutions?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4 is the sum $6 + (-2)$, not the difference."
+    },
+    {
+     "value": "6",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "6 is the solution from $3x - 6 = 12$ alone; the case $3x - 6 = -12$ gives the other solution."
+    }
+   ],
+   "solution": {
+    "key_idea": "$|u| = 12$ means $u = 12$ or $u = -12$. Solve both cases.",
+    "steps": "The question asks for the larger solution minus the smaller.<br>$3x - 6 = 12$, so $x = 6$ <span class=\"nt\">(first case)</span><br>$3x - 6 = -12$, so $3x = -6$ and $x = -2$ <span class=\"nt\">(second case)</span><br>$6 - (-2) = 8$.<br>Why it works: an absolute value equation splits into two linear cases, one for each sign of the expression inside, and both cases must be solved before answering.",
+    "check": "$x = -2$: $|3(-2) - 6| = |-12| = 12$ ✓",
+    "be_careful": "Subtracting a negative adds: $6 - (-2) = 8$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-007",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "line-parabola-select-by-condition",
+   "signature": "y = x^2 - 4x + 1, y = 2x - 7: x = 2, 4; (4, 1) has a > 2, b = 1; traps -3, 4, 6",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y = x^{2} - 4x + 1$<br>$y = 2x - 7$<br>The point $(a, b)$ is a solution to the system of equations shown, and $a > 2$. What is the value of $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "$-3$ is the $y$-value at $x = 2$, which fails the condition $a > 2$."
+    },
+    {
+     "key": "B",
+     "text": "$1$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "4 is $a$, the $x$-coordinate. The question asks for $b$."
+    },
+    {
+     "key": "D",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is the sum of the two $x$-values, $2 + 4$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Both equations give $y$, so set them equal and solve for $x$; then use a line equation for $y$.",
+    "steps": "The question asks for the $y$-coordinate of the solution with $x > 2$.<br>$x^{2} - 4x + 1 = 2x - 7$ <span class=\"nt\">(both equal $y$)</span><br>$x^{2} - 6x + 8 = 0$, so $(x - 2)(x - 4) = 0$ <span class=\"nt\">(one side 0; factor)</span><br>$a = 4$ <span class=\"nt\">(the condition $a > 2$)</span><br>$b = 2(4) - 7 = 1$ <span class=\"nt\">(substitute into the line)</span>",
+    "check": "$4^{2} - 4(4) + 1 = 1$ ✓",
+    "be_careful": "$4$ is the $x$-coordinate; the question asks for $b$.",
+    "desmos": "Graph both equations and click the intersection to the right of $x = 2$: $(4, 1)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-008",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "square-nonnegative-no-solution",
+   "signature": "Which has no real solution: (x - 2)^2 + 5 = 0 (square >= 0); others have 1 or 2",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For which of the following equations is there no real number $x$ that makes the equation true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(x - 2)^{2} - 5 = 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This means $(x - 2)^{2} = 5$, and a square can equal 5: $x = 2 \\pm \\sqrt{5}$."
+    },
+    {
+     "key": "B",
+     "text": "$(x + 2)^{2} = 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "A square equal to 0 has one solution, $x = -2$; zero is allowed."
+    },
+    {
+     "key": "C",
+     "text": "$(x - 2)^{2} + 5 = 0$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$x^{2} - 5 = 0$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "$x^{2} = 5$ has two solutions, $\\pm \\sqrt{5}$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A square of a real number is never negative.",
+    "steps": "The question asks which equation cannot be true for any real $x$.<br>$(x - 2)^{2} + 5 = 0$ means $(x - 2)^{2} = -5$ <span class=\"nt\">(subtract 5)</span><br>a square is at least 0, so it cannot equal $-5$ <span class=\"nt\">(no real solution)</span><br>The other three set a square equal to 5 or 0, which is possible.",
+    "check": "$(x - 2)^{2} + 5 \\ge 5$ for every $x$, so it never reaches 0 ✓",
+    "be_careful": "A square can equal 0; it cannot equal a negative number.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-009",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "rational-only-candidate-excluded",
+   "signature": "6/(x - 2) + 1 = 3x/(x - 2): clearing gives x = 2, which is excluded, so no solution; traps 2, 3, 7/3",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "How many solutions does the equation $\\frac{6}{x - 2} + 1 = \\frac{3x}{x - 2}$ have, and what are they?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Exactly one solution, $x = 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$x = 2$ makes the denominators 0, so it cannot be a solution."
+    },
+    {
+     "key": "B",
+     "text": "Exactly one solution, $x = 3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This forgets to multiply the 1 by $x - 2$: $6 + x = 3x$. At $x = 3$ the left side is $7$, the right side is $9$."
+    },
+    {
+     "key": "C",
+     "text": "Exactly one solution, $x = \\frac{7}{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This leaves the 1 unmultiplied: $6 + 1 = 3x$. At $x = \\frac{7}{3}$ the two sides are not equal."
+    },
+    {
+     "key": "D",
+     "text": "There is no solution.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Multiply by the denominator, solve, and then reject any value that makes a denominator 0.",
+    "steps": "The question asks for every value that makes the original equation true.<br>$6 + (x - 2) = 3x$ <span class=\"nt\">(multiply every term by $x - 2$)</span><br>$x + 4 = 3x$, so $x = 2$ <span class=\"nt\">(solve)</span><br>$x = 2$ makes $x - 2 = 0$ <span class=\"nt\">(not allowed in a denominator)</span><br>The only candidate is rejected, so there is no solution.",
+    "check": "For $x \\ne 2$, the equation is $\\frac{6 + x - 2}{x - 2} = \\frac{3x}{x - 2}$, which needs $x + 4 = 3x$, that is $x = 2$ ✗",
+    "be_careful": "Every term, including the 1, is multiplied by $x - 2$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-010",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "rational-exponent-equation",
+   "signature": "x^(3/2) = 64, x > 0: (sqrt x)^3 = 64, sqrt x = 4, x = 16; traps 8 (square root of 64), 96, 512",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $x^{\\frac{3}{2}} = 64$, where $x > 0$, what is the value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "8 is $\\sqrt{64}$. The exponent $\\frac{3}{2}$ means a cube of a square root, so first take the cube root."
+    },
+    {
+     "key": "B",
+     "text": "$16$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$96$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies 64 by $\\frac{3}{2}$; an exponent is not a multiplier."
+    },
+    {
+     "key": "D",
+     "text": "$512$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "512 is $64^{\\frac{3}{2}}$. To undo the power $\\frac{3}{2}$, use the power $\\frac{2}{3}$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$x^{\\frac{3}{2}} = (\\sqrt{x})^{3}$, so undo the cube first, then the square root.",
+    "steps": "The question asks for $x$.<br>$(\\sqrt{x})^{3} = 64$ <span class=\"nt\">($x^{\\frac{3}{2}} = (x^{\\frac{1}{2}})^{3}$)</span><br>$\\sqrt{x} = 4$ <span class=\"nt\">(cube root of 64)</span><br>$x = 16$ <span class=\"nt\">(square both sides)</span><br>Why it works: a fractional exponent means a root and a power, so undoing it requires raising both sides to the reciprocal power, which keeps the equation balanced.",
+    "check": "$16^{\\frac{3}{2}} = (\\sqrt{16})^{3} = 4^{3} = 64$ ✓",
+    "be_careful": "$64^{\\frac{3}{2}} = 512$ is the opposite operation.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-011",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "line-parabola-y-of-positive-solution",
+   "signature": "y = 2x^2 - 3, y = x + 7: 2x^2 - x - 10 = 0, x = 5/2 or -2; y = 19/2; wrong 5/2 (x), 5 (y at -2)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$y = 2x^{2} - 3$<br>$y = x + 7$<br>The system of equations shown has a solution $(x, y)$ with $x > 0$. What is the value of $y$ for this solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "19/2",
+      "9.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5/2",
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "$\\frac{5}{2}$ is the $x$-coordinate; the question asks for $y$."
+    },
+    {
+     "value": "5",
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "5 is the $y$-value at $x = -2$, which fails $x > 0$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Set the two expressions for $y$ equal, solve the quadratic, then substitute the positive $x$ into the line.",
+    "steps": "The question asks for $y$ at the solution with $x > 0$.<br>$2x^{2} - 3 = x + 7$ <span class=\"nt\">(both equal $y$)</span><br>$2x^{2} - x - 10 = 0$ <span class=\"nt\">(one side 0)</span><br>$(2x - 5)(x + 2) = 0$, so $x = \\frac{5}{2}$ or $x = -2$ <span class=\"nt\">(factor; middle term $4x - 5x = -x$)</span><br>$y = \\frac{5}{2} + 7 = \\frac{19}{2}$ <span class=\"nt\">(use $x = \\frac{5}{2}$ in the line)</span>",
+    "check": "$2(\\frac{5}{2})^{2} - 3 = \\frac{25}{2} - 3 = \\frac{19}{2}$ ✓",
+    "be_careful": "Substitute into the line; it is quicker than the parabola.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-012",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C2"
+   ],
+   "family": "discriminant-after-standard-form",
+   "signature": "3x^2 + 4x = -5: standard form 3x^2 + 4x + 5 = 0, D = 16 - 60 < 0, zero real solutions; trap c = -5 gives two",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "How many real solutions does the equation $3x^{2} + 4x = -5$ have?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Zero",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Exactly one",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Exactly one needs a discriminant of 0; here it is $-44$."
+    },
+    {
+     "key": "C",
+     "text": "Exactly two",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This uses $c = -5$ without moving it. In standard form the constant is $+5$, and the discriminant is $16 - 60 < 0$."
+    },
+    {
+     "key": "D",
+     "text": "Infinitely many",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "A quadratic equation that is not an identity has at most two solutions."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Write the equation in the form $ax^{2} + bx + c = 0$ first; then the sign of $b^{2} - 4ac$ counts the real solutions.",
+    "steps": "The question asks how many real numbers satisfy the equation.<br>$3x^{2} + 4x + 5 = 0$ <span class=\"nt\">(add 5 to both sides)</span><br>$b^{2} - 4ac = 4^{2} - 4(3)(5) = 16 - 60 = -44$ <span class=\"nt\">(discriminant)</span><br>The discriminant is negative, so there are no real solutions.",
+    "check": "$3x^{2} + 4x + 5 = 3(x + \\frac{2}{3})^{2} + \\frac{11}{3} > 0$ for every $x$ ✓",
+    "be_careful": "Move the $-5$ first: it becomes $+5$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-013",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C6"
+   ],
+   "family": "literal-reciprocal-sum",
+   "signature": "1/f = 1/a + 1/b: b = af/(a - f); traps af/(f - a), a - f, f - a",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $\\frac{1}{f} = \\frac{1}{a} + \\frac{1}{b}$ relates the positive quantities $a$, $b$, and $f$, where $a > f$. Which equation gives $b$ in terms of $a$ and $f$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$b = \\frac{af}{f - a}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This subtracts in the wrong order. Since $a > f$, this would make $b$ negative."
+    },
+    {
+     "key": "B",
+     "text": "$b = a - f$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This flips each term separately; $\\frac{1}{a} + \\frac{1}{b}$ is not $\\frac{1}{a + b}$."
+    },
+    {
+     "key": "C",
+     "text": "$b = f - a$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats reciprocals as if they could be removed term by term."
+    },
+    {
+     "key": "D",
+     "text": "$b = \\frac{af}{a - f}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Isolate $\\frac{1}{b}$, write the other side as one fraction, then flip.",
+    "steps": "The question asks for $b$ alone.<br>$\\frac{1}{b} = \\frac{1}{f} - \\frac{1}{a}$ <span class=\"nt\">(subtract $\\frac{1}{a}$)</span><br>$\\frac{1}{b} = \\frac{a - f}{af}$ <span class=\"nt\">(common denominator $af$)</span><br>$b = \\frac{af}{a - f}$ <span class=\"nt\">(take reciprocals of both sides)</span><br>Why it works: the target variable sits inside a fraction, so clearing denominators first turns the equation into one that can be rearranged with ordinary steps.",
+    "check": "$a = 6$, $f = 2$: $b = \\frac{12}{4} = 3$, and $\\frac{1}{6} + \\frac{1}{3} = \\frac{1}{2}$ ✓",
+    "be_careful": "Reciprocals cannot be split across a sum.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-014",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "factor-with-leading-coefficient-sum",
+   "signature": "2x^2 - 7x + 3 = 0: (2x - 1)(x - 3), solutions 1/2 and 3, sum 7/2; traps 7, 4, 3/2",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "What is the sum of the solutions to $2x^{2} - 7x + 3 = 0$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3}{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\frac{3}{2}$ is the product $\\frac{1}{2} \\times 3$, not the sum."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{7}{2}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D25",
+     "feedback": "This uses solutions 1 and 3, reading $2x - 1 = 0$ as $x = 1$."
+    },
+    {
+     "key": "D",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D25",
+     "feedback": "This ignores the leading coefficient 2 and reads the sum from the $x$-coefficient $-7$ alone."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Factor the quadratic, find each solution, then add.",
+    "steps": "The question asks for the sum of the two solutions.<br>$2x^{2} - 7x + 3 = (2x - 1)(x - 3)$ <span class=\"nt\">(check: $-6x - x = -7x$)</span><br>$x = \\frac{1}{2}$ or $x = 3$ <span class=\"nt\">(each factor equals 0)</span><br>$\\frac{1}{2} + 3 = \\frac{7}{2}$ <span class=\"nt\">(add)</span><br>Why it works: the solutions of a factored equation are read from each factor, and the question asks for a combination of them rather than either one alone.",
+    "check": "$x = \\frac{1}{2}$: $2(\\frac{1}{4}) - \\frac{7}{2} + 3 = \\frac{1}{2} - \\frac{7}{2} + 3 = 0$ ✓",
+    "be_careful": "$2x - 1 = 0$ gives $x = \\frac{1}{2}$, not 1.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-015",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "graph-parabola-horizontal-line-distance",
+   "signature": "figure y = (x - 3)^2 with line y = 9: x = 0, 6, distance 6; traps 3, 9, 12",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of $y = (x - 3)^{2}$ is shown.",
+   "stem_after_figure": "The line $y = 9$ intersects this graph at two points. What is the distance between the two points?",
+   "figures": [
+    {
+     "id": "QB-N2-015-fig1",
+     "file": "figures/QB-N2-015-fig1.svg",
+     "alt": "A parabola that opens upward with vertex (3, 0), passing through (0, 9) and (6, 9)."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "3 is the distance from the axis $x = 3$ to one point; there is a point on each side."
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "9 is the height of the line, not a horizontal distance."
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "This uses $x - 3 = \\pm 6$, but $\\sqrt{9} = 3$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$(x - 3)^{2} = 9$ gives two values of $x$, one on each side of the axis $x = 3$.",
+    "steps": "The question asks for the horizontal distance between the two intersection points.<br>$(x - 3)^{2} = 9$ <span class=\"nt\">(set $y = 9$)</span><br>$x - 3 = 3$ or $x - 3 = -3$ <span class=\"nt\">(both square roots)</span><br>$x = 6$ or $x = 0$<br>Both points have $y = 9$, so the distance is $6 - 0 = 6$.",
+    "check": "$(0 - 3)^{2} = 9$ and $(6 - 3)^{2} = 9$ ✓",
+    "be_careful": "Each square root (3 and $-3$) gives a point.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-016",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "radical-isolate-then-square",
+   "signature": "sqrt(2x + 3) + 3 = 8: sqrt = 5, 2x + 3 = 25, x = 11; traps 1, 59, 14",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "When 3 is added to the square root of $2x + 3$, the result is 8. What is the value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This sets $2x + 3 = 5$; the square root equals 5, so $2x + 3 = 25$."
+    },
+    {
+     "key": "B",
+     "text": "$11$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This adds 3 instead of subtracting it: $2x = 28$. From $2x + 3 = 25$, $2x = 22$."
+    },
+    {
+     "key": "D",
+     "text": "$59$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This squares before isolating: $2x + 3 = 121$. The 3 must be subtracted first."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Isolate the square root, then square both sides.",
+    "steps": "The question asks for $x$.<br>$\\sqrt{2x + 3} = 5$ <span class=\"nt\">(subtract 3)</span><br>$2x + 3 = 25$ <span class=\"nt\">(square both sides)</span><br>$x = 11$ <span class=\"nt\">(subtract 3, divide by 2)</span><br>Why it works: squaring is allowed only after the radical is alone on one side, and any squared equation needs a final check in the original equation.",
+    "check": "$\\sqrt{25} + 3 = 5 + 3 = 8$ ✓",
+    "be_careful": "Square only after the root is alone.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-017",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "rational-clear-x-quadratic",
+   "signature": "x - 4/x = 3: x^2 - 3x - 4 = 0, x = 4 or -1, difference 5; traps 3, 4, -5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $x - \\frac{4}{x} = 3$ has two solutions. What is the greater solution minus the lesser solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This subtracts in the wrong order: lesser minus greater."
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "3 is the sum $4 + (-1)$, not the difference."
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "4 is the greater solution alone; the question asks for a difference."
+    },
+    {
+     "key": "D",
+     "text": "$5$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Multiply by $x$ (not allowed to be 0) to get a quadratic.",
+    "steps": "The question asks for (greater solution) $-$ (lesser solution).<br>$x^{2} - 4 = 3x$ <span class=\"nt\">(multiply every term by $x$)</span><br>$x^{2} - 3x - 4 = 0$, so $(x - 4)(x + 1) = 0$ <span class=\"nt\">(one side 0; factor)</span><br>$x = 4$ or $x = -1$ <span class=\"nt\">(neither is 0, so both are allowed)</span><br>$4 - (-1) = 5$.",
+    "check": "$x = -1$: $-1 - \\frac{4}{-1} = -1 + 4 = 3$ ✓",
+    "be_careful": "The 3 must also be multiplied by $x$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-018",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C4"
+   ],
+   "family": "absolute-exactly-one-solution",
+   "signature": "|x - 4| = c exactly one solution: c = 0; traps 4, -4, any positive",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $|x - 4| = c$, $c$ is a constant. For which value of $c$ does the equation have exactly one solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "An absolute value is never negative, so $c = -4$ gives no solution."
+    },
+    {
+     "key": "B",
+     "text": "$0$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "With $c = 1$ the solutions are 3 and 5."
+    },
+    {
+     "key": "D",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "With $c = 4$ the solutions are $x = 0$ and $x = 8$, two solutions."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$|u| = c$ has two solutions when $c > 0$, one when $c = 0$, and none when $c < 0$.",
+    "steps": "The question asks for the value of $c$ that leaves only one solution.<br>$c > 0$: $x - 4 = c$ or $x - 4 = -c$, two different values <span class=\"nt\">(two cases)</span><br>$c = 0$: $x - 4 = 0$, only $x = 4$ <span class=\"nt\">(the two cases are the same)</span><br>$c < 0$: no solution <span class=\"nt\">(absolute value is never negative)</span><br>So $c = 0$.",
+    "check": "$|x - 4| = 0$ only at $x = 4$ ✓",
+    "be_careful": "The two cases merge only when $c = 0$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-019",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "context-rectangle-quadratic",
+   "signature": "width w, length w + 3, area 70: w^2 + 3w - 70 = 0, w = 7; traps 10 (length), -10, 35",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The length of a rectangle is 3 meters more than its width. The area of the rectangle is 70 square meters. What is the width, in meters, of the rectangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$7$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "10 is the length, not the width."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{67}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This uses the perimeter idea $w + w + 3 = 70$; area multiplies length and width."
+    },
+    {
+     "key": "D",
+     "text": "$35$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This halves the area; the area is width times length."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Area = width $\\times$ length gives a quadratic; a width must be positive.",
+    "steps": "The question asks for the width $w$.<br>$w(w + 3) = 70$ <span class=\"nt\">(length is $w + 3$)</span><br>$w^{2} + 3w - 70 = 0$ <span class=\"nt\">(one side 0)</span><br>$(w + 10)(w - 7) = 0$ <span class=\"nt\">(factor: $10 \\times (-7) = -70$ and $10 - 7 = 3$)</span><br>$w = 7$ <span class=\"nt\">(a width is positive)</span>",
+    "check": "$7 \\times 10 = 70$ ✓",
+    "be_careful": "The question asks for the width; $10$ is the length.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-020",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "M",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "common-factor-do-not-divide",
+   "signature": "x^3 = 4x: x(x - 2)(x + 2) = 0, three solutions; traps 1, 2 (divided by x), 0",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "How many real solutions does the equation $x^{3} = 4x$ have?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Zero",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$x = 0$ works at once: $0 = 0$."
+    },
+    {
+     "key": "B",
+     "text": "One",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This keeps only $x = 2$."
+    },
+    {
+     "key": "C",
+     "text": "Two",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This divides both sides by $x$ and loses the solution $x = 0$."
+    },
+    {
+     "key": "D",
+     "text": "Three",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Move everything to one side and factor; dividing by $x$ would lose $x = 0$.",
+    "steps": "The question asks how many real numbers satisfy the equation.<br>$x^{3} - 4x = 0$ <span class=\"nt\">(one side 0)</span><br>$x(x^{2} - 4) = 0$ <span class=\"nt\">(common factor $x$)</span><br>$x(x - 2)(x + 2) = 0$ <span class=\"nt\">(difference of squares)</span><br>$x = 0$, $2$, or $-2$: three solutions.",
+    "check": "$x = -2$: $(-2)^{3} = -8 = 4(-2)$ ✓",
+    "be_careful": "Never divide by an expression that can be 0.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-021",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C2"
+   ],
+   "family": "two-solutions-count-integer-leading-parameter",
+   "signature": "kx^2 - 6x + 2 = 0, integer k from -3 to 10, two distinct real solutions: 36 - 8k > 0 and k != 0: k = -3, -2, -1, 1, 2, 3, 4: 7; traps 4 (positives only), 8 (keeps k = 0), 11 (drops c = 2)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $kx^{2} - 6x + 2 = 0$, $k$ is an integer such that $-3 \\le k \\le 10$. For how many values of $k$ does the equation have exactly two distinct real solutions?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This counts only positive $k$. For a negative $k$, $-8k$ is positive, so the discriminant is even larger and there are two solutions."
+    },
+    {
+     "key": "B",
+     "text": "$7$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This keeps $k = 0$. Then the equation is $-6x + 2 = 0$, which is linear and has only one solution."
+    },
+    {
+     "key": "D",
+     "text": "$11$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This uses $36 - 4k > 0$, forgetting $c = 2$ in $4ac$, so it allows $k$ up to 8."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Two distinct real solutions needs a true quadratic ($k \\ne 0$) with a positive discriminant.",
+    "steps": "The question asks how many integers $k$ from $-3$ to 10 give two distinct real solutions.<br>$k \\ne 0$ <span class=\"nt\">(if $k = 0$ the equation is linear, with one solution)</span><br>$(-6)^{2} - 4(k)(2) > 0$ <span class=\"nt\">(positive discriminant)</span><br>$36 - 8k > 0$, so $k < 4.5$<br>$k = -3, -2, -1, 1, 2, 3, 4$ <span class=\"nt\">(integers in range, $k < 4.5$, $k \\ne 0$)</span><br>That is 7 values.<br>Why it works: the discriminant counts solutions only when the equation is really quadratic, so the value that removes the $x^{2}$ term must be checked separately.",
+    "check": "$k = -1$: $36 + 8 = 44 > 0$ ✓; $k = 5$: $36 - 40 < 0$ ✗; $k = 0$: one solution ✗",
+    "be_careful": "Negative values of $k$ count, and $k = 0$ does not.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-022",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "shared-solution-integer-filter-other-root",
+   "signature": "x^2 - 2x - 15 = 0 and x^2 + kx + 6 = 0 share a solution, k integer: shared -3, k = 5, other root -2; wrong -3, 5",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$x^{2} - 2x - 15 = 0$<br>$x^{2} + kx + 6 = 0$<br>In the second equation, $k$ is an integer. The two equations have exactly one solution in common. What is the solution of the second equation that is <b>not</b> a solution of the first equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-3",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$-3$ is the shared solution; the question asks for the other one."
+    },
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "5 is $k$ (and also a solution of the first equation), not the requested solution."
+    }
+   ],
+   "solution": {
+    "key_idea": "Solve the first equation, then test each of its solutions in the second; only one gives an integer $k$.",
+    "steps": "The question asks for the solution of the second equation that the first does not have.<br>$(x - 5)(x + 3) = 0$, so $x = 5$ or $x = -3$ <span class=\"nt\">(first equation)</span><br>shared $x = 5$: $25 + 5k + 6 = 0$, $k = -\\frac{31}{5}$ <span class=\"nt\">(not an integer ✗)</span><br>shared $x = -3$: $9 - 3k + 6 = 0$, $k = 5$ <span class=\"nt\">(integer ✓)</span><br>$x^{2} + 5x + 6 = (x + 2)(x + 3) = 0$ <span class=\"nt\">(second equation with $k = 5$)</span><br>Its solutions are $-3$ (shared) and $-2$, so the answer is $-2$.",
+    "check": "$(-2)^{2} - 2(-2) - 15 = -7 \\ne 0$, so $-2$ is not a solution of the first ✓",
+    "be_careful": "Both candidates must be tested; the integer condition rules one out.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-023",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "known-solution-reveals-tangent-count",
+   "signature": "y = x^2 + bx + 4, y = 3x with solution (2, 6): b = -1, x^2 - 4x + 4 = 0, exactly one solution; traps two, zero, cannot be determined",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$y = x^{2} + bx + 4$<br>$y = 3x$<br>In the system of equations shown, $b$ is a constant. The point $(2, 6)$ is a solution to the system. How many solutions does the system have?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Exactly one",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Exactly two",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "A line usually meets a parabola twice, but here $x^{2} - 4x + 4 = (x - 2)^{2}$ has only one root."
+    },
+    {
+     "key": "C",
+     "text": "Exactly three",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Substitution gives a quadratic equation, which has at most two solutions."
+    },
+    {
+     "key": "D",
+     "text": "The number cannot be determined from the information given.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The point $(2, 6)$ fixes $b = -1$, so the system is completely known."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Use the known solution to find $b$; then count solutions of the one-variable equation.",
+    "steps": "The question asks how many points satisfy both equations.<br>$6 = 2^{2} + 2b + 4$, so $b = -1$ <span class=\"nt\">($(2, 6)$ is on the parabola)</span><br>$x^{2} - x + 4 = 3x$ <span class=\"nt\">(set the two expressions for $y$ equal)</span><br>$x^{2} - 4x + 4 = 0$, so $(x - 2)^{2} = 0$ <span class=\"nt\">(one side 0)</span><br>Only $x = 2$, so the system has exactly one solution.",
+    "check": "Discriminant $16 - 16 = 0$ ✓",
+    "be_careful": "Do not assume two intersections; check the equation after $b$ is known.",
+    "desmos": "Desmos needs $b$ first; after finding $b = -1$, the graphs touch at $(2, 6)$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-024",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "radical-parameter-from-solution-then-extraneous",
+   "signature": "sqrt(x + a) = x - 1 has solution 5: a = 11; squaring gives 5 and -2; -2 extraneous; set {5}",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $\\sqrt{x + a} = x - 1$, $a$ is a constant. If $x = 5$ is a solution to the equation, which of the following gives all solutions to the equation?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-2$ and $5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$-2$ solves the squared equation, but $\\sqrt{-2 + 11} = 3 \\ne -3$."
+    },
+    {
+     "key": "B",
+     "text": "$5$ and $11$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "11 is the value of $a$, not a solution for $x$."
+    },
+    {
+     "key": "C",
+     "text": "$-5$ and $5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This treats the equation like $x^{2} = 25$; the squared equation is $x^{2} - 3x - 10 = 0$."
+    },
+    {
+     "key": "D",
+     "text": "$5$ only",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The given solution finds $a$. Then solve completely, and check every candidate because squaring can add a false root.",
+    "steps": "The question asks for every solution once $a$ is known.<br>$\\sqrt{5 + a} = 4$, so $5 + a = 16$ and $a = 11$ <span class=\"nt\">($x = 5$ works)</span><br>$x + 11 = (x - 1)^{2} = x^{2} - 2x + 1$ <span class=\"nt\">(square both sides)</span><br>$x^{2} - 3x - 10 = 0$, so $(x - 5)(x + 2) = 0$ <span class=\"nt\">(factor)</span><br>$x = -2$: $\\sqrt{9} = 3$ but $-2 - 1 = -3$ ✗ <span class=\"nt\">(check)</span><br>The only solution is $5$.<br>Why it works: the given solution is information about the constant, not the full answer. Squaring can create a value that satisfies the squared equation but not the original, so each candidate is tested.",
+    "check": "$x = 5$: $\\sqrt{16} = 4 = 5 - 1$ ✓",
+    "be_careful": "The right side $x - 1$ must not be negative.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-025",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C4"
+   ],
+   "family": "absolute-of-quadratic-count-parameter",
+   "signature": "|x^2 - 4| = c with four real solutions: 0 < c < 4: c = 1, 2, 3: 3; traps 2, 4 (keeps c = 4, which gives 3 solutions), 5 (keeps c = 0)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $|x^{2} - 4| = c$, $c$ is a constant. For how many integer values of $c$ does the equation have exactly four distinct real solutions?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "This drops $c = 1$ or $c = 3$ at an end of the range; every integer strictly between 0 and 4 works."
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This keeps $c = 4$. Then $x^{2} - 4 = -4$ gives only $x = 0$, so there are 3 solutions, not 4."
+    },
+    {
+     "key": "D",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This keeps both ends, $c = 0$ (2 solutions) and $c = 4$ (3 solutions)."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Split into $x^{2} = 4 + c$ and $x^{2} = 4 - c$. Four solutions needs both right sides positive and different.",
+    "steps": "The question asks how many integers $c$ give exactly four solutions.<br>$x^{2} - 4 = c$ or $x^{2} - 4 = -c$ <span class=\"nt\">(two cases, $c \\ge 0$)</span><br>$x^{2} = 4 + c$ and $x^{2} = 4 - c$ <span class=\"nt\">(move the constants to one side in each case)</span><br>Each case gives two solutions only when its right side is positive, and the two cases give different solutions only when $4 + c \\ne 4 - c$, that is, $c \\ne 0$.<br>$c > 0$ and $4 - c > 0$ <span class=\"nt\">(so $0 < c < 4$)</span><br>Integers: $c = 1, 2, 3$. That is 3 values. <span class=\"nt\">(each case needs a positive right side, so $0 < c < 4$)</span><br>Why it works: the graph of $y = |x^{2} - 4|$ is a W shape with a local peak of height 4 at $x = 0$; a horizontal line meets it four times only strictly between heights 0 and 4.",
+    "check": "$c = 3$: $x^{2} = 7$ or $x^{2} = 1$: $\\pm\\sqrt{7}, \\pm 1$ ✓; $c = 4$: $x^{2} = 8$ or $x^{2} = 0$: 3 solutions ✗",
+    "be_careful": "At $c = 4$ the line touches the peak, so one solution is lost; at $c = 0$ the two cases are the same.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-026",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "rational-difference-of-squares-denominator-extraneous",
+   "signature": "4/(x - 1) - 8/(x^2 - 1) = 1: x^2 - 4x + 3 = 0, x = 1 (excluded) or 3; answer 3; wrong 1, 4",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A value of $x$ makes $\\frac{4}{x - 1} - \\frac{8}{x^{2} - 1}$ equal to 1. What is this value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$x = 1$ makes both denominators 0, so it is not a solution."
+    },
+    {
+     "value": "4",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4 is the sum of the two candidates $1 + 3$."
+    }
+   ],
+   "solution": {
+    "key_idea": "$x^{2} - 1 = (x - 1)(x + 1)$ is a common denominator. Clear it, solve, and reject any value that makes a denominator 0.",
+    "steps": "The question asks for the value of $x$ that makes the original equation true.<br>$x^{2} - 1 = (x - 1)(x + 1)$ <span class=\"nt\">(difference of squares)</span><br>$4(x + 1) - 8 = x^{2} - 1$ <span class=\"nt\">(multiply every term by $(x - 1)(x + 1)$)</span><br>$4x - 4 = x^{2} - 1$, so $x^{2} - 4x + 3 = 0$ <span class=\"nt\">(one side 0)</span><br>$(x - 1)(x - 3) = 0$ <span class=\"nt\">(factor)</span><br>$x = 1$ is not allowed; $x = 3$ <span class=\"nt\">(denominators cannot be 0)</span>",
+    "check": "$x = 3$: $\\frac{4}{2} - \\frac{8}{8} = 2 - 1 = 1$ ✓",
+    "be_careful": "The right side 1 is also multiplied by $x^{2} - 1$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-027",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C6"
+   ],
+   "family": "literal-target-appears-twice",
+   "signature": "T = 3t/(t + k): Tt + Tk = 3t, t(3 - T) = Tk, t = Tk/(3 - T); traps Tk/(T - 3), Tk/(3 + T), (3 - T)/(Tk)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $T = \\frac{3t}{t + k}$ relates the positive quantities $T$, $t$, and $k$, where $T < 3$. Which equation gives $t$ in terms of $T$ and $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$t = \\frac{Tk}{T - 3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This moves $3t$ with the wrong sign; since $T < 3$, this would make $t$ negative."
+    },
+    {
+     "key": "B",
+     "text": "$t = \\frac{Tk}{3 + T}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This adds $Tt$ instead of subtracting it when collecting the $t$-terms."
+    },
+    {
+     "key": "C",
+     "text": "$t = \\frac{3 - T}{Tk}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This is the reciprocal of the correct expression."
+    },
+    {
+     "key": "D",
+     "text": "$t = \\frac{Tk}{3 - T}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Clear the fraction, gather every term with $t$ on one side, and factor out $t$.",
+    "steps": "The question asks for $t$ alone.<br>$T(t + k) = 3t$ <span class=\"nt\">(multiply by $t + k$)</span><br>$Tt + Tk = 3t$ <span class=\"nt\">(distribute)</span><br>$Tk = 3t - Tt = t(3 - T)$ <span class=\"nt\">(collect the $t$-terms; factor out $t$)</span><br>$t = \\frac{Tk}{3 - T}$ <span class=\"nt\">(divide by $3 - T$, which is positive)</span><br>Why it works: when the target variable appears in more than one term, the only way to isolate it is to bring all those terms together and factor the variable out.",
+    "check": "$t = 2$, $k = 1$: $T = \\frac{6}{3} = 2$, and $\\frac{2(1)}{3 - 2} = 2$ ✓",
+    "be_careful": "$t$ appears twice, so collect both $t$-terms before dividing.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-028",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "two-intersections-positive-x-range",
+   "signature": "y = x^2 - 4x + c, y = 2x - 1: x^2 - 6x + c + 1 = 0; two points: c < 8; both x > 0: product c + 1 > 0 (sum 6 > 0): -1 < c < 8; traps c < 8, 0 < c < 8, -1 < c < 9",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graphs of $y = x^{2} - 4x + c$ and $y = 2x - 1$, where $c$ is a constant, intersect at two points, and both points have a positive $x$-coordinate. Which of the following describes all possible values of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-1 < c < 8$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$c < 8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This checks only that there are two intersection points. For $c = -2$ the solutions are $3 \\pm \\sqrt{10}$, and $3 - \\sqrt{10}$ is negative."
+    },
+    {
+     "key": "C",
+     "text": "$0 < c < 8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This requires $c > 0$, but the two solutions multiply to $c + 1$, not $c$. For $c = -\\frac{1}{2}$ both solutions are positive."
+    },
+    {
+     "key": "D",
+     "text": "$-1 < c < 9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This uses $36 - 4c > 0$ and forgets the $+1$ in the constant term $c + 1$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Set the expressions equal. Two real solutions needs a positive discriminant; two positive solutions also needs a positive product (the sum is already 6).",
+    "steps": "The question asks for all $c$ giving two intersection points with $x > 0$.<br>$x^{2} - 4x + c = 2x - 1$, so $x^{2} - 6x + (c + 1) = 0$ <span class=\"nt\">(set equal)</span><br>$36 - 4(c + 1) > 0$, so $c < 8$ <span class=\"nt\">(two real solutions)</span><br>if the solutions are $r$ and $s$, then $x^{2} - 6x + (c + 1) = (x - r)(x - s)$, so $r + s = 6$ and $rs = c + 1$ <span class=\"nt\">(match the $x$ term and the constant)</span><br>both positive: $c + 1 > 0$, so $c > -1$ <span class=\"nt\">(two positives multiply to a positive)</span><br>Together: $-1 < c < 8$.<br>Why it works: with a positive sum, the two solutions are both positive exactly when their product is positive; a negative product would mean one is negative.",
+    "check": "$c = -\\frac{1}{2}$: $x^{2} - 6x + \\frac{1}{2} = 0$, $x = 3 \\pm \\sqrt{8.5}$, both positive ✓; $c = -1$: $x = 0$ or 6 ✗",
+    "be_careful": "The constant term of the combined equation is $c + 1$, not $c$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-029",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "divide-by-x-derived-expression",
+   "signature": "3x^2 - 10x + 6 = 0: divide by 3x: x - 10/3 + 2/x = 0, x + 2/x = 10/3; wrong 10, 2",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Each solution of $3x^{2} - 10x + 6 = 0$ gives the same value of the expression $x + \\frac{2}{x}$. What is that value?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "10/3",
+      "3.333"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "10",
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This divides by $x$ but not by 3: $3x + \\frac{6}{x} = 10$, which is three times the target."
+    },
+    {
+     "value": "6",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "6 is the visible constant term."
+    }
+   ],
+   "solution": {
+    "key_idea": "$x \\ne 0$ (0 is not a solution), so divide the whole equation by $3x$ to make $x + \\frac{2}{x}$ appear.",
+    "steps": "The question asks for $x + \\frac{2}{x}$, the same for both solutions.<br>$x \\ne 0$ <span class=\"nt\">($3(0)^{2} - 0 + 6 = 6 \\ne 0$)</span><br>$x - \\frac{10}{3} + \\frac{2}{x} = 0$ <span class=\"nt\">(divide every term by $3x$)</span><br>$x + \\frac{2}{x} = \\frac{10}{3}$ <span class=\"nt\">(add $\\frac{10}{3}$)</span><br>Why it works: the requested expression already appears inside the equation once every term is divided by $3x$, so neither solution has to be found. This is allowed because 0 is not a solution.",
+    "check": "$x = \\frac{5 + \\sqrt{7}}{3}$ (quadratic formula): $x + \\frac{2}{x} \\approx 2.548 + 0.785 = 3.333$ ✓",
+    "be_careful": "Divide by $3x$, not just by $x$.",
+    "desmos": null,
+    "another_way": "Solve with the quadratic formula, $x = \\frac{5 \\pm \\sqrt{7}}{3}$, then compute; much longer."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-030",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "quadratic-in-form-sum-of-squares-invariant",
+   "signature": "x^4 - 13x^2 + k = 0 with four distinct real solutions +-u, +-v: u^2 + v^2 = 13, sum of squares of all four = 26 for every valid k; traps 13, 52, cannot be determined",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $x^{4} - 13x^{2} + k = 0$, where $k$ is a constant, has four distinct real solutions. What is the sum of the squares of the four solutions?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$13$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "13 is the sum of the two values of $x^{2}$. Each value of $x^{2}$ comes from two solutions, $x$ and $-x$, so it is counted twice."
+    },
+    {
+     "key": "B",
+     "text": "$26$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$52$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This counts 13 for each of the four solutions. Each solution squared is one value of $x^{2}$, not the sum of both."
+    },
+    {
+     "key": "D",
+     "text": "The value cannot be determined without knowing $k$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The solutions depend on $k$, but the sum of the two values of $x^{2}$ is always 13, so the requested sum is always 26."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Let $u = x^{2}$. Then $u^{2} - 13u + k = 0$, whose two solutions add to 13. Each positive $u$ gives $x = \\pm\\sqrt{u}$.",
+    "steps": "The question asks for the sum of $x^{2}$ over all four solutions.<br>$u^{2} - 13u + k = 0$, where $u = x^{2}$ <span class=\"nt\">(quadratic in $u$)</span><br>$u_{1} + u_{2} = 13$ <span class=\"nt\">($u^{2} - 13u + k = (u - u_{1})(u - u_{2})$; match the $u$ terms)</span><br>Four distinct real $x$ means $u_{1}, u_{2}$ are positive and different, and the solutions are $\\pm\\sqrt{u_{1}}$ and $\\pm\\sqrt{u_{2}}$.<br>$u_{1} + u_{1} + u_{2} + u_{2} = 2(13) = 26$ <span class=\"nt\">(square each solution)</span><br>Why it works: the $u$ term of the factored form only involves $u_{1} + u_{2}$, and $k$ only changes the constant term. So $k$ never needs to be found.",
+    "check": "$k = 36$: solutions $\\pm 2, \\pm 3$; $4 + 4 + 9 + 9 = 26$ ✓",
+    "be_careful": "Each value of $x^{2}$ appears twice, once for $x$ and once for $-x$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-031",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "equivalent-form-substitution-product-of-four",
+   "signature": "x^2 - 3x = a; x(x-1)(x-2)(x-3) = [x(x-3)][(x-1)(x-2)] = a(a + 2) = a^2 + 2a; traps a^2 (drops the +2), a^2 + 2 (adds instead of multiplies), 2a^2 + 2 (pairs wrongly)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "If $x^{2} - 3x = a$, where $a$ is a constant, which of the following is equivalent to $x(x - 1)(x - 2)(x - 3)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$a^{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This treats $(x - 1)(x - 2)$ as if it were also $a$. It equals $x^{2} - 3x + 2$, which is $a + 2$."
+    },
+    {
+     "key": "B",
+     "text": "$a^{2} + 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This adds the 2 at the end instead of multiplying: $a(a + 2)$ is $a^{2} + 2a$."
+    },
+    {
+     "key": "C",
+     "text": "$a^{2} + 2a$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$2a^{2} + 2$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This pairs the factors as $x(x - 1)$ and $(x - 2)(x - 3)$, which do not both match $a$; the right pairing is the outer and inner factors."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Pair the outer factors and the inner factors: both pairs have the same $x^{2} - 3x$ part.",
+    "steps": "The question asks for $x(x - 1)(x - 2)(x - 3)$ written in terms of $a$.<br>$x(x - 3) = x^{2} - 3x = a$ <span class=\"nt\">(outer pair)</span><br>$(x - 1)(x - 2) = x^{2} - 3x + 2 = a + 2$ <span class=\"nt\">(inner pair)</span><br>$x(x - 1)(x - 2)(x - 3) = a(a + 2) = a^{2} + 2a$ <span class=\"nt\">(multiply the two pairs)</span><br>Why it works: the outer factors and the inner factors each add to $x - 3 + x = 2x - 3$, so both products start with $x^{2} - 3x$. Writing that shared part as $a$ turns a degree-4 product into a quadratic in $a$.",
+    "check": "$x = 4$: $a = 16 - 12 = 4$, and $4 \\cdot 3 \\cdot 2 \\cdot 1 = 24 = 4^{2} + 2(4)$ ✓",
+    "be_careful": "Pair $x$ with $x - 3$ and $x - 1$ with $x - 2$; other pairings do not share the $x^{2} - 3x$ part.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-032",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "substitution-root-variable",
+   "signature": "sqrt(x) = x - 6: u = sqrt(x), u^2 - u - 6 = 0, u = 3 (u = -2 rejected), x = 9; wrong 4, 13",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A positive number $x$ is 6 more than its own square root. What is the value of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "9"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$x = 4$ comes from $\\sqrt{x} = -2$, which is impossible: $\\sqrt{4} = 2 \\ne 4 - 6$."
+    },
+    {
+     "value": "3",
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "3 is $\\sqrt{x}$, not $x$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Let $u = \\sqrt{x}$; then $x = u^{2}$ and the equation becomes a quadratic in $u$, where $u$ cannot be negative.",
+    "steps": "The question asks for $x$.<br>$u = u^{2} - 6$ <span class=\"nt\">(let $u = \\sqrt{x}$, so $x = u^{2}$)</span><br>$u^{2} - u - 6 = 0$, so $(u - 3)(u + 2) = 0$ <span class=\"nt\">(factor)</span><br>$u = 3$ <span class=\"nt\">($u = \\sqrt{x}$ cannot be $-2$)</span><br>$x = 3^{2} = 9$<br>Why it works: the substitution turns the radical equation into an ordinary quadratic, and the fact that a square root is never negative removes the extra value immediately instead of at the final check.",
+    "check": "$\\sqrt{9} = 3 = 9 - 6$ ✓",
+    "be_careful": "Squaring instead gives $x = 4$ too; it fails the check.",
+    "desmos": null,
+    "another_way": "Square both sides: $x = x^{2} - 12x + 36$, so $x^{2} - 13x + 36 = 0$, $x = 4$ or $9$; only 9 checks."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-033",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C4"
+   ],
+   "family": "even-function-graph-solution-count-parameter",
+   "signature": "x^2 - 4|x| = k: graph is symmetric W with minima -4 at x = +-2 and a local max 0 at x = 0; exactly two solutions when k = -4 or k > 0; k = 0 gives 3; traps k > 0 only, k = -4 only, k >= 0 or k = -4",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $x^{2} - 4|x| = k$, $k$ is a constant. Which of the following describes all values of $k$ for which the equation has exactly two real solutions?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$k > 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This misses $k = -4$: the line $y = -4$ touches the graph at its two lowest points, $x = -2$ and $x = 2$."
+    },
+    {
+     "key": "B",
+     "text": "$k = -4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This misses the large values: for $k > 0$ the line $y = k$ crosses the graph once on each side of the $y$-axis."
+    },
+    {
+     "key": "C",
+     "text": "$k \\ge 0$ or $k = -4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This includes $k = 0$, but $x^{2} - 4|x| = 0$ has three solutions: $-4$, 0, and 4."
+    },
+    {
+     "key": "D",
+     "text": "$k > 0$ or $k = -4$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The left side is the same for $x$ and $-x$, so its graph is symmetric: for $x \\ge 0$ it is $x^{2} - 4x$, with lowest value $-4$ at $x = 2$ and value 0 at $x = 0$.",
+    "steps": "The question asks for every $k$ that gives exactly two solutions.<br>$x \\ge 0$: $y = x^{2} - 4x = (x - 2)^{2} - 4$ <span class=\"nt\">(lowest value $-4$ at $x = 2$, $y = 0$ at $x = 0$)</span><br>$x < 0$: mirror image <span class=\"nt\">(lowest value $-4$ at $x = -2$)</span><br>$k < -4$: 0 solutions; $k = -4$: 2 <span class=\"nt\">(touches both low points)</span><br>$-4 < k < 0$: 4; $k = 0$: 3 <span class=\"nt\">($x = -4, 0, 4$)</span><br>$k > 0$: 2 <span class=\"nt\">(one on each side)</span><br>So $k > 0$ or $k = -4$.<br>Why it works: because the graph is a mirror image across the $y$-axis, solutions come in pairs $\\pm x$; the only unpaired solution is $x = 0$, which appears exactly when $k = 0$.",
+    "check": "$k = 5$: $x^{2} - 4x - 5 = 0$ gives $x = 5$ (and $-1$, rejected since $x \\ge 0$), so $x = \\pm 5$: two ✓; $k = -4$: $x = \\pm 2$ ✓",
+    "be_careful": "Check $k = 0$ separately: $x = 0$ is a solution there, so the count is 3, not 2.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-034",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C2"
+   ],
+   "family": "double-root-sign-from-condition",
+   "signature": "x^2 + kx + 16 = 0 exactly one solution, k < 0: k = -8, solution x = 4; traps -4, -8, 8",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $x^{2} + kx + 16 = 0$, $k$ is a negative constant. The equation has exactly one real solution. What is that solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$-8$ is the value of $k$, not the solution."
+    },
+    {
+     "key": "B",
+     "text": "$-4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "With $k = -8$ the equation is $(x - 4)^{2} = 0$; its solution is $x = 4$. The value $-4$ comes from reading the sign inside $x - 4$."
+    },
+    {
+     "key": "C",
+     "text": "$4$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 is $-k$, which is twice the solution."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Exactly one solution means a perfect square: $(x - r)^{2} = x^{2} - 2rx + r^{2}$.",
+    "steps": "The question asks for the single solution $x$.<br>$k^{2} - 64 = 0$, so $k = 8$ or $k = -8$ <span class=\"nt\">(discriminant 0)</span><br>$k = -8$ <span class=\"nt\">($k$ is negative)</span><br>$x^{2} - 8x + 16 = (x - 4)^{2} = 0$ <span class=\"nt\">(perfect square)</span><br>$x = 4$.<br>Why it works: a quadratic has exactly one solution only when it is a perfect square, and the sign condition on $k$ chooses which of the two perfect squares is meant.",
+    "check": "$16 - 32 + 16 = 0$ ✓",
+    "be_careful": "A negative $k$ gives a positive solution.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-035",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C2"
+   ],
+   "family": "leading-coefficient-zero-case",
+   "signature": "ax^2 + 4x + 1 = 0 exactly one real solution: a = 4 (discriminant 0) or a = 0 (linear): 0 and 4",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $ax^{2} + 4x + 1 = 0$, $a$ is a constant. The equation has exactly one real solution. Which of the following gives all possible values of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0$ and $4$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$4$ only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This misses $a = 0$: then the equation is $4x + 1 = 0$, which has exactly one solution."
+    },
+    {
+     "key": "C",
+     "text": "$-4$ and $4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "The discriminant $16 - 4a$ is linear in $a$, so only $a = 4$ makes it 0; $a = -4$ gives two solutions."
+    },
+    {
+     "key": "D",
+     "text": "$0$ only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "At $a = 4$ the equation is $(2x + 1)^{2} = 0$, which also has exactly one solution."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Two different situations give one solution: a quadratic with discriminant 0, or no $x^{2}$ term at all ($a = 0$), leaving a linear equation.",
+    "steps": "The question asks for every value of $a$ that leaves exactly one real solution.<br>$a \\ne 0$: $16 - 4a = 0$, so $a = 4$ <span class=\"nt\">(discriminant 0)</span><br>$a = 0$: $4x + 1 = 0$, so $x = -\\frac{1}{4}$ <span class=\"nt\">(linear: exactly one solution)</span><br>So $a = 0$ or $a = 4$.<br>Why it works: the phrase exactly one real solution does not say the equation is quadratic. When the leading coefficient is 0, the equation is linear and still has one solution, so that case must be included.",
+    "check": "$a = 4$: $4x^{2} + 4x + 1 = (2x + 1)^{2}$ ✓; $a = 0$: one solution $-\\frac{1}{4}$ ✓",
+    "be_careful": "The discriminant test applies only when the equation really is quadratic.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-036",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "complete-square-symbolic-constant",
+   "signature": "3x^2 - 12x + c = 0: 3(x - 2)^2 = 12 - c, (x - 2)^2 = (12 - c)/3, so m = (12 - c)/3; traps (4 - c)/3 (divides only the 12), 12 - c (forgets the 3), (c - 12)/3 (sign)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The solutions to $3x^{2} - 12x + c = 0$, where $c$ is a constant less than 12, can be written as $x = 2 \\pm \\sqrt{m}$. Which of the following expresses $m$ in terms of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{12 - c}{3}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{4 - c}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This divides only the 12 by 3 and then puts the whole result over 3. Dividing $12 - c$ by 3 gives $4 - \\frac{c}{3}$, which is $\\frac{12 - c}{3}$, not $\\frac{4 - c}{3}$."
+    },
+    {
+     "key": "C",
+     "text": "$12 - c$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This forgets the leading 3: $3(x - 2)^{2} = 12 - c$, so $(x - 2)^{2}$ is one third of that."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{c - 12}{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This has the sign reversed; with $c < 12$ it would be negative and have no real square root."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Complete the square: $3x^{2} - 12x = 3(x - 2)^{2} - 12$.",
+    "steps": "The question asks for $m$ when the solutions are $2 \\pm \\sqrt{m}$.<br>$3x^{2} - 12x = 3(x^{2} - 4x + 4) - 12 = 3(x - 2)^{2} - 12$ <span class=\"nt\">(complete the square)</span><br>$3(x - 2)^{2} - 12 + c = 0$ <span class=\"nt\">(put the completed square back into the equation)</span><br>$(x - 2)^{2} = \\frac{12 - c}{3}$ <span class=\"nt\">(divide by 3)</span><br>$x = 2 \\pm \\sqrt{\\frac{12 - c}{3}}$ <span class=\"nt\">(take the square root of both sides, then add 2)</span><br>So $m = \\frac{12 - c}{3}$.<br>Why it works: $x = 2 \\pm \\sqrt{m}$ says exactly that $(x - 2)^{2} = m$, so the task is to rewrite the equation in the form $(x - 2)^{2} = $ (a constant).",
+    "check": "$c = 9$: $3x^{2} - 12x + 9 = 3(x - 1)(x - 3)$, roots 1 and 3 $= 2 \\pm 1$, and $\\frac{12 - 9}{3} = 1$ ✓",
+    "be_careful": "Divide the whole right side, $12 - c$, by 3, not just the 12.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-037",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C4"
+   ],
+   "family": "absolute-equals-linear-case-check",
+   "signature": "|x - 3| = 2x + 1: case x - 3 = 2x + 1 gives -4 (fails: 7 != -7); case -(x - 3) = 2x + 1 gives 2/3 (works); set {2/3}",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Which of the following lists every value of $x$ for which $|x - 3|$ and $2x + 1$ are equal?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-4$ and $\\frac{2}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "$x = -4$ makes the right side $-7$, and an absolute value cannot be negative."
+    },
+    {
+     "key": "B",
+     "text": "$-4$ only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This keeps only the first case and does not check it: $|-7| = 7 \\ne -7$."
+    },
+    {
+     "key": "C",
+     "text": "$-\\frac{4}{3}$ only",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This writes $-(x - 3)$ as $-x - 3$; the correct expansion is $-x + 3$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{2}{3}$ only",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Solve both cases, then check each answer, because the right side $2x + 1$ must not be negative.",
+    "steps": "The question asks for every value that makes the original equation true.<br>$x - 3 = 2x + 1$, so $x = -4$ <span class=\"nt\">(first case)</span><br>$x = -4$: $|-7| = 7$, but $2(-4) + 1 = -7$ ✗ <span class=\"nt\">(check)</span><br>$-(x - 3) = 2x + 1$: $-x + 3 = 2x + 1$, so $x = \\frac{2}{3}$ <span class=\"nt\">(second case)</span><br>$x = \\frac{2}{3}$: $|-\\frac{7}{3}| = \\frac{7}{3}$ and $\\frac{4}{3} + 1 = \\frac{7}{3}$ ✓ <span class=\"nt\">(check)</span><br>The only solution is $\\frac{2}{3}$.<br>Why it works: an absolute value can never equal a negative number, so any case that makes the right side negative produces a value that only looks like a solution.",
+    "check": "Both sides equal $\\frac{7}{3}$ at $x = \\frac{2}{3}$ ✓",
+    "be_careful": "An absolute value equals a negative number never.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-038",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "distinct-count-parameter-all-values",
+   "signature": "(x^2 - 9)(x^2 - k) = 0 has exactly two distinct real solutions: k < 0 (x^2 = k has none) or k = 9 (repeats +-3); traps k = 9 only, k < 0 only, k <= 0 or k = 9 (k = 0 adds x = 0)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Exactly two different real numbers satisfy the equation $(x^{2} - 9)(x^{2} - k) = 0$, where $k$ is a constant. Which of the following describes all possible values of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$k = 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This finds only the repeated case. If $k$ is negative, $x^{2} = k$ has no real solutions, which also leaves just $\\pm 3$."
+    },
+    {
+     "key": "B",
+     "text": "$k < 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This misses $k = 9$, where the second factor repeats the solutions $\\pm 3$."
+    },
+    {
+     "key": "C",
+     "text": "$k < 0$ or $k = 9$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$k \\le 0$ or $k = 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$k = 0$ gives $x^{2} = 0$, so $x = 0$ is a third solution."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$x^{2} - 9$ always gives $\\pm 3$. The second factor must add no new real numbers: either it has no real solutions or its solutions are $\\pm 3$ again.",
+    "steps": "The question asks for every $k$ that leaves exactly two different solutions.<br>$x^{2} - 9 = 0$: $x = 3$ or $x = -3$ <span class=\"nt\">(always two)</span><br>$x^{2} = k$ <span class=\"nt\">(second factor)</span><br>$k < 0$: no real solutions <span class=\"nt\">(a square is never negative: total 2)</span><br>$k = 0$: $x = 0$ <span class=\"nt\">(total 3)</span><br>$k > 0$: $x = \\pm\\sqrt{k}$ <span class=\"nt\">(new unless $\\sqrt{k} = 3$, that is, $k = 9$)</span><br>So $k < 0$ or $k = 9$.<br>Why it works: the distinct solutions of a product are the union of the solutions of its factors, so the count stays at two only when the second factor contributes nothing new.",
+    "check": "$k = -4$: solutions $\\pm 3$ ✓; $k = 9$: $(x^{2} - 9)^{2} = 0$, solutions $\\pm 3$ ✓; $k = 4$: $\\pm 2, \\pm 3$ ✗",
+    "be_careful": "Two cases work, and $k = 0$ is not one of them.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-039",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "rectangle-sum-and-squares-system",
+   "signature": "perimeter 34, diagonal 13: l + w = 17, l^2 + w^2 = 169, 2lw = 289 - 169 = 120, area 60; wrong 120, 17",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A rectangle has a perimeter of 34 centimeters, and each of its diagonals has a length of 13 centimeters. What is the area, in square centimeters, of the rectangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "60"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "120",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "120 is $2lw$; the area is half of it."
+    },
+    {
+     "value": "17",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "17 is $l + w$, half the perimeter."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write $l + w$ and $l^{2} + w^{2}$; then $(l + w)^{2} = l^{2} + w^{2} + 2lw$ gives the area $lw$ without solving.",
+    "steps": "The question asks for $lw$.<br>$2l + 2w = 34$, so $l + w = 17$ <span class=\"nt\">(perimeter)</span><br>$l^{2} + w^{2} = 13^{2} = 169$ <span class=\"nt\">(Pythagorean theorem on the diagonal)</span><br>$(l + w)^{2} = 289 = 169 + 2lw$ <span class=\"nt\">(expand $(l + w)^{2}$)</span><br>$2lw = 120$, so $lw = 60$<br>Why it works: the area is the product $lw$, and the identity for $(l + w)^{2}$ links that product to the two facts given, so the side lengths never have to be found.",
+    "check": "$l = 12$, $w = 5$: perimeter 34, diagonal $\\sqrt{144 + 25} = 13$, area 60 ✓",
+    "be_careful": "$289 - 169 = 120$ is $2lw$, twice the area.",
+    "desmos": null,
+    "another_way": "Substitute $w = 17 - l$: $l^{2} + (17 - l)^{2} = 169$ gives $l = 12$ or $5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-040",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H",
+   "concepts": [
+    "N2.C2"
+   ],
+   "family": "quadratic-collapses-to-linear-statement",
+   "signature": "(2x - 1)^2 = 4x^2 + kx + 5: -(4 + k)x = 4: no solution iff k = -4, one solution otherwise; traps one for every k, two when k > 0, sign (k = 4)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $(2x - 1)^{2} = 4x^{2} + kx + 5$, $k$ is a constant. Which of the following statements is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The equation has no solution when $k = -4$ and exactly one solution for every other value of $k$.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The equation has exactly one solution for every value of $k$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This misses the case where the $x$ terms cancel: when $k = -4$, the equation becomes $0 = 4$."
+    },
+    {
+     "key": "C",
+     "text": "The equation has two solutions when $k > 0$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This treats the equation as quadratic. The $x^{2}$ terms cancel, so it is linear and never has two solutions."
+    },
+    {
+     "key": "D",
+     "text": "The equation has no solution when $k = 4$ and exactly one solution for every other value of $k$.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This has the sign wrong. The $x$ terms are $-4x$ and $kx$; they cancel when $k = -4$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Expand. The $x^{2}$ terms cancel, leaving a linear equation; a linear equation has no solution only when its $x$ terms also cancel and a false statement remains.",
+    "steps": "The question asks which statement correctly describes the number of solutions.<br>$4x^{2} - 4x + 1 = 4x^{2} + kx + 5$ <span class=\"nt\">(expand)</span><br>$-4x - kx = 4$, so $-(4 + k)x = 4$ <span class=\"nt\">(cancel $4x^{2}$, collect)</span><br>$k = -4$: $0 = 4$, no solution <span class=\"nt\">(false statement)</span><br>$k \\ne -4$: $x = -\\frac{4}{4 + k}$ <span class=\"nt\">(exactly one solution)</span><br>Why it works: after the $x^{2}$ terms cancel, the equation is linear, so it has either one solution or none; the coefficient of $x$ decides which.",
+    "check": "$k = -4$: $4x^{2} - 4x + 1 = 4x^{2} - 4x + 5$ gives $1 = 5$ ✗ (no solution) ✓; $k = 0$: $x = -1$, $9 = 9$ ✓",
+    "be_careful": "Check whether the equation is really quadratic before counting solutions.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-041",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C2"
+   ],
+   "family": "parameter-in-two-coefficients-tangent-solution",
+   "signature": "x^2 + (k - 2)x + k + 1 = 0 exactly one solution, k > 0: k^2 - 8k = 0, k = 8, (x + 3)^2 = 0, x = -3; wrong 8, 3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the equation $x^{2} + (k - 2)x + k + 1 = 0$, $k$ is a positive constant. The equation has exactly one real solution. What is that solution?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "8",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 is the value of $k$; the question asks for the solution $x$."
+    },
+    {
+     "value": "3",
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "With $k = 8$ the equation is $(x + 3)^{2} = 0$; the solution is $-3$, not 3."
+    }
+   ],
+   "solution": {
+    "key_idea": "Exactly one real solution means the discriminant is 0. Here $k$ appears in both $b$ and $c$, so the discriminant is a quadratic in $k$.",
+    "steps": "The question asks for the single solution $x$, which needs $k$ first.<br>$a = 1$, $b = k - 2$, $c = k + 1$ <span class=\"nt\">(read the coefficients)</span><br>$(k - 2)^{2} - 4(k + 1) = 0$ <span class=\"nt\">(discriminant equals 0)</span><br>$k^{2} - 4k + 4 - 4k - 4 = k^{2} - 8k = 0$ <span class=\"nt\">(expand and combine)</span><br>$k(k - 8) = 0$, so $k = 0$ or $k = 8$ <span class=\"nt\">(factor)</span><br>$k = 8$ <span class=\"nt\">($k$ is positive)</span><br>$x^{2} + 6x + 9 = (x + 3)^{2} = 0$ <span class=\"nt\">(substitute $k = 8$)</span><br>The single solution is $x = -3$.<br>Why it works: the discriminant condition produces an equation in $k$, not in $x$. Because $k$ appears in two coefficients, that equation is itself quadratic, and the condition $k > 0$ selects one value. Only after $k$ is known can the equation in $x$ be solved, and its single solution is the double root of a perfect square.",
+    "check": "$9 - 18 + 9 = 0$ ✓; with $k = 0$ the equation $x^{2} - 2x + 1 = 0$ is excluded by $k > 0$",
+    "be_careful": "Expand $(k - 2)^{2}$ fully; the constant terms cancel.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-042",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "midpoint-independent-of-unknown-constant",
+   "signature": "y = 2x + c and y = x^2 - 4x + 1 meet at two points: x^2 - 6x + (1 - c) = 0, mean of roots 3 for every valid c; traps 6, 2, cannot be determined",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the line $y = 2x + c$, where $c$ is a constant, intersects the parabola $y = x^{2} - 4x + 1$ at two points. What is the $x$-coordinate of the midpoint of the segment joining these two points?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is the total of the two $x$-coordinates; the midpoint uses half of it."
+    },
+    {
+     "key": "C",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "2 is the $x$-coordinate of the vertex of the parabola alone; the line changes the equation to $x^{2} - 6x + (1 - c) = 0$."
+    },
+    {
+     "key": "D",
+     "text": "The value cannot be determined without knowing $c$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The intersection points depend on $c$, but their midpoint does not: the $x$-coordinates are $3 \\pm \\sqrt{8 + c}$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The $x$-coordinates solve one quadratic. Its solutions are symmetric about $-\\frac{b}{2a}$, and $c$ affects only the constant term.",
+    "steps": "The question asks for the average of the two $x$-coordinates of the intersection points.<br>$x^{2} - 4x + 1 = 2x + c$ <span class=\"nt\">(both equal $y$)</span><br>$x^{2} - 6x + (1 - c) = 0$ <span class=\"nt\">(one side 0)</span><br>$x = \\frac{6 \\pm \\sqrt{36 - 4(1 - c)}}{2} = 3 \\pm \\sqrt{8 + c}$ <span class=\"nt\">(quadratic formula)</span><br>average: $\\frac{(3 + \\sqrt{8 + c}) + (3 - \\sqrt{8 + c})}{2} = 3$ <span class=\"nt\">(the square roots cancel)</span><br>So the midpoint has $x$-coordinate 3, whatever the (valid) value of $c$.<br>Why it works: the constant $c$ changes only the constant term of the combined quadratic. The two solutions always sit symmetrically on either side of 3, because the $\\pm$ part of the quadratic formula cancels when they are averaged. So the midpoint is fixed even though the points themselves move as $c$ changes.",
+    "check": "$c = 1$: $x^{2} - 6x = 0$, $x = 0$ and $6$, midpoint $x = 3$ ✓",
+    "be_careful": "Unknown $c$ does not make the answer unknown; check what $c$ actually changes.",
+    "desmos": "A slider on $c$ shows the midpoint staying at $x = 3$; seeing why takes the algebra.",
+    "another_way": "Test a convenient value such as $c = 1$; any $c > -8$ gives the same midpoint."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-043",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "horizontal-line-chord-length",
+   "signature": "y = x^2 - 2x and y = k meet at two points 10 apart: (x - 1)^2 = k + 1, x = 1 ± 5, k + 1 = 25, k = 24; wrong 25, 99",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, the graph of $y = x^{2} - 2x$ intersects the line $y = k$, where $k$ is a constant, at two points. The distance between these two points is 10. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "24"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "25",
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "25 is $k + 1$ from $(x - 1)^{2} = k + 1$; subtract 1."
+    },
+    {
+     "value": "99",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This puts each point 10 units from the axis, at $x = 11$: $121 - 22 = 99$. The points are 5 units on each side."
+    }
+   ],
+   "solution": {
+    "key_idea": "Both points have the same $y$, so the distance is the difference of the $x$-coordinates. The parabola is symmetric about $x = 1$, so the points are 5 units on each side.",
+    "steps": "The question asks for the height $k$ of a horizontal line that cuts a chord of length 10.<br>axis of symmetry: $x = -\\frac{-2}{2(1)} = 1$ <span class=\"nt\">(vertex form idea)</span><br>the points are $x = 1 - 5 = -4$ and $x = 1 + 5 = 6$ <span class=\"nt\">(distance 10, split evenly)</span><br>$k = 6^{2} - 2(6) = 36 - 12 = 24$ <span class=\"nt\">($y$ at $x = 6$)</span><br>So $k = 24$.<br>Why it works: a horizontal line meets a parabola at two points with the same $y$-coordinate, so the distance between them is just the difference in $x$. Because a parabola is symmetric about its axis, those two $x$-values are the same distance from the axis, which is half of 10 each way.",
+    "check": "$x^{2} - 2x = 24$ gives $(x - 6)(x + 4) = 0$; $6 - (-4) = 10$ ✓",
+    "be_careful": "The 10 is split as 5 and 5 around the axis, not 10 from the axis.",
+    "desmos": null,
+    "another_way": "$(x - 1)^{2} = k + 1$ gives $x = 1 \\pm \\sqrt{k + 1}$; distance $2\\sqrt{k + 1} = 10$, so $k + 1 = 25$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-044",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "shifted-roots-vieta-two-coefficients",
+   "signature": "x^2 - 6x + c: r + s = 6, rs = c; shifted roots: q = (r + 2)(s + 2) = c + 2(6) + 4 = c + 16 = 3c, c = 8; p = -(r + s + 4) = -10; p + q = 14; traps -10 (p only), 8 (c), 24 (q)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $x^{2} - 6x + c = 0$, where $c$ is a constant, has two real solutions, $r$ and $s$. The equation $x^{2} + px + q = 0$, where $p$ and $q$ are constants, has solutions $r + 2$ and $s + 2$. If $q = 3c$, what is the value of $p + q$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This is $p$ alone; the question asks for $p + q$."
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This is $c$, an intermediate value."
+    },
+    {
+     "key": "C",
+     "text": "$14$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This is $q$ alone; $p = -10$ must be added."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Write each equation in factored form. Then $r + s$ and $rs$ come from the first equation, and the coefficients of the second come from $r + 2$ and $s + 2$.",
+    "steps": "The question asks for $p + q$.<br>$r + s = 6$, $rs = c$ <span class=\"nt\">($(x - r)(x - s) = x^{2} - (r + s)x + rs = x^{2} - 6x + c$)</span><br>$q = (r + 2)(s + 2) = rs + 2(r + s) + 4 = c + 16$ <span class=\"nt\">(constant of $(x - (r + 2))(x - (s + 2))$)</span><br>$c + 16 = 3c$, so $c = 8$ and $q = 24$ <span class=\"nt\">(given $q = 3c$)</span><br>$-p = (r + 2) + (s + 2) = 10$, so $p = -10$ <span class=\"nt\">(the $x$ term of the same factored form)</span><br>$p + q = -10 + 24 = 14$.<br>Why it works: a monic quadratic is fixed by the sum and product of its solutions, and both shift in a predictable way, so $r$ and $s$ never have to be found.",
+    "check": "$c = 8$: $r, s = 2, 4$; new solutions 4, 6: $x^{2} - 10x + 24$, $q = 24 = 3(8)$ ✓, $p + q = 14$ ✓",
+    "be_careful": "In $(x - (r + 2))(x - (s + 2))$, the $x$ term is $-(r + s + 4)x$, so $p$ is negative here.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-045",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C1"
+   ],
+   "family": "common-root-subtract-equations",
+   "signature": "x^2 + bx + c = 0 and x^2 + cx + b = 0, b != c, share a solution: subtract: (b - c)(x - 1) = 0, so x = 1; 1 + b + c = 0, b + c = -1; wrong 1, 0",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$x^{2} + bx + c = 0$<br>$x^{2} + cx + b = 0$<br>In the given equations, $b$ and $c$ are constants and $b \\ne c$. The two equations have a solution in common. What is the value of $b + c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-1"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Substituting $x = 1$ gives $1 + b + c = 0$, so $b + c = -1$, not $1$."
+    },
+    {
+     "value": "0",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This assumes the common solution is $x = 0$. Subtracting the equations shows that a common solution must be $x = 1$."
+    }
+   ],
+   "solution": {
+    "key_idea": "A common solution satisfies both equations, so it also satisfies their difference. Subtracting removes $x^{2}$.",
+    "steps": "The question asks for $b + c$. Let $t$ be the common solution.<br>$t^{2} + bt + c = 0$ and $t^{2} + ct + b = 0$ <span class=\"nt\">($t$ satisfies both)</span><br>$(b - c)t - (b - c) = 0$ <span class=\"nt\">(subtract the second from the first)</span><br>$(b - c)(t - 1) = 0$ <span class=\"nt\">(factor)</span><br>$t = 1$ <span class=\"nt\">($b \\ne c$, so $b - c$ is not 0)</span><br>$1 + b + c = 0$ <span class=\"nt\">(substitute $t = 1$ into the first equation)</span><br>$b + c = -1$ <span class=\"nt\">(solve)</span><br>Why it works: if a number makes two expressions equal to 0, it makes their difference equal to 0. The difference has no $x^{2}$ term, so it is linear and pins down the common solution exactly, even though $b$ and $c$ are unknown.",
+    "check": "With $b = 2$ and $c = -3$: $x^{2} + 2x - 3 = (x - 1)(x + 3)$ and $x^{2} - 3x + 2 = (x - 1)(x - 2)$ share $x = 1$, and $b + c = -1$ ✓",
+    "be_careful": "The condition $b \\ne c$ is what allows dividing by $b - c$.",
+    "desmos": "There are no fixed values of $b$ and $c$ to graph; the subtraction is the route.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-046",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "common-factor-root-coincidence-parameter",
+   "signature": "(x-k)^2(x+3) = 4(x+3): (x+3)[(x-k)^2 - 4] = 0, solutions -3, k+2, k-2; k+2 != k-2 always, so two distinct only when -3 equals k+2 (k = -5) or k-2 (k = -1); sum -6; traps -5 / -1 (one case only), 0 (divides by x+3)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the equation $(x - k)^{2}(x + 3) = 4(x + 3)$, $k$ is a constant. What is the sum of all values of $k$ for which the equation has exactly two distinct real solutions?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-6$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$-5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This finds only the case $k + 2 = -3$. The other solution $k - 2$ can also land on $-3$, which happens when $k = -1$."
+    },
+    {
+     "key": "C",
+     "text": "$-1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This finds only the case $k - 2 = -3$. The case $k + 2 = -3$, so $k = -5$, also leaves just two distinct solutions."
+    },
+    {
+     "key": "D",
+     "text": "$0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This divides both sides by $x + 3$ and loses the solution $x = -3$. Then $k + 2$ and $k - 2$ always look like the only two solutions, so no special $k$ seems to exist."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Do not divide by $x + 3$. Move everything to one side and factor it out, so all three solutions show at once.",
+    "steps": "The question asks for every $k$ that leaves exactly two different solutions, and then for the sum of those $k$-values.<br>$(x - k)^{2}(x + 3) - 4(x + 3) = 0$ <span class=\"nt\">(move everything to one side)</span><br>$(x + 3)\\left[(x - k)^{2} - 4\\right] = 0$ <span class=\"nt\">(factor out $x + 3$)</span><br>$x = -3$, $x = k + 2$, or $x = k - 2$ <span class=\"nt\">($(x - k)^{2} = 4$ gives $x - k = \\pm 2$)</span><br>The numbers $k + 2$ and $k - 2$ are always 4 apart, so they never match each other. The only way to have just two different solutions is for $-3$ to match one of them.<br>$k + 2 = -3$, so $k = -5$ <span class=\"nt\">(solutions $-3$ and $-7$)</span><br>$k - 2 = -3$, so $k = -1$ <span class=\"nt\">(solutions $-3$ and $1$)</span><br>$-5 + (-1) = -6$ <span class=\"nt\">(sum of the two values)</span><br>Why it works: a solution counts once even if two factors give it. So the count drops from 3 to 2 exactly when two of the three solutions are the same number.",
+    "check": "$k = -5$: $(x + 5)^{2} = 4$ gives $-3$ and $-7$, together with $-3$: two distinct ✓; $k = -1$: $(x + 1)^{2} = 4$ gives $1$ and $-3$ ✓; $k = 0$: $-3$, 2, $-2$: three ✗",
+    "be_careful": "Dividing by $x + 3$ throws away the solution $x = -3$. Factor it out instead.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-047",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "radical-two-solutions-parameter-range",
+   "signature": "sqrt(3x + k) = x - 2 two real solutions: square: x^2 - 7x + 4 - k = 0 with both roots >= 2; discriminant k > -33/4; f(2) = -6 - k >= 0 gives k <= -6; greatest k = -6; wrong -33/4, 6",
+   "abilities": [
+    "S",
+    "N",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "$\\sqrt{3x + k} = x - 2$<br>In the given equation, $k$ is a constant. The equation has exactly two distinct real solutions. What is the greatest possible value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-6"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-33/4",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$-\\frac{33}{4}$ is where the squared equation has a double root; it is the lower limit for two solutions, not the greatest $k$."
+    },
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "From $-6 - k \\ge 0$, $k \\le -6$; the sign is negative."
+    }
+   ],
+   "solution": {
+    "key_idea": "Squaring gives a quadratic, but a solution of the original must make $x - 2 \\ge 0$. Two valid solutions need two distinct roots that are both at least 2.",
+    "steps": "The question asks for the greatest $k$ that still gives two solutions.<br>$3x + k = x^{2} - 4x + 4$ <span class=\"nt\">(square both sides)</span><br>$x^{2} - 7x + 4 - k = 0$ <span class=\"nt\">(rearrange; call the left side $f(x)$)</span><br>A root of $f$ is a solution of the original exactly when it is at least 2, because the right side $x - 2$ must not be negative.<br>$49 - 4(4 - k) > 0$, so $k > -\\frac{33}{4}$ <span class=\"nt\">(two distinct roots)</span><br>The vertex of $f$ is at $x = \\frac{7}{2}$, which is greater than 2. Both roots are at least 2 exactly when $f(2) \\ge 0$.<br>$f(2) = 4 - 14 + 4 - k = -6 - k \\ge 0$ <span class=\"nt\">(substitute $x = 2$)</span><br>$k \\le -6$ <span class=\"nt\">(solve)</span><br>So $-\\frac{33}{4} < k \\le -6$, and the greatest value is $-6$.",
+    "check": "$k = -6$: $x^{2} - 7x + 10 = 0$ gives $x = 2$ and $5$; $\\sqrt{0} = 0$ ✓ and $\\sqrt{9} = 3$ ✓. For $k = -5$: $x^{2} - 7x + 9 = 0$ has one root below 2, so only one solution ✓",
+    "be_careful": "At $k = -6$, the root $x = 2$ makes both sides 0, which is allowed.",
+    "desmos": "A slider shows the count change near $k = -6$, but the exact boundary and whether it is included require the algebra.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-048",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C2"
+   ],
+   "family": "count-integer-parameters-no-solution",
+   "signature": "x^2 + kx + k + 8 = 0 no real solutions: k^2 - 4k - 32 < 0, (k - 8)(k + 4) < 0, -4 < k < 8, integers -3..7: 11; traps 7 (positive only), 10 (fencepost), 13 (includes -4 and 8)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "$x^{2} + kx + k + 8 = 0$<br>In the given equation, $k$ is an integer. For how many values of $k$ does the equation have no real solutions?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This counts only the positive integers 1 through 7; 0 and $-3$, $-2$, $-1$ also work."
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "The integers strictly between $-4$ and $8$ number $8 - (-4) - 1 = 11$, not 10."
+    },
+    {
+     "key": "C",
+     "text": "$11$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$13$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This includes $k = -4$ and $k = 8$, where the discriminant is 0 and there is one real solution."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "No real solutions means the discriminant is negative. Here the discriminant is itself a quadratic in $k$.",
+    "steps": "The question asks how many integers $k$ make the discriminant negative.<br>$k^{2} - 4(1)(k + 8) < 0$ <span class=\"nt\">(discriminant $b^{2} - 4ac$ with $a = 1$, $b = k$, $c = k + 8$)</span><br>$k^{2} - 4k - 32 < 0$ <span class=\"nt\">(expand)</span><br>$(k - 8)(k + 4) < 0$ <span class=\"nt\">(factor)</span><br>$-4 < k < 8$ <span class=\"nt\">(the product is negative between the zeros)</span><br>$k = -3, -2, \\ldots, 7$: 11 values <span class=\"nt\">(count the integers)</span><br>Why it works: the discriminant $b^{2} - 4ac$ decides how many real solutions a quadratic has. Here it depends on $k$, so the condition becomes a quadratic inequality in $k$, which is negative only between its two zeros.",
+    "check": "$k = 7$: $49 - 60 = -11 < 0$ ✓. $k = 8$: $64 - 64 = 0$, one solution, so 8 is excluded ✓",
+    "be_careful": "The endpoints $-4$ and $8$ give a discriminant of 0, which means one real solution.",
+    "desmos": "Checking each integer with a slider is slow; the discriminant inequality counts them at once.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-049",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C3"
+   ],
+   "family": "rational-no-solution-two-mechanisms",
+   "signature": "(x^2 + ax + 6)/(x - 3) = x + 1 has no solution: (a + 2)x = -9; a = -2 (0 = -9) or x = 3 excluded (a = -5); sum -7; wrong -2, -5",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the equation $\\frac{x^{2} + ax + 6}{x - 3} = x + 1$, $a$ is a constant. For exactly two values of $a$, the equation has no solution. What is the sum of these two values of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-7"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-2",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$-2$ is only the case where the $x$-terms cancel; the case where the only candidate is $x = 3$ is missing."
+    },
+    {
+     "value": "-5",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$-5$ is only the excluded-value case; $a = -2$ also gives no solution."
+    }
+   ],
+   "solution": {
+    "key_idea": "After clearing the denominator the equation is linear. It has no solution if the $x$-terms cancel, or if its only solution is the excluded value $x = 3$.",
+    "steps": "The question asks for the two values of $a$ that leave no solution, then their sum.<br>$x^{2} + ax + 6 = (x - 3)(x + 1) = x^{2} - 2x - 3$ <span class=\"nt\">(multiply by $x - 3$, $x \\ne 3$)</span><br>$(a + 2)x = -9$ <span class=\"nt\">(subtract $x^{2}$ and collect)</span><br>$a = -2$: $0 = -9$ <span class=\"nt\">(first way: impossible)</span><br>$x = 3$: $3(a + 2) = -9$, so $a = -5$ <span class=\"nt\">(second way: the only candidate is excluded)</span><br>Sum: $-2 + (-5) = -7$.<br>Why it works: clearing the denominator turns the equation into a linear one, but the original equation also forbids $x = 3$. A linear equation can fail in two ways: its variable terms vanish and leave a false statement, or its only solution is a forbidden value. Each way produces one value of $a$.",
+    "check": "$a = -5$: $\\frac{(x - 2)(x - 3)}{x - 3} = x - 2$ for $x \\ne 3$, and $x - 2 = x + 1$ is impossible ✓",
+    "be_careful": "An equation can lose its only solution to a restriction on $x$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-N2-050",
+   "version": 1,
+   "skill": {
+    "code": "N2",
+    "domain": "adv",
+    "cb_skill": "Nonlinear equations in one variable and systems of equations in two variables"
+   },
+   "level": "H+",
+   "concepts": [
+    "N2.C5"
+   ],
+   "family": "tangent-line-find-y-coordinate",
+   "signature": "y = x^2 + 2x + c and y = 4x + 1 exactly one solution (p, q): x^2 - 2x + (c - 1) = 0, c = 2, p = 1, q = 5; traps 1, 2, 9",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graphs of $y = x^{2} + 2x + c$ and $y = 4x + 1$, where $c$ is a constant, touch at exactly one point, $(p, q)$. What is the value of $q$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "1 is $p$, the $x$-coordinate."
+    },
+    {
+     "key": "B",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "2 is the value of $c$."
+    },
+    {
+     "key": "C",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "This substitutes $c = 2$ for $x$ in $y = 4x + 1$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Exactly one solution means the combined quadratic has discriminant 0, which fixes $c$. Its double root is $p$, and the line gives $q$.",
+    "steps": "The question asks for the $y$-coordinate of the single solution.<br>$x^{2} + 2x + c = 4x + 1$ <span class=\"nt\">(both equal $y$)</span><br>$x^{2} - 2x + (c - 1) = 0$ <span class=\"nt\">(one side 0)</span><br>$4 - 4(c - 1) = 0$, so $c = 2$ <span class=\"nt\">(discriminant 0)</span><br>$x^{2} - 2x + 1 = (x - 1)^{2} = 0$, so $p = 1$ <span class=\"nt\">(double root)</span><br>$q = 4(1) + 1 = 5$ <span class=\"nt\">(use the line)</span><br>Why it works: exactly one solution means the line touches the parabola at a single point, so the combined quadratic has discriminant 0. That condition fixes $c$, the double root gives the $x$-coordinate $p$, and either equation then gives the $y$-coordinate $q$ that the question asks for.",
+    "check": "Parabola: $1 + 2 + 2 = 5$ ✓",
+    "be_careful": "Three different numbers appear ($c$, $p$, $q$); answer the one asked.",
+    "desmos": null,
+    "another_way": "The double root of $x^{2} - 2x + (c - 1)$ is at $x = -\\frac{-2}{2} = 1$ regardless of $c$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

@@ -1,0 +1,3571 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "A3",
+ "skill": "Linear functions",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-A3-001",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C1"
+   ],
+   "family": "multiplied-output-as-data",
+   "signature": "f(0) = 5 and f(4) = 3f(2) fix the slope -5, finish f(3) = -10 (negative SPR); 3f(2) read as f(6) gives m = 0 and 5; the slope -5 reported",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For the linear function $f$, $f(0) = 5$ and $f(4) = 3f(2)$. What is the value of $f(3)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-10"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Reads $3f(2)$ as $f(6)$. Then $f(4) = f(6)$ gives $4m + 5 = 6m + 5$, so $m = 0$ and $f(3) = 5$. But $3f(2)$ multiplies the output $f(2)$ by 3; it does not change the input."
+    },
+    {
+     "value": "-5",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$-5$ is the slope $m$, found midway. The question asks for the output at $x = 3$: $f(3) = -5(3) + 5 = -10$."
+    }
+   ],
+   "solution": {
+    "key_idea": "$3f(2)$ is 3 times the output at $x = 2$, not the output at $x = 6$, so the fact $f(4) = 3f(2)$ is an equation for the slope.",
+    "steps": "The question asks for $f(3)$, so first find the rule $f(x) = mx + b$, where $m$ is the slope and $b$ is the output at $x = 0$.<br>$b = 5$ <span class=\"nt\">($f(0) = 5$)</span><br>$f(4) = 4m + 5$ <span class=\"nt\">(substitute $x = 4$)</span><br>$3f(2) = 3(2m + 5) = 6m + 15$ <span class=\"nt\">(3 times the output at $x = 2$)</span><br>$4m + 5 = 6m + 15$ <span class=\"nt\">(the given fact $f(4) = 3f(2)$)</span><br>$5 = 2m + 15$ <span class=\"nt\">(subtract $4m$ from both sides)</span><br>$-10 = 2m$ <span class=\"nt\">(subtract 15 from both sides)</span><br>$m = -5$ <span class=\"nt\">(divide both sides by 2)</span><br>$f(3) = -5(3) + 5 = -10$ <span class=\"nt\">(substitute $x = 3$ into $f(x) = -5x + 5$)</span>",
+    "check": "With $f(x) = -5x + 5$: $f(4) = -15$ and $f(2) = -5$, and $3(-5) = -15$, so $f(4) = 3f(2)$ ✓. Then $f(3) = -15 + 5 = -10$.",
+    "be_careful": "A common wrong answer is $5$. It reads $3f(2)$ as $f(6)$. Then $f(4) = f(6)$ gives $4m + 5 = 6m + 5$, so $m = 0$ and $f(3) = 5$. But $3f(2)$ multiplies the output $f(2)$ by 3; it does not change the input.",
+    "desmos": "Desmos helps only after the facts are written with the slope. Type $f(x) = mx + 5$, add a slider for $m$, and type $f(4) - 3f(2)$: it shows 0 when $m = -5$. Then type $f(3)$ to see $-10$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-002",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C1",
+    "A3.C3"
+   ],
+   "family": "value-statement-as-x-intercept",
+   "signature": "graph of linear g through (4, 9) with g(10) = 0: slope -3/2, y-intercept 15; slope sign 3, g(10) = 0 read as (0, 10), slope upside down 35/3; MCQ numeric",
+   "abilities": [
+    "R",
+    "N"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of the linear function $g$ in the $xy$-plane passes through the point $(4, 9)$, and $g(10) = 0$. What is the $y$-coordinate of the $y$-intercept of the graph of $y = g(x)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Uses the slope $\\frac{3}{2}$ instead of $-\\frac{3}{2}$, for example by computing $\\frac{9 - 0}{10 - 4}$ with the top and bottom subtracted in different orders. Then $9 = \\frac{3}{2}(4) + b$ gives $b = 3$. The graph falls from $(4, 9)$ to $(10, 0)$, so the slope is negative."
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "Reads $g(10) = 0$ as the point $(0, 10)$. The input is the number inside the parentheses, so $g(10) = 0$ is the point $(10, 0)$, the $x$-intercept."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{35}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Uses the slope upside down, $-\\frac{2}{3}$ (change in $x$ over change in $y$): $9 = -\\frac{2}{3}(4) + b$ gives $b = \\frac{35}{3}$. Slope is the change in $y$ divided by the change in $x$."
+    },
+    {
+     "key": "D",
+     "text": "$15$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The statement $g(10) = 0$ says the output is 0 when the input is 10, so $(10, 0)$ is a point on the graph: its $x$-intercept, not its $y$-intercept.",
+    "steps": "The question asks for the $y$-coordinate of the $y$-intercept, the output at $x = 0$. First turn the value statement into a point.<br>$g(10) = 0$: the point $(10, 0)$ is on the graph <span class=\"nt\">(input 10, output 0)</span><br>slope: $\\frac{0 - 9}{10 - 4} = \\frac{-9}{6} = -\\frac{3}{2}$ <span class=\"nt\">(change in $y$ divided by change in $x$)</span><br>$9 = -\\frac{3}{2}(4) + b$ <span class=\"nt\">(substitute the point $(4, 9)$ into $y = -\\frac{3}{2}x + b$)</span><br>$9 = -6 + b$ <span class=\"nt\">(multiply)</span><br>$b = 15$ <span class=\"nt\">(add 6 to both sides)</span>",
+    "check": "With $g(x) = -\\frac{3}{2}x + 15$: $g(4) = -6 + 15 = 9$ ✓ and $g(10) = -15 + 15 = 0$ ✓, so the $y$-intercept is $(0, 15)$.",
+    "be_careful": "Choice B ($10$) is a trap. It reads $g(10) = 0$ as the point $(0, 10)$. The input is the number inside the parentheses, so $g(10) = 0$ is the point $(10, 0)$, the $x$-intercept.",
+    "desmos": "Desmos is the fastest route here. Read $g(10) = 0$ as the point $(10, 0)$, make a table with $x_{1}$: 4, 10 and $y_{1}$: 9, 0, then type <i>y</i><sub>1</sub> ~ <i>mx</i><sub>1</sub> + <i>b</i>: Desmos gives $m = -1.5$ and $b = 15$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-003",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C2"
+   ],
+   "family": "which-table-could-be-linear",
+   "signature": "four tables as SVG choices: equal y-steps with x-steps 1, 2, 3 (A), rate 3 throughout with uneven x-steps (B, key, y = 3x + 4), first two rates 2 then 3 (C), y doubling (D); MCQ table choices",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Each of the following tables shows four values of $x$ and their corresponding values of $y$. For which table could $y$ be a linear function of $x$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-003-choiceA",
+      "file": "figures/QB-A3-003-choiceA.svg",
+      "alt": "Table A: x-values 1, 2, 4, 7; corresponding y-values 5, 8, 11, 14."
+     },
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "In table A, $y$ grows by 3 from row to row, which looks linear. But the $x$-steps are 1, 2, and 3, so the rates are 3, $\\frac{3}{2}$, and 1. Equal steps in $y$ point to a line only when the steps in $x$ are equal too."
+    },
+    {
+     "key": "B",
+     "text": "",
+     "correct": true,
+     "figure": {
+      "id": "QB-A3-003-choiceB",
+      "file": "figures/QB-A3-003-choiceB.svg",
+      "alt": "Table B: x-values 0, 3, 5, 9; corresponding y-values 4, 13, 19, 31."
+     }
+    },
+    {
+     "key": "C",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-003-choiceC",
+      "file": "figures/QB-A3-003-choiceC.svg",
+      "alt": "Table C: x-values -2, 0, 3, 4; corresponding y-values -1, 3, 9, 12."
+     },
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "The first two rates in table C are both 2, but the last one is $\\frac{12 - 9}{4 - 3} = 3$. Every pair of rows has to give the same rate."
+    },
+    {
+     "key": "D",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-003-choiceD",
+      "file": "figures/QB-A3-003-choiceD.svg",
+      "alt": "Table D: x-values 1, 2, 3, 4; corresponding y-values 3, 6, 12, 24."
+     },
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "In table D, $y$ doubles each time $x$ goes up by 1. Doubling multiplies by the same number; a linear function adds the same amount, and here $y$ adds 3, then 6, then 12."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$y$ is a linear function of $x$ exactly when the rate of change, the change in $y$ divided by the change in $x$, is the same for every pair of rows.",
+    "steps": "What does the question ask? It asks which table could show $y$ as a linear function of $x$.<br>Equal steps in $y$ are not enough when the $x$-values are unevenly spaced, so compute the rate between neighboring rows.<br>Table A: $\\frac{8 - 5}{2 - 1} = 3$, then $\\frac{11 - 8}{4 - 2} = \\frac{3}{2}$ <span class=\"nt\">(the rates differ)</span><br>Table B: $\\frac{13 - 4}{3 - 0} = 3$, $\\frac{19 - 13}{5 - 3} = 3$, $\\frac{31 - 19}{9 - 5} = 3$ <span class=\"nt\">(the same rate every time)</span><br>Table C: $\\frac{3 - (-1)}{0 - (-2)} = 2$, $\\frac{9 - 3}{3 - 0} = 2$, $\\frac{12 - 9}{4 - 3} = 3$ <span class=\"nt\">(the last rate differs)</span><br>Table D: $\\frac{6 - 3}{2 - 1} = 3$, then $\\frac{12 - 6}{3 - 2} = 6$ <span class=\"nt\">(the rates differ)</span><br>Only table B has one rate of change throughout, so only table B could show a linear function.",
+    "check": "Table B fits $y = 3x + 4$: $3(0) + 4 = 4$, $3(3) + 4 = 13$, $3(5) + 4 = 19$, and $3(9) + 4 = 31$ ✓",
+    "be_careful": "Choice A is a trap. In table A, $y$ grows by 3 from row to row, which looks linear. But the $x$-steps are 1, 2, and 3, so the rates are 3, $\\frac{3}{2}$, and 1. Equal steps in $y$ point to a line only when the steps in $x$ are equal too.",
+    "desmos": "Desmos is the fastest route here. Type each table into a Desmos table and look at the points: only the four points of table B lie on one straight line. For table B, <i>y</i><sub>1</sub> ~ <i>mx</i><sub>1</sub> + <i>b</i> gives $m = 3$, $b = 4$ and a perfect fit, $R^{2} = 1$; every other table gives $R^{2}$ below 1.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-004",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C2",
+    "A3.C4"
+   ],
+   "family": "change-from-output-anchor-clock",
+   "signature": "T(m) = 0.8(m - 15) + 64, m minutes after 6:00 a.m.; rise from the moment T = 68 (m = 20) to 7:20 a.m. (m = 80) is 0.8(60) = 48; from the printed 64 (52), the 60 minutes (60), T(80) = 116",
+   "abilities": [
+    "I",
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $T$ gives the temperature, in degrees Fahrenheit, of a classroom $m$ minutes after 6:00 a.m., where $T(m) = 0.8(m - 15) + 64$ for $15 \\le m \\le 120$. By how many degrees Fahrenheit does the temperature increase from the time the temperature of the classroom is 68 degrees Fahrenheit to 7:20 a.m.?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$48$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$52$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Starts from the printed 64, the temperature at 6:15 a.m.: $116 - 64 = 52$. The start is the moment the room is 68 degrees, which is $m = 20$, so the increase is $116 - 68 = 48$."
+    },
+    {
+     "key": "C",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "60 is the number of minutes from 6:20 a.m. to 7:20 a.m. The temperature rises 0.8 degree in each of those minutes: $0.8  \\cdot  60 = 48$."
+    },
+    {
+     "key": "D",
+     "text": "$116$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$T(80) = 116$ is the temperature at 7:20 a.m. The question asks how much the temperature increases from 68 degrees: $116 - 68 = 48$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The starting moment is given by a temperature, not a clock time, so first solve $T(m) = 68$ for $m$; then the change in temperature is the rate times the change in minutes.",
+    "steps": "The question asks for a change in temperature. The start is described by a temperature, so find the minute when $T(m) = 68$.<br>$0.8(m - 15) + 64 = 68$ <span class=\"nt\">(set the model equal to 68)</span><br>$0.8(m - 15) = 4$ <span class=\"nt\">(subtract 64 from both sides)</span><br>$m - 15 = 5$, so $m = 20$ <span class=\"nt\">(divide by 0.8, then add 15)</span><br>7:20 a.m.: $m = 80$ <span class=\"nt\">(80 minutes after 6:00)</span><br>change in $m$: $80 - 20 = 60$ minutes<br>change in temperature: $0.8  \\cdot  60 = 48$ <span class=\"nt\">(rate times the change in minutes)</span>",
+    "check": "$T(80) = 0.8(65) + 64 = 116$ and $T(20) = 0.8(5) + 64 = 68$, and $116 - 68 = 48$ ✓",
+    "be_careful": "64 is the temperature at $m = 15$ (6:15 a.m.), not at the moment the room is 68 degrees. Starting from 64 gives 52.",
+    "desmos": "Type $T(m) = 0.8(m - 15) + 64$, then solve $T(m) = 68$ by graphing $y = 68$ (the intersection is at $m = 20$), and compute $T(80) - T(20)$. The real step is reading the start as a temperature and 7:20 a.m. as $m = 80$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-005",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C3",
+    "A3.C4"
+   ],
+   "family": "rate-plus-later-reading-model",
+   "signature": "hiker 12:00 to 5:00 p.m. at 2.5 mph, 9 miles at 2:00 p.m., t hours after 12:00 p.m.: d(t) = 2.5t + 4; sign 2.5t - 4, the 2:00 reading as the start 2.5t + 9, back 2 hours the wrong way 2.5t + 14; all choices share the slope",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "From 12:00 p.m. to 5:00 p.m., a hiker’s distance from a trailhead increased at a constant rate of 2.5 miles per hour. At 2:00 p.m., the hiker was 9 miles from the trailhead. Which function gives this distance $d(t)$, in miles, $t$ hours after 12:00 p.m., for $0 \\le t \\le 5$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$d(t) = 2.5t - 4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Gets the sign of $b$ wrong, for example by computing $5 - 9$ instead of $9 - 5$. With $d(t) = 2.5t - 4$ the hiker would be 1 mile from the trailhead at 2:00 p.m., not 9."
+    },
+    {
+     "key": "B",
+     "text": "$d(t) = 2.5t + 4$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$d(t) = 2.5t + 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Uses the 9 miles as the starting value. The 9 miles were measured at 2:00 p.m. ($t = 2$); the constant term is the distance at 12:00 p.m. ($t = 0$)."
+    },
+    {
+     "key": "D",
+     "text": "$d(t) = 2.5t + 14$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "Goes back from 2:00 p.m. in the wrong direction: $9 + 5 = 14$. The distance was increasing, so 2 hours earlier the hiker was 5 miles closer to the trailhead: $9 - 5 = 4$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The constant term is the distance at $t = 0$, which is 12:00 p.m.; the 9 miles were measured 2 hours later, so they are not the starting value.",
+    "steps": "What does the question ask? It asks which function gives this distance $d(t)$, in miles, $t$ hours after 12:00 p.m., for $0 \\le t \\le 5$.<br>Let $d(t)$ = the distance, in miles, $t$ hours after 12:00 p.m. In $d(t) = 2.5t + b$, the constant $b$ is $d(0)$, the distance at 12:00 p.m.<br>2:00 p.m. is $t = 2$, so $d(2) = 9$ <span class=\"nt\">(2 hours after 12:00 p.m.)</span><br>$9 = 2.5(2) + b$ <span class=\"nt\">(substitute $t = 2$ and $d(2) = 9$)</span><br>$9 = 5 + b$ <span class=\"nt\">(multiply)</span><br>$b = 4$ <span class=\"nt\">(subtract 5 from both sides)</span><br>So $d(t) = 2.5t + 4$: at 12:00 p.m. the hiker was 4 miles from the trailhead.",
+    "check": "At 2:00 p.m., $d(2) = 2.5(2) + 4 = 9$ ✓. Choice C gives $d(2) = 14$, and choices A and D give 1 and 19.",
+    "be_careful": "Choice C ($d(t) = 2.5t + 9$) is a trap. It uses the 9 miles as the starting value. The 9 miles were measured at 2:00 p.m. ($t = 2$); the constant term is the distance at 12:00 p.m. ($t = 0$).",
+    "desmos": "Graph each choice with $x$ in place of $t$ and click the point at $x = 2$: only $y = 2.5x + 4$ passes through $(2, 9)$. The real step is seeing that 2:00 p.m. is $t = 2$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-006",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C3",
+    "A3.C2"
+   ],
+   "family": "rate-per-100-to-value-at-zero",
+   "signature": "seawater temperature falls 3 degrees C per 100 m of depth, T(250) = 11.5, T(0) = 11.5 + 3(2.5) = 19 (SPR); one step of 100 m added 14.5, the change subtracted 4",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The function $T$ gives the temperature, in degrees Celsius, of seawater at a depth of $d$ meters, for $0 \\le d \\le 400$. The temperature decreases at a constant rate of 3 degrees Celsius for every 100-meter increase in depth, and $T(250) = 11.5$. What is the value of $T(0)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "19"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "14.5",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Adds one step of 3 degrees: $11.5 + 3 = 14.5$. From 250 meters to the surface is 2.5 steps of 100 meters, so the temperature changes by $3  \\cdot  2.5 = 7.5$ degrees."
+    },
+    {
+     "value": "4",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Subtracts the change: $11.5 - 7.5 = 4$. The water gets colder as the depth increases, so the surface water is warmer than the water at 250 meters."
+    }
+   ],
+   "solution": {
+    "key_idea": "A rate given per 100 meters has to be scaled to the actual change in depth: from 250 meters up to the surface is 2.5 steps of 100 meters.",
+    "steps": "The question asks for $T(0)$, the temperature at the surface ($d = 0$). The given value $T(250) = 11.5$ is 250 meters deeper.<br>steps of 100 meters from $d = 250$ to $d = 0$: $\\frac{250}{100} = 2.5$<br>change in temperature: $3  \\cdot  2.5 = 7.5$ degrees <span class=\"nt\">(3 degrees for each 100-meter step)</span><br>The temperature decreases as the depth increases, so the water at the surface is warmer.<br>$T(0) = 11.5 + 7.5 = 19$ <span class=\"nt\">(add the change)</span>",
+    "check": "The rate is $\\frac{3}{100} = 0.03$ degree per meter, so $T(d) = 19 - 0.03d$. Then $T(250) = 19 - 7.5 = 11.5$ ✓",
+    "be_careful": "A common wrong answer is $14.5$. It adds one step of 3 degrees: $11.5 + 3 = 14.5$. From 250 meters to the surface is 2.5 steps of 100 meters, so the temperature changes by $3  \\cdot  2.5 = 7.5$ degrees.",
+    "desmos": "Type $T(d) = c - 0.03d$ with a slider for $c$, and type $T(250)$. Move the slider until $T(250)$ shows 11.5: that happens at $c = 19$. Writing the rate as 0.03 degree per meter is the step Desmos cannot do.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-007",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C4"
+   ],
+   "family": "shifted-form-to-graph",
+   "signature": "f(x) = 2(x - 3) + 1: graph through (3, 1) and (0, -5); graph choices on one window x -4 to 5, y -6 to 7.5: y-intercept 1 (D14), through (-3, 1) (D22), through (3, 1) with slope -2 (D4)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $f$ is defined by $f(x) = 2(x - 3) + 1$. Which of the following is the graph of $y = f(x)$ in the $xy$-plane?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "",
+     "correct": true,
+     "figure": {
+      "id": "QB-A3-007-choiceA",
+      "file": "figures/QB-A3-007-choiceA.svg",
+      "alt": "A line on a coordinate grid rising from left to right. It crosses the y-axis at (0, −5) and passes through (3, 1)."
+     }
+    },
+    {
+     "key": "B",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-007-choiceB",
+      "file": "figures/QB-A3-007-choiceB.svg",
+      "alt": "A line on a coordinate grid rising from left to right. It crosses the y-axis at (0, 1) and passes through (3, 7)."
+     },
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This line has $y$-intercept 1: it reads the 1 in $2(x - 3) + 1$ as the output at $x = 0$. The 1 is the output at $x = 3$; at $x = 0$ the output is $2(-3) + 1 = -5$."
+    },
+    {
+     "key": "C",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-007-choiceC",
+      "file": "figures/QB-A3-007-choiceC.svg",
+      "alt": "A line on a coordinate grid rising from left to right. It crosses the y-axis at (0, 7) and passes through (−3, 1)."
+     },
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "This line passes through $(-3, 1)$: it moves the point the wrong way. The parentheses $x - 3$ are 0 at $x = 3$, so the point shown by the form is $(3, 1)$."
+    },
+    {
+     "key": "D",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-007-choiceD",
+      "file": "figures/QB-A3-007-choiceD.svg",
+      "alt": "A line on a coordinate grid falling from left to right. It crosses the y-axis at (0, 7) and passes through (3, 1)."
+     },
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This line passes through $(3, 1)$ but falls, with slope $-2$. The coefficient of $(x - 3)$ is $+2$, so the graph rises."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "In $f(x) = 2(x - 3) + 1$, the 1 is the output where $x - 3 = 0$, at $x = 3$, not at $x = 0$, so the graph passes through $(3, 1)$ and rises with slope 2.",
+    "steps": "What does the question ask? It asks which choice is the graph of $y = f(x)$ in the $xy$-plane.<br>The coefficient of $(x - 3)$ is the slope: 2. The graph rises 2 units for each 1 unit to the right.<br>$f(3) = 2(0) + 1 = 1$ <span class=\"nt\">(at $x = 3$ the parentheses are 0)</span><br>So the graph passes through $(3, 1)$.<br>$f(0) = 2(0 - 3) + 1 = -5$ <span class=\"nt\">(substitute $x = 0$)</span><br>So the graph crosses the $y$-axis at $(0, -5)$.<br>Choice A is the rising line through $(0, -5)$ and $(3, 1)$.",
+    "check": "Expanded, $f(x) = 2x - 6 + 1 = 2x - 5$: slope 2 and $y$-intercept $-5$, as in choice A ✓. The line in choice A also passes through $(4, 3)$, and $f(4) = 2(1) + 1 = 3$ ✓",
+    "be_careful": "Choice B is a trap. This line has $y$-intercept 1: it reads the 1 in $2(x - 3) + 1$ as the output at $x = 0$. The 1 is the output at $x = 3$; at $x = 0$ the output is $2(-3) + 1 = -5$.",
+    "desmos": "Desmos is the fastest route here. Type $y = 2(x - 3) + 1$ exactly as given: the line crosses the $y$-axis at $(0, -5)$ and passes through $(3, 1)$, which matches choice A.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-008",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C4"
+   ],
+   "family": "value-at-base-year-shifted-form",
+   "signature": "P(t) = 3.80 + 0.12(t - 6), t years after 2010: the 2010 price is P(0) = 3.08; 2010 counted as t = 1 gives 3.20, the displayed 3.80, 0.72 added 4.52",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $P(t) = 3.80 + 0.12(t - 6)$ gives the average price, in dollars, of a gallon of fuel in a certain region $t$ years after 2010, for $0 \\le t \\le 12$. According to the model, what was the average price, in dollars, of a gallon of fuel in this region in 2010?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3.08$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$3.20$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "Uses $t = 1$ for 2010, as if 2010 were the first year counted: $P(1) = 3.80 + 0.12(-5) = 3.20$. Since $t$ counts years after 2010, 2010 itself is $t = 0$."
+    },
+    {
+     "key": "C",
+     "text": "$3.80$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Reads the 3.80 shown in the formula as the 2010 price. The 3.80 is the output when $t - 6 = 0$, so it is the price at $t = 6$, in 2016."
+    },
+    {
+     "key": "D",
+     "text": "$4.52$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D22",
+     "feedback": "Adds 0.72 instead of subtracting it. At $t = 0$ the term is $0.12(0 - 6) = -0.72$; the price was rising, so it was lower in 2010 than in 2016."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "2010 is $t = 0$, and the 3.80 in this form is the price where $t - 6 = 0$, at $t = 6$ (2016), not in 2010.",
+    "steps": "The question asks for the price in 2010. The input $t$ counts years after 2010, so 2010 is $t = 0$.<br>$P(0) = 3.80 + 0.12(0 - 6)$ <span class=\"nt\">(substitute $t = 0$)</span><br>$= 3.80 + 0.12(-6)$ <span class=\"nt\">(subtract inside the parentheses)</span><br>$= 3.80 - 0.72$ <span class=\"nt\">(multiply)</span><br>$= 3.08$ <span class=\"nt\">(subtract)</span><br>The 3.80 is the price at $t = 6$, in 2016. In 2010, six years earlier, the price was $6  \\cdot  0.12 = 0.72$ dollar lower.",
+    "check": "From 2010 to 2016 the price rises 0.12 dollar per year for 6 years: $3.08 + 6(0.12) = 3.08 + 0.72 = 3.80$, which is $P(6)$ ✓",
+    "be_careful": "Choice C ($3.80$) is a trap. It reads the 3.80 shown in the formula as the 2010 price. The 3.80 is the output when $t - 6 = 0$, so it is the price at $t = 6$, in 2016.",
+    "desmos": "Type $P(t) = 3.80 + 0.12(t - 6)$ and then $P(0)$: Desmos shows 3.08. The real step is seeing that 2010 means $t = 0$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-009",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C5"
+   ],
+   "family": "inverse-rate-interpretation",
+   "signature": "g(p) = 0.5 + p/50 hours for a print job of p pages; 50 = pages printed per hour of printing (key: the coefficient 1/50 hour per page turned around); the per-page increase template (that is 1/50), the time for a 50-page job (1.5), the pages in a 1-hour job (25, the 0.5 dropped)",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $g(p) = 0.5 + \\frac{p}{50}$ gives the estimated time, in hours, that a print shop’s printer takes to complete a print job of $p$ pages. What is the best interpretation of 50 in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The estimated increase in the printing time, in hours, for each additional page",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "That describes the coefficient of $p$, which is $\\frac{1}{50}$, not 50: each additional page adds $\\frac{1}{50}$ hour. The 50 is how many of those pages fit into 1 hour."
+    },
+    {
+     "key": "B",
+     "text": "The estimated time, in hours, that the printer takes to complete a print job of 50 pages",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Reads 50 as the size of one job. A 50-page job takes $g(50) = 0.5 + 1 = 1.5$ hours. The 50 is a rate, pages per hour, and it is the same for jobs of every size."
+    },
+    {
+     "key": "C",
+     "text": "The estimated number of pages in a print job that the printer completes in 1 hour",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Leaves out the 0.5 hour. Every job also takes the 0.5 hour that does not depend on the pages, so a job that takes 1 hour in all has only half an hour of printing: 25 pages, not 50."
+    },
+    {
+     "key": "D",
+     "text": "The estimated number of pages that the printer prints in each hour of printing",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Dividing the number of pages by 50 means each page adds $\\frac{1}{50}$ hour, so 50 pages add 1 hour: 50 is pages per hour, not hours per page.",
+    "steps": "What does the question ask? It asks for the best interpretation of 50 in this context.<br>Read the units first. The output $g(p)$ is a time in hours, and the input $p$ is a number of pages.<br>$\\frac{p}{50} = \\frac{1}{50}  \\cdot  p$ <span class=\"nt\">(dividing by 50 is the same as multiplying by one fiftieth)</span><br>So each additional page adds $\\frac{1}{50}$ hour to the job, and 50 additional pages add $50  \\cdot  \\frac{1}{50} = 1$ hour.<br>So 50 is the number of pages the printer prints in each hour of printing.<br>The 0.5 is the time for a job of 0 pages, $g(0) = 0.5$: time that every job takes, whatever its number of pages.",
+    "check": "Compare a 100-page job with a 150-page job: $g(150) - g(100) = 3.5 - 2.5 = 1$. The extra 50 pages take exactly 1 more hour ✓",
+    "be_careful": "Choice A is a trap. That describes the coefficient of $p$, which is $\\frac{1}{50}$, not 50: each additional page adds $\\frac{1}{50}$ hour. The 50 is how many of those pages fit into 1 hour.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-010",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C5"
+   ],
+   "family": "recurrence-statement-scaled-units",
+   "signature": "G(t) = 0.6t + 12 thousand pounds of grain t hours after loading began; G(t + 5) = G(t) + 3 means 3,000 more pounds every 5 hours; 3 pounds (units ignored), 3,000 pounds each hour (step ignored), 3 hours per 5,000 pounds (roles swapped)",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $G(t) = 0.6t + 12$ gives the weight, in thousands of pounds, of the grain in a silo $t$ hours after a truck began loading grain into the silo, for $0 \\le t \\le 10$. Which of the following is the best interpretation of the statement $G(t + 5) = G(t) + 3$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Every 5 hours, the weight of the grain in the silo increases by 3 pounds.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D21",
+     "feedback": "Ignores the units of the output. The weight is in thousands of pounds, so the added 3 means 3,000 pounds."
+    },
+    {
+     "key": "B",
+     "text": "Every 5 hours, the weight of the grain in the silo increases by 3,000 pounds.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Each hour, the weight of the grain in the silo increases by 3,000 pounds.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Drops the 5-hour step. The 3 thousand pounds are added over 5 hours; in one hour the weight increases by only 600 pounds."
+    },
+    {
+     "key": "D",
+     "text": "It takes 3 hours to load each 5,000 pounds of grain into the silo.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Swaps the roles of the two numbers. The 5 is hours added to the input and the 3 is thousands of pounds added to the output, so 5 hours load 3,000 pounds, not 3 hours for 5,000 pounds."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$G(t + 5) = G(t) + 3$ compares the weight 5 hours later with the weight now. Both numbers need their units: the 5 is hours added to the input, and the 3 is thousands of pounds added to the output.",
+    "steps": "What does the question ask? It asks which choice is the best interpretation of the statement $G(t + 5) = G(t) + 3$ in this context.<br>Read the statement in words. $G(t)$ is the weight at time $t$, and $G(t + 5)$ is the weight 5 hours later.<br>$G(t + 5) = G(t) + 3$ <span class=\"nt\">(5 hours later, the weight is 3 more)</span><br>The weight is in thousands of pounds:<br>$3  \\cdot  1,000 = 3,000$ <span class=\"nt\">(change thousands of pounds to pounds)</span><br>So every 5 hours, the weight of the grain in the silo increases by 3,000 pounds.<br>Confirm with the rule: $0.6  \\cdot  5 = 3$, so 5 hours of loading at 0.6 thousand pounds per hour adds 3 thousand pounds.",
+    "check": "From $t = 2$ to $t = 7$: $G(2) = 13.2$ and $G(7) = 16.2$, and $16.2 - 13.2 = 3$ thousand pounds, which is 3,000 pounds ✓",
+    "be_careful": "the 5 is inside the parentheses, so it is a change in time (hours), and the 3 is outside, so it is a change in weight (thousands of pounds).",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-011",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C1",
+    "A3.C5"
+   ],
+   "family": "solution-meaning-relative-target",
+   "signature": "T(m) = 72 - 1.5m lemonade temperature m minutes after ice; the solution of T(m) = T(0) - 12 (m = 8) is the minutes to cool by 12 degrees; the temperature at 12 minutes, the drop in 12 minutes, the minutes to cool to 12 degrees (minimal pair by/to)",
+   "abilities": [
+    "I",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $T(m) = 72 - 1.5m$ gives the temperature, in degrees Fahrenheit, of a glass of lemonade $m$ minutes after ice was added to it, for $0 \\le m \\le 20$. Which of the following is the best interpretation of the solution to the equation $T(m) = T(0) - 12$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The temperature, in degrees Fahrenheit, of the lemonade 12 minutes after the ice was added",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "Uses 12 as the input. The 12 in the equation is a number of degrees, and the solution is a value of the input $m$, a number of minutes."
+    },
+    {
+     "key": "B",
+     "text": "The decrease in the temperature, in degrees Fahrenheit, of the lemonade during the first 12 minutes",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Describes a change in temperature, which over the first 12 minutes would be $1.5  \\cdot  12 = 18$ degrees. The solution of the equation is a number of minutes, 8."
+    },
+    {
+     "key": "C",
+     "text": "The number of minutes it took for the lemonade to cool by 12 degrees Fahrenheit after the ice was added",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The number of minutes it took for the lemonade to cool to 12 degrees Fahrenheit after the ice was added",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Drops the $T(0)$. The equation asks when the temperature is 12 degrees below its starting value, $72 - 12 = 60$; cooling to 12 degrees would be the equation $T(m) = 12$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The unknown of the equation is the input $m$, so its solution is a number of minutes: the time at which the temperature is 12 degrees below its starting value $T(0)$.",
+    "steps": "What does the question ask? It asks which choice is the best interpretation of the solution to the equation $T(m) = T(0) - 12$ in this context.<br>In $T(m) = T(0) - 12$, the unknown is $m$, the number of minutes after the ice was added, so the solution is a time, not a temperature.<br>$T(0) = 72$ <span class=\"nt\">(the temperature when the ice was added)</span><br>$72 - 1.5m = 72 - 12$ <span class=\"nt\">(write out both sides)</span><br>$-1.5m = -12$ <span class=\"nt\">(subtract 72 from both sides)</span><br>$m = 8$ <span class=\"nt\">(divide both sides by $-1.5$)</span><br>So 8 minutes after the ice was added, the lemonade was 12 degrees cooler than at the start.",
+    "check": "$T(8) = 72 - 1.5(8) = 72 - 12 = 60$, which is 12 degrees below $T(0) = 72$ ✓. Choice D would need $T(m) = 12$, which gives $m = 40$, outside $0 \\le m \\le 20$.",
+    "be_careful": "Choice A is a trap. It uses 12 as the input. The 12 in the equation is a number of degrees, and the solution is a value of the input $m$, a number of minutes.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-012",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C6"
+   ],
+   "family": "coverage-ratio-coats-build",
+   "signature": "4 gallons cover 1,000 square feet with one coat, 3 coats on x square feet: g(x) = 3x/250; the 4 gallons left out 3x/1,000, coats divided x/750, 4 times 1,000 square feet per gallon 3x/4,000; three choices carry the 3 of the coats",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A deck sealant’s label says that 4 gallons cover 1,000 square feet with one coat. A painter will apply 3 coats of this sealant to a deck with an area of $x$ square feet. Which function gives the number of gallons of sealant, $g(x)$, the painter needs?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$g(x) = \\frac{3x}{250}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$g(x) = \\frac{3x}{1,000}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Uses 1,000 square feet for each gallon and leaves out the 4 gallons. The label says 4 gallons cover 1,000 square feet, so 1 gallon covers only $\\frac{1,000}{4} = 250$ square feet."
+    },
+    {
+     "key": "C",
+     "text": "$g(x) = \\frac{x}{750}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Divides by the 3 coats instead of multiplying. More coats need more sealant, so 3 coats need 3 times the sealant of 1 coat."
+    },
+    {
+     "key": "D",
+     "text": "$g(x) = \\frac{3x}{4,000}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Multiplies 4 by 1,000, as if 1 gallon covered 4,000 square feet. The 4 gallons share the 1,000 square feet, so 1 gallon covers $\\frac{1,000}{4} = 250$ square feet."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Divide to find the amount for one square foot: one coat uses $\\frac{4}{1,000} = \\frac{1}{250}$ gallon for each square foot, and 3 coats use 3 times as much.",
+    "steps": "Let $x$ = the area of the deck, in square feet. The question asks for the gallons needed for 3 coats, so first find the gallons for 1 square foot and 1 coat.<br>$\\frac{4}{1,000} = \\frac{1}{250}$ gallon per square foot <span class=\"nt\">(4 gallons shared by 1,000 square feet)</span><br>one coat on $x$ square feet: $\\frac{1}{250}  \\cdot  x = \\frac{x}{250}$ gallons<br>three coats: $3  \\cdot  \\frac{x}{250} = \\frac{3x}{250}$ gallons <span class=\"nt\">(each coat uses the same amount)</span>",
+    "check": "A deck of 1,000 square feet needs 4 gallons for each coat, so 12 gallons for 3 coats, and $\\frac{3(1,000)}{250} = 12$ ✓. At $x = 1,000$, choices B, C, and D give 3, $\\frac{4}{3}$, and $\\frac{3}{4}$.",
+    "be_careful": "Choice B ($g(x) = \\frac{3x}{1,000}$) is a trap. It uses 1,000 square feet for each gallon and leaves out the 4 gallons. The label says 4 gallons cover 1,000 square feet, so 1 gallon covers only $\\frac{1,000}{4} = 250$ square feet.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-013",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C6"
+   ],
+   "family": "day-one-total-each-day-after",
+   "signature": "fundraiser: $45 by the end of day 1, $18 each day after: f(d) = 18d + 27; 18d + 45 (fencepost), 45d (first-day total every day), 63d - 18 ($45 every day plus $18 after day 1); three choices give $45 on day 1",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "By the end of day 1 of a fundraiser, a club had collected a total of \\$45. On each day after day 1, the club collected another \\$18. Which function $f$ gives the total amount of money, in dollars, the club had collected by the end of day $d$, for $1 \\le d \\le 10$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$f(d) = 18d + 45$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Adds \\$18 for every day, including day 1, so day 1 would show $18 + 45 = 63$ dollars. The \\$18 comes only on the $d - 1$ days after day 1."
+    },
+    {
+     "key": "B",
+     "text": "$f(d) = 45d$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Uses only the first day: it assumes the club collected \\$45 every day. After day 1 the club collected \\$18 a day, so the total on day 2 is \\$63, not \\$90."
+    },
+    {
+     "key": "C",
+     "text": "$f(d) = 63d - 18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Counts \\$45 for every day and also adds \\$18 for each day after day 1: $45d + 18(d - 1) = 63d - 18$. This gives \\$45 on day 1, but \\$108 on day 2 instead of \\$63."
+    },
+    {
+     "key": "D",
+     "text": "$f(d) = 18d + 27$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "By the end of day $d$ there have been $d - 1$ days after day 1, so the \\$18 is added $d - 1$ times, not $d$ times.",
+    "steps": "What does the question ask? It asks which function $f$ gives the total amount of money, in dollars, the club had collected by the end of day $d$, for $1 \\le d \\le 10$.<br>Let $d$ = the day number. The \\$45 covers day 1, and each later day adds \\$18.<br>days after day 1, up to day $d$: $d - 1$ <span class=\"nt\">(day 1 is not one of them)</span><br>$f(d) = 45 + 18(d - 1)$ <span class=\"nt\">(the day-1 total plus \\$18 for each later day)</span><br>$= 45 + 18d - 18$ <span class=\"nt\">(distribute the 18)</span><br>$= 18d + 27$ <span class=\"nt\">(combine 45 and $-18$)</span>",
+    "check": "Day 1: $f(1) = 18 + 27 = 45$ ✓. Day 2: the total is $45 + 18 = 63$ dollars, and $f(2) = 36 + 27 = 63$ ✓. Choices B and C also give 45 on day 1, but on day 2 they give $45(2) = 90$ and $63(2) - 18 = 108$.",
+    "be_careful": "Choice A ($f(d) = 18d + 45$) is a trap. It adds \\$18 for every day, including day 1, so day 1 would show $18 + 45 = 63$ dollars. The \\$18 comes only on the $d - 1$ days after day 1.",
+    "desmos": "Plot the totals for the first three days, $(1, 45)$, $(2, 63)$, and $(3, 81)$, and graph each choice with $x$ in place of $d$. Only $y = 18x + 27$ passes through all three points.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-014",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C7",
+    "A3.C6"
+   ],
+   "family": "set-price-then-rate-graph-choices",
+   "signature": "$30 for up to 2 hours, then $30 plus $20 per hour beyond 2, prorated, 0 < h <= 6: flat at 30 then up to (6, 110) with no jump; graph choices: 30 + 20h from (0, 30), a jump to 70 at 2 hours, the $30 spread as $15 per hour",
+   "abilities": [
+    "M",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A shop charges \\$30 for any bike rental of up to 2 hours. For a rental longer than 2 hours, the shop charges \\$30 plus \\$20 for each hour beyond 2 hours, prorated for parts of an hour. Which graph shows the cost, in dollars, of a rental of $h$ hours, for $0 < h \\le 6$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-014-choiceA",
+      "file": "figures/QB-A3-014-choiceA.svg",
+      "alt": "Cost in dollars versus time in hours. A straight segment rises from an open circle at (0, 30) to a closed dot at (6, 150)."
+     },
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This graph charges \\$20 for every hour on top of the \\$30: $30 + 20h$. The \\$20 applies only to the hours beyond 2, so a 1-hour rental costs \\$30, not \\$50."
+    },
+    {
+     "key": "B",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-014-choiceB",
+      "file": "figures/QB-A3-014-choiceB.svg",
+      "alt": "Cost in dollars versus time in hours. A horizontal segment at 30 runs from an open circle at (0, 30) to a closed dot at (2, 30); then a segment rises from an open circle at (2, 70) to a closed dot at (6, 150)."
+     },
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This graph jumps from 30 to 70 at 2 hours, because it charges \\$20 for the first 2 hours again after the \\$30: $30 + 20h$ for $h > 2$. Beyond 2 hours the cost is $30 + 20(h - 2)$, which is 30 at $h = 2$."
+    },
+    {
+     "key": "C",
+     "text": "",
+     "correct": true,
+     "figure": {
+      "id": "QB-A3-014-choiceC",
+      "file": "figures/QB-A3-014-choiceC.svg",
+      "alt": "Cost in dollars versus time in hours. A horizontal segment at 30 runs from an open circle at (0, 30) to (2, 30); then a segment rises from (2, 30) to a closed dot at (6, 110)."
+     }
+    },
+    {
+     "key": "D",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-014-choiceD",
+      "file": "figures/QB-A3-014-choiceD.svg",
+      "alt": "Cost in dollars versus time in hours. A segment rises from an open circle at (0, 0) to (2, 30); then a steeper segment rises from (2, 30) to a closed dot at (6, 110)."
+     },
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This graph spreads the \\$30 over the first 2 hours, as if the shop charged \\$15 per hour. The plan charges \\$30 for any rental up to 2 hours, so a 1-hour rental also costs \\$30."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The cost is \\$30 for every rental up to 2 hours, and only the time beyond 2 hours is charged \\$20 per hour, so the graph is flat at 30 and then rises from $(2, 30)$ with no jump.",
+    "steps": "What does the question ask? It asks which graph shows the rental cost for $0 < h \\le 6$.<br>For $0 < h \\le 2$, every rental costs \\$30, so the graph is a horizontal segment at 30.<br>For $h > 2$, the time beyond 2 hours is $h - 2$ hours:<br>cost $= 30 + 20(h - 2)$ <span class=\"nt\">(\\$30 plus \\$20 for each hour beyond 2)</span><br>At $h = 2$ this rule gives $30 + 20(0) = 30$, so the rising part starts at $(2, 30)$, with no jump.<br>At $h = 6$: $30 + 20(4) = 110$ <span class=\"nt\">(4 hours beyond 2)</span><br>Choice C is flat at 30 up to 2 hours and then rises to $(6, 110)$.",
+    "check": "Test two rentals. A 1-hour rental costs \\$30, and a 3-hour rental costs $30 + 20(1) = 50$ dollars. The graph in choice C passes through $(1, 30)$ and $(3, 50)$ ✓. Choice D passes through $(1, 15)$, and choices A and B pass through $(3, 90)$.",
+    "be_careful": "Choice A is a trap. This graph charges \\$20 for every hour on top of the \\$30: $30 + 20h$. The \\$20 applies only to the hours beyond 2, so a 1-hour rental costs \\$30, not \\$50.",
+    "desmos": "Desmos can draw the plan once each piece is written. Type $y = 30$ followed by {0 < <i>x</i> ≤ 2} and $y = 30 + 20(x - 2)$ followed by {2 ≤ <i>x</i> ≤ 6}; the curly braces keep each rule on its own interval. The picture matches choice C.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-015",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C7"
+   ],
+   "family": "rate-of-piece-from-graph",
+   "signature": "pressure-washer graph: flat $48 for 0 < h <= 4, then a straight segment to (10, 108): (108 - 48)/(10 - 4) = 10 per additional hour; 60/10 = 6 (all 10 hours), 108/10 = 10.80 (average), 48/4 = 12 (flat part)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A shop rents pressure washers. The graph shows the cost, in dollars, of a rental of $h$ hours, for $0 < h \\le 10$.",
+   "stem_after_figure": "For a rental longer than 4 hours, by how many dollars does the cost increase for each additional hour?",
+   "figures": [
+    {
+     "id": "QB-A3-015-fig1",
+     "file": "figures/QB-A3-015-fig1.svg",
+     "alt": "A graph of cost in dollars versus time in hours. A horizontal segment at 48 runs from an open circle at (0, 48) to the point (4, 48); then a straight segment rises from (4, 48) to a closed dot at (10, 108). The vertical axis is labeled every 12 dollars from 12 to 120, and the horizontal axis every hour."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Divides the \\$60 increase by all 10 hours. The cost rises only during the 6 hours after the first 4, so the rate is $\\frac{60}{6} = 10$."
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$10.80$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Divides the total cost by the total time: $\\frac{108}{10} = 10.80$. That is the average cost per hour of a 10-hour rental, which includes the flat \\$48."
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Uses the flat part: $\\frac{48}{4} = 12$. The first 4 hours cost \\$48 together; each additional hour is charged at the rate of the rising segment."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The cost per additional hour is the slope of the rising segment only: the change in cost divided by the change in time from $(4, 48)$ to $(10, 108)$.",
+    "steps": "The graph is flat at \\$48 up to 4 hours and then rises in a straight segment. The question asks for the rate on the rising segment.<br>two points on the rising segment: $(4, 48)$ and $(10, 108)$<br>change in cost: $108 - 48 = 60$ dollars <span class=\"nt\">(subtract the earlier cost from the later cost)</span><br>change in time: $10 - 4 = 6$ hours <span class=\"nt\">(subtract the earlier time from the later time)</span><br>rate: $\\frac{60}{6} = 10$ dollars per hour <span class=\"nt\">(change in cost divided by change in time)</span>",
+    "check": "Start at \\$48 and add \\$10 for each of the 6 hours beyond 4 hours: $48 + 6(10) = 108$, the cost at 10 hours on the graph ✓",
+    "be_careful": "Choice A ($6$) is a trap. It divides the \\$60 increase by all 10 hours. The cost rises only during the 6 hours after the first 4, so the rate is $\\frac{60}{6} = 10$.",
+    "desmos": "Make a table with the points $(4, 48)$ and $(10, 108)$ read from the graph and type <i>y</i><sub>1</sub> ~ <i>mx</i><sub>1</sub> + <i>b</i>: $m = 10$. Both points must come from the rising segment; a point from the flat part, such as $(2, 48)$, gives a wrong rate.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-016",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C8"
+   ],
+   "family": "input-shift-rule-to-f",
+   "signature": "f(x + 3) = 2x + 11 for all x: f(x) = 2x + 5; shift the wrong way 2x + 17, input ignored 2x + 11, 3 taken off the output 2x + 8; choices by descending constant",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the linear function $f$, $f(x + 3) = 2x + 11$ for all values of $x$. Which of the following defines $f$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$f(x) = 2x + 17$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "Moves the input the wrong way: replacing $x$ with $x + 3$ in $2x + 11$ gives $2x + 17$. To undo the $+ 3$, replace $x$ with $x - 3$: $2(x - 3) + 11 = 2x + 5$."
+    },
+    {
+     "key": "B",
+     "text": "$f(x) = 2x + 11$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Ignores the input $x + 3$ and reads the right side as $f(x)$. With $f(x) = 2x + 11$, the output for the input $x + 3$ would be $2(x + 3) + 11 = 2x + 17$."
+    },
+    {
+     "key": "C",
+     "text": "$f(x) = 2x + 8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Takes 3 off the output, reading $f(x + 3)$ as $f(x) + 3$. The 3 is added to the input, not to the output; this rule gives $f(x + 3) = 2x + 14$."
+    },
+    {
+     "key": "D",
+     "text": "$f(x) = 2x + 5$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The rule of $f$ acts on its whole input, so $2x + 11$ is the output for the input $x + 3$, not for the input $x$.",
+    "steps": "The question asks for the rule of $f$. Choose values of $x$ to get outputs of $f$.<br>$x = 0$: $f(3) = 2(0) + 11 = 11$ <span class=\"nt\">(the input of $f$ is $0 + 3 = 3$)</span><br>$x = 1$: $f(4) = 2(1) + 11 = 13$ <span class=\"nt\">(the input of $f$ is $1 + 3 = 4$)</span><br>slope: $\\frac{13 - 11}{4 - 3} = 2$ <span class=\"nt\">(change in output divided by change in input)</span><br>$11 = 2(3) + b$ <span class=\"nt\">(substitute $f(3) = 11$ into $f(x) = 2x + b$)</span><br>$b = 5$ <span class=\"nt\">(subtract 6 from both sides)</span><br>So $f(x) = 2x + 5$.",
+    "check": "$f(x + 3) = 2(x + 3) + 5 = 2x + 6 + 5 = 2x + 11$ ✓",
+    "be_careful": "Choice A ($f(x) = 2x + 17$) is a trap. It moves the input the wrong way: replacing $x$ with $x + 3$ in $2x + 11$ gives $2x + 17$. To undo the $+ 3$, replace $x$ with $x - 3$: $2(x - 3) + 11 = 2x + 5$.",
+    "desmos": "Desmos can test a choice: type $f(x) = 2x + 5$, then $y = f(x + 3)$ and $y = 2x + 11$. The last two graphs are the same line. With $f(x) = 2x + 11$ they would be different lines.",
+    "another_way": "Write the right side in terms of the input $x + 3$: $2x + 11 = 2(x + 3) - 6 + 11 = 2(x + 3) + 5$. So $f$ doubles its input and adds 5: $f(x) = 2x + 5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-017",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C6",
+    "A3.C2"
+   ],
+   "family": "tier-hidden-rate-difference",
+   "signature": "$54 total for the first 3 days combined, a fixed amount per additional day, 8 days cost $124: rate 70/5 = 14, 10 days cost 4 x 14 = $56 more than 6 days; 54 + 8r (35), average 124/8 (62), first-tier 54/3 per day (72); MCQ numeric",
+   "abilities": [
+    "M",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A tool rental shop charges a total of \\$54 for the first 3 days of a rental combined. For each additional day after the first 3 days, the shop charges a fixed amount. An 8-day rental costs \\$124. How much more does a 10-day rental cost than a 6-day rental?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$35$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Writes the cost as $54 + 8r$, charging the daily amount for all 8 days on top of the \\$54. Then $r = \\frac{70}{8} = 8.75$ and $4  \\cdot  8.75 = 35$. Only the 5 days after the first 3 cost extra."
+    },
+    {
+     "key": "B",
+     "text": "$56$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$62$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Uses the average cost per day of the 8-day rental, $\\frac{124}{8} = 15.50$, so $4  \\cdot  15.50 = 62$. That average mixes in the \\$54 for the first 3 days; each additional day costs \\$14."
+    },
+    {
+     "key": "D",
+     "text": "$72$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Uses $\\frac{54}{3} = 18$ dollars per day from the first 3 days, so $4  \\cdot  18 = 72$. The 4 days that differ between the two rentals are additional days, which cost \\$14 each."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The \\$54 covers the first 3 days together, so the extra cost of an 8-day rental pays for its 5 additional days; that gives the daily amount, and the difference between two rentals longer than 3 days uses only that amount.",
+    "steps": "The question asks for a difference in cost, so first find the charge for each additional day.<br>Let $r$ = the charge, in dollars, for each day after the first 3 days.<br>An 8-day rental has $8 - 3 = 5$ additional days <span class=\"nt\">(days 4, 5, 6, 7, and 8)</span><br>$54 + 5r = 124$ <span class=\"nt\">(the first 3 days plus 5 additional days)</span><br>$5r = 70$ <span class=\"nt\">(subtract 54 from both sides)</span><br>$r = 14$ <span class=\"nt\">(divide both sides by 5)</span><br>additional days: $10 - 3 = 7$ for the 10-day rental and $6 - 3 = 3$ for the 6-day rental<br>difference: $(7 - 3)  \\cdot  14 = 4  \\cdot  14 = 56$ dollars <span class=\"nt\">(the \\$54 is in both costs and cancels)</span>",
+    "check": "$54 + 3(14) = 96$ dollars for 6 days and $54 + 7(14) = 152$ dollars for 10 days, and $152 - 96 = 56$ ✓. Also $54 + 5(14) = 124$ ✓ for 8 days.",
+    "be_careful": "Choice A ($35$) is a trap. It writes the cost as $54 + 8r$, charging the daily amount for all 8 days on top of the \\$54. Then $r = \\frac{70}{8} = 8.75$ and $4  \\cdot  8.75 = 35$. Only the 5 days after the first 3 cost extra.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-018",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C9"
+   ],
+   "family": "x-intercept-of-sum",
+   "signature": "f(x) = 2(x - 5), g(x) = x + 2, h = f + g = 3x - 8: x-intercept 8/3; sign slip -8/3, x-intercepts added 5 + (-2) = 3, f alone 5; MCQ numeric",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The functions $f$ and $g$ are defined by $f(x) = 2(x - 5)$ and $g(x) = x + 2$. The function $h$ is defined by $h(x) = f(x) + g(x)$. In the $xy$-plane, what is the $x$-coordinate of the $x$-intercept of the graph of $y = h(x)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-\\frac{8}{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Solves $3x - 8 = 0$ with a sign slip, $3x = -8$. Adding 8 to both sides gives $3x = 8$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{8}{3}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Adds the $x$-intercepts of $f$ and $g$: $5 + (-2) = 3$. But $h(3) = 2(3 - 5) + (3 + 2) = 1$, not 0; the sum of two functions has its own $x$-intercept."
+    },
+    {
+     "key": "D",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "5 is the $x$-intercept of $f$ alone. At $x = 5$, $f(5) = 0$ but $g(5) = 7$, so $h(5) = 7$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The sum $h$ is a new linear function with its own rule, so its $x$-intercept comes from solving $h(x) = 0$, not from combining the $x$-intercepts of $f$ and $g$.",
+    "steps": "The question asks where $h(x) = 0$. First write the rule of $h$.<br>$h(x) = 2(x - 5) + (x + 2)$ <span class=\"nt\">(add the two rules)</span><br>$= 2x - 10 + x + 2$ <span class=\"nt\">(distribute the 2)</span><br>$= 3x - 8$ <span class=\"nt\">(combine like terms)</span><br>$3x - 8 = 0$ <span class=\"nt\">(at the $x$-intercept the output is 0)</span><br>$3x = 8$ <span class=\"nt\">(add 8 to both sides)</span><br>$x = \\frac{8}{3}$ <span class=\"nt\">(divide both sides by 3)</span>",
+    "check": "$f(\\frac{8}{3}) = 2(\\frac{8}{3} - 5) = -\\frac{14}{3}$ and $g(\\frac{8}{3}) = \\frac{8}{3} + 2 = \\frac{14}{3}$, so $h(\\frac{8}{3}) = -\\frac{14}{3} + \\frac{14}{3} = 0$ ✓",
+    "be_careful": "Choice C ($3$) is a trap. It adds the $x$-intercepts of $f$ and $g$: $5 + (-2) = 3$. But $h(3) = 2(3 - 5) + (3 + 2) = 1$, not 0; the sum of two functions has its own $x$-intercept.",
+    "desmos": "Desmos is the fastest route here. Type $f(x) = 2(x - 5)$, $g(x) = x + 2$, and $y = f(x) + g(x)$, then click where the third graph crosses the $x$-axis: $(2.667, 0)$, which is $\\frac{8}{3}$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-019",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C9"
+   ],
+   "family": "gap-of-two-models-sign-and-zero",
+   "signature": "two rising balloons p(t) = 1,200 + 300t and q(t) = 2,100 + 150t meters, t hours after 7:00 a.m.; p(t) - q(t) = 150t - 900 increases by 150 m each hour and is 0 at t = 6 (1:00 p.m.); decreases (gap intuition), 10:00 a.m. (900 / 300, one rate), 450 and 9:00 a.m. (rates added)",
+   "abilities": [
+    "I",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two hot-air balloons are rising at constant rates. The functions $p$ and $q$ give their heights above the ground, in meters, $t$ hours after 7:00 a.m., where $p(t) = 1,200 + 300t$ and $q(t) = 2,100 + 150t$ for $0 \\le t \\le 8$. Which of the following statements about $p(t) - q(t)$ is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It increases by 150 meters each hour and is 0 at 1:00 p.m.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "It decreases by 150 meters each hour and is 0 at 1:00 p.m.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "The time is right, but the direction is not. $p(t) - q(t)$ goes from $-900$ to $-750$ in the first hour, which is an increase of 150."
+    },
+    {
+     "key": "C",
+     "text": "It increases by 150 meters each hour and is 0 at 10:00 a.m.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Divides the 900-meter head start by the rate of $p$ alone: $900 \\div 300 = 3$ hours. The balloon described by $q$ is also rising, so the gap closes at only $300 - 150 = 150$ meters per hour."
+    },
+    {
+     "key": "D",
+     "text": "It increases by 450 meters each hour and is 0 at 9:00 a.m.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Adds the rates, $300 + 150 = 450$, as if the balloons moved toward each other. Both rise, so the gap closes at $300 - 150 = 150$ meters per hour, and it takes 6 hours."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The difference of two linear functions is linear: its rate is the difference of the rates, and it is 0 when the two heights are equal. Both parts of a statement must be true.",
+    "steps": "What does the question ask? It asks which statement about $p(t) - q(t)$ is true.<br>$p(t)$ and $q(t)$ are the heights, in meters, of the two balloons $t$ hours after 7:00 a.m. Write their difference as one function of $t$.<br>$p(t) - q(t) = (1,200 + 300t) - (2,100 + 150t)$<br>$= -900 + 150t$ <span class=\"nt\">(subtract both terms of $q(t)$, then combine like terms)</span><br>The coefficient of $t$ is 150, so $p(t) - q(t)$ increases by 150 meters each hour.<br>$-900 + 150t = 0$ <span class=\"nt\">(the difference is 0 when the heights are equal)</span><br>$t = 6$ <span class=\"nt\">(add 900, then divide by 150)</span><br>6 hours after 7:00 a.m. is 1:00 p.m. Both parts of choice A are true.",
+    "check": "At $t = 6$: $p(6) = 1,200 + 1,800 = 3,000$ and $q(6) = 2,100 + 900 = 3,000$, so the difference is 0 at 1:00 p.m. ✓",
+    "be_careful": "the gap between the balloons shrinks, but $p(t) - q(t)$ is negative, so a shrinking gap means $p(t) - q(t)$ increases toward 0.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-020",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "M",
+   "concepts": [
+    "A3.C6",
+    "A3.C5"
+   ],
+   "family": "per-interval-rate-later-reading",
+   "signature": "reservoir dropping 0.4 foot every 15 minutes; 62 feet at 10:30 a.m.; h hours after 9:00 a.m.: L(h) = 64.4 - 1.6h; shift the wrong way 59.6, the reading as the start 62, the per-interval rate kept 62.6 - 0.4h",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The water level in a reservoir is dropping at a constant rate of 0.4 foot every 15 minutes. At 10:30 a.m., the water level was 62 feet. Which function gives the water level $L(h)$, in feet, $h$ hours after 9:00 a.m., for $0 \\le h \\le 8$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$L(h) = 59.6 - 1.6h$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Moves the 2.4 feet the wrong way. The level is dropping, so 1.5 hours before 10:30 a.m. it was higher: $62 + 2.4 = 64.4$."
+    },
+    {
+     "key": "B",
+     "text": "$L(h) = 62 - 1.6h$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Uses the 10:30 a.m. reading as the level at 9:00 a.m. In this rule $L(1.5) = 62 - 2.4 = 59.6$, not 62."
+    },
+    {
+     "key": "C",
+     "text": "$L(h) = 64.4 - 1.6h$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$L(h) = 62.6 - 0.4h$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "Keeps 0.4 foot as the drop per hour. The 0.4 foot is the drop in 15 minutes, so the level drops $4  \\cdot  0.4 = 1.6$ feet each hour."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Two conversions are needed: the rate must be per hour (four 15-minute periods, so 1.6 feet per hour), and the 62 feet is the level 1.5 hours after the start, so the level at 9:00 a.m. was higher.",
+    "steps": "What does the question ask? It asks which function gives the water level $L(h)$, in feet, $h$ hours after 9:00 a.m., for $0 \\le h \\le 8$.<br>The input $h$ is in hours after 9:00 a.m., so first write the rate per hour.<br>15-minute periods in 1 hour: $\\frac{60}{15} = 4$ <span class=\"nt\">(60 minutes in an hour, 15 minutes per period)</span><br>drop per hour: $4  \\cdot  0.4 = 1.6$ feet <span class=\"nt\">(0.4 foot in each of the 4 periods)</span><br>10:30 a.m. is $h = 1.5$, so $L(1.5) = 62$. <span class=\"nt\">(10:30 a.m. is 1.5 hours after 9:00 a.m.)</span><br>In 1.5 hours the level drops $1.6  \\cdot  1.5 = 2.4$ feet, so at 9:00 a.m. it was higher:<br>$62 + 2.4 = 64.4$ <span class=\"nt\">(the level at h = 0)</span><br>So $L(h) = 64.4 - 1.6h$.",
+    "check": "$L(1.5) = 64.4 - 1.6(1.5) = 64.4 - 2.4 = 62$ ✓, and from $h = 1.5$ to $h = 1.75$ (15 minutes) the level drops $1.6  \\cdot  0.25 = 0.4$ foot ✓",
+    "be_careful": "the level is dropping, so the level at 9:00 a.m., before the 10:30 reading, was higher than 62 feet, not lower.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-021",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C1"
+   ],
+   "family": "table-with-unknown-inputs",
+   "signature": "table x = k, k + 2, 2k with f = 10, 16, 25; slope (16 - 10)/2 = 3; from k to 2k the input grows by k, so 3k = 15, k = 5; f(0) = 10 - 3(5) = -5; common wrongs 5 (k), -20 (uses 2k = 10 steps from 0 to the input 2k with output 10); ICMS killer hp-alg3-1",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The table shows three values of the linear function $f$, where $k$ is a constant. What is the value of $f(0)$?<br><table class='t'><tr><th>$x$</th><td>$k$</td><td>$k + 2$</td><td>$2k$</td></tr><tr><th>$f(x)$</th><td>10</td><td>16</td><td>25</td></tr></table>",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "5 is the value of $k$. The question asks for $f(0)$."
+    },
+    {
+     "value": "-20",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This goes back from $x = 2k = 10$ using the output 10 instead of 25: $10 - 3(10) = -20$. The output 10 goes with $x = k = 5$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The first two columns are 2 apart, which gives the slope. The jump from $k$ to $2k$ is $k$ steps, which gives $k$.",
+    "steps": "The question asks for $f(0)$.<br>slope $= \\frac{16 - 10}{(k + 2) - k} = \\frac{6}{2} = 3$ <span class=\"nt\">(the $k$ cancels)</span><br>$25 - 10 = 3\\big(2k - k\\big)$ <span class=\"nt\">(from $x = k$ to $x = 2k$)</span><br>$15 = 3k$, so $k = 5$ <span class=\"nt\">(divide both sides by 3)</span><br>$f(5) = 10$, and $x = 0$ is 5 steps to the left of $x = 5$<br>$f(0) = 10 - 3(5) = -5$<br>Why it works: a linear function changes by the same amount for every 1 unit of input, so the slope works even when the inputs contain $k$.",
+    "check": "$f(x) = 3x - 5$: $f(5) = 10$ ✓, $f(7) = 16$ ✓, $f(10) = 25$ ✓, and $f(0) = -5$",
+    "be_careful": "$k$ is an input, not the answer. Finish by moving from $x = k$ back to $x = 0$.",
+    "desmos": "Desmos cannot use the table until $k$ is known. After $k = 5$, a table of $(5, 10)$, $(7, 16)$, $(10, 25)$ and a regression give $y = 3x - 5$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-022",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C2"
+   ],
+   "family": "two-sided-step-statement-to-rule",
+   "signature": "f(x + 4) = f(x - 2) + 9 for all x and f(6) = 20: input gap 6, slope 9/6 = 3/2, f(x) = (3/2)x + 11; every choice passes (6, 20): rate upside down (2/3)x + 16, only the +4 used as the gap (9/4)x + 13/2, gap read as 4 - 2 (9/2)x - 7",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 105,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the linear function $f$, $f(x + 4) = f(x - 2) + 9$ for all values of $x$, and $f(6) = 20$. Which of the following defines $f$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$f(x) = \\frac{2}{3}x + 16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Turns the rate upside down: $\\frac{6}{9} = \\frac{2}{3}$ is input change over output change. It passes $(6, 20)$, but $f(x + 4) - f(x - 2) = 4$."
+    },
+    {
+     "key": "B",
+     "text": "$f(x) = \\frac{3}{2}x + 11$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$f(x) = \\frac{9}{4}x + \\frac{13}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Uses the 4 in $x + 4$ as the whole input gap. The inputs $x + 4$ and $x - 2$ are 6 apart. This rule gives a difference of $\\frac{27}{2}$, not 9."
+    },
+    {
+     "key": "D",
+     "text": "$f(x) = \\frac{9}{2}x - 7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "Takes the gap as $4 - 2 = 2$, ignoring that $x - 2$ is 2 units below $x$. The gap is $4 - (-2) = 6$. This rule gives a difference of 27, not 9."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The statement compares two outputs whose inputs, $x + 4$ and $x - 2$, are 6 apart, so the output rises 9 over an input change of 6 and the slope is $\\frac{9}{6}$.",
+    "steps": "The question asks for the rule of $f$. First find how far apart the two inputs are.<br>$(x + 4) - (x - 2) = 6$ <span class=\"nt\">(the input gap; the 4 alone is not the gap)</span><br>slope: $\\frac{9}{6} = \\frac{3}{2}$ <span class=\"nt\">(change in output divided by change in input)</span><br>$20 = \\frac{3}{2}(6) + b$ <span class=\"nt\">(substitute $f(6) = 20$ into $f(x) = \\frac{3}{2}x + b$)</span><br>$20 = 9 + b$ <span class=\"nt\">(multiply)</span><br>$b = 11$ <span class=\"nt\">(subtract 9 from both sides)</span><br>So $f(x) = \\frac{3}{2}x + 11$.<br>Why $f(6) = 20$ cannot decide: every choice is a line through $(6, 20)$. Only the step statement separates them.",
+    "check": "$f(x + 4) - f(x - 2) = \\frac{3}{2}(6) = 9$ ✓, and $f(6) = 9 + 11 = 20$ ✓. For A, C, and D the same difference is 4, $\\frac{27}{2}$, and 27, not 9.",
+    "be_careful": "the input gap is $4 - (-2) = 6$, not 4 and not $4 - 2 = 2$; and the 9 is the rise over that whole gap.",
+    "desmos": "Desmos can test a choice: type $f(x) = 1.5x + 11$ and then $y = f(x + 4) - f(x - 2)$. It draws the horizontal line $y = 9$. The same test on the other choices draws $y = 4$, $13.5$, or $27$.",
+    "another_way": "Write $f(x) = mx + b$. Then $f(x + 4) - f(x - 2) = m(x + 4) - m(x - 2)$, which is $6m$. So $6m = 9$ and $m = \\frac{3}{2}$. The $b$ cancels, so the statement gives the slope but not the constant."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-023",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C2"
+   ],
+   "family": "gap-between-shifted-inputs",
+   "signature": "f(x + 3) - f(x - 1) = 10 for all x: inputs 4 apart, slope 5/2; f(2) = 7 back to f(-6) = -13; slope 10 (-73) and gap 3 - 1 = 2 (-33) as common wrongs; SPR text",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For the linear function $f$, $f(x + 3) - f(x - 1) = 10$ for all values of $x$, and $f(2) = 7$. What is the value of $f(-6)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-13"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-73",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Uses 10 as the slope, as if the inputs were 1 apart: $7 + 10(-8) = -73$. The inputs $x + 3$ and $x - 1$ are 4 apart, so the slope is $\\frac{10}{4}$."
+    },
+    {
+     "value": "-33",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Finds the gap between the inputs as $3 - 1 = 2$, so the slope becomes 5 and $f(-6) = 7 + 5(-8) = -33$. The gap is $(x + 3) - (x - 1) = 3 + 1 = 4$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The inputs $x + 3$ and $x - 1$ are always 4 apart, so the statement says that $f$ increases by 10 for every increase of 4 in the input.",
+    "steps": "The question asks for $f(-6)$, and $f(2)$ is known. So the missing piece is the slope of $f$.<br>$(x + 3) - (x - 1) = 4$ <span class=\"nt\">(the gap between the two inputs, the same for every value of x)</span><br>So whenever the input increases by 4, the output increases by 10.<br>slope $= \\frac{10}{4} = \\frac{5}{2}$ <span class=\"nt\">(change in output divided by change in input)</span><br>change in input from 2 to $-6$: $-6 - 2 = -8$<br>change in output: $\\frac{5}{2}  \\cdot  (-8) = -20$ <span class=\"nt\">(slope times change in input)</span><br>$f(-6) = 7 + (-20) = -13$ <span class=\"nt\">(start from $f(2) = 7$)</span>",
+    "check": "$f(x) = \\frac{5}{2}x + 2$ gives $f(2) = 5 + 2 = 7$ ✓, and $f(x + 3) - f(x - 1) = \\frac{5}{2}(x + 3) - \\frac{5}{2}(x - 1) = \\frac{5}{2}  \\cdot  4 = 10$ ✓. Then $f(-6) = -15 + 2 = -13$.",
+    "be_careful": "the gap between the inputs is 4, not 3 and not 2. Subtract the whole inputs: $(x + 3) - (x - 1) = 3 + 1 = 4$.",
+    "desmos": "Desmos cannot read the statement for the slope. After finding $m = \\frac{5}{2}$, graph $y = \\frac{5}{2}(x - 2) + 7$ and click the line at $x = -6$ to see $(-6, -13)$.",
+    "another_way": "Write $f(x) = mx + b$. Then $f(x + 3) - f(x - 1) = m(x + 3) + b - m(x - 1) - b = 4m$, so $4m = 10$ and $m = \\frac{5}{2}$. The $b$ cancels, which is why the statement gives only the slope."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-024",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C3"
+   ],
+   "family": "third-fact-fixes-letter",
+   "signature": "f(t) = 7, f(2t) = 13, f(10) = 25 with t nonzero: steps 0 to t and t to 2t are equal, so f(0) = 1; then slope 12/5 and t = 5/2; slope taken as 6 (t = 7) and f(t) = 7 read as the intercept (t = 10/3) as common wrongs; SPR text",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For the linear function $f$, $f(t) = 7$, $f(2t) = 13$, and $f(10) = 25$, where $t$ is a nonzero constant. What is the value of $t$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5/2",
+      "2.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Takes the slope to be $13 - 7 = 6$, as if $t$ and $2t$ were 1 apart. Then $f(10) = 25$ gives $f(x) = 6x - 35$, and $6t - 35 = 7$ gives $t = 7$. But then $f(2t) = f(14) = 49$, not 13."
+    },
+    {
+     "value": "10/3",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Finds $mt = 6$ but takes $f(t) = 7$ as the $y$-intercept. Then $10m + 7 = 25$ gives $m = \\frac{9}{5}$ and $t = 6 \\div \\frac{9}{5} = \\frac{10}{3}$. The value 7 is the output at input $t$, not at 0."
+    }
+   ],
+   "solution": {
+    "key_idea": "The step from input 0 to input $t$ is the same size as the step from $t$ to $2t$, so $f$ changes by the same amount, 6, on both; that gives $f(0)$, and then $f(10)$ gives the slope.",
+    "steps": "The question asks for $t$. Let $m$ = the slope of $f$ and $b = f(0)$, the $y$-intercept, so $f(x) = mx + b$.<br>From input $t$ to input $2t$, the input increases by $t$ and the output increases by $13 - 7 = 6$:<br>$mt = 6$ <span class=\"nt\">(slope times change in input)</span><br>From input 0 to input $t$, the input also increases by $t$, so the output also increases by 6:<br>$b = 7 - 6 = 1$ <span class=\"nt\">(one step of $t$ back from $f(t) = 7$)</span><br>$10m + 1 = 25$ <span class=\"nt\">(use $f(10) = 25$)</span><br>$10m = 24$ <span class=\"nt\">(subtract 1 from both sides)</span><br>$m = \\frac{12}{5}$ <span class=\"nt\">(divide both sides by 10)</span><br>$\\frac{12}{5}t = 6$ <span class=\"nt\">(substitute $m$ into $mt = 6$)</span><br>$t = 6  \\cdot  \\frac{5}{12} = \\frac{5}{2}$ <span class=\"nt\">(multiply both sides by $\\frac{5}{12}$)</span>",
+    "check": "$f(x) = \\frac{12}{5}x + 1$ gives $f(\\frac{5}{2}) = 6 + 1 = 7$ ✓, $f(5) = 12 + 1 = 13$ ✓, and $f(10) = 24 + 1 = 25$ ✓",
+    "be_careful": "$t$ is not 1. If $t$ were 1, the slope would be $13 - 7 = 6$ and $f(10)$ would be $1 + 60 = 61$, not 25; the third fact is what fixes $t$.",
+    "desmos": "Desmos can check the value after the setup: graph $y = \\frac{6}{t}x + 1$ with a slider for $t$ and plot the point $(10, 25)$. The line passes through the point when $t = 2.5$.",
+    "another_way": "Write the first two facts as equations: $mt + b = 7$ and $2mt + b = 13$. Subtracting the first from the second gives $mt = 6$, and then $b = 7 - 6 = 1$. The rest is the same."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-025",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C4",
+    "A3.C8"
+   ],
+   "family": "re-anchor-and-change-unit",
+   "signature": "soup T(m) = 180 - 1.2m, m minutes after 2:00 p.m.; S(h) the same temperature h hours after 2:30 p.m.; S(h) = 144 - 72h; 2 x 2 choice set (constant 144 or 180, rate 1.2 or 72) so the key is not the majority; MCQ context equations",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The function $T$ gives the estimated temperature, in degrees Fahrenheit, of a pot of soup $m$ minutes after 2:00 p.m., where $T(m) = 180 - 1.2m$ for $0 \\le m \\le 90$. The function $S$ gives the same estimated temperature, in degrees Fahrenheit, $h$ hours after 2:30 p.m., for $0 \\le h \\le 1$. Which equation defines $S$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$S(h) = 144 - 1.2h$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "Uses the new starting value, 144, but keeps the rate of 1.2 degrees per minute. Here $h$ counts hours, and the soup cools $1.2  \\cdot  60 = 72$ degrees per hour."
+    },
+    {
+     "key": "B",
+     "text": "$S(h) = 180 - 1.2h$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Only renames the variable: this is $T$ with $h$ in place of $m$. It still starts at 2:00 p.m. and counts minutes, so it does not use the clock of $S$."
+    },
+    {
+     "key": "C",
+     "text": "$S(h) = 144 - 72h$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$S(h) = 180 - 72h$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Changes the rate to 72 degrees per hour but keeps 180, the temperature at 2:00 p.m. At $h = 0$ the time is 2:30 p.m., when the soup is at $T(30) = 144$ degrees."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$S$ starts its clock at 2:30 p.m. and counts in hours, so its constant is the temperature at 2:30 p.m., and its rate is the drop per hour, not per minute.",
+    "steps": "The question asks for a rule in terms of $h$, the hours after 2:30 p.m. Find the starting value of $S$ and its rate.<br>At $h = 0$ the time is 2:30 p.m., which is 30 minutes after 2:00 p.m.:<br>$S(0) = T(30) = 180 - 1.2(30)$ <span class=\"nt\">(2:30 p.m. is $m = 30$)</span><br>$S(0) = 180 - 36$ <span class=\"nt\">(multiply)</span><br>$S(0) = 144$ <span class=\"nt\">(subtract)</span><br>The soup cools 1.2 degrees each minute, and 1 hour is 60 minutes:<br>drop per hour: $1.2  \\cdot  60 = 72$ degrees <span class=\"nt\">(60 minutes in an hour)</span><br>$S(h) = 144 - 72h$ <span class=\"nt\">(start at 144 and drop 72 degrees for each hour)</span>",
+    "check": "At 3:30 p.m., $h = 1$ and $m = 90$: $S(1) = 144 - 72 = 72$ and $T(90) = 180 - 108 = 72$ ✓. At that time choice A gives 142.8, choice B gives 178.8, and choice D gives 108.",
+    "be_careful": "both the starting time and the unit change. Fixing only the starting time gives choice A, and fixing only the unit gives choice D.",
+    "desmos": "Desmos works as a check: define $T(m) = 180 - 1.2m$ and type $T(30 + 60h)$ next to each choice with $h = 0.5$. $T(60) = 108$, and only $144 - 72(0.5) = 108$ matches.",
+    "another_way": "Write the old input in terms of the new one: $h$ hours after 2:30 p.m. is $m = 30 + 60h$ minutes after 2:00 p.m. Substitute: $180 - 1.2(30 + 60h) = 180 - 36 - 72h = 144 - 72h$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-026",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C5",
+    "A3.C9"
+   ],
+   "family": "difference-rate-restated-per-step",
+   "signature": "P(x) = 0.04x + 18 and Q(x) = 0.06x + 12 monthly charges for x minutes; Q(x) - P(x) = 0.02x - 6; key: each 50 more minutes raise the difference by $1; 0.02 minute per $1 (rate flipped), the difference is $1 at 50 minutes (change read as a value; it is -5), $5 per 50 minutes (rates added); MCQ statements",
+   "abilities": [
+    "I",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two phone plans charge for international calls. The monthly charge, in dollars, for $x$ minutes of international calls is $P(x) = 0.04x + 18$ for plan P and $Q(x) = 0.06x + 12$ for plan Q. Which of the following statements about the difference $Q(x) - P(x)$ is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Each increase of 50 minutes of international calls increases the difference by \\$1.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Each increase of \\$1 in the difference corresponds to an increase of 0.02 minute of international calls.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Flips the rate without dividing. 0.02 is dollars per minute, so \\$1 of difference goes with $1 \\div 0.02 = 50$ minutes, not 0.02 minute."
+    },
+    {
+     "key": "C",
+     "text": "The difference is \\$1 for 50 minutes of international calls.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Reads the change as a value. The difference is $0.02x - 6$, so at 50 minutes it is $1 - 6 = -5$ dollars, not \\$1."
+    },
+    {
+     "key": "D",
+     "text": "Each increase of 50 minutes of international calls increases the difference by \\$5.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Adds the rates, $0.04 + 0.06 = 0.10$. In a difference the rates are subtracted: $0.06 - 0.04 = 0.02$, which gives \\$1 per 50 minutes."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The difference of two linear charges is linear, with rate $0.06 - 0.04 = 0.02$ dollar per minute. A rate can be restated for any step: 50 minutes add $0.02  \\cdot  50 = 1$ dollar. A change is not a value, and the difference is still negative at 50 minutes.",
+    "steps": "The question asks about $Q(x) - P(x)$, so write it as one function.<br>$Q(x) - P(x) = (0.06x + 12) - (0.04x + 18) = 0.02x - 6$ <span class=\"nt\">(subtract both terms)</span><br>The rate of the difference is 0.02 dollar per minute.<br>$0.02  \\cdot  50 = 1$ <span class=\"nt\">(50 more minutes)</span><br>So each 50 more minutes raise the difference by \\$1: statement A is true.<br>The value at 50 minutes is $0.02  \\cdot  50 - 6 = -5$, so C is false; adding the rates gives $0.10  \\cdot  50 = 5$, so D is false.",
+    "check": "$P(0) = 18$ and $Q(0) = 12$ (difference $-6$); $P(50) = 20$ and $Q(50) = 15$ (difference $-5$). The difference went up by \\$1 ✓",
+    "be_careful": "statement C uses the same two numbers as the key, but it describes a value of the difference, not a change: at 50 minutes plan Q is still \\$5 cheaper.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-027",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C2",
+    "A3.C3"
+   ],
+   "family": "difference-determines-change-only",
+   "signature": "linear taxi fare; a 10-mile ride costs $4 more than a 7-mile ride; I the 12-mile fare (depends on the fixed amount), II how much more 20 miles costs than 5 miles ($20, determined); key II only; I/II (the only two-statement item of A3)",
+   "abilities": [
+    "I",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A taxi company charges a fare that is a linear function of the length of the ride, in miles. A 10-mile ride costs \\$4 more than a 7-mile ride. Which of the following can be determined from this information alone?<br>I. The fare for a 12-mile ride<br>II. How much more a 20-mile ride costs than a 5-mile ride",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "I only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Treats the fare as the rate times the miles, so I seems fixed, and thinks a difference needs both fares first. The difference in II is the rate times 15 miles, \\$20, while the 12-mile fare, $16 + s$, depends on the unknown fixed part."
+    },
+    {
+     "key": "B",
+     "text": "II only",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "I and II",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Assumes the fare has no fixed part (or tests one example), so $F(12) = \\frac{4}{3}  \\cdot  12 = 16$. The fare could also be $\\frac{4}{3}d + 3$, which gives \\$19 for 12 miles with the same \\$4 difference."
+    },
+    {
+     "key": "D",
+     "text": "Neither I nor II",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Thinks nothing can be found without the starting fare. The rate is fixed by the \\$4 for 3 extra miles, and the difference in II uses only the rate: $\\frac{4}{3}  \\cdot  15 = 20$ dollars."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A linear fare has a constant rate per mile, and \\$4 for 3 extra miles gives that rate. A difference of two fares uses only the rate, but a single fare also needs the fixed part of the fare, which is not given.",
+    "steps": "The question asks what the given fact fixes. Let $F(d)$ = the fare, in dollars, for a ride of $d$ miles. A linear fare can be written $F(d) = rd + s$, where $r$ = the cost per mile and $s$ = the fixed part (the value at 0 miles).<br>$F(10) - F(7) = 4$ <span class=\"nt\">(the 10-mile ride costs \\$4 more)</span><br>$r(10 - 7) = 4$ <span class=\"nt\">(the $s$ cancels in the difference)</span><br>$r = \\frac{4}{3}$ dollars per mile <span class=\"nt\">(divide both sides by 3)</span><br>II: $F(20) - F(5) = \\frac{4}{3}  \\cdot  15 = 20$ dollars <span class=\"nt\">(15 more miles; the $s$ cancels again)</span><br>I: $F(12) = \\frac{4}{3}  \\cdot  12 + s = 16 + s$ <span class=\"nt\">(nothing in the stem fixes $s$)</span><br>So II can be determined (\\$20), and I cannot.",
+    "check": "Two fares fit the fact: $F(d) = \\frac{4}{3}d$ and $F(d) = \\frac{4}{3}d + 3$. Both give $F(10) - F(7) = 4$ ✓ and both give $F(20) - F(5) = 20$ ✓, but their 12-mile fares are \\$16 and \\$19, so I is not fixed.",
+    "be_careful": "one example with a chosen fixed fee makes I look determined. A second example with a different fee shows that the 12-mile fare changes while the difference in II does not.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-028",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C8"
+   ],
+   "family": "table-of-input-output-shift-to-f",
+   "signature": "table of h(x) = f(x + 2) - 4 (x 0, 2, 5; h -4, 2, 11): h = 3x - 4, f(u) = h(u - 2) + 4 = 3u - 6, f(-3) = -15 (negative SPR); h(-3) = -13 (table read as f), -9 (input shift ignored), -3 (input shift reversed)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The function $h$ is defined by $h(x) = f(x + 2) - 4$, where $f$ is a linear function. The table shows three values of $x$ and their corresponding values of $h(x)$.<table class=\"dt\"><tr><th>$x$</th><td>$0$</td><td>$2$</td><td>$5$</td></tr><tr><th>$h(x)$</th><td>$-4$</td><td>$2$</td><td>$11$</td></tr></table>What is the value of $f(-3)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-15"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-13",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$-13$ is $h(-3)$, the value from the table rule. The table shows $h$, not $f$."
+    },
+    {
+     "value": "-9",
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "Adds back the 4 but ignores the $+2$ inside $f$: $h(-3) + 4 = -9$. The value $h(-3)$ uses $f(-1)$, not $f(-3)$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The table gives outputs of $h$, and $h(x)$ is the output of $f$ at the input $x + 2$, lowered by 4. So $f$ at an input $u$ is $h$ at $u - 2$, raised by 4.",
+    "steps": "The question asks for a value of $f$, but the table shows $h$. Find the rule of $h$, then undo both changes.<br>slope: $\\frac{2 - (-4)}{2 - 0} = 3$, and $h(0) = -4$, so $h(x) = 3x - 4$ <span class=\"nt\">(check: $h(5) = 11$ ✓)</span><br>$f(x + 2) = h(x) + 4$ <span class=\"nt\">(add 4 to both sides of the definition)</span><br>To get $f(-3)$, the input $x + 2$ must be $-3$, so $x = -5$:<br>$f(-3) = h(-5) + 4$ <span class=\"nt\">(substitute $x = -5$)</span><br>$= 3(-5) - 4 + 4 = -15$<br>Why $x = -5$ and not $x = -3$: in $h(x) = f(x + 2) - 4$, $f$ is evaluated 2 units to the right of $h$, so the matching $h$-input is 2 less.",
+    "check": "$f(x) = 3x - 6$. Then $f(x + 2) - 4 = 3x + 6 - 6 - 4 = 3x - 4$, which is $h(x)$ ✓, and $f(-3) = -9 - 6 = -15$ ✓",
+    "be_careful": "two changes are hidden in $h$: the 4 is added back at the end, and the input of $h$ is 2 less than the input of $f$, not 2 more (the reversed shift gives $h(-1) + 4 = -3$).",
+    "desmos": "Desmos fits the table ($y_{1} \\sim mx_{1} + b$ gives $m = 3$, $b = -4$), but that is $h$. Type $f(x) = 3(x - 2) - 4 + 4$ and evaluate $f(-3)$; Desmos does not decide the direction of the shift.",
+    "another_way": "Write $f(x) = 3x + b$ (shifts do not change the slope). Then $h(0) = f(2) - 4 = 6 + b - 4 = -4$, so $b = -6$ and $f(-3) = -15$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-029",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C7",
+    "A3.C6"
+   ],
+   "family": "remaining-goal-second-piece-anchor",
+   "signature": "goal 2,400 cans, 150 a week for 4 weeks, then a new constant weekly number; 780 still needed at the end of week 10; R(w) = 2,480 - 170w for 4 <= w <= 14; each lure passes one condition: line from (0, 2,400) through (10, 780) passes week 10 only, the 5-week count 2,616 - 204w passes week 4 only, w for w - 4 passes neither; MCQ context equations",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A school club set a goal of collecting 2,400 cans of food. The club collected 150 cans each week for the first 4 weeks. Starting in week 5, the club collected a new, constant number of cans each week. At the end of week 10, the club still needed 780 cans to reach its goal. Which function gives the number of cans, $R(w)$, that the club still needed at the end of week $w$, for $4 \\le w \\le 14$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$R(w) = 1,800 - 170w$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Starts from 1,800 but uses $w$ instead of $w - 4$, as if the 170-can weeks began at week 0. Then $R(4) = 1,800 - 680 = 1,120$ and $R(10) = 1,800 - 1,700 = 100$, so it misses both facts."
+    },
+    {
+     "key": "B",
+     "text": "$R(w) = 2,400 - 162w$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Draws one line from $(0, 2,400)$ to $(10, 780)$, so its slope is $\\frac{780 - 2,400}{10} = -162$. That line mixes the two weekly rates: it passes the week-10 value, but at $w = 4$ it gives 1,752, while the club still needed 1,800."
+    },
+    {
+     "key": "C",
+     "text": "$R(w) = 2,480 - 170w$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$R(w) = 2,616 - 204w$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "Counts the weeks at the new rate as $10 - 5 = 5$, so the weekly drop becomes $\\frac{1,020}{5} = 204$ and the rule $1,800 - 204(w - 4) = 2,616 - 204w$. It passes the week-4 value, but at $w = 10$ it gives 576, not 780. Weeks 5 through 10 are 6 weeks."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The rule for $R$ holds only from week 4 on, so its line starts from the number still needed after week 4, not from the goal; its constant, 2,480, is the value the line would give at $w = 0$, which never happened.",
+    "steps": "The question asks for the rule that holds from week 4 to week 14. Find a starting point of this piece and its weekly rate.<br>collected in the first 4 weeks: $4  \\cdot  150 = 600$ cans <span class=\"nt\">(150 cans in each of 4 weeks)</span><br>still needed at the end of week 4: $2,400 - 600 = 1,800$ <span class=\"nt\">(goal minus collected)</span><br>still needed at the end of week 10: 780 <span class=\"nt\">(given)</span><br>weeks at the new rate, from the end of week 4 to the end of week 10: $10 - 4 = 6$ <span class=\"nt\">(weeks 5, 6, 7, 8, 9, and 10)</span><br>weekly drop: $\\frac{1,800 - 780}{6} = \\frac{1,020}{6} = 170$ <span class=\"nt\">(cans collected each week from week 5 on)</span><br>$R(w) = 1,800 - 170(w - 4)$ <span class=\"nt\">(start at 1,800 when $w = 4$ and drop 170 for each week after week 4)</span><br>$R(w) = 1,800 - 170w + 680$ <span class=\"nt\">(distribute $-170$)</span><br>$R(w) = 2,480 - 170w$ <span class=\"nt\">(combine the constants)</span><br>Why both facts are needed: the rule must give 1,800 at $w = 4$ and 780 at $w = 10$. Choice B passes only the week-10 value, choice D only the week-4 value, and choice A neither.",
+    "check": "$R(4) = 2,480 - 680 = 1,800$ ✓ and $R(10) = 2,480 - 1,700 = 780$ ✓. Choice B gives 780 at $w = 10$, but at $w = 4$ it gives $2,400 - 648 = 1,752$; choice D gives $2,616 - 816 = 1,800$ at $w = 4$, but at $w = 10$ it gives $2,616 - 2,040 = 576$.",
+    "be_careful": "the line of this rule does not pass through $(0, 2,400)$, and the new rate runs for 6 weeks before the end of week 10 (weeks 5 through 10), not 5.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-030",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C8"
+   ],
+   "family": "graph-of-f-2x-to-f-slope",
+   "signature": "graph of y = f(2x) through (0, 8) and (3, 0) shown; f(0) = 8 and f(6) = 0, so the slope of y = f(x) is -4/3 (negative fraction SPR); the shown slope -8/3 and the doubled -16/3 as common wrongs; SPR graph (first quadrant)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 115,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The graph of $y = f(2x)$ in the $xy$-plane, where $f$ is a linear function, is shown.",
+   "stem_after_figure": "What is the slope of the graph of $y = f(x)$ in the $xy$-plane?",
+   "figures": [
+    {
+     "id": "QB-A3-030-fig1",
+     "file": "figures/QB-A3-030-fig1.svg",
+     "alt": "First quadrant of the coordinate plane, x from 0 to 7 labeled every unit and y from 0 to 10 labeled every 2 units. A line falls from the labeled point (0, 8) on the y-axis to the labeled point (3, 0) on the x-axis; both points are marked with dots."
+    }
+   ],
+   "answer": {
+    "spr": {
+     "values": [
+      "-4/3",
+      "-1.333"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-8/3",
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Reads the slope of the shown graph. That graph is $y = f(2x)$; at $x = 3$ it shows $f(6)$, so the graph of $f$ runs from $(0, 8)$ to $(6, 0)$, with slope $-\\frac{4}{3}$."
+    },
+    {
+     "value": "-16/3",
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "Doubles the shown slope, as if $f$ were steeper than $y = f(2x)$. It is the other way: $y = f(2x)$ reaches each output of $f$ at half the input, so its slope is twice the slope of $f$, and the slope of $f$ is half of $-\\frac{8}{3}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "At each $x$, the graph of $y = f(2x)$ shows the value of $f$ at the input $2x$, so the point $(3, 0)$ on this graph says that $f(6) = 0$: the graph of $f$ reaches the same outputs at twice the inputs, which makes it half as steep.",
+    "steps": "The question asks for the slope of the graph of $y = f(x)$, so find two points on that graph.<br>The shown graph is $y = f(2x)$. At $x = 0$: $f(2  \\cdot  0) = f(0) = 8$ <span class=\"nt\">(the point $(0, 8)$ on the shown graph)</span><br>At $x = 3$: $f(2  \\cdot  3) = f(6) = 0$ <span class=\"nt\">(the point $(3, 0)$ on the shown graph)</span><br>So the graph of $y = f(x)$ passes through $(0, 8)$ and $(6, 0)$.<br>slope: $\\frac{0 - 8}{6 - 0} = \\frac{-8}{6} = -\\frac{4}{3}$ <span class=\"nt\">(change in $y$ divided by change in $x$)</span><br>Why it is not the shown slope: the shown line falls 8 over a run of 3, but $f$ needs a run of 6 to fall the same 8, so its slope is half of $-\\frac{8}{3}$.",
+    "check": "With $f(x) = 8 - \\frac{4}{3}x$: $f(2x) = 8 - \\frac{4}{3}(2x) = 8 - \\frac{8}{3}x$, which gives 8 at $x = 0$ and 0 at $x = 3$ ✓, the shown graph.",
+    "be_careful": "the slope shown, $-\\frac{8}{3}$, belongs to $y = f(2x)$. Doubling the input makes a graph steeper, so the graph of $f$ itself is less steep: half of the shown slope, not twice it.",
+    "desmos": "Desmos cannot read $f$ from this graph; the input $2x$ has to be undone by hand. To confirm afterward, graph $y = 8 - \\frac{4}{3}x$ and $y = 8 - \\frac{4}{3}(2x)$: the second line matches the shown graph.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-031",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C6",
+    "A3.C5"
+   ],
+   "family": "coverage-divisor-two-input-interpretation",
+   "signature": "g = nA/170 gallons for n coats on A square feet; 170 = square feet one gallon covers with 1 coat (key); 1 gallon with 2 coats (that is 85), gallons per square foot (inverted), 2 gallons with 1 coat (340); two inputs, so the student must set n = 1 and A = 170; MCQ interpretation",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A painter uses the formula $g = \\frac{nA}{170}$ to estimate the number of gallons of paint, $g$, needed to apply $n$ coats of paint to a wall with an area of $A$ square feet. Which of the following is the best interpretation of 170 in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The number of square feet of wall that 1 gallon of paint covers with 1 coat",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The number of square feet of wall that 1 gallon of paint covers with 2 coats",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Attaches 2 coats to the 170. With $n = 2$, one gallon covers $\\frac{170}{2} = 85$ square feet, so 1 gallon with 2 coats describes 85, not 170."
+    },
+    {
+     "key": "C",
+     "text": "The number of gallons of paint needed for each square foot of wall",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Inverts the rate. The gallons needed for each square foot with 1 coat is $\\frac{1}{170}$; 170 is square feet per gallon."
+    },
+    {
+     "key": "D",
+     "text": "The number of square feet of wall that 2 gallons of paint cover with 1 coat",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Puts a 2 on the gallons. Two gallons with 1 coat cover $2  \\cdot  170 = 340$ square feet. The 170 is the area that 1 gallon covers with 1 coat."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The product $nA$ is the total area painted, counting each coat separately. Dividing it by 170 counts the gallons, so 170 is the area one gallon covers for one coat.",
+    "steps": "The question asks what 170 stands for. Choose inputs that make $g = 1$.<br>$n = 1$ and $A = 170$: $g = \\frac{1  \\cdot  170}{170} = 1$ <span class=\"nt\">(1 coat on 170 square feet)</span><br>So 1 gallon covers 170 square feet with 1 coat: choice A.<br>$n = 2$ and $A = 85$: $g = \\frac{2  \\cdot  85}{170} = 1$ <span class=\"nt\">(with 2 coats, 1 gallon covers only 85 square feet)</span><br>So choice B describes 85, not 170, and choice D, 2 gallons with 1 coat, describes $2  \\cdot  170 = 340$ square feet.",
+    "check": "A 340-square-foot wall with 2 coats needs $g = \\frac{2  \\cdot  340}{170} = 4$ gallons. At 170 square feet per gallon per coat, 4 gallons give $4  \\cdot  170 = 680$ square feet of coating, which is $2  \\cdot  340$ ✓",
+    "be_careful": "with two inputs, check the meaning by setting both: 170 is the area when $n = 1$ and $g = 1$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-032",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C1",
+    "A3.C8"
+   ],
+   "family": "f-2x-minus-2f-x",
+   "signature": "f(2x) - 2f(x) = 7 for all x gives -b = 7, b = -7; f(3) = 2 gives m = 3; f(5) = 8; b = +7 (-4/3), m reported (3), b dropped (15); MCQ numeric",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the linear function $f$, $f(2x) - 2f(x) = 7$ for all values of $x$, and $f(3) = 2$. What is the value of $f(5)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-\\frac{4}{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Takes $b = 7$ instead of $-7$. Then $3m + 7 = 2$ gives $m = -\\frac{5}{3}$ and $f(5) = -\\frac{25}{3} + 7 = -\\frac{4}{3}$. The difference is $b - 2b = -b$, so $-b = 7$."
+    },
+    {
+     "key": "B",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "3 is the slope $m$, found midway. The question asks for $f(5) = 3(5) - 7$."
+    },
+    {
+     "key": "C",
+     "text": "$8$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$15$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "Finds $m = 3$ but leaves out $b$: $3  \\cdot  5 = 15$. The function is $f(x) = 3x - 7$, so $f(5) = 15 - 7 = 8$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "For $f(x) = mx + b$, doubling the input doubles only the $mx$ part, while doubling the output doubles $b$ too; so $f(2x) - 2f(x)$ equals $-b$ for every $x$.",
+    "steps": "The question asks for $f(5)$. Write $f(x) = mx + b$, where $m$ = the slope and $b$ = the $y$-intercept.<br>$f(2x) = m(2x) + b = 2mx + b$ <span class=\"nt\">(the input is $2x$)</span><br>$2f(x) = 2(mx + b) = 2mx + 2b$ <span class=\"nt\">(the whole output is doubled)</span><br>$f(2x) - 2f(x) = (2mx + b) - (2mx + 2b) = -b$ <span class=\"nt\">(subtract; the $2mx$ terms cancel)</span><br>$-b = 7$, so $b = -7$ <span class=\"nt\">(the statement says the difference is 7)</span><br>$3m - 7 = 2$ <span class=\"nt\">(use $f(3) = 2$)</span><br>$3m = 9$ <span class=\"nt\">(add 7 to both sides)</span><br>$m = 3$ <span class=\"nt\">(divide both sides by 3)</span><br>$f(5) = 3(5) - 7 = 8$ <span class=\"nt\">(substitute 5 into $f(x) = 3x - 7$)</span>",
+    "check": "$f(x) = 3x - 7$: $f(2x) - 2f(x) = (6x - 7) - (6x - 14) = 7$ ✓ and $f(3) = 9 - 7 = 2$ ✓, so $f(5) = 15 - 7 = 8$.",
+    "be_careful": "$2f(x)$ doubles the whole output, including $b$, but $f(2x)$ doubles only the input, so the difference is $-b$, not $b$.",
+    "desmos": "Desmos cannot use the “for all values of $x$” statement directly. After finding $f(0) = -7$, graph the line through $(0, -7)$ and $(3, 2)$ and click it at $x = 5$: $(5, 8)$.",
+    "another_way": "The statement holds for every $x$, so use $x = 0$: $f(0) - 2f(0) = 7$, which gives $f(0) = -7$. The slope from $(0, -7)$ to $(3, 2)$ is $\\frac{9}{3} = 3$, and $f(5) = -7 + 3(5) = 8$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-033",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C9",
+    "A3.C8"
+   ],
+   "family": "shifted-difference-from-graph-and-table",
+   "signature": "f from a graph through (0, -4) and (3, 2), g from a table (1, 5), (3, -1), (5, -7); h(x) = f(x - 1) - g(x) = 5x - 14, x-intercept 14/5; shift reversed (2), shift ignored (12/5), x-intercept of f(x - 1) alone (3); MCQ graph + table",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of the linear function $f$ is shown.",
+   "stem_after_figure": "The table shows three values of $x$ and their corresponding values of $g(x)$ for the linear function $g$.<table class=\"dt\"><tr><th>$x$</th><th>$g(x)$</th></tr><tr><td>$1$</td><td>$5$</td></tr><tr><td>$3$</td><td>$-1$</td></tr><tr><td>$5$</td><td>$-7$</td></tr></table>The function $h$ is defined by $h(x) = f(x - 1) - g(x)$. What is the $x$-coordinate of the $x$-intercept of the graph of $y = h(x)$ in the $xy$-plane?",
+   "figures": [
+    {
+     "id": "QB-A3-033-fig1",
+     "file": "figures/QB-A3-033-fig1.svg",
+     "alt": "Coordinate plane with grid lines every unit and labels every 3 units. A line rises from left to right through the labeled points (0, -4) and (3, 2), each marked with a dot. It is the graph of y = f(x)."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "Shifts in the wrong direction: uses $f(x + 1) = 2x - 2$, which gives $5x - 10 = 0$ and $x = 2$. Replacing $x$ with $x - 1$ gives $2(x - 1) - 4 = 2x - 6$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{12}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Ignores the shift: $f(x) - g(x) = 5x - 12$, which is 0 at $\\frac{12}{5}$. The rule uses $f(x - 1)$, not $f(x)$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{14}{5}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "3 is where $f(x - 1) = 0$, the $x$-intercept of the shifted $f$ alone. At $x = 3$, $g(3) = -1$, so $h(3) = 0 - (-1) = 1$, not 0."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Build the rule of $h$ from the two rules: replace $x$ with $x - 1$ inside $f$, subtract all of $g(x)$, then set $h(x) = 0$. Each step has its own trap.",
+    "steps": "The question asks where $h(x) = 0$. Find the rules for $f$ and $g$ first.<br>slope of $f$: $\\frac{2 - (-4)}{3 - 0} = 2$ <span class=\"nt\">(the labeled points $(0, -4)$ and $(3, 2)$)</span><br>$f(x) = 2x - 4$ <span class=\"nt\">(the $y$-intercept is $-4$)</span><br>slope of $g$: $\\frac{-1 - 5}{3 - 1} = -3$ <span class=\"nt\">(the first two rows of the table)</span><br>$g(x) = -3x + 8$ <span class=\"nt\">(from $5 = -3(1) + b$, $b = 8$)</span><br>$f(x - 1) = 2(x - 1) - 4 = 2x - 6$ <span class=\"nt\">(replace every $x$ in $f$ with $x - 1$)</span><br>$h(x) = (2x - 6) - (-3x + 8) = 5x - 14$ <span class=\"nt\">(subtract both terms of g(x))</span><br>$5x - 14 = 0$, so $x = \\frac{14}{5}$ <span class=\"nt\">(add 14, then divide by 5)</span>",
+    "check": "At $x = \\frac{14}{5}$: $f(\\frac{14}{5} - 1) = f(\\frac{9}{5}) = \\frac{18}{5} - 4 = -\\frac{2}{5}$ and $g(\\frac{14}{5}) = -\\frac{42}{5} + 8 = -\\frac{2}{5}$, so $h = 0$ ✓",
+    "be_careful": "$f(x - 1)$ moves the graph of $f$ 1 unit to the right, so $f(x - 1) = 2x - 6$, not $2x - 2$.",
+    "desmos": "Desmos checks the answer once the rules are typed: $f(x) = 2x - 4$, $g(x) = -3x + 8$ (fit the table with <i>y</i><sub>1</sub> ~ <i>mx</i><sub>1</sub> + <i>b</i>), then graph $y = f(x - 1) - g(x)$ and click its $x$-intercept, $(2.8, 0)$. Typing $f(x - 1)$ correctly is the concept.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-034",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C2",
+    "A3.C3"
+   ],
+   "family": "forced-relation-uneven-inputs-table",
+   "signature": "table x = 2, 5, 14 with f = p, q, r (letters); must be true; key r - p = 4(q - p) (changes proportional to the input gaps 12 and 3); f(x) = x makes all four true, f(x) = 2x + 1 keeps C and D, only a decreasing f removes C (r - q > q - p)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows three values of $x$ and their corresponding values of $f(x)$ for the linear function $f$, where $p$, $q$, and $r$ are constants.<table class=\"dt\"><tr><th>$x$</th><th>$f(x)$</th></tr><tr><td>$2$</td><td>$p$</td></tr><tr><td>$5$</td><td>$q$</td></tr><tr><td>$14$</td><td>$r$</td></tr></table>",
+   "stem_after_figure": "Which of the following must be true?",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2q = 5p$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "True for $f(x) = x$ and for every proportional function, as if $f(5)$ had to be $\\frac{5}{2}$ times $f(2)$ because 5 is $\\frac{5}{2}$ times 2. With $f(x) = x + 1$: $p = 3$ and $q = 6$, but $2(6) = 12$ and $5(3) = 15$."
+    },
+    {
+     "key": "B",
+     "text": "$r - q = 9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Uses the input difference $14 - 5 = 9$ as the output difference, which assumes a slope of 1. With $f(x) = 2x$: $q = 10$ and $r = 28$, so $r - q = 18$."
+    },
+    {
+     "key": "C",
+     "text": "$r - q > q - p$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "A longer input stretch (9 units against 3) gives a bigger output change only when $f$ increases, and every increasing example keeps C true. With $f(x) = -x + 20$: $r - q = -9$ and $q - p = -3$, and $-9 > -3$ is false."
+    },
+    {
+     "key": "D",
+     "text": "$r - p = 4(q - p)$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "For a linear function the change in output is the slope times the change in input, so the change from $x = 2$ to $x = 14$ (12 units) is always 4 times the change from $x = 2$ to $x = 5$ (3 units), whatever the slope and the intercept are.",
+    "steps": "The question asks which statement holds for every linear function $f$ that could fill the table, not only for one example.<br>Let $m$ = the slope of $f$ and $b$ = its $y$-intercept, so $f(x) = mx + b$. Write each table entry with $m$ and $b$:<br>$p = 2m + b$ <span class=\"nt\">(substitute $x = 2$)</span><br>$q = 5m + b$ <span class=\"nt\">(substitute $x = 5$)</span><br>$r = 14m + b$ <span class=\"nt\">(substitute $x = 14$)</span><br><b>Choice A.</b> $2q = 10m + 2b$ and $5p = 10m + 5b$. These are equal only when $b = 0$, that is, only when $f$ is proportional, so A is not forced.<br><b>Choice B.</b> $r - q = (14m + b) - (5m + b) = 9m$, which equals 9 only when $m = 1$, so B is not forced.<br><b>Choice C.</b> $r - q = 9m$ and $q - p = 3m$. The statement $9m > 3m$ holds only when $m$ is positive, so a decreasing $f$ breaks C.<br><b>Choice D.</b> Compute each side:<br>$r - p = 12m$ <span class=\"nt\">($(14m + b) - (2m + b)$; the $b$ cancels)</span><br>$4(q - p) = 12m$ <span class=\"nt\">($4((5m + b) - (2m + b))$, which is $4(3m)$)</span><br>Both sides equal $12m$ for every slope and every intercept, so D must be true: 12 units of input give four times the change of 3 units.",
+    "check": "Test a decreasing function that is not proportional, $f(x) = -x + 20$: $p = 18$, $q = 15$, $r = 6$. D: $6 - 18 = -12$ and $4(15 - 18) = -12$ ✓. A: $2(15) = 30$ but $5(18) = 90$. B: $6 - 15 = -9$, not 9. C: $-9 > -3$ is false. Only D survives ✓",
+    "be_careful": "the simplest example, $f(x) = x$, makes all four statements true, and every increasing example keeps C true. A statement is forced only if it survives a decreasing, non-proportional example, or if it is shown with $m$ and $b$.",
+    "desmos": "Desmos does not decide a “must be true” question, because each graph is one example. With sliders for $m$ and $b$ in $f(x) = mx + b$, the expression $f(14) - f(2) - 4(f(5) - f(2))$ stays 0 for every slider value, which only confirms the algebra.",
+    "another_way": "Think of the table as a walk along the line. From $x = 2$ to $x = 5$ the output changes by $q - p$ over 3 unit steps, so each unit step changes it by $\\frac{q - p}{3}$. From $x = 2$ to $x = 14$ there are 12 unit steps, so the change is $12  \\cdot  \\frac{q - p}{3} = 4(q - p)$. That is statement D, built from the slope alone."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-035",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C8"
+   ],
+   "family": "graph-choices-f-2x-minus-4",
+   "signature": "graph of f through (0, 4) and (4, 0); which graph is y = f(2x - 4) = 8 - 2x: (0, 8)-(4, 0) (key) vs f(x - 4) (0, 8)-(8, 0), f(x - 2) (0, 6)-(6, 0), f(2x) (0, 4)-(2, 0); same first-quadrant window; MCQ graph choices",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of the linear function $f$ is shown.",
+   "stem_after_figure": "Which of the following is the graph of $y = f(2x - 4)$?",
+   "figures": [
+    {
+     "id": "QB-A3-035-fig1",
+     "file": "figures/QB-A3-035-fig1.svg",
+     "alt": "First quadrant of the coordinate plane, x and y from 0 to 9, grid lines every unit and labels every 2 units. A line falls from the point (0, 4) on the y-axis to the point (4, 0) on the x-axis, each marked with a dot. It is the graph of y = f(x)."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "",
+     "correct": true,
+     "figure": {
+      "id": "QB-A3-035-choiceA",
+      "file": "figures/QB-A3-035-choiceA.svg",
+      "alt": "Choice A: first quadrant, x and y from 0 to 9, labels every 2 units. A line falls from the point (0, 8) on the y-axis to the point (4, 0) on the x-axis, each marked with a dot."
+     }
+    },
+    {
+     "key": "B",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-035-choiceB",
+      "file": "figures/QB-A3-035-choiceB.svg",
+      "alt": "Choice B: first quadrant, x and y from 0 to 9, labels every 2 units. A line falls from the point (0, 8) on the y-axis to the point (8, 0) on the x-axis, each marked with a dot."
+     },
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "Drops the 2: this is $y = f(x - 4) = 8 - x$, which also starts at $(0, 8)$ but reaches 0 at $x = 8$. With the input $2x - 4$, the output 0 comes when $2x - 4 = 4$, at $x = 4$."
+    },
+    {
+     "key": "C",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-035-choiceC",
+      "file": "figures/QB-A3-035-choiceC.svg",
+      "alt": "Choice C: first quadrant, x and y from 0 to 9, labels every 2 units. A line falls from the point (0, 6) on the y-axis to the point (6, 0) on the x-axis, each marked with a dot."
+     },
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Divides everything by 2, reading $f(2x - 4)$ as $f(x - 2) = 6 - x$. The 2 multiplies the input; it cannot be divided out of $f$."
+    },
+    {
+     "key": "D",
+     "text": "",
+     "correct": false,
+     "figure": {
+      "id": "QB-A3-035-choiceD",
+      "file": "figures/QB-A3-035-choiceD.svg",
+      "alt": "Choice D: first quadrant, x and y from 0 to 9, labels every 2 units. A line falls from the point (0, 4) on the y-axis to the point (2, 0) on the x-axis, each marked with a dot."
+     },
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Ignores the $-4$: this is $y = f(2x)$. At $x = 0$, $f(2x - 4)$ is $f(-4) = 8$, not $f(0) = 4$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "At each $x$, the graph of $y = f(2x - 4)$ shows the value of $f$ at the input $2x - 4$. Find the $x$ that makes $2x - 4$ equal to each known input of $f$; do not shift by 4 and halve separately.",
+    "steps": "The question asks which graph shows $y = f(2x - 4)$. Read two values of $f$, then find the $x$ that feeds each input.<br>$f(0) = 4$ and $f(4) = 0$ <span class=\"nt\">(the labeled points $(0, 4)$ and $(4, 0)$)</span><br>$2x - 4 = 0$ gives $x = 2$, so $(2, 4)$ is on the new graph <span class=\"nt\">(the output 4)</span><br>$2x - 4 = 4$ gives $x = 4$, so $(4, 0)$ is on the new graph <span class=\"nt\">(the output 0)</span><br>The slope through $(2, 4)$ and $(4, 0)$ is $\\frac{0 - 4}{4 - 2} = -2$, so at $x = 0$ the line is at $4 + 2(2) = 8$.<br>Only the graph in choice A passes through $(0, 8)$ and $(4, 0)$.",
+    "check": "$f(x) = 4 - x$, so $f(2x - 4) = 4 - (2x - 4) = 8 - 2x$: 8 at $x = 0$ and 0 at $x = 4$ ✓",
+    "be_careful": "$f(2x - 4) = f(2(x - 2))$: the graph of $f(2x)$ is moved 2 units right, not 4.",
+    "desmos": "Type $f(x) = 4 - x$ (from the labeled points) and $y = f(2x - 4)$ to confirm; the line passes through $(0, 8)$ and $(4, 0)$. Writing the rule of $f$ from the graph is the needed step.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-036",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C4"
+   ],
+   "family": "rate-raise-isolates-slope",
+   "signature": "f(d) = a + bd, f(6) = 19.50; b raised 20 percent gives 22.50 for 6 miles, so 6(0.2b) = 3, b = 2.5, a = 4.5; new rate 3; 10 miles: 4.5 + 30 = 34.50; traps 29.50 (old rate), 30.00 (drops fee), 32.50 (old 10-mile cost + 3); ICMS killer hp-alg3-2",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A taxi fare, in dollars, is modeled by the linear function $f(d) = a + bd$, where $d$ is the distance of the trip, in miles. A 6-mile trip costs \\$19.50. If the per-mile rate $b$ were increased by 20% and the fee $a$ stayed the same, the 6-mile trip would cost \\$22.50. Under the increased rate, how much would a 10-mile trip cost?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "\\$29.50",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This is the 10-mile cost at the old rate: $4.50 + 2.5(10) = 29.50$."
+    },
+    {
+     "key": "B",
+     "text": "\\$30.00",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This is $3(10) = 30$, the per-mile part only. The fee $a = 4.50$ is still charged."
+    },
+    {
+     "key": "C",
+     "text": "\\$32.50",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This adds the \\$3 from the 6-mile trip to the old 10-mile cost. For 10 miles the extra is $0.5(10) = 5$ dollars, not 3."
+    },
+    {
+     "key": "D",
+     "text": "\\$34.50",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Only the per-mile part changes. The extra \\$3 for 6 miles is 20% of $6b$, so it finds $b$; then $a$ comes from \\$19.50.",
+    "steps": "The question asks for the 10-mile cost at the higher rate.<br>$22.50 - 19.50 = 3$ <span class=\"nt\">(the fee did not change, so all of this is from the rate)</span><br>$0.2b \\times 6 = 3$, so $1.2b = 3$ and $b = 2.5$ <span class=\"nt\">(20% more per mile, for 6 miles)</span><br>$a + 6(2.5) = 19.50$, so $a = 4.50$ <span class=\"nt\">(the original 6-mile cost with $b = 2.5$; subtract 15)</span><br>new rate: $1.2(2.5) = 3$ dollars per mile<br>$4.50 + 3(10) = 34.50$ <span class=\"nt\">(same fee plus 10 miles at the new rate)</span><br>Why it works: raising $b$ changes only the $bd$ part, so the difference between the two 6-mile costs is all extra rate.",
+    "check": "New 6-mile cost: $4.50 + 3(6) = 22.50$ ✓; old: $4.50 + 2.5(6) = 19.50$ ✓",
+    "be_careful": "Use the increased rate for the 10-mile trip, and keep the \\$4.50 fee.",
+    "desmos": "Desmos is no faster: the two costs must first become $a + 6b = 19.5$ and $a + 7.2b = 22.5$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-037",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C1",
+    "A3.C2"
+   ],
+   "family": "ratio-of-readings-empty-time",
+   "signature": "tank drains at a constant rate from 8:00 a.m. until empty; at 10:00 a.m. it held 3 times what it held at 1:00 p.m.; amount left = rate x time left, so E - 2 = 3(E - 5), E = 13/2 hours after 8:00 a.m.; hours from 10:00 (9/2) and from 1:00 (3/2) as common wrongs; SPR context",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Water drains from a tank at a constant rate from 8:00 a.m. until the tank is empty, and no water is added. At 10:00 a.m., the tank held 3 times as much water as it held at 1:00 p.m., when the tank was not yet empty. How many hours after 8:00 a.m. does the tank become empty?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "13/2",
+      "6.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "9/2",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4.5 is the number of hours from 10:00 a.m. until the tank is empty. Counted from 8:00 a.m., it is $2 + 4.5 = 6.5$ hours."
+    },
+    {
+     "value": "3/2",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "1.5 is the number of hours from 1:00 p.m. until the tank is empty. Counted from 8:00 a.m., it is $5 + 1.5 = 6.5$ hours."
+    }
+   ],
+   "solution": {
+    "key_idea": "At a constant draining rate, the amount of water left is the rate times the time left until the tank is empty, so “3 times as much water” means “3 times as much time left.”",
+    "steps": "The question asks for the number of hours after 8:00 a.m. when the tank becomes empty.<br>Let $E$ = that number of hours, and let $r$ = the amount of water that drains each hour.<br>water left $t$ hours after 8:00 a.m.: $r(E - t)$ <span class=\"nt\">(the water still to drain in the remaining $E - t$ hours)</span><br>10:00 a.m. is $t = 2$, and 1:00 p.m. is $t = 5$.<br>$r(E - 2) = 3  \\cdot  r(E - 5)$ <span class=\"nt\">(3 times as much water at 10:00 a.m.)</span><br>$E - 2 = 3(E - 5)$ <span class=\"nt\">(divide both sides by $r$)</span><br>$E - 2 = 3E - 15$ <span class=\"nt\">(distribute 3)</span><br>$-2 = 2E - 15$ <span class=\"nt\">(subtract $E$ from both sides)</span><br>$13 = 2E$ <span class=\"nt\">(add 15 to both sides)</span><br>$E = \\frac{13}{2}$ <span class=\"nt\">(divide both sides by 2)</span><br>The tank becomes empty 6.5 hours after 8:00 a.m., at 2:30 p.m.",
+    "check": "At 10:00 a.m. there are $6.5 - 2 = 4.5$ hours of water left, and at 1:00 p.m. there are $6.5 - 5 = 1.5$ hours left: $4.5 = 3  \\cdot  1.5$ ✓",
+    "be_careful": "the answer is counted from 8:00 a.m. The 1.5 hours after 1:00 p.m. and the 4.5 hours after 10:00 a.m. are steps on the way, not the answer.",
+    "desmos": null,
+    "another_way": "Call the amount at 1:00 p.m. 1 unit, so 10:00 a.m. had 3 units. In the 3 hours between, 2 units drained, so the rate is $\\frac{2}{3}$ unit per hour. The last unit takes $1 \\div \\frac{2}{3} = 1.5$ more hours, so the tank becomes empty at 2:30 p.m., which is 6.5 hours after 8:00 a.m."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-038",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C2",
+    "A3.C1"
+   ],
+   "family": "symmetric-sum-and-step",
+   "signature": "f(x) + f(-x) = 10 and f(x + 2) = f(x) + 8 for all x: 2b = 10, m = 4, f(-4) = -11; 10 read as b (-6) and 8 as the slope (-27) as common wrongs; SPR text",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For the linear function $f$, $f(x) + f(-x) = 10$ and $f(x + 2) = f(x) + 8$ for all values of $x$. What is the value of $f(-4)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-11"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-6",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Reads 10 as the $y$-intercept, so $f(x) = 4x + 10$ and $f(-4) = -6$. But $f(x) + f(-x)$ adds two outputs, and each one contains $b$: $2b = 10$."
+    },
+    {
+     "value": "-27",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Uses 8 as the slope, as if the input stepped by 1, so $f(-4) = 8(-4) + 5 = -27$. The rise of 8 comes with an input step of 2, so the slope is 4."
+    }
+   ],
+   "solution": {
+    "key_idea": "In $f(x) = mx + b$ the $mx$ parts of $f(x)$ and $f(-x)$ cancel, so $f(x) + f(-x) = 2b$; the second statement is a rise of 8 for every 2-unit step in the input, which gives the slope.",
+    "steps": "The question asks for $f(-4)$. Write $f(x) = mx + b$, where $m$ = the slope and $b$ = the $y$-intercept.<br>$f(x) + f(-x) = (mx + b) + (-mx + b) = 2b$ <span class=\"nt\">(the $mx$ terms cancel)</span><br>$2b = 10$ <span class=\"nt\">(the first statement)</span><br>$b = 5$ <span class=\"nt\">(divide both sides by 2)</span><br>The second statement says the output rises 8 when the input rises 2:<br>$m = \\frac{8}{2} = 4$ <span class=\"nt\">(change in output divided by change in input)</span><br>$f(-4) = 4(-4) + 5 = -11$ <span class=\"nt\">(substitute $-4$ into $f(x) = 4x + 5$)</span>",
+    "check": "$f(x) = 4x + 5$: $f(x) + f(-x) = (4x + 5) + (-4x + 5) = 10$ ✓ and $f(x + 2) = 4x + 13 = f(x) + 8$ ✓, so $f(-4) = -16 + 5 = -11$.",
+    "be_careful": "10 is the sum of two outputs, $f(x) + f(-x)$, which is twice the $y$-intercept, so $b = 5$, not 10.",
+    "desmos": "Desmos cannot read the two statements. After finding $f(x) = 4x + 5$, graph it and click the line at $x = -4$: $(-4, -11)$.",
+    "another_way": "The first statement holds for every $x$, so use $x = 0$: $f(0) + f(0) = 10$, which gives $f(0) = 5$. Then from $x = 0$ to $x = -4$ the output changes by $4  \\cdot  (-4) = -16$: $5 - 16 = -11$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-039",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C6",
+    "A3.C5"
+   ],
+   "family": "chairs-gaps-slope-meaning",
+   "signature": "row of n chairs of equal (unstated) width with 4-inch gaps between neighbors, none at the ends; L(n) = 24n - 4; 24 = one chair plus one gap (key, not the template wording); one chair plus two gaps (28, a gap on each side), the template-sounding \"gaps increase by 24 per chair\" (that is 4), a row of 1 chair (that is 20); every choice a different number; MCQ interpretation",
+   "abilities": [
+    "I",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Chairs of the same width are placed side by side in a straight row. There is a gap of 4 inches between each pair of neighboring chairs and no gap at either end of the row. The function $L$ gives the length, in inches, of a row of $n$ chairs, where $L(n) = 24n - 4$. Which of the following is the best interpretation of 24 in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The combined width, in inches, of one chair and one gap",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The combined width, in inches, of one chair and two gaps",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "Pictures a gap on both sides of every chair. A row of 1 chair is $L(1) = 20$ inches, so each chair is 20 inches wide, and an added chair brings only the one gap next to its neighbor: $20 + 4 = 24$, not $20 + 2(4) = 28$."
+    },
+    {
+     "key": "C",
+     "text": "The increase, in inches, in the total width of the gaps for each additional chair",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Each added chair adds one gap, so the total width of the gaps increases by 4 inches, not 24. The 24 is the increase in the length of the whole row."
+    },
+    {
+     "key": "D",
+     "text": "The length, in inches, of a row of 1 chair",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "Reads 24 as an output. A row of 1 chair is $L(1) = 24(1) - 4 = 20$ inches long, which is the width of one chair; 24 is the amount added for each chair."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Adding one chair to the row also adds one gap, so the row grows by a chair plus a gap; that growth is the slope, 24.",
+    "steps": "The question asks what 24, the slope of $L$, stands for. Compare a row with one more chair:<br>$L(n + 1) - L(n) = 24(n + 1) - 4 - (24n - 4) = 24$ <span class=\"nt\">(the row grows by 24 inches for each added chair)</span><br>An added chair at the end of the row brings its own width plus one new 4-inch gap, the gap next to its neighbor. It brings no gap on its outer side, because the row has no gaps at its ends.<br>So 24 is the width of one chair plus 4 inches: the combined width of one chair and one gap, choice A.<br>width of one chair: $L(1) = 24 - 4 = 20$ inches <span class=\"nt\">(a row of 1 chair has no gaps)</span><br>The $-4$ in $L(n)$ removes one gap: $n$ chairs have only $n - 1$ gaps between them.",
+    "check": "A row of 3 chairs is 3 chairs and 2 gaps: $3(20) + 2(4) = 68$, and $L(3) = 72 - 4 = 68$ ✓. Each chair with one gap is $20 + 4 = 24$ inches.",
+    "be_careful": "each added chair brings exactly one new gap, not two, because the ends of the row have no gaps. That is why 24 is one chair plus one gap, and why $L(n)$ subtracts one 4.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-040",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H",
+   "concepts": [
+    "A3.C8",
+    "A3.C5"
+   ],
+   "family": "input-shift-as-delay",
+   "signature": "tanks P and Q filled at constant rates, P(t) and Q(t) liters t minutes after 1:00 p.m., P(t) = Q(t + 3) for all t >= 0; must be true: each amount P holds after 1:00 p.m. is held by Q exactly 3 minutes later (key, D); 3 more liters (possible only at 1 liter per minute), 3 liters per minute faster (never), the delay reversed (never); MCQ statements",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Water is being added to tanks P and Q at constant rates. The functions $P$ and $Q$ give the amounts of water, in liters, in tanks P and Q, respectively, $t$ minutes after 1:00 p.m., and $P(t) = Q(t + 3)$ for all $t \\ge 0$. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "At every time after 1:00 p.m., tank P holds exactly 3 more liters of water than tank Q does.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Reads the 3 as liters added to the output. The 3 is added to the input, time: tank P is 3 minutes of filling ahead. With $Q(t) = 40 + 6t$, that is $3  \\cdot  6 = 18$ liters. The gap is 3 liters only when tank Q fills at 1 liter per minute, so A does not have to be true."
+    },
+    {
+     "key": "B",
+     "text": "After 1:00 p.m., water flows into tank P at a rate exactly 3 liters per minute faster than into tank Q.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "Reads the 3 as a difference in rates. $P(t) = Q(t + 3)$ for every $t$ forces the two lines to rise at the same rate; only their timing differs."
+    },
+    {
+     "key": "C",
+     "text": "Each amount of water that tank Q holds after 1:00 p.m. is held by tank P exactly 3 minutes later.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D22",
+     "feedback": "Reverses the delay. Tank P has at time $t$ what tank Q has at time $t + 3$, so tank P gets to each amount first and tank Q gets there 3 minutes later."
+    },
+    {
+     "key": "D",
+     "text": "Each amount of water that tank P holds after 1:00 p.m. is held by tank Q exactly 3 minutes later.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$P(t) = Q(t + 3)$ says that the amount in tank P at time $t$ is the amount in tank Q 3 minutes later, at time $t + 3$; so tank Q is 3 minutes behind tank P.",
+    "steps": "The question asks what $P(t) = Q(t + 3)$ forces. Read each side as an input and an output.<br>$P(t)$ = the liters in tank P at $t$ minutes after 1:00 p.m.<br>$Q(t + 3)$ = the liters in tank Q at $t + 3$ minutes after 1:00 p.m., 3 minutes later.<br>So for every $t \\ge 0$, the amount that tank P holds at time $t$ is held by tank Q 3 minutes later: D must be true.<br>C reverses the delay. Tank P reaches each amount first, so while both tanks fill, an amount of tank Q is never what tank P holds 3 minutes later.<br>Rates: the graph of $P$ is the graph of $Q$ moved 3 units to the left, so the two lines have the same slope, and B is never true.<br>Amounts: tank P is 3 minutes of filling ahead, which is 3 times the rate of tank Q in liters. That is 3 liters only if tank Q fills at 1 liter per minute, so A can be true but does not have to be.",
+    "check": "Try $Q(t) = 40 + 6t$. Then $P(t) = Q(t + 3) = 40 + 6(t + 3) = 58 + 6t$. Tank P has 70 liters at $t = 2$, and tank Q has 70 liters at $t = 5$, 3 minutes later ✓. Tank P holds 18 more liters, not 3, and both rates are 6 liters per minute.",
+    "be_careful": "the 3 is added to the input of $Q$, so it is 3 minutes, not 3 liters, and it is tank Q that needs the extra 3 minutes.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-041",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C3",
+    "A3.C2"
+   ],
+   "family": "HP-A-redundant-fact-symmetric-sum",
+   "signature": "tank amount linear for 10 h, 540 gal at 4 h; which added fact is NOT enough for the 9-hour amount: 48 fewer at 7 h than at 4 h (r = -16), sum at 2 h and 8 h = 1,100 (r = 10), sum at 1 h and 7 h = 1,080 (key: identity, symmetric about 4 h), 0-hour amount = 1.25 x 8-hour amount (r = -15)",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "During the first 10 hours after a valve was opened, the amount of water in a tank changed at a constant rate. At $t = 4$, where $t$ is the number of hours after the valve was opened, the tank held 540 gallons. Which of the following additional pieces of information, together with the given information, is NOT enough to determine the amount of water in the tank at $t = 9$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "At $t = 7$, the tank held 48 fewer gallons than at $t = 4$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Treats a difference as too little because it gives no single amount. A difference over a known time gap gives the rate: $540 - (540 + 3r) = 48$ gives $r = -16$, and then the 9-hour amount is $540 + 5(-16) = 460$ gallons."
+    },
+    {
+     "key": "B",
+     "text": "The amounts at $t = 2$ and at $t = 8$ had a sum of 1,100 gallons.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Rejects B because a sum of two unknown amounts looks like one equation with two unknowns. With the 4-hour amount given, each amount is written with $r$ alone: $(540 - 2r) + (540 + 4r) = 1,100$ gives $r = 10$, and the 9-hour amount is $540 + 5(10) = 590$ gallons."
+    },
+    {
+     "key": "C",
+     "text": "The amount at $t = 0$ was 1.25 times the amount at $t = 8$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "A comparison of two unknown amounts can look circular, but written with $r$ it is one equation: $540 - 4r = 1.25(540 + 4r)$ gives $r = -15$, so the 9-hour amount is $540 + 5(-15) = 465$ gallons (and $600 = 1.25 \\times 480$ ✓)."
+    },
+    {
+     "key": "D",
+     "text": "The amounts at $t = 1$ and at $t = 7$ had a sum of 1,080 gallons.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A piece of information helps only if it pins down the rate, and because the amount changes by the same number of gallons each hour, the amounts 3 hours before and 3 hours after the 4-hour mark always add to twice the 4-hour amount, whatever the rate is.",
+    "steps": "The question asks for the amount at 9 hours. That amount is fixed once the rate is known, so test each choice: does it pin down the rate?<br>Let $r$ = the change in the amount of water each hour, in gallons (negative if the tank is draining), and let $A(t)$ = the number of gallons $t$ hours after the valve was opened.<br>$A(t) = 540 + r(t - 4)$ <span class=\"nt\">(540 gallons at 4 hours; each hour after that adds $r$)</span><br>$A(9) = 540 + 5r$ <span class=\"nt\">(the target needs only $r$)</span><br><b>Choice A.</b> The 4-hour amount minus the 7-hour amount is 48:<br>$540 - (540 + 3r) = 48$ <span class=\"nt\">(substitute $A(7) = 540 + 3r$)</span><br>$-3r = 48$ <span class=\"nt\">(simplify)</span><br>$r = -16$ <span class=\"nt\">(divide both sides by $-3$; one rate, so A is enough)</span><br><b>Choice B.</b> The 2-hour and 8-hour amounts add to 1,100:<br>$(540 - 2r) + (540 + 4r) = 1,100$ <span class=\"nt\">(substitute $A(2)$ and $A(8)$)</span><br>$1,080 + 2r = 1,100$ <span class=\"nt\">(combine like terms)</span><br>$r = 10$ <span class=\"nt\">(subtract 1,080, then divide by 2; B is enough)</span><br><b>Choice C.</b> The 0-hour amount is 1.25 times the 8-hour amount:<br>$540 - 4r = 1.25(540 + 4r)$ <span class=\"nt\">(substitute $A(0)$ and $A(8)$)</span><br>$540 - 4r = 675 + 5r$ <span class=\"nt\">(distribute 1.25)</span><br>$-9r = 135$ <span class=\"nt\">(subtract 540 and $5r$ from both sides)</span><br>$r = -15$ <span class=\"nt\">(divide both sides by $-9$; C is enough)</span><br><b>Choice D.</b> The 1-hour and 7-hour amounts add to 1,080:<br>$(540 - 3r) + (540 + 3r) = 1,080$ <span class=\"nt\">(substitute $A(1)$ and $A(7)$)</span><br>$1,080 = 1,080$ <span class=\"nt\">(the $r$-terms cancel)</span><br>This is true for every rate, so D rules out nothing: it is NOT enough.<br>Why D says nothing new: 1 hour and 7 hours are each 3 hours from the 4-hour mark, one before it and one after it. Whatever the rate is, the 7-hour amount is $3r$ more than 540 and the 1-hour amount is $3r$ less, so the two always add to $2(540)$.",
+    "check": "Two different rates both fit choice D. With $r = 10$: $A(1) + A(7) = 510 + 570 = 1,080$ ✓ and the 9-hour amount is 590. With $r = -16$: $A(1) + A(7) = 588 + 492 = 1,080$ ✓ and the 9-hour amount is 460. The same facts allow two different answers, so D is not enough ✓",
+    "be_careful": "choices B and D look alike, since each is a sum of two unknown amounts, but B fixes the rate and D does not. Neither the form of a fact nor whether it states a single amount decides; only writing it as an equation in the rate does.",
+    "desmos": "Desmos is not a route here: each choice must first be written as an equation in the rate. It can only confirm the algebra, for example that $(540 - 3r) + (540 + 3r)$ stays at 1,080 as a slider for $r$ moves.",
+    "another_way": "Picture the graph of the amount as a line through $(4, 540)$. The points at 1 hour and at 7 hours are 3 hours to the left and 3 hours to the right of it, so one is as far below 540 as the other is above it (or the reverse), and their sum is always $2(540) = 1,080$. Every line through $(4, 540)$ fits D, so D cannot pick out one line."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-042",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C9",
+    "A3.C3"
+   ],
+   "family": "shared-zero-proportional",
+   "signature": "graphs of linear f and g meet on the x-axis (point not given); f(5) = 6, g(5) = 4, g(k) = 22; f = (3/2)g for every x, so f(k) = 33 whatever the shared zero; ratio inverted (44/3), constant gap of 2 (24), cannot be determined; MCQ numeric + CBD",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graphs of the linear functions $f$ and $g$ in the $xy$-plane intersect at a point on the $x$-axis. If $f(5) = 6$, $g(5) = 4$, and $g(k) = 22$, where $k$ is a constant, what is the value of $f(k)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{44}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Uses the ratio upside down: $\\frac{4}{6}  \\cdot  22 = \\frac{44}{3}$. At $x = 5$ the value of $f$ is the larger one, so $f$ is $\\frac{6}{4}$ times $g$."
+    },
+    {
+     "key": "B",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Assumes $f$ is always 2 more than $g$, as at $x = 5$, so $f(k) = 22 + 2 = 24$. The lines meet on the $x$-axis, so the gap is 0 there and changes with $x$; the ratio $\\frac{3}{2}$ is what stays the same."
+    },
+    {
+     "key": "C",
+     "text": "$33$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The value cannot be determined from the information given.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Thinks the unknown point on the $x$-axis is needed. Writing both functions with the factor $x - r$ shows that $r$ cancels: $f$ is always $\\frac{3}{2}$ times $g$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Both lines pass through the same point $(r, 0)$ on the $x$-axis, so $f(x) = a(x - r)$ and $g(x) = c(x - r)$; at every input $f$ is the same multiple of $g$, and $f(5) = 6$ and $g(5) = 4$ show that the multiple is $\\frac{3}{2}$.",
+    "steps": "The question asks for $f(k)$, but the point on the $x$-axis is not given. Let $r$ = its $x$-coordinate, so both graphs pass through $(r, 0)$.<br>$f(x) = a(x - r)$ and $g(x) = c(x - r)$ <span class=\"nt\">(point-slope form through $(r, 0)$; $a$ and $c$ are the slopes)</span><br>$a(5 - r) = 6$ and $c(5 - r) = 4$ <span class=\"nt\">(use $f(5) = 6$ and $g(5) = 4$)</span><br>$\\frac{a}{c} = \\frac{6}{4} = \\frac{3}{2}$ <span class=\"nt\">(divide the first equation by the second; $5 - r$ cancels)</span><br>So $a = \\frac{3}{2}c$, and $f(x) = \\frac{3}{2}c(x - r) = \\frac{3}{2}g(x)$ for every $x$.<br>$f(k) = \\frac{3}{2}  \\cdot  22 = 33$ <span class=\"nt\">(use $g(k) = 22$)</span><br>The value of $r$ is never needed, so $f(k)$ is fixed even though the point on the $x$-axis is unknown.",
+    "check": "Try the point $(3, 0)$: $f(x) = 3(x - 3)$ and $g(x) = 2(x - 3)$ fit $f(5) = 6$ and $g(5) = 4$; $g(k) = 22$ gives $k = 14$, and $f(14) = 33$ ✓. Try $(0, 0)$ instead: $f(x) = 1.2x$ and $g(x) = 0.8x$ give $k = 27.5$ and $f(27.5) = 33$ ✓, the same value.",
+    "be_careful": "the point on the $x$-axis is unknown, but it cancels. Both functions are 0 at the same input, so the ratio $\\frac{3}{2}$ holds at every input, while the gap of 2 at $x = 5$ does not.",
+    "desmos": null,
+    "another_way": "Pick any point on the $x$-axis for the shared zero, say $(3, 0)$. Then $f(x) = 3(x - 3)$ and $g(x) = 2(x - 3)$, so $f$ is always $\\frac{3}{2}$ times $g$, and $f(k)$ is $\\frac{3}{2}  \\cdot  22 = 33$. Any other choice of the zero gives the same 33, because only the ratio matters."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-043",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C2"
+   ],
+   "family": "intercepts-sum-and-area-slope",
+   "signature": "x-intercept p > 0, y-intercept q > 0, p + q = 10, triangle area 12 so pq = 24; (p, q) = (4, 6) or (6, 4); slope -q/p = -3/2 or -2/3; traps 2/3 (sign), -12/5 (2(area)/(p + q)), -6 (p = 2, q = 12 ignores p + q = 10); ICMS killer hp-alg3-3",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph of the linear function $f$ in the $xy$-plane has a positive $x$-intercept at $x = p$ and a positive $y$-intercept at $y = q$, where $p + q = 10$. The graph and the coordinate axes form a triangle with area 12. Which of the following could be the slope of the graph of $f$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This uses $p = 2$ and $q = 12$. They give area 12, but $2 + 12 = 14$, not 10."
+    },
+    {
+     "key": "B",
+     "text": "$-\\frac{12}{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This divides $2 \\times 12 = 24$ by $p + q = 10$. That number is not $q$ divided by $p$."
+    },
+    {
+     "key": "C",
+     "text": "$-\\frac{3}{2}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{2}{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D1",
+     "feedback": "The size $\\frac{4}{6}$ is right, but the sign is wrong. The line goes down from $(0, 4)$ to $(6, 0)$, so the slope is negative."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The triangle has legs $p$ and $q$, so its area gives $pq = 24$. Two numbers that add to 10 and multiply to 24 are 4 and 6. The slope is rise over run from $(p, 0)$ to $(0, q)$.",
+    "steps": "The question asks for a possible slope.<br>$\\frac{1}{2}pq = 12$ <span class=\"nt\">(the triangle has legs $p$ and $q$)</span><br>$pq = 24$ <span class=\"nt\">(multiply both sides by 2)</span><br>$p + q = 10$ and $pq = 24$: try whole numbers that add to 10 <span class=\"nt\">(1 and 9, 2 and 8, 3 and 7, 4 and 6)</span><br>$4 \\cdot 6 = 24$, so $p = 4$, $q = 6$ or $p = 6$, $q = 4$ <span class=\"nt\">(and $4 + 6 = 10$, so both facts hold)</span><br>slope $= \\frac{q - 0}{0 - p} = -\\frac{q}{p}$ <span class=\"nt\">(from $(p, 0)$ to $(0, q)$)</span><br>$-\\frac{6}{4} = -\\frac{3}{2}$ or $-\\frac{4}{6} = -\\frac{2}{3}$ <span class=\"nt\">(put each pair into $-\\frac{q}{p}$)</span><br>Only $-\\frac{3}{2}$ is a choice. Choice C.<br>Why it works: a line through a positive point on each axis falls from left to right, so its slope must be negative.",
+    "check": "$p = 4$, $q = 6$: $4 + 6 = 10$ ✓, $\\frac{1}{2}(4)(6) = 12$ ✓, slope $\\frac{6 - 0}{0 - 4} = -\\frac{3}{2}$ ✓",
+    "be_careful": "Use both facts. Many pairs give area 12, but only 4 and 6 also add to 10.",
+    "desmos": "Desmos needs the two equations first. Graph $x + y = 10$ and $xy = 24$; the intersections $(4, 6)$ and $(6, 4)$ give the intercepts.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-044",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C7",
+    "A3.C6"
+   ],
+   "family": "HP-B-hidden-threshold-table-SPR",
+   "signature": "cloud plan: flat price up to an unstated number of GB, then a fixed prorated amount per GB; table 30 -> 24, 110 -> 42, 170 -> 60; slopes 0.225 and 0.30 differ, so 30 is flat; rule 0.3g + 9 meets 24 at 50 GB; asks the greatest storage covered by the flat price = 50; SPR",
+   "abilities": [
+    "M",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A cloud storage plan charges a flat monthly price for storing up to a certain number of gigabytes. For each gigabyte above that number, it charges an additional fixed amount, prorated for parts of a gigabyte. The table shows the monthly charges for three amounts of storage.<table class=\"dt\"><tr><th>Storage (gigabytes)</th><th>Monthly charge (dollars)</th></tr><tr><td>30</td><td>24.00</td></tr><tr><td>110</td><td>42.00</td></tr><tr><td>170</td><td>60.00</td></tr></table>",
+   "stem_after_figure": "What is the greatest number of gigabytes that can be stored for the flat monthly price?",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "50"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "30",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "30 assumes the flat price ends at the first row. Then the 110-gigabyte row would cost $24 + 0.30(80) = 48$ dollars, not 42, so the flat price lasts longer."
+    },
+    {
+     "value": "80",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "80 divides the flat price by the per-gigabyte amount, $\\frac{24}{0.30} = 80$, as if the whole charge were \\$0.30 per gigabyte. The rule above the threshold is $0.30g + 9$, so its fixed part, 9, must be included."
+    }
+   ],
+   "solution": {
+    "key_idea": "Only rows on the same part of the plan can be joined by one line, and because the charge has no jump, the flat price ends exactly where the per-gigabyte rule reaches the flat price.",
+    "steps": "The question asks where the flat price stops. So find the flat price and the per-gigabyte rule, then see where they meet.<br>Let $g$ = the number of gigabytes stored, $C$ = the monthly charge in dollars, and $n$ = the number of gigabytes the flat price covers.<br><b>Step 1: which rows lie on one line?</b><br>rows 1 and 2: $\\frac{42 - 24}{110 - 30}$, which is $\\frac{18}{80} = 0.225$ dollar per gigabyte<br>rows 2 and 3: $\\frac{60 - 42}{170 - 110}$, which is $\\frac{18}{60} = 0.30$ dollar per gigabyte<br>The slopes differ, so the three rows are not on one line. The 110-gigabyte row costs more than \\$24, so it is above the threshold, and so is the 170-gigabyte row. The 30-gigabyte row cannot also be above the threshold (then all three rows would be on one line), so it is on the flat part: the flat price is \\$24.<br><b>Step 2: the rule above the threshold.</b><br>$C = 42 + 0.30(g - 110)$ <span class=\"nt\">(start at the 110-gigabyte row and add \\$0.30 per gigabyte)</span><br>$C = 0.30g + 9$ <span class=\"nt\">(distribute and combine: $42 - 33 = 9$)</span><br><b>Step 3: the threshold.</b> There is no jump where the flat price ends, so there the rule gives exactly the flat price:<br>$0.30n + 9 = 24$ <span class=\"nt\">(the rule at $n$ gigabytes equals \\$24)</span><br>$0.30n = 15$ <span class=\"nt\">(subtract 9 from both sides)</span><br>$n = 50$ <span class=\"nt\">(divide both sides by 0.30)</span><br>So the flat price covers up to 50 gigabytes.",
+    "check": "The plan “\\$24 for up to 50 gigabytes, then \\$0.30 for each gigabyte above 50” gives every row: 30 gigabytes is within the flat price, \\$24 ✓; $24 + 0.30(60) = 42$ ✓; $24 + 0.30(120) = 60$ ✓",
+    "be_careful": "The 30-gigabyte row is on the flat part, but the flat part does not have to end there. The table never shows where it ends; the per-gigabyte rule shows where.",
+    "desmos": "A linear regression on all three rows gives about $y = 0.255x + 15.6$, a line that fits none of the rows, so it misleads. Fit only the rows for 110 and 170 gigabytes: the line through them is $y = 0.3x + 9$. Graph it with $y = 24$: they meet at $x = 50$.",
+    "another_way": "Work down from the rows above the threshold. There each gigabyte costs $\\frac{60 - 42}{170 - 110} = 0.30$ dollar. Going down from 110 gigabytes, the charge falls \\$0.30 per gigabyte until it reaches the flat \\$24, which takes $\\frac{42 - 24}{0.30} = 60$ gigabytes, so the flat price ends at $110 - 60 = 50$ gigabytes."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-045",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C7",
+    "A3.C4"
+   ],
+   "family": "HP-C-piece-constant-hidden-switch-verbal",
+   "signature": "heating began 9:00 a.m.; 18 C until an unknown time, then constant rise; 30 C at 9:12; rise from 9:12 to 9:20 is 2.5 times the rise before 9:12 (12 degrees), so 30 degrees in 8 minutes, b = 3.75, a = 30 - 45 = -15; the rise began at 9:08.8; 18 (start temperature), 0 (2.5 read as the rate); no table, no point to regress; SPR",
+   "abilities": [
+    "M",
+    "I"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A scientist began heating a liquid at 9:00 a.m. The temperature of the liquid stayed at 18 degrees Celsius until a certain time and then increased at a constant rate. At 9:12 a.m., the temperature was 30 degrees Celsius. The increase in temperature from 9:12 a.m. to 9:20 a.m. was 2.5 times the increase in temperature from the time the temperature began to increase to 9:12 a.m. For the times after the temperature began to increase, the temperature $T$, in degrees Celsius, $t$ minutes after 9:00 a.m. is modeled by $T = a + bt$, where $a$ and $b$ are constants.",
+   "stem_after_figure": "What is the value of $a$?",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-15"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "18",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "18 is the temperature at 9:00 a.m., when the heating began. The model holds only after the rise began (9:08.8 a.m.), so its constant is the rising line at $t = 0$: $30 - 3.75(12) = -15$."
+    },
+    {
+     "value": "0",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Reads 2.5 as the rate in degrees per minute: $30 - 2.5(12) = 0$. The 2.5 compares two increases; the second increase is $2.5  \\cdot  12 = 30$ degrees in 8 minutes, so the rate is 3.75."
+    }
+   ],
+   "solution": {
+    "key_idea": "The first rise is known without knowing when it began: it ends at 30 and starts at the flat 18, so it is 12 degrees. That turns the 2.5 into a second rise of 30 degrees over a known 8 minutes, which gives the rate; $a$ is the rising line walked back to 9:00 a.m.",
+    "steps": "The question asks for $a$, the value the rising line gives at $t = 0$ (9:00 a.m.). First find the rate $b$.<br><b>Step 1: the first rise.</b> The rise started at the flat temperature 18 and reached 30 at 9:12, so it was $30 - 18 = 12$ degrees, whatever time it began.<br><b>Step 2: the second rise.</b><br>$2.5  \\cdot  12 = 30$ <span class=\"nt\">(degrees from 9:12 to 9:20)</span><br>$\\frac{30}{8} = 3.75$ <span class=\"nt\">(8 minutes from 9:12 to 9:20, so b = 3.75 degrees per minute)</span><br><b>Step 3: find $a$.</b> 9:12 a.m. is $t = 12$.<br>$30 = a + 3.75(12)$ <span class=\"nt\">(substitute $(12, 30)$)</span><br>$30 = a + 45$ <span class=\"nt\">(multiply)</span><br>$a = -15$ <span class=\"nt\">(subtract 45 from both sides)</span><br><b>What it means.</b> The line reaches 18 when $-15 + 3.75t = 18$, at $t = 8.8$: the rise began at 9:08.8 a.m. Before then the model does not apply, which is why $a = -15$ is not a temperature the liquid ever had.",
+    "check": "With $T = -15 + 3.75t$: $t = 12$ gives $-15 + 45 = 30$ ✓; $t = 20$ gives $-15 + 75 = 60$, a rise of 30 from 9:12 ✓; the rise before 9:12 is $30 - 18 = 12$, and $2.5  \\cdot  12 = 30$ ✓",
+    "be_careful": "the 2.5 compares two increases in degrees, not a rate. The first increase is 12 degrees because it starts at 18, even though the start time is not given.",
+    "desmos": "There is no table to regress and only one reading. Desmos helps only after the 12-degree rise is found: then $(12, 30)$ and $(20, 60)$ give the line, and Desmos confirms $a = -15$.",
+    "another_way": "Walk back from 9:20: the line rises 3.75 degrees per minute, so 20 minutes back from 60 degrees gives $60 - 75 = -15$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-046",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C9"
+   ],
+   "family": "HP-D-gap-sign-must-be-true",
+   "signature": "tanks P and Q, each linear from 12 to 8 p.m.; equal at 2:00 p.m., P more at 5:00 p.m.; must be true; key: at 12:00 p.m. Q held more (gap P - Q = k(t - 2), k > 0); traps: P increasing, Q decreasing (each true for the filling/draining picture), order flips again at 8:00 p.m.; no numbers",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "From 12:00 p.m. to 8:00 p.m., the amount of water, in liters, in each of tanks P and Q changed at its own constant rate. At 2:00 p.m., the two tanks held equal amounts of water. At 5:00 p.m., tank P held more water than tank Q. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The amount of water in tank P was increasing.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "True when tank P fills, but the facts only say that P gains on Q. Both tanks can drain, with Q draining faster: $P = 100 - 2t$ and $Q = 108 - 6t$ are equal at $t = 2$ and give $90 > 78$ at $t = 5$, while P decreases."
+    },
+    {
+     "key": "B",
+     "text": "The amount of water in tank Q was decreasing.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "True when tank Q drains, but the facts only say that P gains on Q. Both tanks can fill, with P filling faster: $P = 20 + 8t$ and $Q = 30 + 3t$ are equal at $t = 2$ and give $60 > 45$ at $t = 5$, while Q increases."
+    },
+    {
+     "key": "C",
+     "text": "At 8:00 p.m., tank Q held more water than tank P.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Expects the order to flip again later. The gap $P - Q$ is linear, so it is 0 only once (at 2:00 p.m.); it keeps growing, and at 8:00 p.m. tank P holds more than tank Q."
+    },
+    {
+     "key": "D",
+     "text": "At 12:00 p.m., tank Q held more water than tank P.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The difference of two linear functions is itself linear, so the gap $P - Q$ changes at one constant rate: it is 0 at 2:00 p.m. and positive at 5:00 p.m., so it is increasing, and it was negative before 2:00 p.m.",
+    "steps": "The question asks which statement holds for every pair of tanks that fits the facts, so look at what the facts really fix.<br>Let $t$ = the number of hours after 12:00 p.m., so $0 \\le t \\le 8$. Let $P(t)$ and $Q(t)$ = the liters in tanks P and Q, and let $p$ and $q$ = their rates in liters per hour (negative for a draining tank).<br>Let $G(t) = P(t) - Q(t)$, the gap between the tanks. A difference of two linear functions is linear, and its rate is $p - q$.<br>$G(2) = 0$ <span class=\"nt\">(equal amounts at 2:00 p.m.)</span><br>$G(5) > 0$ <span class=\"nt\">(tank P held more at 5:00 p.m.)</span><br>From $t = 2$ to $t = 5$ the gap went from 0 to a positive number, so its rate $p - q$ is positive: the gap increases at a constant rate.<br><b>Choice D.</b> An increasing gap was smaller at earlier times:<br>$G(0) < G(2) = 0$ <span class=\"nt\">(12:00 p.m. comes before 2:00 p.m.)</span><br>So $P(0) < Q(0)$: at 12:00 p.m. tank Q held more water. This holds for every pair, so D must be true.<br><b>Choice C.</b> For the same reason $G(8) > G(5) > 0$, so at 8:00 p.m. tank P held more. C is never true.<br><b>Choices A and B.</b> The facts fix only the sign of $p - q$, not $p$ and $q$ themselves. Both tanks can drain, with Q draining faster; take $P(t) = 100 - 2t$ and $Q(t) = 108 - 6t$:<br>$G(2) = 96 - 96 = 0$ <span class=\"nt\">(equal at 2:00 p.m.)</span><br>$G(5) = 90 - 78 = 12$ <span class=\"nt\">(P holds more at 5:00 p.m.)</span><br>Here tank P is draining, so A is false. Both tanks can also fill, with P filling faster; take $P(t) = 20 + 8t$ and $Q(t) = 30 + 3t$:<br>$G(2) = 36 - 36 = 0$ <span class=\"nt\">(equal at 2:00 p.m.)</span><br>$G(5) = 60 - 45 = 15$ <span class=\"nt\">(P holds more at 5:00 p.m.)</span><br>Here tank Q is filling, so B is false. Neither A nor B has to be true.",
+    "check": "Two more pairs that fit the facts: $P = 30 + 10t$ with $Q = 60 - 5t$ (at $t = 2$: $50 = 50$ ✓; at $t = 5$: $80 > 35$ ✓), and $P = 20 + 8t$ with $Q = 30 + 3t$ (at $t = 2$: $36 = 36$ ✓; at $t = 5$: $60 > 45$ ✓). At $t = 0$ they give $30 < 60$ and $20 < 30$, and the pair in the steps gives $100 < 108$: tank Q held more at 12:00 p.m. every time ✓",
+    "be_careful": "the first example most students picture (tank P filling, tank Q draining) makes A, B, and D all true at once. A and B each need their own counterexample. Only a reason that works for every pair, the increasing gap, shows which statement must be true.",
+    "desmos": "Graphs of examples can show that a statement fails, but no graph shows that a statement always holds, so Desmos is not a route here.",
+    "another_way": "Picture both tanks as lines on one graph. Two different lines cross at most once, and these cross at 2:00 p.m. To the right of the crossing tank P is on top (at 5:00 p.m.), so it stays on top for every later time; to the left of the crossing the order is reversed, so tank Q is on top at 12:00 p.m."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-047",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C6",
+    "A3.C5"
+   ],
+   "family": "HP-E-tier-constant-meaning",
+   "signature": "caterer $32 per guest for the first 40, $25 per guest beyond; C(n) = 25n + 280 for n > 40; interpretation of 280 = 40 x (32 - 25), the extra for the first 40 above $25 each; traps: charge for the first 40 (1,280), the per-guest difference (7), the charge for no guests (rule outside its domain)",
+   "abilities": [
+    "I",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A caterer charges \\$32 per guest for each of the first 40 guests at an event and \\$25 per guest for each guest beyond the first 40. For an event with $n$ guests, where $n > 40$, the total charge, in dollars, is $C(n) = 25n + 280$. Which of the following is the best interpretation of 280 in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The total charge, in dollars, for the first 40 guests",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "The first 40 guests cost $40(32) = 1,280$ dollars, not 280. The rule $25n + 280$ already charges those 40 guests \\$25 each inside $25n$, and 280 is only what they pay on top of that."
+    },
+    {
+     "key": "B",
+     "text": "The amount, in dollars, by which the charge for one of the first 40 guests exceeds the charge for one guest beyond the first 40",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "That amount is $32 - 25 = 7$ dollars, the extra for one guest. The constant is the extra for all of the first 40 guests together: $40(7) = 280$."
+    },
+    {
+     "key": "C",
+     "text": "The total amount, in dollars, by which the charge for the first 40 guests exceeds what they would cost at \\$25 per guest",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The total charge, in dollars, for an event with no guests",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Reads the constant as the value of the rule at $n = 0$. The rule holds only for $n > 40$; an event with no guests costs nothing, and the story has no fee."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Building the rule from the story and simplifying shows that the constant comes from the first tier: $40(32) - 40(25)$, the extra that the first 40 guests pay above \\$25 each.",
+    "steps": "The question asks what the number 280 means, so build the rule from the story and see where 280 comes from.<br>Let $n$ = the number of guests, with $n > 40$, and $C(n)$ = the total charge in dollars.<br>$40(32) = 1,280$ <span class=\"nt\">(the charge for the first 40 guests)</span><br>$n - 40$ <span class=\"nt\">(the number of guests beyond the first 40, each charged \\$25)</span><br>$C(n) = 1,280 + 25(n - 40)$ <span class=\"nt\">(add the two parts)</span><br>$C(n) = 1,280 + 25n - 1,000$ <span class=\"nt\">(distribute 25)</span><br>$C(n) = 25n + 280$ <span class=\"nt\">(combine the constants; this matches the given rule)</span><br>So 280 is $1,280 - 1,000$: the real charge for the first 40 guests minus $40(25)$, what those 40 guests would cost at \\$25 each.<br>Each of the first 40 guests pays $32 - 25 = 7$ dollars more than \\$25, so<br>$40(7) = 280$ <span class=\"nt\">(the extra for the first 40 guests together)</span><br>The term $25n$ charges every guest, the first 40 included, \\$25. The 280 adds what the first 40 guests pay above \\$25 each. That is choice C.",
+    "check": "For 41 guests: $C(41) = 25(41) + 280 = 1,305$, and from the story $40(32) + 25 = 1,305$ ✓. Taking away the extra for the first 40 guests leaves $1,305 - 280 = 1,025 = 41(25)$, every guest at \\$25 ✓",
+    "be_careful": "there is no fee in this story, and the rule holds only for $n > 40$, so its value at $n = 0$ is not a real charge. The constant of a tiered rule is built from the earlier tier.",
+    "desmos": null,
+    "another_way": "Compare with charging every guest \\$25, which would cost $25n$ dollars. The real charge differs only for the first 40 guests, who each pay $32 - 25 = 7$ dollars more, so the real charge is $25n + 40(7) = 25n + 280$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-048",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C6",
+    "A3.C7"
+   ],
+   "family": "HP-E-three-tiers-two-hidden-rates-constant",
+   "signature": "garage: $8 total for the first 2 hours combined, a fixed amount for each of the next 4 hours, another fixed amount after 6 hours, exact time; 5 h $17 (middle tier), 10 h $36; C(h) = mh + b for h > 6; middle rate 3, C(6) = 20, last rate 4, b = -4; SPR",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A parking garage charges a total of \\$8 for the first 2 hours combined, a fixed amount for each of the next 4 hours, and another fixed amount for each hour after the first 6 hours, all charged for the exact time parked. Parking for 5 hours costs \\$17, and parking for 10 hours costs \\$36. For a stay of $h$ hours, where $h > 6$, the cost, in dollars, is $C(h) = mh + b$, where $m$ and $b$ are constants. What is the value of $b$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "20",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "20 is the cost of the first 6 hours, $C(6)$, where the work stopped. The rule for $h > 6$ is $20 + 4(h - 6)$, which simplifies to $4h - 4$, so $b = -4$."
+    },
+    {
+     "value": "-2",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$-2$ comes from one line through the two given stays, $(5, 17)$ and $(10, 36)$: slope $\\frac{19}{5}$, then $17 - \\frac{19}{5}(5) = -2$. The 5-hour stay is in the middle tier, so the two points are not on one line of the plan."
+    }
+   ],
+   "solution": {
+    "key_idea": "Each given stay belongs to its own tier (5 hours fixes the middle rate, 10 hours fixes the last rate), and $b$ is the value of the last tier’s line at $h = 0$, which is built from the earlier tiers.",
+    "steps": "The question asks for $b$ in the rule for stays longer than 6 hours, so the rate of the last tier and the cost of 6 hours are needed.<br>Let $h$ = the number of hours parked, $C(h)$ = the cost in dollars, $u$ = the charge for each hour from 2 to 6 hours, and $m$ = the charge for each hour after 6 hours.<br><b>Step 1: the middle tier.</b> A 5-hour stay is the first 2 hours plus 3 hours of the middle tier:<br>$8 + 3u = 17$ <span class=\"nt\">(first 2 hours plus 3 middle hours)</span><br>$3u = 9$ <span class=\"nt\">(subtract 8 from both sides)</span><br>$u = 3$ <span class=\"nt\">(divide both sides by 3)</span><br><b>Step 2: the cost of 6 hours.</b><br>$C(6) = 8 + 4(3) = 20$ <span class=\"nt\">(first 2 hours plus all 4 middle hours)</span><br><b>Step 3: the last tier.</b> A 10-hour stay is 6 hours plus 4 more hours:<br>$20 + 4m = 36$ <span class=\"nt\">(cost of 6 hours plus 4 hours at $m$ each)</span><br>$4m = 16$ <span class=\"nt\">(subtract 20 from both sides)</span><br>$m = 4$ <span class=\"nt\">(divide both sides by 4)</span><br><b>Step 4: the rule for $h > 6$.</b><br>$C(h) = 20 + 4(h - 6)$ <span class=\"nt\">(cost of 6 hours plus the hours after 6)</span><br>$C(h) = 20 + 4h - 24$ <span class=\"nt\">(distribute 4)</span><br>$C(h) = 4h - 4$ <span class=\"nt\">(combine the constants)</span><br>So $m = 4$ and $b = -4$. The constant is negative because $b$ is where the last tier’s line would be at $h = 0$: that line rises \\$4 per hour, faster than the earlier tiers, so traced back to $h = 0$ it ends below 0. No stay costs a negative amount, because the rule holds only for $h > 6$.",
+    "check": "Ten hours: $4(10) - 4 = 36$ ✓. For 7 hours the rule gives $4(7) - 4 = 24$, and the story gives $8 + 4(3) + 4 = 24$ ✓. The 5-hour stay is in the middle tier: $8 + 3(3) = 17$ ✓",
+    "be_careful": "the 5-hour and 10-hour stays are in different tiers, so the line through $(5, 17)$ and $(10, 36)$ is not the rule for $h > 6$.",
+    "desmos": "Desmos helps only after the tiers are found: graph $y = 4x - 4$ and check that it passes through $(6, 20)$ and $(10, 36)$; its $y$-intercept, $-4$, is $b$.",
+    "another_way": "Compare with charging \\$4 for every hour, which would cost $4h$ dollars. The real garage charges the first 2 hours \\$8 in all, the same as $2(4) = 8$, and charges each of the next 4 hours \\$3 instead of \\$4, which is $4(1) = 4$ dollars less in all. After 6 hours both charge \\$4 per hour, so the real cost is $4h - 4$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-049",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C8",
+    "A3.C4"
+   ],
+   "family": "HP-F-undo-horizontal-shift-signs-unscaled",
+   "signature": "unscaled graph of y = f(x - 3): falling line, positive y-intercept (no value), x-intercept (k, 0) with 0 < k < 3 stated, tick at 3; f(x) = c + dx; must be true about the signs of c and d; key c < 0 and d < 0 (slope kept; f(0) is the shown graph at x = 3)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the linear function $f$, $f(x) = c + dx$, where $c$ and $d$ are constants. The graph of $y = f(x - 3)$ in the $xy$-plane is shown, where $k$ is a constant and $0 < k < 3$.",
+   "stem_after_figure": "Which of the following must be true?",
+   "figures": [
+    {
+     "id": "QB-A3-049-fig1",
+     "file": "figures/QB-A3-049-fig1.svg",
+     "alt": "An xy-plane with axes but no grid and no scale. A straight line falls from upper left to lower right. It crosses the positive y-axis at an unlabeled point and crosses the x-axis at the point labeled (k, 0), which is marked with a dot. A tick mark labeled 3 is on the x-axis to the right of (k, 0); to the right of (k, 0) the line is below the x-axis."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$c > 0$ and $d < 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Reads the $y$-intercept of the shown graph as $c$; moving the shown line 3 units to the right (instead of left) to get the graph of $f$ gives the same wrong sign. The shown $y$-intercept is $f(-3)$. The value $c = f(0)$ is the shown graph at $x = 3$, which is below the $x$-axis."
+    },
+    {
+     "key": "B",
+     "text": "$c < 0$ and $d < 0$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$c < 0$ and $d > 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Believes the shift turns the line the other way. Replacing $x$ with $x - 3$ keeps the coefficient of $x$: $f(x - 3) = dx + (c - 3d)$ has slope $d$, and the shown line falls, so $d$ is negative."
+    },
+    {
+     "key": "D",
+     "text": "$c > 0$ and $d > 0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Combines two misreadings: the shown positive $y$-intercept taken as $c$, and the shift believed to reverse the slope. A sideways move keeps the slope, so $d < 0$, and $c = f(0)$ is the shown graph at $x = 3$, which is negative."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The graph of $y = f(x - 3)$ is the graph of $f$ moved 3 units to the right, so moving does not change the slope, and $f(0)$ is the height of the shown line at $x = 3$, not at $x = 0$.",
+    "steps": "The question asks for the signs of $c$ and $d$. In $f(x) = c + dx$, $c = f(0)$ is the $y$-intercept of the graph of $f$ and $d$ is its slope. The figure shows a different graph, $y = f(x - 3)$, so read each feature of $f$ through it.<br><b>Step 1: the slope $d$.</b> Write the shown graph with $c$ and $d$:<br>$f(x - 3) = c + d(x - 3)$ <span class=\"nt\">(replace $x$ with $x - 3$ in $c + dx$)</span><br>$f(x - 3) = dx + (c - 3d)$ <span class=\"nt\">(distribute and reorder)</span><br>The shown line has slope $d$, the same slope as the graph of $f$: moving a line sideways does not tilt it. The shown line falls from left to right, so $d < 0$.<br><b>Step 2: where the shown graph gives $c$.</b> Find the input that produces $f(0)$:<br>$y = f(3 - 3) = f(0)$ <span class=\"nt\">(substitute $x = 3$ into $y = f(x - 3)$)</span><br>So $c$ is the height of the shown line at $x = 3$, not at $x = 0$.<br><b>Step 3: the sign of $c$.</b> The shown line crosses the $x$-axis at $k$, and $k < 3$. It falls, so to the right of $k$ it is below the $x$-axis. At $x = 3$ it is below the axis, so $f(0) < 0$ and $c < 0$.<br>So $c < 0$ and $d < 0$.<br>The positive $y$-intercept in the figure is the shown graph at $x = 0$, which is $f(0 - 3) = f(-3)$: a value of $f$ at $-3$, not $c$.",
+    "check": "Take $k = \\frac{3}{2}$, with the shown line $y = 3 - 2x$ (it crosses the $x$-axis at $\\frac{3}{2}$). Then $f(x - 3) = 3 - 2x$ for all $x$; replacing $x$ with $x + 3$ gives $f(x) = 3 - 2(x + 3) = -3 - 2x$, so $c = -3$ and $d = -2$, both negative ✓. The shown line at $x = 3$ is $3 - 6 = -3$, which is $c$ ✓",
+    "be_careful": "the positive $y$-intercept in the figure belongs to the graph of $y = f(x - 3)$, not to the graph of $f$; it is the value $f(-3)$.",
+    "desmos": "No numbers are given, so Desmos can only illustrate one example: graph $y = 3 - 2x$ as the shown line and $y = 3 - 2(x + 3)$, the same line moved 3 units left (the graph of $f$). The second line crosses the $y$-axis at $-3$. The reason for every such line is in the steps.",
+    "another_way": "Move the shown line back to the graph of $f$. The graph of $y = f(x - 3)$ is the graph of $f$ moved 3 units to the right, so the graph of $f$ is the shown line moved 3 units to the left. Its $x$-intercept moves from $k$ to $k - 3$, which is negative because $k < 3$. A falling line that crosses the $x$-axis to the left of the origin is already below the $x$-axis when it reaches the $y$-axis, so its $y$-intercept $c$ is negative."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-A3-050",
+   "version": 1,
+   "skill": {
+    "code": "A3",
+    "domain": "alg",
+    "cb_skill": "Linear functions"
+   },
+   "level": "H+",
+   "concepts": [
+    "A3.C1",
+    "A3.C2"
+   ],
+   "family": "HP-F-range-of-f0-from-intercept-interval",
+   "signature": "f(4) = 6, x-intercept (r, 0) with 1 < r < 3; greatest integer value of f(0): f(0) = 6 - 24/(4 - r), strictly between -18 and -2; key -3 at r = 4/3; traps -2 (excluded end r = 1), -6 (the whole-number intercept r = 2); SPR",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For the linear function $f$, $f(4) = 6$. In the $xy$-plane, the graph of $y = f(x)$ has an $x$-intercept at $(r, 0)$, where $1 < r < 3$. What is the greatest integer that could be the value of $f(0)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-2",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "$-2$ is $f(0)$ when $r = 1$, the end of the interval. The condition is $1 < r < 3$, so $r = 1$ is not allowed and $f(0)$ only gets close to $-2$. The greatest integer it actually reaches is $-3$, at $r = \\frac{4}{3}$."
+    },
+    {
+     "value": "-6",
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "$-6$ is $f(0)$ when $r = 2$, the only whole number between 1 and 3. The intercept does not have to be a whole number, and $r = \\frac{4}{3}$ gives $f(0) = -3$, which is greater."
+    }
+   ],
+   "solution": {
+    "key_idea": "The value of $f(0)$ depends on where the $x$-intercept is, and as $r$ moves toward 1 it climbs toward $-2$ without reaching it, so the greatest integer it can equal is the next integer below $-2$.",
+    "steps": "The question asks for the greatest integer that $f(0)$ can equal. The $x$-intercept $r$ is not fixed, so first write $f(0)$ in terms of $r$, then find all the values it can take.<br>Let $r$ = the $x$-coordinate of the $x$-intercept. The graph passes through $(r, 0)$ and $(4, 6)$.<br>slope: $\\frac{6 - 0}{4 - r} = \\frac{6}{4 - r}$ <span class=\"nt\">(change in $y$ divided by change in $x$)</span><br>$f(0) = 6 - 4  \\cdot  \\frac{6}{4 - r}$ <span class=\"nt\">(start at $(4, 6)$ and go 4 units left)</span><br>$f(0) = 6 - \\frac{24}{4 - r}$ <span class=\"nt\">(multiply)</span><br><b>Step 2: the possible values.</b> Since $1 < r < 3$, the denominator $4 - r$ is between 1 and 3:<br>$1 < 4 - r < 3$ <span class=\"nt\">(subtract each part of $1 < r < 3$ from 4 and reverse the order)</span><br>$8 < \\frac{24}{4 - r} < 24$ <span class=\"nt\">(a larger denominator gives a smaller fraction: 24 divided by 3 is 8, and 24 divided by 1 is 24)</span><br>$-18 < f(0) < -2$ <span class=\"nt\">(subtract each part from 6 and reverse the order)</span><br>So $f(0)$ is greater than $-18$ and less than $-2$. It never equals $-2$, which would need $r = 1$, and $r$ must be greater than 1.<br><b>Step 3: the greatest integer.</b> The greatest integer less than $-2$ is $-3$. Check that $f(0)$ really reaches it:<br>$6 - \\frac{24}{4 - r} = -3$ <span class=\"nt\">(set $f(0)$ equal to $-3$)</span><br>$\\frac{24}{4 - r} = 9$ <span class=\"nt\">(subtract 6 from both sides, then multiply both sides by $-1$)</span><br>$4 - r = \\frac{8}{3}$ <span class=\"nt\">($24 \\div 9$)</span><br>$r = \\frac{4}{3}$ <span class=\"nt\">(between 1 and 3 ✓)</span><br>So the greatest integer value of $f(0)$ is $-3$.",
+    "check": "With $r = \\frac{4}{3}$: the slope is $6 \\div \\frac{8}{3} = \\frac{9}{4}$, so $f(x) = \\frac{9}{4}x - 3$. Then $f(4) = 9 - 3 = 6$ ✓, $f(\\frac{4}{3}) = 3 - 3 = 0$ ✓, and $f(0) = -3$ ✓",
+    "be_careful": "the end value $r = 1$ gives $f(0) = -2$, but $r$ must be strictly greater than 1, so $-2$ is never reached; and the one whole-number intercept, $r = 2$, gives only $-6$.",
+    "desmos": "Use $x$ in place of $r$ and type <b>y = 6 - 24/(4 - x) {1 < x < 3}</b>: the curve stays between $-18$ and $-2$, rising toward $-2$ as $x$ moves toward 1 without reaching it. Adding $y = -3$ shows that the curve reaches $-3$ at $x \\approx 1.33$, inside the interval.",
+    "another_way": "Think of the line turning around the point $(4, 6)$. Moving the $x$-intercept left, toward 1, makes the line less steep, so it drops less between $x = 4$ and $x = 0$, and $f(0)$ is higher. The least steep line would pass through $(1, 0)$ with slope 2 and give $f(0) = 6 - 8 = -2$, but $r = 1$ is not allowed, so $f(0)$ stays below $-2$. The value $-3$ comes from the slope $\\frac{9}{4}$, which is between 2 and 6."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

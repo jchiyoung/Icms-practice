@@ -1,0 +1,3459 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "G4",
+ "skill": "Circles",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-G4-001",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "highest-point-from-standard-form",
+   "signature": "(x-3)^2+(y+5)^2=49 -> center (3,-5), r 7 -> top y = 2; traps 12 (sign), 7 (r), 14 (diameter)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graph of $(x - 3)^{2} + (y + 5)^{2} = 49$ is a circle. What is the greatest $y$-coordinate of any point on the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "7 is the radius. The top of the circle is 7 above the center, and the center is not on the $x$-axis."
+    },
+    {
+     "key": "C",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This uses $5$ as the center\\'s $y$-coordinate. $(y + 5)^{2}$ is zero when $y = -5$."
+    },
+    {
+     "key": "D",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "14 is the diameter, not a coordinate."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The highest point of a circle is straight above the center, one radius up.",
+    "steps": "What does the question ask? The $y$-coordinate of the top of the circle.<br>Center $(3, -5)$ <span class=\"nt\">(each square is zero at the center: $x = 3$, $y = -5$)</span><br>$r^{2} = 49$, so $r = 7$ <span class=\"nt\">(the right side is the radius squared)</span><br>Top point: $(3, -5 + 7) = (3, 2)$ <span class=\"nt\">(move up one radius)</span><br>Greatest $y$-coordinate $= 2$ <span class=\"nt\">(finish line)</span>",
+    "check": "$(3 - 3)^{2} + (2 + 5)^{2} = 0 + 49 = 49$ ✓",
+    "be_careful": "The sign inside the parentheses is the opposite of the center\\'s coordinate: $(y + 5)$ means $y = -5$.",
+    "desmos": "Graphing the equation and clicking the top point also works.",
+    "another_way": "Set $x = 3$: $(y + 5)^{2} = 49$, so $y + 5 = \\pm 7$ and $y = 2$ or $y = -12$. The greater value is 2."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-002",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "equation-from-diameter-endpoints",
+   "signature": "diameter endpoints (-2,3),(6,9) -> center (2,6), diameter 10, r^2 25; traps =100, sign flip, half-difference center",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the points $(-2, 3)$ and $(6, 9)$ are the endpoints of a diameter of a circle. Which equation represents the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(x - 2)^{2} + (y - 6)^{2} = 100$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "100 is the diameter squared. The equation needs the radius squared, $5^{2}$."
+    },
+    {
+     "key": "B",
+     "text": "$(x + 2)^{2} + (y + 6)^{2} = 25$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This center is $(-2, -6)$. The signs in the equation are opposite to the center\\'s coordinates."
+    },
+    {
+     "key": "C",
+     "text": "$(x - 4)^{2} + (y - 3)^{2} = 25$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "$(4, 3)$ is half the difference of the endpoints. The center is the average of the endpoints."
+    },
+    {
+     "key": "D",
+     "text": "$(x - 2)^{2} + (y - 6)^{2} = 25$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The center is the midpoint of the diameter, and the radius is half the diameter.",
+    "steps": "What does the question ask? The center and $r^{2}$.<br>Center $= (\\frac{-2 + 6}{2}, \\frac{3 + 9}{2}) = (2, 6)$ <span class=\"nt\">(midpoint of the diameter)</span><br>Diameter $= \\sqrt{(6 - (-2))^{2} + (9 - 3)^{2}} = \\sqrt{64 + 36} = 10$ <span class=\"nt\">(distance formula)</span><br>$r = 5$, so $r^{2} = 25$ <span class=\"nt\">(half the diameter)</span><br>$(x - 2)^{2} + (y - 6)^{2} = 25$ <span class=\"nt\">(standard form)</span>",
+    "check": "$(6, 9)$: $4^{2} + 3^{2} = 25$ ✓ and $(-2, 3)$: $(-4)^{2} + (-3)^{2} = 25$ ✓",
+    "be_careful": "The right side is $r^{2}$, not the diameter and not $r$.",
+    "desmos": "Graph the choices and look for the circle through both points.",
+    "another_way": "The radius is the distance from the center $(2, 6)$ to $(6, 9)$: $\\sqrt{16 + 9} = 5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-003",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C3"
+   ],
+   "family": "arc-length-degree-fraction",
+   "signature": "r 9, central angle 80 -> 80/360 * 18 pi = 4 pi; traps 2 pi (pi r), 8 pi (diameter as r), 18 pi (sector area)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A circle has a radius of 9. A central angle of 80° intercepts an arc of the circle. What is the length of this arc?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This uses $\\pi r = 9\\pi$ as the circumference. The circumference is $2\\pi r = 18\\pi$."
+    },
+    {
+     "key": "B",
+     "text": "$4\\pi$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$8\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This uses 18 as the radius."
+    },
+    {
+     "key": "D",
+     "text": "$18\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This takes $\\frac{80}{360}$ of the area $81\\pi$. Arc length is part of the circumference."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "An 80° arc is $\\frac{80}{360}$ of the whole circle, so its length is that fraction of the circumference.",
+    "steps": "What does the question ask? The arc length.<br>Circumference $= 2\\pi(9) = 18\\pi$ <span class=\"nt\">(whole circle)</span><br>Fraction of the circle $= \\frac{80}{360} = \\frac{2}{9}$ <span class=\"nt\">(central angle over 360)</span><br>Arc $= \\frac{2}{9}(18\\pi) = 4\\pi$ <span class=\"nt\">(fraction of the circumference)</span>",
+    "check": "$4\\pi$ is less than a quarter of $18\\pi$ ($4.5\\pi$), and 80° is less than 90° ✓",
+    "be_careful": "Use the circumference, $2\\pi r$, not the area, $\\pi r^{2}$.",
+    "desmos": "Not needed.",
+    "another_way": "In radians, $80° = \\frac{4\\pi}{9}$, and arc $= r\\theta = 9 \\cdot \\frac{4\\pi}{9} = 4\\pi$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-004",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C4"
+   ],
+   "family": "degrees-to-radian-coefficient",
+   "signature": "225 deg = 5 pi/4 -> k = 5/4; traps 4/5 (inverted), 5/2 (divided by 90)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "An angle has a measure of 225°. Its measure in radians is $k\\pi$. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5/4",
+      "1.25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4/5",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This inverts the conversion: it computes $\\frac{180}{225}$."
+    },
+    {
+     "value": "5/2",
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This treats 90° as $\\pi$ radians. A half-turn, 180°, is $\\pi$ radians."
+    }
+   ],
+   "solution": {
+    "key_idea": "$\\pi$ radians is a half-turn, 180°, so divide the degree measure by 180 to count half-turns.",
+    "steps": "What does the question ask? The number $k$ of half-turns in 225°.<br>$180° = \\pi$ radians <span class=\"nt\">(the conversion fact)</span><br>$225° = \\frac{225}{180}\\pi$ radians <span class=\"nt\">(divide by 180 to get the multiple of pi)</span><br>$\\frac{225}{180} = \\frac{5}{4}$ <span class=\"nt\">(simplify by 45)</span><br>$k = \\frac{5}{4}$ <span class=\"nt\">(finish line)</span>",
+    "check": "$\\frac{5}{4}\\pi \\cdot \\frac{180°}{\\pi} = 225°$ ✓",
+    "be_careful": "225° is more than a half-turn, so $k$ must be greater than 1.",
+    "desmos": "Not needed.",
+    "another_way": "$225° = 180° + 45° = \\pi + \\frac{\\pi}{4} = \\frac{5\\pi}{4}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-005",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C5"
+   ],
+   "family": "tangent-length-right-triangle",
+   "signature": "r 8, OP 17, PT tangent -> PT 15; traps 9 (17-8), 25 (17+8), sqrt353 (added squares)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Point $P$ is outside a circle with center $O$ and radius 8. A line through $P$ is tangent to the circle at point $T$. If $OP = 17$, what is the length of $\\overline{PT}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts the lengths. The three lengths form a right triangle, so the Pythagorean theorem is needed."
+    },
+    {
+     "key": "B",
+     "text": "$15$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\sqrt{353}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the squares as if $\\overline{OP}$ were a leg. $\\overline{OP}$ is across from the right angle, so it is the hypotenuse."
+    },
+    {
+     "key": "D",
+     "text": "$25$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the two lengths."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A radius drawn to a point of tangency is perpendicular to the tangent line, so triangle $OTP$ has a right angle at $T$.",
+    "steps": "What does the question ask? The tangent segment $PT$.<br>$\\angle  OTP = 90°$ <span class=\"nt\">(radius to the point of tangency is perpendicular to the tangent)</span><br>$OT^{2} + PT^{2} = OP^{2}$ <span class=\"nt\">(Pythagorean theorem, OP is the hypotenuse)</span><br>$64 + PT^{2} = 289$ <span class=\"nt\">(OT = 8, OP = 17)</span><br>$PT^{2} = 225$, so $PT = 15$ <span class=\"nt\">(square root)</span>",
+    "check": "$8^{2} + 15^{2} = 64 + 225 = 289 = 17^{2}$ ✓",
+    "be_careful": "$\\overline{OP}$ is opposite the right angle at $T$, so it is the longest side.",
+    "desmos": "Not needed.",
+    "another_way": "Recognize the 8, 15, 17 right triangle."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-006",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "constant-from-point-on-circle",
+   "signature": "(x-1)^2+(y+2)^2=k through (5,1) -> 16+9 = 25; traps 5 (r), 7 (no squares), 37 (sign)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graph of $(x - 1)^{2} + (y + 2)^{2} = k$, where $k$ is a constant, is a circle that passes through the point $(5, 1)$. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "5 is the radius. The constant $k$ is the radius squared."
+    },
+    {
+     "key": "B",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This adds $4 + 3$ without squaring."
+    },
+    {
+     "key": "C",
+     "text": "$25$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$37$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This substitutes into $(x + 1)^{2} + (y - 2)^{2}$, with both signs flipped: $36 + 1$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A point is on the circle exactly when its coordinates make the equation true.",
+    "steps": "What does the question ask? The constant $k$.<br>$(5 - 1)^{2} + (1 + 2)^{2} = k$ <span class=\"nt\">(substitute x = 5, y = 1)</span><br>$16 + 9 = k$ <span class=\"nt\">(square each part)</span><br>$k = 25$ <span class=\"nt\">(add)</span><br>Why this works: a point lies on a circle exactly when its coordinates make the equation true.",
+    "check": "The radius is $\\sqrt{25} = 5$, and the distance from the center $(1, -2)$ to $(5, 1)$ is $\\sqrt{16 + 9} = 5$ ✓",
+    "be_careful": "Here $k$ is $r^{2}$, not $r$.",
+    "desmos": "A slider for $k$ works, but substituting is faster.",
+    "another_way": "$k$ is the squared distance from the center $(1, -2)$ to the point."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-007",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C6"
+   ],
+   "family": "chord-from-distance-to-center",
+   "signature": "r 13, chord 5 from center -> half chord 12 -> chord 24; traps 12 (half), 8, 18",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A chord of a circle with radius 13 is at a distance of 5 from the center of the circle. What is the length of the chord?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts $13 - 5$. The radius, the distance, and half the chord form a right triangle."
+    },
+    {
+     "key": "B",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "12 is half the chord. The perpendicular from the center cuts the chord into two equal halves."
+    },
+    {
+     "key": "C",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds $13 + 5$."
+    },
+    {
+     "key": "D",
+     "text": "$24$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The perpendicular from the center to a chord bisects the chord, which makes a right triangle with the radius as the hypotenuse.",
+    "steps": "What does the question ask? The full chord length.<br>Right triangle: legs 5 and half the chord, hypotenuse 13 <span class=\"nt\">(radius to an endpoint of the chord)</span><br>$(\\text{half})^{2} = 13^{2} - 5^{2} = 169 - 25 = 144$ <span class=\"nt\">(Pythagorean theorem)</span><br>Half $= 12$ <span class=\"nt\">(square root)</span><br>Chord $= 2(12) = 24$ <span class=\"nt\">(two equal halves)</span>",
+    "check": "$5^{2} + 12^{2} = 13^{2}$ ✓ and $24 < 26$, the diameter ✓",
+    "be_careful": "Double the half-chord at the end.",
+    "desmos": "Not needed.",
+    "another_way": "Place the center at the origin with the chord on $y = 5$: $x^{2} + 25 = 169$ gives $x = \\pm 12$, so the chord runs from $-12$ to 12."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-008",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C2"
+   ],
+   "family": "radius-from-general-form-no-constant",
+   "signature": "x^2+y^2-6x+8y=0 -> (x-3)^2+(y+4)^2=25 -> r 5; traps sqrt14, 10 (not halved), 25",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A circle in the $xy$-plane is described by $x^{2} + y^{2} - 6x + 8y = 0$. What is the length of its radius?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\sqrt{14}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the coefficients, $6 + 8$. Completing the square uses half of each coefficient, squared."
+    },
+    {
+     "key": "B",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This squares 6 and 8 without halving them first: $\\sqrt{36 + 64}$."
+    },
+    {
+     "key": "D",
+     "text": "$25$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "25 is $r^{2}$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Complete the square in $x$ and in $y$; the number left on the right side is $r^{2}$.",
+    "steps": "What does the question ask? The radius $r$.<br>$(x^{2} - 6x + 9) + (y^{2} + 8y + 16) = 0 + 9 + 16$ <span class=\"nt\">(add half of each coefficient, squared, to both sides)</span><br>$(x - 3)^{2} + (y + 4)^{2} = 25$ <span class=\"nt\">(factor each group)</span><br>$r^{2} = 25$, so $r = 5$ <span class=\"nt\">(right side is the radius squared)</span>",
+    "check": "The origin satisfies the original equation, and its distance to the center $(3, -4)$ is $\\sqrt{9 + 16} = 5$ ✓",
+    "be_careful": "Whatever is added on the left must also be added on the right.",
+    "desmos": "Desmos graphs the circle, but the radius still has to be read off carefully.",
+    "another_way": "The equation has no constant term, so the circle passes through $(0, 0)$; the radius is the distance from $(0, 0)$ to the center $(3, -4)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-009",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C3"
+   ],
+   "family": "central-angle-from-arc",
+   "signature": "r 12, arc 6 pi -> circumference 24 pi -> 1/4 -> 90 deg; trap 180 (pi r)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A circle has a radius of 12. An arc of the circle has a length of $6\\pi$. What is the measure, in degrees, of the central angle that intercepts this arc?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "90"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "180",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This uses $12\\pi$ as the circumference. The circumference is $2\\pi r = 24\\pi$."
+    },
+    {
+     "value": "45",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This uses 24 as the radius, so the circumference would be $48\\pi$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The arc is a fraction of the circumference, and the central angle is the same fraction of 360°.",
+    "steps": "What does the question ask? The central angle in degrees.<br>Circumference $= 2\\pi(12) = 24\\pi$ <span class=\"nt\">(whole circle)</span><br>Fraction $= \\frac{6\\pi}{24\\pi} = \\frac{1}{4}$ <span class=\"nt\">(arc over circumference)</span><br>Angle $= \\frac{1}{4}(360°) = 90°$ <span class=\"nt\">(same fraction of a full turn)</span>",
+    "check": "$\\frac{90}{360}(24\\pi) = 6\\pi$ ✓",
+    "be_careful": "Compare the arc with the circumference $2\\pi r$, not with $\\pi r$.",
+    "desmos": "Not needed.",
+    "another_way": "In radians, $\\theta = \\frac{\\text{arc}}{r} = \\frac{6\\pi}{12} = \\frac{\\pi}{2}$, which is 90°."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-010",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C4"
+   ],
+   "family": "unit-circle-x-second-quadrant",
+   "signature": "angle 5pi/6 -> (-sqrt3/2, 1/2) -> x = -sqrt3/2; traps -1/2 (swap), 1/2, sqrt3/2 (sign)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, an angle in standard position has measure $\\frac{5\\pi}{6}$ radians. Its terminal side intersects the circle $x^{2} + y^{2} = 1$ at point $P$. What is the $x$-coordinate of $P$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-\\frac{\\sqrt{3}}{2}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$-\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses the sine value for the cosine. The $x$-coordinate is the cosine."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{1}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{1}{2}$ is the $y$-coordinate of $P$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{\\sqrt{3}}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This ignores the quadrant. $\\frac{5\\pi}{6}$ is in Quadrant II, where $x$ is negative."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "$\\frac{5\\pi}{6}$ is $150°$, which is $30°$ short of a half-turn. The point mirrors the $30°$ point across the $y$-axis.",
+    "steps": "What does the question ask? $\\cos \\frac{5\\pi}{6}$, the $x$-coordinate.<br>$\\frac{5\\pi}{6} = \\frac{5}{6}(180°) = 150°$ <span class=\"nt\">(convert to degrees)</span><br>Reference angle $180° - 150° = 30°$ <span class=\"nt\">(distance from the negative x-axis)</span><br>The $30°$ point is $(\\frac{\\sqrt{3}}{2}, \\frac{1}{2})$ <span class=\"nt\">(30-60-90 triangle with hypotenuse 1)</span><br>In Quadrant II, $x < 0$: $P = (-\\frac{\\sqrt{3}}{2}, \\frac{1}{2})$ <span class=\"nt\">(reflect across the y-axis)</span>",
+    "check": "$(-\\frac{\\sqrt{3}}{2})^{2} + (\\frac{1}{2})^{2} = \\frac{3}{4} + \\frac{1}{4} = 1$ ✓",
+    "be_careful": "The $x$-coordinate is the cosine and the $y$-coordinate is the sine.",
+    "desmos": "Typing cos(5π/6) in radian mode gives $-0.866$; the choices must still be matched.",
+    "another_way": "The 30° point and the 150° point have the same height, $\\frac{1}{2}$, and opposite $x$-coordinates."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-011",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "point-inside-circle",
+   "signature": "(x-2)^2+(y-1)^2=20: (5,-2) gives 18 < 20 inside; traps (6,3) on, (2,-4) sign, (-3,0) compares with 20 not sqrt20",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graph of $(x - 2)^{2} + (y - 1)^{2} = 20$ is a circle. Which of the following points lies inside the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(6, 3)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$16 + 4 = 20$, so $(6, 3)$ is on the circle, not inside it."
+    },
+    {
+     "key": "B",
+     "text": "$(2, -4)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "With the correct center $(2, 1)$: $0 + 25 = 25 > 20$, outside. Flipping the sign of the center gives $9$, which looks inside."
+    },
+    {
+     "key": "C",
+     "text": "$(5, -2)$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$(-3, 0)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "$25 + 1 = 26 > 20$, outside. Its distance $\\sqrt{26} \\approx 5.1$ is less than 20, but the radius is $\\sqrt{20} \\approx 4.5$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A point is inside when its squared distance from the center is less than $r^{2} = 20$.",
+    "steps": "What does the question ask? The point whose value of $(x - 2)^{2} + (y - 1)^{2}$ is less than 20.<br>$(6, 3)$: $16 + 4 = 20$ <span class=\"nt\">(on the circle)</span><br>$(2, -4)$: $0 + 25 = 25$ <span class=\"nt\">(outside)</span><br>$(5, -2)$: $9 + 9 = 18 < 20$ <span class=\"nt\">(inside)</span><br>$(-3, 0)$: $25 + 1 = 26$ <span class=\"nt\">(outside)</span>",
+    "check": "The distance from $(2, 1)$ to $(5, -2)$ is $\\sqrt{18} \\approx 4.24 < \\sqrt{20} \\approx 4.47$ ✓",
+    "be_careful": "Compare with $r^{2}$ when using squared distances, or compare the distance with $r = \\sqrt{20}$.",
+    "desmos": "Graph the circle and plot the four points.",
+    "another_way": "Graph $(x - 2)^{2} + (y - 1)^{2} < 20$; the shaded region contains only $(5, -2)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-012",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "tangent-to-x-axis-area",
+   "signature": "center (-4,6) tangent to x-axis -> r 6 -> area 36 pi; traps 12 pi (circumference), 16 pi (|x|), 52 pi (distance to origin)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, a circle has center $(-4, 6)$ and is tangent to the $x$-axis. What is the area of the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "$12\\pi$ is the circumference."
+    },
+    {
+     "key": "B",
+     "text": "$16\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the distance to the $y$-axis, 4. The circle touches the $x$-axis."
+    },
+    {
+     "key": "C",
+     "text": "$36\\pi$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$52\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the squared distance from the center to the origin, $16 + 36$. The circle does not pass through the origin."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Tangent to the $x$-axis means the circle just touches the axis, so the radius is the vertical distance from the center to the axis.",
+    "steps": "What does the question ask? $\\pi r^{2}$.<br>$r = 6$ <span class=\"nt\">(the center is 6 units above the x-axis)</span><br>Area $= \\pi(6)^{2} = 36\\pi$ <span class=\"nt\">(area formula)</span><br>Why this works: a tangent line touches the circle one radius away from the center.",
+    "check": "The circle $(x + 4)^{2} + (y - 6)^{2} = 36$ meets $y = 0$ only where $(x + 4)^{2} = 0$, one point ✓",
+    "be_careful": "The distance to the $x$-axis is the $y$-coordinate of the center, not the $x$-coordinate.",
+    "desmos": "Not needed.",
+    "another_way": "The lowest point of the circle is $(-4, 0)$ on the axis, 6 below the center."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-013",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C3"
+   ],
+   "family": "figure-minor-arc-length",
+   "signature": "figure: r 10, angle AOB 72 -> 4 pi; traps 2 pi, 16 pi (major), 20 pi (circumference)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, $O$ is the center of the circle, the radius is 10, and the measure of angle $AOB$ is 72°.",
+   "stem_after_figure": "What is the length of minor arc $AB$?",
+   "figures": [
+    {
+     "id": "QB-G4-013-fig1",
+     "file": "figures/QB-G4-013-fig1.svg",
+     "alt": "A circle with center O. Radii OA and OB are drawn; OA is labeled 10. The angle AOB between them is marked 72 degrees."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This uses $10\\pi$ as the circumference, as if 10 were the diameter."
+    },
+    {
+     "key": "B",
+     "text": "$4\\pi$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$16\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$16\\pi$ is the major arc, $\\frac{288}{360}$ of the circle."
+    },
+    {
+     "key": "D",
+     "text": "$20\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$20\\pi$ is the whole circumference; the 72° angle is not used."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The minor arc is $\\frac{72}{360} = \\frac{1}{5}$ of the circle.",
+    "steps": "What does the question ask? The short arc from $A$ to $B$.<br>Circumference $= 2\\pi(10) = 20\\pi$ <span class=\"nt\">(whole circle)</span><br>$\\frac{72}{360} = \\frac{1}{5}$ <span class=\"nt\">(fraction of a full turn)</span><br>Minor arc $= \\frac{1}{5}(20\\pi) = 4\\pi$ <span class=\"nt\">(fraction of the circumference)</span>",
+    "check": "Minor arc $+$ major arc $= 4\\pi + 16\\pi = 20\\pi$ ✓",
+    "be_careful": "Minor arc means the shorter arc, the one inside the 72° angle.",
+    "desmos": "Not needed.",
+    "another_way": "$72° = \\frac{2\\pi}{5}$ radians, and $r\\theta = 10 \\cdot \\frac{2\\pi}{5} = 4\\pi$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-014",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "equation-from-center-and-point",
+   "signature": "center (-1,4) through (2,0) -> r^2 = 9 + 16 = 25; traps sign flip, =5, =17 (sign in substitution)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, a circle has center $(-1, 4)$ and passes through the point $(2, 0)$. Which equation represents the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(x - 1)^{2} + (y + 4)^{2} = 25$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This circle has center $(1, -4)$. The signs in the parentheses are opposite to the center\\'s coordinates."
+    },
+    {
+     "key": "B",
+     "text": "$(x + 1)^{2} + (y - 4)^{2} = 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "5 is the radius; the right side must be $r^{2}$."
+    },
+    {
+     "key": "C",
+     "text": "$(x + 1)^{2} + (y - 4)^{2} = 17$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D1",
+     "feedback": "17 comes from $(2 - 1)^{2} + (0 + 4)^{2}$, the center\\'s signs flipped during substitution."
+    },
+    {
+     "key": "D",
+     "text": "$(x + 1)^{2} + (y - 4)^{2} = 25$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$r^{2}$ is the squared distance from the center to any point on the circle.",
+    "steps": "What does the question ask? The center form and $r^{2}$.<br>$(x + 1)^{2} + (y - 4)^{2} = r^{2}$ <span class=\"nt\">(center (-1, 4))</span><br>$r^{2} = (2 + 1)^{2} + (0 - 4)^{2}$ <span class=\"nt\">(substitute the point (2, 0))</span><br>$r^{2} = 9 + 16 = 25$ <span class=\"nt\">(square and add)</span><br>$(x + 1)^{2} + (y - 4)^{2} = 25$ <span class=\"nt\">(standard form)</span>",
+    "check": "$(2 + 1)^{2} + (0 - 4)^{2} = 25$ ✓",
+    "be_careful": "$x + 1$ goes with the center $x = -1$.",
+    "desmos": "Graph each choice with the point $(2, 0)$.",
+    "another_way": "The center and the point make a 3, 4, 5 right triangle, so $r = 5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-015",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "circumference-from-nonsquare-r2",
+   "signature": "x^2+(y-3)^2=50 -> r 5 sqrt2 -> C = 10 sqrt2 pi; traps 20 sqrt2 pi, 50 pi (area), 100 pi",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "What is the circumference of the circle defined by $x^{2} + (y - 3)^{2} = 50$ in the $xy$-plane?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$10\\sqrt{2}\\pi$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$20\\sqrt{2}\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This uses $10\\sqrt{2}$, the diameter, as the radius."
+    },
+    {
+     "key": "C",
+     "text": "$50\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "$50\\pi$ is the area, $\\pi r^{2}$."
+    },
+    {
+     "key": "D",
+     "text": "$100\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This uses 50 as the radius in $2\\pi r$. 50 is $r^{2}$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The right side 50 is $r^{2}$, so $r = \\sqrt{50} = 5\\sqrt{2}$.",
+    "steps": "What does the question ask? $2\\pi r$.<br>$r^{2} = 50$ <span class=\"nt\">(right side of standard form)</span><br>$r = \\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$ <span class=\"nt\">(simplify the root)</span><br>Circumference $= 2\\pi(5\\sqrt{2}) = 10\\sqrt{2}\\pi$ <span class=\"nt\">(circumference formula)</span><br>Why this works: the right side of standard form is $r^{2}$, not $r$.",
+    "check": "$(5\\sqrt{2})^{2} = 50$ ✓",
+    "be_careful": "50 is not the radius. Take the square root first.",
+    "desmos": "Not needed.",
+    "another_way": "Area is $50\\pi$; $C = 2\\pi r$ with $r = \\sqrt{50}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-016",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C4"
+   ],
+   "family": "radian-from-arc-over-radius",
+   "signature": "arc 15, r 6 -> theta = 2.5 rad; traps 1.25 (diameter), 0.4 (inverted)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In a circle with radius 6, a central angle intercepts an arc of length 15. What is the measure, in radians, of the central angle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5/2",
+      "2.5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1.25",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This divides by the diameter, 12."
+    },
+    {
+     "value": ".4",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides the radius by the arc. The angle in radians is arc over radius."
+    }
+   ],
+   "solution": {
+    "key_idea": "Radian measure counts how many radii fit along the arc: $\\theta = \\frac{\\text{arc}}{r}$.",
+    "steps": "What does the question ask? $\\theta$ in radians.<br>arc $= r\\theta$ <span class=\"nt\">(definition of radian measure)</span><br>$15 = 6\\theta$ <span class=\"nt\">(substitute)</span><br>$\\theta = \\frac{15}{6} = \\frac{5}{2}$ <span class=\"nt\">(divide by 6)</span><br>Why this works: the angle in radians counts how many radii fit along the arc.",
+    "check": "$6 \\cdot 2.5 = 15$ ✓; 2.5 radians is about 143°, less than a half-turn, and the arc 15 is less than half of $12\\pi \\approx 37.7$ ✓",
+    "be_careful": "Divide by the radius, not the diameter.",
+    "desmos": "Not needed.",
+    "another_way": "The arc is $\\frac{15}{12\\pi}$ of the circle, and $\\frac{15}{12\\pi}(2\\pi) = \\frac{15}{6}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-017",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "which-point-on-circle",
+   "signature": "(x+5)^2+(y-2)^2=9: (-5,5) on; traps (-5,11) r^2 as r, (5,5) sign, (-2,5) moved 3 both ways",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graph of $(x + 5)^{2} + (y - 2)^{2} = 9$ is a circle. Which of the following points lies on the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(-5, 11)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This moves 9 units up from the center. The radius is $\\sqrt{9} = 3$."
+    },
+    {
+     "key": "B",
+     "text": "$(5, 5)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This uses the center $(5, 2)$. $(x + 5)^{2}$ is zero when $x = -5$."
+    },
+    {
+     "key": "C",
+     "text": "$(-2, 5)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This moves 3 right and 3 up. Its squared distance is $9 + 9 = 18$, not 9."
+    },
+    {
+     "key": "D",
+     "text": "$(-5, 5)$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The center is $(-5, 2)$ and the radius is 3, so a point 3 straight up from the center is on the circle.",
+    "steps": "What does the question ask? The point that makes the equation true.<br>Center $(-5, 2)$, $r = 3$ <span class=\"nt\">(standard form, r squared = 9)</span><br>$(-5, 5)$: $0^{2} + 3^{2} = 9$ <span class=\"nt\">(substitute: true)</span><br>$(-5, 11)$: $0 + 81 = 81$; $(5, 5)$: $100 + 9 = 109$; $(-2, 5)$: $9 + 9 = 18$ <span class=\"nt\">(the other three fail)</span>",
+    "check": "$(-5, 5)$ is 3 above the center ✓",
+    "be_careful": "Moving diagonally by 3 in each direction goes farther than 3.",
+    "desmos": "Graph the circle and the points.",
+    "another_way": "The four points on the circle straight up, down, left, and right of the center are $(-5, 5)$, $(-5, -1)$, $(-8, 2)$, $(-2, 2)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-018",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C6"
+   ],
+   "family": "horizontal-line-chord-length",
+   "signature": "(x-3)^2+(y-2)^2=25 and y=5 -> (x-3)^2 = 16 -> x = -1, 7 -> 8; traps 4 (half), 10 (diameter)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, the line $y = 5$ intersects the circle $(x - 3)^{2} + (y - 2)^{2} = 25$ at two points. What is the distance between these two points?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "4 is the distance from each point to $x = 3$, half the chord."
+    },
+    {
+     "value": "10",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "10 is the diameter. The line $y = 5$ does not pass through the center."
+    }
+   ],
+   "solution": {
+    "key_idea": "Substitute $y = 5$ and solve for the two $x$-values; the distance is their difference.",
+    "steps": "What does the question ask? The distance between the two intersection points.<br>$(x - 3)^{2} + (5 - 2)^{2} = 25$ <span class=\"nt\">(substitute y = 5)</span><br>$(x - 3)^{2} = 16$ <span class=\"nt\">(subtract 9)</span><br>$x - 3 = \\pm 4$, so $x = -1$ or $x = 7$ <span class=\"nt\">(square root, both signs)</span><br>Distance $= 7 - (-1) = 8$ <span class=\"nt\">(same y-coordinate, subtract x-values)</span>",
+    "check": "$(7 - 3)^{2} + 3^{2} = 25$ ✓ and $(-1 - 3)^{2} + 3^{2} = 25$ ✓",
+    "be_careful": "Keep both signs of the square root; each gives one intersection point.",
+    "desmos": "Graph both and click the two intersection points.",
+    "another_way": "The center is 3 below the line, the radius is 5, so half the chord is 4 (a 3, 4, 5 triangle) and the chord is 8."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-019",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C4"
+   ],
+   "family": "degrees-to-radians-330",
+   "signature": "330 deg = 11 pi/6; traps 11 pi/3 (by 90), 6 pi/11 (inverted), 5 pi/6 (150)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A wheel turns through an angle of 330°. What is this angle measure in radians?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{11\\pi}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D8",
+     "feedback": "This divides by 90 instead of 180."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{6\\pi}{11}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This inverts the fraction $\\frac{330}{180} = \\frac{11}{6}$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{5\\pi}{6}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "$\\frac{5\\pi}{6}$ is 150°, which is $180° - 30°$. 330° is $360° - 30°$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{11\\pi}{6}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Multiply degrees by $\\frac{\\pi}{180}$, because 180° is $\\pi$ radians.",
+    "steps": "What does the question ask? 330° in radians.<br>$330 \\cdot \\frac{\\pi}{180} = \\frac{330\\pi}{180}$ <span class=\"nt\">(conversion factor)</span><br>$\\frac{330}{180} = \\frac{11}{6}$ <span class=\"nt\">(divide top and bottom by 30)</span><br>$330° = \\frac{11\\pi}{6}$ <span class=\"nt\">(finish line)</span><br>Why this works: $180°$ and $\\pi$ radians are the same half-turn.",
+    "check": "$\\frac{11\\pi}{6}$ is just under $2\\pi = \\frac{12\\pi}{6}$, and 330° is just under 360° ✓",
+    "be_careful": "A full turn is $2\\pi$, so a turn just short of a full turn must be just under $2\\pi$.",
+    "desmos": "Not needed.",
+    "another_way": "$330° = 360° - 30° = 2\\pi - \\frac{\\pi}{6} = \\frac{11\\pi}{6}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-020",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "M",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "radius-from-origin-on-circle",
+   "signature": "(x-6)^2+(y+8)^2=r^2 through origin -> r^2 = 100 -> r 10; traps 100 (r^2), 14 (6+8)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, the graph of $(x - 6)^{2} + (y + 8)^{2} = r^{2}$, where $r > 0$, is a circle that passes through the origin. What is the value of $r$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "10"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "100",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "100 is $r^{2}$."
+    },
+    {
+     "value": "14",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds $6 + 8$ instead of using the Pythagorean theorem."
+    }
+   ],
+   "solution": {
+    "key_idea": "The origin is on the circle, so its distance from the center $(6, -8)$ is the radius.",
+    "steps": "What does the question ask? The radius $r$.<br>$(0 - 6)^{2} + (0 + 8)^{2} = r^{2}$ <span class=\"nt\">(substitute (0, 0))</span><br>$36 + 64 = 100 = r^{2}$ <span class=\"nt\">(square and add)</span><br>$r = 10$ <span class=\"nt\">(positive square root)</span><br>Why this works: every point on the circle, including the origin, is one radius from the center.",
+    "check": "6, 8, 10 is a right triangle: $36 + 64 = 100$ ✓",
+    "be_careful": "The question asks for $r$, not $r^{2}$.",
+    "desmos": "Not needed.",
+    "another_way": "The center $(6, -8)$ is 10 from the origin by the distance formula."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-021",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C5"
+   ],
+   "family": "tangent-slope-negative-reciprocal",
+   "signature": "(x-2)^2+(y+1)^2=25 at (6,-4): radius slope -3/4 -> tangent 4/3; traps -3/4 (radius), 3/4, -4/3",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the point $(6, -4)$ lies on the circle $(x - 2)^{2} + (y + 1)^{2} = 25$. What is the slope of the line that is tangent to the circle at $(6, -4)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-\\frac{4}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This takes the reciprocal of the radius slope but keeps the wrong sign. Perpendicular slopes have opposite signs."
+    },
+    {
+     "key": "B",
+     "text": "$-\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "$-\\frac{3}{4}$ is the slope of the radius to $(6, -4)$. The tangent is perpendicular to that radius."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{3}{4}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This only changes the sign of the radius slope; a perpendicular slope is the negative reciprocal."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{4}{3}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The tangent at a point is perpendicular to the radius to that point, so its slope is the negative reciprocal of the radius slope.",
+    "steps": "What does the question ask? The slope of the tangent line at $(6, -4)$.<br>Center $(2, -1)$ <span class=\"nt\">(read from standard form)</span><br>Radius slope $= \\frac{-4 - (-1)}{6 - 2} = \\frac{-3}{4}$ <span class=\"nt\">(center to the point)</span><br>Tangent slope $= -\\frac{1}{-3/4} = \\frac{4}{3}$ <span class=\"nt\">(negative reciprocal)</span><br>Why this works: a tangent line touches the circle at one point, and the radius drawn to that point meets the tangent at a right angle. Perpendicular slopes multiply to $-1$.",
+    "check": "$(-\\frac{3}{4})(\\frac{4}{3}) = -1$ ✓ and $(6 - 2)^{2} + (-4 + 1)^{2} = 16 + 9 = 25$ ✓",
+    "be_careful": "The slope from the center to the point belongs to the radius, not to the tangent.",
+    "desmos": "Desmos shows the circle but not the tangent slope; the radius idea is needed.",
+    "another_way": "The line $y + 4 = \\frac{4}{3}(x - 6)$ meets the circle only at $(6, -4)$: substituting gives a squared factor $(x - 6)^{2} = 0$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-022",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "diameter-tripled-new-constant",
+   "signature": "(x+3)^2+(y-2)^2=7; same center, diameter 3 times -> r^2 x 9 = 63; traps 21 (x3), 441",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, circle $A$ has equation $(x + 3)^{2} + (y - 2)^{2} = 7$. Circle $B$ has the same center as circle $A$, and the diameter of circle $B$ is 3 times the diameter of circle $A$. The equation of circle $B$ is $(x + 3)^{2} + (y - 2)^{2} = k$, where $k$ is a constant. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "63"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "21",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This multiplies $r^{2}$ by 3. Tripling the radius multiplies $r^{2}$ by $3^{2} = 9$."
+    },
+    {
+     "value": "441",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This squares $7 \\cdot 3$. The number 7 is already $r^{2}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Tripling the diameter triples the radius, and the constant in the equation is the radius squared, so it is multiplied by 9.",
+    "steps": "What does the question ask? $k = r_{B}^{2}$.<br>$r_{A}^{2} = 7$, so $r_{A} = \\sqrt{7}$ <span class=\"nt\">(right side of standard form)</span><br>$r_{B} = 3\\sqrt{7}$ <span class=\"nt\">(diameter tripled, so radius tripled)</span><br>$k = (3\\sqrt{7})^{2} = 9 \\cdot 7 = 63$ <span class=\"nt\">(square the new radius)</span><br>Why this works: lengths scale by 3 but the equation stores a squared length, so the constant scales by $3^{2}$.",
+    "check": "$\\sqrt{63} = 3\\sqrt{7}$ ✓",
+    "be_careful": "The 7 is $r^{2}$, not $r$ and not the diameter.",
+    "desmos": "Graphing does not help until $k$ is known.",
+    "another_way": "Diameter of $A$ is $2\\sqrt{7}$; diameter of $B$ is $6\\sqrt{7}$, so $r_{B} = 3\\sqrt{7}$ and $r_{B}^{2} = 63$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-023",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C2"
+   ],
+   "family": "leading-coefficient-two-radius",
+   "signature": "2x^2+2y^2-12x+20y+18=0 -> /2 -> (x-3)^2+(y+5)^2 = 25 -> r 5; traps 4 (constant not halved), sqrt118 (no division), 25",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For the circle in the $xy$-plane given by $2x^{2} + 2y^{2} - 12x + 20y + 18 = 0$, what is the length of its radius?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "This divides the $x$ and $y$ terms by 2 but leaves the constant 18: $9 + 25 - 18 = 16$."
+    },
+    {
+     "key": "B",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\sqrt{118}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This completes the square without dividing by 2 first: $36 + 100 - 18$."
+    },
+    {
+     "key": "D",
+     "text": "$25$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "25 is $r^{2}$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Standard form needs $x^{2}$ and $y^{2}$ with coefficient 1, so divide every term by 2 before completing the square.",
+    "steps": "What does the question ask? The radius.<br>$x^{2} + y^{2} - 6x + 10y + 9 = 0$ <span class=\"nt\">(divide every term by 2)</span><br>$(x^{2} - 6x + 9) + (y^{2} + 10y + 25) = -9 + 9 + 25$ <span class=\"nt\">(complete both squares)</span><br>$(x - 3)^{2} + (y + 5)^{2} = 25$ <span class=\"nt\">(factor)</span><br>$r = 5$ <span class=\"nt\">(square root of the right side)</span><br>Why this works: completing the square with $2x^{2}$ still in place gives the wrong amounts, because $(x - a)^{2}$ has leading coefficient 1.",
+    "check": "Expand $2[(x - 3)^{2} + (y + 5)^{2} - 25] = 2x^{2} + 2y^{2} - 12x + 20y + 18$ ✓",
+    "be_careful": "Divide the constant 18 by 2 as well.",
+    "desmos": "Desmos graphs the circle; reading a radius of exactly 5 requires checking points such as $(8, -5)$.",
+    "another_way": "The point $(3, 0)$ satisfies the original equation ($18 - 36 + 18 = 0$) and is 5 from the center $(3, -5)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-024",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C4"
+   ],
+   "family": "which-angle-shares-sine",
+   "signature": "sin a = k, a acute: sin(pi - a) = k; traps sin(a + pi) = -k, cos(pi - a) = -cos a, sin(-a) = -k",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For an angle $a$, where $0 < a < \\frac{\\pi}{2}$, $\\sin a = k$. Which of the following must also be equal to $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\sin(a + \\pi)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "A half-turn moves the point to the opposite side of the circle, so $\\sin(a + \\pi) = -k$."
+    },
+    {
+     "key": "B",
+     "text": "$\\sin(-a)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "Angle $-a$ reflects the point across the $x$-axis, so its sine is $-k$."
+    },
+    {
+     "key": "C",
+     "text": "$\\sin(\\pi - a)$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\cos(\\pi - a)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\cos(\\pi - a) = -\\cos a$, an $x$-coordinate; it equals $k$ only for special angles, not for every $a$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "On the unit circle, angle $a$ ends at $(\\cos a, \\sin a)$. Angle $\\pi - a$ is its mirror image across the $y$-axis, which keeps the height.",
+    "steps": "What does the question ask? The expression that equals $\\sin a$ for every acute $a$.<br>$a$ ends at $P(\\cos a, \\sin a)$ in Quadrant I <span class=\"nt\">(unit circle)</span><br>$\\pi - a$ ends at $(-\\cos a, \\sin a)$ <span class=\"nt\">(reflection across the y-axis: same height)</span><br>$a + \\pi$ ends at $(-\\cos a, -\\sin a)$; $-a$ ends at $(\\cos a, -\\sin a)$ <span class=\"nt\">(half-turn and reflection across the x-axis)</span><br>Only $\\sin(\\pi - a)$ has $y$-coordinate $\\sin a = k$ <span class=\"nt\">(compare the heights)</span><br>Why this works: sine is the $y$-coordinate, and only a reflection across the $y$-axis leaves every $y$-coordinate unchanged.",
+    "check": "$a = \\frac{\\pi}{6}$: $\\sin \\frac{5\\pi}{6} = \\frac{1}{2} = \\sin \\frac{\\pi}{6}$ ✓; $\\sin \\frac{7\\pi}{6} = -\\frac{1}{2}$ ✗; $\\cos \\frac{5\\pi}{6} = -\\frac{\\sqrt{3}}{2}$ ✗",
+    "be_careful": "\"Must\" means for every acute $a$; one lucky angle is not enough.",
+    "desmos": "Graphing each choice against $\\sin x$ on $0 < x < \\frac{\\pi}{2}$ checks the answer, but the reflection picture is faster.",
+    "another_way": "Use 30°: $\\sin 150° = \\frac{1}{2}$, $\\sin 210° = -\\frac{1}{2}$, $\\sin(-30°) = -\\frac{1}{2}$, $\\cos 150° \\approx -0.87$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-025",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C6"
+   ],
+   "family": "chord-with-lowest-point-area",
+   "signature": "x^2+y^2=100, y=6 -> (+-8,6); with lowest point (0,-10): base 16, height 16 -> 128; traps 48 (used O), 64 (half chord)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, the line $y = 6$ intersects the circle $x^{2} + y^{2} = 100$ at points $A$ and $B$. Point $C$ is the point on the circle with the least $y$-coordinate. What is the area of triangle $ABC$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "128"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "48",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "48 uses the center $(0, 0)$ as the third vertex. $C$ is the lowest point, $(0, -10)$."
+    },
+    {
+     "value": "64",
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses 8, half of $\\overline{AB}$, as the base."
+    }
+   ],
+   "solution": {
+    "key_idea": "$\\overline{AB}$ is horizontal, so the height of the triangle is the vertical distance from $C(0, -10)$ to the line $y = 6$.",
+    "steps": "What does the question ask? The area of triangle $ABC$.<br>$x^{2} + 36 = 100$, so $x = \\pm 8$ <span class=\"nt\">(substitute y = 6)</span><br>$A(-8, 6)$, $B(8, 6)$, base $AB = 16$ <span class=\"nt\">(both intersection points)</span><br>$C = (0, -10)$ <span class=\"nt\">(lowest point: one radius below the center)</span><br>Height $= 6 - (-10) = 16$ <span class=\"nt\">(vertical distance to the base line)</span><br>Area $= \\frac{1}{2}(16)(16) = 128$ <span class=\"nt\">(triangle area)</span><br>Why this works: for a horizontal base, the height is just the difference of $y$-coordinates.",
+    "check": "$OA = \\sqrt{64 + 36} = 10$ ✓; $C$: $0 + 100 = 100$ ✓",
+    "be_careful": "The third vertex is on the circle, not at its center.",
+    "desmos": "Desmos gives the points; the area still needs base and height.",
+    "another_way": "Split along the $y$-axis: two right triangles with legs 8 and 16, total $2 \\cdot \\frac{1}{2}(8)(16) = 128$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-026",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C3"
+   ],
+   "family": "arc-gives-angle-then-chord",
+   "signature": "r 10, minor arc 5 pi -> 1/4 circle -> 90 deg -> chord 10 sqrt2; traps 10 (assumed 60), 5 sqrt2, 20",
+   "abilities": [
+    "R",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Points $A$ and $B$ lie on a circle with radius 10. The length of minor arc $AB$ is $5\\pi$. What is the length of chord $\\overline{AB}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5\\sqrt{2}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "$5\\sqrt{2}$ is half the chord."
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This treats the central angle as 60°, which would make the triangle equilateral. The arc gives 90°."
+    },
+    {
+     "key": "C",
+     "text": "$10\\sqrt{2}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "20 is the diameter, the chord for a 180° arc."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The arc length gives the central angle; the chord is then a side of an isosceles triangle with two radii.",
+    "steps": "What does the question ask? The straight-line distance $AB$.<br>Circumference $= 20\\pi$ <span class=\"nt\">(2 pi r)</span><br>$\\frac{5\\pi}{20\\pi} = \\frac{1}{4}$, so $\\angle  AOB = 90°$ <span class=\"nt\">(arc fraction gives the central angle)</span><br>Triangle $AOB$: right angle at $O$, legs $OA = OB = 10$ <span class=\"nt\">(two radii)</span><br>$AB = 10\\sqrt{2}$ <span class=\"nt\">(45-45-90 triangle)</span><br>Why this works: the chord and the arc share endpoints, and the central angle links them.",
+    "check": "$10^{2} + 10^{2} = 200 = (10\\sqrt{2})^{2}$ ✓; the chord $\\approx 14.1$ is shorter than the arc $5\\pi \\approx 15.7$ ✓",
+    "be_careful": "An arc length is not a chord length; find the angle first.",
+    "desmos": "Not needed.",
+    "another_way": "$\\theta = \\frac{5\\pi}{10} = \\frac{\\pi}{2}$ radians, a right angle."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-027",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "parameter-point-inside-could",
+   "signature": "(k,2) inside (x-1)^2+(y+2)^2=25 -> (k-1)^2 < 9 -> -2<k<4 -> 3; traps -3 (sign), -2 (boundary), 5 (ignored y)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the point $(k, 2)$ lies inside the circle $(x - 1)^{2} + (y + 2)^{2} = 25$, where $k$ is a constant. Which of the following could be the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "With the center taken as $(-1, 2)$, $(k + 1)^{2} < 25$ would allow $-3$. The center is $(1, -2)$."
+    },
+    {
+     "key": "B",
+     "text": "$-2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$k = -2$ gives $9 + 16 = 25$: the point is on the circle, not inside."
+    },
+    {
+     "key": "C",
+     "text": "$3$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This drops the $y$ part. The point is 4 units above the center, which uses 16 of the 25."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Inside means the squared distance to the center is less than $r^{2} = 25$; the vertical part already uses 16.",
+    "steps": "What does the question ask? A value of $k$ that keeps $(k, 2)$ inside.<br>$(k - 1)^{2} + (2 + 2)^{2} < 25$ <span class=\"nt\">(inside means less than r squared)</span><br>$(k - 1)^{2} + 16 < 25$ <span class=\"nt\">(square the y part)</span><br>$(k - 1)^{2} < 9$ <span class=\"nt\">(subtract 16)</span><br>$-3 < k - 1 < 3$, so $-2 < k < 4$ <span class=\"nt\">(distance from 1 is less than 3)</span><br>Only 3 is strictly between $-2$ and 4 <span class=\"nt\">(test the choices)</span><br>Why this works: the point moves along the horizontal line $y = 2$, which crosses the circle at $k = -2$ and $k = 4$.",
+    "check": "$k = 3$: $4 + 16 = 20 < 25$ ✓",
+    "be_careful": "Endpoints give points on the circle, not inside it.",
+    "desmos": "Graph the circle and the line $y = 2$, then read where it crosses: $x = -2$ and $x = 4$.",
+    "another_way": "The line $y = 2$ is 4 above the center; half the chord there is $\\sqrt{25 - 16} = 3$, so $k$ is within 3 of 1."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-028",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C5"
+   ],
+   "family": "tangent-line-gives-radius-then-intercept",
+   "signature": "center (4,-3) tangent to y=2 -> r 5 -> x-intercepts 0, 8 -> positive 8; traps 9, 4+sqrt34, 4",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, a circle has center $(4, -3)$ and is tangent to the line $y = 2$. The circle crosses the $x$-axis at two points. What is the positive $x$-coordinate of these points?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses 3, the distance to the $x$-axis, as the radius; then the circle would only touch the axis at $x = 4$."
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "9 is the $x$-coordinate of the rightmost point, $(9, -3)$, which is not on the $x$-axis."
+    },
+    {
+     "key": "D",
+     "text": "$4 + \\sqrt{34}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This adds 9 instead of subtracting it: $(x - 4)^{2} = 25 + 9$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Tangent to $y = 2$ fixes the radius as the vertical distance from the center to that line.",
+    "steps": "What does the question ask? The positive $x$-intercept.<br>$r = 2 - (-3) = 5$ <span class=\"nt\">(vertical distance from the center to y = 2)</span><br>$(x - 4)^{2} + (y + 3)^{2} = 25$ <span class=\"nt\">(equation)</span><br>$(x - 4)^{2} + 9 = 25$ <span class=\"nt\">(on the x-axis, y = 0)</span><br>$(x - 4)^{2} = 16$, so $x = 0$ or $x = 8$ <span class=\"nt\">(both signs)</span><br>Positive value: 8 <span class=\"nt\">(finish line)</span><br>Why this works: a horizontal tangent line touches the circle at the top or bottom point, exactly one radius from the center.",
+    "check": "$(8 - 4)^{2} + (0 + 3)^{2} = 16 + 9 = 25$ ✓; the top point $(4, 2)$ is on $y = 2$ ✓",
+    "be_careful": "The radius comes from the tangent line, not from the $x$-axis.",
+    "desmos": "Desmos needs the radius first; once it is found, the graph shows the intercepts.",
+    "another_way": "The center is 3 below the $x$-axis; with radius 5, half the chord on the axis is 4, so the intercepts are $4 \\pm 4$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-029",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C5",
+    "G4.C3"
+   ],
+   "family": "two-tangents-angle-to-arc",
+   "signature": "figure: tangents PA PB, angle P 50 -> angle AOB 130 -> minor arc 13 pi/2 (r 9); traps 5 pi/2 (50), 23 pi/2 (major), 13 pi",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, $\\overline{PA}$ and $\\overline{PB}$ are tangent to the circle with center $O$ at points $A$ and $B$. The radius of the circle is 9, and the measure of angle $APB$ is 50°.",
+   "stem_after_figure": "What is the length of minor arc $AB$?",
+   "figures": [
+    {
+     "id": "QB-G4-029-fig1",
+     "file": "figures/QB-G4-029-fig1.svg",
+     "alt": "A circle with center O and radius 9 labeled on OA. From an outside point P, two segments PA and PB touch the circle at A and B. Radii OA and OB are drawn with right-angle marks at A and B. The angle at P is marked 50 degrees."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{5\\pi}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses 50° as the central angle. The central angle is $\\angle  AOB$, not $\\angle  APB$."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{13\\pi}{2}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{23\\pi}{2}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$\\frac{23\\pi}{2}$ is the major arc, using 230°."
+    },
+    {
+     "key": "D",
+     "text": "$13\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This uses 18, the diameter, as the radius."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Quadrilateral $OAPB$ has right angles at $A$ and $B$, so $\\angle  AOB = 360° - 90° - 90° - 50° = 130°$.",
+    "steps": "What does the question ask? The minor arc between the two points of tangency.<br>$\\angle  OAP = \\angle  OBP = 90°$ <span class=\"nt\">(radius is perpendicular to the tangent)</span><br>$\\angle  AOB = 360° - 90° - 90° - 50° = 130°$ <span class=\"nt\">(angles of a quadrilateral add to 360)</span><br>Circumference $= 2\\pi(9) = 18\\pi$ <span class=\"nt\">(whole circle)</span><br>Minor arc $= \\frac{130}{360}(18\\pi) = \\frac{13\\pi}{2}$ <span class=\"nt\">(fraction of the circle)</span><br>Why this works: the angle at $P$ and the central angle always add to 180°, because the other two angles of the kite are right angles.",
+    "check": "Minor $+$ major $= \\frac{13\\pi}{2} + \\frac{23\\pi}{2} = 18\\pi$ ✓",
+    "be_careful": "The 50° angle is outside the circle; only an angle at the center gives the arc directly.",
+    "desmos": "Not needed.",
+    "another_way": "$130° = \\frac{13\\pi}{18}$ radians; arc $= 9 \\cdot \\frac{13\\pi}{18} = \\frac{13\\pi}{2}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-030",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C4"
+   ],
+   "family": "sector-perimeter-to-radian-angle",
+   "signature": "sector r 8, perimeter 28 -> arc 12 -> theta 1.5; traps 2.5 (one radius), 3.5 (28/8), 12 (arc)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A sector of a circle has radius 8. The perimeter of the sector, which is made of two radii and an arc, is 28. What is the measure, in radians, of the central angle of the sector?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1.5$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$2.5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This subtracts only one radius: $\\frac{28 - 8}{8}$."
+    },
+    {
+     "key": "C",
+     "text": "$3.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This divides the whole perimeter by the radius; the two radii are part of the perimeter."
+    },
+    {
+     "key": "D",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is the arc length, not the angle."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Remove the two radii from the perimeter to get the arc, then use arc $= r\\theta$.",
+    "steps": "What does the question ask? $\\theta$ in radians.<br>Arc $= 28 - 2(8) = 12$ <span class=\"nt\">(perimeter minus two radii)</span><br>$12 = 8\\theta$ <span class=\"nt\">(arc = r times theta)</span><br>$\\theta = \\frac{12}{8} = 1.5$ <span class=\"nt\">(divide)</span><br>Why this works: one radian is the angle whose arc equals one radius, so the angle in radians is the number of radii that fit along the arc.",
+    "check": "$8 + 8 + 8(1.5) = 28$ ✓",
+    "be_careful": "Perimeter of a sector includes both straight edges.",
+    "desmos": "Not needed.",
+    "another_way": "In degrees, $1.5 \\cdot \\frac{180}{\\pi} \\approx 86°$, so the arc should be a bit less than a quarter of $16\\pi \\approx 50$: $12 < 12.6$ ✓."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-031",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C2"
+   ],
+   "family": "general-form-constant-from-diameter",
+   "signature": "x^2+y^2+8x-2y=k, diameter 12 -> r^2 36 = k + 17 -> k 19; traps 127 (diameter squared), 36",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, the graph of $x^{2} + y^{2} + 8x - 2y = k$, where $k$ is a constant, is a circle with a diameter of length 12. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "19"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "127",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This sets $k + 17$ equal to $12^{2}$; the diameter must be halved first."
+    },
+    {
+     "value": "36",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "36 is $r^{2}$, which equals $k + 17$, not $k$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Completing the square moves 16 and 1 to the right side, so $r^{2} = k + 17$.",
+    "steps": "What does the question ask? The constant $k$.<br>$(x^{2} + 8x + 16) + (y^{2} - 2y + 1) = k + 16 + 1$ <span class=\"nt\">(complete both squares)</span><br>$(x + 4)^{2} + (y - 1)^{2} = k + 17$ <span class=\"nt\">(factor)</span><br>Diameter 12, so $r = 6$ and $r^{2} = 36$ <span class=\"nt\">(half the diameter)</span><br>$k + 17 = 36$, so $k = 19$ <span class=\"nt\">(solve)</span><br>Why this works: the right side after completing the square is always $r^{2}$, so any length fact about the circle becomes an equation for $k$.",
+    "check": "$(x + 4)^{2} + (y - 1)^{2} = 36$ expands to $x^{2} + y^{2} + 8x - 2y + 17 = 36$, so $k = 19$ ✓",
+    "be_careful": "Halve the diameter before squaring.",
+    "desmos": "A slider on $k$ needs the radius checked by hand; algebra is faster.",
+    "another_way": "The point $(2, 1)$ is 6 to the right of the center $(-4, 1)$, so it is on the circle: $4 + 1 + 16 - 2 = 19 = k$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-032",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C2",
+    "G4.C1"
+   ],
+   "family": "same-center-through-origin-ring",
+   "signature": "x^2+y^2-4x+6y=12 -> center (2,-3), r^2 25; second circle same center through origin r^2 13 -> ring 12 pi; traps 13 pi, 25 pi, 38 pi",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, circle $C$ has equation $x^{2} + y^{2} - 4x + 6y = 12$. Circle $D$ has the same center as circle $C$ and passes through the origin. What is the area of the region that is inside circle $C$ and outside circle $D$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12\\pi$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$13\\pi$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$13\\pi$ is the area of circle $D$ alone."
+    },
+    {
+     "key": "C",
+     "text": "$25\\pi$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$25\\pi$ is the area of circle $C$ alone."
+    },
+    {
+     "key": "D",
+     "text": "$38\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the two areas instead of subtracting."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Both circles share the center $(2, -3)$; the region between them has area $\\pi(r_{C}^{2} - r_{D}^{2})$, and both squared radii can be found without square roots.",
+    "steps": "What does the question ask? The area of the ring between the circles.<br>$(x - 2)^{2} + (y + 3)^{2} = 12 + 4 + 9 = 25$ <span class=\"nt\">(complete both squares)</span><br>$r_{C}^{2} = 25$, center $(2, -3)$ <span class=\"nt\">(read standard form)</span><br>$r_{D}^{2} = (0 - 2)^{2} + (0 + 3)^{2} = 13$ <span class=\"nt\">(D passes through the origin)</span><br>Ring $= 25\\pi - 13\\pi = 12\\pi$ <span class=\"nt\">(outer area minus inner area)</span><br>Why this works: since $13 < 25$, circle $D$ lies inside circle $C$, so the region is the bigger disk with the smaller disk removed.",
+    "check": "Origin in $C$\\'s equation: $0 < 12$, so the origin is inside $C$, as a smaller circle $D$ requires ✓",
+    "be_careful": "Keep the squared radii; there is no need for $\\sqrt{13}$.",
+    "desmos": "Desmos can draw both circles, but the area still needs the squared radii.",
+    "another_way": "Area of $C$ is $\\pi r^{2} = 25\\pi$; area of $D$ is $13\\pi$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-033",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C6"
+   ],
+   "family": "two-chords-same-circle",
+   "signature": "chord 16 at distance 6 -> r 10; chord 12 -> distance 8; traps 4.5 (inverse proportion), 6, 10",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a circle, chord $\\overline{AB}$ has length 16 and is at a distance of 6 from the center. Chord $\\overline{CD}$ of the same circle has length 12. What is the distance from the center to chord $\\overline{CD}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This assumes distance times length is constant. Distances come from the Pythagorean theorem with the radius."
+    },
+    {
+     "key": "B",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "6 is the distance to $\\overline{AB}$. A shorter chord is farther from the center."
+    },
+    {
+     "key": "C",
+     "text": "$8$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "10 is the radius."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The first chord fixes the radius; the second chord then gives a new right triangle with the same hypotenuse.",
+    "steps": "What does the question ask? The distance from the center to $\\overline{CD}$.<br>Half of $AB$ is 8; $r^{2} = 8^{2} + 6^{2} = 100$ <span class=\"nt\">(right triangle with the first chord)</span><br>$r = 10$ <span class=\"nt\">(square root)</span><br>Half of $CD$ is 6; $d^{2} = 10^{2} - 6^{2} = 64$ <span class=\"nt\">(right triangle with the second chord)</span><br>$d = 8$ <span class=\"nt\">(square root)</span><br>Why this works: the perpendicular from the center bisects every chord, so each chord makes a right triangle whose hypotenuse is a radius.",
+    "check": "$6^{2} + 8^{2} = 100$ ✓; shorter chord (12) is farther (8 > 6) ✓",
+    "be_careful": "Use half of each chord in the right triangle.",
+    "desmos": "Not needed.",
+    "another_way": "Both triangles are 6, 8, 10 triangles, with the roles of the legs swapped."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-034",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C4"
+   ],
+   "family": "half-turn-sine-quadrant",
+   "signature": "cos theta = -0.6, pi/2<theta<pi -> sin 0.8 -> sin(theta + pi) = -0.8; traps 0.8, -0.6, 0.6",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For an angle $\\theta$, where $\\frac{\\pi}{2} < \\theta < \\pi$, $\\cos \\theta = -0.6$. What is the value of $\\sin(\\theta + \\pi)$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$-0.8$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$-0.6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses the cosine value; a half-turn sends $(x, y)$ to $(-x, -y)$, and the question asks for the new $y$."
+    },
+    {
+     "key": "C",
+     "text": "$0.6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "0.6 is the new $x$-coordinate, $-\\cos \\theta$."
+    },
+    {
+     "key": "D",
+     "text": "$0.8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "0.8 is $\\sin \\theta$; adding $\\pi$ moves the point to the opposite side of the circle."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Adding $\\pi$ is a half-turn: the point $(\\cos \\theta, \\sin \\theta)$ moves to $(-\\cos \\theta, -\\sin \\theta)$.",
+    "steps": "What does the question ask? The $y$-coordinate after a half-turn.<br>$\\sin^{2} \\theta = 1 - (-0.6)^{2} = 0.64$ <span class=\"nt\">(the point is on the unit circle)</span><br>$\\sin \\theta = 0.8$ <span class=\"nt\">(Quadrant II, so sine is positive)</span><br>$\\theta + \\pi$ ends at $(0.6, -0.8)$ <span class=\"nt\">(half-turn reflects through the origin)</span><br>$\\sin(\\theta + \\pi) = -0.8$ <span class=\"nt\">(the new y-coordinate)</span><br>Why this works: turning by $\\pi$ more points the terminal side the opposite way, so both coordinates change sign.",
+    "check": "$0.6^{2} + (-0.8)^{2} = 1$ ✓; $\\theta + \\pi$ is between $\\frac{3\\pi}{2}$ and $2\\pi$, Quadrant IV, where sine is negative ✓",
+    "be_careful": "Choose the sign of $\\sin \\theta$ from the quadrant before turning.",
+    "desmos": "Desmos can solve $\\cos \\theta = -0.6$ numerically, but the quadrant and half-turn must still be handled.",
+    "another_way": "$\\theta \\approx 2.214$; $\\sin(\\theta + \\pi) \\approx -0.8$ on a calculator."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-035",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C5",
+    "G4.C1"
+   ],
+   "family": "tangent-length-from-coordinates",
+   "signature": "(x-1)^2+(y-1)^2=4, P(7,9): d 10 -> tangent sqrt96 = 4 sqrt6; traps 10, 2 sqrt26, 14",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, a line through the point $P(7, 9)$ is tangent to the circle $(x - 1)^{2} + (y - 1)^{2} = 4$ at point $T$. What is the length of $\\overline{PT}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4\\sqrt{6}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "10 is the distance from $P$ to the center, not to the point of tangency."
+    },
+    {
+     "key": "C",
+     "text": "$2\\sqrt{26}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds $r^{2}$: $\\sqrt{100 + 4}$. The distance to the center is the hypotenuse."
+    },
+    {
+     "key": "D",
+     "text": "$14$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This adds the squared radius 4 to the distance 10."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Center, point of tangency, and $P$ form a right triangle with the right angle at $T$ and hypotenuse from the center to $P$.",
+    "steps": "What does the question ask? The tangent length $PT$.<br>Center $(1, 1)$, $r = 2$ <span class=\"nt\">(standard form)</span><br>Distance from center to $P$: $\\sqrt{6^{2} + 8^{2}} = 10$ <span class=\"nt\">(distance formula)</span><br>$PT^{2} = 10^{2} - 2^{2} = 96$ <span class=\"nt\">(right angle at T)</span><br>$PT = \\sqrt{96} = 4\\sqrt{6}$ <span class=\"nt\">(simplify the root)</span><br>Why this works: the radius to $T$ is perpendicular to the tangent, so the Pythagorean theorem applies without knowing where $T$ is.",
+    "check": "$(4\\sqrt{6})^{2} + 2^{2} = 96 + 4 = 100 = 10^{2}$ ✓",
+    "be_careful": "The position of $T$ is never needed.",
+    "desmos": "Finding $T$ in Desmos would require the tangent line, which is the hard part; the right triangle avoids it.",
+    "another_way": "$PT^{2}$ equals the value of $(x - 1)^{2} + (y - 1)^{2} - 4$ at $P$: $36 + 64 - 4 = 96$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-036",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C2"
+   ],
+   "family": "origin-on-circle-other-diameter-end",
+   "signature": "x^2+y^2-6x+10y=0 passes through O; center (3,-5); other end of diameter (6,-10); traps (3,-5) center, (-6,10) sign, (-3,5)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graph of $x^{2} + y^{2} - 6x + 10y = 0$ is a circle. One endpoint of a diameter of the circle is the origin. What are the coordinates of the other endpoint of this diameter?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(3, -5)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$(3, -5)$ is the center, the midpoint of the diameter."
+    },
+    {
+     "key": "B",
+     "text": "$(6, -10)$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$(-6, 10)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This doubles a center of $(-3, 5)$. Completing the square gives $(x - 3)^{2}$ and $(y + 5)^{2}$."
+    },
+    {
+     "key": "D",
+     "text": "$(-3, 5)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This is the center with both signs flipped."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The center is the midpoint of every diameter, so the other endpoint is the origin reflected through the center.",
+    "steps": "What does the question ask? The far end of the diameter that starts at $(0, 0)$.<br>$(x - 3)^{2} + (y + 5)^{2} = 9 + 25 = 34$ <span class=\"nt\">(complete both squares)</span><br>Center $(3, -5)$ <span class=\"nt\">(opposite signs)</span><br>$(0, 0)$ is on the circle: $0 + 0 - 0 + 0 = 0$ ✓ <span class=\"nt\">(no constant term)</span><br>Midpoint rule: $\\frac{0 + x}{2} = 3$ and $\\frac{0 + y}{2} = -5$ <span class=\"nt\">(center is the midpoint)</span><br>Other endpoint $(6, -10)$ <span class=\"nt\">(solve)</span><br>Why this works: going from the origin to the center is a move of $(+3, -5)$; repeating the same move reaches the opposite point.",
+    "check": "$36 + 100 - 36 - 100 = 0$ ✓, so $(6, -10)$ is on the circle",
+    "be_careful": "The center is halfway; the endpoint is twice as far.",
+    "desmos": "Graphing shows the circle; the exact endpoint is easiest from the center.",
+    "another_way": "Substitute $y = -\\frac{5}{3}x$ (the line through the origin and the center) and solve: $x = 0$ or $x = 6$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-037",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C2"
+   ],
+   "family": "general-form-origin-inside",
+   "signature": "x^2+y^2+bx+cy = d, d > 0 -> r^2 = d + (b^2+c^2)/4 > (b^2+c^2)/4 = (distance center to origin)^2 -> origin inside; traps on the circle (d=0 case), r = sqrt d (only if b=c=0), center QIII (signs unknown)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graph of $x^{2} + y^{2} + bx + cy = d$, where $b$, $c$, and $d$ are constants and $d > 0$, is a circle. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The point $(0, 0)$ lies on the circle.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The origin is on the circle only when $d = 0$; here $d > 0$."
+    },
+    {
+     "key": "B",
+     "text": "The radius of the circle is $\\sqrt{d}$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "Completing the square adds $\\frac{b^{2}}{4} + \\frac{c^{2}}{4}$ to $d$; the radius is $\\sqrt{d}$ only when $b = c = 0$."
+    },
+    {
+     "key": "C",
+     "text": "The center of the circle is in Quadrant III.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "The center is $(-\\frac{b}{2}, -\\frac{c}{2})$, and the signs of $b$ and $c$ are not given."
+    },
+    {
+     "key": "D",
+     "text": "The point $(0, 0)$ lies inside the circle.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Plugging the origin into the left side gives 0, which is less than $d$. Completing the square shows what that means: the origin is closer to the center than the radius.",
+    "steps": "What does the question ask? A statement that holds for EVERY $b$, $c$, and positive $d$.<br>$(x + \\frac{b}{2})^{2} + (y + \\frac{c}{2})^{2} = d + \\frac{b^{2}}{4} + \\frac{c^{2}}{4}$ <span class=\"nt\">(complete the square)</span><br>center $(-\\frac{b}{2}, -\\frac{c}{2})$, $r^{2} = d + \\frac{b^{2} + c^{2}}{4}$ <span class=\"nt\">(read the form)</span><br>(distance from center to origin)$^{2} = \\frac{b^{2}}{4} + \\frac{c^{2}}{4}$ <span class=\"nt\">(distance formula)</span><br>$\\frac{b^{2} + c^{2}}{4} < d + \\frac{b^{2} + c^{2}}{4} = r^{2}$ <span class=\"nt\">(because $d > 0$)</span><br>So the origin is inside the circle <span class=\"nt\">(closer to the center than the radius)</span><br>Why this works: the other three statements each fail for some allowed $b$, $c$, $d$, for example $b = 2$, $c = 2$, $d = 1$ gives center $(-1, -1)$ and radius $\\sqrt{3}$, and $b = -2$ moves the center out of Quadrant III.",
+    "check": "$b = 6$, $c = -8$, $d = 11$: $(x + 3)^{2} + (y - 4)^{2} = 36$, center $(-3, 4)$, radius 6; the origin is 5 from the center, $5 < 6$ ✓ inside",
+    "be_careful": "“Must” means true for every allowed choice of constants, so one counterexample rules a statement out.",
+    "desmos": "Sliders for $b$, $c$, $d$ can suggest the pattern, but deciding what MUST hold takes the completed-square argument.",
+    "another_way": "Substitute $(0, 0)$: the left side is $0 < d$. For a circle written as $x^{2} + y^{2} + bx + cy - d = 0$, a point gives a negative value exactly when it is inside."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-038",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C4",
+    "G4.C2"
+   ],
+   "family": "three-terminal-points-triangle-area",
+   "signature": "terminal sides of pi/3, pi, 5pi/3 meet x^2+y^2=16 at (2, 2sqrt3), (-4, 0), (2, -2sqrt3) -> base 4sqrt3, height 6 -> area 12sqrt3; traps 4sqrt3 (triangle with O), 16sqrt3 (side 8), 24sqrt3 (no 1/2)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the terminal sides of angles in standard position with measures $\\frac{\\pi}{3}$, $\\pi$, and $\\frac{5\\pi}{3}$ radians intersect the circle $x^{2} + y^{2} = 16$ at points $P$, $Q$, and $R$, respectively. What is the area of triangle $PQR$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This is the area of triangle $OPR$, with the center $O$ in place of $Q$."
+    },
+    {
+     "key": "B",
+     "text": "$12\\sqrt{3}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$16\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the diameter 8 as the side of an equilateral triangle. The side is $4\\sqrt{3}$."
+    },
+    {
+     "key": "D",
+     "text": "$24\\sqrt{3}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is base times height, $4\\sqrt{3} \\times 6$, without the $\\frac{1}{2}$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Each point is $(4\\cos\\theta, 4\\sin\\theta)$. $P$ and $R$ line up vertically, so $\\overline{PR}$ is a convenient base.",
+    "steps": "What does the question ask? The area of triangle $PQR$.<br>$P = (4\\cos\\frac{\\pi}{3}, 4\\sin\\frac{\\pi}{3}) = (2, 2\\sqrt{3})$ <span class=\"nt\">(60° reference angle, radius 4)</span><br>$Q = (-4, 0)$ and $R = (2, -2\\sqrt{3})$ <span class=\"nt\">($\\pi$ is the negative $x$-axis; $\\frac{5\\pi}{3}$ is in Quadrant IV)</span><br>base $PR = 2\\sqrt{3} - (-2\\sqrt{3}) = 4\\sqrt{3}$ <span class=\"nt\">(same $x$-coordinate)</span><br>height = horizontal distance from $Q$ to the line $x = 2$: $2 - (-4) = 6$ <span class=\"nt\">(perpendicular to a vertical base)</span><br>area $= \\frac{1}{2}(4\\sqrt{3})(6) = 12\\sqrt{3}$ <span class=\"nt\">(half base times height)</span>",
+    "check": "The angles are $\\frac{2\\pi}{3}$ apart, so the triangle is equilateral with side $4\\sqrt{3}$: $\\frac{\\sqrt{3}}{4}(4\\sqrt{3})^{2} = \\frac{\\sqrt{3}}{4} \\cdot 48 = 12\\sqrt{3}$ ✓",
+    "be_careful": "The points are on a circle of radius 4, so scale the unit-circle values by 4.",
+    "desmos": "Desmos can plot the three points, but the area still has to be computed; the choices are exact radicals.",
+    "another_way": "Split at $O$: three triangles $OPQ$, $OQR$, $ORP$, each $\\frac{1}{2}(4)(4)\\sin\\frac{2\\pi}{3} = 4\\sqrt{3}$; total $12\\sqrt{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-039",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C5"
+   ],
+   "family": "constant-k-from-tangency",
+   "signature": "x^2+y^2+4x-6y = k -> (x+2)^2+(y-3)^2 = k+13; tangent to y = -1 -> r = 3-(-1) = 4 -> k+13 = 16 -> k 3; traps 16 (r^2 as k), 29 (sign of 13)",
+   "abilities": [
+    "G",
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, the graph of $x^{2} + y^{2} + 4x - 6y = k$, where $k$ is a constant, is a circle that is tangent to the line $y = -1$. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "3"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "16",
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "16 is $r^{2}$. After completing the square, the right side is $k + 13$, not $k$."
+    },
+    {
+     "value": "29",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts 13 the wrong way: $k + 13 = 16$ gives $k = 3$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Complete the square to find the center; the distance from the center to the tangent line is the radius.",
+    "steps": "What does the question ask? The constant $k$.<br>$(x^{2} + 4x + 4) + (y^{2} - 6y + 9) = k + 4 + 9$ <span class=\"nt\">(complete both squares)</span><br>$(x + 2)^{2} + (y - 3)^{2} = k + 13$: center $(-2, 3)$ <span class=\"nt\">(standard form)</span><br>A circle is tangent to a line when the distance from its center to the line equals the radius. The distance from $(-2, 3)$ to the horizontal line $y = -1$ is $3 - (-1) = 4$ <span class=\"nt\">(horizontal line: vertical distance)</span><br>tangent, so $r = 4$ and $k + 13 = 16$, giving $k = 3$ <span class=\"nt\">($r^{2} = k + 13$)</span>",
+    "check": "$k = 3$: $(x + 2)^{2} + (y - 3)^{2} = 16$; lowest point $(-2, -1)$ lies on $y = -1$ ✓",
+    "be_careful": "The right side after completing the square is $k + 13$; the radius squared is NOT $k$.",
+    "desmos": "A slider on $k$ works, but completing the square is faster and exact.",
+    "another_way": "Tangent at the lowest point $(-2, -1)$: substitute, $4 + 1 - 8 + 6 = k$, so $k = 3$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-040",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H",
+   "concepts": [
+    "G4.C1"
+   ],
+   "family": "circle-through-three-axis-points",
+   "signature": "circle through (0,0),(8,0),(0,6) -> center (4,3) by equal distances -> r 5; traps 10, 25",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, a circle passes through the points $(0, 0)$, $(8, 0)$, and $(0, 6)$. What is the radius of the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "10",
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "10 is the distance from $(8, 0)$ to $(0, 6)$, which is the diameter here."
+    },
+    {
+     "value": "25",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "25 is $r^{2}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The center is the same distance from all three points, so it lies halfway between $(0, 0)$ and $(8, 0)$ horizontally and halfway between $(0, 0)$ and $(0, 6)$ vertically.",
+    "steps": "What does the question ask? The radius.<br>Center $(h, k)$: equal distance to $(0, 0)$ and $(8, 0)$ gives $h^{2} = (h - 8)^{2}$, so $h = 4$ <span class=\"nt\">(expand: 0 = -16h + 64)</span><br>Equal distance to $(0, 0)$ and $(0, 6)$ gives $k^{2} = (k - 6)^{2}$, so $k = 3$ <span class=\"nt\">(expand: 0 = -12k + 36)</span><br>$r = \\sqrt{4^{2} + 3^{2}} = 5$ <span class=\"nt\">(distance from (4, 3) to (0, 0))</span><br>Why this works: every point on a circle is one radius from the center, so the center must balance the three given points.",
+    "check": "From $(4, 3)$: to $(8, 0)$ is $\\sqrt{16 + 9} = 5$ ✓; to $(0, 6)$ is $\\sqrt{16 + 9} = 5$ ✓",
+    "be_careful": "Find the center first; none of the given points is the center.",
+    "desmos": "A circle through three given points cannot be typed directly; sliders for $h$, $k$, $r$ work slowly.",
+    "another_way": "$x^{2} + y^{2} + Dx + Ey = 0$ (it passes through the origin); $(8, 0)$ gives $D = -8$, $(0, 6)$ gives $E = -6$, so $(x - 4)^{2} + (y - 3)^{2} = 25$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-041",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C2",
+    "G4.C5"
+   ],
+   "family": "parameter-family-tangent-to-y-axis",
+   "signature": "x^2-2kx+y^2+4ky+5k^2-20=0 -> center (k,-2k), r^2 20 -> tangent to y-axis |k| = 2 sqrt5; traps sqrt5 (2k = r, y-coordinate used), 4 sqrt5 (diameter), 20 (r^2)",
+   "abilities": [
+    "R",
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, the graph of $x^{2} - 2kx + y^{2} + 4ky + 5k^{2} - 20 = 0$, where $k$ is a positive constant, is a circle that is tangent to the $y$-axis. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\sqrt{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This sets $2k$ equal to the radius. The distance from the center $(k, -2k)$ to the $y$-axis is $k$ (the $x$-coordinate), not $2k$."
+    },
+    {
+     "key": "B",
+     "text": "$2\\sqrt{5}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4\\sqrt{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This sets $k$ equal to the diameter, $2\\sqrt{20}$. Tangency needs the distance $k$ to equal the radius."
+    },
+    {
+     "key": "D",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "20 is $r^{2}$; the distance $k$ must equal $r$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Completing the square cancels every $k^{2}$ term, leaving center $(k, -2k)$ and a fixed radius $\\sqrt{20}$; tangent to the $y$-axis means $k = r$.",
+    "steps": "What does the question ask? The positive $k$ that makes the circle touch the $y$-axis.<br>$(x^{2} - 2kx + k^{2}) + (y^{2} + 4ky + 4k^{2}) = 20$ <span class=\"nt\">(regroup: 5k squared splits as k squared + 4k squared)</span><br>$(x - k)^{2} + (y + 2k)^{2} = 20$ <span class=\"nt\">(factor)</span><br>Center $(k, -2k)$, $r = \\sqrt{20} = 2\\sqrt{5}$ <span class=\"nt\">(standard form)</span><br>Distance from center to the $y$-axis $= k$ <span class=\"nt\">(horizontal distance, k > 0)</span><br>Tangent: $k = 2\\sqrt{5}$ <span class=\"nt\">(distance equals radius)</span><br>Why this works: a circle touches a vertical line exactly when the horizontal distance from its center to that line equals the radius. The constant $5k^{2}$ was built to be absorbed by the two squares.",
+    "check": "$k = 2\\sqrt{5}$: center $(2\\sqrt{5}, -4\\sqrt{5})$; at $x = 0$, $(y + 4\\sqrt{5})^{2} = 20 - 20 = 0$, one point ✓",
+    "be_careful": "Tangent to the $y$-axis uses the $x$-coordinate of the center.",
+    "desmos": "A slider on $k$ shows the circle sliding along $y = -2x$; tangency is hard to see exactly, and $2\\sqrt{5} \\approx 4.47$ must be matched by hand. The regrouping is the intended route.",
+    "another_way": "Set $x = 0$: $y^{2} + 4ky + 5k^{2} - 20 = 0$ must have one solution, so its discriminant $16k^{2} - 4(5k^{2} - 20) = 80 - 4k^{2} = 0$, giving $k^{2} = 20$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-042",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C5",
+    "G4.C3"
+   ],
+   "family": "tangent-length-and-distance-to-arc",
+   "signature": "PA = 6 sqrt3, PO = 12 -> r 6, angle APO 30, AOP 60 -> AOB 120 -> minor arc 4 pi; traps 2 pi (60), 8 pi (major), 12 pi",
+   "abilities": [
+    "G",
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Point $P$ lies outside a circle with center $O$. Segments $\\overline{PA}$ and $\\overline{PB}$ are tangent to the circle at points $A$ and $B$. If $PA = 6\\sqrt{3}$ and $PO = 12$, what is the length of minor arc $AB$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses $\\angle  AOP = 60°$ as the full central angle. The angle $AOB$ is twice that."
+    },
+    {
+     "key": "B",
+     "text": "$4\\pi$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$8\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$8\\pi$ is the major arc, from 240°."
+    },
+    {
+     "key": "D",
+     "text": "$12\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "$12\\pi$ is the full circumference."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Triangle $OAP$ has a right angle at $A$; its sides $6$, $6\\sqrt{3}$, $12$ make it a 30-60-90 triangle, so $\\angle  AOP = 60°$ and $\\angle  AOB = 120°$.",
+    "steps": "What does the question ask? The minor arc between the tangency points.<br>$OA \\perp PA$, so $OA^{2} = 12^{2} - (6\\sqrt{3})^{2} = 144 - 108 = 36$ <span class=\"nt\">(radius to point of tangency)</span><br>$r = OA = 6$ <span class=\"nt\">(square root)</span><br>$OA = \\frac{1}{2}PO$, so triangle $OAP$ is 30-60-90 with $\\angle  AOP = 60°$ <span class=\"nt\">(side ratio 1 : root 3 : 2)</span><br>$\\angle  AOB = 2 \\cdot 60° = 120°$ <span class=\"nt\">(OP splits the kite into two congruent triangles)</span><br>Arc $= \\frac{120}{360} \\cdot 2\\pi(6) = 4\\pi$ <span class=\"nt\">(fraction of the circumference)</span><br>Why this works: the two tangent triangles $OAP$ and $OBP$ are congruent (right angle, shared hypotenuse, equal radii), so $\\overline{OP}$ bisects the central angle.",
+    "check": "$6^{2} + (6\\sqrt{3})^{2} = 36 + 108 = 144 = 12^{2}$ ✓; minor $+$ major $= 4\\pi + 8\\pi = 12\\pi = 2\\pi(6)$ ✓",
+    "be_careful": "The angle in one triangle is half the central angle.",
+    "desmos": "No equation is given, so Desmos cannot be applied directly.",
+    "another_way": "In radians: $\\angle  AOB = \\frac{2\\pi}{3}$ and arc $= 6 \\cdot \\frac{2\\pi}{3} = 4\\pi$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-043",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C5"
+   ],
+   "family": "chord-plus-tangent-line-radius",
+   "signature": "circle meets x-axis at (-7,0),(17,0) -> center x 5, half-chord 12; tangent to y = 18 above -> center y = 18 - r; r^2 = 12^2 + (18 - r)^2 -> 36r = 468 -> r 13; traps 12 (half chord), 5 (center height)",
+   "abilities": [
+    "G",
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, a circle intersects the $x$-axis at exactly the two points $(-7, 0)$ and $(17, 0)$. The center of the circle is above the $x$-axis, and the circle is tangent to the line $y = 18$. What is the radius of the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "13"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "12",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is half of the chord on the $x$-axis, one leg of the right triangle, not the radius."
+    },
+    {
+     "value": "5",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "5 is the height of the center above the $x$-axis (and also its $x$-coordinate), not the radius."
+    }
+   ],
+   "solution": {
+    "key_idea": "The center lies on the perpendicular bisector of the chord, $x = 5$. Tangency to $y = 18$ ties the height of the center to the radius, and the half-chord gives a right triangle.",
+    "steps": "What does the question ask? The radius $r$.<br>center $(5, k)$ with $k > 0$ <span class=\"nt\">(midpoint of $-7$ and $17$; the center is above the $x$-axis)</span><br>tangent to $y = 18$, so $18 - k = r$, that is $k = 18 - r$ <span class=\"nt\">(the circle lies below the line, touching it once)</span><br>radius to $(17, 0)$: $r^{2} = 12^{2} + k^{2}$ <span class=\"nt\">(half-chord 12 and height $k$ form a right triangle)</span><br>$r^{2} = 144 + (18 - r)^{2} = 144 + 324 - 36r + r^{2}$ <span class=\"nt\">(substitute)</span><br>$36r = 468$, so $r = 13$ <span class=\"nt\">(the $r^{2}$ terms cancel)</span>",
+    "check": "Center $(5, 5)$: distance to $(17, 0)$ is $\\sqrt{144 + 25} = 13$ ✓; top point $(5, 18)$ is on $y = 18$ ✓",
+    "be_careful": "The tangent line is ABOVE the center, so the distance from center to line is $18 - k$, not $18 + k$.",
+    "desmos": "Both the center height and the radius are unknown, so there is no circle to graph until the right triangle is set up.",
+    "another_way": "Let $k$ be the height of the center: $(18 - k)^{2} = 144 + k^{2}$ gives $324 - 36k = 144$, $k = 5$, $r = 13$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-044",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C2",
+    "G4.C1"
+   ],
+   "family": "concentric-double-through-point-constant",
+   "signature": "x^2+y^2+6x-8y=n, center (-3,4); D same center twice diameter through (1,8): rD^2 = 32 -> rC^2 = 8 -> n = 8-25 = -17; traps 7 (32-25), -9 (16-25)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, circle $C$ has equation $x^{2} + y^{2} + 6x - 8y = n$, where $n$ is a constant. Circle $D$ has the same center as circle $C$, the diameter of circle $D$ is twice the diameter of circle $C$, and circle $D$ passes through the point $(1, 8)$. What is the value of $n$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-17"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses $r_{D}^{2} = 32$ as the radius squared of circle $C$."
+    },
+    {
+     "value": "-9",
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This halves $r_{D}^{2}$. Halving the radius divides $r^{2}$ by 4."
+    }
+   ],
+   "solution": {
+    "key_idea": "$r_{D}^{2}$ comes from the point; halving the radius divides it by 4; then completing the square links $r_{C}^{2}$ to $n$.",
+    "steps": "What does the question ask? The constant $n$.<br>$(x + 3)^{2} + (y - 4)^{2} = n + 25$ <span class=\"nt\">(complete both squares: 9 + 16)</span><br>Center $(-3, 4)$; $r_{C}^{2} = n + 25$ <span class=\"nt\">(read standard form)</span><br>$r_{D}^{2} = (1 + 3)^{2} + (8 - 4)^{2} = 16 + 16 = 32$ <span class=\"nt\">(D passes through (1, 8))</span><br>$r_{C} = \\frac{1}{2}r_{D}$, so $r_{C}^{2} = \\frac{32}{4} = 8$ <span class=\"nt\">(squaring the half gives a quarter)</span><br>$n + 25 = 8$, so $n = -17$ <span class=\"nt\">(solve)</span><br>Why this works: circle $C$ needs only $r_{C}^{2} > 0$, and a negative $n$ is fine, because the right side after completing the square, $n + 25 = 8$, is still positive.",
+    "check": "$(x + 3)^{2} + (y - 4)^{2} = 8$ expands to $x^{2} + y^{2} + 6x - 8y + 17 = 0$, so $n = -17$ ✓",
+    "be_careful": "Twice the diameter means 4 times $r^{2}$.",
+    "desmos": "A slider on $n$ would need circle $D$ built too; the algebra is the intended route.",
+    "another_way": "Work with radii: $r_{D} = \\sqrt{32} = 4\\sqrt{2}$, so $r_{C} = 2\\sqrt{2}$ and $r_{C}^{2} = 8$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-045",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C6",
+    "G4.C3"
+   ],
+   "family": "chord-bisects-radius-arc",
+   "signature": "chord AB perpendicular bisector of radius OC, AB 12 -> (r/2)^2 + 36 = r^2 -> r 4 sqrt3; angle AOB 120 -> minor arc 8 sqrt3 pi/3; traps 4 sqrt3 pi/3 (60), 4 pi, 16 sqrt3 pi/3 (major)",
+   "abilities": [
+    "G",
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a circle with center $O$, chord $\\overline{AB}$ is the perpendicular bisector of radius $\\overline{OC}$. If $AB = 12$, what is the length of minor arc $AB$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{4\\sqrt{3}\\pi}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses 60°, $\\angle  AOM$, instead of $\\angle  AOB = 120°$."
+    },
+    {
+     "key": "B",
+     "text": "$4\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses the radius 6 (half the chord) with a 120° angle; the radius is $4\\sqrt{3}$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{8\\sqrt{3}\\pi}{3}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{16\\sqrt{3}\\pi}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is the major arc, from 240°."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The chord meets $\\overline{OC}$ at its midpoint $M$, so $OM = \\frac{r}{2}$; in right triangle $OMA$ the hypotenuse is $r$ and one leg is $\\frac{r}{2}$, which forces 30-60-90.",
+    "steps": "What does the question ask? The minor arc $AB$.<br>$M$ = midpoint of $\\overline{OC}$: $OM = \\frac{r}{2}$, and $AM = 6$ <span class=\"nt\">(bisector of OC; perpendicular from center halves AB)</span><br>$(\\frac{r}{2})^{2} + 6^{2} = r^{2}$, so $\\frac{3}{4}r^{2} = 36$ <span class=\"nt\">(right triangle OMA)</span><br>$r^{2} = 48$, $r = 4\\sqrt{3}$ <span class=\"nt\">(solve)</span><br>$OM = \\frac{1}{2}OA$, so $\\angle  AOM = 60°$ and $\\angle  AOB = 120°$ <span class=\"nt\">(30-60-90 triangle, doubled)</span><br>Arc $= \\frac{120}{360} \\cdot 2\\pi(4\\sqrt{3}) = \\frac{8\\sqrt{3}\\pi}{3}$ <span class=\"nt\">(fraction of the circumference)</span><br>Why this works: \"perpendicular bisector of a radius\" fixes the distance from the center as half the radius, which fixes the angle no matter how big the circle is; $AB$ only sets the scale.",
+    "check": "$(2\\sqrt{3})^{2} + 6^{2} = 12 + 36 = 48 = (4\\sqrt{3})^{2}$ ✓",
+    "be_careful": "Half the chord is a leg, not the radius.",
+    "desmos": "No equation is given; Desmos is not useful.",
+    "another_way": "Radians: arc $= r\\theta = 4\\sqrt{3} \\cdot \\frac{2\\pi}{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-046",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C1",
+    "G4.C5"
+   ],
+   "family": "tangent-to-both-axes-through-point",
+   "signature": "circle tangent to both axes through (2,1): center (r,r), (2-r)^2+(1-r)^2=r^2 -> r^2-6r+5=0 -> r 1 or 5 -> greatest 5; traps 1, sqrt5, 6",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, a circle is tangent to both the $x$-axis and the $y$-axis and passes through the point $(2, 1)$. What is the greatest possible radius of the circle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D26",
+     "feedback": "1 is the smaller of the two possible radii."
+    },
+    {
+     "key": "B",
+     "text": "$\\sqrt{5}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$\\sqrt{5}$ is the distance from the origin to $(2, 1)$; the origin is not the center."
+    },
+    {
+     "key": "C",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "6 is the sum of the two possible radii."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Tangent to both axes in Quadrant I means the center is $(r, r)$; the point gives a quadratic in $r$.",
+    "steps": "What does the question ask? The largest radius that works.<br>$(2, 1)$ is in Quadrant I, so the center is $(r, r)$ with $r > 0$ <span class=\"nt\">(distance to each axis equals r)</span><br>$(2 - r)^{2} + (1 - r)^{2} = r^{2}$ <span class=\"nt\">(the point is one radius from the center)</span><br>$r^{2} - 6r + 5 = 0$ <span class=\"nt\">(expand: 4 - 4r + 1 - 2r + r squared = 0)</span><br>$(r - 1)(r - 5) = 0$, so $r = 1$ or $r = 5$ <span class=\"nt\">(factor)</span><br>Greatest radius: 5 <span class=\"nt\">(finish line)</span><br>Why this works: two circles in the corner of the axes pass through $(2, 1)$, a small one and a large one; the question asks for the large one.",
+    "check": "$r = 5$: center $(5, 5)$, $(2 - 5)^{2} + (1 - 5)^{2} = 9 + 16 = 25$ ✓",
+    "be_careful": "Both roots are valid; read \"greatest\".",
+    "desmos": "A slider family $(x - a)^{2} + (y - a)^{2} = a^{2}$ shows both circles through $(2, 1)$, but the exact value needs the equation.",
+    "another_way": "Graph $y = (2 - x)^{2} + (1 - x)^{2} - x^{2}$ and read its zeros, 1 and 5."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-047",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C3",
+    "G4.C4"
+   ],
+   "family": "ring-sector-area-from-perimeter",
+   "signature": "ring sector, radial sides 3, perimeter 26 -> arcs sum 20; area = theta/2((r+3)^2 - r^2) = (3/2)(theta r + theta(r+3)) = 3/2 * 20 = 30; traps 10 (half of arcs), 20 (arcs), 26 (perimeter)",
+   "abilities": [
+    "G",
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A region is bounded by two arcs of concentric circles and two straight segments that lie along radii of the circles, so the region is a piece of a ring. Each straight segment has length 3, and the perimeter of the region is 26. What is the area of the region?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is half the total arc length; it also needs the width 3."
+    },
+    {
+     "key": "B",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "20 is the total length of the two arcs, not an area."
+    },
+    {
+     "key": "C",
+     "text": "$26$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "26 is the perimeter given in the problem."
+    },
+    {
+     "key": "D",
+     "text": "$30$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Neither the radii nor the angle is needed. With central angle $\\theta$, the area is $\\frac{\\theta}{2}((r + 3)^{2} - r^{2})$, and that factors into (width) $\\times$ (average arc).",
+    "steps": "What does the question ask? The area of the ring piece.<br>The perimeter is made of the two arcs and the two straight sides, so the arcs together are $s_{1} + s_{2} = 26 - 3 - 3 = 20$ <span class=\"nt\">(perimeter minus the two straight sides)</span><br>inner radius $r$, outer $r + 3$, angle $\\theta$: $s_{1} = r\\theta$, $s_{2} = (r + 3)\\theta$ <span class=\"nt\">(arc = radius times angle)</span><br>area $= \\frac{\\theta}{2}((r + 3)^{2} - r^{2}) = \\frac{\\theta}{2}(3)(2r + 3)$ <span class=\"nt\">(big sector minus small sector)</span><br>$= \\frac{3}{2}(r\\theta + (r + 3)\\theta) = \\frac{3}{2}(s_{1} + s_{2})$ <span class=\"nt\">(regroup)</span><br>$= \\frac{3}{2}(20) = 30$, the same for every choice of $r$ and $\\theta$ that fits the perimeter <span class=\"nt\">(substitute)</span>",
+    "check": "Try $r = 1$, $\\theta = 4$: arcs 4 and 16, sum 20 ✓; area $= \\frac{4}{2}(16 - 1) = 30$ ✓. Try $r = 3$, $\\theta = \\frac{20}{9}$: area $= \\frac{10}{9}(27) = 30$ ✓",
+    "be_careful": "The angle is in radians, so arc $= r\\theta$ and sector area $= \\frac{1}{2}r^{2}\\theta$.",
+    "desmos": "Two unknowns ($r$ and $\\theta$) and only one condition, so nothing solves; the area is fixed anyway.",
+    "another_way": "Like a trapezoid: area = width $\\times$ average of the two arcs $= 3 \\times 10 = 30$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-048",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C5",
+    "G4.C6"
+   ],
+   "family": "chord-and-tangent-angle-kite-area",
+   "signature": "chord AB 10, tangents at A,B meet at P with angle APB 60 -> triangle ABP equilateral... AOB 120, r = 10/sqrt3, PA = 10 -> kite area = 2 * 1/2 * r * PA = 100 sqrt3/3; traps 50 sqrt3/3 (one triangle), 25 sqrt3 (equilateral ABP), 100",
+   "abilities": [
+    "G",
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Points $A$ and $B$ lie on a circle with center $O$, and $AB = 10$. The lines tangent to the circle at $A$ and at $B$ intersect at point $P$, and the measure of angle $APB$ is 60°. What is the area of quadrilateral $OAPB$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{50\\sqrt{3}}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This is only triangle $OAP$, half the quadrilateral."
+    },
+    {
+     "key": "B",
+     "text": "$25\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$25\\sqrt{3}$ is the area of equilateral triangle $ABP$, not the quadrilateral $OAPB$."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{100\\sqrt{3}}{3}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$100$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies $PA \\cdot PB$ as if the quadrilateral were a square of side 10."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$PA = PB$ and $\\angle  APB = 60°$ make triangle $ABP$ equilateral, so $PA = 10$; $\\angle  AOB = 120°$ then gives the radius.",
+    "steps": "What does the question ask? The area of the kite $OAPB$.<br>$PA = PB$ and $\\angle  APB = 60°$, so triangle $ABP$ is equilateral: $PA = 10$ <span class=\"nt\">(equal tangent lengths)</span><br>$\\angle  OAP = 90°$; $\\angle  AOP = \\frac{1}{2}(360° - 180° - 60°) = 60°$ <span class=\"nt\">(OP bisects the kite)</span><br>In 30-60-90 triangle $OAP$: $PA = r\\sqrt{3}$, so $r = \\frac{10}{\\sqrt{3}} = \\frac{10\\sqrt{3}}{3}$ <span class=\"nt\">(PA is opposite the 60 degree angle)</span><br>Area of $OAP = \\frac{1}{2} \\cdot r \\cdot PA = \\frac{1}{2} \\cdot \\frac{10\\sqrt{3}}{3} \\cdot 10 = \\frac{50\\sqrt{3}}{3}$ <span class=\"nt\">(right angle at A)</span><br>Kite area $= 2 \\cdot \\frac{50\\sqrt{3}}{3} = \\frac{100\\sqrt{3}}{3}$ <span class=\"nt\">(two congruent triangles)</span><br>Why this works: the radius and the tangent segment are perpendicular legs of each half of the kite, so each half has area $\\frac{1}{2} \\cdot r \\cdot PA$.",
+    "check": "Chord from the radius: $AB = r\\sqrt{3} = \\frac{10\\sqrt{3}}{3} \\cdot \\sqrt{3} = 10$ ✓ (120° chord)",
+    "be_careful": "The quadrilateral includes the center $O$; it is not triangle $ABP$.",
+    "desmos": "No coordinates are given; Desmos is not useful.",
+    "another_way": "Kite area $= \\frac{1}{2} \\cdot OP \\cdot AB$ with $OP = 2r = \\frac{20\\sqrt{3}}{3}$: $\\frac{1}{2} \\cdot \\frac{20\\sqrt{3}}{3} \\cdot 10 = \\frac{100\\sqrt{3}}{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-049",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C3",
+    "G4.C4"
+   ],
+   "family": "two-points-angles-minor-arc",
+   "signature": "circle centered at O through (3 sqrt3, 3) and (-3, -3 sqrt3): r 6, angles 30 and 240 -> minor arc 150 deg -> 5 pi; traps 7 pi (210 major), 10 pi, 12 pi",
+   "abilities": [
+    "R",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the $xy$-plane, points $A(3\\sqrt{3}, 3)$ and $B(-3, -3\\sqrt{3})$ lie on a circle centered at the origin. What is the length of minor arc $AB$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5\\pi$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$7\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$7\\pi$ is the major arc, from 210°."
+    },
+    {
+     "key": "C",
+     "text": "$10\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This uses 12, the diameter, as the radius."
+    },
+    {
+     "key": "D",
+     "text": "$12\\pi$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "$12\\pi$ is the circumference."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Find each point\\'s angle from the positive $x$-axis; their difference is the central angle.",
+    "steps": "What does the question ask? The shorter arc from $A$ to $B$.<br>$r = \\sqrt{27 + 9} = 6$ <span class=\"nt\">(distance from the origin)</span><br>$A = (6\\cos 30°, 6\\sin 30°)$: angle 30° <span class=\"nt\">(Quadrant I, y is half of r)</span><br>$B = (6\\cos 240°, 6\\sin 240°)$: angle 240° <span class=\"nt\">(Quadrant III, reference angle 60 degrees)</span><br>Central angle $= 240° - 30° = 210°$; minor angle $= 360° - 210° = 150°$ <span class=\"nt\">(take the smaller arc)</span><br>Arc $= \\frac{150}{360} \\cdot 12\\pi = 5\\pi$ <span class=\"nt\">(fraction of the circumference)</span><br>Why this works: the counterclockwise difference is 210°, more than half a turn, so the minor arc goes the other way.",
+    "check": "$5\\pi + 7\\pi = 12\\pi = 2\\pi(6)$ ✓",
+    "be_careful": "Subtracting the angles gives the major arc here.",
+    "desmos": "Desmos plots the points; the angles still have to be identified, so the reasoning is required.",
+    "another_way": "Radians: $\\frac{\\pi}{6}$ and $\\frac{4\\pi}{3}$; the gap is $\\frac{7\\pi}{6}$, so the minor angle is $\\frac{5\\pi}{6}$ and arc $= 6 \\cdot \\frac{5\\pi}{6} = 5\\pi$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G4-050",
+   "version": 1,
+   "skill": {
+    "code": "G4",
+    "domain": "geo",
+    "cb_skill": "Circles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G4.C1",
+    "G4.C5"
+   ],
+   "family": "two-circles-one-common-point-sum",
+   "signature": "(x-4)^2+(y-2)^2=16 and (x-4)^2+(y-k)^2=1 one point: |k-2| = 5 or 3 -> k = -3, -1, 5, 7 -> sum 8; traps 4 (external only), 12",
+   "abilities": [
+    "R",
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In the $xy$-plane, the graphs of $(x - 4)^{2} + (y - 2)^{2} = 16$ and $(x - 4)^{2} + (y - k)^{2} = 1$, where $k$ is a constant, intersect at exactly one point. What is the sum of all possible values of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses only the outside touching positions, $k = 7$ and $k = -3$. The small circle can also touch from inside, at $k = 5$ and $k = -1$."
+    },
+    {
+     "value": "12",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This counts only the circles above the center, $k = 5$ and $k = 7$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Both centers are on the vertical line $x = 4$. Circles of radii 4 and 1 meet at exactly one point when the distance between centers is $4 + 1 = 5$ (outside) or $4 - 1 = 3$ (inside).",
+    "steps": "What does the question ask? The sum of every $k$ giving exactly one common point.<br>Centers $(4, 2)$ and $(4, k)$; radii 4 and 1 <span class=\"nt\">(standard form)</span><br>Distance between centers $= |k - 2|$ <span class=\"nt\">(same x-coordinate)</span><br>Outside touch: $|k - 2| = 5$, so $k = 7$ or $k = -3$ <span class=\"nt\">(radii add)</span><br>Inside touch: $|k - 2| = 3$, so $k = 5$ or $k = -1$ <span class=\"nt\">(radii subtract)</span><br>Sum $= 7 + (-3) + 5 + (-1) = 8$ <span class=\"nt\">(add all four)</span><br>Why this works: subtracting the equations gives a horizontal line $y = $ constant, and the circles share one point only when that line touches the big circle at its top or bottom.",
+    "check": "$k = 5$: the small circle\\'s top $(4, 6)$ is the big circle\\'s top, and every other point is inside ✓",
+    "be_careful": "A small circle can touch a big one from the inside.",
+    "desmos": "A slider on $k$ shows all four touching positions, but each must be spotted; algebra confirms them.",
+    "another_way": "The four values are symmetric about 2 in pairs, so the sum is $4 \\cdot 2 = 8$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

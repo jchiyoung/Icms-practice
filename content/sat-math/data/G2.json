@@ -1,0 +1,3467 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "G2",
+ "skill": "Lines, angles, and triangles",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-G2-001",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C2"
+   ],
+   "family": "alt-interior-then-linear-pair",
+   "signature": "parallel lines; alternate interior (3x+12) = (5x-28) -> x = 20, angle 72 -> y = 108 linear pair; traps 20 (x), 72, 94.5",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, line $\\ell$ is parallel to line $m$.",
+   "stem_after_figure": "What is the value of $y$?",
+   "figures": [
+    {
+     "id": "QB-G2-001-fig1",
+     "file": "figures/QB-G2-001-fig1.svg",
+     "alt": "Two horizontal parallel lines l (top) and m (bottom) cut by a transversal. At the top crossing, the angle below l and left of the transversal is (3x + 12) degrees. At the bottom crossing, the angle above m and right of the transversal is (5x − 28) degrees and the angle above m and left of the transversal is y degrees."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "20 is $x$. The question asks for $y$."
+    },
+    {
+     "key": "B",
+     "text": "$72$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "72 is the measure of the two marked angles. The angle $y°$ sits beside one of them on line $m$, so it is the supplement."
+    },
+    {
+     "key": "C",
+     "text": "$94.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This sets the two marked angles supplementary. They are alternate interior angles, so they are equal."
+    },
+    {
+     "key": "D",
+     "text": "$108$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Alternate interior angles are equal; then $y°$ forms a linear pair with one of them.",
+    "steps": "What does the question ask? The value of $y$.<br><b>Plan.</b> Use the parallel lines to find $x$, then the straight line $m$ to find $y$.<br>$3x + 12 = 5x - 28$ <span class=\"nt\">(alternate interior angles are equal)</span><br>$40 = 2x$, so $x = 20$ <span class=\"nt\">(solve)</span><br>$5(20) - 28 = 72$ <span class=\"nt\">(each marked angle is 72°)</span><br>$y = 180 - 72 = 108$ <span class=\"nt\">(linear pair on line m)</span><br>Why not 72? That is the marked angle, not $y$.",
+    "check": "$3(20) + 12 = 72$ and $5(20) - 28 = 72$ ✓; $72 + 108 = 180$ ✓",
+    "be_careful": "Finding $x = 20$ is only the halfway point.",
+    "desmos": "Not needed.",
+    "another_way": "$y°$ and the angle $(3x + 12)°$ are same-side interior angles, so $y + 3x + 12 = 180$ once $x = 20$ is known."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-002",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C1"
+   ],
+   "family": "vertical-pair-ratio",
+   "signature": "two lines intersect; one angle is 4 times another (must be a linear pair) -> 36; traps 45 (90/2), 72, 144",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two lines intersect at a point, forming four angles. The measure of one of the four angles is 4 times the measure of another of the four angles. What is the measure, in degrees, of the smallest of the four angles?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$36$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$45$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This splits 180° into $4 + 4$ parts instead of $1 + 4$ parts."
+    },
+    {
+     "key": "C",
+     "text": "$72$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This uses $5x = 360$. The two angles are a linear pair, so they add to 180°, not 360°."
+    },
+    {
+     "key": "D",
+     "text": "$144$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "144° is the larger angle."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Unequal angles at an intersection must be a linear pair, since vertical angles are equal.",
+    "steps": "What does the question ask? The smallest of the four angles.<br><b>Plan.</b> Decide which two angles can be unequal, then split 180°.<br>The two angles are not equal, so they are not vertical angles. <span class=\"nt\">(vertical angles are equal)</span><br>$x + 4x = 180$ <span class=\"nt\">(they form a linear pair)</span><br>$x = 36$ <span class=\"nt\">(solve)</span><br>The four angles are 36°, 144°, 36°, 144°. <span class=\"nt\">(vertical angles)</span><br>Why not 144? That is the larger angle.",
+    "check": "$36 + 144 = 180$ ✓ and $144 = 4(36)$ ✓",
+    "be_careful": "Two lines make only two different angle sizes.",
+    "desmos": "Not needed.",
+    "another_way": "The larger angle is $\\frac{4}{5}$ of 180°, which is 144°, so the smaller is 36°."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-003",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C3"
+   ],
+   "family": "ratio-angles-exterior",
+   "signature": "angles 2:3:7 -> 30, 45, 105; exterior at smallest = 150",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The measures of the three angles of a triangle are in the ratio $2 : 3 : 7$. What is the measure, in degrees, of an exterior angle of the triangle at the vertex with the smallest angle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "150"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "30",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "30° is the smallest interior angle. The exterior angle is its supplement."
+    },
+    {
+     "value": "75",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "75 is $30 + 45$, the two smaller angles. The exterior angle at the smallest vertex equals the sum of the other two angles, $45 + 105$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find the angles from the ratio; an exterior angle is the supplement of its interior angle.",
+    "steps": "What does the question ask? The exterior angle at the smallest angle.<br><b>Plan.</b> Turn the ratio into angles, then take the supplement.<br>$2k + 3k + 7k = 180$ <span class=\"nt\">(angle sum)</span><br>$k = 15$ <span class=\"nt\">(solve)</span><br>Angles: 30°, 45°, 105° <span class=\"nt\">(multiply)</span><br>$180 - 30 = 150$ <span class=\"nt\">(exterior angle is supplementary to 30°)</span><br>Why not 30? That is the interior angle.",
+    "check": "$45 + 105 = 150$ ✓ (exterior angle equals the two remote angles)",
+    "be_careful": "The exterior angle at the smallest vertex is the largest exterior angle.",
+    "desmos": "Not needed.",
+    "another_way": "The exterior angle equals the sum of the remote interior angles: $\\frac{3 + 7}{12}(180) = 150$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-004",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C3"
+   ],
+   "family": "exterior-angle-figure",
+   "signature": "figure: exterior at C 132 = x + (2x-3) -> x = 45; ask angle B = 87; traps 45, 48, 93",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, side $AC$ of triangle $ABC$ is extended beyond $C$.",
+   "stem_after_figure": "What is the measure, in degrees, of $\\angle  ABC$?",
+   "figures": [
+    {
+     "id": "QB-G2-004-fig1",
+     "file": "figures/QB-G2-004-fig1.svg",
+     "alt": "Triangle ABC with base AC extended to the right past C. The angle at A is x degrees, the angle at B is (2x − 3) degrees, and the exterior angle at C, between the extension and side CB, is 132 degrees."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$45$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "45 is $x$, the measure of $\\angle  A$."
+    },
+    {
+     "key": "B",
+     "text": "$48$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "48° is $\\angle  ACB$."
+    },
+    {
+     "key": "C",
+     "text": "$87$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$93$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "93° is $180 - 87$, the exterior angle at $B$, not the angle itself."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The exterior angle at $C$ equals the sum of the two remote interior angles.",
+    "steps": "What does the question ask? $\\angle  ABC = (2x - 3)°$.<br><b>Plan.</b> Use the exterior angle at $C$ to find $x$.<br>$x + (2x - 3) = 132$ <span class=\"nt\">(exterior angle theorem)</span><br>$3x = 135$, so $x = 45$ <span class=\"nt\">(solve)</span><br>$\\angle  ABC = 2(45) - 3 = 87$ <span class=\"nt\">(substitute)</span><br>Why not 48? That is $\\angle  ACB$.",
+    "check": "$\\angle  ACB = 180 - 132 = 48$; $45 + 87 + 48 = 180$ ✓",
+    "be_careful": "Finish by substituting; $x$ is not the answer.",
+    "desmos": "Not needed.",
+    "another_way": "Use $\\angle  ACB = 48$ and the angle sum: $x + 2x - 3 + 48 = 180$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-005",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "isosceles-apex-exterior",
+   "signature": "PQ = PR, angle P 38 -> base angles 71 -> exterior at Q 109; traps 71, 76, 142",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $PQR$, $PQ = PR$ and the measure of $\\angle  P$ is 38°. What is the measure, in degrees, of an exterior angle of the triangle at vertex $Q$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$71$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "71° is the interior angle at $Q$."
+    },
+    {
+     "key": "B",
+     "text": "$76$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This doubles 38°, as if $\\angle  Q$ were equal to $\\angle  P$."
+    },
+    {
+     "key": "C",
+     "text": "$109$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$142$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is $180 - 38$, the exterior angle at $P$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Equal sides are opposite equal angles, so $\\angle  Q = \\angle  R$.",
+    "steps": "What does the question ask? The exterior angle at $Q$.<br><b>Plan.</b> Find the base angle, then its supplement.<br>$\\angle  Q = \\angle  R$ <span class=\"nt\">($PQ = PR$)</span><br>$2\\angle  Q = 180 - 38 = 142$ <span class=\"nt\">(angle sum)</span><br>$\\angle  Q = 71$ <span class=\"nt\">(halve)</span><br>$180 - 71 = 109$ <span class=\"nt\">(exterior angle)</span><br>Why not 71? That is the interior angle at $Q$.",
+    "check": "Exterior at $Q$ = $\\angle  P + \\angle  R = 38 + 71 = 109$ ✓",
+    "be_careful": "The equal angles are at $Q$ and $R$, the ends of the base $QR$.",
+    "desmos": "Not needed.",
+    "another_way": "Use the remote interior angles directly: $38 + 71 = 109$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-006",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C2"
+   ],
+   "family": "parallel-unequal-supplementary",
+   "signature": "two angles formed by a transversal and two parallel lines, (7k-20) and (3k+10), not equal -> supplementary -> k = 19",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A transversal crosses two parallel lines, forming eight angles. Two of these angles have measures $(7k - 20)°$ and $(3k + 10)°$, and the two angles are not equal. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "19"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7.5",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This sets the angles equal: $7k - 20 = 3k + 10$. Then both angles would be 32.5°, but the angles are not equal."
+    },
+    {
+     "value": "113",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "113° is the angle $7k - 20$. The question asks for $k$."
+    }
+   ],
+   "solution": {
+    "key_idea": "A transversal of parallel lines makes only two angle sizes, and they add to 180°.",
+    "steps": "What does the question ask? The value of $k$.<br><b>Plan.</b> Decide equal or supplementary before writing the equation.<br>All eight angles are one of two sizes, and the two sizes are supplementary. <span class=\"nt\">(parallel lines)</span><br>$(7k - 20) + (3k + 10) = 180$ <span class=\"nt\">(the angles are not equal)</span><br>$10k - 10 = 180$ <span class=\"nt\">(combine)</span><br>$k = 19$ <span class=\"nt\">(solve)</span><br>Why not 7.5? It makes the two angles equal.",
+    "check": "$7(19) - 20 = 113$ and $3(19) + 10 = 67$; $113 + 67 = 180$ ✓",
+    "be_careful": "Without the words \"not equal,\" either relation would be possible.",
+    "desmos": "Not needed.",
+    "another_way": "Test the equal case: $k = 7.5$ makes them equal, which the stem rules out."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-007",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "midsegment-parallel-proportion",
+   "signature": "DE || BC, AD 6, DB 4, DE 9 -> BC 15; traps 6 (DB-ratio), 13 (adds 4), 13.5",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The figure shows the side view of a triangular roof frame $ABC$. A crossbeam $\\overline{DE}$ joins side $\\overline{AB}$ to side $\\overline{AC}$ and runs parallel to the floor beam $\\overline{BC}$. The lengths shown are in feet.",
+   "stem_after_figure": "How long, in feet, is the floor beam $\\overline{BC}$?",
+   "figures": [
+    {
+     "id": "QB-G2-007-fig1",
+     "file": "figures/QB-G2-007-fig1.svg",
+     "alt": "Triangle ABC with A at the top. Point D is on side AB and point E is on side AC, and segment DE is parallel to BC. AD is labeled 6, DB is labeled 4, and DE is labeled 9."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This pairs $DE$ with $BC$ using $\\frac{DB}{AD} = \\frac{4}{6}$."
+    },
+    {
+     "key": "B",
+     "text": "$13$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 4 to 9. Similar figures scale by multiplying."
+    },
+    {
+     "key": "C",
+     "text": "$13.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses $\\frac{AD}{DB} = \\frac{6}{4}$; the matching sides are $AD$ and the whole side $AB = 10$."
+    },
+    {
+     "key": "D",
+     "text": "$15$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "$\\triangle ADE ∼ \\triangle ABC$, and the side that matches $AD$ is the whole side $AB$.",
+    "steps": "What does the question ask? $BC$.<br><b>Plan.</b> Match sides of the small and large triangles.<br>$\\triangle ADE ∼ \\triangle ABC$ <span class=\"nt\">(shared $\\angle  A$; corresponding angles at the parallels)</span><br>$AB = 6 + 4 = 10$ <span class=\"nt\">(whole side)</span><br>$\\frac{BC}{9} = \\frac{10}{6}$ <span class=\"nt\">(matching sides)</span><br>$BC = 15$ <span class=\"nt\">(solve)</span><br>Why not 13.5? It uses the piece $DB$ instead of $AB$.",
+    "check": "$\\frac{9}{15} = \\frac{6}{10} = 0.6$ ✓",
+    "be_careful": "Use the whole side $AB$, not the piece $DB$.",
+    "desmos": "Not needed.",
+    "another_way": "Scale factor from small to large is $\\frac{10}{6}$; $9 \\times \\frac{5}{3} = 15$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-008",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "similar-perimeter-from-correspondence",
+   "signature": "JKL ~ RST, JK 8, KL 14, JL 10 (perimeter 32), RS = 12 -> k 1.5 -> perimeter 48",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Triangle $JKL$ is similar to triangle $RST$, where $J$, $K$, and $L$ correspond to $R$, $S$, and $T$, respectively. In triangle $JKL$, $JK = 8$, $KL = 14$, and $JL = 10$. If $RS = 12$, what is the perimeter of triangle $RST$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "48"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "36",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 4 to the perimeter 32 because $RS$ is 4 more than $JK$. Similar triangles scale by multiplying, not adding."
+    },
+    {
+     "value": "72",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses the area factor $1.5^{2} = 2.25$ on the perimeter."
+    }
+   ],
+   "solution": {
+    "key_idea": "Perimeters of similar triangles have the same ratio as matching sides.",
+    "steps": "What does the question ask? The perimeter of $RST$.<br><b>Plan.</b> Find the scale factor, then scale the perimeter.<br>$RS$ matches $JK$ <span class=\"nt\">(naming order)</span><br>$k = \\frac{12}{8} = 1.5$ <span class=\"nt\">(scale factor)</span><br>Perimeter of $JKL$: $8 + 14 + 10 = 32$ <span class=\"nt\">(add)</span><br>$1.5 \\times 32 = 48$ <span class=\"nt\">(perimeter scales by $k$)</span><br>Why not 72? Perimeter scales by $k$, not $k^{2}$.",
+    "check": "Sides 12, 21, 15 add to 48 ✓",
+    "be_careful": "Match $RS$ with $JK$ from the order of the letters.",
+    "desmos": "Not needed.",
+    "another_way": "Scale each side: 12, 21, 15; total 48."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-009",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C3"
+   ],
+   "family": "angle-bisector-exterior",
+   "signature": "A 64, B 40, bisector from B? no: bisector of angle A meets BC at D -> angle ADC = 40 + 32 = 72? use bisector of C",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, the measure of $\\angle  A$ is 64° and the measure of $\\angle  B$ is 40°. The bisector of $\\angle  C$ intersects side $\\overline{AB}$ at point $D$. What is the measure, in degrees, of $\\angle  ADC$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$78$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$102$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "102° is $\\angle  BDC$, the supplement of $\\angle  ADC$."
+    },
+    {
+     "key": "C",
+     "text": "$104$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "104 is $64 + 40$, the exterior angle at $C$, not an angle at $D$."
+    },
+    {
+     "key": "D",
+     "text": "$116$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is $180 - 64$, which leaves out half of $\\angle  C$ from triangle $ADC$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Find $\\angle  C$, halve it, then use the angle sum in triangle $ADC$.",
+    "steps": "What does the question ask? $\\angle  ADC$, at $D$ in triangle $ADC$.<br><b>Plan.</b> Get $\\angle  C$, halve it, and close triangle $ADC$.<br>$\\angle  C = 180 - 64 - 40 = 76$ <span class=\"nt\">(angle sum)</span><br>$\\angle  ACD = 38$ <span class=\"nt\">(bisector halves $\\angle  C$)</span><br>$\\angle  ADC = 180 - 64 - 38 = 78$ <span class=\"nt\">(angle sum in triangle ADC)</span><br>Why not 102? That is the angle on the other side of $D$.",
+    "check": "Exterior angle of triangle $BDC$ at $D$: $40 + 38 = 78$ ✓",
+    "be_careful": "Triangle $ADC$ uses $\\angle  A$, not $\\angle  B$.",
+    "desmos": "Not needed.",
+    "another_way": "$\\angle  ADC$ is an exterior angle of triangle $BDC$: $\\angle  B + \\angle  BCD = 40 + 38$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-010",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "equilateral-extension-isosceles",
+   "signature": "equilateral ABC, D on ray BC beyond C with CD = CA -> angle CAD 30 -> angle BAD 90; traps 30, 60, 120",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Triangle $ABC$ is equilateral. Point $D$ lies on the extension of $\\overline{BC}$ beyond $C$ so that $CD = CA$. What is the measure, in degrees, of $\\angle  BAD$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "30° is $\\angle  CAD$ only."
+    },
+    {
+     "key": "B",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "60° is $\\angle  BAC$ only."
+    },
+    {
+     "key": "C",
+     "text": "$90$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$120$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "120° is $\\angle  ACD$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$\\angle  ACD = 120$ and triangle $ACD$ is isosceles, so its base angles are 30° each.",
+    "steps": "What does the question ask? $\\angle  BAD = \\angle  BAC + \\angle  CAD$.<br><b>Plan.</b> Split $\\angle  BAD$ into two known pieces.<br>$\\angle  ACD = 180 - 60 = 120$ <span class=\"nt\">(linear pair at C)</span><br>$\\angle  CAD = \\angle  CDA$ <span class=\"nt\">($CD = CA$)</span><br>$\\angle  CAD = \\frac{180 - 120}{2} = 30$ <span class=\"nt\">(angle sum)</span><br>$\\angle  BAD = 60 + 30 = 90$ <span class=\"nt\">(add)</span><br>Why not 30? That is only one piece.",
+    "check": "Triangle $ABD$: $60 + 90 + 30 = 180$ ✓",
+    "be_careful": "The answer is the whole angle at $A$, both parts.",
+    "desmos": "Not needed.",
+    "another_way": "Triangle $ABD$ has $\\angle  B = 60$ and $\\angle  D = 30$, so $\\angle  BAD = 90$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-011",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C6"
+   ],
+   "family": "congruent-correspondence-solve",
+   "signature": "ABC = DEF; AB = 2x+10, DE = 3x-15 -> x 25; angle B 70, angle D = 60 -> angle F 50; ask angle F",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Triangle $ABC$ is congruent to triangle $DEF$, where $A$, $B$, and $C$ correspond to $D$, $E$, and $F$, respectively. The measure of $\\angle  B$ is 70°, and the measure of $\\angle  D$ is $(2x + 10)°$. If the measure of $\\angle  A$ is $(3x - 15)°$, what is the measure, in degrees, of $\\angle  F$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "50"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "25",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "25 is $x$."
+    },
+    {
+     "value": "70",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "70° belongs to $\\angle  E$, which matches $\\angle  B$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Matching angles of congruent triangles are equal; the naming order says which match.",
+    "steps": "What does the question ask? $\\angle  F$, which matches $\\angle  C$.<br><b>Plan.</b> Match angles by letter order, solve, and use the angle sum.<br>$\\angle  A = \\angle  D$ <span class=\"nt\">(A corresponds to D)</span><br>$3x - 15 = 2x + 10$, so $x = 25$ <span class=\"nt\">(solve)</span><br>$\\angle  A = 60$ <span class=\"nt\">(substitute)</span><br>$\\angle  C = 180 - 60 - 70 = 50$ <span class=\"nt\">(angle sum)</span><br>$\\angle  F = 50$ <span class=\"nt\">(F corresponds to C)</span><br>Why not 70? That matches $\\angle  E$.",
+    "check": "Triangle $DEF$: $60 + 70 + 50 = 180$ ✓",
+    "be_careful": "Read the correspondence from the order of the letters, not from position on the page.",
+    "desmos": "Not needed.",
+    "another_way": "All three angles of $DEF$ are 60°, 70°, 50°."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-012",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C1"
+   ],
+   "family": "three-lines-straight-angle",
+   "signature": "three lines through a point: adjacent angles a, b, c on one side sum 180; a = 2b, c = b + 20 -> b 40, a 80",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Three lines intersect at a single point and form six angles. Three of the angles are adjacent and together form a straight angle; their measures are $a°$, $b°$, and $c°$. If $a = 2b$ and $c = b + 20$, what is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$40$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "40 is $b$."
+    },
+    {
+     "key": "B",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "60 is $c$."
+    },
+    {
+     "key": "C",
+     "text": "$80$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$170$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This uses 360° for the three angles. Three adjacent angles forming a straight angle total 180°."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The three adjacent angles fill a straight angle.",
+    "steps": "What does the question ask? The value of $a$.<br><b>Plan.</b> Write one equation in $b$.<br>$a + b + c = 180$ <span class=\"nt\">(straight angle)</span><br>$2b + b + (b + 20) = 180$ <span class=\"nt\">(substitute)</span><br>$4b = 160$, so $b = 40$ <span class=\"nt\">(solve)</span><br>$a = 80$ <span class=\"nt\">($a = 2b$)</span><br>Why not 40? That is $b$.",
+    "check": "$80 + 40 + 60 = 180$ ✓",
+    "be_careful": "Finish with $a$, not $b$.",
+    "desmos": "Not needed.",
+    "another_way": "The other three angles are vertical to these, so all six total 360°."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-013",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "shadow-similar-triangles",
+   "signature": "post 1.8 m, shadow 2.4 m; tree shadow 14 m -> 10.5; traps 18.7, 13.4",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At the same time of day, a 1.8-meter post casts a shadow 2.4 meters long and a tree casts a shadow 14 meters long. Both stand vertically on level ground. What is the height, in meters, of the tree?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$10.5$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$12.2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts the post height from the tree shadow, $14 - 1.8$. Heights scale by multiplying."
+    },
+    {
+     "key": "C",
+     "text": "$13.4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts the difference $2.4 - 1.8 = 0.6$ from 14."
+    },
+    {
+     "key": "D",
+     "text": "$18.7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This inverts the ratio: $14 \\times \\frac{2.4}{1.8}$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Sun rays are parallel, so height and shadow are in the same ratio for both objects.",
+    "steps": "What does the question ask? The tree height.<br><b>Plan.</b> Write one proportion: height over shadow.<br>$\\frac{h}{14} = \\frac{1.8}{2.4}$ <span class=\"nt\">(similar right triangles)</span><br>$h = 14 \\times 0.75 = 10.5$ <span class=\"nt\">(solve)</span><br>Why not 18.7? The ratio is upside down.",
+    "check": "$\\frac{10.5}{14} = 0.75 = \\frac{1.8}{2.4}$ ✓",
+    "be_careful": "The tree is shorter than its shadow, just like the post.",
+    "desmos": "Not needed.",
+    "another_way": "The shadow is $\\frac{14}{2.4}$ times as long, so the height is $1.8 \\times \\frac{14}{2.4}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-014",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C2"
+   ],
+   "family": "zigzag-bend",
+   "signature": "figure: bend at P between parallels; x + 2x = 111 -> 37, larger 74; traps 37, 55.5, 69",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, line $\\ell$ is parallel to line $m$.",
+   "stem_after_figure": "What is the value of $2x$?",
+   "figures": [
+    {
+     "id": "QB-G2-014-fig1",
+     "file": "figures/QB-G2-014-fig1.svg",
+     "alt": "Two horizontal parallel lines l (top) and m (bottom). A bent path goes from a point on l down to a point P between the lines and then to a point on m. The angle between l and the first segment is x degrees, the angle at P is 111 degrees, and the angle between m and the second segment is 2x degrees; both marked angles at the lines open toward the right."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$37$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "37 is $x$."
+    },
+    {
+     "key": "B",
+     "text": "$46$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This uses $x + 2x + 111 = 180$, as if the three angles formed a triangle; the bend angle equals the sum of the other two."
+    },
+    {
+     "key": "C",
+     "text": "$55.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This halves 111 as if the two marked angles were equal."
+    },
+    {
+     "key": "D",
+     "text": "$74$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A line through the bend parallel to $\\ell$ splits the 111° angle into a copy of $x°$ and a copy of $2x°$.",
+    "steps": "What does the question ask? $2x$.<br><b>Plan.</b> Add a parallel line through the bend.<br>Draw a line through the bend parallel to $\\ell$ and $m$. <span class=\"nt\">(auxiliary line)</span><br>The 111° angle splits into $x°$ and $2x°$. <span class=\"nt\">(alternate interior angles, twice)</span><br>$3x = 111$, so $x = 37$ <span class=\"nt\">(solve)</span><br>$2x = 74$ <span class=\"nt\">(finish)</span><br>Why not 37? That is $x$.",
+    "check": "$37 + 74 = 111$ ✓",
+    "be_careful": "Both marked angles open the same way (to the right), which is why they add to the bend.",
+    "desmos": "Not needed.",
+    "another_way": "Extend one segment of the path to meet $m$ and use the exterior angle of the triangle formed."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-015",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "isosceles-obtuse-exterior",
+   "signature": "isosceles with a 116 angle (must be apex) -> base 32 -> exterior at base vertex 148",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "One angle of an isosceles triangle measures 116°. What is the measure, in degrees, of an exterior angle of the triangle at one of its other two vertices?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "148"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "32",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "32° is the interior base angle."
+    },
+    {
+     "value": "64",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "64° is $180 - 116$, the exterior angle at the 116° vertex."
+    }
+   ],
+   "solution": {
+    "key_idea": "An obtuse angle cannot appear twice, so 116° is the vertex angle and the other two angles are equal.",
+    "steps": "What does the question ask? An exterior angle at a base vertex.<br><b>Plan.</b> Decide where the 116° angle must be.<br>Two 116° angles would total more than 180°. <span class=\"nt\">(so 116° is the vertex angle)</span><br>Base angles: $\\frac{180 - 116}{2} = 32$ <span class=\"nt\">(equal base angles)</span><br>$180 - 32 = 148$ <span class=\"nt\">(exterior angle)</span><br>Why not 32? That is the interior angle.",
+    "check": "Remote interior angles: $116 + 32 = 148$ ✓",
+    "be_careful": "The \"other two vertices\" have equal angles, so either one gives the same answer.",
+    "desmos": "Not needed.",
+    "another_way": "Exterior angle = $116 + 32$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-016",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C3"
+   ],
+   "family": "angle-expressions-range",
+   "signature": "angles x+15, 2x-5, 3x+20 -> x 25 -> 40, 45, 95 -> largest - smallest 55",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The measures of the angles of a triangle are $(x + 15)°$, $(2x - 5)°$, and $(3x + 20)°$. What is the positive difference, in degrees, between the measures of the largest and smallest angles?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$55$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$70$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "70 is $95 - 25$, the largest angle minus $x$ instead of minus the smallest angle."
+    },
+    {
+     "key": "C",
+     "text": "$95$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "95° is the largest angle."
+    },
+    {
+     "key": "D",
+     "text": "$140$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "140 is $95 + 45$, a sum instead of a difference."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Angle sum gives $x$; then compute all three angles.",
+    "steps": "What does the question ask? Largest angle minus smallest angle.<br><b>Plan.</b> Solve for $x$, list all three angles, and compare.<br>$6x + 30 = 180$ <span class=\"nt\">(angle sum)</span><br>$x = 25$ <span class=\"nt\">(solve)</span><br>Angles: 40°, 45°, 95° <span class=\"nt\">(substitute)</span><br>$95 - 40 = 55$ <span class=\"nt\">(difference)</span><br>Why not 70? The smallest angle is 40, not 25.",
+    "check": "$40 + 45 + 95 = 180$ ✓",
+    "be_careful": "The smallest angle is $x + 15$, not $2x - 5$; compute before comparing.",
+    "desmos": "Not needed.",
+    "another_way": "Not needed."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-017",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "midsegment-triangle-perimeter",
+   "signature": "D, E midpoints of AB, AC; sides 12, 16, 18 -> ADE perimeter 23; traps 11.5, 32, 46",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, $AB = 12$, $BC = 16$, and $AC = 18$. Points $D$ and $E$ are the midpoints of $\\overline{AB}$ and $\\overline{AC}$, respectively. What is the perimeter of quadrilateral $DBCE$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$39$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$46$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "46 is the perimeter of triangle $ABC$."
+    },
+    {
+     "key": "C",
+     "text": "$47$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses $DE = 16$; the midsegment is half of $BC$."
+    },
+    {
+     "key": "D",
+     "text": "$54$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "54 is $46 + 8$: it adds $DE$ to the whole perimeter but keeps $AD$ and $AE$, which are not sides of $DBCE$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The segment joining two midpoints is half the third side.",
+    "steps": "What does the question ask? $DB + BC + CE + ED$.<br><b>Plan.</b> Find each of the four sides.<br>$DB = 6$, $CE = 9$ <span class=\"nt\">(midpoints)</span><br>$DE = \\frac{1}{2}(16) = 8$ <span class=\"nt\">(midsegment)</span><br>$6 + 16 + 9 + 8 = 39$ <span class=\"nt\">(add)</span><br>Why not 46? That is the whole triangle.",
+    "check": "$23 + 39 = 46 + 2(8)$: the two perimeters share $DE$ ✓",
+    "be_careful": "Count all four sides, including $DE$.",
+    "desmos": "Not needed.",
+    "another_way": "Triangle $ADE$ is half-size, so its perimeter is 23; $DBCE$ = $46 - 23 + 2(8) = 39$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-018",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C1"
+   ],
+   "family": "three-of-four-angles",
+   "signature": "two lines; three of four angles sum 290 -> fourth 70 -> largest 110",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Two lines intersect at a point. The sum of the measures of three of the four angles formed is 290°. What is the measure, in degrees, of the largest of the four angles?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "110"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "70",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "70° is the angle left out of the sum, the smaller angle."
+    },
+    {
+     "value": "145",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This halves 290. The three angles are two of one size and one of the other."
+    }
+   ],
+   "solution": {
+    "key_idea": "All four angles total 360°.",
+    "steps": "What does the question ask? The largest angle.<br><b>Plan.</b> Find the missing angle from 360°.<br>$360 - 290 = 70$ <span class=\"nt\">(the fourth angle)</span><br>The other angles are 110°, 70°, 110°. <span class=\"nt\">(linear pair and vertical angles)</span><br>Largest: 110° <span class=\"nt\">(compare)</span><br>Why not 70? That is the smaller angle.",
+    "check": "$110 + 70 + 110 = 290$ ✓",
+    "be_careful": "The missing angle could be the larger or the smaller kind; only 70° works because then the rest sum to 290.",
+    "desmos": "Not needed.",
+    "another_way": "If the missing angle were the larger one, $L$, then $L + 2(180 - L) = 290$ gives $L = 70$, which is not larger. So it is the smaller."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-019",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "bowtie-whole-segment",
+   "signature": "figure bowtie AB || DE, AE and BD meet at C; AC 6, CE 9, BD 20 -> BC 8; traps 10, 12, 30",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, $\\overline{AB}$ is parallel to $\\overline{DE}$, and segments $\\overline{AE}$ and $\\overline{BD}$ intersect at point $C$. The length of $\\overline{AC}$ is 6, the length of $\\overline{CE}$ is 9, and the length of $\\overline{BD}$ is 20.",
+   "stem_after_figure": "What is the length of $\\overline{BC}$?",
+   "figures": [
+    {
+     "id": "QB-G2-019-fig1",
+     "file": "figures/QB-G2-019-fig1.svg",
+     "alt": "Two segments AE and BD cross at C. A and B are at the top, D and E at the bottom; AB and DE are horizontal. Only the letters are shown."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This splits 20 in half, ignoring the ratio $6 : 9$."
+    },
+    {
+     "key": "C",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is $CD$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{40}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses $\\frac{BC}{20} = \\frac{6}{9}$, pairing a piece with the whole segment."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "$\\triangle ABC ∼ \\triangle EDC$ (vertical angles and alternate interior angles), so $BC : CD = AC : CE = 2 : 3$.",
+    "steps": "What does the question ask? $BC$.<br><b>Plan.</b> Find the ratio $BC : CD$, then split 20.<br>$\\triangle CAB ∼ \\triangle CED$ <span class=\"nt\">(AA)</span><br>$\\frac{BC}{CD} = \\frac{6}{9} = \\frac{2}{3}$ <span class=\"nt\">(matching sides)</span><br>$BC = \\frac{2}{5}(20) = 8$ <span class=\"nt\">(2 of 5 equal parts)</span><br>Why not 12? That is $CD$.",
+    "check": "$CD = 12$; $\\frac{8}{12} = \\frac{6}{9}$ ✓",
+    "be_careful": "20 is the whole of $BD$, split $2 : 3$.",
+    "desmos": "Not needed.",
+    "another_way": "$BC = t$, $CD = 20 - t$, $\\frac{t}{20 - t} = \\frac{2}{3}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-020",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "M",
+   "concepts": [
+    "G2.C3"
+   ],
+   "family": "right-triangle-acute",
+   "signature": "right triangle acute x and 2x-18 -> x 36 -> 54; traps 36, 66, 72",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Triangle $PQR$ has a right angle at $Q$. The measure of $\\angle  P$ is $18°$ less than twice the measure of $\\angle  R$. What is the measure, in degrees, of $\\angle  P$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$36$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "36° is the measure of $\\angle  R$, not $\\angle  P$."
+    },
+    {
+     "key": "B",
+     "text": "$54$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$66$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This sets $\\angle  R + \\angle  P = 180$; the acute angles of a right triangle total 90°."
+    },
+    {
+     "key": "D",
+     "text": "$108$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This finds $3x = 108$ (with $\\angle  R = x°$) and stops."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The two acute angles of a right triangle add to 90°.",
+    "steps": "What does the question ask? The measure of $\\angle  P$. Let $\\angle  R = x°$, so $\\angle  P = (2x - 18)°$.<br><b>Plan.</b> Use 90° for the two acute angles.<br>$x + 2x - 18 = 90$ <span class=\"nt\">(acute angles are complementary)</span><br>$x = 36$ <span class=\"nt\">(solve)</span><br>$2(36) - 18 = 54$ <span class=\"nt\">(angle P)</span><br>Why not 36? That is angle R.",
+    "check": "$36 + 54 + 90 = 180$ ✓",
+    "be_careful": "$54 > 36$, so 54 is the larger.",
+    "desmos": "Not needed.",
+    "another_way": "Not needed."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-021",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "antiparallel-shared-angle",
+   "signature": "angle ADE = angle ACB (not parallel) -> ADE ~ ACB; AD 4, AE 5, AC 10 -> AB 12.5 -> DB 8.5; traps 4 (parallel assumption), 8, 12.5",
+   "abilities": [
+    "G",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, point $D$ lies on $\\overline{AB}$ and point $E$ lies on $\\overline{AC}$ so that $\\angle  ADE$ and $\\angle  ACB$ have the same measure. If $AD = 4$, $AE = 5$, and $AC = 10$, what is the length of $\\overline{DB}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This treats $\\overline{DE}$ as parallel to $\\overline{BC}$, so $\\frac{AD}{AB} = \\frac{AE}{AC}$ gives $AB = 8$ and $DB = 4$. The equal angles are at $D$ and $C$, not $D$ and $B$."
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "8 is $AB$ under the parallel assumption."
+    },
+    {
+     "key": "C",
+     "text": "$8.5$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$12.5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D12",
+     "feedback": "12.5 is all of $AB$. The question asks for the piece $DB$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The shared angle $A$ plus $\\angle  ADE = \\angle  ACB$ makes $\\triangle ADE ∼ \\triangle ACB$, with $D$ matching $C$ and $E$ matching $B$.",
+    "steps": "What does the question ask? $DB = AB - AD$.<br><b>Plan.</b> Find which angles match, write the proportion, and subtract.<br>$\\triangle ADE ∼ \\triangle ACB$ <span class=\"nt\">(shared $\\angle  A$ and $\\angle  ADE = \\angle  ACB$)</span><br>$A \\to A$, $D \\to C$, $E \\to B$ <span class=\"nt\">(match the equal angles)</span><br>$\\frac{AD}{AC} = \\frac{AE}{AB}$ <span class=\"nt\">(matching sides)</span><br>$\\frac{4}{10} = \\frac{5}{AB}$ <span class=\"nt\">(substitute)</span><br>$AB = 12.5$ <span class=\"nt\">(solve)</span><br>$DB = 12.5 - 4 = 8.5$ <span class=\"nt\">(finish)</span><br>Why not 4? That assumes parallel lines.",
+    "check": "Scale factor $\\frac{4}{10} = \\frac{5}{12.5} = 0.4$ ✓; $D$ is between $A$ and $B$ since $4 < 12.5$ ✓",
+    "be_careful": "The equal angles are not in matching positions for parallel lines, so $\\overline{DE}$ is not parallel to $\\overline{BC}$.",
+    "desmos": "Not needed.",
+    "another_way": "$AD \\cdot AB = AE \\cdot AC$: $4 \\cdot AB = 50$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-022",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "altitude-hypotenuse-area",
+   "signature": "right angle C, altitude CD; AD 4, DB 9 -> CD 6 -> area 39; traps 6, 36, 78",
+   "abilities": [
+    "G",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, $\\angle  C$ is a right angle, and $\\overline{CD}$ is the altitude from $C$ to hypotenuse $\\overline{AB}$. If $AD = 4$ and $DB = 9$, what is the area of triangle $ABC$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 is the altitude $CD$."
+    },
+    {
+     "key": "B",
+     "text": "$36$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "36 is $CD^{2}$ ($4 \\times 9$), not an area."
+    },
+    {
+     "key": "C",
+     "text": "$39$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$78$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This multiplies base and height without the $\\frac{1}{2}$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The altitude to the hypotenuse makes two triangles similar to each other, so $\\frac{AD}{CD} = \\frac{CD}{DB}$.",
+    "steps": "What does the question ask? The area, $\\frac{1}{2}(AB)(CD)$.<br><b>Plan.</b> Get the altitude from the two similar triangles, then the area.<br>$\\triangle ACD ∼ \\triangle CBD$ <span class=\"nt\">(each has a right angle at $D$, and $\\angle  A = \\angle  BCD$)</span><br>$\\frac{AD}{CD} = \\frac{CD}{DB}$ <span class=\"nt\">(matching legs)</span><br>$CD^{2} = 4 \\times 9 = 36$, so $CD = 6$ <span class=\"nt\">(solve)</span><br>$AB = 4 + 9 = 13$ <span class=\"nt\">(whole hypotenuse)</span><br>Area $= \\frac{1}{2}(13)(6) = 39$ <span class=\"nt\">(base and height)</span><br>Why not 78? The area needs the factor one half.",
+    "check": "Legs $\\sqrt{52}$ and $\\sqrt{117}$: $\\frac{1}{2}\\sqrt{52}\\sqrt{117} = \\frac{1}{2}(78) = 39$ ✓",
+    "be_careful": "Use the whole hypotenuse 13 as the base.",
+    "desmos": "Not needed.",
+    "another_way": "Find the legs: $AC^{2} = 16 + 36 = 52$, $BC^{2} = 81 + 36 = 117$, then $\\frac{1}{2}(AC)(BC)$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-023",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "two-isosceles-chain",
+   "signature": "AB = AC, angle A 44 -> base 68; D on AC, BD = BC -> angle BDC 68, DBC 44 -> ABD 24",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In triangle $ABC$, $AB = AC$ and the measure of $\\angle  A$ is 44°. Point $D$ lies on $\\overline{AC}$ so that $BD = BC$. What is the measure, in degrees, of $\\angle  ABD$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "24"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "44",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "44° is $\\angle  DBC$, the other part of $\\angle  B$."
+    },
+    {
+     "value": "68",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "68° is all of $\\angle  ABC$ (and also $\\angle  BDC$)."
+    }
+   ],
+   "solution": {
+    "key_idea": "Two isosceles triangles: $ABC$ gives the base angles, and $BDC$ gives $\\angle  BDC = \\angle  C$.",
+    "steps": "What does the question ask? $\\angle  ABD = \\angle  ABC - \\angle  DBC$.<br><b>Plan.</b> Find the base angles of triangle $ABC$ first. Then use the second isosceles triangle, $BDC$, to split $\\angle  B$ into two parts.<br>$\\angle  ABC = \\angle  C = \\frac{180 - 44}{2} = 68$ <span class=\"nt\">($AB = AC$)</span><br>$\\angle  BDC = \\angle  C = 68$ <span class=\"nt\">($BD = BC$)</span><br>$\\angle  DBC = 180 - 68 - 68 = 44$ <span class=\"nt\">(angle sum in triangle BDC)</span><br>$\\angle  ABD = 68 - 44 = 24$ <span class=\"nt\">(subtract)</span><br>Why not 44? That is $\\angle  DBC$.",
+    "check": "Triangle $ABD$: $44 + 24 + (180 - 68) = 180$ ✓",
+    "be_careful": "The equal angles of triangle $BDC$ are at $D$ and $C$, opposite the equal sides $BC$ and $BD$.",
+    "desmos": "Not needed.",
+    "another_way": "$\\angle  BDC$ is exterior to triangle $ABD$: $68 = 44 + \\angle  ABD$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-024",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C7"
+   ],
+   "family": "angle-inequality-could-be",
+   "signature": "P = 2Q, R > P -> 180 - 3Q > 2Q -> Q < 36; could be 30; traps 36 (boundary), 40, 58",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $PQR$, the measure of $\\angle  P$ is twice the measure of $\\angle  Q$, and $\\angle  R$ is larger than $\\angle  P$. Which of the following could be the measure, in degrees, of $\\angle  Q$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$30$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$36$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "At 36°, $\\angle  P = 72$ and $\\angle  R = 72$: equal, not larger. The inequality is strict."
+    },
+    {
+     "key": "C",
+     "text": "$40$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "At 40°, $\\angle  P = 80$ and $\\angle  R = 60$, so $\\angle  R$ is smaller."
+    },
+    {
+     "key": "D",
+     "text": "$58$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "At 58°, $\\angle  P = 116$ and $\\angle  R = 6$. The angles exist, but $\\angle  R$ is much smaller than $\\angle  P$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Write $\\angle  R$ in terms of $\\angle  Q$ and turn \"larger\" into an inequality.",
+    "steps": "What does the question ask? A possible value of $\\angle  Q = q$.<br><b>Plan.</b> Write $\\angle  R$ in terms of $\\angle  Q$ and solve the inequality.<br>$\\angle  P = 2q$, $\\angle  R = 180 - 3q$ <span class=\"nt\">(angle sum)</span><br>$180 - 3q > 2q$ <span class=\"nt\">($\\angle  R > \\angle  P$)</span><br>$q < 36$ <span class=\"nt\">(solve)</span><br>Only 30 is less than 36. <span class=\"nt\">(test the choices)</span><br>Why not 36? It gives a tie.",
+    "check": "$q = 30$: angles 30°, 60°, 90°, and $90 > 60$ ✓",
+    "be_careful": "36 makes $\\angle  R$ equal to $\\angle  P$, which is not \"larger.\"",
+    "desmos": "Not needed.",
+    "another_way": "Test each choice by computing all three angles."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-025",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "bisector-parallel-isosceles-proportion",
+   "signature": "bisector of B meets AC at D; DE || BC, E on AB -> DE = BE = 7; AE 5 -> AB 12 -> BC = 7*12/5 = 16.8; traps 7, 9.8, 12",
+   "abilities": [
+    "G",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, the bisector of $\\angle  B$ intersects $\\overline{AC}$ at point $D$. The line through $D$ parallel to $\\overline{BC}$ intersects $\\overline{AB}$ at point $E$. If $AE = 5$ and $BE = 7$, what is the length of $\\overline{BC}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "7 is $DE$, which equals $BE$; it is not $BC$."
+    },
+    {
+     "key": "B",
+     "text": "$9.8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses $\\frac{BC}{7} = \\frac{7}{5}$, pairing the wrong sides."
+    },
+    {
+     "key": "C",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is $AB$."
+    },
+    {
+     "key": "D",
+     "text": "$16.8$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The bisector and the parallel line create equal angles at $B$ and $D$, so $DE = BE$; then use $\\triangle AED ∼ \\triangle ABC$.",
+    "steps": "What does the question ask? $BC$.<br><b>Plan.</b> Find $DE$ from an isosceles triangle, then use similarity.<br>$\\angle  EBD = \\angle  DBC$ <span class=\"nt\">(bisector)</span><br>$\\angle  EDB = \\angle  DBC$ <span class=\"nt\">(alternate interior angles, $DE \\parallel BC$)</span><br>$\\angle  EBD = \\angle  EDB$, so $DE = BE = 7$ <span class=\"nt\">(isosceles triangle EBD)</span><br>$\\triangle AED ∼ \\triangle ABC$ <span class=\"nt\">(parallel lines)</span><br>$\\frac{DE}{BC} = \\frac{AE}{AB} = \\frac{5}{12}$ <span class=\"nt\">(matching sides)</span><br>$BC = \\frac{12}{5}(7) = 16.8$ <span class=\"nt\">(solve)</span><br>Why not 12? That is $AB$.",
+    "check": "$\\frac{7}{16.8} = \\frac{5}{12} \\approx 0.417$ ✓",
+    "be_careful": "$DE$ is not given; it comes from the isosceles triangle.",
+    "desmos": "Not needed.",
+    "another_way": "Scale factor from small to large is $\\frac{12}{5} = 2.4$, and $7 \\times 2.4 = 16.8$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-026",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C3",
+    "G2.C2"
+   ],
+   "family": "isosceles-exterior-algebra",
+   "signature": "AB = BC so angle A = angle C = 2x+8; exterior at C = 3x+22 forms a linear pair with C -> 5x+30 = 180 -> x 30 -> A = C = 68 -> B = 44; traps 30 (x), 68 (A), 112 (exterior)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, $AB = BC$. The measure of $\\angle  A$ is $(2x + 8)°$, and the measure of an exterior angle at vertex $C$ is $(3x + 22)°$. What is the measure, in degrees, of $\\angle  B$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "30 is $x$, not an angle of the triangle."
+    },
+    {
+     "key": "B",
+     "text": "$44$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$68$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "68° is $\\angle  A$ (and $\\angle  C$), not $\\angle  B$."
+    },
+    {
+     "key": "D",
+     "text": "$112$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "112° is the exterior angle at $C$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$AB = BC$ makes the angles opposite them equal: $\\angle  C = \\angle  A$. The exterior angle at $C$ and $\\angle  C$ add to 180°.",
+    "steps": "What does the question ask? The measure of $\\angle  B$.<br><b>Plan.</b> Find $x$ from the exterior angle, then the interior angle.<br>$\\angle  C = \\angle  A = (2x + 8)°$ <span class=\"nt\">($AB = BC$, so the angles opposite these sides ($\\angle  C$ and $\\angle  A$) are equal)</span><br>$(2x + 8) + (3x + 22) = 180$ <span class=\"nt\">($\\angle  C$ and its exterior angle form a linear pair)</span><br>$5x = 150$, so $x = 30$ <span class=\"nt\">(solve)</span><br>$\\angle  A = \\angle  C = 68°$ <span class=\"nt\">(substitute)</span><br>$\\angle  B = 180 - 68 - 68 = 44°$ <span class=\"nt\">(triangle angle sum)</span><br>Why not 112? That is the exterior angle at $C$, not an angle of the triangle.",
+    "check": "$68 + 68 + 44 = 180$ ✓, and the exterior angle at $C$ is $112 = 68 + 44$, the two remote interior angles ✓",
+    "be_careful": "Equal SIDES $AB$ and $BC$ meet at $B$, so the equal ANGLES are at $A$ and $C$, not at $B$.",
+    "desmos": "Not needed.",
+    "another_way": "Exterior angle theorem: $3x + 22 = \\angle  A + \\angle  B$, and $\\angle  B = 180 - 2(2x + 8)$; this gives $3x + 22 = 164 - 2x$, so $x = 30$ and $\\angle  B = 44$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-027",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "parallel-area-ratio-trapezoid",
+   "signature": "DE || BC, AD:DB = 2:3, area ADE 12 -> k 2/5 -> ABC 75 -> DBCE 63; traps 18, 27, 75",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, point $D$ lies on $\\overline{AB}$ and point $E$ lies on $\\overline{AC}$ so that $\\overline{DE}$ is parallel to $\\overline{BC}$. The ratio of $AD$ to $DB$ is $2$ to $3$, and the area of triangle $ADE$ is 12. What is the area of quadrilateral $DBCE$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses $\\frac{3}{2}$ as a linear scale on area and uses $DB$ in place of $AB$."
+    },
+    {
+     "key": "B",
+     "text": "$27$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This squares $\\frac{3}{2}$, pairing the piece $DB$ with $AD$. The matching side of $AD$ is $AB$."
+    },
+    {
+     "key": "C",
+     "text": "$63$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$75$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "75 is the area of all of triangle $ABC$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "$\\triangle ADE ∼ \\triangle ABC$ with scale factor $\\frac{AD}{AB} = \\frac{2}{5}$, so the areas are in the ratio $4 : 25$.",
+    "steps": "What does the question ask? Area of $ABC$ minus area of $ADE$.<br><b>Plan.</b> Find the scale factor using the whole side, square it, then subtract.<br>$\\frac{AD}{AB} = \\frac{2}{2 + 3} = \\frac{2}{5}$ <span class=\"nt\">(whole side)</span><br>Area ratio $= (\\frac{2}{5})^{2} = \\frac{4}{25}$ <span class=\"nt\">(areas scale by $k^{2}$)</span><br>Area of $ABC = 12 \\times \\frac{25}{4} = 75$ <span class=\"nt\">(solve)</span><br>$75 - 12 = 63$ <span class=\"nt\">(subtract)</span><br>Why not 75? That is the whole triangle.",
+    "check": "$\\frac{12}{75} = \\frac{4}{25}$ ✓",
+    "be_careful": "Use the whole side $AB$, and square the ratio for area.",
+    "desmos": "Not needed.",
+    "another_way": "Unit parts: $ADE$ is 4 parts and $ABC$ is 25 parts, so the trapezoid is 21 parts of 3."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-028",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C2"
+   ],
+   "family": "double-zigzag",
+   "signature": "figure: A on l, B, C between, D on m; angles 25 at A, ABC 60, 40 at D -> x = 75; traps 65, 85, 100",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In the figure, line $\\ell$ is parallel to line $m$. Point $A$ lies on $\\ell$, point $D$ lies on $m$, and points $B$ and $C$ lie between the lines.",
+   "stem_after_figure": "What is the value of $x$?",
+   "figures": [
+    {
+     "id": "QB-G2-028-fig1",
+     "file": "figures/QB-G2-028-fig1.svg",
+     "alt": "Two horizontal parallel lines l (top) and m (bottom). A path goes from A on l down to the right to B, then down to the left to C, then down to the right to D on m. The angle between l (to the right of A) and AB is 25 degrees, angle ABC is 60 degrees, angle BCD is x degrees, and the angle between m (to the left of D) and DC is 40 degrees."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$65$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This adds only the two angles at the lines, $25 + 40$, and skips the turn at $B$."
+    },
+    {
+     "key": "B",
+     "text": "$75$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$85$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds $60 + 25$, treating the angle at $C$ like the angle at $B$."
+    },
+    {
+     "key": "D",
+     "text": "$100$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This adds $60 + 40$ without splitting the 60° angle at $B$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Draw a line parallel to $\\ell$ through $B$ and another through $C$; each bend splits into angles made with horizontal lines.",
+    "steps": "What does the question ask? $\\angle  BCD = x$.<br><b>Plan.</b> Add a parallel line through each bend.<br>At $B$: the angle between $BA$ and the horizontal is 25°. <span class=\"nt\">(alternate interior angles with ℓ)</span><br>So the angle between $BC$ and the horizontal is $60 - 25 = 35$. <span class=\"nt\">(split the 60° angle)</span><br>At $C$: the angle between $CB$ and the horizontal is 35°. <span class=\"nt\">(alternate interior angles)</span><br>The angle between $CD$ and the horizontal is 40°. <span class=\"nt\">(alternate interior angles with m)</span><br>$x = 35 + 40 = 75$ <span class=\"nt\">(add the two parts at C)</span><br>Why not 65? That skips the bend at $B$.",
+    "check": "Rule for bends: angles opening one way total angles opening the other way. $25 + x = 60 + 40$, so $x = 75$ ✓",
+    "be_careful": "Each bend needs its own parallel line.",
+    "desmos": "Not needed.",
+    "another_way": "Bends that point right ($A$-side angle 25 and $C$) balance bends that point left ($B$ and the 40° at $D$): $25 + x = 60 + 40$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-029",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "equal-perimeters-parallel-cut",
+   "signature": "AB 10, AC 14, BC 12; DE || BC; perimeter ADE = perimeter DBCE -> 36k = 36 - 12k -> k 3/4 -> DE 9",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In triangle $ABC$, $AB = 10$, $BC = 12$, and $AC = 14$. Points $D$ and $E$ lie on $\\overline{AB}$ and $\\overline{AC}$, respectively, so that $\\overline{DE}$ is parallel to $\\overline{BC}$. The perimeter of triangle $ADE$ is equal to the perimeter of quadrilateral $DBCE$. What is the length of $\\overline{DE}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "9"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "6",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This takes $D$ and $E$ as midpoints. Equal perimeters do not mean half of each side."
+    },
+    {
+     "value": "27",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "27 is the common perimeter."
+    }
+   ],
+   "solution": {
+    "key_idea": "Let $k = \\frac{AD}{AB}$; every side of triangle $ADE$ is $k$ times its match, and the leftover pieces are $(1 - k)$ times $AB$ and $AC$.",
+    "steps": "What does the question ask? $DE = 12k$.<br><b>Plan.</b> Write both perimeters in terms of $k$.<br>Perimeter of $ADE = k(10 + 12 + 14) = 36k$ <span class=\"nt\">(similar, scale k)</span><br>$DB = 10(1 - k)$, $EC = 14(1 - k)$ <span class=\"nt\">(leftover pieces)</span><br>Perimeter of $DBCE = 10(1 - k) + 12 + 14(1 - k) + 12k = 36 - 12k$ <span class=\"nt\">(add four sides)</span><br>$36k = 36 - 12k$ <span class=\"nt\">(equal perimeters)</span><br>$k = \\frac{3}{4}$ <span class=\"nt\">(solve)</span><br>$DE = 12 \\cdot \\frac{3}{4} = 9$ <span class=\"nt\">(finish)</span><br>Why not 6? Midpoints do not give equal perimeters.",
+    "check": "$ADE$: $7.5 + 9 + 10.5 = 27$; $DBCE$: $2.5 + 12 + 3.5 + 9 = 27$ ✓",
+    "be_careful": "$DE$ is a side of both figures, so it appears in both perimeters.",
+    "desmos": "Not needed.",
+    "another_way": "Since $DE$ is in both perimeters, equal perimeters means $AD + AE = DB + BC + EC$: $24k = 24(1 - k) + 12$, so $48k = 36$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-030",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C6"
+   ],
+   "family": "congruence-scrambled-order",
+   "signature": "PQR = TUS: P->T, Q->U, R->S; P = 2x+8, T = 3x-12 -> x 20 -> P 48; U 71 -> Q 71 -> R 61 -> S 61; traps 48, 71, 119",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Triangle $PQR$ is congruent to triangle $TUS$, where $P$, $Q$, and $R$ correspond to $T$, $U$, and $S$, respectively. The measure of $\\angle  P$ is $(2x + 8)°$, the measure of $\\angle  T$ is $(3x - 12)°$, and the measure of $\\angle  U$ is 71°. What is the measure, in degrees, of $\\angle  S$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$48$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "48° is $\\angle  P$ (and $\\angle  T$), not $\\angle  S$."
+    },
+    {
+     "key": "B",
+     "text": "$61$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$71$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "71° is $\\angle  U$ itself."
+    },
+    {
+     "key": "D",
+     "text": "$119$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds $48 + 71$, an exterior angle, not $\\angle  S$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Corresponding angles of congruent triangles are equal: $\\angle  P = \\angle  T$, $\\angle  Q = \\angle  U$, $\\angle  R = \\angle  S$.",
+    "steps": "What does the question ask? $\\angle  S$, which matches $\\angle  R$.<br><b>Plan.</b> Match by letter order, then use the angle sum.<br>$2x + 8 = 3x - 12$, so $x = 20$ <span class=\"nt\">(P corresponds to T)</span><br>$\\angle  P = 2(20) + 8 = 48$ <span class=\"nt\">(substitute)</span><br>$\\angle  Q = \\angle  U = 71$ <span class=\"nt\">(Q corresponds to U)</span><br>$\\angle  S = \\angle  R = 180 - 48 - 71 = 61$ <span class=\"nt\">(angle sum; S corresponds to R)</span><br>Why not 71? That is $\\angle  U$.",
+    "check": "Triangle $TUS$: $\\angle  T = 3(20) - 12 = 48$, and $48 + 71 + 61 = 180$ ✓",
+    "be_careful": "The letters of $TUS$ are not in alphabetical order; match by position.",
+    "desmos": "Not needed.",
+    "another_way": "Work in triangle $TUS$ directly: $\\angle  T = 48$ and $\\angle  U = 71$, so $\\angle  S = 180 - 48 - 71 = 61$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-031",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "similar-perimeter-could-not",
+   "signature": "sides 6, 8, 12; similar triangle has a side 24 -> k 4, 3, 2 -> perimeters 104, 78, 52; NOT 96",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A triangle has side lengths 6, 8, and 12. A second triangle is similar to the first, and one of its sides has length 24. Which of the following could NOT be the perimeter of the second triangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$52$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "52 is possible: 24 matches the side 12, scale factor 2."
+    },
+    {
+     "key": "B",
+     "text": "$78$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "78 is possible: 24 matches the side 8, scale factor 3."
+    },
+    {
+     "key": "C",
+     "text": "$96$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$104$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "104 is possible: 24 matches the side 6, scale factor 4."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The side 24 could match any of the three sides, giving three scale factors.",
+    "steps": "What does the question ask? A perimeter that no correspondence produces.<br><b>Plan.</b> Try 24 against each side.<br>Original perimeter: $6 + 8 + 12 = 26$ <span class=\"nt\">(add)</span><br>$k = \\frac{24}{6} = 4$, $\\frac{24}{8} = 3$, or $\\frac{24}{12} = 2$ <span class=\"nt\">(three ways to match 24)</span><br>Perimeters: 104, 78, 52 <span class=\"nt\">(multiply 26 by each k)</span><br>96 is not on the list. <span class=\"nt\">(compare)</span><br>Why not 104? That one is possible.",
+    "check": "$\\frac{96}{26} \\approx 3.69$, not a possible scale factor ✓",
+    "be_careful": "96 is $4 \\times 24$, a tempting product, but no side scales that way.",
+    "desmos": "Not needed.",
+    "another_way": "A perimeter $P$ works only if $\\frac{P}{26}$ is 2, 3, or 4."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-032",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C3"
+   ],
+   "family": "bisectors-meet-angle",
+   "signature": "bisectors of B and C meet at I; angle BIC = 3 angle A -> 90 + A/2 = 3A -> A 36",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In triangle $ABC$, the bisectors of $\\angle  B$ and $\\angle  C$ intersect at point $I$. The measure of $\\angle  BIC$ is 3 times the measure of $\\angle  A$. What is the measure, in degrees, of $\\angle  A$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "36"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "45",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This sets $\\angle  BIC = 180 - \\angle  A$, forgetting that only half of $\\angle  B$ and half of $\\angle  C$ are in triangle $BIC$."
+    },
+    {
+     "value": "108",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "108° is $\\angle  BIC$."
+    }
+   ],
+   "solution": {
+    "key_idea": "In triangle $BIC$ the two base angles are half of $\\angle  B$ and half of $\\angle  C$, and $\\angle  B + \\angle  C = 180 - \\angle  A$.",
+    "steps": "What does the question ask? $\\angle  A = a$.<br><b>Plan.</b> Express $\\angle  BIC$ in terms of $\\angle  A$ alone, using the angle sums of triangles $ABC$ and $BIC$, then set it equal to $3\\angle  A$.<br>$\\angle  IBC + \\angle  ICB = \\frac{1}{2}(\\angle  B + \\angle  C)$ <span class=\"nt\">(bisectors)</span><br>$= \\frac{1}{2}(180 - a) = 90 - \\frac{a}{2}$ <span class=\"nt\">(angle sum in ABC)</span><br>$\\angle  BIC = 180 - (90 - \\frac{a}{2}) = 90 + \\frac{a}{2}$ <span class=\"nt\">(angle sum in BIC)</span><br>$90 + \\frac{a}{2} = 3a$ <span class=\"nt\">(given)</span><br>$a = 36$ <span class=\"nt\">(solve)</span><br>Why not 108? That is $\\angle  BIC$.",
+    "check": "$a = 36$: $\\angle  B + \\angle  C = 144$, halves total 72, $\\angle  BIC = 108 = 3(36)$ ✓",
+    "be_careful": "The formula $90 + \\frac{a}{2}$ comes from the angle sums; it does not depend on the shape of the triangle.",
+    "desmos": "Not needed.",
+    "another_way": "Try the choices: if $a = 36$ then $\\angle  BIC = 108$ ✓."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-033",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "exterior-double-must-be",
+   "signature": "exterior at C = 2 angle A -> A + B = 2A -> B = A -> AC = BC (sides opposite); MC statements",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, the measure of an exterior angle at vertex $C$ is twice the measure of $\\angle  A$. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$AC = BC$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$AB = AC$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$AB = AC$ would need $\\angle  C = \\angle  B$. The equal angles here are $\\angle  A$ and $\\angle  B$."
+    },
+    {
+     "key": "C",
+     "text": "$AB = BC$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "$AB = BC$ would need $\\angle  C = \\angle  A$."
+    },
+    {
+     "key": "D",
+     "text": "$\\angle  C = 2\\angle  A$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The interior angle at $C$ is $180 - 2\\angle  A$; it equals $2\\angle  A$ only when $\\angle  A = 45$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The exterior angle at $C$ equals $\\angle  A + \\angle  B$; setting that equal to $2\\angle  A$ forces $\\angle  B = \\angle  A$.",
+    "steps": "What does the question ask? A statement true for every such triangle.<br><b>Plan.</b> Turn the exterior angle into an equation in $\\angle  A$ and $\\angle  B$.<br>Exterior angle at $C = \\angle  A + \\angle  B$ <span class=\"nt\">(exterior angle theorem)</span><br>$\\angle  A + \\angle  B = 2\\angle  A$ <span class=\"nt\">(given)</span><br>$\\angle  B = \\angle  A$ <span class=\"nt\">(subtract)</span><br>Sides opposite equal angles are equal: $BC$ (opposite $A$) $= AC$ (opposite $B$). <span class=\"nt\">(isosceles converse)</span><br>Why not $AB = AC$? That needs $\\angle  B = \\angle  C$.",
+    "check": "Example: $\\angle  A = \\angle  B = 50$, $\\angle  C = 80$; exterior at $C$ is 100 = 2(50) ✓, and $AC = BC$ ✓",
+    "be_careful": "Side $BC$ is opposite $\\angle  A$; side $AC$ is opposite $\\angle  B$.",
+    "desmos": "Not needed.",
+    "another_way": "Build an example (50°, 50°, 80°) and test each choice; only $AC = BC$ survives."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-034",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "lamppost-shadow-whole-base",
+   "signature": "child 1.2 m, 3 m from post, shadow 1.5 m -> post 1.2 * 4.5/1.5 = 3.6; traps 2.4 (uses 3), 4.2, 4.5",
+   "abilities": [
+    "M",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A child who is 1.2 meters tall stands 3 meters from the base of a lamppost on level ground. The light at the top of the lamppost makes the child cast a shadow 1.5 meters long, pointing directly away from the lamppost. What is the height, in meters, of the lamppost?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2.4$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This uses $\\frac{h}{3} = \\frac{1.2}{1.5}$. The lamppost triangle reaches the tip of the shadow, so its base is $3 + 1.5$."
+    },
+    {
+     "key": "B",
+     "text": "$3.6$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$4.2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the child height and the distance, $1.2 + 3$."
+    },
+    {
+     "key": "D",
+     "text": "$4.5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4.5 is the distance from the lamppost to the tip of the shadow."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The child and the lamppost are the vertical legs of two similar right triangles that share the shadow tip.",
+    "steps": "What does the question ask? Lamppost height $h$.<br><b>Plan.</b> Sketch both triangles sharing the shadow tip.<br>Large triangle base: $3 + 1.5 = 4.5$ <span class=\"nt\">(post to shadow tip)</span><br>$\\frac{h}{4.5} = \\frac{1.2}{1.5}$ <span class=\"nt\">(similar right triangles)</span><br>$h = 4.5 \\times 0.8 = 3.6$ <span class=\"nt\">(solve)</span><br>Why not 2.4? The base is 4.5, not 3.",
+    "check": "$\\frac{3.6}{4.5} = 0.8 = \\frac{1.2}{1.5}$ ✓",
+    "be_careful": "The base of the big triangle is the whole distance to the shadow tip.",
+    "desmos": "Not needed.",
+    "another_way": "The shadow tip is 3 times as far from the post as from the child, so $h = 3 \\times 1.2$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-035",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "two-isosceles-split-angle",
+   "signature": "D on BC, AD = BD, AC = DC, angle BAC 84 -> B = b, ADC = 2b = CAD -> 3b = 84 -> b 28 -> C 68; traps 28, 42, 56",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, point $D$ lies on $\\overline{BC}$ so that $AD = BD$ and $AC = DC$. The measure of $\\angle  BAC$ is 84°. What is the measure, in degrees, of $\\angle  C$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$28$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "28° is $\\angle  B$ (and $\\angle  BAD$)."
+    },
+    {
+     "key": "B",
+     "text": "$42$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This splits 84° into two equal parts. The parts are $b$ and $2b$."
+    },
+    {
+     "key": "C",
+     "text": "$56$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "56° is $\\angle  CAD$ (and $\\angle  ADC$)."
+    },
+    {
+     "key": "D",
+     "text": "$68$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Let $\\angle  B = b$. Triangle $ABD$ gives $\\angle  BAD = b$ and exterior angle $\\angle  ADC = 2b$; triangle $ADC$ gives $\\angle  CAD = 2b$.",
+    "steps": "What does the question ask? $\\angle  C$.<br><b>Plan.</b> Name $\\angle  B$ and chase angles through both isosceles triangles.<br>$\\angle  BAD = \\angle  B = b$ <span class=\"nt\">($AD = BD$)</span><br>$\\angle  ADC = 2b$ <span class=\"nt\">(exterior angle of triangle ABD)</span><br>$\\angle  CAD = \\angle  ADC = 2b$ <span class=\"nt\">($AC = DC$)</span><br>$b + 2b = 84$, so $b = 28$ <span class=\"nt\">($\\angle  BAC$)</span><br>$\\angle  C = 180 - 84 - 28 = 68$ <span class=\"nt\">(angle sum)</span><br>Why not 42? The parts of 84 are not equal.",
+    "check": "Triangle $ADC$: $56 + 56 + 68 = 180$ ✓",
+    "be_careful": "In triangle $ADC$ the equal sides $AC$ and $DC$ sit opposite $\\angle  ADC$ and $\\angle  CAD$.",
+    "desmos": "Not needed.",
+    "another_way": "Not needed."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-036",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C7"
+   ],
+   "family": "largest-angle-could-be",
+   "signature": "angles x+20, 2x, y; y strictly largest -> y = 160 - 3x, x < 32 -> y > 64; could be 76; traps 50, 60, 64",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The measures of the angles of a triangle are $(x + 20)°$, $(2x)°$, and $y°$. If $y°$ is greater than each of the other two angle measures, which of the following could be the value of $y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$50$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$y = 50$ gives $x = 36.7$; then $2x \\approx 73$, which is greater than $y$."
+    },
+    {
+     "key": "B",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$y = 60$ looks like a fair share of 180, but it gives $2x = 66.7 > 60$."
+    },
+    {
+     "key": "C",
+     "text": "$64$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$y = 64$ gives $x = 32$ and $2x = 64$, a tie. The question needs $y$ strictly greater."
+    },
+    {
+     "key": "D",
+     "text": "$76$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Write $y$ in terms of $x$, then turn \"$y$ is largest\" into bounds on $x$.",
+    "steps": "What does the question ask? A possible $y$.<br><b>Plan.</b> Write $y$ in $x$ and require it to be largest.<br>$y = 180 - (x + 20) - 2x = 160 - 3x$ <span class=\"nt\">(angle sum)</span><br>$160 - 3x > 2x$, so $x < 32$ <span class=\"nt\">($y > 2x$)</span><br>$160 - 3x > x + 20$, so $x < 35$ <span class=\"nt\">($y > x + 20$ (weaker))</span><br>$x < 32$ gives $y > 160 - 96 = 64$ <span class=\"nt\">(translate to y)</span><br>Only 76 exceeds 64. <span class=\"nt\">(test the choices)</span><br>Why not 64? It ties.",
+    "check": "$y = 76$: $x = 28$, angles 48°, 56°, 76° ✓",
+    "be_careful": "64 makes $y$ tie with $2x$; \"greater than\" is strict.",
+    "desmos": "A Desmos table of $x$, $x + 20$, $2x$, $160 - 3x$ checks each choice.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-037",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "three-parallels-two-solutions",
+   "signature": "three parallels; first transversal x and 2x-3, second 6 and x+1 -> x/(2x-3) = 6/(x+1) -> x^2-11x+18 = 0 -> x = 2 or 9 -> totals 3 or 24; traps 9 (x), 11 (adds the two x values), 16 (second transversal total)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Three parallel lines are crossed by two transversals. On the first transversal, the segments between consecutive parallel lines have lengths $x$ and $2x - 3$. On the second transversal, the corresponding segments have lengths 6 and $x + 1$, in the same order. Which of the following could be the total length of the first transversal between the two outer parallel lines?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "9 is a value of $x$, only the first segment."
+    },
+    {
+     "key": "B",
+     "text": "$11$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "11 is the sum of the two solutions of $x^{2} - 11x + 18 = 0$, not a length."
+    },
+    {
+     "key": "C",
+     "text": "$16$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "16 is the total on the SECOND transversal when $x = 9$. The two transversals need not be equal."
+    },
+    {
+     "key": "D",
+     "text": "$24$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Parallel lines cut every transversal in the same ratio, and the proportion here becomes a quadratic.",
+    "steps": "What does the question ask? A possible value of $x + (2x - 3) = 3x - 3$.<br><b>Plan.</b> Parallel lines divide both transversals in the same ratio, so set the two ratios equal, solve for $x$, and add the two pieces.<br>$\\frac{x}{2x - 3} = \\frac{6}{x + 1}$ <span class=\"nt\">(parallel lines cut proportional segments)</span><br>$x^{2} + x = 12x - 18$ <span class=\"nt\">(cross-multiply)</span><br>$x^{2} - 11x + 18 = 0$, so $(x - 2)(x - 9) = 0$ <span class=\"nt\">(factor)</span><br>$x = 2$: segments 2 and 1 (total 3); $x = 9$: segments 9 and 15 (total 24) <span class=\"nt\">(both give positive lengths)</span><br>Only 24 is among the choices <span class=\"nt\">(the other possible total, 3, is not listed)</span><br>Why not 16? That is the total on the second transversal ($6 + 10$), not the first.",
+    "check": "$x = 9$: $\\frac{9}{15} = \\frac{6}{10} = \\frac{3}{5}$ ✓",
+    "be_careful": "Check that every segment is positive for each solution, then compute the TOTAL, $3x - 3$, not $x$.",
+    "desmos": "Desmos can find the two intersections of $y = \\frac{x}{2x - 3}$ and $y = \\frac{6}{x + 1}$, but the totals still have to be built by hand.",
+    "another_way": "Test each choice: a total $T = 3x - 3$ gives $x = \\frac{T + 3}{3}$; only $T = 24$ gives $x = 9$, which satisfies the proportion."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-038",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "isosceles-chain-no-numbers",
+   "signature": "killer hp-geo17-3: AB = AC, D on AC, AD = BD = BC; A = x -> ABD = x -> BDC = 2x (exterior) -> C = 2x -> ABC = 2x; 5x = 180 -> 72; traps 36 (A), 54, 108 (ADB)",
+   "abilities": [
+    "G",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, $AB = AC$. Point $D$ lies on side $\\overline{AC}$ so that $AD = BD = BC$. What is the measure, in degrees, of $\\angle  ABC$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$36$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "36° is $\\angle  A$ (and $\\angle  ABD$), not $\\angle  ABC$."
+    },
+    {
+     "key": "B",
+     "text": "$54$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This guesses $\\angle  ABC = 90 - 36$; no right angle appears in the figure."
+    },
+    {
+     "key": "C",
+     "text": "$72$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$108$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "108° is $\\angle  ADB = 180 - 2(36)$, an angle at $D$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Name $\\angle  A = x$. $AD = BD$ copies $x$ to $\\angle  ABD$; the exterior angle at $D$ is $2x$; $BD = BC$ copies $2x$ to $\\angle  C$; $AB = AC$ copies it to $\\angle  ABC$.",
+    "steps": "What does the question ask? $\\angle  ABC$.<br><b>Plan.</b> No angle is given, so name the smallest one $x$ and push it around the figure: each isosceles triangle copies an angle, and the exterior angle theorem doubles it.<br>Let $\\angle  A = x$. Then $\\angle  ABD = x$ <span class=\"nt\">($AD = BD$)</span><br>$\\angle  BDC = x + x = 2x$ <span class=\"nt\">(exterior angle of triangle ABD)</span><br>$\\angle  C = \\angle  BDC = 2x$ <span class=\"nt\">($BD = BC$)</span><br>$\\angle  ABC = \\angle  C = 2x$ <span class=\"nt\">($AB = AC$)</span><br>$x + 2x + 2x = 180$, so $x = 36$ <span class=\"nt\">(angle sum in ABC)</span><br>$\\angle  ABC = 2(36) = 72$ <span class=\"nt\">(finish)</span><br>So $\\angle  ABC = 72°$, and $BD$ splits it into $36°$ and $36°$.<br>Why not 36? That is $\\angle  A$, not $\\angle  ABC$.",
+    "check": "Triangle $BDC$: $36 + 72 + 72 = 180$ ✓; triangle $ABD$: $36 + 36 + 108 = 180$ ✓",
+    "be_careful": "$\\angle  BDC$ is an exterior angle of triangle $ABD$, so it equals the sum of the two far angles, $2x$.",
+    "desmos": "No numbers to graph; the structure must be found first.",
+    "another_way": "$\\angle  DBC = 2x - x = x$, so in triangle $BDC$: $x + 2x + 2x = 180$, the same equation."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-039",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "two-altitudes-product",
+   "signature": "AC 15, BC 12, AD altitude to BC = 10, BE altitude to AC -> area 60 -> BE 8; traps 10, 12.5, 18",
+   "abilities": [
+    "G",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In acute triangle $ABC$, $AC = 15$ and $BC = 12$. Segment $\\overline{AD}$ is the altitude from $A$ to $\\overline{BC}$, and segment $\\overline{BE}$ is the altitude from $B$ to $\\overline{AC}$. If $AD = 10$, what is the length of $\\overline{BE}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This assumes the two altitudes are equal. They are equal only when $AC = BC$."
+    },
+    {
+     "key": "C",
+     "text": "$12.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses $\\frac{BE}{10} = \\frac{15}{12}$. The longer side has the shorter altitude."
+    },
+    {
+     "key": "D",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses $\\frac{BE}{15} = \\frac{12}{10}$, a mismatched proportion."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Both altitudes give the same area: $BC \\cdot AD = AC \\cdot BE$.",
+    "steps": "What does the question ask? $BE$.<br><b>Plan.</b> Compute the area of the triangle twice, once with base $BC$ and once with base $AC$, and set the two expressions equal.<br>Area $= \\frac{1}{2}(BC)(AD) = \\frac{1}{2}(12)(10) = 60$ <span class=\"nt\">(base BC)</span><br>$\\frac{1}{2}(AC)(BE) = 60$ <span class=\"nt\">(base AC)</span><br>$\\frac{1}{2}(15)(BE) = 60$ <span class=\"nt\">(substitute)</span><br>$BE = 8$ <span class=\"nt\">(solve)</span><br>Why not 12.5? The proportion is inverted.",
+    "check": "$15 \\times 8 = 120 = 12 \\times 10$ ✓. Also $\\triangle ADC ∼ \\triangle BEC$ (shared $\\angle  C$, right angles): $\\frac{AD}{BE} = \\frac{AC}{BC}$ gives $\\frac{10}{8} = \\frac{15}{12}$ ✓",
+    "be_careful": "A longer base goes with a shorter altitude.",
+    "desmos": "Not needed.",
+    "another_way": "Right triangles $ADC$ and $BEC$ share $\\angle  C$, so they are similar: $\\frac{BE}{AD} = \\frac{BC}{AC}$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-040",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "square-equilateral-outside",
+   "signature": "square ABCD, equilateral CDE outside on CD; ADE isosceles with 150 -> 15 each; angle AEB = 60 - 30 = 30; traps 15, 45, 60",
+   "abilities": [
+    "G",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Square $ABCD$ and equilateral triangle $CDE$ share side $\\overline{CD}$, and point $E$ lies outside the square. What is the measure, in degrees, of $\\angle  AEB$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$15$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "15° is $\\angle  AED$, only one piece."
+    },
+    {
+     "key": "B",
+     "text": "$30$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$45$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This guesses from the diagonal of the square; $E$ is not on a diagonal line through $A$ or $B$."
+    },
+    {
+     "key": "D",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "60° is $\\angle  DEC$, the whole angle of the triangle at $E$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "$DA = DC = DE$, so triangle $ADE$ is isosceles with vertex angle $90 + 60 = 150$.",
+    "steps": "What does the question ask? $\\angle  AEB = \\angle  DEC - \\angle  AED - \\angle  BEC$.<br><b>Plan.</b> Find $\\angle  AED$ from an isosceles triangle.<br>$DE = DC = DA$ <span class=\"nt\">(equal sides of the square and triangle)</span><br>$\\angle  ADE = 90 + 60 = 150$ <span class=\"nt\">(square corner plus triangle corner)</span><br>$\\angle  AED = \\frac{180 - 150}{2} = 15$ <span class=\"nt\">(isosceles triangle ADE)</span><br>$\\angle  BEC = 15$ <span class=\"nt\">(same reasoning, by symmetry)</span><br>$\\angle  AEB = 60 - 15 - 15 = 30$ <span class=\"nt\">(subtract from 60)</span><br>Why not 15? That is one piece.",
+    "check": "Triangle $ABE$: $\\angle  EAB = \\angle  EBA = 90 - 15 = 75$, and $75 + 75 + 30 = 180$ ✓",
+    "be_careful": "$E$ is outside, so the 150° angle is at $D$, not the 30° angle.",
+    "desmos": "Not needed.",
+    "another_way": "Coordinates: $A(0, 0)$, $B(1, 0)$, $D(0, 1)$, $C(1, 1)$, $E(0.5, 1 + \\frac{\\sqrt{3}}{2})$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-041",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "isosceles-parallel-equal-segment",
+   "signature": "AB = AC = 15, BC = 10; DE || BC with D on AB, E on AC, DE = BD -> 10(15 - t)/15 = t -> t 6 -> DBCE perimeter 6+10+6+6 = 28; traps 22, 34, 40",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, $AB = AC = 15$ and $BC = 10$. Points $D$ and $E$ lie on $\\overline{AB}$ and $\\overline{AC}$, respectively, so that $\\overline{DE}$ is parallel to $\\overline{BC}$ and $DE = BD$. What is the perimeter of quadrilateral $DBCE$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$22$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "22 is $BD + BC + CE$; it leaves out the fourth side $DE$."
+    },
+    {
+     "key": "B",
+     "text": "$28$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$34$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This sets $DE = AD$ instead of $DE = BD$ and then mixes the pieces."
+    },
+    {
+     "key": "D",
+     "text": "$40$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "40 is the perimeter of triangle $ABC$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Let $BD = t$. Then $AD = 15 - t$, and similarity makes $DE = \\frac{10}{15}(15 - t)$. Setting $DE = t$ gives one equation.",
+    "steps": "What does the question ask? $BD + BC + CE + DE$.<br><b>Plan.</b> Let $BD = t$. Express $DE$ two ways, once from the condition and once from similar triangles, and solve.<br>Let $BD = t$, so $AD = 15 - t$. <span class=\"nt\">(name the unknown)</span><br>$\\triangle ADE ∼ \\triangle ABC$ <span class=\"nt\">(DE ∥ BC)</span><br>$\\frac{DE}{10} = \\frac{15 - t}{15}$ <span class=\"nt\">(matching sides)</span><br>$DE = t$ <span class=\"nt\">(given)</span><br>$15t = 10(15 - t)$ <span class=\"nt\">(substitute and cross-multiply)</span><br>$25t = 150$, so $t = 6$ <span class=\"nt\">(solve)</span><br>$CE = BD = 6$ <span class=\"nt\">($AD = AE$, so the leftover pieces are equal)</span><br>Perimeter $= 6 + 10 + 6 + 6 = 28$ <span class=\"nt\">(add four sides)</span><br>Why not 22? The quadrilateral has four sides, and $DE$ counts.",
+    "check": "$AD = 9$, $DE = \\frac{10}{15}(9) = 6 = BD$ ✓",
+    "be_careful": "The condition $DE = BD$ links a side of the small triangle to a leftover piece; neither is given.",
+    "desmos": "Not needed.",
+    "another_way": "Scale factor $k = \\frac{AD}{15}$; $DE = 10k$ and $BD = 15 - 15k$; $10k = 15 - 15k$ gives $k = 0.6$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-042",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C3",
+    "G2.C1"
+   ],
+   "family": "rectangle-fold-similar-triangles",
+   "signature": "fold D onto F on BC along AE: AF = AD = 10 -> BF 6 -> FC 4; EF = DE = x, EC = 8 - x; x^2 = 16 + (8 - x)^2 -> x 5; angle AFE = 90 -> area AEF = 1/2(10)(5) = 25; traps 24 (ABF), 6 (FCE), 40",
+   "abilities": [
+    "G",
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 210,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Rectangle $ABCD$ has $AB = 8$ and $BC = 10$. Point $E$ lies on side $\\overline{CD}$. The rectangle is folded along segment $\\overline{AE}$ so that vertex $D$ lands exactly on point $F$ on side $\\overline{BC}$. What is the area of triangle $AEF$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "24",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "24 is the area of right triangle $ABF$, not triangle $AEF$."
+    },
+    {
+     "value": "40",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses legs $AF = 10$ and $AB = 8$, or $\\frac{1}{2}(10)(8)$; the leg at $F$ is $EF$, not $AB$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Folding keeps lengths and angles: $AF = AD$, $EF = ED$, and $\\angle  AFE = \\angle  ADE = 90^{\\circ}$. Triangle $AEF$ is a copy of triangle $AED$.",
+    "steps": "What does the question ask? The area of triangle $AEF$, a copy of triangle $AED$.<br><b>Plan.</b> Folding keeps lengths. Mark the equal pieces, use the two right triangles on side $BC$ to find $DE$, then use the folded right angle at $F$.<br>$AF = AD = 10$ <span class=\"nt\">(folding does not change length)</span><br>$BF = \\sqrt{10^{2} - 8^{2}} = 6$, so $FC = 10 - 6 = 4$ <span class=\"nt\">(right triangle $ABF$)</span><br>Let $DE = EF = x$; then $EC = 8 - x$ <span class=\"nt\">($CD = AB = 8$)</span><br>$x^{2} = 4^{2} + (8 - x)^{2}$ <span class=\"nt\">(right triangle $FCE$)</span><br>$x^{2} = 16 + 64 - 16x + x^{2}$, so $16x = 80$ and $x = 5$ <span class=\"nt\">(expand)</span><br>Area of $AEF = \\frac{1}{2}(AF)(EF) = \\frac{1}{2}(10)(5) = 25$ <span class=\"nt\">(the right angle at $D$ moves to $F$)</span><br>So triangle $AEF$ has area 25: the same as triangle $AED$, which it covers exactly before the fold.<br>Why not 24? That is triangle $ABF$, the other right triangle.",
+    "check": "$EC = 3$, $FC = 4$, $EF = 5$: a 3-4-5 triangle ✓. Areas: $ABF$ 24 + $FCE$ 6 + $AEF$ 25 + $AED$ 25 $= 80 = 8 \\times 10$ ✓",
+    "be_careful": "Triangle $AEF$ is not a right triangle at $A$; its right angle is at $F$, carried there from $D$.",
+    "desmos": "Nothing to graph until the fold is turned into equal lengths.",
+    "another_way": "Similar triangles: $\\angle  AFE = 90^{\\circ}$ makes $\\triangle ABF ∼ \\triangle FCE$, so $\\frac{EC}{4} = \\frac{6}{8}$, $EC = 3$, $DE = 5$, and the area is $\\frac{1}{2}(10)(5) = 25$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-043",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "altitude-hypotenuse-from-difference",
+   "signature": "altitude to hypotenuse 12; segments differ by 7 -> p(p+7) = 144 -> 9, 16 -> legs 15, 20, hyp 25 -> perimeter 60; traps 37, 72, 84",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In right triangle $ABC$, $\\angle  C$ is a right angle. The altitude from $C$ meets hypotenuse $\\overline{AB}$ at $D$, and $CD = 12$. If $DB$ is 7 more than $AD$, what is the perimeter of triangle $ABC$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$37$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "37 is $AD + DB + CD = 9 + 16 + 12$, three segments inside the figure."
+    },
+    {
+     "key": "B",
+     "text": "$60$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$72$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "72 adds the altitude 12 to the perimeter."
+    },
+    {
+     "key": "D",
+     "text": "$84$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "84 adds the perimeters of triangles $ACD$ (36) and $BCD$ (48), counting $CD$ twice."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The altitude is the geometric mean of the two pieces of the hypotenuse: $CD^{2} = AD \\cdot DB$.",
+    "steps": "What does the question ask? $AC + BC + AB$.<br><b>Plan.</b> Use the geometric-mean fact to find the two pieces of the hypotenuse, then find each leg with the Pythagorean theorem.<br>$\\triangle ACD ∼ \\triangle CBD$, so $CD^{2} = AD \\cdot DB$ <span class=\"nt\">(altitude to the hypotenuse)</span><br>Let $AD = p$: $p(p + 7) = 144$ <span class=\"nt\">(substitute)</span><br>$p^{2} + 7p - 144 = 0$, $(p - 9)(p + 16) = 0$ <span class=\"nt\">(factor)</span><br>$p = 9$, so $DB = 16$ and $AB = 25$ <span class=\"nt\">(a length is positive)</span><br>$AC = \\sqrt{9^{2} + 12^{2}} = 15$ <span class=\"nt\">(Pythagorean theorem in ACD)</span><br>$BC = \\sqrt{16^{2} + 12^{2}} = 20$ <span class=\"nt\">(Pythagorean theorem in BCD)</span><br>Perimeter $= 15 + 20 + 25 = 60$ <span class=\"nt\">(add)</span><br>Why not 84? That counts $CD$ in two small perimeters.",
+    "check": "$15^{2} + 20^{2} = 625 = 25^{2}$ ✓; area $\\frac{1}{2}(15)(20) = 150 = \\frac{1}{2}(25)(12)$ ✓",
+    "be_careful": "The quadratic has a negative root; discard it.",
+    "desmos": "Desmos can solve $p(p + 7) = 144$, but the setup is the work.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-044",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C3"
+   ],
+   "family": "interior-exterior-bisector",
+   "signature": "interior bisector of B, exterior bisector at C meet at Q; angle BQC 23 -> angle A 46; traps 23, 67, 113",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, side $\\overline{BC}$ is extended beyond $C$ to point $E$. The bisector of $\\angle  ABC$ and the bisector of $\\angle  ACE$ intersect at point $Q$. If the measure of $\\angle  BQC$ is 23°, what is the measure, in degrees, of $\\angle  A$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$23$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "23 is the given angle at $Q$. The relation halves $\\angle  A$, so $\\angle  A$ is double."
+    },
+    {
+     "key": "B",
+     "text": "$46$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$67$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses $90 - 23$, a formula for a different pair of bisectors."
+    },
+    {
+     "key": "D",
+     "text": "$113$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses $90 + 23$, the formula for two interior bisectors."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Exterior angle at $C$ = $\\angle  A + \\angle  B$. Halve it, and compare with the exterior angle of triangle $QBC$ at $C$.",
+    "steps": "What does the question ask? $\\angle  A$.<br><b>Plan.</b> Name $\\angle  B$ as $2β$ and $\\angle  A$ as $a$. Use the exterior angle theorem twice: once in triangle $ABC$ and once in triangle $QBC$.<br>Let $\\angle  A = a$ and $\\angle  ABC = 2β$. <span class=\"nt\">(name the angles)</span><br>$\\angle  ACE = a + 2β$ <span class=\"nt\">(exterior angle of triangle ABC)</span><br>$\\angle  QCE = \\frac{a}{2} + β$ <span class=\"nt\">(bisector of the exterior angle)</span><br>$\\angle  QBC = β$ <span class=\"nt\">(bisector of angle B)</span><br>$\\angle  QCE = \\angle  QBC + \\angle  BQC$ <span class=\"nt\">(exterior angle of triangle QBC)</span><br>$\\frac{a}{2} + β = β + 23$ <span class=\"nt\">(substitute)</span><br>$a = 46$ <span class=\"nt\">(solve)</span><br>Why not 113? That formula is for two interior bisectors.",
+    "check": "Example: $\\angle  B = 60$, $\\angle  A = 46$, $\\angle  C = 74$. Exterior at $C$ = 106, half is 53; $\\angle  QBC = 30$, so $\\angle  BQC = 53 - 30 = 23$ ✓",
+    "be_careful": "$\\angle  B$ cancels; the answer does not depend on the shape of the triangle.",
+    "desmos": "Not needed.",
+    "another_way": "Build one example triangle and chase angles; the result is always $\\frac{1}{2}\\angle  A$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-045",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C7"
+   ],
+   "family": "integer-angles-extreme",
+   "signature": "integer angles a < b < c, c - a <= 10 -> greatest c = 66 (56, 58, 66)",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The measures, in degrees, of the three angles of a triangle are integers $a$, $b$, and $c$, where $a < b < c$. The largest angle is at most 10° greater than the smallest angle. What is the greatest possible value of $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "66"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "70",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses $c = 60 + 10$, ignoring that $b$ must fit between $a$ and $c$ and the sum must be 180."
+    },
+    {
+     "value": "67",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "67 needs $a \\ge 57$, which leaves $b = 113 - a \\le 56$, smaller than $a$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Make $a$ as small as allowed, $a = c - 10$, then $b = 180 - a - c$ must still lie strictly between $a$ and $c$.",
+    "steps": "What does the question ask? The largest $c$ that works.<br><b>Plan.</b> Turn each condition into an inequality in $c$, find the bound, and then build an example that reaches it.<br>$a \\ge c - 10$ <span class=\"nt\">(given)</span><br>$b = 180 - a - c \\le 180 - (c - 10) - c = 190 - 2c$ <span class=\"nt\">(angle sum)</span><br>$b > a \\ge c - 10$, so $190 - 2c > c - 10$ <span class=\"nt\">(b must exceed a)</span><br>$200 > 3c$, so $c < 66.7$, and $c \\le 66$ <span class=\"nt\">(integers)</span><br>$c = 66$: $a = 56$, $b = 58$ <span class=\"nt\">(build an example)</span><br>$56 < 58 < 66$ and $66 - 56 = 10$ <span class=\"nt\">(all conditions hold)</span><br>Why not 70? With $c = 70$, the other two angles would total 110 with both at least 60.",
+    "check": "$56 + 58 + 66 = 180$ ✓; $c = 67$ would need $a \\ge 57$ and $b = 113 - a \\le 56$ ✗",
+    "be_careful": "Show that 66 is reachable with an example, and that 67 fails.",
+    "desmos": "Not needed; the bound comes from an inequality.",
+    "another_way": "Near 60 each: write the angles as $60 - d$, $60 + e$, $60 + f$ style; the largest gap is 10, so $c$ cannot pull far above 60."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-046",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "similar-two-sides-two-cases",
+   "signature": "sides 4, 6, 9; similar triangle has sides 12 and 18 -> (k 3: 12, 18, 27) or (k 2: 8, 12, 18) -> third side 27 or 8 -> sum 35",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A triangle has side lengths 4, 6, and 9. A second triangle is similar to the first, and two of its side lengths are 12 and 18. What is the sum of all possible lengths of the third side of the second triangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "35"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "27",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "27 is one case only ($k = 3$). The pair 12, 18 can also match 6, 9."
+    },
+    {
+     "value": "8",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "8 is one case only ($k = 2$)."
+    }
+   ],
+   "solution": {
+    "key_idea": "12 and 18 are in the ratio $2 : 3$. In the first triangle, two pairs of sides have that ratio: $4 : 6$ and $6 : 9$.",
+    "steps": "What does the question ask? Every possible third side, added.<br><b>Plan.</b> Find which pairs of sides in the first triangle have the same ratio as 12 and 18. Each pair gives its own scale factor.<br>$\\frac{12}{18} = \\frac{2}{3}$ <span class=\"nt\">(ratio of the two known sides)</span><br>In 4, 6, 9: $\\frac{4}{6} = \\frac{2}{3}$ and $\\frac{6}{9} = \\frac{2}{3}$; $\\frac{4}{9}$ is not <span class=\"nt\">(find pairs with the same ratio)</span><br>Case 1: 12, 18 match 4, 6. $k = 3$, third side $= 3 \\times 9 = 27$ <span class=\"nt\">(scale)</span><br>Case 2: 12, 18 match 6, 9. $k = 2$, third side $= 2 \\times 4 = 8$ <span class=\"nt\">(scale)</span><br>$27 + 8 = 35$ <span class=\"nt\">(add)</span><br>Why not 27? That is only one of the two cases.",
+    "check": "12, 18, 27 = $3 \\times$ (4, 6, 9) ✓; 8, 12, 18 = $2 \\times$ (4, 6, 9) ✓",
+    "be_careful": "Each case must scale all three sides by one factor; the pair 4, 9 would need $\\frac{12}{18} = \\frac{4}{9}$, which fails.",
+    "desmos": "Not needed.",
+    "another_way": "Try each possible scale factor $k$ that sends some side to 12: $k = 3, 2, \\frac{4}{3}$. Only 3 and 2 also produce 18."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-047",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "trapezoid-diagonals-area",
+   "signature": "trapezoid AB || CD, AB = 2CD, area 75; diagonals meet at E -> CDE t, ABE 4t, sides 2t each -> 9t = 75 -> ABE 100/3",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In trapezoid $ABCD$, $\\overline{AB}$ is parallel to $\\overline{CD}$ and $AB = 2(CD)$. Diagonals $\\overline{AC}$ and $\\overline{BD}$ intersect at point $E$. If the area of the trapezoid is 75, what is the area of triangle $ABE$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "100/3",
+      "33.33"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "50",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This takes $ABE$ as twice $CDE$ and the side triangles as equal to $CDE$. Areas of similar triangles scale by $k^{2} = 4$."
+    },
+    {
+     "value": "25",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This splits the trapezoid into 3 equal parts."
+    }
+   ],
+   "solution": {
+    "key_idea": "$\\triangle ABE ∼ \\triangle CDE$ with $k = 2$, so areas are $4 : 1$. The side triangles each share a height with $CDE$ and have base ratio $2 : 1$ along a diagonal.",
+    "steps": "What does the question ask? The area of triangle $ABE$.<br><b>Plan.</b> Split the trapezoid into four triangles at $E$ and express each area in terms of the smallest one.<br>$\\triangle ABE ∼ \\triangle CDE$, $k = \\frac{AB}{CD} = 2$ <span class=\"nt\">(alternate interior angles and vertical angles)</span><br>$AE = 2(EC)$ and $BE = 2(ED)$ <span class=\"nt\">(matching sides)</span><br>Let the area of $CDE$ be $t$. Then $ABE = 4t$. <span class=\"nt\">(areas scale by $k^{2}$)</span><br>$ADE$ and $CDE$ share the height from $D$ to line $AC$, and $AE = 2(EC)$, so $ADE = 2t$. <span class=\"nt\">(same height, base ratio)</span><br>Likewise $BCE = 2t$. <span class=\"nt\">(same height from C to line BD)</span><br>$t + 4t + 2t + 2t = 9t = 75$ <span class=\"nt\">(four triangles fill the trapezoid)</span><br>$t = \\frac{25}{3}$, so $ABE = \\frac{100}{3}$ <span class=\"nt\">(solve)</span><br>Why not 50? Areas of similar triangles scale by the square.",
+    "check": "Take $CD = 1$, $AB = 2$, height 50: area $\\frac{1}{2}(3)(50) = 75$ ✓. $E$ is $\\frac{2}{3}$ of the way down, so triangle $ABE$ has height $\\frac{100}{3}$ and area $\\frac{1}{2}(2)(\\frac{100}{3}) = \\frac{100}{3}$ ✓",
+    "be_careful": "Only $ABE$ and $CDE$ are similar; the side triangles come from shared heights.",
+    "desmos": "Not needed.",
+    "another_way": "Coordinates: $D(0, 0)$, $C(1, 0)$, $A(0, 50)$, $B(2, 50)$ gives area 75; then compute $E$ and the area of $ABE$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-048",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C4"
+   ],
+   "family": "two-isosceles-30-60-90",
+   "signature": "AB = AC, D on BC, AD = DC, angle BAD = 3 angle DAC -> x 30 -> ABD is 30-60-90 with right angle at A -> BD = 2AD = 12 -> BC 18; traps 12, 6+6sqrt3, 24",
+   "abilities": [
+    "R",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In triangle $ABC$, $AB = AC$. Point $D$ lies on $\\overline{BC}$ so that $AD = DC$ and the measure of $\\angle  BAD$ is 3 times the measure of $\\angle  DAC$. If $DC = 6$, what is the length of $\\overline{BC}$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is $BD$ only."
+    },
+    {
+     "key": "B",
+     "text": "$6 + 6\\sqrt{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This takes $BD = 6\\sqrt{3}$, the long leg. In triangle $ABD$ the right angle is at $A$, so $BD$ is the hypotenuse."
+    },
+    {
+     "key": "C",
+     "text": "$18$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This takes $BD = 3(DC)$, copying the angle ratio onto the sides."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Let $\\angle  DAC = x$. Then $\\angle  C = x$ (from $AD = DC$) and $\\angle  B = x$ (from $AB = AC$), and the angle sum gives $x = 30$.",
+    "steps": "What does the question ask? $BC = BD + DC$.<br><b>Plan.</b> Name the small angle $x$, use both isosceles triangles to place $x$ at $B$ and $C$, and then use the angle sum.<br>Let $\\angle  DAC = x$, so $\\angle  BAD = 3x$. <span class=\"nt\">(name the angles)</span><br>$\\angle  C = x$ <span class=\"nt\">($AD = DC$)</span><br>$\\angle  B = \\angle  C = x$ <span class=\"nt\">($AB = AC$)</span><br>$x + x + 4x = 180$, so $x = 30$ <span class=\"nt\">(angle sum in ABC)</span><br>Triangle $ABD$: $\\angle  B = 30$, $\\angle  BAD = 90$, $\\angle  ADB = 60$ <span class=\"nt\">(angles)</span><br>$BD = 2(AD) = 2(6) = 12$ <span class=\"nt\">(30-60-90: hypotenuse is twice the short leg; $AD = DC = 6$)</span><br>$BC = 12 + 6 = 18$ <span class=\"nt\">(add)</span><br>Why not $6 + 6\\sqrt{3}$? $BD$ is the hypotenuse, not the long leg.",
+    "check": "$AB = 6\\sqrt{3}$; in triangle $ABC$ with base angles 30°, $BC = 2(AB)\\cos 30° = 18$, so $AB = AC$ ✓",
+    "be_careful": "The side opposite the 30° angle in triangle $ABD$ is $AD$, not $BD$.",
+    "desmos": "Not needed.",
+    "another_way": "Triangle $ADC$ has angles 30°, 30°, 120°, and triangle $ABD$ is 30-60-90; $BD : AD = 2 : 1$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-049",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C5"
+   ],
+   "family": "square-in-triangle-reverse",
+   "signature": "triangle height 20; inscribed square (side on base) has area 144 -> s 12; small triangle above: height 8, base 12; k = 8/20 -> base 30 -> area 300; traps 180 (12/b = 8/12), 200 (base = height), 288 (square = half)",
+   "abilities": [
+    "G",
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 180,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A square with area 144 is drawn inside a triangle. One side of the square lies on the base of the triangle, and the other two vertices of the square lie on the other two sides of the triangle. The height of the triangle is 20. What is the area of the triangle?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$180$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D12",
+     "feedback": "This matches $\\frac{12}{b} = \\frac{8}{12}$, pairing a height with a side of the square; corresponding parts are height 8 with height 20."
+    },
+    {
+     "key": "B",
+     "text": "$200$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This assumes the base equals the height, 20."
+    },
+    {
+     "key": "C",
+     "text": "$288$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This assumes the square fills exactly half the triangle."
+    },
+    {
+     "key": "D",
+     "text": "$300$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The top side of the square cuts off a small triangle similar to the whole, with base 12 and height $20 - 12 = 8$.",
+    "steps": "What does the question ask? The area $\\frac{1}{2}(b)(20)$, so find the base $b$.<br><b>Plan.</b> The square side is 12. Its top side cuts off a small triangle similar to the whole; match height to height and base to base, then find the base.<br>Side of the square: $\\sqrt{144} = 12$ <span class=\"nt\">(square area)</span><br>Small triangle above the square: base 12, height $20 - 12 = 8$ <span class=\"nt\">(top side of the square is parallel to the base)</span><br>$\\frac{12}{b} = \\frac{8}{20}$ <span class=\"nt\">(similar triangles: base over base equals height over height)</span><br>$b = 30$ <span class=\"nt\">(solve)</span><br>Area $= \\frac{1}{2}(30)(20) = 300$ <span class=\"nt\">(triangle area)</span><br>So the triangle has area 300, and the square fills $\\frac{144}{300} = 48\\%$ of it.<br>Why not 288? The square is not half of the triangle here; that only happens when the square is replaced by the largest rectangle.",
+    "check": "Forward: $\\frac{s}{30} = \\frac{20 - s}{20}$ gives $s = 12$, area 144 ✓",
+    "be_careful": "Match height with height (8 and 20) and base with base (12 and $b$).",
+    "desmos": "Nothing to graph until the similar triangle is built.",
+    "another_way": "For a square on the base, $\\frac{1}{s} = \\frac{1}{b} + \\frac{1}{h}$: $\\frac{1}{12} = \\frac{1}{b} + \\frac{1}{20}$, so $b = 30$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-G2-050",
+   "version": 1,
+   "skill": {
+    "code": "G2",
+    "domain": "geo",
+    "cb_skill": "Lines, angles, and triangles"
+   },
+   "level": "H+",
+   "concepts": [
+    "G2.C7"
+   ],
+   "family": "isosceles-exterior-cases-III",
+   "signature": "isosceles triangle with an exterior angle 100 -> interior 80: apex (50, 50) or base (80, 80, 20) -> other angle could be 20, 50, 80 -> I, II, III",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An isosceles triangle has an exterior angle with measure 100°. Which of the following could be the measure, in degrees, of one of the angles of the triangle?<br>I. 20<br>II. 50<br>III. 80",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "I only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This treats 80° only as a base angle (80, 80, 20) and forgets the case where 80° is the vertex angle and 80° itself."
+    },
+    {
+     "key": "B",
+     "text": "II only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This treats 80° only as the vertex angle (80, 50, 50) and leaves out 80 itself."
+    },
+    {
+     "key": "C",
+     "text": "I and III only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This misses the case with 80° as the vertex angle, which gives 50°, 50°."
+    },
+    {
+     "key": "D",
+     "text": "I, II, and III",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The exterior angle of 100° sits next to an interior angle of 80°. That 80° angle can be the vertex angle or a base angle.",
+    "steps": "What does the question ask? Which values can be an angle of the triangle in at least one case.<br><b>Plan.</b> Find the interior angle next to the exterior angle, then consider each place it can sit in an isosceles triangle.<br>Interior angle at that vertex: $180 - 100 = 80$ <span class=\"nt\">(linear pair)</span><br>80° is an angle of the triangle in every case, so III is possible. <span class=\"nt\">(III)</span><br>Case 1, 80° is the vertex angle: base angles $\\frac{180 - 80}{2} = 50$ <span class=\"nt\">(II is possible)</span><br>Case 2, 80° is a base angle: angles 80°, 80°, $180 - 160 = 20$ <span class=\"nt\">(I is possible)</span><br>All three statements can be true. <span class=\"nt\">(collect)</span><br>Why not I and III only? The vertex-angle case gives 50.",
+    "check": "50 + 50 + 80 = 180 ✓; 80 + 80 + 20 = 180 ✓; both have a 100° exterior angle ✓",
+    "be_careful": "\"Could be\" needs one case; each statement gets its own case.",
+    "desmos": "Not needed.",
+    "another_way": "List every isosceles triangle with an 80° angle: (80, 50, 50) and (80, 80, 20). The angle values used are 20, 50, 80."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

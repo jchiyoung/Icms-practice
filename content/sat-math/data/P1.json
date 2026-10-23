@@ -1,0 +1,3421 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "P1",
+ "skill": "Ratios, rates, proportional relationships, and units",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-P1-001",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "unit-price-reverse",
+   "signature": "3 lb for $5.40 -> $1.80/lb; $12.60 buys 7 lb; traps 1.80 (unit price), 4.2 (12.60/3), 22.68 (multiplied)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a farm stand, 3 pounds of apples cost $\\$5.40$. At this rate, how many pounds of apples can be bought for $\\$12.60$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1.8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "1.8 is the price, in dollars, of 1 pound. The question asks for a number of pounds."
+    },
+    {
+     "key": "B",
+     "text": "$4.2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides $\\$12.60$ by 3 pounds, which mixes dollars with pounds and does not use the price."
+    },
+    {
+     "key": "C",
+     "text": "$7$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$22.68$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This multiplies $\\$12.60$ by the price per pound. Dollars times dollars per pound is not pounds."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Find the price of 1 pound first. Then the number of pounds is the money divided by the price per pound.",
+    "steps": "The question asks how many pounds $\\$12.60$ will buy at the same rate.<br>$\\frac{5.40}{3} = 1.80$ dollars per pound <span class=\"nt\">(divide the cost by the number of pounds)</span><br>pounds $= \\frac{12.60}{1.80}$ <span class=\"nt\">(dollars divided by dollars per pound gives pounds)</span><br>$= 7$ <span class=\"nt\">(divide)</span><br>The units confirm the operation: dollars $\\div$ (dollars per pound) leaves pounds.",
+    "check": "$7 \\times \\$1.80 = \\$12.60$ ✓",
+    "be_careful": "1.80 is a price, not an amount of apples. Keep going to the unit the question asks for.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-002",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "fuel-per-distance-spr",
+   "signature": "28 mi per gal; 175 mi -> 6.25 gal; wrong 4900 (multiplied)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A car travels 28 miles for each gallon of gasoline it uses. At this rate, how many gallons of gasoline does the car use to travel 175 miles?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "6.25",
+      "25/4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4900",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies 175 by 28. Miles times miles per gallon is not gallons; the miles must be divided by 28."
+    },
+    {
+     "value": "0.16",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides 28 by 175, which flips the rate."
+    }
+   ],
+   "solution": {
+    "key_idea": "\"28 miles per gallon\" means $\\frac{28 \\text{ miles}}{1 \\text{ gallon}}$. Divide the distance by the miles for each gallon.",
+    "steps": "The question asks for the number of gallons used for 175 miles.<br>Let $g$ = number of gallons used.<br>$28g = 175$ <span class=\"nt\">(each gallon gives 28 miles)</span><br>$g = \\frac{175}{28}$ <span class=\"nt\">(divide both sides by 28)</span><br>$= 6.25$ <span class=\"nt\">(divide)</span><br>So the car uses 6.25 gallons, which is a little more than 6 gallons. That is reasonable, because $6 \\times 28 = 168$ miles.",
+    "check": "$6.25 \\times 28 = 175$ miles ✓",
+    "be_careful": "Multiplying would give a huge number of gallons. A quick size check catches it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-003",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C2"
+   ],
+   "family": "rate-time-then-convert",
+   "signature": "45 L/min, 8,100 L -> 180 min = 3 h; traps 180 (stop), 135 (8100/60), 10,800 (180x60)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A pump moves water at a constant rate of 45 liters per minute. At this rate, how many hours does it take the pump to move 8,100 liters of water?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$135$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This divides 8,100 by 60 and never uses the pumping rate of 45 liters per minute."
+    },
+    {
+     "key": "C",
+     "text": "$180$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "180 is the time in minutes. The question asks for hours."
+    },
+    {
+     "key": "D",
+     "text": "$10{,}800$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies 180 minutes by 60. To change minutes to hours, divide by 60."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Time = amount $\\div$ rate. The rate is per minute, so the first answer is in minutes, and it still has to be changed to hours.",
+    "steps": "The question asks for the time in hours.<br>Step 1: find the time in minutes.<br>$\\frac{8{,}100}{45} = 180$ minutes <span class=\"nt\">(liters divided by liters per minute gives minutes)</span><br>Step 2: change minutes to hours.<br>$180 \\times \\frac{1 \\text{ hour}}{60 \\text{ minutes}} = 3$ hours <span class=\"nt\">(multiply by a fraction equal to 1)</span><br>So the pump takes 3 hours.",
+    "check": "$45 \\times 60 = 2{,}700$ liters per hour, and $2{,}700 \\times 3 = 8{,}100$ ✓",
+    "be_careful": "Stopping at 180 answers in the wrong unit.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-004",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "ratio-share-of-total",
+   "signature": "flour:sugar 5:2 by weight, total 840 g -> sugar 240; traps 336 (2/5 of total), 600 (flour), 420 (half)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A baker mixes flour and sugar in a ratio of 5 to 2 by weight. The mixture has a total weight of 840 grams. What is the weight, in grams, of the sugar in the mixture?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$240$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$336$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes $\\frac{2}{5}$ of 840. The ratio $5 : 2$ compares flour with sugar; sugar is 2 of the 7 equal parts of the whole."
+    },
+    {
+     "key": "C",
+     "text": "$420$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This splits the mixture in half, as if the two weights were equal."
+    },
+    {
+     "key": "D",
+     "text": "$600$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "600 grams is the flour, the other ingredient."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A ratio of $5 : 2$ splits the whole into $5 + 2 = 7$ equal parts. Sugar gets 2 of those parts.",
+    "steps": "The question asks for the weight of the sugar.<br>$5 + 2 = 7$ parts <span class=\"nt\">(the whole mixture)</span><br>1 part $= \\frac{840}{7} = 120$ grams <span class=\"nt\">(share the total equally among the parts)</span><br>sugar $= 2 \\times 120 = 240$ grams <span class=\"nt\">(sugar is 2 parts)</span><br>The flour is the other $5 \\times 120 = 600$ grams.",
+    "check": "$600 + 240 = 840$ and $\\frac{600}{240} = \\frac{5}{2}$ ✓",
+    "be_careful": "The 2 in the ratio is compared with the 5, not with the whole 7.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-005",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C6"
+   ],
+   "family": "map-scale-stated",
+   "signature": "1.5 cm represents 12 km; 7.5 cm -> 60 km; traps 8 (km per cm), 18, 90",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "On a map, 1.5 centimeters represents 12 kilometers. Two towns are 7.5 centimeters apart on the map. What is the actual distance, in kilometers, between the two towns?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 kilometers is what 1 centimeter represents. The towns are 7.5 centimeters apart."
+    },
+    {
+     "key": "B",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies 12 by 1.5 instead of finding how much 1 centimeter represents."
+    },
+    {
+     "key": "C",
+     "text": "$60$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$90$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This multiplies 7.5 by 12, as if 1 centimeter represented 12 kilometers."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Find what 1 centimeter on the map stands for, then scale up to 7.5 centimeters.",
+    "steps": "The question asks for the real distance between the towns.<br>$\\frac{12}{1.5} = 8$ kilometers per centimeter <span class=\"nt\">(what 1 centimeter on the map represents)</span><br>$7.5 \\times 8 = 60$ kilometers <span class=\"nt\">(the towns are 7.5 centimeters apart on the map)</span><br>Another view: 7.5 centimeters is $\\frac{7.5}{1.5} = 5$ times 1.5 centimeters, so the real distance is $5 \\times 12 = 60$ kilometers.",
+    "check": "$\\frac{1.5}{12} = \\frac{7.5}{60} = 0.125$ ✓",
+    "be_careful": "The scale is 1.5 centimeters, not 1 centimeter, for 12 kilometers.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-006",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C7"
+   ],
+   "family": "cube-density-spr",
+   "signature": "cube edge 4 cm, mass 168 g -> 168/64 = 2.625 g/cm^3; wrong 42 (edge), 10.5 (face)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A solid cube has an edge length of 4 centimeters and a mass of 168 grams. What is the density, in grams per cubic centimeter, of the cube?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2.625",
+      "21/8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "42",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This divides by the edge length, 4. Density uses the volume, $4^{3} = 64$ cubic centimeters."
+    },
+    {
+     "value": "10.5",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This divides by the area of one face, $4^{2} = 16$, instead of the volume."
+    }
+   ],
+   "solution": {
+    "key_idea": "Density is mass per unit of volume: $\\text{density} = \\frac{\\text{mass}}{\\text{volume}}$. The unit \"grams per cubic centimeter\" says to divide grams by cubic centimeters.",
+    "steps": "The question asks for the mass of each cubic centimeter of the cube.<br>volume $= 4^{3} = 64$ cubic centimeters <span class=\"nt\">(a cube has length, width, and height all equal to 4)</span><br>density $= \\frac{168}{64}$ <span class=\"nt\">(mass divided by volume)</span><br>$= 2.625$ grams per cubic centimeter <span class=\"nt\">(divide)</span>",
+    "check": "$2.625 \\times 64 = 168$ grams ✓",
+    "be_careful": "Cube the edge first. Dividing by 4 or by 16 uses the wrong unit.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-007",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C4"
+   ],
+   "family": "proportional-constant-solve-x",
+   "signature": "y proportional to x, y=21 when x=6 (k=3.5); y=49 -> x=14; traps 3.5, 34 (additive), 171.5 (x/y swapped)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The value of $y$ is directly proportional to the value of $x$. When $x = 6$, $y = 21$. What is the value of $x$ when $y = 49$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3.5$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "3.5 is the constant $k$ in $y = kx$, found in the middle of the work."
+    },
+    {
+     "key": "B",
+     "text": "$14$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$34$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 28 to $x$ because $y$ went up by 28. Proportional quantities change by the same factor, not by the same amount."
+    },
+    {
+     "key": "D",
+     "text": "$171.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is $49 \\times 3.5$, which treats 49 as an $x$-value."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Proportional means $y = kx$ for one constant $k$, so $\\frac{y}{x}$ is the same for every pair.",
+    "steps": "The question asks for the $x$-value that goes with $y = 49$.<br>$21 = k(6)$ <span class=\"nt\">(use $y = kx$ with the given pair)</span><br>$k = 3.5$ <span class=\"nt\">(divide by 6)</span><br>$49 = 3.5x$ <span class=\"nt\">(now use $y = 49$)</span><br>$x = 14$ <span class=\"nt\">(divide by 3.5)</span>",
+    "check": "$\\frac{21}{6} = 3.5$ and $\\frac{49}{14} = 3.5$ ✓",
+    "be_careful": "In a proportion the ratio stays the same; the difference does not.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-008",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C2"
+   ],
+   "family": "mps-to-kmph",
+   "signature": "30 m/s -> 108 km/h; traps 1.8 (only minutes), 1,800 (m per min), 108,000 (m per h)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A train travels at a constant speed of 30 meters per second. What is this speed in kilometers per hour? (1 kilometer = 1,000 meters)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1.8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This changes seconds to minutes only: 1,800 meters per minute is 1.8 kilometers per minute."
+    },
+    {
+     "key": "B",
+     "text": "$108$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$1{,}800$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the speed in meters per minute, two conversions short."
+    },
+    {
+     "key": "D",
+     "text": "$108{,}000$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the speed in meters per hour. The meters were not changed to kilometers."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Change one unit at a time by multiplying by fractions equal to 1, and cancel units as they go.",
+    "steps": "The question asks for the speed with kilometers on top and hours on the bottom.<br>$\\frac{30 \\text{ m}}{1 \\text{ s}} \\times \\frac{3{,}600 \\text{ s}}{1 \\text{ h}} = \\frac{108{,}000 \\text{ m}}{1 \\text{ h}}$ <span class=\"nt\">(there are $60 \\times 60 = 3{,}600$ seconds in an hour)</span><br>$\\frac{108{,}000 \\text{ m}}{1 \\text{ h}} \\times \\frac{1 \\text{ km}}{1{,}000 \\text{ m}} = 108$ km per hour <span class=\"nt\">(change meters to kilometers)</span><br>Both units changed, so the answer is in kilometers per hour.",
+    "check": "108 kilometers in 3,600 seconds is $\\frac{108{,}000}{3{,}600} = 30$ meters each second ✓",
+    "be_careful": "Two units change here: seconds to hours and meters to kilometers. Each wrong choice skips at least one.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-009",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "ratio-could-be-total",
+   "signature": "boys:girls 3:5 -> total multiple of 8; 24 of {15,20,24,30}; traps 15 (3x5), 20, 30",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a club, the ratio of the number of boys to the number of girls is $3$ to $5$. Which of the following could be the total number of members in the club?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$15$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "15 is $3 \\times 5$. The total is $3 + 5 = 8$ parts, so it must be a multiple of 8."
+    },
+    {
+     "key": "B",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "20 is a multiple of 5, the girls part, but $\\frac{20}{8}$ is not a whole number of members per part."
+    },
+    {
+     "key": "C",
+     "text": "$24$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "30 is a multiple of both 3 and 5, but the total must be a multiple of the sum, 8."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "With a ratio of $3 : 5$, the club is made of $3 + 5 = 8$ equal groups of members, so the total must be a multiple of 8.",
+    "steps": "The question asks which total is possible, not which is certain.<br>Let $n$ = the number of members in each part. Then there are $3n$ boys and $5n$ girls.<br>total $= 3n + 5n = 8n$ <span class=\"nt\">(add the two groups)</span><br>$n$ is a whole number, so the total must be a multiple of 8.<br>$24 = 8(3)$ <span class=\"nt\">(only 24 among the choices is a multiple of 8)</span><br>With $n = 3$: 9 boys and 15 girls.",
+    "check": "$\\frac{9}{15} = \\frac{3}{5}$ and $9 + 15 = 24$ ✓",
+    "be_careful": "The total must be a multiple of the sum of the ratio numbers, not of each number.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-010",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C2"
+   ],
+   "family": "fraction-distance-to-mph",
+   "signature": "3/4 mile in 2.5 min -> 0.3 mi/min -> 18 mph; traps 0.3, 112.5, 200",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A cyclist rides $\\frac{3}{4}$ of a mile in 2.5 minutes. At this rate, what is the cyclist’s speed, in miles per hour?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "0.3 is the speed in miles per minute. The question asks for miles per hour."
+    },
+    {
+     "key": "B",
+     "text": "$18$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$112.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies the distance by the time. Speed is distance divided by time."
+    },
+    {
+     "key": "D",
+     "text": "$200$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides the time by the distance, which gives minutes per mile, and then multiplies by 60."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Speed is distance divided by time. Find miles per minute, then multiply by 60 minutes in an hour.",
+    "steps": "The question asks for miles per hour.<br>$\\frac{0.75}{2.5} = 0.3$ miles per minute <span class=\"nt\">(distance divided by time; $\\frac{3}{4} = 0.75$)</span><br>$0.3 \\times 60 = 18$ miles per hour <span class=\"nt\">(there are 60 minutes in an hour)</span><br>So the cyclist rides at 18 miles per hour.",
+    "check": "In 60 minutes there are $\\frac{60}{2.5} = 24$ periods of 2.5 minutes, and $24 \\times \\frac{3}{4} = 18$ miles ✓",
+    "be_careful": "\"Miles per hour\" puts miles on top. Dividing the other way gives time per mile.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-011",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C3"
+   ],
+   "family": "square-yards-to-square-feet-spr",
+   "signature": "rug 3 sq yd -> 27 sq ft; wrong 9 (linear factor)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A rug covers an area of 3 square yards. What is the area of the rug, in square feet? (1 yard = 3 feet)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "27"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "9",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies by 3 only once. A square yard is 3 feet by 3 feet, so it holds 9 square feet."
+    },
+    {
+     "value": "1",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides 3 by 3, changing the units in the wrong direction."
+    }
+   ],
+   "solution": {
+    "key_idea": "A square yard is a square 1 yard on each side, which is 3 feet by 3 feet, so 1 square yard $= 9$ square feet.",
+    "steps": "The question asks for the same area measured in square feet.<br>1 square yard $= 3 \\text{ ft} \\times 3 \\text{ ft} = 9$ square feet <span class=\"nt\">(both the length and the width change from yards to feet)</span><br>$3 \\times 9 = 27$ square feet <span class=\"nt\">(the rug covers 3 square yards)</span><br>So the area is 27 square feet. Area units use the conversion factor twice, once for each direction.",
+    "check": "A 1 yard by 3 yard rug is 3 ft by 9 ft, and $3 \\times 9 = 27$ ✓",
+    "be_careful": "Multiplying by 3 converts a length, not an area.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-012",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "ratio-bridge-basic",
+   "signature": "a:b=2:3, b:c=4:5 -> 8:12:15, a:c = 8:15; traps 2:5 (no bridge), 15:8 (reversed), 12:15 (b:c)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For three positive numbers $a$, $b$, and $c$, the ratio of $a$ to $b$ is $2$ to $3$, and the ratio of $b$ to $c$ is $4$ to $5$. What is the ratio of $a$ to $c$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$ to $5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This joins the outer numbers of the two ratios. The 3 and the 4 both describe $b$, so they must first be made equal."
+    },
+    {
+     "key": "B",
+     "text": "$15$ to $8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D9",
+     "feedback": "This is the ratio of $c$ to $a$, written in the reverse order."
+    },
+    {
+     "key": "C",
+     "text": "$8$ to $15$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$12$ to $15$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the ratio of $b$ to $c$ after rewriting. The question asks for $a$ to $c$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Rewrite both ratios so that $b$ gets the same number in each. Then $a$ and $c$ can be compared directly.",
+    "steps": "The question asks how $a$ compares with $c$.<br>$b$ is 3 in the first ratio and 4 in the second. The least number that both 3 and 4 divide is 12.<br>$a : b = 2 : 3 = 8 : 12$ <span class=\"nt\">(multiply both numbers by 4)</span><br>$b : c = 4 : 5 = 12 : 15$ <span class=\"nt\">(multiply both numbers by 3)</span><br>$a : b : c = 8 : 12 : 15$ <span class=\"nt\">(now $b$ matches)</span><br>So the ratio of $a$ to $c$ is 8 to 15.",
+    "check": "Take $a = 8$, $b = 12$, $c = 15$: $\\frac{8}{12} = \\frac{2}{3}$ and $\\frac{12}{15} = \\frac{4}{5}$ ✓",
+    "be_careful": "The two ratios use different sizes of \"part\" for $b$. Match them before comparing $a$ and $c$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-013",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C4"
+   ],
+   "family": "table-to-proportional-equation",
+   "signature": "table t 4,10,16 -> V 10,25,40; V=2.5t; traps 0.4t (inverted), t+6 (additive), 10t (visible)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the volume $V$, in liters, of water in a tank $t$ minutes after a pump was turned on. The volume is proportional to the time.<br><table class=\"tb\"><tr><td>$t$</td><td>4</td><td>10</td><td>16</td></tr><tr><td>$V$</td><td>10</td><td>25</td><td>40</td></tr></table>Which equation represents this relationship?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$V = 2.5t$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$V = 0.4t$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "0.4 is $\\frac{4}{10}$, minutes per liter. The rate in $V = kt$ must be liters per minute."
+    },
+    {
+     "key": "C",
+     "text": "$V = t + 6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This works for the first row only: $10 + 6 = 16$, not 25. Proportional means multiply, not add."
+    },
+    {
+     "key": "D",
+     "text": "$V = 10t$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "10 is the first volume in the table, not the volume for each minute."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A proportional relationship has the form $V = kt$, where $k = \\frac{V}{t}$ is the same for every row.",
+    "steps": "The question asks for the equation of the form $V = kt$.<br>$k = \\frac{10}{4} = 2.5$ <span class=\"nt\">(divide $V$ by $t$ in the first row)</span><br>$\\frac{25}{10} = 2.5$ and $\\frac{40}{16} = 2.5$ <span class=\"nt\">(the same value in every row)</span><br>So $V = 2.5t$: the pump adds 2.5 liters each minute.",
+    "check": "$2.5 \\times 16 = 40$ ✓",
+    "be_careful": "Check the constant with every row, not just one.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-014",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C2"
+   ],
+   "family": "cm-to-feet-two-step",
+   "signature": "381 cm / 2.54 = 150 in = 12.5 ft; traps 150 (stop), 80.6 (multiplied), 967.7",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A wooden board is 381 centimeters long. Which of the following is closest to the length of the board, in feet? (1 inch = 2.54 centimeters, 1 foot = 12 inches)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12.5$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$80.6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies 381 by 2.54 before dividing by 12. Centimeters change to inches by dividing by 2.54."
+    },
+    {
+     "key": "C",
+     "text": "$150$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "150 is the length in inches. One more conversion, to feet, is needed."
+    },
+    {
+     "key": "D",
+     "text": "$967.7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies 381 by 2.54 and stops. That moves in the wrong direction."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Use each conversion as a fraction equal to 1, with the old unit on the bottom so it cancels.",
+    "steps": "The question asks for the length in feet.<br>$381 \\text{ cm} \\times \\frac{1 \\text{ in}}{2.54 \\text{ cm}} = 150$ inches <span class=\"nt\">(centimeters cancel)</span><br>$150 \\text{ in} \\times \\frac{1 \\text{ ft}}{12 \\text{ in}} = 12.5$ feet <span class=\"nt\">(inches cancel)</span><br>So the board is about 12.5 feet long. An inch is longer than a centimeter, so the number of inches must be smaller than 381; that matches 150.",
+    "check": "$12.5 \\times 12 \\times 2.54 = 381$ ✓",
+    "be_careful": "Write the units in each fraction. If the unit does not cancel, the fraction is upside down.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-015",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C2"
+   ],
+   "family": "rate-seconds-time-minutes",
+   "signature": "40 bottles in 50 s -> 0.8/s; 6 min = 360 s -> 288; traps 4.8 (6 as seconds), 240 (40 per min), 450 (inverted)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A machine fills 40 bottles every 50 seconds. At this rate, how many bottles does the machine fill in 6 minutes?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4.8$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This multiplies 0.8 bottles per second by 6, treating 6 minutes as 6 seconds."
+    },
+    {
+     "key": "B",
+     "text": "$240$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats 40 bottles in 50 seconds as 40 bottles each minute."
+    },
+    {
+     "key": "C",
+     "text": "$288$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$450$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides 360 seconds by 0.8 bottles per second, which flips the rate."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The rate is given per second, so the time must also be in seconds before multiplying.",
+    "steps": "The question asks for the number of bottles in 6 minutes.<br>$\\frac{40}{50} = 0.8$ bottles per second <span class=\"nt\">(the rate)</span><br>$6 \\times 60 = 360$ seconds <span class=\"nt\">(match the time unit to the rate)</span><br>$0.8 \\times 360 = 288$ bottles <span class=\"nt\">(rate times time)</span><br>Another way: 6 minutes is $\\frac{360}{50} = 7.2$ periods of 50 seconds, and $7.2 \\times 40 = 288$.",
+    "check": "$\\frac{288}{360} = 0.8 = \\frac{40}{50}$ ✓",
+    "be_careful": "Change 6 minutes to 360 seconds before using a per second rate.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-016",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C7"
+   ],
+   "family": "density-mass-kg",
+   "signature": "density 8.9 g/cm^3, 250 cm^3 -> 2,225 g = 2.225 kg; traps 0.0356, 28.1, 2,225",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A metal has a density of 8.9 grams per cubic centimeter. What is the mass, in kilograms, of a piece of this metal with a volume of 250 cubic centimeters? (1 kilogram = 1,000 grams)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.0356$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides the density by the volume."
+    },
+    {
+     "key": "B",
+     "text": "$2.225$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$28.1$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides the volume by the density. Mass is density times volume."
+    },
+    {
+     "key": "D",
+     "text": "$2{,}225$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "2,225 is the mass in grams. The question asks for kilograms."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "\"Grams per cubic centimeter\" means each cubic centimeter has 8.9 grams, so mass = density $\\times$ volume.",
+    "steps": "The question asks for the mass in kilograms.<br>$8.9 \\times 250 = 2{,}225$ grams <span class=\"nt\">(grams per cubic centimeter times cubic centimeters gives grams)</span><br>$\\frac{2{,}225}{1{,}000} = 2.225$ kilograms <span class=\"nt\">(change grams to kilograms)</span><br>So the piece has a mass of 2.225 kilograms.",
+    "check": "$\\frac{2{,}225 \\text{ g}}{250 \\text{ cm}^{3}} = 8.9$ ✓",
+    "be_careful": "Finish with the unit asked: kilograms, not grams.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-017",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C6"
+   ],
+   "family": "model-scale-to-meters",
+   "signature": "1:24 model, 18 cm -> 432 cm = 4.32 m; traps 0.75, 43.2, 432",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A model of a car is built using a scale of $1 : 24$, so each length on the model is $\\frac{1}{24}$ of the actual length. The model is 18 centimeters long. What is the actual length, in meters, of the car? (1 meter = 100 centimeters)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.75$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides 18 by 24, as if the car were smaller than the model."
+    },
+    {
+     "key": "B",
+     "text": "$4.32$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$43.2$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This divides 432 by 10 instead of 100."
+    },
+    {
+     "key": "D",
+     "text": "$432$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "432 is the length in centimeters. The question asks for meters."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A scale of $1 : 24$ means the real car is 24 times as long as the model.",
+    "steps": "The question asks for the length of the real car in meters.<br>$18 \\times 24 = 432$ centimeters <span class=\"nt\">(the actual length is 24 times the model length)</span><br>$\\frac{432}{100} = 4.32$ meters <span class=\"nt\">(change centimeters to meters)</span><br>A car about 4 meters long is realistic, which supports the answer.",
+    "check": "$\\frac{432}{24} = 18$ ✓",
+    "be_careful": "The model is the small one. Multiply by 24 to get the real length.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-018",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "ratio-make-equal",
+   "signature": "red:blue 4:7, 33 total -> 12, 21; add 9 red for 1:1; traps 3 (7-4), 12, 21",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 65,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A jar contains only red and blue marbles in a ratio of $4$ to $7$. There are 33 marbles in the jar. How many red marbles must be added to the jar so that the numbers of red and blue marbles are equal?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "3 is $7 - 4$, the difference of the ratio numbers. Each ratio part holds 3 marbles, so the difference is $3 \\times 3 = 9$."
+    },
+    {
+     "key": "B",
+     "text": "$9$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is the number of red marbles now, not the number to add."
+    },
+    {
+     "key": "D",
+     "text": "$21$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "21 is the number of blue marbles."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Find the actual numbers of red and blue marbles first. The ratio numbers are parts, not marbles.",
+    "steps": "The question asks how many red marbles to add.<br>$4 + 7 = 11$ parts <span class=\"nt\">(the whole jar)</span><br>1 part $= \\frac{33}{11} = 3$ marbles <span class=\"nt\">(share the total)</span><br>red $= 4 \\times 3 = 12$, blue $= 7 \\times 3 = 21$ <span class=\"nt\">(multiply by the number of parts)</span><br>$21 - 12 = 9$ <span class=\"nt\">(red must catch up to blue)</span><br>Only red marbles are added, so the blue count stays 21.",
+    "check": "$12 + 9 = 21$ red and 21 blue ✓",
+    "be_careful": "The ratio numbers 4 and 7 count parts. Each part here is 3 marbles.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-019",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "letter-rate-hours",
+   "signature": "w mL every 5 min -> 12w per hour -> 12wh in h hours; traps wh/12, 300wh, 12h/w",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A leaking faucet drips $w$ milliliters of water every 5 minutes. At this rate, which expression gives the number of milliliters of water the faucet drips in $h$ hours?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{wh}{12}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides by 12. In one hour there are 12 periods of 5 minutes, so the amount is multiplied by 12."
+    },
+    {
+     "key": "B",
+     "text": "$300wh$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies by $5 \\times 60$. The 5 minutes should divide the 60 minutes, not multiply it."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{12h}{w}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This puts $w$ in the denominator, which gives hours per milliliter, not milliliters."
+    },
+    {
+     "key": "D",
+     "text": "$12wh$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Count how many 5 minute periods fit in the time. Each period adds $w$ milliliters.",
+    "steps": "The question asks for the milliliters dripped in $h$ hours.<br>$\\frac{60}{5} = 12$ periods each hour <span class=\"nt\">(there are 60 minutes in an hour)</span><br>$12w$ milliliters each hour <span class=\"nt\">($w$ milliliters per period)</span><br>$12w \\times h = 12wh$ <span class=\"nt\">(there are $h$ hours)</span><br>So the expression is $12wh$.",
+    "check": "Try $w = 2$ and $h = 1$: 12 periods of 2 mL is 24 mL, and $12(2)(1) = 24$ ✓",
+    "be_careful": "Test with easy numbers when the answer is a letter expression.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-020",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "M",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "area-rate-time",
+   "signature": "sprinkler 150 sq ft per 4 min; lawn 30x45 = 1350 sq ft -> 36 min; traps 2 (perimeter-ish sum), 9 (batches), 5062.5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A sprinkler waters 150 square feet of lawn every 4 minutes. At this rate, how many minutes does it take the sprinkler to water a rectangular lawn that is 30 feet by 45 feet?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the side lengths, $30 + 45 = 75$, instead of multiplying to find the area."
+    },
+    {
+     "key": "B",
+     "text": "$9$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "9 is the number of 150 square foot sections. Each section takes 4 minutes."
+    },
+    {
+     "key": "C",
+     "text": "$36$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$5{,}062.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This multiplies the area by 3.75 minutes, which flips the rate."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The rate is in square feet per minute, so the lawn has to be measured as an area.",
+    "steps": "The question asks for the watering time in minutes.<br>$30 \\times 45 = 1{,}350$ square feet <span class=\"nt\">(area of the rectangle)</span><br>$\\frac{1{,}350}{150} = 9$ sections <span class=\"nt\">(each section of 150 square feet)</span><br>$9 \\times 4 = 36$ minutes <span class=\"nt\">(each section takes 4 minutes)</span><br>So the sprinkler needs 36 minutes.",
+    "check": "Rate $= \\frac{150}{4} = 37.5$ square feet per minute, and $37.5 \\times 36 = 1{,}350$ ✓",
+    "be_careful": "9 counts sections, not minutes.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-021",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C3"
+   ],
+   "family": "sqft-per-min-to-sqm-per-hour",
+   "signature": "18 ft^2/min, 1 ft = 0.3048 m -> 18(0.3048^2)(60) ~ 100 m^2/h; traps 1,080 (sq ft per hour), 329 (linear), 11,625 (inverted)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A machine paints a floor at a constant rate of 18 square feet per minute. Which of the following is closest to this rate in square meters per hour? (1 foot = 0.3048 meter)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$100$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$329$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies by 0.3048 once. A square foot is 0.3048 meter by 0.3048 meter, so the factor is used twice."
+    },
+    {
+     "key": "C",
+     "text": "$1{,}080$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "1,080 is the number of square feet painted each hour. The square feet still need to be changed to square meters."
+    },
+    {
+     "key": "D",
+     "text": "$11{,}625$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides by $0.3048^{2}$. Square feet become square meters by multiplying, because a square meter is larger."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "One square foot is a square 0.3048 meter on each side, so 1 square foot $= 0.3048^{2}$ square meter.",
+    "steps": "The question asks for square meters painted in one hour.<br>1 square foot $= 0.3048 \\times 0.3048 = 0.09290304$ square meter <span class=\"nt\">(both sides of the square change units)</span><br>$18 \\times 0.09290304 \\approx 1.672$ square meters per minute <span class=\"nt\">(change the area unit)</span><br>$1.672 \\times 60 \\approx 100.3$ square meters per hour <span class=\"nt\">(there are 60 minutes in an hour)</span><br>The closest choice is 100.<br>Size check: a square meter is about 10.8 square feet, so 18 square feet each minute is a bit less than 2 square meters each minute, and 60 times that is about 100.",
+    "check": "$100 \\div 60 \\approx 1.67$ square meters per minute, and $1.67 \\div 0.0929 \\approx 18$ square feet ✓",
+    "be_careful": "An area unit needs the length factor squared.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-022",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C3"
+   ],
+   "family": "tank-partial-fill-mixed-units-spr",
+   "signature": "tank 2 m x 1.5 m, 80 cm deep, already 20 cm of water; fill to 3/4 depth (60 cm) at 40 L/min -> rise 0.4 m -> 1.2 m^3 = 1,200 L -> 30 min; wrongs 45 (ignores water already in), 33.75 (3/4 of the empty 60 cm)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A tank shaped like a rectangular prism has a base that is 2 meters long and 1.5 meters wide, and the tank is 80 centimeters deep. The tank already contains water to a depth of 20 centimeters. Water is pumped in at a constant rate of 40 liters per minute. How many minutes does it take for the water to reach $\\frac{3}{4}$ of the depth of the tank? (1 cubic meter = 1,000 liters)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "30"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "45",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "45 minutes fills an empty tank to $\\frac{3}{4}$ of its depth. The tank already holds 20 centimeters, so the water rises only 40 centimeters."
+    },
+    {
+     "value": "33.75",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This takes $\\frac{3}{4}$ of the empty 60 centimeters (45 centimeters). The target is $\\frac{3}{4}$ of the whole depth, 60 centimeters from the bottom."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find the target depth first, subtract the water already there, then turn the rise into liters.",
+    "steps": "The question asks for the time for the water to rise from 20 centimeters to $\\frac{3}{4}$ of the depth.<br>$\\frac{3}{4} \\times 80 = 60$ cm <span class=\"nt\">(target depth, measured from the bottom)</span><br>$60 - 20 = 40$ cm $= 0.4$ m <span class=\"nt\">(the water must rise this much)</span><br>$2 \\times 1.5 \\times 0.4 = 1.2$ m$^{3}$ <span class=\"nt\">(volume to add)</span><br>$1.2$ m$^{3} = 1{,}200$ L <span class=\"nt\">(1,000 liters in a cubic meter)</span><br>$1{,}200 \\div 40 = 30$ minutes <span class=\"nt\">(divide by the rate)</span><br>Why it works: the base does not change, so the added volume depends only on how far the water level rises.",
+    "check": "$30 \\times 40 = 1{,}200$ L $= 1.2$ m$^{3}$; $1.2 \\div (2 \\times 1.5) = 0.4$ m, and $20 + 40 = 60 = \\frac{3}{4}(80)$ cm ✓",
+    "be_careful": "$\\frac{3}{4}$ of the depth is a level measured from the bottom, not $\\frac{3}{4}$ of the empty part.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-023",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "letter-rate-hours-for-p",
+   "signature": "5n parts every m minutes; hours for p parts = pm/(300n); traps pm/(5n) (minutes), 12pm/n (x60), np/(12m) (inverted)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A machine makes $5n$ parts every $m$ minutes, where $n$ and $m$ are positive constants. At this rate, which expression gives the number of hours it takes the machine to make $p$ parts?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{pm}{300n}$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{pm}{5n}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the time in minutes. One more step, dividing by 60, gives hours."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{12pm}{n}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies the minutes by 60. Minutes change to hours by dividing by 60."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{np}{12m}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses minutes per part upside down: it divides by the time and multiplies by the parts."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The rate is $\\frac{5n}{m}$ parts per minute. Time = amount $\\div$ rate, and then minutes $\\div$ 60 gives hours.",
+    "steps": "The question asks for the time, in hours, to make $p$ parts.<br>rate $= \\frac{5n}{m}$ parts per minute <span class=\"nt\">(parts divided by minutes)</span><br>minutes $= p \\div \\frac{5n}{m} = \\frac{pm}{5n}$ <span class=\"nt\">(dividing by a fraction multiplies by its reciprocal)</span><br>hours $= \\frac{pm}{5n} \\div 60 = \\frac{pm}{300n}$ <span class=\"nt\">(there are 60 minutes in an hour)</span><br>So the time is $\\frac{pm}{300n}$ hours.",
+    "check": "Try $n = 2$, $m = 6$, $p = 100$: the machine makes 10 parts every 6 minutes, so 100 parts take 60 minutes = 1 hour, and $\\frac{100 \\cdot 6}{300 \\cdot 2} = 1$ ✓",
+    "be_careful": "Test the expression with easy numbers to catch an upside down rate.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-024",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "ratio-bridge-from-difference",
+   "signature": "J:S 3:4, S:P 6:5 -> 9:12:10; S - P = 18 -> part 9 -> J = 81; traps 162, 90, 108",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a school club, the ratio of juniors to seniors is $3$ to $4$, and the ratio of seniors to sophomores is $6$ to $5$. The club has 18 more seniors than sophomores. How many juniors are in the club?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$81$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$90$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "90 is the number of sophomores."
+    },
+    {
+     "key": "C",
+     "text": "$108$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "108 is the number of seniors."
+    },
+    {
+     "key": "D",
+     "text": "$162$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This treats 18 as one part. The seniors are 2 parts more than the sophomores, so 18 is 2 parts."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The seniors appear in both ratios. Make the seniors the same number in both, then one part has a fixed size.",
+    "steps": "The question asks for the number of juniors.<br>Seniors are 4 parts in the first ratio and 6 parts in the second. Both 4 and 6 divide 12.<br>juniors : seniors $= 3 : 4 = 9 : 12$ <span class=\"nt\">(multiply by 3)</span><br>seniors : sophomores $= 6 : 5 = 12 : 10$ <span class=\"nt\">(multiply by 2)</span><br>juniors : seniors : sophomores $= 9 : 12 : 10$ <span class=\"nt\">(combine)</span><br>$12 - 10 = 2$ parts $= 18$ students <span class=\"nt\">(seniors minus sophomores)</span><br>1 part $= 9$ students <span class=\"nt\">(divide by 2)</span><br>juniors $= 9 \\times 9 = 81$ <span class=\"nt\">(juniors are 9 parts)</span>",
+    "check": "81 juniors, 108 seniors, 90 sophomores: $\\frac{81}{108} = \\frac{3}{4}$, $\\frac{108}{90} = \\frac{6}{5}$, $108 - 90 = 18$ ✓",
+    "be_careful": "The 18 belongs to the combined ratio, after the seniors are matched.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-025",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C6"
+   ],
+   "family": "two-scale-factors-and-price-reverse",
+   "signature": "cost ratio 9/4 = 2.25 = (1.25 price per area)(1.2 length)(k width) -> k = 1.5; traps 1.05 (2.25 - 1.2), 1.2 (same factor as length), 1.25 (uses the price change as the width factor)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two rectangular baking trays, $P$ and $Q$, are glazed on the top surface only. The glaze used on tray $Q$ costs 25% more per square inch than the glaze used on tray $P$. The length of tray $Q$ is 1.2 times the length of tray $P$. Glazing tray $P$ costs $\\$4.00$, and glazing tray $Q$ costs $\\$9.00$. The width of tray $Q$ is how many times the width of tray $P$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1.05$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts: $2.25 - 1.2 = 1.05$. The factors multiply, so divide instead."
+    },
+    {
+     "key": "B",
+     "text": "$1.2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This assumes the width changes by the same factor as the length. The costs show it does not."
+    },
+    {
+     "key": "C",
+     "text": "$1.25$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "1.25 is the change in the price per square inch, not in the width."
+    },
+    {
+     "key": "D",
+     "text": "$1.5$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Cost = (price per square inch) $\\times$ length $\\times$ width, so the cost factor is the product of the three factors.",
+    "steps": "The question asks for the factor by which the width changes.<br>$\\frac{9.00}{4.00} = 2.25$ <span class=\"nt\">(the cost of $Q$ is 2.25 times the cost of $P$)</span><br>$2.25 = 1.25 \\times 1.2 \\times k$ <span class=\"nt\">(price factor, length factor, width factor)</span><br>$2.25 = 1.5k$ <span class=\"nt\">($1.25 \\times 1.2 = 1.5$)</span><br>$k = 1.5$ <span class=\"nt\">(divide by 1.5)</span><br>Why it works: when each of several quantities is multiplied by a factor, their product is multiplied by the product of the factors.",
+    "check": "$4.00 \\times 1.25 \\times 1.2 \\times 1.5 = 9.00$ ✓",
+    "be_careful": "Three things change at once. Percent and scale factors combine by multiplying, not adding.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-026",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "speed-fraction-of-other-spr",
+   "signature": "Ana at 1/3 Ben speed; Ben 2.4 km in 10 min -> Ana 0.08 km/min; 1.2 km -> 15 min; wrong 1.67, 5",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Ana walks at $\\frac{1}{3}$ of the speed at which Ben runs. Ben runs 2.4 kilometers in 10 minutes. Both move at constant speeds. How many minutes does it take Ana to walk 1.2 kilometers?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "15"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1.67",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This makes Ana 3 times as fast as Ben. \"$\\frac{1}{3}$ of the speed\" means slower."
+    },
+    {
+     "value": "5",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "5 minutes is the time for Ben to run 1.2 kilometers. Ana is slower."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find Ben’s speed, take $\\frac{1}{3}$ of it for Ana, and then time = distance $\\div$ speed.",
+    "steps": "The question asks for Ana’s time for 1.2 kilometers.<br>Ben: $\\frac{2.4}{10} = 0.24$ kilometer per minute <span class=\"nt\">(distance divided by time)</span><br>Ana: $\\frac{1}{3} \\times 0.24 = 0.08$ kilometer per minute <span class=\"nt\">(Ana walks at one third of that speed)</span><br>time $= \\frac{1.2}{0.08}$ <span class=\"nt\">(distance divided by speed)</span><br>$= 15$ minutes <span class=\"nt\">(divide)</span><br>Another view: Ben would need 5 minutes for 1.2 kilometers, and a speed that is one third as fast takes 3 times as long.",
+    "check": "$0.08 \\times 15 = 1.2$ kilometers ✓",
+    "be_careful": "A slower speed means a longer time: the time is multiplied by 3, not divided by 3.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-027",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C2"
+   ],
+   "family": "km-per-liter-to-mpg",
+   "signature": "12 km/L, 1 mi = 1.6 km, 1 gal = 3.8 L -> 12(3.8)/1.6 = 28.5 mpg; traps 1.97, 5.05, 73.0",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A car has a fuel efficiency of 12 kilometers per liter. Which of the following is closest to the car’s fuel efficiency in miles per gallon? (1 mile = 1.6 kilometers, 1 gallon = 3.8 liters)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1.97$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides by both 1.6 and 3.8. Liters are on the bottom, so changing to gallons multiplies by 3.8."
+    },
+    {
+     "key": "B",
+     "text": "$5.05$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This uses both conversion factors upside down."
+    },
+    {
+     "key": "C",
+     "text": "$28.5$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$73.0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies by both factors. Kilometers on top change to miles by dividing by 1.6."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Change the top unit and the bottom unit separately, each with a fraction equal to 1 that cancels the old unit.",
+    "steps": "The question asks for miles on top and gallons on the bottom.<br>$\\frac{12 \\text{ km}}{1 \\text{ L}} \\times \\frac{1 \\text{ mi}}{1.6 \\text{ km}} = 7.5$ miles per liter <span class=\"nt\">(kilometers cancel)</span><br>$\\frac{7.5 \\text{ mi}}{1 \\text{ L}} \\times \\frac{3.8 \\text{ L}}{1 \\text{ gal}} = 28.5$ miles per gallon <span class=\"nt\">(liters cancel)</span><br>A gallon holds more fuel than a liter, so the car goes farther on a gallon; the number of miles per gallon is larger than 7.5.",
+    "check": "28.5 miles is $28.5 \\times 1.6 = 45.6$ km, and $\\frac{45.6}{3.8} = 12$ km per liter ✓",
+    "be_careful": "Look at which unit is on the bottom. Changing the bottom unit works the opposite way from the top.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-028",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C3"
+   ],
+   "family": "population-density-sq-units",
+   "signature": "640 km^2, 180 people per sq mi, 1 mi = 1.6 km -> 250 sq mi -> 45,000; traps 72,000 (linear), 115,200 (no conversion), 294,912 (inverted)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A county has a land area of 640 square kilometers and a population density of 180 people per square mile. What is the population of the county? (1 mile = 1.6 kilometers)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$45{,}000$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$72{,}000$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This divides 640 by 1.6 once. A square mile is 1.6 km by 1.6 km, which is 2.56 square kilometers."
+    },
+    {
+     "key": "C",
+     "text": "$115{,}200$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This multiplies 640 by 180 without changing square kilometers to square miles."
+    },
+    {
+     "key": "D",
+     "text": "$294{,}912$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This multiplies 640 by 2.56, changing the units in the wrong direction."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Population = density $\\times$ area, and the area must be in the same unit as the density: square miles.",
+    "steps": "The question asks for the number of people.<br>1 square mile $= 1.6 \\times 1.6 = 2.56$ square kilometers <span class=\"nt\">(square both length factors)</span><br>$\\frac{640}{2.56} = 250$ square miles <span class=\"nt\">(a square mile is bigger, so there are fewer of them)</span><br>$180 \\times 250 = 45{,}000$ people <span class=\"nt\">(people per square mile times square miles)</span>",
+    "check": "$\\frac{45{,}000}{640} \\approx 70.3$ people per square kilometer, and $70.3 \\times 2.56 \\approx 180$ ✓",
+    "be_careful": "Square the 1.6 for an area unit.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-029",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C6"
+   ],
+   "family": "rain-volume-percent-release-time",
+   "signature": "2 cm on 1.5 km^2 = 0.02 m x 1,500,000 m^2 = 30,000 m^3; 30% = 9,000 m^3 = 9,000,000 L; / 500 L/s = 18,000 s = 5 h; traps 0.5 (1 km^2 = 100,000 m^2), 18 (stops at thousands of seconds), 50 (2 cm = 0.2 m); ICMS killer hp-psda9-2",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "During a storm, 2 centimeters of rain fell evenly on a region with an area of 1.5 square kilometers. Of this rainwater, 30% flowed into a reservoir. The water that flowed into the reservoir is then released at a constant rate of 500 liters per second. How many hours does it take to release all of this water? (1 kilometer = 1,000 meters, 1 cubic meter = 1,000 liters)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D6",
+     "feedback": "This uses $1$ square kilometer $= 100{,}000$ square meters. Squaring 1,000 gives $1{,}000{,}000$."
+    },
+    {
+     "key": "B",
+     "text": "$5$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D8",
+     "feedback": "18 is the time in thousands of seconds ($18{,}000$ seconds). Divide by 3,600 to get hours."
+    },
+    {
+     "key": "D",
+     "text": "$50$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This uses $2$ centimeters $= 0.2$ meter. Since 1 meter is 100 centimeters, 2 centimeters is 0.02 meter."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Volume of rain = depth $\\times$ area, in matching units. Then take 30%, change to liters, and divide by the rate.",
+    "steps": "The question asks for the time, in hours, to release the water in the reservoir.<br>$2$ cm $= 0.02$ m <span class=\"nt\">(100 centimeters in a meter)</span><br>$1.5$ km$^{2} = 1.5 \\times 1{,}000{,}000 = 1{,}500{,}000$ m$^{2}$ <span class=\"nt\">(a square kilometer is $1{,}000 \\times 1{,}000$ square meters)</span><br>$0.02 \\times 1{,}500{,}000 = 30{,}000$ m$^{3}$ <span class=\"nt\">(volume of all the rain)</span><br>$0.3 \\times 30{,}000 = 9{,}000$ m$^{3} = 9{,}000{,}000$ L <span class=\"nt\">(only 30% reaches the reservoir)</span><br>$9{,}000{,}000 \\div 500 = 18{,}000$ seconds <span class=\"nt\">(time at 500 liters per second)</span><br>$18{,}000 \\div 3{,}600 = 5$ hours <span class=\"nt\">(3,600 seconds in an hour)</span><br>Why it works: every quantity is changed to meters, liters, and seconds before combining, so the units cancel correctly.",
+    "check": "$5$ hours $= 18{,}000$ seconds; $18{,}000 \\times 500 = 9{,}000{,}000$ L $= 9{,}000$ m$^{3}$, and $9{,}000 \\div 0.3 = 30{,}000$ m$^{3} = 0.02 \\times 1{,}500{,}000$ ✓",
+    "be_careful": "Area units are squared: square kilometers to square meters uses $1{,}000^{2}$, not 1,000.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-030",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "ratio-after-change-spr",
+   "signature": "cats:dogs 5:3; 12 cats leave, 4 dogs arrive -> equal; 5k-12 = 3k+4, k=8 -> 40 cats; wrong 8, 28",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "At an animal shelter, the ratio of cats to dogs is $5$ to $3$. Then 12 cats are adopted and 4 dogs arrive, and no other changes occur. After these changes, the shelter has the same number of cats as dogs. How many cats were at the shelter before the changes?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "40"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "8",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8 is the size of one ratio part. The cats were 5 parts."
+    },
+    {
+     "value": "28",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "28 is the number of cats after the adoptions."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write the numbers before the change as $5k$ and $3k$, apply the changes, and set the new numbers equal.",
+    "steps": "The question asks for the number of cats before the changes.<br>Let $k$ = the number of animals in one ratio part. Before: $5k$ cats and $3k$ dogs.<br>after: $5k - 12$ cats and $3k + 4$ dogs <span class=\"nt\">(apply the changes)</span><br>$5k - 12 = 3k + 4$ <span class=\"nt\">(the numbers are equal after the changes)</span><br>$2k = 16$ <span class=\"nt\">(subtract $3k$ and add 12)</span><br>$k = 8$ <span class=\"nt\">(divide by 2)</span><br>cats before $= 5 \\times 8 = 40$ <span class=\"nt\">(the cats were 5 parts)</span>",
+    "check": "Before: 40 cats, 24 dogs, $\\frac{40}{24} = \\frac{5}{3}$. After: 28 cats and 28 dogs ✓",
+    "be_careful": "Finish with the number asked: cats before the changes, not $k$ or cats after.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-031",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C4"
+   ],
+   "family": "graph-rate-compare-two-tanks",
+   "signature": "graph tank A V=7.5t through (4,30); tank B 2.5 L/min slower -> 5 L/min; B fills 90 L in 18 min; A in 18 min = 135 -> 45 more; traps 6, 30, 135",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The graph shows the volume $V$, in liters, of water in tank $A$ $t$ minutes after a hose began filling it at a constant rate.",
+   "stem_after_figure": "Tank $B$ is filled at a constant rate that is 2.5 liters per minute less than the rate for tank $A$. Both tanks start empty and begin filling at the same time. When tank $B$ contains 90 liters, how many more liters does tank $A$ contain than tank $B$?",
+   "figures": [
+    {
+     "id": "QB-P1-031-fig1",
+     "file": "figures/QB-P1-031-fig1.svg",
+     "alt": "A line through the origin labeled Tank A, with points marked at (4, 30) and (8, 60). The horizontal axis is t from 0 to 10, and the vertical axis is V from 0 to 80."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "6 minutes is how much longer tank $B$ needs than tank $A$ to reach 90 liters. The question asks for liters."
+    },
+    {
+     "key": "B",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "30 is a value read from the graph at $t = 4$."
+    },
+    {
+     "key": "C",
+     "text": "$45$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$135$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "135 liters is the amount in tank $A$. The question asks how many more than tank $B$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Read the rate of tank $A$ from the graph as $\\frac{V}{t}$. Then compare the tanks at the same moment.",
+    "steps": "The question asks for the difference in volume at the moment tank $B$ holds 90 liters.<br>rate of $A = \\frac{30}{4} = 7.5$ liters per minute <span class=\"nt\">(the line passes through $(0, 0)$ and $(4, 30)$)</span><br>rate of $B = 7.5 - 2.5 = 5$ liters per minute <span class=\"nt\">(2.5 less)</span><br>$\\frac{90}{5} = 18$ minutes <span class=\"nt\">(time for $B$ to hold 90 liters)</span><br>$7.5 \\times 18 = 135$ liters <span class=\"nt\">(tank $A$ at the same time)</span><br>$135 - 90 = 45$ liters <span class=\"nt\">(the difference)</span><br>Another view: the difference grows by 2.5 liters each minute, and $2.5 \\times 18 = 45$.",
+    "check": "At $t = 18$: $A$ has 135 L and $B$ has 90 L; $135 - 90 = 45$ ✓",
+    "be_careful": "Compare the tanks at the same time, 18 minutes, not when each reaches 90 liters.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-032",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C7"
+   ],
+   "family": "flow-area-times-speed",
+   "signature": "channel cross-section 12 m^2, speed 1.5 m/s -> 18 m^3/s -> 64,800 m^3/h; traps 18, 1,080, 28,800",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Water flows through a channel at an average speed of 1.5 meters per second. The cross section of the water in the channel is a region with an area of 12 square meters. How many cubic meters of water flow past a point in the channel in 1 hour?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "18 cubic meters flow past each second. The question asks for 1 hour."
+    },
+    {
+     "key": "B",
+     "text": "$1{,}080$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "1,080 cubic meters flow past each minute; an hour has 60 minutes."
+    },
+    {
+     "key": "C",
+     "text": "$28{,}800$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides the area by the speed. The volume each second is area times speed."
+    },
+    {
+     "key": "D",
+     "text": "$64{,}800$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "In 1 second the water moves 1.5 meters, so the water that passes is a block with base 12 square meters and length 1.5 meters.",
+    "steps": "The question asks for the volume of water passing a point in 1 hour.<br>In each second, the water that passes the point fills a block 1.5 meters long whose end has area 12 square meters.<br>$12 \\times 1.5 = 18$ cubic meters per second <span class=\"nt\">(square meters times meters gives cubic meters)</span><br>$1 \\text{ hour} = 60 \\times 60 = 3{,}600$ seconds <span class=\"nt\">(change the time unit)</span><br>$18 \\times 3{,}600 = 64{,}800$ cubic meters <span class=\"nt\">(volume per second times seconds)</span><br>The units confirm it: $\\text{m}^{2} \\times \\frac{\\text{m}}{\\text{s}} \\times \\text{s} = \\text{m}^{3}$.",
+    "check": "$\\frac{64{,}800}{3{,}600 \\times 12} = 1.5$ meters per second ✓",
+    "be_careful": "Let the units guide the operation: square meters times meters per second gives cubic meters per second.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-033",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C2"
+   ],
+   "family": "currency-two-directions-compare-spr",
+   "signature": "1 euro = 1.2 dollars, 1 dollar = 150 yen; watch 27,000 yen = 180 dollars vs 160 euros = 192 dollars -> 12; wrongs 46.67 (euro inverted), 192",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "On a certain day, 1 euro is worth 1.2 U.S. dollars, and 1 U.S. dollar is worth 150 Japanese yen. A watch costs 27,000 yen in a store in Japan. The same watch costs 160 euros in a store in France. Based on these rates, how many more U.S. dollars does the watch cost in France than in Japan?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "46.67",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides 160 euros by 1.2. A euro is worth more than a dollar, so 160 euros is more than 160 dollars: multiply by 1.2."
+    },
+    {
+     "value": "192",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "192 dollars is the price in France. The question asks for the difference."
+    }
+   ],
+   "solution": {
+    "key_idea": "Change both prices to dollars. Yen to dollars divides by 150; euros to dollars multiplies by 1.2.",
+    "steps": "The question asks for the price in France minus the price in Japan, in dollars.<br>Japan: $27{,}000 \\text{ yen} \\times \\frac{1 \\text{ dollar}}{150 \\text{ yen}} = 180$ dollars <span class=\"nt\">(yen cancel)</span><br>France: $160 \\text{ euros} \\times \\frac{1.2 \\text{ dollars}}{1 \\text{ euro}} = 192$ dollars <span class=\"nt\">(euros cancel)</span><br>$192 - 180 = 12$ dollars <span class=\"nt\">(difference)</span><br>Why the different operations? A yen is worth much less than a dollar, so the number of dollars is smaller than the number of yen. A euro is worth more than a dollar, so the number of dollars is larger than the number of euros.",
+    "check": "$\\frac{180}{1.2} = 150$ euros, and $160 - 150 = 10$ euros $= 12$ dollars ✓",
+    "be_careful": "Write the units in each fraction so the old unit cancels; the two conversions go in opposite directions.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-034",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "three-part-ratio-shift-each",
+   "signature": "2:3:7 as 2u, 3u, 7u; add 6 to each -> (2u + 6):(7u + 6) = 1:3 -> 6u + 18 = 7u + 6 -> u = 12; sum 12u = 144; traps 12 (u), 24 (smallest), 84 (largest)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Three positive numbers are in the ratio $2 : 3 : 7$. When 6 is added to each of the three numbers, the ratio of the smallest new number to the largest new number is $1 : 3$. What is the sum of the original three numbers?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 is the size of one ratio part, $u$. The sum is $12u$."
+    },
+    {
+     "key": "B",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "24 is the smallest original number, $2u$."
+    },
+    {
+     "key": "C",
+     "text": "$84$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "84 is the largest original number, $7u$, not the sum of all three."
+    },
+    {
+     "key": "D",
+     "text": "$144$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Write the numbers as $2u$, $3u$, $7u$. Adding the same amount to each changes the ratio, so set up the new ratio as an equation.",
+    "steps": "The question asks for the sum of the original three numbers.<br>Let the numbers be $2u$, $3u$, and $7u$, where $u$ is the size of one part.<br>$\\frac{2u + 6}{7u + 6} = \\frac{1}{3}$ <span class=\"nt\">(smallest to largest after adding 6)</span><br>$3(2u + 6) = 7u + 6$ <span class=\"nt\">(cross multiply)</span><br>$6u + 18 = 7u + 6$, so $u = 12$ <span class=\"nt\">(subtract $6u$ and 6)</span><br>sum $= 12u = 144$ <span class=\"nt\">($2 + 3 + 7 = 12$ parts)</span><br>Why it works: adding 6 to each number does not keep the ratio $2 : 7$, so the new ratio gives a real equation for $u$.",
+    "check": "Numbers 24, 36, 84: $24 + 6 = 30$ and $84 + 6 = 90$, and $30 : 90 = 1 : 3$ ✓; $24 + 36 + 84 = 144$",
+    "be_careful": "Adding the same number to each term changes a ratio; only multiplying keeps it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-035",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C7"
+   ],
+   "family": "units-through-formula-chain",
+   "signature": "F = mv/t -> kg m/s^2; E = F d -> kg m^2/s^2; P = E/t -> kg m^2/s^3; traps kg m^2/s (forgets both divisions by t), kg m^2/s^2 (stops at E), kg m/s^3 (forgets the meters in d)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a physics lab, three quantities are calculated using the formulas $F = \\frac{mv}{t}$, $E = Fd$, and $P = \\frac{E}{t}$, where $m$ is a mass in kilograms, $v$ is a speed in meters per second, $d$ is a distance in meters, and $t$ is a time in seconds. Which of the following is a unit for $P$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}^{3}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This leaves out the meters from $d$. Multiplying by $d$ adds a factor of meters to the top."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{\\text{kg} \\cdot \\text{m}^{2}}{\\text{s}}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This keeps only the seconds from $v$. Each division by $t$ adds another factor of seconds to the bottom."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{\\text{kg} \\cdot \\text{m}^{2}}{\\text{s}^{2}}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the unit of $E$. One more division by $t$ is needed for $P$."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{\\text{kg} \\cdot \\text{m}^{2}}{\\text{s}^{3}}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Carry the units through one formula at a time, like a chain.",
+    "steps": "The question asks for the unit of $P$.<br>$F$: $\\frac{\\text{kg} \\cdot \\frac{\\text{m}}{\\text{s}}}{\\text{s}} = \\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}^{2}}$ <span class=\"nt\">(divide $mv$ by seconds)</span><br>$E$: $\\frac{\\text{kg} \\cdot \\text{m}}{\\text{s}^{2}} \\cdot \\text{m} = \\frac{\\text{kg} \\cdot \\text{m}^{2}}{\\text{s}^{2}}$ <span class=\"nt\">(multiply by meters)</span><br>$P$: $\\frac{\\text{kg} \\cdot \\text{m}^{2}}{\\text{s}^{2}} \\div \\text{s} = \\frac{\\text{kg} \\cdot \\text{m}^{2}}{\\text{s}^{3}}$ <span class=\"nt\">(divide by seconds again)</span><br>Why it works: units multiply and divide exactly as the numbers in the formulas do.",
+    "check": "In one expression, $P = \\frac{mvd}{t^{2}}$: kg $\\cdot \\frac{\\text{m}}{\\text{s}} \\cdot$ m $\\div$ s$^{2}$ $= \\frac{\\text{kg} \\cdot \\text{m}^{2}}{\\text{s}^{3}}$ ✓",
+    "be_careful": "$t$ appears twice (in $F$ and in $P$), and $v$ already has seconds in it, so the bottom has $\\text{s}^{3}$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-036",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "paint-wall-reverse-length-spr",
+   "signature": "120 sq ft per 45 min; 1 h 30 min -> 240 sq ft = 9L - 12 -> L = 28; wrongs 26.67 (window ignored), 25.33 (window subtracted)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 105,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A painter paints 120 square feet of wall every 45 minutes. A rectangular wall is 9 feet high and has a rectangular window 3 feet by 4 feet that is not painted. At this rate, it takes the painter 1 hour 30 minutes to paint the wall. What is the length, in feet, of the wall?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "28"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "26.67",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This sets the whole wall, $9L$, equal to 240 square feet. The window is not painted, so the wall is 12 square feet larger than the painted area."
+    },
+    {
+     "value": "25.33",
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This subtracts the window from the painted area instead of adding it to find the whole wall."
+    }
+   ],
+   "solution": {
+    "key_idea": "Work backward: the time gives the painted area, and the painted area is the wall minus the window.",
+    "steps": "The question asks for the length of the wall.<br>Step 1: find the painted area.<br>1 hour 30 minutes $= 90$ minutes <span class=\"nt\">(change to minutes)</span><br>$90 \\times \\frac{120}{45} = 240$ square feet <span class=\"nt\">(minutes times square feet per minute)</span><br>Step 2: find the length. Let $L$ be the length of the wall in feet.<br>$9L - 12 = 240$ <span class=\"nt\">(whole wall minus the 12 square foot window)</span><br>$9L = 252$ <span class=\"nt\">(add 12)</span><br>$L = 28$ <span class=\"nt\">(divide by 9)</span>",
+    "check": "$9 \\times 28 - 12 = 240$ square feet, and $240 \\times \\frac{45}{120} = 90$ minutes ✓",
+    "be_careful": "The window is part of the wall’s outline but is not painted.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-037",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "limiting-ingredient-ratio",
+   "signature": "blue:yellow 3:5; 18 L blue, 25 L yellow -> yellow limits (5 parts of 5) -> 15 + 25 = 40; traps 30, 43, 48",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A painter makes green paint by mixing blue paint and yellow paint in a ratio of $3$ to $5$ by volume. The painter has 18 liters of blue paint and 25 liters of yellow paint. What is the greatest number of liters of green paint the painter can make using this ratio?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "30 liters is the yellow paint needed to use all the blue paint. That is more yellow than the painter has."
+    },
+    {
+     "key": "B",
+     "text": "$40$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$43$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses all of both paints, but 18 to 25 is not the ratio 3 to 5."
+    },
+    {
+     "key": "D",
+     "text": "$48$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This assumes all of the blue paint is used, which would need 30 liters of yellow."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Check which paint runs out first. The paint that runs out first decides how much green can be made.",
+    "steps": "The question asks for the most green paint possible.<br>Let $k$ = liters in one ratio part. Then the mix uses $3k$ liters of blue and $5k$ liters of yellow.<br>$3k \\le 18$, so $k \\le 6$ <span class=\"nt\">(not more blue than the painter has)</span><br>$5k \\le 25$, so $k \\le 5$ <span class=\"nt\">(not more yellow than the painter has)</span><br>$k = 5$ <span class=\"nt\">(both must hold, so the smaller limit wins)</span><br>green $= 8k = 40$ liters <span class=\"nt\">($3k + 5k = 8k$)</span><br>The painter uses 15 liters of blue and all 25 liters of yellow, with 3 liters of blue left over.",
+    "check": "$\\frac{15}{25} = \\frac{3}{5}$ and $15 + 25 = 40$ ✓",
+    "be_careful": "The larger supply does not decide the amount; the paint that runs out first does.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-038",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "average-speed-not-average",
+   "signature": "12 km at 30 km/h, 12 km at 60 km/h -> 24 km / 0.6 h = 40; traps 24, 45, 90",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A drone flies 12 kilometers at a constant speed of 30 kilometers per hour and then flies another 12 kilometers at a constant speed of 60 kilometers per hour. What is the drone’s average speed, in kilometers per hour, for the entire 24 kilometer flight?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "24 is the total distance, not the speed."
+    },
+    {
+     "key": "B",
+     "text": "$40$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$45$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This averages the two speeds. The drone spends more time at the slower speed, so the average is lower than 45."
+    },
+    {
+     "key": "D",
+     "text": "$90$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the two speeds."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Average speed = total distance $\\div$ total time. Find each time first.",
+    "steps": "The question asks for total distance divided by total time.<br>first part: $\\frac{12}{30} = 0.4$ hour <span class=\"nt\">(time = distance $\\div$ speed)</span><br>second part: $\\frac{12}{60} = 0.2$ hour <span class=\"nt\">(time = distance $\\div$ speed)</span><br>total time $= 0.6$ hour <span class=\"nt\">(add)</span><br>average speed $= \\frac{24}{0.6} = 40$ kilometers per hour <span class=\"nt\">(total distance $\\div$ total time)</span><br>The answer is below 45 because the drone flies twice as long at 30 as at 60.",
+    "check": "$40 \\times 0.6 = 24$ kilometers ✓",
+    "be_careful": "Averaging the two speeds works only when the times, not the distances, are equal.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-039",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "mixture-ratio-add-one-part-spr",
+   "signature": "concentrate:water 2:7 in 27 L -> 6, 21; add c concentrate for 2:5 -> (6+c)/21 = 2/5 -> c = 2.4; wrong 8.4",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A drink mixture contains only concentrate and water in a ratio of $2$ to $7$ by volume. There are 27 liters of the mixture. How many liters of concentrate must be added so that the ratio of concentrate to water becomes $2$ to $5$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2.4",
+      "12/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "8.4",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8.4 liters is the total concentrate needed afterward. 6 liters are already in the mixture."
+    }
+   ],
+   "solution": {
+    "key_idea": "Adding concentrate does not change the water. Find the water first, then the concentrate that matches the new ratio.",
+    "steps": "The question asks how much concentrate to add.<br>1 part $= \\frac{27}{2 + 7} = 3$ liters <span class=\"nt\">(share the mixture)</span><br>concentrate $= 6$ L, water $= 21$ L <span class=\"nt\">(2 parts and 7 parts)</span><br>Let $c$ = liters of concentrate added. The water stays 21 liters.<br>$\\frac{6 + c}{21} = \\frac{2}{5}$ <span class=\"nt\">(the new ratio)</span><br>$6 + c = 8.4$ <span class=\"nt\">(multiply both sides by 21)</span><br>$c = 2.4$ <span class=\"nt\">(subtract 6)</span>",
+    "check": "$\\frac{8.4}{21} = 0.4 = \\frac{2}{5}$ ✓",
+    "be_careful": "The water amount is the fixed part. Build the new ratio around it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-040",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H",
+   "concepts": [
+    "P1.C6"
+   ],
+   "family": "two-map-scales-ratio-vs-stated",
+   "signature": "map A 1:400,000; map B 1 cm : 10 km; road 15 cm on A -> 60 km -> 6 cm on B; traps 37.5, 60, 150",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Map $A$ has a scale of $1 : 400{,}000$, so 1 centimeter on map $A$ represents 400,000 centimeters on the ground. On map $B$, 1 centimeter represents 10 kilometers. A road is 15 centimeters long on map $A$. How long, in centimeters, is the same road on map $B$? (1 kilometer = 100,000 centimeters)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$37.5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This multiplies 15 by $\\frac{10}{4}$. Map $B$ shows more ground per centimeter, so the road is shorter on map $B$: multiply by $\\frac{4}{10}$."
+    },
+    {
+     "key": "C",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "60 is the real length of the road in kilometers."
+    },
+    {
+     "key": "D",
+     "text": "$150$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This treats map $A$ as if it had the scale of map $B$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Go through the real length: map $A$ $\\to$ ground $\\to$ map $B$.",
+    "steps": "The question asks for the length of the road on map $B$.<br>$15 \\times 400{,}000 = 6{,}000{,}000$ cm <span class=\"nt\">(ground length from map $A$)</span><br>$\\frac{6{,}000{,}000}{100{,}000} = 60$ km <span class=\"nt\">(change centimeters to kilometers)</span><br>$\\frac{60}{10} = 6$ cm <span class=\"nt\">(each centimeter on map $B$ is 10 km)</span><br>Map $B$ shows more ground in each centimeter (10 km against 4 km on map $A$), so the road looks shorter on map $B$.",
+    "check": "On map $A$, 1 cm is 4 km, so 15 cm is 60 km; on map $B$, 6 cm is 60 km ✓",
+    "be_careful": "Change the ratio scale to kilometers before comparing it with map $B$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-041",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C1"
+   ],
+   "family": "letter-rates-seconds-to-minutes-compare",
+   "signature": "R moves k L every t s; S moves 3x as much as R per minute; S in 2t minutes = 360k; traps 6k (no s->min), 120k (no x3), 180k/t (per minute rate)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Pump $R$ moves $k$ liters of water every $t$ seconds, where $k$ and $t$ are positive constants. Pump $S$ moves 3 times as many liters per minute as pump $R$. Both pumps work at constant rates. How many liters of water does pump $S$ move in $2t$ minutes?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6k$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This treats the $2t$ minutes as $2t$ seconds. Pump $R$’s rate is per second, so the minutes must be changed to seconds."
+    },
+    {
+     "key": "B",
+     "text": "$120k$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This is the amount pump $R$ moves in $2t$ minutes. Pump $S$ moves 3 times as much."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{180k}{t}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is pump $S$’s rate in liters per minute. It still needs to be multiplied by $2t$ minutes."
+    },
+    {
+     "key": "D",
+     "text": "$360k$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Write pump $R$’s rate in liters per minute, triple it for pump $S$, and then multiply by the time in minutes.",
+    "steps": "The question asks for the liters pump $S$ moves in $2t$ minutes.<br>pump $R$: $\\frac{k}{t}$ liters per second <span class=\"nt\">(liters divided by seconds)</span><br>pump $R$: $\\frac{k}{t} \\times 60 = \\frac{60k}{t}$ liters per minute <span class=\"nt\">(60 seconds in a minute)</span><br>pump $S$: $3 \\times \\frac{60k}{t} = \\frac{180k}{t}$ liters per minute <span class=\"nt\">(three times as fast)</span><br>$\\frac{180k}{t} \\times 2t = 360k$ liters <span class=\"nt\">(rate times time; the $t$ cancels)</span><br>The $t$ cancels because the time asked for, $2t$ minutes, is built from the same $t$ as pump $R$’s rate.",
+    "check": "Try $k = 1$, $t = 1$: pump $R$ moves 1 liter each second, 60 each minute; pump $S$ moves 180 each minute, and in 2 minutes moves 360 $= 360(1)$ ✓",
+    "be_careful": "The rate uses seconds and the time uses minutes. Put both in the same unit.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-042",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C3"
+   ],
+   "family": "rain-depth-from-volume-to-gauge-spr",
+   "signature": "27 m^3 of rain on 120 m x 75 m lot -> 3 mm depth; gauge opening 20 cm x 15 cm -> 0.3 cm x 300 cm^2 = 90 mL; wrong 900, 9",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "During a storm, 27 cubic meters of rain fell evenly on a flat rectangular lot that is 120 meters long and 75 meters wide. A rain collector on the lot has a rectangular opening 20 centimeters long and 15 centimeters wide, and it catches all the rain that falls on its opening. How many milliliters of rain did the collector catch during the storm? (1 milliliter = 1 cubic centimeter)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "90"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "900",
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses 1 meter = 1,000 centimeters for the rain depth, so the depth is 3 cm instead of 0.3 cm."
+    }
+   ],
+   "solution": {
+    "key_idea": "Equal rain everywhere means the same depth everywhere. Find the depth from the lot, then use it with the collector’s opening.",
+    "steps": "The question asks for the volume of rain caught by the collector.<br>Step 1: find the depth of the rain.<br>lot area $= 120 \\times 75 = 9{,}000$ square meters <span class=\"nt\">(length times width)</span><br>depth $= \\frac{27}{9{,}000} = 0.003$ meter <span class=\"nt\">(volume divided by area)</span><br>$0.003$ m $= 0.3$ cm <span class=\"nt\">(100 centimeters in a meter)</span><br>Step 2: find the rain in the collector.<br>opening $= 20 \\times 15 = 300$ square centimeters <span class=\"nt\">(length times width)</span><br>$300 \\times 0.3 = 90$ cubic centimeters <span class=\"nt\">(area times depth)</span><br>$= 90$ milliliters <span class=\"nt\">(1 mL = 1 cm$^{3}$)</span>",
+    "check": "The rain depth is 3 mm. A 300 cm$^{2}$ opening with 0.3 cm of rain holds 90 cm$^{3}$, and the lot (90,000,000 cm$^{2}$) times 0.3 cm is 27,000,000 cm$^{3}$ = 27 m$^{3}$ ✓",
+    "be_careful": "The volume on the lot is not shared out by counting collectors; the depth is the shared quantity.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-043",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "combined-ratio-two-groups-spr",
+   "signature": "X 400 students walk:bus 3:5 (150, 250); Y walk:bus 1:3 (j, 3j); combined 1:2 -> j = 50 -> Y = 200; wrong 50, 150",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "At School $X$, which has 400 students, the ratio of students who walk to school to students who take the bus is $3$ to $5$. At School $Y$, this ratio is $1$ to $3$. Every student at each school either walks or takes the bus. For the two schools combined, the ratio of students who walk to students who take the bus is $1$ to $2$. How many students are at School $Y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "200"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "50",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "50 is the number of walkers at School $Y$, which is one part of its $1 : 3$ ratio."
+    },
+    {
+     "value": "150",
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "150 is the number of walkers at School $X$ (or the bus riders at School $Y$)."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find the actual counts at School $X$. Write School $Y$ as $j$ walkers and $3j$ bus riders, then use the combined ratio.",
+    "steps": "The question asks for the total number of students at School $Y$.<br>School $X$: $\\frac{3}{8}(400) = 150$ walk and $250$ take the bus <span class=\"nt\">(3 parts out of 8)</span><br>School $Y$: let $j$ students walk; then $3j$ take the bus.<br>$\\frac{150 + j}{250 + 3j} = \\frac{1}{2}$ <span class=\"nt\">(combined ratio)</span><br>$2(150 + j) = 250 + 3j$ <span class=\"nt\">(cross multiply)</span><br>$300 + 2j = 250 + 3j$ <span class=\"nt\">(distribute)</span><br>$j = 50$ <span class=\"nt\">(subtract $2j$ and 250)</span><br>School $Y$ has $j + 3j = 4(50) = 200$ students <span class=\"nt\">(walkers plus bus riders)</span><br>Sense check: School $X$ alone has more walkers than the combined ratio $1 : 2$ allows, and School $Y$ alone has fewer, so the combined ratio falls between the two.",
+    "check": "Combined: walk $150 + 50 = 200$, bus $250 + 150 = 400$, and $200 : 400 = 1 : 2$ ✓",
+    "be_careful": "Ratios from two groups cannot be averaged. Combine the counts, not the ratios.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-044",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C3"
+   ],
+   "family": "acceleration-squared-time-unit",
+   "signature": "3 m/s^2 -> km/h^2: 3 x 3600^2 / 1000 = 38,880; traps 10.8 (3600 once), 38,880,000 (no /1000), 0.003 (m->km only)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An object speeds up at a constant rate of 3 meters per second per second (3 meters per second squared). Which of the following is equal to this rate in kilometers per hour per hour (kilometers per hour squared)?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.003$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This changes meters to kilometers only. The two time units also change from seconds to hours."
+    },
+    {
+     "key": "B",
+     "text": "$10.8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies by 3,600 once. The unit has seconds twice in the bottom, so it is multiplied by 3,600 twice."
+    },
+    {
+     "key": "C",
+     "text": "$38{,}880$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$38{,}880{,}000$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This changes both seconds to hours but leaves meters unchanged."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Meters per second squared has meters on top and seconds times seconds on the bottom. Change each unit separately.",
+    "steps": "The question asks for kilometers on top and hours times hours on the bottom.<br>$\\frac{3 \\text{ m}}{\\text{s} \\cdot \\text{s}}$ <span class=\"nt\">(the rate as a fraction of units)</span><br>$\\times \\frac{1 \\text{ km}}{1{,}000 \\text{ m}}$ <span class=\"nt\">(meters cancel)</span><br>$\\times \\frac{3{,}600 \\text{ s}}{1 \\text{ h}} \\times \\frac{3{,}600 \\text{ s}}{1 \\text{ h}}$ <span class=\"nt\">(each second on the bottom cancels)</span><br>$\\frac{3 \\times 3{,}600 \\times 3{,}600}{1{,}000} = \\frac{38{,}880{,}000}{1{,}000} = 38{,}880$ <span class=\"nt\">(multiply and divide)</span><br>So the rate is 38,880 kilometers per hour squared.<br>Another view: each second the speed rises 3 m/s, which is 10.8 km/h; there are 3,600 seconds in an hour, so in one hour the speed rises $10.8 \\times 3{,}600 = 38{,}880$ km/h.",
+    "check": "$38{,}880 \\times 1{,}000 \\div 3{,}600^{2} = 3$ ✓",
+    "be_careful": "A squared time unit needs the time factor twice.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-045",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C6"
+   ],
+   "family": "scale-model-volume-density-mass",
+   "signature": "1:10 model, plastic 1.2 g/cm^3, 600 g; statue bronze 8.4 g/cm^3 -> 500 cm^3 x 1000 = 500,000 cm^3 -> 4,200,000 g = 4,200 kg; traps 42, 420, 600",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A solid plastic model of a solid bronze statue is built using a scale of $1 : 10$, so each length on the model is $\\frac{1}{10}$ of the matching length on the statue. The plastic has a density of 1.2 grams per cubic centimeter, and the model has a mass of 600 grams. The bronze has a density of 8.4 grams per cubic centimeter. What is the mass, in kilograms, of the statue? (1 kilogram = 1,000 grams)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$42$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies the volume by 10, the length scale factor. Volume grows by $10^{3}$."
+    },
+    {
+     "key": "B",
+     "text": "$420$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This multiplies the volume by $10^{2}$, the area scale factor. Volume grows by $10^{3}$."
+    },
+    {
+     "key": "C",
+     "text": "$600$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This scales the volume correctly but ignores the change in material from plastic to bronze."
+    },
+    {
+     "key": "D",
+     "text": "$4{,}200$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Density links mass and volume. Find the model’s volume, scale the volume by the cube of the length factor, and use the bronze density.",
+    "steps": "The question asks for the statue’s mass in kilograms.<br>model volume $= \\frac{600}{1.2} = 500$ cm$^{3}$ <span class=\"nt\">(volume = mass $\\div$ density)</span><br>statue volume $= 500 \\times 10^{3} = 500{,}000$ cm$^{3}$ <span class=\"nt\">(lengths $\\times 10$, so volume $\\times 10^{3}$)</span><br>statue mass $= 500{,}000 \\times 8.4 = 4{,}200{,}000$ g <span class=\"nt\">(mass = density $\\times$ volume)</span><br>$= 4{,}200$ kg <span class=\"nt\">(divide by 1,000)</span><br>Why cube? Every length of the statue is 10 times the model length, so length, width, and height each grow by 10, and the volume grows by $10 \\times 10 \\times 10 = 1{,}000$.",
+    "check": "$\\frac{4{,}200{,}000}{8.4} = 500{,}000$ cm$^{3}$, which is $10^{3}$ times $\\frac{600}{1.2}$ ✓",
+    "be_careful": "Two things change: the size (volume $\\times 1{,}000$) and the material (density $\\times 7$).",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-046",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C5"
+   ],
+   "family": "ratio-bridge-integer-bound-could-be",
+   "signature": "R:G 4:9, G:B 6:5 -> 8:18:15 (41 parts), total < 100 -> k = 1, 2; blue 15 or 30 -> choice 30; traps 5, 18, 45",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A bag contains only red, green, and blue marbles. The ratio of red marbles to green marbles is $4$ to $9$, and the ratio of green marbles to blue marbles is $6$ to $5$. There are fewer than 100 marbles in the bag. Which of the following could be the number of blue marbles in the bag?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "5 is the blue part of the $6 : 5$ ratio. With 5 blue marbles there would be 6 green, and 6 green cannot match red to green $= 4 : 9$ with a whole number of red marbles."
+    },
+    {
+     "key": "B",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "18 is the number of green marbles in the smallest possible bag, not the blue."
+    },
+    {
+     "key": "C",
+     "text": "$30$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$45$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "45 blue marbles would need $41 \\times 3 = 123$ marbles in all, more than 100."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Combine the ratios with matching green parts. The total must be a multiple of the combined parts and less than 100.",
+    "steps": "The question asks for a possible number of blue marbles.<br>Green is 9 parts in one ratio and 6 parts in the other. Both divide 18.<br>red : green $= 4 : 9 = 8 : 18$ <span class=\"nt\">(multiply by 2)</span><br>green : blue $= 6 : 5 = 18 : 15$ <span class=\"nt\">(multiply by 3)</span><br>red : green : blue $= 8 : 18 : 15$ <span class=\"nt\">(combine; 8, 18, 15 share no common factor)</span><br>So there are $8k$ red, $18k$ green, and $15k$ blue marbles for some positive integer $k$.<br>$41k < 100$ <span class=\"nt\">(the total is $8k + 18k + 15k$)</span><br>$k = 1$ or $k = 2$ <span class=\"nt\">($41 \\times 3 = 123$ is too many)</span><br>blue $= 15$ or $30$ <span class=\"nt\">($15k$)</span><br>Only 30 is a choice.",
+    "check": "$k = 2$: 16 red, 36 green, 30 blue; $\\frac{16}{36} = \\frac{4}{9}$, $\\frac{36}{30} = \\frac{6}{5}$, total 82 < 100 ✓",
+    "be_careful": "The blue count must be a multiple of 15, the blue part of the combined ratio, and the total must fit the bound.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-047",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C3"
+   ],
+   "family": "letter-area-yards-to-feet-hours",
+   "signature": "4s sq ft every t min; square side 3n yd = 9n ft -> 81n^2 sq ft -> hours = 27n^2 t/(80s); traps 3n^2t/(80s) (yd as ft), 81n^2t/(4s) (minutes), 80s/(27n^2t)",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A crew lays sod at a constant rate of $4s$ square feet every $t$ minutes, where $s$ and $t$ are positive constants. Which expression gives the number of hours it takes the crew to cover a square field with side length $3n$ yards? (1 yard = 3 feet)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{3n^{2}t}{80s}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses the side as $3n$ feet. A side of $3n$ yards is $9n$ feet."
+    },
+    {
+     "key": "B",
+     "text": "$\\frac{81n^{2}t}{4s}$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the time in minutes. Dividing by 60 gives hours."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{80s}{27n^{2}t}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is the reciprocal of the time: it divides the rate by the area."
+    },
+    {
+     "key": "D",
+     "text": "$\\frac{27n^{2}t}{80s}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Change the side to feet before squaring, then time = area $\\div$ rate, and minutes $\\div$ 60 gives hours.",
+    "steps": "The question asks for the time in hours.<br>side $= 3n \\times 3 = 9n$ feet <span class=\"nt\">(3 feet in a yard)</span><br>area $= (9n)^{2} = 81n^{2}$ square feet <span class=\"nt\">(square the side)</span><br>rate $= \\frac{4s}{t}$ square feet per minute <span class=\"nt\">(area divided by time)</span><br>minutes $= 81n^{2} \\div \\frac{4s}{t} = \\frac{81n^{2}t}{4s}$ <span class=\"nt\">(area divided by rate)</span><br>hours $= \\frac{81n^{2}t}{4s \\cdot 60} = \\frac{81n^{2}t}{240s}$ <span class=\"nt\">(60 minutes in an hour)</span><br>$= \\frac{27n^{2}t}{80s}$ <span class=\"nt\">(divide top and bottom by 3)</span><br>Why change yards first? Squaring $3n$ yards gives $9n^{2}$ square yards, and each square yard is 9 square feet; changing the side to feet first does both at once.",
+    "check": "Try $n = 1$, $s = 27$, $t = 80$: the field is 9 ft by 9 ft = 81 ft$^{2}$, the crew lays 108 ft$^{2}$ in 80 minutes, so 81 ft$^{2}$ takes 60 minutes = 1 hour, and $\\frac{27(1)(80)}{80(27)} = 1$ ✓",
+    "be_careful": "Change yards to feet on the side length, before squaring, so the factor 3 becomes 9 for the area.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-048",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C7"
+   ],
+   "family": "alloy-density-mixture-spr",
+   "signature": "metal A 3 g/cm^3, 120 cm^3; metal B 9 g/cm^3, v cm^3; alloy 7 -> (360+9v)/(120+v)=7 -> v=240 -> mass 2160 g; wrong 240",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "An alloy is made by melting together 120 cubic centimeters of metal $A$, which has a density of 3 grams per cubic centimeter, and some amount of metal $B$, which has a density of 9 grams per cubic centimeter. The volume of the alloy is the sum of the volumes of the two metals, and the density of the alloy is 7 grams per cubic centimeter. What is the mass, in grams, of metal $B$ used?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2160"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "240",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "240 is the volume of metal $B$ in cubic centimeters. The question asks for its mass."
+    }
+   ],
+   "solution": {
+    "key_idea": "Density of the alloy = total mass $\\div$ total volume. Write both totals with one unknown volume.",
+    "steps": "The question asks for the mass of metal $B$.<br>Let $v$ = volume of metal $B$ in cubic centimeters.<br>mass of $A = 3 \\times 120 = 360$ g <span class=\"nt\">(density times volume)</span><br>mass of $B = 9v$ g <span class=\"nt\">(density times volume)</span><br>$\\frac{360 + 9v}{120 + v} = 7$ <span class=\"nt\">(alloy density)</span><br>$360 + 9v = 840 + 7v$ <span class=\"nt\">(multiply both sides by $120 + v$)</span><br>$2v = 480$, so $v = 240$ <span class=\"nt\">(subtract $7v$ and 360)</span><br>mass of $B = 9 \\times 240 = 2{,}160$ g <span class=\"nt\">(density times volume)</span><br>Why not average the densities? The average of 3 and 9 is 6, but the alloy is 7, closer to 9, so there must be more of metal $B$ than metal $A$: 240 cm$^{3}$ against 120 cm$^{3}$.",
+    "check": "Total mass $360 + 2{,}160 = 2{,}520$ g, total volume $360$ cm$^{3}$, and $\\frac{2{,}520}{360} = 7$ ✓",
+    "be_careful": "The alloy density is not the average of 3 and 9; it depends on how much of each metal is used.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-049",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C2"
+   ],
+   "family": "liters-per-100km-vs-mpg-spr",
+   "signature": "car A 8 L/100 km; car B 30 mi/gal; 480 km -> A 38.4 L, B 300 mi / 30 = 10 gal = 38 L -> 0.4; wrong 38.4, 2.4",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Car $A$ uses 8 liters of fuel for every 100 kilometers driven. Car $B$ travels 30 miles for every gallon of fuel used. Each car is driven 480 kilometers. How many more liters of fuel does car $A$ use than car $B$? (1 mile = 1.6 kilometers, 1 gallon = 3.8 liters)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "0.4",
+      ".4",
+      "2/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "38.4",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "38.4 liters is car $A$’s fuel use. The question asks for the difference."
+    },
+    {
+     "value": "-0.4",
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "The difference is subtracted in the wrong order; car $A$ uses more fuel."
+    }
+   ],
+   "solution": {
+    "key_idea": "The two rates are written in opposite forms: fuel per distance and distance per fuel. Find each car’s fuel for 480 km in liters.",
+    "steps": "The question asks for car $A$’s fuel minus car $B$’s fuel, in liters.<br>Car $A$:<br>$480 \\times \\frac{8}{100} = 38.4$ liters <span class=\"nt\">(liters per kilometer times kilometers)</span><br>Car $B$:<br>$\\frac{480}{1.6} = 300$ miles <span class=\"nt\">(change kilometers to miles)</span><br>$\\frac{300}{30} = 10$ gallons <span class=\"nt\">(miles divided by miles per gallon)</span><br>$10 \\times 3.8 = 38$ liters <span class=\"nt\">(change gallons to liters)</span><br>$38.4 - 38 = 0.4$ liter <span class=\"nt\">(difference)</span><br>Why the different steps? Car $A$ gives fuel for each distance, so multiply by the distance. Car $B$ gives distance for each gallon, so divide the distance by it.",
+    "check": "Car $B$: 38 liters for 480 km is $\\frac{38}{4.8} \\approx 7.92$ liters per 100 km, just under car $A$’s 8 ✓",
+    "be_careful": "One rate is fuel per distance and the other is distance per fuel. Use each the right way up.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P1-050",
+   "version": 1,
+   "skill": {
+    "code": "P1",
+    "domain": "psda",
+    "cb_skill": "Ratios, rates, proportional relationships, and units"
+   },
+   "level": "H+",
+   "concepts": [
+    "P1.C6"
+   ],
+   "family": "blueprint-area-sq-in-to-sq-yd",
+   "signature": "blueprint 1/4 in = 1 ft; region A sq in -> 16A sq ft -> 16A/9 sq yd; traps 4A/3 (linear), 16A (sq ft), 48A",
+   "abilities": [
+    "S",
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "On a blueprint, $\\frac{1}{4}$ inch represents 1 foot. A region on the blueprint has an area of $A$ square inches. Which expression gives the actual area of the region, in square yards? (1 yard = 3 feet)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\frac{4A}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses the length factors (4 feet per inch, 3 feet per yard) without squaring them."
+    },
+    {
+     "key": "B",
+     "text": "$16A$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$16A$ is the area in square feet. One more step changes square feet to square yards."
+    },
+    {
+     "key": "C",
+     "text": "$\\frac{16A}{9}$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$48A$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This multiplies by 3 to change square feet to square yards. A square yard is larger, so divide, and by 9."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Find what 1 square inch on the blueprint represents: a square that is 4 feet on each side.",
+    "steps": "The question asks for the real area in square yards.<br>1 inch on the blueprint $= 4$ feet <span class=\"nt\">($\\frac{1}{4}$ inch is 1 foot, so 1 inch is 4 feet)</span><br>1 square inch $= 4 \\times 4 = 16$ square feet <span class=\"nt\">(both sides of the square scale)</span><br>$A$ square inches $= 16A$ square feet <span class=\"nt\">(multiply by $A$)</span><br>1 square yard $= 3 \\times 3 = 9$ square feet <span class=\"nt\">(both sides of the square)</span><br>$\\frac{16A}{9}$ square yards <span class=\"nt\">(divide square feet by 9)</span>",
+    "check": "Try $A = 9$: a 3 in by 3 in square is 12 ft by 12 ft = 4 yd by 4 yd = 16 yd$^{2}$, and $\\frac{16(9)}{9} = 16$ ✓",
+    "be_careful": "Both conversions are for area, so both length factors are squared.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

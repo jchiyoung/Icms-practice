@@ -1,0 +1,3501 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "P4",
+ "skill": "Two-variable data: Models and scatterplots",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-P4-001",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C1"
+   ],
+   "family": "predict-from-equation",
+   "signature": "plant height y = 0.8x + 3.5, x = 20 days -> 19.5; traps 16 (intercept dropped), 70.8 (slope and intercept swapped), 20.625 (20 used as output)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A biologist measured the height of a plant every few days. The line of best fit for the data is $y = 0.8x + 3.5$, where $y$ is the height, in centimeters, and $x$ is the number of days since the plant was first measured. According to the line of best fit, what is the predicted height, in centimeters, of the plant 20 days after it was first measured?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "16",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This is $0.8(20)$ only. The model also adds the starting value 3.5."
+    },
+    {
+     "key": "B",
+     "text": "19.5",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "20.625",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This solves $0.8x + 3.5 = 20$, which treats 20 as a height. In the question, 20 is the number of days, the input."
+    },
+    {
+     "key": "D",
+     "text": "70.8",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This computes $3.5(20) + 0.8$, which swaps the slope and the intercept."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A line of best fit turns an input into a predicted output. Substitute the input for $x$ and evaluate.",
+    "steps": "The question asks for the predicted height when $x = 20$.<br>$y = 0.8(20) + 3.5$ <span class=\"nt\">(substitute 20 days for $x$)</span><br>$y = 16 + 3.5$ <span class=\"nt\">(multiply first)</span><br>$y = 19.5$ <span class=\"nt\">(add the intercept)</span><br>The model predicts a height of 19.5 centimeters.",
+    "check": "The plant starts near 3.5 cm and grows 0.8 cm per day, so 20 days adds 16 cm: $3.5 + 16 = 19.5$ ✓",
+    "be_careful": "20 is a number of days, so it goes in for $x$, not for $y$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-002",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C2"
+   ],
+   "family": "residual-from-equation",
+   "signature": "line y = 1.5x + 10, point (8, 25): predicted 22, actual minus predicted 3; traps -3 (order flipped), 22 (prediction), 25 (actual)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For a data set, the line of best fit is $y = 1.5x + 10$. One data point in the set is $(8, 25)$. What is the actual $y$-value minus the $y$-value predicted by the line of best fit for this data point?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "-3",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This is predicted minus actual, $22 - 25$. The question asks for actual minus predicted."
+    },
+    {
+     "key": "B",
+     "text": "3",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "22",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "22 is the predicted value itself. The question asks how far the actual value is from it."
+    },
+    {
+     "key": "D",
+     "text": "25",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "25 is the actual $y$-value given in the point, not a difference."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A residual is actual minus predicted. Find the prediction at the same $x$, then subtract it from the actual $y$.",
+    "steps": "The question asks for actual minus predicted at $x = 8$.<br>predicted $y = 1.5(8) + 10$ <span class=\"nt\">(substitute $x = 8$ into the line)</span><br>predicted $y = 12 + 10 = 22$ <span class=\"nt\">(evaluate)</span><br>actual $-$ predicted $= 25 - 22 = 3$ <span class=\"nt\">(the actual $y$-value is 25)</span>",
+    "check": "A positive difference means the point is above the line: 25 is above 22 ✓",
+    "be_careful": "Keep the order: actual first, then subtract the prediction.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-003",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C3"
+   ],
+   "family": "slope-meaning-units",
+   "signature": "monthly bill y = 0.12x + 45 (x kWh): 0.12 = increase in estimated bill per extra kWh; traps fixed charge, kWh per dollar, average price",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $y = 0.12x + 45$ models the monthly electricity bill $y$, in dollars, for a household that uses $x$ kilowatt-hours of electricity in a month. Which of the following is the best interpretation of $0.12$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The estimated increase in the bill, in dollars, per additional kilowatt-hour",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The estimated monthly bill, in dollars, when no electricity is used",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "That describes 45, the value of $y$ when $x = 0$, not the slope."
+    },
+    {
+     "key": "C",
+     "text": "The estimated number of kilowatt-hours used for each additional dollar of the bill",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This reverses the rate. The slope is dollars per kilowatt-hour, not kilowatt-hours per dollar."
+    },
+    {
+     "key": "D",
+     "text": "The estimated total monthly bill, in dollars, divided by the kilowatt-hours used",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Total divided by usage also includes the fixed 45 dollars, so it is not 0.12 in general."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "In $y = mx + b$, the slope $m$ is the change in $y$ for each increase of 1 in $x$, with units of $y$ per unit of $x$.",
+    "steps": "The question asks what 0.12 means.<br>0.12 multiplies $x$ <span class=\"nt\">(so it is the slope)</span><br>when $x$ increases by 1, $y$ increases by 0.12 <span class=\"nt\">(meaning of slope)</span><br>So each additional kilowatt-hour adds about 0.12 dollars (12 cents) to the estimated bill.",
+    "check": "$x = 100$ gives 57 and $x = 101$ gives 57.12, a difference of 0.12 ✓",
+    "be_careful": "The bill divided by usage is not the slope, because the 45 dollar part does not depend on usage.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-004",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C3"
+   ],
+   "family": "intercept-meaning",
+   "signature": "temperature y = -6.5x + 28 (x km altitude): 28 = estimated temperature at 0 km; traps decrease per km, altitude where 0 degrees, highest recorded",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A weather balloon recorded the air temperature at different altitudes. The equation $y = -6.5x + 28$ models the temperature $y$, in degrees Celsius, at an altitude of $x$ kilometers. Which of the following is the best interpretation of $28$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The estimated decrease in temperature, in degrees Celsius, for each kilometer of altitude",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "That describes 6.5, the slope, not 28."
+    },
+    {
+     "key": "B",
+     "text": "The estimated altitude, in kilometers, at which the temperature is 0 degrees Celsius",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "That is the $x$-intercept, $28 \\div 6.5 \\approx 4.3$ kilometers, not 28."
+    },
+    {
+     "key": "C",
+     "text": "The estimated temperature, in degrees Celsius, at an altitude of 0 kilometers",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The highest temperature, in degrees Celsius, that the balloon recorded",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "A model gives estimates. It does not say which temperature was actually recorded."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The constant term of a linear model is the predicted output when the input is 0.",
+    "steps": "The question asks what 28 means.<br>$y = -6.5(0) + 28 = 28$ <span class=\"nt\">(substitute $x = 0$)</span><br>$x = 0$ means an altitude of 0 kilometers <span class=\"nt\">(meaning of the input)</span><br>So 28 is the estimated temperature, in degrees Celsius, at an altitude of 0 kilometers.",
+    "check": "At $x = 1$ the model gives 21.5, which is 6.5 less than 28, so 6.5 is the slope and 28 is the starting value ✓",
+    "be_careful": "A model value is an estimate, not a recorded data value.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-005",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C4"
+   ],
+   "family": "describe-association",
+   "signature": "scatterplot falling along a line with little scatter -> strong negative linear; traps positive, nonlinear, none",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The scatterplot shows 10 data points.",
+   "stem_after_figure": "Which of the following best describes the association between $x$ and $y$?",
+   "figures": [
+    {
+     "id": "QB-P4-005-fig1",
+     "file": "figures/QB-P4-005-fig1.svg",
+     "alt": "A scatterplot of 10 points for x from 1 to 10. The y-values fall steadily from about 20 at x = 1 to about 2 at x = 10, staying close to a straight line."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "A strong positive linear association",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "The points fall from left to right, so the association is negative."
+    },
+    {
+     "key": "B",
+     "text": "A negative association that is clearly nonlinear",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "The points lie close to a straight line. There is no curve."
+    },
+    {
+     "key": "C",
+     "text": "No association between $x$ and $y$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "$y$ changes steadily as $x$ increases, so there is a clear association."
+    },
+    {
+     "key": "D",
+     "text": "A strong negative linear association",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Describe a scatterplot by direction (up or down), form (line or curve), and strength (how close the points are to the pattern).",
+    "steps": "The question asks for the best description.<br>as $x$ increases, $y$ decreases <span class=\"nt\">(direction: negative)</span><br>the points follow a straight path <span class=\"nt\">(form: linear)</span><br>the points stay close to that path <span class=\"nt\">(strength: strong)</span><br>So the association is strong, negative, and linear.",
+    "check": "From $x = 1$ to $x = 10$, $y$ falls by about 2 per step each time, a steady straight-line drop ✓",
+    "be_careful": "Negative refers to the direction of the trend, not to negative values of $y$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-006",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C1"
+   ],
+   "family": "predict-from-drawn-line",
+   "signature": "drawn line through (0,4),(10,24), x gridlines every 2: predict at 7 -> 18; traps 21 (data point at x = 7), 14 (2x only), 11 (one square per square)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The scatterplot shows 9 data points and a line of best fit for the data.",
+   "stem_after_figure": "What is the $y$-value predicted by the line of best fit when $x = 7$?",
+   "figures": [
+    {
+     "id": "QB-P4-006-fig1",
+     "file": "figures/QB-P4-006-fig1.svg",
+     "alt": "A scatterplot with x from 0 to 10, gridlines every 2, and y from 0 to 28, gridlines every 4. The line of best fit passes through (0, 4) and (10, 24). The data points are (1, 7), (2, 7), (3, 11), (4, 12), (5, 13), (7, 21), (8, 19), (9, 23), and (10, 23)."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "11",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D28",
+     "feedback": "This counts grid squares: the line rises one square per square, so 1 times 7 plus 4. The squares are 2 units wide and 4 units tall."
+    },
+    {
+     "key": "B",
+     "text": "14",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This is $2(7)$ only. The line starts at 4 when $x = 0$."
+    },
+    {
+     "key": "C",
+     "text": "18",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "21",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "21 is the data point at $x = 7$. The question asks for the value predicted by the line."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A prediction comes from the line, not from a data point. Find the equation of the line from two clear points on it.",
+    "steps": "The question asks for the line’s value at $x = 7$.<br>the line passes through $(0, 4)$ and $(10, 24)$ <span class=\"nt\">(read two grid points on the line)</span><br>slope $= \\frac{24 - 4}{10 - 0} = 2$ <span class=\"nt\">(rise over run)</span><br>$y = 2x + 4$ <span class=\"nt\">(the $y$-intercept is 4)</span><br>$y = 2(7) + 4 = 18$ <span class=\"nt\">(substitute $x = 7$)</span>",
+    "check": "On the graph, the line at $x = 7$ is halfway between 16 and 20 on the $y$-axis, which is 18 ✓",
+    "be_careful": "The point at $x = 7$ is above the line. The line, not the point, gives the prediction.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-007",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C5"
+   ],
+   "family": "table-exponential-model",
+   "signature": "table 0..3 -> 5,10,20,40 doubles: y = 5(2)^x; traps linear y = 5x + 5, swapped 2(5)^x, y = 10x + 5",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows four values of $x$ and their corresponding values of $y$.<br><table class=\"dt\"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td></tr><tr><th>$y$</th><td>5</td><td>10</td><td>20</td><td>40</td></tr></table>Which of the following equations models the relationship between $x$ and $y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = 5x + 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This fits only the first two rows. From 10 to 20 the increase is 10, not 5, so the change is not constant."
+    },
+    {
+     "key": "B",
+     "text": "$y = 5(2)^{x}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$y = 2(5)^{x}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This swaps the starting value and the factor. At $x = 0$ it gives 2, not 5."
+    },
+    {
+     "key": "D",
+     "text": "$y = 10x + 5$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This gives 15 at $x = 1$, not 10. The $y$-values double, so the model is not linear."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Equal steps in $x$ with a constant ratio in $y$ mean an exponential model $y = a(b)^x$: $a$ is the value at $x = 0$ and $b$ is the ratio.",
+    "steps": "The question asks for an equation that fits every row.<br>$\\frac{10}{5} = \\frac{20}{10} = \\frac{40}{20} = 2$ <span class=\"nt\">(each step in $x$ multiplies $y$ by 2)</span><br>$a = 5$ <span class=\"nt\">(the value at $x = 0$)</span><br>$y = 5(2)^{x}$ <span class=\"nt\">(starting value times the ratio to the power $x$)</span>",
+    "check": "$5(2)^3 = 5(8) = 40$ ✓",
+    "be_careful": "Check every row. A linear rule can match two rows and still fail the others.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-008",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C2"
+   ],
+   "family": "residual-from-graph",
+   "signature": "drawn line y = -0.5x + 12, point (6, 11): predicted 9, actual minus predicted 2; traps -2, 11",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The scatterplot shows 8 data points and the line of best fit $y = -0.5x + 12$.",
+   "stem_after_figure": "For the data point with $x = 6$, what is the actual $y$-value minus the $y$-value predicted by the line of best fit?",
+   "figures": [
+    {
+     "id": "QB-P4-008-fig1",
+     "file": "figures/QB-P4-008-fig1.svg",
+     "alt": "A scatterplot with x from 0 to 13 and y from 0 to 14, gridlines every 1. The line y = -0.5x + 12 is drawn. The data points are (1, 12), (2, 10), (4, 10), (6, 11), (8, 7), (9, 8), (10, 6), and (12, 5)."
+    }
+   ],
+   "answer": {
+    "spr": {
+     "values": [
+      "2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "-2",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Predicted minus actual. The order is actual minus predicted."
+    },
+    {
+     "value": "11",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "The actual value itself, not the gap from the line."
+    }
+   ],
+   "solution": {
+    "key_idea": "Actual minus predicted is the vertical gap from the line up to the point. It is positive when the point is above the line.",
+    "steps": "The question asks for actual minus predicted at $x = 6$.<br>actual $y = 11$ <span class=\"nt\">(read the data point at $x = 6$)</span><br>predicted $y = -0.5(6) + 12 = 9$ <span class=\"nt\">(substitute $x = 6$ into the line)</span><br>$11 - 9 = 2$ <span class=\"nt\">(actual minus predicted)</span>",
+    "check": "The point at $x = 6$ is 2 grid units above the line ✓",
+    "be_careful": "The point is above the line, so the answer must be positive.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-009",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C3"
+   ],
+   "family": "slope-thousands-multi-unit",
+   "signature": "sales y = 3.2x + 40, both in thousands of dollars; ad spending up 2,500 dollars -> sales up 8,000 dollars; traps 8, 3.2",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A store models its monthly sales with the equation $y = 3.2x + 40$, where $y$ is the monthly sales, in thousands of dollars, and $x$ is the monthly advertising spending, in thousands of dollars. According to the model, by how many dollars do the monthly sales increase when the advertising spending increases by $\\$2,500$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8000"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "8",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the increase in thousands of dollars. The question asks for dollars."
+    },
+    {
+     "value": "3.2",
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This is the change for an increase of 1 thousand dollars, not 2.5 thousand."
+    }
+   ],
+   "solution": {
+    "key_idea": "Change in output equals slope times change in input. Convert the input into the model’s units first, then convert the answer back.",
+    "steps": "The question asks for the increase in sales, in dollars.<br>$\\$2,500 = 2.5$ thousand dollars <span class=\"nt\">(the model measures $x$ in thousands)</span><br>increase in $y = 3.2(2.5) = 8$ <span class=\"nt\">(slope times change in $x$)</span><br>8 thousand dollars $= \\$8,000$ <span class=\"nt\">(convert back to dollars)</span>",
+    "check": "$x = 10$ gives 72 and $x = 12.5$ gives 80, and $80 - 72 = 8$ thousand ✓",
+    "be_careful": "Both $x$ and $y$ are in thousands, so 2,500 dollars is 2.5, and the answer 8 means 8,000 dollars.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-010",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C1"
+   ],
+   "family": "inverse-prediction",
+   "signature": "y = 2.5x + 12.5, predicted y = 50 -> x = 15; traps 137.5 (50 plugged in for x), 20 (intercept ignored), 37.5 (stopped midway)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For a data set, the line of best fit is $y = 2.5x + 12.5$. For what value of $x$ does the line of best fit predict a $y$-value of 50?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "15",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "20",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This divides 50 by 2.5 without first taking away the intercept 12.5."
+    },
+    {
+     "key": "C",
+     "text": "37.5",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This is $50 - 12.5$, which stops before dividing by 2.5."
+    },
+    {
+     "key": "D",
+     "text": "137.5",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This substitutes 50 for $x$. The question gives 50 as the $y$-value."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "To find the input for a given prediction, set the model equal to the output and solve for $x$.",
+    "steps": "The question asks for $x$ when the predicted $y$ is 50.<br>$2.5x + 12.5 = 50$ <span class=\"nt\">(set the model equal to 50)</span><br>$2.5x = 37.5$ <span class=\"nt\">(subtract 12.5 from both sides)</span><br>$x = 15$ <span class=\"nt\">(divide both sides by 2.5)</span>",
+    "check": "$2.5(15) + 12.5 = 37.5 + 12.5 = 50$ ✓",
+    "be_careful": "50 is an output, so it replaces $y$, not $x$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-011",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C2"
+   ],
+   "family": "largest-negative-residual",
+   "signature": "line y = 4x + 6, four points; residuals +2, -5, +3, -4; farthest below = (5, 21); traps (9, 38) (-4), (7, 37) (largest positive), (2, 16)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For a data set, the line of best fit is $y = 4x + 6$. Which of the following data points from the set lies farthest below the line of best fit?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$(2, 16)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Its residual is $16 - 14 = 2$, so it lies above the line."
+    },
+    {
+     "key": "B",
+     "text": "$(5, 21)$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$(7, 37)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Its residual is $37 - 34 = 3$, so it lies above the line. It is the farthest above, not below."
+    },
+    {
+     "key": "D",
+     "text": "$(9, 38)$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "It is below the line, but only by $42 - 38 = 4$, less than 5."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "\"Farthest below the line\" means the most negative actual minus predicted.",
+    "steps": "The question asks which point has the most negative residual.<br>$(2, 16)$: $16 - [4(2) + 6] = 16 - 14 = 2$ <span class=\"nt\">(actual minus predicted)</span><br>$(5, 21)$: $21 - 26 = -5$ <span class=\"nt\">(predicted $4(5) + 6 = 26$)</span><br>$(7, 37)$: $37 - 34 = 3$ <span class=\"nt\">(predicted $4(7) + 6 = 34$)</span><br>$(9, 38)$: $38 - 42 = -4$ <span class=\"nt\">(predicted $4(9) + 6 = 42$)</span><br>The most negative residual is $-5$, at $(5, 21)$.",
+    "check": "Only $(5, 21)$ and $(9, 38)$ are below the line, and 5 is more than 4 ✓",
+    "be_careful": "Compare each point with its own prediction, not the $y$-values with each other.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-012",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C5"
+   ],
+   "family": "decay-factor-meaning",
+   "signature": "phone value y = 800(0.85)^x: each year 85% of previous; traps decreases by 0.85 dollars, decreases by 85%, 800 decrease",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $y = 800(0.85)^{x}$ models the estimated value $y$, in dollars, of a phone $x$ years after it was bought. Which of the following is the best interpretation of $0.85$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Each year, the estimated value decreases by 85% of its value the year before.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "A factor of 0.85 keeps 85%, so the value decreases by 15% each year."
+    },
+    {
+     "key": "B",
+     "text": "Each year, the estimated value decreases by $\\$0.85$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "A fixed dollar decrease would be linear. Here the value is multiplied by 0.85 each year."
+    },
+    {
+     "key": "C",
+     "text": "The estimated value of the phone when it was bought is $\\$0.85$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "The value when $x = 0$ is 800 dollars, the number in front."
+    },
+    {
+     "key": "D",
+     "text": "Each year, the estimated value is 85% of its value the year before.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "In $y = a(b)^x$, $b$ is the factor for each 1-unit step. If $b < 1$, each step keeps the fraction $b$ of the previous value.",
+    "steps": "The question asks what 0.85 means.<br>from $x$ to $x + 1$, $y$ is multiplied by 0.85 <span class=\"nt\">(one more factor of 0.85)</span><br>$0.85 = 85\\%$ <span class=\"nt\">(the value kept)</span><br>So each year the estimated value is 85% of the value one year earlier (a 15% decrease).",
+    "check": "Year 0: 800. Year 1: 680, and $\\frac{680}{800} = 0.85$ ✓",
+    "be_careful": "Multiplying by 0.85 means a 15% decrease, not an 85% decrease.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-013",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C2"
+   ],
+   "family": "count-underestimates",
+   "signature": "line y = x + 2 with 9 points: 5 above, 3 below, 1 on; \"underestimates\" = above -> 5; traps 3 (below), 6 (on-line counted), 9",
+   "abilities": [
+    "G",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The scatterplot shows 9 data points and a line of best fit for the data.",
+   "stem_after_figure": "For how many of the data points does the line of best fit underestimate the actual $y$-value?",
+   "figures": [
+    {
+     "id": "QB-P4-013-fig1",
+     "file": "figures/QB-P4-013-fig1.svg",
+     "alt": "A scatterplot with x and y from 0 to about 14, gridlines every 1. The line y = x + 2 is drawn. The data points are (1, 4), (2, 3), (3, 6), (4, 5), (5, 7), (6, 9), (7, 8), (8, 11), and (9, 13)."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "3",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This counts the points below the line. There the line overestimates, because the prediction is greater than the actual value."
+    },
+    {
+     "key": "B",
+     "text": "5",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "6",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This also counts the point on the line, where the prediction equals the actual value."
+    },
+    {
+     "key": "D",
+     "text": "9",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This is the number of data points, not the number the line underestimates."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The line underestimates when its prediction is less than the actual value, so the point is above the line.",
+    "steps": "The question asks how many points are above the line.<br>underestimate means predicted $<$ actual <span class=\"nt\">(point above the line)</span><br>above: $(1, 4), (3, 6), (6, 9), (8, 11), (9, 13)$ <span class=\"nt\">(each is higher than $x + 2$)</span><br>on the line: $(5, 7)$ <span class=\"nt\">(not an underestimate)</span><br>So the line underestimates for 5 points.",
+    "check": "$5$ above, $3$ below, and $1$ on the line make $9$ points ✓",
+    "be_careful": "Underestimate means the prediction is too low, so the point sits above the line.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-014",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C3"
+   ],
+   "family": "slope-from-two-points-meaning",
+   "signature": "line of best fit through (2, 110) and (8, 80), water in tank (gallons) vs hours: slope -5 -> decreases 5 gallons per hour; traps 30 per hour, increase 5, 0.2",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A line of best fit models the amount of water $y$, in gallons, in a tank $x$ hours after a valve was opened. The line passes through the points $(2, 110)$ and $(8, 80)$. Which of the following is the best interpretation of the slope of the line?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The amount of water is predicted to decrease by 5 gallons each hour.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The amount of water is predicted to decrease by 30 gallons each hour.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "30 gallons is the decrease over 6 hours. Divide by the 6 hours to get the hourly rate."
+    },
+    {
+     "key": "C",
+     "text": "The amount of water is predicted to increase by 5 gallons each hour.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "The water goes from 110 to 80 gallons, so it decreases."
+    },
+    {
+     "key": "D",
+     "text": "The amount of water is predicted to decrease by 0.2 gallon each hour.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "0.2 is hours per gallon, the reciprocal of the rate."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The slope of a model is the change in the output divided by the change in the input, with units of output per unit of input.",
+    "steps": "The question asks what the slope means.<br>change in water $= 80 - 110 = -30$ gallons <span class=\"nt\">(output change)</span><br>change in time $= 8 - 2 = 6$ hours <span class=\"nt\">(input change)</span><br>slope $= \\frac{-30}{6} = -5$ <span class=\"nt\">(gallons per hour)</span><br>So the water is predicted to decrease by 5 gallons each hour.",
+    "check": "From $x = 2$ to $x = 8$: $110 - 5(6) = 80$ ✓",
+    "be_careful": "A negative slope means a decrease. Divide by the time gap, not just subtract.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-015",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C6"
+   ],
+   "family": "scale-y-model",
+   "signature": "line y = 2x + 7; every y tripled -> y = 6x + 21; traps 6x + 7 (intercept unscaled), 2x + 21 (slope unscaled), 2x + 10 (3 added)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The line of best fit for a data set is $y = 2x + 7$. A new data set is made by multiplying every $y$-value in the original data set by 3, while the $x$-values stay the same. Which of the following is the line of best fit for the new data set?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = 6x + 7$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This triples only the slope. Every predicted value triples, so the intercept triples too."
+    },
+    {
+     "key": "B",
+     "text": "$y = 2x + 21$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This triples only the intercept. The rise for each step in $x$ also triples."
+    },
+    {
+     "key": "C",
+     "text": "$y = 6x + 21$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$y = 2x + 10$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 3 to the intercept. The $y$-values were multiplied by 3, not increased by 3."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Multiplying every $y$-value by 3 stretches the whole picture vertically, so every predicted value, and both the slope and the intercept, triple.",
+    "steps": "The question asks for the new line.<br>new predictions $= 3(2x + 7)$ <span class=\"nt\">(every $y$ is multiplied by 3)</span><br>$= 6x + 21$ <span class=\"nt\">(distribute the 3)</span><br>So the new line of best fit is $y = 6x + 21$.",
+    "check": "At $x = 1$: old prediction 9, new prediction $6 + 21 = 27 = 3(9)$ ✓",
+    "be_careful": "Scaling the $y$-values scales the slope and the intercept together.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-016",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C2"
+   ],
+   "family": "below-line-meaning",
+   "signature": "point below line of best fit -> actual less than predicted; traps actual greater, residual positive, outlier claim",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A scatterplot shows the weights and the prices of 30 used cars, along with a line of best fit. The data point for one car lies below the line of best fit. Which of the following must be true for this car?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Its actual price is greater than the price predicted by the line of best fit.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Below the line means the actual value is lower than the prediction."
+    },
+    {
+     "key": "B",
+     "text": "Its actual price is less than the price predicted by the line of best fit.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Its actual price minus its predicted price is a positive number.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Actual minus predicted is negative for a point below the line."
+    },
+    {
+     "key": "D",
+     "text": "Its price is the lowest of all 30 cars.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Being below the line compares the car with its own prediction, not with the other cars."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The line gives the predicted value at each $x$. A point below the line has an actual value smaller than its prediction.",
+    "steps": "The question asks what must be true for a point below the line.<br>the line at this weight gives the predicted price <span class=\"nt\">(meaning of the line)</span><br>the point is lower than the line <span class=\"nt\">(given)</span><br>actual price $<$ predicted price <span class=\"nt\">(lower means less)</span><br>So the actual price is less than the predicted price, and actual minus predicted is negative.",
+    "check": "Think of a point 2 units below the line: actual $=$ predicted $- 2$, which is less ✓",
+    "be_careful": "\"Below the line\" is about this car’s own prediction, not about the other cars.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-017",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C5"
+   ],
+   "family": "exponential-model-predict",
+   "signature": "bacteria y = 200(1.5)^x, x = 2 -> 450; traps 600 (linear 200 times 1.5 times 2), 300 (one step)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The equation $y = 200(1.5)^{x}$ models the number of bacteria $y$ in a sample $x$ hours after the sample was first observed. According to the model, how many bacteria are in the sample 2 hours after it was first observed?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "450"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "600",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies $200 \\times 1.5 \\times 2$, treating the exponent as a factor."
+    },
+    {
+     "value": "300",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This is only 1 hour of growth."
+    }
+   ],
+   "solution": {
+    "key_idea": "In an exponential model, each hour multiplies the amount by the factor. Two hours means two factors of 1.5.",
+    "steps": "The question asks for $y$ when $x = 2$.<br>$y = 200(1.5)^{2}$ <span class=\"nt\">(substitute $x = 2$)</span><br>$x = 2$ means 2 hours after the first observation <span class=\"nt\">(meaning of the input)</span><br>$(1.5)^2 = 1.5 \\times 1.5 = 2.25$ <span class=\"nt\">(evaluate the power first, before multiplying by 200)</span><br>$y = 200(2.25) = 450$ <span class=\"nt\">(multiply)</span><br>So the model predicts 450 bacteria after 2 hours.",
+    "check": "Hour 1: $200(1.5) = 300$. Hour 2: $300(1.5) = 450$ ✓",
+    "be_careful": "The exponent applies to 1.5 only, not to $200 \\times 1.5$, and not as $1.5 \\times 2$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-018",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C5",
+    "P4.C4"
+   ],
+   "family": "choose-model-type-graph",
+   "signature": "scatterplot rising more steeply each step (ratio about 1.5) -> exponential growth; traps linear increasing, exponential decay, linear decreasing",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The scatterplot shows 9 data points.",
+   "stem_after_figure": "Which of the following types of models is most appropriate for the data?",
+   "figures": [
+    {
+     "id": "QB-P4-018-fig1",
+     "file": "figures/QB-P4-018-fig1.svg",
+     "alt": "A scatterplot of 9 points for x from 0 to 8 and y from 0 to 56. The y-values are about 2, 3, 4.4, 6.9, 10, 15.4, 22.5, 34.6, and 51, rising more steeply each step."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "A linear model with a positive slope",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "The increases get larger at each step (about 1, then 1.3, 2.5, and so on up to 16), so a straight line does not fit."
+    },
+    {
+     "key": "B",
+     "text": "An exponential decay model",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Decay models decrease. These values increase."
+    },
+    {
+     "key": "C",
+     "text": "An exponential growth model",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "A linear model with a negative slope",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "The values increase, and the pattern is curved."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "When the values grow by about the same factor each step, so the jumps keep getting bigger, an exponential growth model fits.",
+    "steps": "The question asks which model type fits.<br>$y$ increases as $x$ increases <span class=\"nt\">(growth, not decay)</span><br>the increases get bigger each step <span class=\"nt\">(curved, not a line)</span><br>$\\frac{3.1}{2} \\approx 1.5$, $\\frac{10}{6.9} \\approx 1.4$, $\\frac{51}{34.6} \\approx 1.5$ <span class=\"nt\">(about the same ratio each step)</span><br>A roughly constant ratio means exponential growth.",
+    "check": "A line through the first and last points would lie far above the middle points, so the data are not linear ✓",
+    "be_careful": "Increasing data can still be nonlinear. Look at whether the jumps grow.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-019",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C1"
+   ],
+   "family": "extrapolate-from-change",
+   "signature": "line predicts +12 per +5 in x, 40 at x = 10; predict at x = 25 -> 76; trap 52 (one step only), 100",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For a data set, the line of best fit predicts a $y$-value of 40 when $x = 10$. According to the line of best fit, each increase of 5 in $x$ increases the predicted $y$-value by 12. What is the predicted $y$-value when $x = 25$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "76"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "52",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "Adds 12 only once, as if 25 were one step of 5 from 10."
+    },
+    {
+     "value": "100",
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Uses five steps of 12 from $x = 0$ to $x = 25$, then adds 40. The known point is at $x = 10$, not 0."
+    }
+   ],
+   "solution": {
+    "key_idea": "A line changes by the same amount for each equal step in $x$. Count the steps from the known point, or use the slope.",
+    "steps": "The question asks for the prediction at $x = 25$.<br>from $x = 10$ to $x = 25$ is an increase of 15 <span class=\"nt\">(the change in $x$)</span><br>$15 = 3(5)$ <span class=\"nt\">(three steps of 5)</span><br>change in $y = 3(12) = 36$ <span class=\"nt\">(each step adds 12)</span><br>$40 + 36 = 76$ <span class=\"nt\">(start from the known prediction)</span>",
+    "check": "Slope $\\frac{12}{5} = 2.4$, and $40 + 2.4(15) = 40 + 36 = 76$ ✓",
+    "be_careful": "From 10 to 25 is three steps of 5, not one.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-020",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "M",
+   "concepts": [
+    "P4.C3"
+   ],
+   "family": "slope-thousands-people",
+   "signature": "population y = 1.6x + 24 (y in thousands, x years since 2000): 1.6 = about 1,600 more people per year; traps 1.6 people, 1,600 per decade, 1,600 in 2000",
+   "abilities": [
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $y = 1.6x + 24$ models the population $y$, in thousands of people, of a town $x$ years after 2000. Which of the following is the best interpretation of $1.6$ in this context?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The population is predicted to increase by about 1.6 people each year.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$y$ is in thousands of people, so 1.6 means 1,600 people."
+    },
+    {
+     "key": "B",
+     "text": "The population is predicted to increase by about 1,600 people every 10 years.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The slope is per 1 year, so 10 years would add about 16,000 people."
+    },
+    {
+     "key": "C",
+     "text": "The population in the year 2000 was about 1,600 people.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "The population in 2000 is the value at $x = 0$, which is 24 thousand people."
+    },
+    {
+     "key": "D",
+     "text": "The population is predicted to increase by about 1,600 people each year.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The slope is the change in $y$ for each increase of 1 in $x$, in the units of $y$. Here $y$ is in thousands.",
+    "steps": "The question asks what 1.6 means.<br>1.6 is the slope <span class=\"nt\">(it multiplies $x$)</span><br>when $x$ increases by 1 (one year), $y$ increases by 1.6 <span class=\"nt\">(meaning of slope)</span><br>1.6 thousand $= 1,600$ people <span class=\"nt\">(units of $y$)</span><br>So the population is predicted to increase by about 1,600 people each year.",
+    "check": "$x = 0$ gives 24 thousand and $x = 1$ gives 25.6 thousand, a change of 1,600 people ✓",
+    "be_careful": "Read the units of $y$: \"in thousands\" turns 1.6 into 1,600.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-021",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C1",
+    "P4.C3"
+   ],
+   "family": "hidden-intercept-axes",
+   "signature": "axes start at x = 20, y = 100; line through (20,110) and (40,150): slope 2, intercept 70; traps 110 (value at axis corner), 100 (corner label), 90 (110 - 20)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The scatterplot shows 9 data points and a line of best fit. Note that the axes do not start at 0.",
+   "stem_after_figure": "What is the $y$-intercept of the line of best fit?",
+   "figures": [
+    {
+     "id": "QB-P4-021-fig1",
+     "file": "figures/QB-P4-021-fig1.svg",
+     "alt": "A scatterplot with x from 20 to 50, gridlines every 5, and y from 100 to 170, gridlines every 10; the axes cross at (20, 100). The line of best fit passes through (20, 110) and (40, 150). Nine data points lie near the line."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "70",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "90",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This subtracts 20 from 110. Going back 20 units in $x$ lowers $y$ by $2(20) = 40$, not 20."
+    },
+    {
+     "key": "C",
+     "text": "100",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D28",
+     "feedback": "100 is the lowest label on the $y$-axis, where the graph happens to start."
+    },
+    {
+     "key": "D",
+     "text": "110",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "110 is the line’s value at $x = 20$, where the drawn axes cross. The $y$-intercept is the value at $x = 0$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The $y$-intercept is the value at $x = 0$, which can be off the drawn graph. Find the slope, then extend the line back to $x = 0$.",
+    "steps": "The question asks for the line’s $y$-value at $x = 0$.<br>the line passes through $(20, 110)$ and $(40, 150)$ <span class=\"nt\">(read two grid points)</span><br>slope $= \\frac{150 - 110}{40 - 20} = \\frac{40}{20} = 2$ <span class=\"nt\">(rise over run)</span><br>from $x = 20$ back to $x = 0$: $y$ drops by $2(20) = 40$ <span class=\"nt\">(slope times change in $x$)</span><br>$110 - 40 = 70$ <span class=\"nt\">(value at $x = 0$)</span><br>So the line is $y = 2x + 70$, and the $y$-intercept is 70.",
+    "check": "$2(40) + 70 = 150$ ✓",
+    "be_careful": "Where the axes cross is $(20, 100)$, not the origin. The intercept is off the picture.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-022",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C2"
+   ],
+   "family": "reverse-residual-find-x",
+   "signature": "y = 0.8x + 6, actual 42, residual -4 -> predicted 46 -> x = 50; traps 40 (residual sign), 45 (residual ignored)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For a data set, the line of best fit is $y = 0.8x + 6$. One data point has a $y$-value of 42, and for this point the actual $y$-value minus the predicted $y$-value is $-4$. What is the $x$-value of this data point?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "50"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "40",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Uses predicted $= 42 - 4 = 38$, which reverses the sign of the residual."
+    },
+    {
+     "value": "45",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Solves $0.8x + 6 = 42$, which ignores the residual."
+    }
+   ],
+   "solution": {
+    "key_idea": "Actual minus predicted is $-4$, so the prediction is 4 more than the actual value. Find the prediction, then solve the line for $x$.",
+    "steps": "The question asks for the $x$-value of the point.<br>$42 - \\text{predicted} = -4$ <span class=\"nt\">(actual minus predicted)</span><br>predicted $= 46$ <span class=\"nt\">(add 4 to 42)</span><br>$0.8x + 6 = 46$ <span class=\"nt\">(the line gives the prediction at this $x$)</span><br>$0.8x = 40$ <span class=\"nt\">(subtract 6)</span><br>$x = 50$ <span class=\"nt\">(divide by 0.8)</span><br>A negative residual means the point is below the line, so the prediction is larger than 42.",
+    "check": "At $x = 50$: predicted $0.8(50) + 6 = 46$, and $42 - 46 = -4$ ✓",
+    "be_careful": "A residual of $-4$ makes the prediction 46, not 38.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-023",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C6",
+    "P4.C3"
+   ],
+   "family": "shift-and-scale-best-fit",
+   "signature": "killer hp-psda12-1: line of best fit y = 1.8x + 12; add 5 to every x, double every y -> Y = 2(1.8(X - 5) + 12) = 3.6X + 6; traps +24 (shift ignored), -6 (intercept not doubled), +42 (shift wrong way)",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For a data set, the line of best fit is $y = 1.8x + 12$. A new data set is formed by adding 5 to every $x$-value and doubling every $y$-value. Which equation is the line of best fit for the new data set?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = 3.6x + 6$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$y = 3.6x - 6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This doubles the slope but not the intercept 12. Every $y$-value doubles, so the whole expression $1.8(x - 5) + 12$ doubles."
+    },
+    {
+     "key": "C",
+     "text": "$y = 3.6x + 24$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This doubles every $y$-value but ignores the shift of 5 in $x$."
+    },
+    {
+     "key": "D",
+     "text": "$y = 3.6x + 42$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This replaces $x$ by $x + 5$. A new $x$-value is 5 more than an old one, so the old value is $x - 5$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Each old point $(x, y)$ becomes $(x + 5, 2y)$. Write the old line in terms of the new coordinates.",
+    "steps": "The question asks for the line of best fit after the change.<br>new point: $X = x + 5$, $Y = 2y$ <span class=\"nt\">(what happens to each point)</span><br>$x = X - 5$ and $y = \\frac{Y}{2}$ <span class=\"nt\">(old values in terms of new ones)</span><br>$\\frac{Y}{2} = 1.8(X - 5) + 12$ <span class=\"nt\">(substitute into the old line)</span><br>$Y = 3.6(X - 5) + 24 = 3.6X + 6$ <span class=\"nt\">(multiply by 2 and simplify)</span><br>Shifting and doubling every point moves the line of best fit in the same way, so the new line is $y = 3.6x + 6$.",
+    "check": "Old point $(0, 12)$ on the line becomes $(5, 24)$, and $3.6(5) + 6 = 24$ ✓",
+    "be_careful": "Undo the shift on $x$ (use $x - 5$) and double the whole right side, intercept included.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-024",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C6"
+   ],
+   "family": "shift-time-origin",
+   "signature": "y = 3.4x + 52, x = years since 2015; rewrite with u = years since 2010 (x = u - 5) -> y = 3.4u + 35; traps +69 (shift reversed), +52 (shift ignored), +47",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The equation $y = 3.4x + 52$ models the number of members $y$ of a club, where $x$ is the number of years since 2015. Which equation models the number of members $y$, where $u$ is the number of years since 2010?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = 3.4u + 69$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This uses $x = u + 5$. A year is 5 more years since 2010 than since 2015, so $x = u - 5$."
+    },
+    {
+     "key": "B",
+     "text": "$y = 3.4u + 52$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "This ignores the change of starting year. 52 is the model value for 2015, not for 2010."
+    },
+    {
+     "key": "C",
+     "text": "$y = 3.4u + 47$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This subtracts 5 from the intercept. Moving back 5 years lowers the value by $3.4(5) = 17$."
+    },
+    {
+     "key": "D",
+     "text": "$y = 3.4u + 35$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Changing the starting year shifts the input. Write the old input in terms of the new one and substitute. The slope stays the same.",
+    "steps": "The question asks for the model with years since 2010.<br>the year 2015 is $x = 0$ and $u = 5$ <span class=\"nt\">(compare the two counts)</span><br>$x = u - 5$ <span class=\"nt\">(years since 2015 are 5 fewer)</span><br>$y = 3.4(u - 5) + 52$ <span class=\"nt\">(substitute)</span><br>$y = 3.4u - 17 + 52 = 3.4u + 35$ <span class=\"nt\">(distribute and combine)</span><br>The slope 3.4 is unchanged, and the intercept is now the model value for 2010.",
+    "check": "For 2020: old $x = 5$ gives 69, new $u = 10$ gives $34 + 35 = 69$ ✓",
+    "be_careful": "Moving the start earlier makes the new input larger, so $x = u - 5$, not $u + 5$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-025",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C3",
+    "P4.C1"
+   ],
+   "family": "slope-rescaled-ticks",
+   "signature": "x gridlines every 5, y every 8; line through (5,24),(25,56): slope 1.6; traps 1 (squares), 32 (rise only)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The scatterplot shows 9 data points and a line of best fit for the data.",
+   "stem_after_figure": "According to the line of best fit, by how much does the predicted $y$-value increase for each increase of 1 in $x$?",
+   "figures": [
+    {
+     "id": "QB-P4-025-fig1",
+     "file": "figures/QB-P4-025-fig1.svg",
+     "alt": "A scatterplot with x from 0 to 30, gridlines every 5, and y from 0 to 64, gridlines every 8. The line of best fit passes through (5, 24) and (25, 56). Nine data points lie near the line."
+    }
+   ],
+   "answer": {
+    "spr": {
+     "values": [
+      "1.6",
+      "8/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1",
+     "error_type": "slip",
+     "misconception": "D28",
+     "feedback": "Counts squares: 4 up for 4 across. The squares are 8 units tall and 5 units wide."
+    },
+    {
+     "value": "32",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This is the rise only, from $x = 5$ to $x = 25$, not the change per 1 unit of $x$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The predicted change per 1 unit of $x$ is the slope, measured in axis units, not in grid squares. The two axes have different scales here.",
+    "steps": "The question asks for the slope of the line.<br>the line passes through $(5, 24)$ and $(25, 56)$ <span class=\"nt\">(read two grid crossings)</span><br>rise $= 56 - 24 = 32$ <span class=\"nt\">(change in $y$)</span><br>run $= 25 - 5 = 20$ <span class=\"nt\">(change in $x$)</span><br>slope $= \\frac{32}{20} = 1.6$ <span class=\"nt\">(per 1 unit of $x$)</span><br>In grid squares the line rises 4 squares over 4 squares, but each $x$-square is 5 units and each $y$-square is 8 units.",
+    "check": "From $x = 5$ to $x = 10$: $24 + 1.6(5) = 32$, which matches the line crossing the gridline $y = 32$ at $x = 10$ ✓",
+    "be_careful": "Grid squares are not units. Read the labels on both axes.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-026",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C7"
+   ],
+   "family": "linear-vs-exponential-which-x",
+   "signature": "A: y = 50 + 8x, B: y = 50(1.12)^x; among 3,4,5,6 only x = 6 gives B > A (98.69 > 98); trap \"exponential always greater\"",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two models are used to predict the number of visitors $y$ to a website $x$ weeks after it launched. Model A is $y = 50 + 8x$, and model B is $y = 50(1.12)^{x}$. For which of the following values of $x$ is the prediction from model B greater than the prediction from model A?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "3",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Model B gives about 70 and model A gives 74. An exponential model starts below a line here and passes it later."
+    },
+    {
+     "key": "B",
+     "text": "4",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "Model B gives about 78.7 and model A gives 82, so model A is still greater."
+    },
+    {
+     "key": "C",
+     "text": "5",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "Model B gives about 88.1 and model A gives 90, still less. The crossing comes just after $x = 5$."
+    },
+    {
+     "key": "D",
+     "text": "6",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Both models start at 50. The line adds 8 each week, while the exponential model adds 12% of a growing amount, so it starts slower and later overtakes the line.",
+    "steps": "The question asks at which listed week model B is greater.<br>$x = 3$: A $= 74$, B $= 50(1.12)^3 \\approx 70.2$ <span class=\"nt\">(A greater)</span><br>$x = 4$: A $= 82$, B $\\approx 78.7$ <span class=\"nt\">(A greater)</span><br>$x = 5$: A $= 90$, B $\\approx 88.1$ <span class=\"nt\">(A greater)</span><br>$x = 6$: A $= 98$, B $\\approx 98.7$ <span class=\"nt\">(B greater)</span><br>Only $x = 6$ gives a larger prediction from model B.",
+    "check": "$(1.12)^6 \\approx 1.974$ and $50(1.974) \\approx 98.7 > 98$ ✓",
+    "be_careful": "Exponential growth does not beat linear growth at every input. At first, 12% of 50 is only 6, less than 8.",
+    "desmos": "Desmos strongly recommended: graph both models and look where the curve rises above the line (just after $x = 5$).",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-027",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C6"
+   ],
+   "family": "scale-both-variables",
+   "signature": "y = 6x + 40 (x hours, y dollars); X = half-hours (= 2x), Y = 90% of y -> Y = 2.7X + 36; traps 10.8X + 36, 2.7X + 40, 5.4X + 36",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For a data set, the line of best fit $y = 6x + 40$ relates the cost $y$, in dollars, of a repair job to the time $x$, in hours, the job takes. A shop describes each job by the number of half-hours $X$ it takes, and charges a discounted cost $Y$ that is 90% of $y$. Which equation gives $Y$ in terms of $X$ based on this line of best fit?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$Y = 2.7X + 36$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$Y = 10.8X + 36$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This uses $x = 2X$. A job of $X$ half-hours takes $\\frac{X}{2}$ hours, so the slope is halved, not doubled."
+    },
+    {
+     "key": "C",
+     "text": "$Y = 2.7X + 40$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "The 90% applies to the whole cost, including the 40 dollars."
+    },
+    {
+     "key": "D",
+     "text": "$Y = 5.4X + 36$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This applies the 90% but forgets to change hours to half-hours."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Change each variable separately: write the old input in terms of the new one, substitute, then apply the change to the output.",
+    "steps": "The question asks for $Y$ in terms of $X$.<br>$X$ half-hours $= \\frac{X}{2}$ hours, so $x = \\frac{X}{2}$ <span class=\"nt\">(convert the input)</span><br>$y = 6\\left(\\frac{X}{2}\\right) + 40 = 3X + 40$ <span class=\"nt\">(substitute)</span><br>$Y = 0.9y = 0.9(3X + 40)$ <span class=\"nt\">(90% of the cost)</span><br>$Y = 2.7X + 36$ <span class=\"nt\">(distribute 0.9)</span><br>The slope is halved by the new time unit and then multiplied by 0.9; the intercept is only multiplied by 0.9.",
+    "check": "A 2-hour job: $y = 52$, $Y = 0.9(52) = 46.8$. With $X = 4$: $2.7(4) + 36 = 46.8$ ✓",
+    "be_careful": "More half-hours than hours for the same job means a smaller rate per half-hour.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-028",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C5"
+   ],
+   "family": "decay-curve-equation",
+   "signature": "curve through (1,48),(2,24),(3,12),(4,6),(5,3), no point at x = 0 -> back-solve a = 96; traps 48(0.5)^x (first plotted value as a), 72 - 24x (line through two points), 3(2)^x (read right to left)",
+   "abilities": [
+    "G"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The scatterplot shows 5 data points, which all lie on the graph of an exponential model.",
+   "stem_after_figure": "Which equation could define this model?",
+   "figures": [
+    {
+     "id": "QB-P4-028-fig1",
+     "file": "figures/QB-P4-028-fig1.svg",
+     "alt": "A graph with x from 0 to 6 and y from 0 to 56. Five points are plotted, falling to the right: (1, 48), (2, 24), (3, 12), (4, 6), and (5, 3)."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = 48(0.5)^{x}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "48 is the value at $x = 1$, the first plotted point. The constant $a$ is the value at $x = 0$, one halving step earlier, which is 96."
+    },
+    {
+     "key": "B",
+     "text": "$y = 72 - 24x$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This line fits only the first two points. At $x = 3$ it gives 0, but the data value is 12."
+    },
+    {
+     "key": "C",
+     "text": "$y = 3(2)^{x}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This reads the points from right to left. A factor of 2 means growth, but the values decrease as $x$ increases."
+    },
+    {
+     "key": "D",
+     "text": "$y = 96(0.5)^{x}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "For $y = a(b)^x$, $a$ is the value at $x = 0$ and $b$ is the ratio between values one unit apart. A decreasing model has $0 < b < 1$.",
+    "steps": "The question asks for the model’s equation.<br>$\\frac{24}{48} = \\frac{12}{24} = \\frac{6}{12} = 0.5$ <span class=\"nt\">(the ratio for each step of 1)</span><br>$a(0.5)^1 = 48$ <span class=\"nt\">(the point at $x = 1$)</span><br>$a = \\frac{48}{0.5} = 96$ <span class=\"nt\">(one step back to $x = 0$)</span><br>$y = 96(0.5)^{x}$ <span class=\"nt\">(starting value times the factor)</span><br>Each step halves the value, which matches a curve that falls quickly and then levels off.",
+    "check": "$96(0.5)^5 = 96 \\times \\frac{1}{32} = 3$ ✓",
+    "be_careful": "No point is plotted at $x = 0$, so $a$ is not the first $y$-value shown. Also, two points always fit a line; check a third point.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-029",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C2",
+    "P4.C7"
+   ],
+   "family": "one-point-two-models",
+   "signature": "same point: residual 3 under model 1, -2 under model 2 -> model 2 predicts 5 more; traps model 1 by 5, by 1",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two different models are used to predict $y$ for the same data. For one data point, the actual $y$-value minus the value predicted by model 1 is 3, and the actual $y$-value minus the value predicted by model 2 is $-2$. Which statement about the two predictions for this data point is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Model 1 predicts a $y$-value that is 5 greater than model 2.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "A residual of 3 means model 1 predicts 3 below the actual value, so model 1 is the smaller prediction."
+    },
+    {
+     "key": "B",
+     "text": "Model 2 predicts a $y$-value that is 1 greater than model 1.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This subtracts 2 from 3. The predictions are on opposite sides of the actual value, so the gap is $3 + 2$."
+    },
+    {
+     "key": "C",
+     "text": "Model 2 predicts a $y$-value that is 5 greater than model 1.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Model 1 predicts a $y$-value that is 1 greater than model 2.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Both the direction and the size are wrong: the gap is 5 and model 2 is larger."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Write each prediction from the actual value $y$: prediction $=$ actual $-$ residual. Then compare.",
+    "steps": "The question asks which model predicts more, and by how much.<br>Let $y$ be the actual value of the point.<br>model 1: $y - p_1 = 3$, so $p_1 = y - 3$ <span class=\"nt\">(below the actual value)</span><br>model 2: $y - p_2 = -2$, so $p_2 = y + 2$ <span class=\"nt\">(above the actual value)</span><br>$p_2 - p_1 = (y + 2) - (y - 3) = 5$ <span class=\"nt\">(the actual value cancels)</span><br>So model 2 predicts 5 more than model 1.",
+    "check": "If $y = 10$: $p_1 = 7$, $p_2 = 12$, and $12 - 7 = 5$ ✓",
+    "be_careful": "A positive residual means the model predicted too low.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-030",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C5"
+   ],
+   "family": "exp-fit-from-two-values",
+   "signature": "y = a(b)^x, b > 0, y(2) = 45, y(4) = 405 -> b^2 = 9, b = 3, a = 5; traps 15 (one step back), 9",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "An exponential model $y = a(b)^{x}$, where $a$ and $b$ are positive constants, predicts $y = 45$ when $x = 2$ and $y = 405$ when $x = 4$. What is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "15",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "Divides 45 by 3 only once, which gives the value at $x = 1$."
+    },
+    {
+     "value": "9",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This is $b^2$, the ratio for two steps, not $a$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Dividing the two predictions cancels $a$ and leaves a power of $b$. Then work back to $x = 0$ to get $a$.",
+    "steps": "The question asks for $a$, the predicted value at $x = 0$.<br>$\\frac{a(b)^4}{a(b)^2} = \\frac{405}{45}$ <span class=\"nt\">(divide the two equations)</span><br>$b^2 = 9$ <span class=\"nt\">(the $a$ cancels)</span><br>$b = 3$ <span class=\"nt\">($b$ is positive)</span><br>$a(3)^2 = 45$ <span class=\"nt\">(use the value at $x = 2$)</span><br>$a = \\frac{45}{9} = 5$ <span class=\"nt\">(divide by 9)</span><br>So the model starts at 5 when $x = 0$ and triples for each increase of 1 in $x$.",
+    "check": "$5(3)^4 = 5(81) = 405$ ✓",
+    "be_careful": "From $x = 2$ to $x = 4$ is two steps, so 9 is $b^2$, not $b$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-031",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C4"
+   ],
+   "family": "outlier-pull-slope",
+   "signature": "flat positive trend plus high point P at the right end; removing P lowers the slope (LSQ 1.27 -> 0.5); traps increase, same, cannot be determined",
+   "abilities": [
+    "G",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The scatterplot shows 8 data points, including point $P$.",
+   "stem_after_figure": "If point $P$ is removed from the data set, which of the following best describes how the line of best fit for the remaining 7 points compares with the line of best fit for all 8 points?",
+   "figures": [
+    {
+     "id": "QB-P4-031-fig1",
+     "file": "figures/QB-P4-031-fig1.svg",
+     "alt": "A scatterplot with x from 0 to 10 and y from 0 to 20. Seven points rise slowly from (1, 4) to (7, 7). Point P, at (9, 18), is far above the pattern at the right."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The slope of the line of best fit would decrease.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The slope of the line of best fit would increase.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "$P$ is far above the trend of the other points at the right end, so it pulls the right side of the line up. Removing it lowers the slope."
+    },
+    {
+     "key": "C",
+     "text": "The slope of the line of best fit would stay the same.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "A point this far from the pattern changes the line. Only a point on the line would leave it unchanged."
+    },
+    {
+     "key": "D",
+     "text": "The change in the slope cannot be determined without the equation of the line.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The direction of the change can be seen from where $P$ is: high and to the right."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A line of best fit is pulled toward points that are far from it. A point high above the trend at the right end tilts the line upward.",
+    "steps": "The question asks how removing $P$ changes the line.<br>the other 7 points rise about 0.5 for each 1 in $x$ <span class=\"nt\">(their own trend)</span><br>$P$ is far above where that trend would be at $x = 9$ <span class=\"nt\">(about 8 instead of 18)</span><br>with $P$, the right end of the line is pulled up <span class=\"nt\">(the line tilts more steeply)</span><br>without $P$, the line follows the 7 points <span class=\"nt\">(a smaller slope)</span><br>So removing $P$ makes the slope decrease.",
+    "check": "The 7 points alone fit $y = 0.5x + 3.5$ closely, much flatter than any line that also comes near $(9, 18)$ ✓",
+    "be_careful": "Decide where the point is compared with the trend: high on the right pulls the slope up.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-032",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C3"
+   ],
+   "family": "zero-of-model-outside-range",
+   "signature": "cones y = 4.2x - 230, temps 60-95 F: solution of 4.2x - 230 = 0 is about 54.8 F, where the model predicts 0 cones, but 54.8 is outside the data range; traps cones at 0 F, data confirm, 1 degree per 4.2 cones",
+   "abilities": [
+    "I",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For days with high temperatures from 60 to 95 degrees Fahrenheit, the equation $y = 4.2x - 230$ models the number of ice cream cones $y$ sold at a shop on a day with a high temperature of $x$ degrees. Which of the following best describes the solution to the equation $4.2x - 230 = 0$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is the number of cones the model predicts for a day with a high temperature of 0 degrees.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "That is the value of $y$ when $x = 0$, which is $-230$. The equation asks for the value of $x$ that makes $y = 0$."
+    },
+    {
+     "key": "B",
+     "text": "It is the temperature at which the model predicts that no cones are sold, and the data show that no cones are sold at that temperature.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "The solution is about 54.8 degrees, below the lowest temperature in the data, 60. The data say nothing about that temperature."
+    },
+    {
+     "key": "C",
+     "text": "It is the increase in temperature that the model predicts will increase sales by 4.2 cones.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "An increase of 1 degree increases the prediction by 4.2 cones."
+    },
+    {
+     "key": "D",
+     "text": "It is the temperature at which the model predicts that no cones are sold, but this temperature is outside the range of the data.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The solution of $4.2x - 230 = 0$ is the $x$-value where the predicted number of cones is 0. Then compare that $x$-value with the range of the data.",
+    "steps": "The question asks what the solution to $4.2x - 230 = 0$ means.<br>$y = 0$ <span class=\"nt\">(the model predicts no cones)</span><br>$x = \\frac{230}{4.2} \\approx 54.8$ <span class=\"nt\">(solve for the temperature)</span><br>$54.8 < 60$ <span class=\"nt\">(compare with the data range 60 to 95)</span><br>So the solution is the temperature with a predicted 0 cones, and it lies outside the temperatures used to build the model.",
+    "check": "$4.2(54.8) - 230 \\approx 0.2$, close to 0 ✓; at 60 degrees the model gives 22 cones",
+    "be_careful": "Solving the equation is only half of the question. A prediction outside the data range is not supported by the data.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-033",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C2",
+    "P4.C1"
+   ],
+   "family": "equal-residuals-find-x",
+   "signature": "line through (4,30) and (10,48): y = 3x + 18; (7,42) residual 3; (k,51) same residual -> predicted 48 -> k = 10; traps 12 (residual sign), 11 (residual ignored), 48 (predicted value)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The line of best fit for a data set passes through the points $(4, 30)$ and $(10, 48)$. The data set includes the points $(7, 42)$ and $(k, 51)$, and these two points have the same residual. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "10",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "11",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This puts $(k, 51)$ on the line, as if its residual were 0."
+    },
+    {
+     "key": "C",
+     "text": "12",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This subtracts the residual with the wrong sign: the predicted value is $51 - 3 = 48$, not $51 + 3$."
+    },
+    {
+     "key": "D",
+     "text": "48",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "48 is the predicted $y$-value, not the $x$-value."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Find the line, find the residual of $(7, 42)$, then work backward: actual $-$ residual $=$ predicted.",
+    "steps": "The question asks for $k$.<br>slope $= \\frac{48 - 30}{10 - 4} = 3$, so $y = 3x + 18$ <span class=\"nt\">(line from the two points)</span><br>$42 - (3(7) + 18) = 42 - 39 = 3$ <span class=\"nt\">(residual of $(7, 42)$)</span><br>predicted at $x = k$: $51 - 3 = 48$ <span class=\"nt\">(same residual)</span><br>$3k + 18 = 48$, so $k = 10$ <span class=\"nt\">(solve)</span><br>So $k = 10$. Both points lie 3 above the line: $(7, 42)$ is above the prediction 39, and $(10, 51)$ is above the prediction 48.",
+    "check": "$51 - (3(10) + 18) = 3$ ✓",
+    "be_careful": "Residual means actual minus predicted, so predicted $=$ actual $-$ residual.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-034",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C5"
+   ],
+   "family": "unequal-spacing-linear",
+   "signature": "x 0,2,3,7 -> y 5,11,14,26: increases 6,3,12 over gaps 2,1,4 = 3 per unit -> linear; traps exponential (unequal increases), slope 6, neither",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows four values of $x$ and their corresponding values of $y$.<br><table class=\"dt\"><tr><th>$x$</th><td>0</td><td>2</td><td>3</td><td>7</td></tr><tr><th>$y$</th><td>5</td><td>11</td><td>14</td><td>26</td></tr></table>Which of the following best describes the relationship between $x$ and $y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Linear, because $y$ increases by 6 for each increase of 1 in $x$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D28",
+     "feedback": "6 is the increase from $x = 0$ to $x = 2$, which is a step of 2, not 1."
+    },
+    {
+     "key": "B",
+     "text": "Exponential, because the increases in $y$ are not equal",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "The $x$-values are not equally spaced. Divide each increase by its step in $x$."
+    },
+    {
+     "key": "C",
+     "text": "Linear, because $y$ increases by 3 for each increase of 1 in $x$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Neither linear nor exponential, because the increases in $y$ follow no pattern",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Every increase is exactly 3 times its step in $x$, so there is a pattern."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A relationship is linear when the change in $y$ divided by the change in $x$ is the same for every pair of rows. Uneven $x$-steps hide this.",
+    "steps": "The question asks for the type of relationship.<br>$x$: 0 to 2, $y$ up 6, rate $\\frac{6}{2} = 3$ <span class=\"nt\">(first pair)</span><br>$x$: 2 to 3, $y$ up 3, rate $\\frac{3}{1} = 3$ <span class=\"nt\">(second pair)</span><br>$x$: 3 to 7, $y$ up 12, rate $\\frac{12}{4} = 3$ <span class=\"nt\">(third pair)</span><br>The rate is always 3, so $y = 3x + 5$ fits every row.",
+    "check": "$3(7) + 5 = 26$ ✓",
+    "be_careful": "Look at the $x$-row before judging the $y$-row.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-035",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C6"
+   ],
+   "family": "reflect-y-slope",
+   "signature": "line of best fit slope 3; each y replaced by 20 - y -> slope -3; traps 3, 17, -17",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The line of best fit for a data set has a slope of 3. A new data set is made by replacing each $y$-value with $20 - y$, while the $x$-values stay the same. What is the slope of the line of best fit for the new data set?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "-17",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This computes $3 - 20$. The 20 moves the line up or down but does not change its steepness."
+    },
+    {
+     "key": "B",
+     "text": "-3",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "3",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Subtracting each $y$ from 20 flips the data upside down, so the slope changes sign."
+    },
+    {
+     "key": "D",
+     "text": "17",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This is $20 - 3$, which applies the rule to the slope as if it were a $y$-value."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "If every $y$ becomes $20 - y$, every prediction becomes $20 - (\\text{old prediction})$. A change of 1 in $x$ that raised $y$ by 3 now lowers it by 3.",
+    "steps": "The question asks for the new slope.<br>Let the old line be $y = 3x + b$.<br>new predictions $= 20 - (3x + b)$ <span class=\"nt\">(apply the change to each prediction)</span><br>$= -3x + (20 - b)$ <span class=\"nt\">(distribute the minus sign)</span><br>The new slope is $-3$, whatever $b$ was. The 20 only moves the line up or down, while the minus sign turns a rising trend into a falling one.",
+    "check": "Two points 1 apart in $x$ with $y = 5$ and $y = 8$ become $15$ and $12$: a change of $-3$ ✓",
+    "be_careful": "The 20 only shifts the line. The minus sign flips it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-036",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C5"
+   ],
+   "family": "exp-two-step-factor-backward",
+   "signature": "y = a b^x, b > 0, predicts 200 at x = 2 and 312.5 at x = 4 -> b^2 = 1.5625, b = 1.25 -> at x = 1: 200/1.25 = 160; traps 143.75 (linear back), 128 (a, x = 0), 250 (x = 3)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An exponential model $y = a(b)^{x}$, where $a$ and $b$ are positive constants, predicts a value of 200 when $x = 2$ and a value of 312.5 when $x = 4$. What value does the model predict when $x = 1$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "128",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "128 is $a$, the prediction at $x = 0$. That goes back two steps from $x = 2$ instead of one."
+    },
+    {
+     "key": "B",
+     "text": "143.75",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats the model as linear: it subtracts half of the increase $312.5 - 200 = 112.5$. An exponential model changes by a constant factor, not a constant amount."
+    },
+    {
+     "key": "C",
+     "text": "160",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "250",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "250 is the prediction at $x = 3$. This multiplies by the factor instead of dividing."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Divide the two predictions to get the growth factor for two steps, take the square root for one step, then divide once to go back from $x = 2$ to $x = 1$.",
+    "steps": "The question asks for the prediction at $x = 1$.<br>$\\frac{312.5}{200} = 1.5625 = b^{2}$ <span class=\"nt\">(factor for the two steps from $x = 2$ to $x = 4$)</span><br>$b = 1.25$ <span class=\"nt\">(positive square root, since $b > 0$)</span><br>$200 \\div 1.25 = 160$ <span class=\"nt\">(one step back from $x = 2$)</span><br>So the model predicts 160 when $x = 1$. Going backward in an exponential model means dividing by the factor, once for each step.",
+    "check": "$160(1.25)^{3} = 312.5$ ✓",
+    "be_careful": "Growth factors multiply. Do not split the increase from 200 to 312.5 into equal amounts.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-037",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C3"
+   ],
+   "family": "slope-two-unit-scales",
+   "signature": "revenue (thousands of dollars) vs employees (hundreds); line through (2,150),(6,310): 40 thousand per hundred employees -> 400 dollars per employee; traps 40, 4,000, 40,000",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "For a group of companies, a line of best fit relates the annual revenue $y$, in thousands of dollars, to the number of employees $x$, in hundreds. The line passes through $(2, 150)$ and $(6, 310)$. According to the line, what is the predicted increase in annual revenue for each additional employee?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\$40$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D21",
+     "feedback": "This takes the slope 40 as dollars. The slope is 40 thousand dollars."
+    },
+    {
+     "key": "B",
+     "text": "$\\$400$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\$4,000$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D21",
+     "feedback": "This converts the 40 thousand dollars but divides by 10 employees, not 100."
+    },
+    {
+     "key": "D",
+     "text": "$\\$40,000$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This is the increase for 100 more employees, one unit of $x$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The slope is in the model’s units: thousands of dollars per hundred employees. Convert both units before reading it per employee.",
+    "steps": "The question asks for the revenue increase per 1 employee, in dollars.<br>slope $= \\frac{310 - 150}{6 - 2} = \\frac{160}{4} = 40$ <span class=\"nt\">(thousands of dollars per hundred employees)</span><br>40 thousand dollars $= \\$40,000$ <span class=\"nt\">(convert the output unit)</span><br>1 unit of $x$ $= 100$ employees <span class=\"nt\">(convert the input unit)</span><br>$\\frac{\\$40,000}{100} = \\$400$ <span class=\"nt\">(per employee)</span><br>So each additional employee adds about 400 dollars of predicted annual revenue.",
+    "check": "From 200 to 600 employees (400 more), revenue rises from 150 to 310 thousand: $\\frac{160,000}{400} = 400$ ✓",
+    "be_careful": "Two units are scaled here, and they work in opposite directions.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-038",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C1"
+   ],
+   "family": "best-fit-from-table-tool",
+   "signature": "table of 6 near y = 2x + 5; choose best-fitting line among 2x + 5, 5x + 2, 2x + 11, 1.5x + 7; table starts at x = 3 (regression or two-row check)",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "wins",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows six data points.<br><table class=\"dt\"><tr><th>$x$</th><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><th>$y$</th><td>11.1</td><td>13.0</td><td>14.8</td><td>17.2</td><td>18.9</td><td>21.0</td></tr></table>Which of the following equations best models these data?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$y = 2x + 5$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$y = 5x + 2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D1",
+     "feedback": "This swaps the slope and the intercept. At $x = 8$ it gives 42, far from 21."
+    },
+    {
+     "key": "C",
+     "text": "$y = 2x + 11$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "This uses the first $y$-value, 11.1, as the intercept. That value belongs to $x = 3$, so every prediction is about 6 too high."
+    },
+    {
+     "key": "D",
+     "text": "$y = 1.5x + 7$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This is close near $x = 3$ but drifts away: at $x = 8$ it gives 19, while the data value is 21. The data rise about 2 per step, not 1.5."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The data rise about 2 for each increase of 1 in $x$, and going back three steps from $(3, 11.1)$ gives an intercept near 5.",
+    "steps": "The question asks which line fits the data best.<br>$\\frac{21.0 - 11.1}{8 - 3} = \\frac{9.9}{5} \\approx 2$ <span class=\"nt\">(average rise per step)</span><br>intercept $\\approx 11.1 - 3(2) = 5.1$ <span class=\"nt\">(go back from $x = 3$ to $x = 0$)</span><br>$y = 2x + 5$ gives 11, 13, 15, 17, 19, 21 <span class=\"nt\">(each within 0.2 of the data)</span><br>So $y = 2x + 5$ is the best model of the four.",
+    "check": "Regression in Desmos gives a slope of about 1.99 and an intercept of about 5.06 ✓",
+    "be_careful": "The first table value is at $x = 3$, not at $x = 0$, so it is not the intercept.",
+    "desmos": "Desmos is fast here: enter the table and type $y_1 \\sim mx_1 + b$ to get the regression line.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-039",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C2"
+   ],
+   "family": "residual-unknown-slope",
+   "signature": "line y = mx + 30, point (8, 58) residual -6 -> predicted 64 -> m = 4.25; traps 2.75 (sign), 3.5 (residual ignored)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The line of best fit for a data set is $y = mx + 30$, where $m$ is a constant. For the data point $(8, 58)$, the actual $y$-value minus the predicted $y$-value is $-6$. What is the value of $m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "17/4",
+      "4.25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2.75",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Uses predicted $= 52$, which reverses the residual sign."
+    },
+    {
+     "value": "3.5",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Solves $8m + 30 = 58$, which ignores the residual."
+    }
+   ],
+   "solution": {
+    "key_idea": "The residual turns the data point into a point on the line: prediction $=$ actual $-$ residual. That point gives an equation for $m$.",
+    "steps": "The question asks for the slope $m$.<br>$58 - \\text{predicted} = -6$ <span class=\"nt\">(actual minus predicted)</span><br>predicted $= 64$ <span class=\"nt\">(so the line passes through $(8, 64)$)</span><br>$8m + 30 = 64$ <span class=\"nt\">(substitute $x = 8$)</span><br>$8m = 34$ <span class=\"nt\">(subtract 30)</span><br>$m = \\frac{17}{4} = 4.25$ <span class=\"nt\">(divide by 8)</span><br>The point $(8, 58)$ itself is 6 below the line, which is why the line value at $x = 8$ is larger than 58.",
+    "check": "$4.25(8) + 30 = 64$ and $58 - 64 = -6$ ✓",
+    "be_careful": "Use the point on the line, $(8, 64)$, not the data point $(8, 58)$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-040",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H",
+   "concepts": [
+    "P4.C2",
+    "P4.C3"
+   ],
+   "family": "residual-difference-two-points",
+   "signature": "y = 0.9x + 6 (test 1 -> test 2); A 20 higher on test 1; actual test 2: A 81, B 70 -> residual A minus residual B = 11 - 18 = -7; traps 7, -9",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "For a class, the line of best fit $y = 0.9x + 6$ relates each student’s score $y$ on a second test to the score $x$ on a first test. Student A scored 20 points higher than student B on the first test. On the second test, student A scored 81 and student B scored 70. What is (student A’s actual score minus predicted score) minus (student B’s actual score minus predicted score) on the second test?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "-7"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7",
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "Computes $18 - 11$, the reverse order."
+    },
+    {
+     "value": "-9",
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "Uses a prediction gap of 20 instead of $0.9(20) = 18$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The difference of two residuals is (difference of actual values) minus (difference of predictions). The predictions differ by slope times the gap in $x$, and the intercept cancels.",
+    "steps": "The question asks for residual A minus residual B.<br>Let $b$ be student B’s first-test score, so student A’s is $b + 20$.<br>predicted A $-$ predicted B $= 0.9(b + 20) - 0.9b = 18$ <span class=\"nt\">(slope times the gap of 20)</span><br>actual A $-$ actual B $= 81 - 70 = 11$ <span class=\"nt\">(second-test scores)</span><br>(A residual) $-$ (B residual) $= 11 - 18 = -7$ <span class=\"nt\">(regroup actual minus predicted)</span><br>The first-test scores themselves are not needed.",
+    "check": "Try $b = 60$: predictions 60 and 78, residuals $70 - 60 = 10$ and $81 - 78 = 3$, and $3 - 10 = -7$ ✓",
+    "be_careful": "Neither first-test score is needed. The intercept 6 cancels.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-041",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C6",
+    "P4.C1"
+   ],
+   "family": "time-origin-shift-intercept-letters",
+   "signature": "y = 3x + c, x = years since 2005; rewritten with t = years since 2012 the intercept is 2c -> 21 + c = 2c, c = 21; predict 2015 -> 51; traps 9 (shift reversed), 21 (stopped at c)",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A line of best fit for the attendance $y$, in hundreds of people, at a yearly festival is $y = 3x + c$, where $x$ is the number of years since 2005 and $c$ is a constant. When the same line is written in terms of $t$, the number of years since 2012, its $y$-intercept is $2c$. According to the line of best fit, what is the predicted attendance, in hundreds of people, for the year 2015?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "51"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "9",
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "Uses $x = t - 7$, which gives $c = -21$ and then $30 - 21 = 9$."
+    },
+    {
+     "value": "21",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is $c$. The question asks for the prediction for 2015."
+    }
+   ],
+   "solution": {
+    "key_idea": "Writing the same line with a later starting year keeps the slope and replaces the intercept by the line’s value at the new start. That fact gives an equation for $c$.",
+    "steps": "The question asks for the prediction for 2015. First find $c$.<br>Step 1: Relate the two inputs.<br>2012 is 7 years after 2005, so $x = t + 7$ <span class=\"nt\">(years since 2005 are 7 more)</span><br>Step 2: Rewrite the line.<br>$y = 3(t + 7) + c = 3t + 21 + c$ <span class=\"nt\">(substitute and distribute)</span><br>new $y$-intercept $= 21 + c$ <span class=\"nt\">(the value when $t = 0$, that is, in 2012)</span><br>Step 3: Use the given intercept.<br>$21 + c = 2c$ <span class=\"nt\">(the new intercept is $2c$)</span><br>$c = 21$ <span class=\"nt\">(subtract $c$ from both sides)</span><br>Step 4: Predict for 2015.<br>2015 is $x = 10$ <span class=\"nt\">(10 years after 2005)</span><br>$y = 3(10) + 21 = 51$ <span class=\"nt\">(substitute)</span><br>The predicted attendance is 51 hundred people.",
+    "check": "With $t$: 2015 is $t = 3$, and $3(3) + 2(21) = 9 + 42 = 51$ ✓",
+    "be_careful": "A later starting year means smaller inputs: $x = t + 7$, not $t - 7$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-042",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C2",
+    "P4.C7"
+   ],
+   "family": "one-point-two-lines-locate",
+   "signature": "model A y = 2x + 10, model B y = -x + 40; one data point has residual 3 under A and -6 under B -> x = 7, y = 27; traps 7 (x only), 24",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Two linear models are fitted to the same data. Model A is $y = 2x + 10$, and model B is $y = -x + 40$. For one data point, the actual $y$-value minus the value predicted by model A is 3, and the actual $y$-value minus the value predicted by model B is $-6$. What is the actual $y$-value of this data point?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "27"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "7",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the $x$-value of the point, not the $y$-value."
+    },
+    {
+     "value": "24",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is model A’s prediction at $x = 7$, not the actual value."
+    }
+   ],
+   "solution": {
+    "key_idea": "Each residual turns into an equation linking the point’s $x$ and $y$. Two models give two equations, so the point is fixed.",
+    "steps": "The question asks for the actual $y$-value of the point. Let the point be $(x, y)$.<br>$y - (2x + 10) = 3$, so $y = 2x + 13$ <span class=\"nt\">(residual under model A)</span><br>$y - (-x + 40) = -6$, so $y = -x + 34$ <span class=\"nt\">(residual under model B)</span><br>$2x + 13 = -x + 34$ <span class=\"nt\">(both describe the same $y$)</span><br>$3x = 21$ <span class=\"nt\">(add $x$, subtract 13)</span><br>$x = 7$ <span class=\"nt\">(divide by 3)</span><br>$y = 2(7) + 13 = 27$ <span class=\"nt\">(substitute back)</span><br>The point is $(7, 27)$: 3 above line A and 6 below line B.",
+    "check": "Model A: $2(7) + 10 = 24$, and $27 - 24 = 3$ ✓. Model B: $-7 + 40 = 33$, and $27 - 33 = -6$ ✓",
+    "be_careful": "The question asks for $y$, not $x$. Also, a negative residual means the point is below that line.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-043",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C7",
+    "P4.C5"
+   ],
+   "family": "chord-vs-exponential",
+   "signature": "population 2,000 at year 0 and 3,200 at year 4; linear L and exponential E both fit; year 2: L 2,600 > E about 2,530; year 8: E 5,120 > L 4,400",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A town’s population was 2,000 in year 0 and 3,200 in year 4. A linear model $L$ and an exponential model $E$ each give exactly these two values. Which statement correctly compares the predictions of the two models for year 2 and year 8?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$E$ predicts more in both year 2 and year 8.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "Exponential growth does not beat linear growth everywhere. Between the two shared years the curve stays below the line."
+    },
+    {
+     "key": "B",
+     "text": "$L$ predicts more in both year 2 and year 8.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "After year 4 the exponential model multiplies by 1.6 every 4 years and passes the line: 5,120 versus 4,400."
+    },
+    {
+     "key": "C",
+     "text": "The two models predict the same value in year 2, and $E$ predicts more in year 8.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Fitting the same two years does not make the models agree in between: 2,600 versus about 2,530."
+    },
+    {
+     "key": "D",
+     "text": "$L$ predicts more in year 2, and $E$ predicts more in year 8.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A linear model adds the same amount each year. An exponential model through the same two points multiplies by the same factor, so it rises slowly at first and fast later: below the line between the points, above it after.",
+    "steps": "The question asks which model predicts more in year 2 and in year 8.<br>Step 1: Linear model.<br>$\\frac{3,200 - 2,000}{4} = 300$ per year <span class=\"nt\">(constant change)</span><br>$L(2) = 2,600$ and $L(8) = 2,000 + 300(8) = 4,400$ <span class=\"nt\">(evaluate)</span><br>Step 2: Exponential model.<br>$\\frac{3,200}{2,000} = 1.6$ every 4 years <span class=\"nt\">(constant ratio)</span><br>$E(8) = 3,200(1.6) = 5,120$ <span class=\"nt\">(four more years, one more factor of 1.6)</span><br>$E(2) = 2,000\\sqrt{1.6} \\approx 2,530$ <span class=\"nt\">(half of the 4-year period)</span><br>Step 3: Compare.<br>year 2: $2,600 > 2,530$ <span class=\"nt\">($L$ is greater)</span><br>year 8: $5,120 > 4,400$ <span class=\"nt\">($E$ is greater)</span>",
+    "check": "$E(2)$ squared over $2,000$ must equal $E(4) = 3,200$: $\\frac{2,530^2}{2,000} \\approx 3,200$ ✓",
+    "be_careful": "\"Exponential is always greater\" is false between the two shared points.",
+    "desmos": "Graph $y = 2,000 + 300x$ and $y = 2,000(1.6)^{x/4}$ and compare at $x = 2$ and $x = 8$.",
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-044",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C6",
+    "P4.C3"
+   ],
+   "family": "double-unit-change-model",
+   "signature": "shipping y = 0.05x + 3 (x grams, y dollars); in kilograms X and cents Y: Y = 5000X + 300 -> slope 5000; traps 50 (kg only), 5 (cents only)",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A line of best fit for the shipping cost $y$, in dollars, of a package with a weight of $x$ grams is $y = 0.05x + 3$. The same line is rewritten to give the shipping cost $Y$, in cents, of a package with a weight of $X$ kilograms. What is the slope of the rewritten line?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5000"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "50",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "Converts grams to kilograms but leaves the cost in dollars."
+    },
+    {
+     "value": "5",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "Converts dollars to cents but leaves the weight in grams."
+    }
+   ],
+   "solution": {
+    "key_idea": "Change the units one variable at a time: write the old input in terms of the new one, substitute, then convert the output. Each conversion multiplies the slope.",
+    "steps": "The question asks for the slope of $Y$ in terms of $X$.<br>Step 1: Convert the input.<br>$X$ kilograms $= 1,000X$ grams, so $x = 1,000X$ <span class=\"nt\">(1 kilogram is 1,000 grams)</span><br>$y = 0.05(1,000X) + 3 = 50X + 3$ <span class=\"nt\">(dollars per kilogram)</span><br>Step 2: Convert the output.<br>$Y = 100y$ <span class=\"nt\">(1 dollar is 100 cents)</span><br>$Y = 100(50X + 3) = 5,000X + 300$ <span class=\"nt\">(distribute 100)</span><br>The slope of the rewritten line is 5,000 cents per kilogram, which is the same rate as 5 cents per gram.",
+    "check": "A 2 kilogram package: $0.05(2,000) + 3 = 103$ dollars $= 10,300$ cents, and $5,000(2) + 300 = 10,300$ ✓",
+    "be_careful": "Both conversions make the slope larger here: more grams in a kilogram and more cents in a dollar.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-045",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C2"
+   ],
+   "family": "mean-actual-mean-residual",
+   "signature": "line y = 2x + 5, x = 1,3,5,7, residuals 1,-2,k,3, mean actual 14.5 -> mean predicted 13, residual total 6, k = 4; traps 1.5 (mean residual), -2",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A data set has four points with $x$-values 1, 3, 5, and 7. The line of best fit for the data is $y = 2x + 5$. For these points, the values of actual $y$ minus predicted $y$ are 1, $-2$, $k$, and 3, respectively. The mean of the four actual $y$-values is 14.5. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1.5",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the mean residual, $\\frac{6}{4}$, not $k$."
+    },
+    {
+     "value": "6",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the total of the four residuals, not the single residual $k$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Each actual value is its prediction plus its residual. So the total of the actual values is the total of the predictions plus the total of the residuals.",
+    "steps": "The question asks for the missing residual $k$.<br>Step 1: Total of the actual values.<br>$4(14.5) = 58$ <span class=\"nt\">(mean times count)</span><br>Step 2: Total of the predictions.<br>predictions: $7, 11, 15, 19$ <span class=\"nt\">($2x + 5$ at $x = 1, 3, 5, 7$)</span><br>$7 + 11 + 15 + 19 = 52$ <span class=\"nt\">(add)</span><br>Step 3: Total of the residuals.<br>$58 - 52 = 6$ <span class=\"nt\">(actual total minus predicted total)</span><br>$1 + (-2) + k + 3 = 6$ <span class=\"nt\">(the four residuals)</span><br>$k + 2 = 6$, so $k = 4$ <span class=\"nt\">(solve)</span><br>The third point is $(5, 19)$, which is 4 above the line.",
+    "check": "Actual values $8, 9, 19, 22$ total 58, and $\\frac{58}{4} = 14.5$ ✓",
+    "be_careful": "The mean residual is 1.5, but the question asks for one residual, $k$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-046",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C5",
+    "P4.C3"
+   ],
+   "family": "growth-factor-new-period",
+   "signature": "y = 500(1.21)^t, t years -> 1.21 = 1.1^2 so 10% every 6 months; traps 10.5% (halved rate), 21% per 6 months, 42% per 2 years",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An exponential model of best fit for the number of users $y$ of an app $t$ years after launch is $y = 500(1.21)^{t}$. According to the model, which of the following describes how the number of users changes?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It increases by 10.5% every 6 months.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This halves 21%. Two increases of 10.5% would give $1.105^2 \\approx 1.221$, not 1.21."
+    },
+    {
+     "key": "B",
+     "text": "It increases by 10% every 6 months.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "It increases by 21% every 6 months.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D18",
+     "feedback": "21% is the increase for a whole year, not half a year."
+    },
+    {
+     "key": "D",
+     "text": "It increases by 42% every 2 years.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Two years multiply by $1.21^2 \\approx 1.464$, an increase of about 46%, not 42%."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A factor per year can be split into equal factors for shorter periods: two half-years must multiply to the yearly factor, so each half-year factor is $\\sqrt{1.21}$.",
+    "steps": "The question asks for a correct description of the growth.<br>yearly factor $= 1.21$ <span class=\"nt\">(from the model)</span><br>half-year factor $f$ with $f \\cdot f = 1.21$ <span class=\"nt\">(two half-years make a year)</span><br>$f = \\sqrt{1.21} = 1.1$ <span class=\"nt\">(positive square root)</span><br>$y = 500(1.1)^{2t}$ <span class=\"nt\">(the same model in half-years)</span><br>factor 1.1 means an increase of 10% <span class=\"nt\">(each 6 months)</span><br>So the number of users increases by 10% every 6 months. Growth rates in an exponential model are not split by dividing the percent.",
+    "check": "$1.1 \\times 1.1 = 1.21$ ✓",
+    "be_careful": "Half of 21% is not the half-year rate, because each half-year grows from a larger base.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-047",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C4"
+   ],
+   "family": "grouped-trend-reversal",
+   "signature": "two clusters each with negative trend, second cluster far up-right -> overall LSQ slope positive; traps both positive, overall must be negative, cannot be determined",
+   "abilities": [
+    "G",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The scatterplot shows data for 16 students: 8 students from school 1 (solid dots) and 8 students from school 2 (open circles).",
+   "stem_after_figure": "Which of the following statements is true?",
+   "figures": [
+    {
+     "id": "QB-P4-047-fig1",
+     "file": "figures/QB-P4-047-fig1.svg",
+     "alt": "A scatterplot with x from 0 to 13 and y from 0 to 24. Solid dots (school 1) are at (1, 10), (2, 9), (2, 7), (3, 8), (3, 6), (4, 5), (4, 7), (5, 4), falling to the right. Open circles (school 2) are at (8, 22), (9, 21), (9, 19), (10, 20), (10, 18), (11, 17), (11, 19), (12, 16), also falling to the right but far higher."
+    }
+   ],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Within each school, $y$ tends to increase as $x$ increases, and the line of best fit for all 16 students has a positive slope.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Inside each school the points fall from left to right. Only the comparison between the schools rises."
+    },
+    {
+     "key": "B",
+     "text": "Within each school, $y$ tends to decrease as $x$ increases, but the line of best fit for all 16 students has a positive slope.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Within each school, $y$ tends to decrease as $x$ increases, so the line of best fit for all 16 students must have a negative slope.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "The trend inside groups does not have to match the overall trend. School 2 sits far up and to the right of school 1."
+    },
+    {
+     "key": "D",
+     "text": "Within each school, $y$ tends to decrease as $x$ increases, but the sign of the slope for all 16 students cannot be determined from the scatterplot.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The picture is enough: the low-left cluster and the high-right cluster force an upward line."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The trend inside groups and the trend for all data together can point in opposite directions when the groups sit in different places.",
+    "steps": "The question asks about the trend within each school and for all 16 students.<br>school 1: from $x = 1$ to $x = 5$, $y$ falls from about 10 to 4 <span class=\"nt\">(negative within school 1)</span><br>school 2: from $x = 8$ to $x = 12$, $y$ falls from about 22 to 16 <span class=\"nt\">(negative within school 2)</span><br>school 2 points are about 7 units farther right and about 12 units higher <span class=\"nt\">(position of the groups)</span><br>a single line must pass low on the left and high on the right <span class=\"nt\">(to stay near both clusters)</span><br>So the line for all 16 students has a positive slope, even though each school alone has a negative trend.",
+    "check": "Least squares for all 16 points gives a slope of about 1.4, positive, while each school alone has a slope of about $-1.3$ ✓",
+    "be_careful": "Do not carry a within-group trend over to the combined data without looking at where the groups are.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-048",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C2",
+    "P4.C1"
+   ],
+   "family": "opposite-residuals-gap",
+   "signature": "line predicts 40 at x = 10 and 70 at x = 30; P(10, a), Q(30, b), residuals opposite, b - a = 24 -> residual of P = 3; traps -3, 6, -6",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A line of best fit predicts $y = 40$ when $x = 10$ and $y = 70$ when $x = 30$. The data points $P(10, a)$ and $Q(30, b)$ have residuals (actual $y$ minus predicted $y$) that are opposites of each other, and $b - a = 24$. What is the residual for point $P$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "-6",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D13",
+     "feedback": "This takes the whole gap $24 - 30 = -6$ as the residual of $Q$, then flips it, without splitting it between the two points."
+    },
+    {
+     "key": "B",
+     "text": "-3",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This is the residual for $Q$. Point $P$ is above the line, and $Q$ is below it."
+    },
+    {
+     "key": "C",
+     "text": "3",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "6",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D13",
+     "feedback": "This is the gap $30 - 24$, which must be shared equally by the two opposite residuals."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Actual $=$ predicted $+$ residual at each point. The difference of the actual values is the difference of the predictions plus the difference of the residuals.",
+    "steps": "The question asks for the residual $r$ at $P$. Then the residual at $Q$ is $-r$.<br>$a = 40 + r$ <span class=\"nt\">(actual at $P$)</span><br>$b = 70 - r$ <span class=\"nt\">(actual at $Q$)</span><br>$b - a = (70 - r) - (40 + r) = 30 - 2r$ <span class=\"nt\">(subtract)</span><br>$30 - 2r = 24$ <span class=\"nt\">(given)</span><br>$-2r = -6$ <span class=\"nt\">(subtract 30)</span><br>$r = 3$ <span class=\"nt\">(divide by $-2$)</span><br>So $P$ is 3 above the line and $Q$ is 3 below it. The actual values are $a = 40 + 3 = 43$ and $b = 70 - 3 = 67$, and their gap of 24 is smaller than the predicted gap of 30.",
+    "check": "$67 - 43 = 24$, and the residuals are $43 - 40 = 3$ and $67 - 70 = -3$ ✓",
+    "be_careful": "The predictions rise by 30 but the actual values rise only 24, so the left point must be above the line.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-049",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C5"
+   ],
+   "family": "exp-from-differences",
+   "signature": "f(x) = a(b)^x, f(2) - f(0) = 30, f(4) - f(2) = 75 -> b^2 = 2.5, a = 20, f(6) = 312.5; traps 125 (f(4)), 200 (constant difference), 245 (constant second difference)",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 160,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An exponential model $f(x) = a(b)^{x}$, where $a$ and $b$ are positive constants and $b > 1$, predicts the number of members of a club $x$ months after it started. The model predicts an increase of 30 members from month 0 to month 2 and an increase of 75 members from month 2 to month 4. How many members does the model predict for month 6?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "125",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "125 is the prediction for month 4. The question asks for month 6."
+    },
+    {
+     "key": "B",
+     "text": "200",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This adds 75 again, as if the increases were constant. That is linear thinking."
+    },
+    {
+     "key": "C",
+     "text": "245",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This assumes the increases themselves grow by a constant 45. In an exponential model the increases grow by a constant factor."
+    },
+    {
+     "key": "D",
+     "text": "312.5",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "In an exponential model, the increases over equal time periods also grow by the same factor as the values. So the ratio of two increases gives the factor for one period.",
+    "steps": "The question asks for $f(6)$.<br>Step 1: Find the factor for 2 months.<br>$f(2) - f(0) = a(b^2 - 1) = 30$ <span class=\"nt\">(first increase)</span><br>$f(4) - f(2) = ab^2(b^2 - 1) = 75$ <span class=\"nt\">(second increase)</span><br>$b^2 = \\frac{75}{30} = 2.5$ <span class=\"nt\">(divide the second by the first)</span><br>Step 2: Find $a$.<br>$a(2.5 - 1) = 30$, so $a = 20$ <span class=\"nt\">(substitute $b^2 = 2.5$)</span><br>Step 3: Predict month 6.<br>$f(4) = 20(2.5)^2 = 125$ <span class=\"nt\">(two 2-month periods)</span><br>$f(6) = 125(2.5) = 312.5$ <span class=\"nt\">(one more period)</span><br>Each 2-month increase is 2.5 times the previous one: 30, 75, then 187.5, and $125 + 187.5 = 312.5$.",
+    "check": "Values 20, 50, 125, 312.5: the increases are 30, 75, and 187.5, each 2.5 times the last ✓",
+    "be_careful": "The model can predict a non-whole number of members; the question asks for the model’s prediction.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P4-050",
+   "version": 1,
+   "skill": {
+    "code": "P4",
+    "domain": "psda",
+    "cb_skill": "Two-variable data: Models and scatterplots"
+   },
+   "level": "H+",
+   "concepts": [
+    "P4.C7",
+    "P4.C6"
+   ],
+   "family": "two-models-different-units",
+   "signature": "plant A: y = 1.5w + 20 (weeks), plant B: y = 0.5d + 8 (days); B exceeds A by 10 when 3.5w + 8 - 1.5w - 20 = 10 -> w = 11; traps 6 (equal), 77 (days), 1 (A exceeds B by 10)",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The height of plant A, in centimeters, is modeled by $y = 1.5w + 20$, where $w$ is the number of weeks since planting. The height of plant B, in centimeters, is modeled by $y = 0.5d + 8$, where $d$ is the number of days since planting. Both plants were planted on the same day. According to the models, how many weeks after planting will the height of plant B be 10 centimeters greater than the height of plant A?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "1",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D4",
+     "feedback": "This solves (plant A) minus (plant B) $= 10$. In week 1, plant A is the taller one."
+    },
+    {
+     "key": "B",
+     "text": "6",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "This is when the two heights are equal. Plant B needs 5 more weeks to lead by 10."
+    },
+    {
+     "key": "C",
+     "text": "11",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "77",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This is the answer in days. The question asks for weeks."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Put both models on the same input before comparing them. A week is 7 days, so plant B grows $0.5(7) = 3.5$ centimeters per week.",
+    "steps": "The question asks for the number of weeks $w$ at which B is 10 centimeters taller than A.<br>Step 1: Write plant B in weeks.<br>$d = 7w$ <span class=\"nt\">(7 days in a week)</span><br>$y = 0.5(7w) + 8 = 3.5w + 8$ <span class=\"nt\">(plant B in terms of $w$)</span><br>Step 2: Set up the gap.<br>$(3.5w + 8) - (1.5w + 20) = 10$ <span class=\"nt\">(B minus A equals 10)</span><br>$2w - 12 = 10$ <span class=\"nt\">(combine like terms)</span><br>$2w = 22$ <span class=\"nt\">(add 12)</span><br>$w = 11$ <span class=\"nt\">(divide by 2)</span><br>Plant B starts 12 centimeters shorter and gains 2 centimeters per week, so it is level at week 6 and 10 ahead at week 11.",
+    "check": "Week 11: A is $1.5(11) + 20 = 36.5$; B at $d = 77$ is $0.5(77) + 8 = 46.5$; $46.5 - 36.5 = 10$ ✓",
+    "be_careful": "Convert first. Comparing 1.5 per week with 0.5 per day directly makes plant B look slower.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

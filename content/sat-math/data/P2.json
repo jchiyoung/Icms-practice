@@ -1,0 +1,3420 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "P2",
+ "skill": "Percentages",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-P2-001",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C3"
+   ],
+   "family": "reverse-sales-tax",
+   "signature": "total after 8% tax 64.80 -> 60; traps 59.62 (x0.92), 56.80 (minus 8 dollars), 69.98 (x1.08)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a store, an 8% sales tax is added to the price of a jacket. The total cost of the jacket, including tax, is $\\$64.80$. What is the price of the jacket before tax?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\$56.80$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts 8 dollars. The tax is 8 percent of the price, not 8 dollars."
+    },
+    {
+     "key": "B",
+     "text": "$\\$59.62$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes 8% off the total. The 8% was figured on the pre-tax price, which is smaller than the total."
+    },
+    {
+     "key": "C",
+     "text": "$\\$60.00$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\$69.98$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds another 8% to the total, which moves in the wrong direction."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Adding 8% tax multiplies the price by 1.08. To undo it, divide the total by 1.08.",
+    "steps": "The question asks for the price before tax.<br>Let $p$ = the price before tax, in dollars.<br>$1.08p = 64.80$ <span class=\"nt\">(price plus 8% of the price)</span><br>$p = \\frac{64.80}{1.08}$ <span class=\"nt\">(divide both sides by 1.08)</span><br>$p = 60$ <span class=\"nt\">(divide)</span><br>So the jacket costs $\\$60.00$ before tax.",
+    "check": "$8\\%$ of $\\$60$ is $\\$4.80$, and $60 + 4.80 = 64.80$ ✓",
+    "be_careful": "Taking 8% off the total does not undo adding 8%, because the two 8% are of different amounts.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-002",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C2"
+   ],
+   "family": "percent-greater-from-two-numbers",
+   "signature": "84 vs 35: (84-35)/35 = 140%; traps 240% (ratio), 49% (difference), 58.3% (difference over 84)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The number 84 is what percent greater than the number 35?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$49\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "49 is the difference $84 - 35$. It still has to be compared with 35."
+    },
+    {
+     "key": "B",
+     "text": "$58.3\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides the difference by 84. \"Greater than 35\" means 35 is the base."
+    },
+    {
+     "key": "C",
+     "text": "$140\\%$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$240\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "84 is 240% <i>of</i> 35. \"Percent greater\" counts only the amount above 35."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Percent greater = (difference) divided by (the number after \"than\"), times 100.",
+    "steps": "What does the question ask? It asks what percent greater 84 is than 35.<br>The question compares 84 with 35, so 35 is the base.<br>difference $= 84 - 35 = 49$ <span class=\"nt\">(how much greater)</span><br>$\\frac{49}{35} = 1.4$ <span class=\"nt\">(compare with the base, 35)</span><br>$1.4 = 140\\%$ <span class=\"nt\">(multiply by 100)</span><br>So 84 is 140% greater than 35.",
+    "check": "$35 + 1.4(35) = 35 + 49 = 84$ ✓",
+    "be_careful": "\"$p\\%$ greater than\" adds $p\\%$ to the whole; it is not the same as \"$p\\%$ of\".",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-003",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C1"
+   ],
+   "family": "percent-of-percent-spr",
+   "signature": "35% of 40% of 500 = 70; wrong 375 (added 75%)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "What is 35% of 40% of 500?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "70"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "375",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the percents to get 75% of 500. A percent of a percent multiplies."
+    }
+   ],
+   "solution": {
+    "key_idea": "\"Of\" means multiply, so a percent of a percent is a product of two multipliers.",
+    "steps": "The question asks for 35% of a number that is itself 40% of 500.<br>$40\\%$ of $500 = 0.40 \\times 500 = 200$ <span class=\"nt\">(work from the inside)</span><br>$35\\%$ of $200 = 0.35 \\times 200 = 70$ <span class=\"nt\">(then take 35% of that)</span><br>Together: $0.35 \\times 0.40 \\times 500 = 0.14 \\times 500 = 70$.",
+    "check": "70 is 14% of 500, and $0.35 \\times 0.40 = 0.14$ ✓",
+    "be_careful": "Percents of percents multiply; they do not add.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-004",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "return-to-original-after-decrease",
+   "signature": "decrease 20% then increase needed to return = 25%; traps 20 (same percent), 16.7 (20/120), 40",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The price of a printer was decreased by 20% for a sale. After the sale, the sale price was increased by $r\\%$ so that the printer cost the same as it did before the sale. What is the value of $r$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$16\\frac{2}{3}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides 20 by 120, as if the price had gone up 20% first."
+    },
+    {
+     "key": "B",
+     "text": "$20$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "An increase of 20% is figured on the smaller sale price, so it does not bring back all of the 20% lost."
+    },
+    {
+     "key": "C",
+     "text": "$25$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$40$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This doubles the 20%. Doubling has no basis here."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The increase is a percent of the sale price, which is smaller than the original price, so the percent needed is more than 20.",
+    "steps": "The question asks what percent increase on the sale price gets back to the original price.<br>Let the original price be 100 dollars (any value works).<br>sale price $= 0.80 \\times 100 = 80$ <span class=\"nt\">(20% off)</span><br>increase needed $= 100 - 80 = 20$ dollars <span class=\"nt\">(back to 100)</span><br>$\\frac{20}{80} = 0.25$ <span class=\"nt\">(the base is now the sale price, 80)</span><br>So $r = 25$.",
+    "check": "$0.80 \\times 1.25 = 1.00$, so the price returns to the original ✓",
+    "be_careful": "Undoing a 20% decrease needs more than a 20% increase, because the base has shrunk.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-005",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C7"
+   ],
+   "family": "two-way-table-row-percent",
+   "signature": "table clubs by grade; percent of 11th graders in Club B = 33/60 = 55%; traps 73.3 (column), 36.7 (all), 45 (club A)",
+   "abilities": [
+    "I",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the number of students in two clubs at a school, by grade. Each student in the table belongs to exactly one of the two clubs.<br><table class=\"dt\"><tr><th></th><th>Club A</th><th>Club B</th></tr><tr><td>10th grade</td><td>18</td><td>12</td></tr><tr><td>11th grade</td><td>27</td><td>33</td></tr></table>What percent of the 11th-grade students in the table are in Club B?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$36\\frac{2}{3}\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides 33 by all 90 students. The question is about the 11th graders only."
+    },
+    {
+     "key": "B",
+     "text": "$45\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "This is the percent of 11th graders in Club A."
+    },
+    {
+     "key": "C",
+     "text": "$55\\%$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$73\\frac{1}{3}\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides 33 by the 45 students in Club B. That is the percent of Club B who are 11th graders."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "\"Percent of the 11th-grade students\" means the 11th-grade row total is the base.",
+    "steps": "The question asks for a part of the 11th-grade row.<br>11th graders $= 27 + 33 = 60$ <span class=\"nt\">(row total, the base)</span><br>in Club B: 33 <span class=\"nt\">(from the table)</span><br>$\\frac{33}{60} = 0.55$ <span class=\"nt\">(part over base)</span><br>So 55% of the 11th graders are in Club B.",
+    "check": "$55\\%$ of 60 is 33 ✓",
+    "be_careful": "The word after \"percent of\" names the base. Here it is the 11th graders, not Club B.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-006",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C1"
+   ],
+   "family": "p-percent-entry-spr",
+   "signature": "15 defective of 240 is p%; p = 6.25; wrong 0.0625 (fraction entered)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A factory inspected 240 light bulbs and found that 15 of them were defective. The number of defective bulbs is $p\\%$ of the number of bulbs inspected. What is the value of $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "6.25",
+      "25/4"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": ".0625",
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This is the fraction $\\frac{15}{240}$. The value of $p$ is that fraction times 100."
+    },
+    {
+     "value": "16",
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This divides 240 by 15, which flips the comparison."
+    }
+   ],
+   "solution": {
+    "key_idea": "\"$p\\%$ of 240\" is $\\frac{p}{100} \\times 240$. Set it equal to 15.",
+    "steps": "The question asks for $p$, the percent, not the fraction.<br>$\\frac{p}{100} \\times 240 = 15$ <span class=\"nt\">(p% of the inspected bulbs is 15)</span><br>$2.4p = 15$ <span class=\"nt\">(simplify)</span><br>$p = \\frac{15}{2.4} = 6.25$ <span class=\"nt\">(divide by 2.4)</span>",
+    "check": "$6.25\\%$ of 240 is $0.0625 \\times 240 = 15$ ✓",
+    "be_careful": "Enter the percent number $p$, not the decimal 0.0625.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-007",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C3",
+    "P2.C6"
+   ],
+   "family": "reverse-multiplier-in-letters",
+   "signature": "k increased by 30% gives m -> k = m/1.3; traps 0.7m, m-0.3, 1.3m",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "When a positive number $k$ is increased by 30%, the result is $m$. Which of the following expresses $k$ in terms of $m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$k = 0.7m$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes 30% of $m$ away. The 30% was a percent of $k$, not of $m$."
+    },
+    {
+     "key": "B",
+     "text": "$k = \\frac{m}{1.3}$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$k = m - 0.3$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This subtracts 0.3 as a number. A 30% change multiplies $k$ by 1.3."
+    },
+    {
+     "key": "D",
+     "text": "$k = 1.3m$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "This is the relationship turned around; it would make $k$ bigger than $m$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Increasing by 30% multiplies by 1.3, so $m = 1.3k$. Solve for $k$.",
+    "steps": "The question asks for $k$ written using $m$.<br>$m = k + 0.3k$ <span class=\"nt\">(k plus 30% of k)</span><br>$m = 1.3k$ <span class=\"nt\">(combine)</span><br>$k = \\frac{m}{1.3}$ <span class=\"nt\">(divide both sides by 1.3)</span><br>Dividing by 1.3 undoes the increase; multiplying $m$ by 0.7 would treat the 30% as a percent of $m$, which is the wrong base.",
+    "check": "Try $k = 10$: $m = 13$, and $\\frac{13}{1.3} = 10$ ✓, while $0.7(13) = 9.1$ is not 10.",
+    "be_careful": "Reversing a percent increase is a division, not a subtraction of the same percent.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-008",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C2"
+   ],
+   "family": "three-hundred-percent-greater",
+   "signature": "m is 300% greater than 15 -> 60; traps 45 (x3), 18 (+3), 315 (+300)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The number $m$ is 300% greater than 15. What is the value of $m$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D19",
+     "feedback": "This adds 3 to 15 instead of adding 300% of 15."
+    },
+    {
+     "key": "B",
+     "text": "$45$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "45 is 300% <i>of</i> 15. Being 300% greater means adding 300% of 15 to the 15."
+    },
+    {
+     "key": "C",
+     "text": "$60$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$315$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "This adds the number 300 to 15."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "\"300% greater than 15\" means 15 plus 300% of 15, which is 400% of 15.",
+    "steps": "The question asks for a number 300% greater than 15.<br>$300\\%$ of $15 = 3 \\times 15 = 45$ <span class=\"nt\">(the amount added)</span><br>$m = 15 + 45 = 60$ <span class=\"nt\">(start plus the increase)</span><br>In one step: $m = (1 + 3)(15) = 4(15) = 60$. <span class=\"nt\">(300% greater means 100% + 300% = 4 times 15)</span>",
+    "check": "$60 - 15 = 45$, and $\\frac{45}{15} = 3 = 300\\%$ ✓",
+    "be_careful": "\"Greater than\" keeps the original 100%, so 300% greater is 4 times as much.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-009",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C5"
+   ],
+   "family": "percent-of-a-subgroup",
+   "signature": "800 respondents, 45% pet owners, 30% of owners have cat -> 108; traps 240 (30% of all), 360 (owners), 600",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a survey of 800 people, 45% said they own a pet. Of the people who own a pet, 30% said they own a cat. How many of the people surveyed said they own a cat?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$108$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$240$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes 30% of all 800 people. The 30% is of the pet owners only."
+    },
+    {
+     "key": "C",
+     "text": "$360$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "360 is the number of pet owners; the question asks for cat owners."
+    },
+    {
+     "key": "D",
+     "text": "$600$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 45% and 30% and takes 75% of 800."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The 30% is a percent of the pet owners, so first find how many people own a pet.",
+    "steps": "The question asks how many people own a cat.<br>pet owners $= 0.45 \\times 800 = 360$ <span class=\"nt\">(45% of everyone)</span><br>cat owners $= 0.30 \\times 360 = 108$ <span class=\"nt\">(30% of the pet owners)</span><br>The 30% applies to the pet owners only, so the second percent is taken of 360, not of all 800 people surveyed.",
+    "check": "$108$ is $13.5\\%$ of 800, and $0.45 \\times 0.30 = 0.135$ ✓",
+    "be_careful": "Each percent has its own base. Read what follows \"of\".",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-010",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "two-discounts-on-sale-price",
+   "signature": "list 80, 25% off then 10% off the sale price -> 54; traps 52 (35% off), 60 (stopped), 72 (coupon only)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A lamp has a list price of $\\$80$. During a sale, the price is reduced by 25%. A coupon then takes 10% off the sale price. What is the final price of the lamp?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\$52$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the discounts to make 35% off. The 10% is taken from the sale price, not from the list price."
+    },
+    {
+     "key": "B",
+     "text": "$\\$54$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$\\$60$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is the sale price before the coupon."
+    },
+    {
+     "key": "D",
+     "text": "$\\$72$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This uses only the 10% coupon on the list price and skips the 25% sale."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Each discount multiplies the current price: $0.75$ for 25% off, then $0.90$ for 10% off.",
+    "steps": "The question asks for the price after both discounts.<br>sale price $= 0.75 \\times 80 = 60$ <span class=\"nt\">(25% off the list price)</span><br>final price $= 0.90 \\times 60 = 54$ <span class=\"nt\">(10% off the sale price)</span><br>Together: $80 \\times 0.75 \\times 0.90 = 80 \\times 0.675 = 54$.",
+    "check": "The total discount is $80 - 54 = 26$ dollars, which is 32.5% of 80, less than 35% ✓",
+    "be_careful": "Two discounts in a row are not one discount of their sum.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-011",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C2",
+    "P2.C7"
+   ],
+   "family": "percent-decrease-from-table",
+   "signature": "sales 250 -> 210 is 16% decrease; traps 19 (over 210), 40 (difference), 84",
+   "abilities": [
+    "I",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the number of bicycles a shop sold in two years.<br><table class=\"dt\"><tr><th>Year</th><th>Bicycles sold</th></tr><tr><td>2024</td><td>250</td></tr><tr><td>2025</td><td>210</td></tr></table>By what percent did the number of bicycles sold decrease from 2024 to 2025?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$16\\%$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$19\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides the decrease by the 2025 value. A change from 2024 uses 2024 as the base (and $\\frac{40}{210}$ is about 19%)."
+    },
+    {
+     "key": "C",
+     "text": "$40\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "40 is the number of bicycles lost, not a percent."
+    },
+    {
+     "key": "D",
+     "text": "$84\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "2025 sales are 84% <i>of</i> 2024 sales. The decrease is $100\\% - 84\\%$."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Percent decrease = (amount of decrease) divided by the starting value.",
+    "steps": "The question asks for a percent change from 2024, so 2024 is the base.<br>decrease $= 250 - 210 = 40$ <span class=\"nt\">(old minus new)</span><br>$\\frac{40}{250} = 0.16$ <span class=\"nt\">(divide by the starting value)</span><br>So the decrease is 16%.",
+    "check": "$250 \\times 0.84 = 210$ ✓",
+    "be_careful": "Use the starting year as the base.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-012",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C5"
+   ],
+   "family": "percent-of-the-remaining",
+   "signature": "1,250 cars, 8% electric, 30% of the remaining hybrid -> 345; traps 375, 100, 445",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A parking garage holds 1,250 cars. Of these cars, 8% are electric. Of the cars that are not electric, 30% are hybrids. How many of the cars are hybrids?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$100$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "100 is the number of electric cars."
+    },
+    {
+     "key": "B",
+     "text": "$345$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$375$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes 30% of all 1,250 cars. The 30% is only of the cars that are not electric."
+    },
+    {
+     "key": "D",
+     "text": "$445$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This adds the 100 electric cars to the hybrids."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "\"Of the cars that are not electric\" changes the base to the cars left after removing the electric ones.",
+    "steps": "The question asks for the number of hybrids.<br>electric $= 0.08 \\times 1{,}250 = 100$ <span class=\"nt\">(8% of all cars)</span><br>not electric $= 1{,}250 - 100 = 1{,}150$ <span class=\"nt\">(the new base)</span><br>hybrids $= 0.30 \\times 1{,}150 = 345$ <span class=\"nt\">(30% of that base)</span>",
+    "check": "$1{,}250 \\times 0.92 \\times 0.30 = 345$ ✓",
+    "be_careful": "Find the new base before taking the second percent.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-013",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C1"
+   ],
+   "family": "fraction-of-a-percent-whole",
+   "signature": "12 is 0.4% of n -> 3000; traps 30 (0.4 as whole), 300 (4%), 4.8",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The number 12 is 0.4% of $n$. What is the value of $n$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4.8$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This finds 40% of 12 instead of finding the number that 12 is a small part of."
+    },
+    {
+     "key": "B",
+     "text": "$30$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This divides 12 by 0.4, treating 0.4% as the decimal 0.4."
+    },
+    {
+     "key": "C",
+     "text": "$300$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This treats 0.4% as 0.04, which is 4%."
+    },
+    {
+     "key": "D",
+     "text": "$3{,}000$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "0.4% is less than one percent: $0.4\\% = \\frac{0.4}{100} = 0.004$.",
+    "steps": "The question asks for the whole, $n$.<br>$0.004n = 12$ <span class=\"nt\">(0.4% of n is 12)</span><br>$n = \\frac{12}{0.004}$ <span class=\"nt\">(divide both sides by 0.004)</span><br>$n = 3{,}000$ <span class=\"nt\">(divide)</span><br>Because 0.4% is less than 1%, the whole must be more than 100 times the part, and 3,000 is 250 times 12.",
+    "check": "$1\\%$ of 3,000 is 30, so $0.4\\%$ is $0.4 \\times 30 = 12$ ✓",
+    "be_careful": "A percent under 1% still has to be divided by 100.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-014",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "area-after-side-percent",
+   "signature": "square side +10% -> area +21%; traps 10, 20, 121",
+   "abilities": [
+    "S",
+    "G"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Each side of a square is increased by 10%. By what percent does the area of the square increase?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$10\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D21",
+     "feedback": "This treats area like length. The area uses the side twice."
+    },
+    {
+     "key": "B",
+     "text": "$20\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 10% twice. The two factors of 1.1 multiply."
+    },
+    {
+     "key": "C",
+     "text": "$21\\%$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$121\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "The new area is 121% <i>of</i> the old area; the increase is $121\\% - 100\\%$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Area is side times side, so the area is multiplied by $1.1 \\times 1.1$.",
+    "steps": "The question asks for the percent increase of the area.<br>Let $s$ = the original side; the original area is $s^{2}$.<br>new side $= 1.1s$ <span class=\"nt\">(10% longer)</span><br>new area $= (1.1s)^{2} = 1.21s^{2}$ <span class=\"nt\">(square both factors)</span><br>increase $= 1.21s^{2} - s^{2} = 0.21s^{2}$ <span class=\"nt\">(new minus old)</span><br>So the area increases by 21%.",
+    "check": "With $s = 10$: area goes from 100 to $11^{2} = 121$, an increase of 21 out of 100 ✓",
+    "be_careful": "Percent changes multiply when the quantities multiply.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-015",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C2"
+   ],
+   "family": "more-than-vs-less-than",
+   "signature": "A is 20% more than B -> B is 16 2/3% less than A; traps 20, 80, 83 1/3",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The population of Town $A$ is 20% greater than the population of Town $B$. The population of Town $B$ is what percent less than the population of Town $A$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$16\\frac{2}{3}\\%$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$20\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "The 20% used Town $B$ as the base. Comparing with Town $A$ changes the base."
+    },
+    {
+     "key": "C",
+     "text": "$80\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This is $100\\% - 20\\%$; it is neither the comparison asked for nor a percent less."
+    },
+    {
+     "key": "D",
+     "text": "$83\\frac{1}{3}\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "Town $B$ is $83\\frac{1}{3}\\%$ <i>of</i> Town $A$. The amount less is the rest."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "\"Less than Town $A$\" makes Town $A$ the base.",
+    "steps": "What does the question ask? It asks what percent less the population of Town $B$ is than that of Town $A$.<br>The question compares Town $B$ with Town $A$, so Town $A$ is the base.<br>Let Town $B$ have 100 people.<br>Town $A$ $= 1.20 \\times 100 = 120$ <span class=\"nt\">(20% greater)</span><br>difference $= 120 - 100 = 20$ <span class=\"nt\">(how much less B is)</span><br>$\\frac{20}{120} = \\frac{1}{6} = 16\\frac{2}{3}\\%$ <span class=\"nt\">(divide by the base, 120)</span>",
+    "check": "$120$ decreased by $16\\frac{2}{3}\\%$ is $120 - 20 = 100$ ✓",
+    "be_careful": "Switching which town comes after \"than\" switches the base.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-016",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C1"
+   ],
+   "family": "tip-and-tax-on-same-base-spr",
+   "signature": "$40 meal, 15% tip on pre-tax, 8% tax -> 49.20; wrong 49.68 (tip on taxed amount)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A restaurant bill for a meal is $\\$40.00$ before tax. A sales tax of 8% of the $\\$40.00$ is added, and a tip of 15% of the $\\$40.00$ is also added. What is the total amount paid, in dollars?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "49.2",
+      "49.20",
+      "246/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "49.68",
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes the tip on the price after tax. The tip is 15% of the $\\$40.00$."
+    },
+    {
+     "value": "46",
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This adds only the tip."
+    }
+   ],
+   "solution": {
+    "key_idea": "Both percents are of the same $\\$40.00$, so they can be added: $8\\% + 15\\% = 23\\%$ of 40.",
+    "steps": "The question asks for the meal plus tax plus tip.<br>tax $= 0.08 \\times 40 = 3.20$ <span class=\"nt\">(8% of 40)</span><br>tip $= 0.15 \\times 40 = 6.00$ <span class=\"nt\">(15% of 40)</span><br>total $= 40 + 3.20 + 6.00 = 49.20$ <span class=\"nt\">(add all three)</span><br>Same base, so this is also $1.23 \\times 40 = 49.20$.",
+    "check": "$49.20 - 40 = 9.20$, and $\\frac{9.20}{40} = 0.23 = 8\\% + 15\\%$ ✓",
+    "be_careful": "Percents of the same base add; percents of different bases do not.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-017",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C6"
+   ],
+   "family": "build-tax-plus-flat-fee",
+   "signature": "price p, 6% tax on p only, plus $3 untaxed fee -> 1.06p + 3; traps 1.06(p+3), 0.06p+3, p+3.06",
+   "abilities": [
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An online store charges a 6% sales tax on the price of an item. It also charges a flat shipping fee of $\\$3$, which is not taxed. Which expression gives the total cost, in dollars, of an item with a price of $p$ dollars?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.06p + 3$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "This is only the tax plus shipping; it leaves out the price itself."
+    },
+    {
+     "key": "B",
+     "text": "$1.06p + 3$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$1.06(p + 3)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This also taxes the shipping fee, but the fee is not taxed."
+    },
+    {
+     "key": "D",
+     "text": "$p + 3.06$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This adds 0.06 dollars as if the tax were a fixed amount."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The price plus 6% of the price is $1.06p$; the untaxed fee is added after.",
+    "steps": "The question asks for the price plus tax plus shipping.<br>tax $= 0.06p$ <span class=\"nt\">(6% of the price)</span><br>price with tax $= p + 0.06p = 1.06p$ <span class=\"nt\">(combine)</span><br>total $= 1.06p + 3$ <span class=\"nt\">(add the untaxed fee)</span>",
+    "check": "For $p = 100$: $100 + 6 + 3 = 109$, and $1.06(100) + 3 = 109$ ✓",
+    "be_careful": "Only the price is taxed, so the 3 stays outside the 1.06.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-018",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C2"
+   ],
+   "family": "percent-vs-percentage-points",
+   "signature": "rate 4% -> 5%: increase of 25 percent (1 point); traps 1, 20, 125",
+   "abilities": [
+    "I",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A bank raised the interest rate on a savings account from 4% to 5%. The new interest rate is what percent greater than the old interest rate?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The rate rose by 1 percentage point. As a percent of the old rate, 4%, that is larger."
+    },
+    {
+     "key": "B",
+     "text": "$20\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides the 1-point change by the new rate, 5%. The base is the old rate."
+    },
+    {
+     "key": "C",
+     "text": "$25\\%$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$125\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "The new rate is 125% <i>of</i> the old rate; the increase is 25%."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A change from 4 to 5 is a change of 1 on a base of 4, whatever the units are.",
+    "steps": "The question asks for a percent increase of the rate itself.<br>change $= 5 - 4 = 1$ percentage point <span class=\"nt\">(new minus old)</span><br>$\\frac{1}{4} = 0.25$ <span class=\"nt\">(divide by the old rate)</span><br>So the rate increased by 25%.",
+    "check": "$4 \\times 1.25 = 5$ ✓",
+    "be_careful": "Percentage points measure the gap; percent change compares the gap with the old rate.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-019",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C5"
+   ],
+   "family": "combined-percent-two-groups",
+   "signature": "40 students 25% + 60 students 40% -> 34%; traps 32.5 (average), 65 (sum), 40",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In Class $X$, 25% of the 40 students have a part-time job. In Class $Y$, 40% of the 60 students have a part-time job. No student is in both classes. What percent of the students in the two classes combined have a part-time job?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$32.5\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This averages 25% and 40%. The classes have different sizes, so the plain average does not work."
+    },
+    {
+     "key": "B",
+     "text": "$34\\%$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$40\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This uses only Class $Y$."
+    },
+    {
+     "key": "D",
+     "text": "$65\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the two percents, which have different bases."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Count the students with jobs in each class, then divide by all the students.",
+    "steps": "The question asks for a percent of all 100 students.<br>Class $X$: $0.25 \\times 40 = 10$ students <span class=\"nt\">(jobs in X)</span><br>Class $Y$: $0.40 \\times 60 = 24$ students <span class=\"nt\">(jobs in Y)</span><br>total with jobs $= 10 + 24 = 34$ <span class=\"nt\">(add counts)</span><br>$\\frac{34}{40 + 60} = \\frac{34}{100} = 34\\%$ <span class=\"nt\">(divide by all students)</span>",
+    "check": "34% is between 25% and 40% and closer to 40%, because Class $Y$ is larger ✓",
+    "be_careful": "Combine counts, not percents.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-020",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "M",
+   "concepts": [
+    "P2.C3"
+   ],
+   "family": "reverse-percent-increase-spr",
+   "signature": "rent after 15% increase 1,380 -> 1,200; wrong 1,173 (x0.85)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The monthly rent for an apartment increased by 15%. The new monthly rent is $\\$1{,}380$. What was the monthly rent, in dollars, before the increase?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1200"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1173",
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes 15% off $\\$1{,}380$. The 15% was of the old rent, so the new rent must be divided by 1.15."
+    },
+    {
+     "value": "1365",
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "This subtracts 15 dollars."
+    }
+   ],
+   "solution": {
+    "key_idea": "The new rent is 115% of the old rent. Divide by 1.15 to go back.",
+    "steps": "The question asks for the rent before the increase.<br>Let $r$ = the old monthly rent, in dollars.<br>$1.15r = 1{,}380$ <span class=\"nt\">(old rent plus 15%)</span><br>$r = \\frac{1{,}380}{1.15} = 1{,}200$ <span class=\"nt\">(divide by 1.15)</span>",
+    "check": "$15\\%$ of 1,200 is 180, and $1{,}200 + 180 = 1{,}380$ ✓",
+    "be_careful": "To reverse an increase, divide; do not subtract the same percent.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-021",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "greater-then-less-chain-percent-greater",
+   "signature": "killer hp-psda10-3: x is 250% greater than y; z is 30% less than x -> z = 2.45y, 145% greater; traps 75 (250% greater read as x2.5), 220 (250 - 30), 245 (z as a percent of y)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The positive number $x$ is 250% greater than the positive number $y$, and the number $z$ is 30% less than $x$. The number $z$ is what percent greater than $y$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$75\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This uses $x = 2.5y$. Being 250% greater keeps the whole $y$ and adds 250% of it, so $x = 3.5y$."
+    },
+    {
+     "key": "B",
+     "text": "$145\\%$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$220\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts 30 from 250. Percent changes in a chain multiply; they do not add."
+    },
+    {
+     "key": "D",
+     "text": "$245\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$z$ is 245% <i>of</i> $y$. The question asks how much greater, so subtract the 100% that is $y$ itself."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Turn each phrase into a multiplier: \"250% greater than\" is $\\times 3.5$ and \"30% less than\" is $\\times 0.7$.",
+    "steps": "The question asks how much greater $z$ is than $y$, as a percent of $y$.<br>$x = y + 2.5y = 3.5y$ <span class=\"nt\">(250% greater keeps the whole $y$)</span><br>$z = 0.7x$ <span class=\"nt\">(30% less than $x$)</span><br>$z = 0.7(3.5y) = 2.45y$ <span class=\"nt\">(substitute)</span><br>$z - y = 1.45y$ <span class=\"nt\">(the amount by which $z$ is greater)</span><br>So $z$ is 145% greater than $y$.<br>Why it works: \"of\" gives the whole multiplier (245%), while \"greater than\" asks only for the extra part (145%).",
+    "check": "Take $y = 100$: $x = 350$, $z = 0.7 \\times 350 = 245$, and $245 - 100 = 145$, which is 145% of 100 ✓",
+    "be_careful": "Two traps sit in one problem: \"250% greater\" means $\\times 3.5$, and \"greater than\" means subtract the 100% at the end.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-022",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C5"
+   ],
+   "family": "add-pure-solute-mixture-spr",
+   "signature": "400 mL at 15% acid + a mL pure acid -> 20%; a = 25; wrong 20 (5% of 400)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A chemist has 400 milliliters of a solution that is 15% acid by volume. How many milliliters of pure acid must be added to make a solution that is 20% acid by volume?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "20",
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This adds 5% of the original 400 mL. Adding acid also increases the total volume, so the 20% is of a larger amount."
+    }
+   ],
+   "solution": {
+    "key_idea": "Pure acid raises the acid and the total by the same amount. Track both.",
+    "steps": "The question asks how much pure acid to add.<br>Let $a$ = the milliliters of pure acid added.<br>acid now $= 0.15 \\times 400 = 60$ mL <span class=\"nt\">(15% of the solution)</span><br>acid after $= 60 + a$; total after $= 400 + a$ <span class=\"nt\">(both grow by a)</span><br>$60 + a = 0.20(400 + a)$ <span class=\"nt\">(acid is 20% of the new total)</span><br>$60 + a = 80 + 0.2a$ <span class=\"nt\">(distribute)</span><br>$0.8a = 20$ <span class=\"nt\">(subtract 0.2a and 60)</span><br>$a = 25$ <span class=\"nt\">(divide by 0.8)</span>",
+    "check": "Acid $85$ mL out of $425$ mL: $\\frac{85}{425} = 0.2$ ✓",
+    "be_careful": "The total grows too, so the answer is more than 5% of 400.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-023",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C2"
+   ],
+   "family": "share-to-percent-less",
+   "signature": "yes is 3/8 of all, rest no -> yes is 40% less than no; traps 25 (points), 37.5 (share), 66.7 (no vs yes)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a survey, every person answered either \"yes\" or \"no\" to a question. The number of people who answered \"yes\" was $\\frac{3}{8}$ of the total number of people surveyed. The number of \"yes\" answers was what percent less than the number of \"no\" answers?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$25\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This is the gap in percentage points, $62.5\\% - 37.5\\%$. \"Percent less than the no answers\" divides that gap by the \"no\" share."
+    },
+    {
+     "key": "B",
+     "text": "$37.5\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "This is the \"yes\" share of everyone, which comes straight from $\\frac{3}{8}$."
+    },
+    {
+     "key": "C",
+     "text": "$40\\%$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$66\\frac{2}{3}\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides the gap by the \"yes\" count. That says how much greater \"no\" is than \"yes\"."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Use parts: \"yes\" is 3 parts and \"no\" is 5 parts. The comparison is with \"no\", so \"no\" is the base.",
+    "steps": "What does the question ask? It asks what percent less the number of \"yes\" answers was than the number of \"no\" answers.<br>The question compares \"yes\" with \"no\", so the \"no\" count is the base.<br>yes $= 3$ parts, no $= 8 - 3 = 5$ parts <span class=\"nt\">(everyone answered one or the other)</span><br>gap $= 5 - 3 = 2$ parts <span class=\"nt\">(how many fewer yes answers)</span><br>$\\frac{2}{5} = 0.40$ <span class=\"nt\">(gap divided by the base, no)</span><br>So \"yes\" was 40% less than \"no\".",
+    "check": "With 80 people: 30 yes and 50 no. $50 \\times 0.60 = 30$ ✓",
+    "be_careful": "A difference of percentage points is not a percent difference.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-024",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C5"
+   ],
+   "family": "percent-of-another-subgroup",
+   "signature": "30% band, 40% of band seniors, seniors 25% of school -> 48% of seniors in band; traps 12, 40, 75",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a high school, 30% of the students are in the band, and 40% of the students in the band are seniors. Seniors make up 25% of all the students at the school. What percent of the seniors at the school are in the band?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$12\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D20",
+     "feedback": "12% is the percent of all students who are seniors in the band. The question uses only the seniors as the base."
+    },
+    {
+     "key": "B",
+     "text": "$40\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "40% is the percent of band members who are seniors. The question turns this around."
+    },
+    {
+     "key": "C",
+     "text": "$48\\%$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$75\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides 30% by 40%, which does not describe any group of students."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Find the senior band members as a share of the school, then compare with all seniors.",
+    "steps": "The question asks: out of the seniors, what percent are in the band? The base is the seniors.<br>Let the school have 1,000 students.<br>band $= 0.30 \\times 1{,}000 = 300$ <span class=\"nt\">(30% of the school)</span><br>seniors in band $= 0.40 \\times 300 = 120$ <span class=\"nt\">(40% of the band)</span><br>all seniors $= 0.25 \\times 1{,}000 = 250$ <span class=\"nt\">(25% of the school)</span><br>$\\frac{120}{250} = 0.48$ <span class=\"nt\">(seniors in band over all seniors)</span><br>So 48% of the seniors are in the band.",
+    "check": "120 is 40% of the 300 band members and 48% of the 250 seniors ✓",
+    "be_careful": "The same group (senior band members) is 40% of one base and 48% of another.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-025",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "per-mille-entry-chain-spr",
+   "signature": "x is 0.6% of y; y is 40% greater than z; x = (p/1000) z -> p = 8.4; wrong 2.4 (x0.4), 84",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The positive number $x$ is 0.6% of $y$, and $y$ is 40% greater than $z$. If $x = \\frac{p}{1{,}000}z$, what is the value of $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8.4",
+      "42/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2.4",
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This uses 0.4 for \"40% greater\". The multiplier for 40% greater is 1.4."
+    },
+    {
+     "value": "84",
+     "error_type": "slip",
+     "misconception": "D19",
+     "feedback": "This writes the answer per hundred instead of per thousand."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write $x$ in terms of $z$ as a decimal, then match it to the form $\\frac{p}{1{,}000}$.",
+    "steps": "The question asks for $p$ in $x = \\frac{p}{1{,}000}z$.<br>$x = 0.006y$ <span class=\"nt\">(0.6% is 0.006)</span><br>$y = 1.4z$ <span class=\"nt\">(40% greater than z)</span><br>$x = 0.006(1.4z) = 0.0084z$ <span class=\"nt\">(substitute)</span><br>$0.0084 = \\frac{8.4}{1{,}000}$ <span class=\"nt\">(move the decimal three places)</span><br>So $p = 8.4$.<br>Each percent is turned into a multiplier first, and only then are the two multipliers combined into one number.",
+    "check": "Take $z = 1{,}000$: $y = 1{,}400$, $x = 0.006 \\times 1{,}400 = 8.4$, and $\\frac{8.4}{1{,}000}(1{,}000) = 8.4$ ✓",
+    "be_careful": "The form asks per thousand, not per hundred.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-026",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C3",
+    "P2.C4"
+   ],
+   "family": "reverse-three-changes-with-coupon",
+   "signature": "paid 43.20: 20% off, then $5 coupon, then 8% tax -> (0.8p - 5)(1.08) = 43.20 -> p = 56.25; traps 45 (40 + 5, forgets the 20%), 50 (ignores coupon), 55.79 (undoes coupon before tax)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A store took 20% off the original price of a pair of shoes. A customer then used a $\\$5.00$ coupon on the sale price, and an 8% sales tax was added to the price after the coupon. The total paid, including tax, was $\\$43.20$. What was the original price of the shoes?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\$45.00$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This adds the coupon back to $\\$40$ but never undoes the 20% discount."
+    },
+    {
+     "key": "B",
+     "text": "$\\$50.00$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This ignores the coupon. The $\\$40$ before tax is the price after the coupon."
+    },
+    {
+     "key": "C",
+     "text": "$\\$55.79$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds the $\\$5$ back before removing the tax. The tax was charged last, so it must be undone first."
+    },
+    {
+     "key": "D",
+     "text": "$\\$56.25$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Undo the changes in reverse order: tax first, then the coupon, then the discount.",
+    "steps": "The question asks for the price before all three changes.<br>Let $p$ = the original price, in dollars.<br>total $= 1.08(0.80p - 5)$ <span class=\"nt\">(discount, then coupon, then tax)</span><br>$1.08(0.80p - 5) = 43.20$ <span class=\"nt\">(the total paid)</span><br>$0.80p - 5 = 40$ <span class=\"nt\">(divide by 1.08)</span><br>$0.80p = 45$ <span class=\"nt\">(add 5)</span><br>$p = \\frac{45}{0.80} = 56.25$ <span class=\"nt\">(divide by 0.80)</span><br>Why it works: the last change made is the first one undone, like taking off shoes and socks.",
+    "check": "$56.25 \\times 0.80 = 45$, $45 - 5 = 40$, and $40 \\times 1.08 = 43.20$ ✓",
+    "be_careful": "The coupon is a dollar amount, not a percent, so it cannot be combined with the 20% into one multiplier.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-027",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C3",
+    "P2.C7"
+   ],
+   "family": "reverse-from-table-all-equal",
+   "signature": "table 2025 prices + percent change from 2024: 63 (+5%), 72 (+20%), 51 (-15%) -> all 60 in 2024; wrong-base reverse makes A look greatest",
+   "abilities": [
+    "I",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the 2025 price of three items and the percent change in each price from 2024 to 2025.<br><table class=\"dt\"><tr><th>Item</th><th>2025 price</th><th>Change from 2024 to 2025</th></tr><tr><td>A</td><td>$\\$63$</td><td>5% increase</td></tr><tr><td>B</td><td>$\\$72$</td><td>20% increase</td></tr><tr><td>C</td><td>$\\$51$</td><td>15% decrease</td></tr></table>Which item had the greatest price in 2024?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Item A",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "Taking 5% off $\\$63$, 20% off $\\$72$, and adding 15% to $\\$51$ makes Item A look greatest, but each percent was of the 2024 price, so each 2025 price must be divided by its multiplier."
+    },
+    {
+     "key": "B",
+     "text": "Item B",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Item B has the greatest 2025 price, but it also had the largest increase."
+    },
+    {
+     "key": "C",
+     "text": "Item C",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Item C is the only price that fell, so its 2024 price was above $\\$51$, but not above the others: dividing each 2025 price by its multiplier gives $\\$60$ for all three."
+    },
+    {
+     "key": "D",
+     "text": "All three items had the same price in 2024.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Each percent change used the 2024 price as the base. Divide each 2025 price by its multiplier.",
+    "steps": "The question asks for the 2024 prices.<br>Item A: $\\frac{63}{1.05} = 60$ <span class=\"nt\">(5% increase means 2025 price = 1.05 times 2024 price)</span><br>Item B: $\\frac{72}{1.20} = 60$ <span class=\"nt\">(20% increase)</span><br>Item C: $\\frac{51}{0.85} = 60$ <span class=\"nt\">(15% decrease means times 0.85)</span><br>All three items cost $\\$60$ in 2024.",
+    "check": "$60 \\times 1.05 = 63$, $60 \\times 1.20 = 72$, $60 \\times 0.85 = 51$ ✓",
+    "be_careful": "Undoing a percent change means dividing by the multiplier, not applying the opposite percent.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-028",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C1",
+    "P2.C5"
+   ],
+   "family": "margin-to-total-spr",
+   "signature": "winner 54% of votes, two candidates, won by 600 -> 7,500; wrong 15,000 (4% margin)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In an election with exactly two candidates, every vote went to one of the two candidates. The winner received 54% of the votes and received 600 more votes than the other candidate. How many votes were cast in the election?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "7500"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "15000",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats the 600 votes as 4% (the amount above 50%). The margin is the gap between 54% and 46%, which is 8%."
+    },
+    {
+     "value": "1111",
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides 600 by 0.54, as if the margin were the winner’s whole total."
+    }
+   ],
+   "solution": {
+    "key_idea": "The margin is the difference of the two shares: $54\\% - 46\\% = 8\\%$ of all votes.",
+    "steps": "The question asks for the total number of votes.<br>Let $T$ = the total number of votes.<br>loser’s share $= 100\\% - 54\\% = 46\\%$ <span class=\"nt\">(only two candidates)</span><br>$0.54T - 0.46T = 600$ <span class=\"nt\">(the winner got 600 more)</span><br>$0.08T = 600$ <span class=\"nt\">(subtract)</span><br>$T = \\frac{600}{0.08} = 7{,}500$ <span class=\"nt\">(divide)</span><br>Why not 15,000? That treats 600 as 4%, the winner’s lead over half; the gap between the two candidates is twice that lead.",
+    "check": "$0.54 \\times 7{,}500 = 4{,}050$ and $0.46 \\times 7{,}500 = 3{,}450$; $4{,}050 - 3{,}450 = 600$ ✓",
+    "be_careful": "The margin is the gap between the two shares, not the amount above half.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-029",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C2",
+    "P2.C7"
+   ],
+   "family": "greatest-percent-vs-greatest-amount",
+   "signature": "table 80,100,129,165,210; percents 25, 29, 27.9, 27.3 -> greatest 2022->2023 while greatest amount is 2024->2025 (45); close percents force exact comparison",
+   "abilities": [
+    "I",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The table shows the number of members of a hiking club at the start of each year.<br><table class=\"dt\"><tr><th>Year</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th></tr><tr><td>Members</td><td>80</td><td>100</td><td>129</td><td>165</td><td>210</td></tr></table>Over which one-year period did the number of members increase by the greatest percent?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "2021 to 2022",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This period starts from the smallest number, but its increase, 20, is only 25% of 80."
+    },
+    {
+     "key": "B",
+     "text": "2022 to 2023",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "2023 to 2024",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This increase, 36, is greater than 29, but 36 out of 129 is about 27.9%, less than 29%."
+    },
+    {
+     "key": "D",
+     "text": "2024 to 2025",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This period has the greatest increase in members, 45, but 45 out of 165 is only about 27.3%."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A percent increase compares the increase with the starting number of that period. The largest increase in members is not always the largest percent.",
+    "steps": "The question asks for the greatest percent increase, so each increase is divided by its own starting year.<br>2021 to 2022: $\\frac{20}{80} = 25\\%$ <span class=\"nt\">(increase over start)</span><br>2022 to 2023: $\\frac{29}{100} = 29\\%$ <span class=\"nt\">(increase over start)</span><br>2023 to 2024: $\\frac{36}{129} \\approx 27.9\\%$ <span class=\"nt\">(increase over start)</span><br>2024 to 2025: $\\frac{45}{165} \\approx 27.3\\%$ <span class=\"nt\">(increase over start)</span><br>The greatest percent increase is from 2022 to 2023.<br>Why it works: the later increases are larger, but so are the numbers they start from.",
+    "check": "A 29% increase on 129 would need about 37.4 more members, but only 36 joined; 29% of 165 is about 47.9, more than 45 ✓",
+    "be_careful": "The percents are close, so estimate carefully or divide; the eye picks the biggest jump.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-030",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C6"
+   ],
+   "family": "percent-discount-in-letters",
+   "signature": "original p, sells for d after r% off -> r = 100(p - d)/p; traps over d, missing 100, d/p",
+   "abilities": [
+    "S",
+    "M"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A store sells a coat that has an original price of $p$ dollars for $d$ dollars after a discount of $r\\%$, where $0 < d < p$. Which of the following expresses $r$ in terms of $p$ and $d$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$r = \\frac{100(p - d)}{d}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides the discount by the sale price. The discount is a percent of the original price."
+    },
+    {
+     "key": "B",
+     "text": "$r = \\frac{p - d}{p}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This is the discount as a fraction. A percent is that fraction times 100."
+    },
+    {
+     "key": "C",
+     "text": "$r = \\frac{100d}{p}$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This is the sale price as a percent of the original price, not the percent taken off."
+    },
+    {
+     "key": "D",
+     "text": "$r = \\frac{100(p - d)}{p}$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The discount in dollars is $p - d$, and the discount percent compares it with the original price $p$.",
+    "steps": "The question asks for $r$, the percent taken off.<br>$d = p\\left(1 - \\frac{r}{100}\\right)$ <span class=\"nt\">(r% off the original price)</span><br>$\\frac{d}{p} = 1 - \\frac{r}{100}$ <span class=\"nt\">(divide both sides by p)</span><br>$\\frac{r}{100} = 1 - \\frac{d}{p} = \\frac{p - d}{p}$ <span class=\"nt\">(rearrange)</span><br>$r = \\frac{100(p - d)}{p}$ <span class=\"nt\">(multiply both sides by 100)</span><br>The discount is measured against the original price, so $p$ is the denominator and $p - d$ is the dollar amount taken off.",
+    "check": "Try $p = 80$, $d = 60$: a $\\$20$ discount on $\\$80$ is 25%, and $\\frac{100(20)}{80} = 25$ ✓",
+    "be_careful": "The base for a discount is the original price.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-031",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C5"
+   ],
+   "family": "share-drops-after-others-join-spr",
+   "signature": "40% boys; 5 girls join; boys now 32% -> class now 25; wrong 20 (stopped at original size)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In a class, 40% of the students are boys. After 5 girls join the class and no one leaves, 32% of the students in the class are boys. How many students are in the class after the 5 girls join?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "20",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "20 is the number of students before the 5 girls joined."
+    },
+    {
+     "value": "8",
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "8 is the number of boys, which stays the same."
+    }
+   ],
+   "solution": {
+    "key_idea": "The number of boys does not change. Write it two ways and set them equal.",
+    "steps": "The question asks for the class size after the 5 girls join.<br>Let $n$ = the number of students before the girls join.<br>boys $= 0.40n$ <span class=\"nt\">(40% of the original class)</span><br>boys $= 0.32(n + 5)$ <span class=\"nt\">(32% of the new class; no boys joined)</span><br>$0.40n = 0.32n + 1.6$ <span class=\"nt\">(set equal and distribute)</span><br>$0.08n = 1.6$ <span class=\"nt\">(subtract 0.32n)</span><br>$n = 20$ <span class=\"nt\">(divide by 0.08)</span><br>After the girls join: $20 + 5 = 25$ students.",
+    "check": "Boys: $0.40 \\times 20 = 8$, and $\\frac{8}{25} = 0.32 = 32\\%$ ✓",
+    "be_careful": "The fixed quantity (the boys) is the bridge between the two percents; the question asks for the new total.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-032",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C4",
+    "P2.C5"
+   ],
+   "family": "two-increases-then-reverse-percent-less",
+   "signature": "killer hp-psda10-2: +25% then +60% -> end = 2 x start -> start is 50% less than end; traps 46 (1 - 1/1.85), 85 (adds), 100 (end is 100% more)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The price of a share of a stock increased by 25% during one year and then increased by 60% during the next year. The price at the beginning of the first year was what percent less than the price at the end of the second year?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$46\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This first adds the percents to get an 85% increase, then compares. The two increases multiply: $1.25 \\times 1.6 = 2$."
+    },
+    {
+     "key": "B",
+     "text": "$50\\%$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$85\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 25% and 60%, and it also answers the wrong direction."
+    },
+    {
+     "key": "D",
+     "text": "$100\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "The end price is 100% <i>greater</i> than the start price. The question compares the start with the end, so the base is the end price."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Multiply the two increases, then compare the start price with the end price, using the end price as the base.",
+    "steps": "The question asks how much less the start price is, as a percent of the end price.<br>Let the start price be 100 (any value works).<br>after year 1: $1.25 \\times 100 = 125$ <span class=\"nt\">(25% increase)</span><br>after year 2: $1.6 \\times 125 = 200$ <span class=\"nt\">(60% increase)</span><br>$200 - 100 = 100$ <span class=\"nt\">(how much less the start price is)</span><br>$\\frac{100}{200} = 50\\%$ <span class=\"nt\">(divide by the end price)</span><br>Why it works: \"less than the end price\" makes the end price the base, so the same gap of 100 is 50% here but 100% the other way.",
+    "check": "$200$ decreased by 50% is $100$, the start price ✓",
+    "be_careful": "The direction of the comparison picks the base: \"start ... less than ... end\" divides by the end price.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-033",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "unknown-middle-link-of-three",
+   "signature": "+20%, then +p%, then -10% -> 62% greater overall: 1.2(1 + p/100)(0.9) = 1.62 -> p = 50; traps 52 (adds: 62 - 20 + 10), 54 (62 - 8), 62 (overall change)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 105,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The number of visitors to a museum increased by 20% from 2021 to 2022, increased by $p\\%$ from 2022 to 2023, and decreased by 10% from 2023 to 2024. The number of visitors in 2024 was 62% greater than the number in 2021. What is the value of $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$50$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$52$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds and subtracts the percents: $62 - 20 + 10 = 52$. Percent changes multiply."
+    },
+    {
+     "key": "C",
+     "text": "$54$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This combines 20% and 10% correctly into $\\times 1.08$, but then subtracts 8 from 62 instead of dividing."
+    },
+    {
+     "key": "D",
+     "text": "$62$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "62 is the total change over all three years, not the middle change."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Successive changes multiply: $1.20 \\times (\\text{middle multiplier}) \\times 0.90 = 1.62$.",
+    "steps": "The question asks for the percent increase in the middle year.<br>$1.20 \\times M \\times 0.90 = 1.62$ <span class=\"nt\">(let $M$ be the middle multiplier)</span><br>$1.08M = 1.62$ <span class=\"nt\">($1.20 \\times 0.90 = 1.08$)</span><br>$M = 1.5$ <span class=\"nt\">(divide by 1.08)</span><br>$1 + \\frac{p}{100} = 1.5$ <span class=\"nt\">(a $p\\%$ increase)</span><br>So $p = 50$.<br>Why it works: the order of multiplying does not matter, so the two known changes can be combined first.",
+    "check": "Start with 100: $120$, then $180$, then $162$, which is 62% greater than 100 ✓",
+    "be_careful": "The 10% decrease comes after the unknown increase, so it is taken from the larger 2023 number.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-034",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C5"
+   ],
+   "family": "drying-keeps-the-dry-part-spr",
+   "signature": "60 kg grain 20% water -> dried to 4% water, dry part fixed 48 -> 50 kg; wrong 50.4",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A 60-kilogram batch of grain is 20% water by mass. The grain is dried until it is 4% water by mass. Only water is lost during drying. What is the mass, in kilograms, of the grain after drying?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "50"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "50.4",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This removes 16% of 60 kg. The water percent drops from 20 to 4, but those percents have different bases."
+    },
+    {
+     "value": "57.6",
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This removes only 4% of the 60 kg."
+    }
+   ],
+   "solution": {
+    "key_idea": "The dry part of the grain does not change. After drying it is 96% of the new mass.",
+    "steps": "The question asks for the total mass after drying.<br>dry part $= 0.80 \\times 60 = 48$ kg <span class=\"nt\">(the part that is not water)</span><br>Let $M$ = the mass after drying.<br>$0.96M = 48$ <span class=\"nt\">(after drying, 100% - 4% = 96% is dry)</span><br>$M = \\frac{48}{0.96} = 50$ <span class=\"nt\">(divide)</span><br>The dry grain is the quantity that stays fixed, so it links the mass before drying to the mass after drying.",
+    "check": "Water left: $50 - 48 = 2$ kg, and $\\frac{2}{50} = 4\\%$ ✓",
+    "be_careful": "Find the part that stays fixed; the water percent alone cannot be subtracted.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-035",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C6"
+   ],
+   "family": "recover-discount-from-combined-multiplier",
+   "signature": "final cost 0.918p = discount d% then 8% tax -> d = 15; traps 8.2, 16.2, 85",
+   "abilities": [
+    "I",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A store finds the final cost of an item with list price $p$ dollars using the expression $0.918p$. The store takes $d\\%$ off the list price and then adds an 8% sales tax to the discounted price. What is the value of $d$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$8.2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "8.2% is the overall decrease after both the discount and the tax, $100\\% - 91.8\\%$."
+    },
+    {
+     "key": "B",
+     "text": "$15$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$16.2$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 8 to the 8.2% overall decrease. The tax multiplies, so it must be divided out."
+    },
+    {
+     "key": "D",
+     "text": "$85$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "0.85 is the multiplier for the discounted price. The percent taken off is $100 - 85$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The expression is two multipliers in one: $(1 - \\frac{d}{100})(1.08) = 0.918$.",
+    "steps": "The question asks for the discount percent $d$.<br>$1.08\\left(1 - \\frac{d}{100}\\right)p = 0.918p$ <span class=\"nt\">(discount, then tax)</span><br>$1 - \\frac{d}{100} = \\frac{0.918}{1.08} = 0.85$ <span class=\"nt\">(divide by 1.08)</span><br>$\\frac{d}{100} = 0.15$ <span class=\"nt\">(subtract from 1)</span><br>So $d = 15$.<br>The tax multiplier 1.08 must be removed by division before the discount multiplier can be found.",
+    "check": "$0.85 \\times 1.08 = 0.918$ ✓",
+    "be_careful": "0.918 already includes the tax, so divide the tax out before reading the discount.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-036",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C6"
+   ],
+   "family": "two-rate-bracket-effective-rate",
+   "signature": "4% on first 2,000, 6% on the rest; total fee is 5.2% of the price -> 80 + 0.06(P - 2000) = 0.052P -> P = 5,000; traps 3,000 (part above), 4,000 (equal split), 10,000 (0.008P = 80)",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A city charges a fee on each sale of a used car. The fee is 4% of the first $\\$2{,}000$ of the sale price plus 6% of the part of the sale price above $\\$2{,}000$. For one car, the fee was 5.2% of the whole sale price. What was the sale price of the car?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$\\$3{,}000$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "$\\$3{,}000$ is only the part of the price above $\\$2{,}000$."
+    },
+    {
+     "key": "B",
+     "text": "$\\$4{,}000$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This splits the price evenly between the two rates. That would give 5%, not 5.2%."
+    },
+    {
+     "key": "C",
+     "text": "$\\$5{,}000$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$\\$10{,}000$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This solves $0.008P = 80$. The fee is $80 + 0.06P - 120$, so the constant is $-40$."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Write the fee two ways, by the bracket rule and as 5.2% of the price, and set them equal.",
+    "steps": "The question asks for the whole sale price $P$, in dollars.<br>bracket rule: $0.04(2{,}000) + 0.06(P - 2{,}000)$ <span class=\"nt\">(each rate on its own piece)</span><br>$= 80 + 0.06P - 120 = 0.06P - 40$ <span class=\"nt\">(simplify)</span><br>$0.06P - 40 = 0.052P$ <span class=\"nt\">(the fee is 5.2% of $P$)</span><br>$0.008P = 40$ <span class=\"nt\">(collect the $P$ terms)</span><br>$P = 5{,}000$ <span class=\"nt\">(divide)</span><br>Why it works: 5.2% sits 60% of the way from 4% to 6%, so 60% of the price, $\\$3{,}000$, is in the 6% part.",
+    "check": "$0.04(2{,}000) + 0.06(3{,}000) = 80 + 180 = 260$, and $0.052(5{,}000) = 260$ ✓",
+    "be_careful": "5.2% is the rate on the whole price; neither bracket rate applies to the whole price.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-037",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C5",
+    "P2.C3"
+   ],
+   "family": "weighted-grade-linked-scores",
+   "signature": "60% project + 40% exam = 80, exam 10 higher than project -> project 76; traps 66, 70, 74",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A course grade is calculated as 60% of a student’s project score plus 40% of the student’s exam score. A student’s course grade was 80, and the student’s exam score was 10 points higher than the project score. What was the student’s project score?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$66$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts both 10 and 4 from 80. The 4 bonus points from the exam should be subtracted only once."
+    },
+    {
+     "key": "B",
+     "text": "$70$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "This subtracts the full 10 points from 80. The exam counts for only 40% of the grade, so the extra 10 points add only 4."
+    },
+    {
+     "key": "C",
+     "text": "$74$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This attaches the 60% weight to the higher exam score. The 60% belongs to the project."
+    },
+    {
+     "key": "D",
+     "text": "$76$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Write the exam score as $j + 10$, where $j$ is the project score, and the weights then combine to $j + 4$.",
+    "steps": "The question asks for the project score.<br>Let $j$ = the project score, so the exam score is $j + 10$.<br>$0.60j + 0.40(j + 10) = 80$ <span class=\"nt\">(the grade rule)</span><br>$0.60j + 0.40j + 4 = 80$ <span class=\"nt\">(distribute)</span><br>$j + 4 = 80$ <span class=\"nt\">(the weights add to 1)</span><br>$j = 76$ <span class=\"nt\">(subtract 4)</span><br>The weights 60% and 40% add to 100%, so the grade is the project score plus 40% of the 10 extra exam points.",
+    "check": "$0.60(76) + 0.40(86) = 45.6 + 34.4 = 80$ ✓",
+    "be_careful": "An extra amount on one part counts only by that part’s weight.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-038",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C4",
+    "P2.C6"
+   ],
+   "family": "same-percent-twice-letters",
+   "signature": "x is p% of y; y is p% of z; x = 0.36z -> p = 60; traps 6, 18, 36",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The positive number $x$ is $p\\%$ of $y$, and $y$ is $p\\%$ of $z$. If $x$ is 36% of $z$, what is the value of $p$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This takes the square root of 36 without changing 36% to 0.36 first."
+    },
+    {
+     "key": "B",
+     "text": "$18$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This splits 36 into two equal parts, as if the percents added."
+    },
+    {
+     "key": "C",
+     "text": "$36$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "36 is the overall percent given in the question."
+    },
+    {
+     "key": "D",
+     "text": "$60$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Two \"$p\\%$ of\" links multiply: $x = \\left(\\frac{p}{100}\\right)^{2}z$.",
+    "steps": "The question asks for the percent used in each link.<br>$y = \\frac{p}{100}z$ <span class=\"nt\">(y is p% of z)</span><br>$x = \\frac{p}{100}y = \\left(\\frac{p}{100}\\right)^{2}z$ <span class=\"nt\">(substitute)</span><br>$\\left(\\frac{p}{100}\\right)^{2} = 0.36$ <span class=\"nt\">(x is 36% of z)</span><br>$\\frac{p}{100} = 0.6$ <span class=\"nt\">(p is positive, so take the positive root)</span><br>So $p = 60$.<br>Applying the same percent twice multiplies the factor by itself, so the 36% is a square, not twice a percent.",
+    "check": "60% of 60% is $0.6 \\times 0.6 = 0.36 = 36\\%$ ✓",
+    "be_careful": "Change 36% to the decimal 0.36 before taking the square root.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-039",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "revenue-target-multiplier",
+   "signature": "price +20%, revenue +8% -> tickets -k%, k = 10; traps 12 (additive), 28, 90 (remaining)",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A theater raised its ticket price by 20%. After the increase, the number of tickets it sold each week decreased by $k\\%$, and the theater’s weekly ticket revenue increased by 8%. What is the value of $k$? (Revenue = price $\\times$ number of tickets sold.)",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$10$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$12$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This computes $20 - 8 = 12$, subtracting percents as if they were added. The changes multiply."
+    },
+    {
+     "key": "C",
+     "text": "$28$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This computes $20 + 8 = 28$. The percents cannot be added or subtracted; the multipliers must be multiplied."
+    },
+    {
+     "key": "D",
+     "text": "$90$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "90% is the fraction of tickets still sold, not the percent decrease."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Revenue is price times quantity, so the multipliers must satisfy $1.20\\left(1 - \\frac{k}{100}\\right) = 1.08$.",
+    "steps": "The question asks for the percent decrease in tickets.<br>Let the old price be $P$ and the old number of tickets be $N$; old revenue is $PN$.<br>new revenue $= 1.20P \\cdot \\left(1 - \\frac{k}{100}\\right)N$ <span class=\"nt\">(both changes)</span><br>$1.20\\left(1 - \\frac{k}{100}\\right) = 1.08$ <span class=\"nt\">(revenue up 8%)</span><br>$1 - \\frac{k}{100} = \\frac{1.08}{1.20} = 0.9$ <span class=\"nt\">(divide by 1.20)</span><br>So $\\frac{k}{100} = 0.1$, and $k = 10$.",
+    "check": "Try $\\$10$ and 100 tickets: old $\\$1{,}000$; new $\\$12 \\times 90 = \\$1{,}080$, which is 8% more ✓",
+    "be_careful": "Percent changes in a product multiply; they do not add or subtract.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-040",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H",
+   "concepts": [
+    "P2.C5",
+    "P2.C1"
+   ],
+   "family": "capacity-then-remaining-space",
+   "signature": "70% full, remove 45 L -> 40% full; liters to fill completely = 90; traps 45, 60, 75",
+   "abilities": [
+    "M",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A water tank is 70% full. After 45 liters of water are removed, the tank is 40% full. How many liters of water must then be added to fill the tank completely?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$45$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "45 liters would refill the tank only to 70%, not to 100%."
+    },
+    {
+     "key": "B",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "60 liters is the water in the tank at 40% full, not the empty space."
+    },
+    {
+     "key": "C",
+     "text": "$75$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides 45 by 0.60. The 45 liters are 30% of the capacity, so the capacity comes first."
+    },
+    {
+     "key": "D",
+     "text": "$90$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The 45 liters equal the drop from 70% to 40%, which is 30% of the capacity. Then find the empty 60%.",
+    "steps": "The question asks for the empty space after the water is removed.<br>Let $C$ = the capacity, in liters.<br>$0.70C - 45 = 0.40C$ <span class=\"nt\">(before minus removed equals after)</span><br>$0.30C = 45$ <span class=\"nt\">(subtract 0.40C and add 45)</span><br>$C = 150$ <span class=\"nt\">(divide by 0.30)</span><br>empty space $= 0.60 \\times 150 = 90$ <span class=\"nt\">(the tank is 40% full, so 60% is empty)</span><br>So 90 liters must be added.",
+    "check": "$150 \\times 0.40 = 60$ liters in the tank, and $60 + 90 = 150$ ✓",
+    "be_careful": "Find the capacity first; then the answer is the empty fraction of it.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-041",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "unknown-link-different-bases-spr",
+   "signature": "a 25% greater than b; b k% less than c; a 10% greater than c -> k = 12; wrong 15 (25 - 10), 13.6",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The positive number $a$ is 25% greater than $b$, and $b$ is $k\\%$ less than $c$. If $a$ is 10% greater than $c$, what is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "15",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts 10 from 25, as if the three percents added. Each percent has a different base."
+    },
+    {
+     "value": "13.6",
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This finds that $c$ is about 13.6% greater than $b$, which uses $b$ as the base. The question compares $b$ with $c$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Write $a$ in terms of $c$ two ways and match the multipliers: $1.25\\left(1 - \\frac{k}{100}\\right) = 1.10$.",
+    "steps": "The question asks for $k$, how much less $b$ is than $c$ (so $c$ is the base).<br>$a = 1.25b$ <span class=\"nt\">(25% greater than b)</span><br>$b = \\left(1 - \\frac{k}{100}\\right)c$ <span class=\"nt\">(k% less than c)</span><br>$a = 1.10c$ <span class=\"nt\">(10% greater than c)</span><br>$1.25\\left(1 - \\frac{k}{100}\\right)c = 1.10c$ <span class=\"nt\">(substitute b into a = 1.25b)</span><br>$1 - \\frac{k}{100} = \\frac{1.10}{1.25} = 0.88$ <span class=\"nt\">(divide by 1.25c)</span><br>$\\frac{k}{100} = 0.12$ <span class=\"nt\">(subtract from 1)</span><br>So $k = 12$.<br>Why not 15? Percents with different bases cannot be added or subtracted; only the multipliers combine.",
+    "check": "Take $c = 100$: $b = 88$, $a = 1.25 \\times 88 = 110$, which is 10% greater than 100 ✓",
+    "be_careful": "Each phrase has its own base; turn every phrase into a multiplier before combining.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-042",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C2",
+    "P2.C4"
+   ],
+   "family": "two-grown-quantities-meet",
+   "signature": "A sold 25% more than B; A -12%, B +10% -> equal; traps 3% more (additive), 13% more (ignores B), B 10% more (ignores head start)",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In 2020, Store $A$ sold 25% more bicycles than Store $B$. From 2020 to 2024, the number of bicycles sold by Store $A$ decreased by 12%, and the number sold by Store $B$ increased by 10%. Which statement about the numbers of bicycles sold in 2024 is true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Both stores sold the same number.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Store $A$ sold 3% more bicycles than Store $B$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This computes $25 - 12 - 10 = 3$, adding and subtracting percents that have different bases."
+    },
+    {
+     "key": "C",
+     "text": "Store $A$ sold 13% more bicycles than Store $B$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses only Store $A$’s change ($25 - 12$) and ignores Store $B$’s growth."
+    },
+    {
+     "key": "D",
+     "text": "Store $B$ sold 10% more bicycles than Store $A$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This uses only Store $B$’s growth and ignores Store $A$’s 25% head start."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Put both stores on the same base (Store $B$ in 2020), then apply each store’s own multiplier.",
+    "steps": "What does the question ask? It asks which statement about the numbers of bicycles sold in 2024 is true.<br>The question compares the two stores in 2024.<br>Let Store $B$ sell 100 bicycles in 2020 (any value works).<br>Store $A$ in 2020 $= 1.25 \\times 100 = 125$ <span class=\"nt\">(25% more than B)</span><br>Store $A$ in 2024 $= 0.88 \\times 125 = 110$ <span class=\"nt\">(12% decrease)</span><br>Store $B$ in 2024 $= 1.10 \\times 100 = 110$ <span class=\"nt\">(10% increase)</span><br>Both stores sold 110, so they sold the same number.<br>In multipliers: $1.25 \\times 0.88 = 1.10$, the same as Store $B$’s $1.10$.",
+    "check": "Store $A$: $125 \\to 110$ is a drop of 15, and $\\frac{15}{125} = 12\\%$ ✓",
+    "be_careful": "Percent changes of different starting amounts cannot be added or subtracted.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-043",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C4"
+   ],
+   "family": "increase-decrease-pair-spr",
+   "signature": "increase a% then decrease b% gives +20%; a = b + 30 -> (1+a/100)(1.3-a/100)=1.2 -> a = 50; wrong 20 (b), 25",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 150,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A positive quantity is increased by $a\\%$, and then the new amount is decreased by $b\\%$. The final amount is 20% greater than the original quantity. If $a$ is 30 more than $b$, what is the value of $a$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "50"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "20",
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "20 is the value of $b$, the percent decrease, not $a$."
+    },
+    {
+     "value": "80",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This treats the changes as adding and then mixes up the pieces. A 30-point gap between the percents does not mean the multipliers differ by 0.3 in the final amount."
+    }
+   ],
+   "solution": {
+    "key_idea": "The changes multiply: $\\left(1 + \\frac{a}{100}\\right)\\left(1 - \\frac{b}{100}\\right) = 1.20$. Replace $b$ with $a - 30$ and solve.",
+    "steps": "The question asks for the percent increase $a$. Each change is a multiplier on the amount it starts from, so the two multipliers are multiplied, and their product must be 1.20.<br>To keep the algebra light, work with decimals. Let $u = \\frac{a}{100}$. Then $\\frac{b}{100} = u - 0.3$.<br>$(1 + u)(1 - (u - 0.3)) = 1.2$ <span class=\"nt\">(multipliers)</span><br>$(1 + u)(1.3 - u) = 1.2$ <span class=\"nt\">(simplify)</span><br>$1.3 + 0.3u - u^{2} = 1.2$ <span class=\"nt\">(expand)</span><br>$u^{2} - 0.3u - 0.1 = 0$ <span class=\"nt\">(move everything to one side)</span><br>$(u - 0.5)(u + 0.2) = 0$ <span class=\"nt\">(factor)</span><br>Because $a$ is a positive increase, the negative root makes no sense here, so $u = 0.5$. That gives $a = 50$, and then $b = 50 - 30 = 20$.",
+    "check": "Start with 100: $100 \\to 150 \\to 150 \\times 0.80 = 120$, which is 20% greater ✓, and $50 - 20 = 30$ ✓",
+    "be_careful": "An increase of $a\\%$ followed by a decrease of $b\\%$ is not a change of $(a - b)\\%$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-044",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C2",
+    "P2.C4"
+   ],
+   "family": "over-100-greater-less-chain-spr",
+   "signature": "2024 profit 340% greater than 2019; 2019 profit 60% less than 2014 -> 2024 is 176% of 2014; wrong 280, 136",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A company’s profit in 2024 was 340% greater than its profit in 2019. Its profit in 2019 was 60% less than its profit in 2014. The company’s profit in 2024 was $p\\%$ of its profit in 2014. What is the value of $p$? (All three profits were positive.)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "176"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "280",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This computes $340 - 60$, adding and subtracting percents with different bases."
+    },
+    {
+     "value": "136",
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This multiplies 3.40 by 0.40. \"340% greater\" means $\\times 4.40$."
+    }
+   ],
+   "solution": {
+    "key_idea": "Turn each phrase into a multiplier: \"340% greater\" is $\\times 4.4$ and \"60% less\" is $\\times 0.4$.",
+    "steps": "The question asks for 2024 profit as a percent of 2014 profit.<br>Let the 2014 profit be 100 (any positive value works).<br>2019 profit $= 0.40 \\times 100 = 40$ <span class=\"nt\">(60% less keeps 40%)</span><br>2024 profit $= 4.40 \\times 40 = 176$ <span class=\"nt\">(340% greater adds 3.4 times)</span><br>$\\frac{176}{100} = 176\\%$ <span class=\"nt\">(compare with 2014)</span><br>So $p = 176$.<br>Notice that \"$p\\%$ of\" asks for the whole comparison, not the increase; the increase would be 76%.",
+    "check": "$40 \\to 176$ is an increase of 136, and $\\frac{136}{40} = 3.4 = 340\\%$ ✓",
+    "be_careful": "\"Greater than\" keeps the original 100%, and \"$p\\%$ of\" asks for the whole ratio, not the change.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-045",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C5"
+   ],
+   "family": "hidden-complement-subgroup",
+   "signature": "40% take Spanish; 60% of them girls; 51% of school girls -> 45% of non-Spanish are girls; traps 51, 60, 67.5",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a school, 40% of the students take Spanish. Of the students who take Spanish, 60% are girls. Of all the students at the school, 51% are girls. What percent of the students who do not take Spanish are girls?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$45\\%$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$51\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "51% is the percent of girls in the whole school. The two groups do not have to match it."
+    },
+    {
+     "key": "C",
+     "text": "$60\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "60% is the percent of girls among the Spanish students, not the other students."
+    },
+    {
+     "key": "D",
+     "text": "$67.5\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This divides the girls not taking Spanish (27% of the school) by 40%, the Spanish group. The base must be the 60% who do not take Spanish."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Girls are split between the two groups. Subtract the Spanish girls from all girls, then divide by the group that does not take Spanish.",
+    "steps": "The question asks for a percent of the students who do NOT take Spanish.<br>Let the school have 100 students.<br>Spanish students $= 40$; others $= 60$ <span class=\"nt\">(40% take Spanish)</span><br>girls taking Spanish $= 0.60 \\times 40 = 24$ <span class=\"nt\">(60% of the Spanish students)</span><br>all girls $= 51$ <span class=\"nt\">(51% of 100)</span><br>girls not taking Spanish $= 51 - 24 = 27$ <span class=\"nt\">(subtract)</span><br>$\\frac{27}{60} = 0.45$ <span class=\"nt\">(divide by the students not taking Spanish)</span><br>So 45% of the students who do not take Spanish are girls.",
+    "check": "Overall: $24 + 0.45(60) = 24 + 27 = 51$ girls out of 100 ✓, and 51% lies between 45% and 60%, closer to 45% because that group is larger ✓",
+    "be_careful": "Overall percents are weighted by group size, so the unknown group is not \"the same as overall\".",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-046",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C4",
+    "P2.C6"
+   ],
+   "family": "second-change-on-original-base",
+   "signature": "p increased by x%, then decreased by x% of the ORIGINAL price -> p; trap p(1 - x^2/10000) (usual base)",
+   "abilities": [
+    "S",
+    "I"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The price of a bike was $p$ dollars. The price was increased by $x\\%$, where $0 < x < 100$. Later, the new price was decreased by an amount equal to $x\\%$ of the original price $p$. Which expression gives the final price, in dollars?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$p$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$p\\left(1 - \\frac{x^{2}}{10{,}000}\\right)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes $x\\%$ of the increased price. The decrease is $x\\%$ of the original price $p$."
+    },
+    {
+     "key": "C",
+     "text": "$p\\left(1 + \\frac{x^{2}}{10{,}000}\\right)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This has the extra term with the wrong sign, and the extra term should not appear at all."
+    },
+    {
+     "key": "D",
+     "text": "$p\\left(1 - \\frac{x}{100}\\right)$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This applies only the decrease and forgets the earlier increase."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Both changes are $x\\%$ of the same base, $p$, so they cancel exactly.",
+    "steps": "The question asks for the price after both changes.<br>increase $= \\frac{x}{100}p$ <span class=\"nt\">(x% of p)</span><br>new price $= p + \\frac{x}{100}p$ <span class=\"nt\">(add the increase)</span><br>decrease $= \\frac{x}{100}p$ <span class=\"nt\">(x% of the ORIGINAL price p)</span><br>final price $= p + \\frac{x}{100}p - \\frac{x}{100}p = p$ <span class=\"nt\">(the two amounts cancel)</span><br>The usual \"up $x\\%$, down $x\\%$\" loss happens only when the decrease uses the larger new price as its base. Here the stem fixes the base at $p$, so there is no loss.",
+    "check": "Try $p = 200$, $x = 10$: up 20 to 220, then down 10% of 200 = 20, back to 200 ✓ (Choice B would give 198.)",
+    "be_careful": "Read the base of each percent; \"$x\\%$ of the original price\" is not \"$x\\%$ of the new price\".",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-047",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C1"
+   ],
+   "family": "least-group-from-rounded-percent-spr",
+   "signature": "percent passing rounds to 92% -> least number of students 12 (11/12 = 91.67%); wrong 25 (exact 92%)",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 170,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A teacher reported that 92% of the students in a class passed a test, where the percent was rounded to the nearest whole percent. What is the least possible number of students in the class?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "12"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "25",
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "25 students with 23 passing gives exactly 92%. Because the percent was rounded, an exact 92% is not required."
+    },
+    {
+     "value": "13",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "12 out of 13 is about 92.3%, which also rounds to 92%, but 13 is not the least."
+    }
+   ],
+   "solution": {
+    "key_idea": "\"Rounded to 92%\" means the true percent is at least 91.5% and less than 92.5%. Search small class sizes.",
+    "steps": "The question asks for the smallest class size $n$ that allows a rounded 92%.<br>$91.5 \\le \\frac{100k}{n} < 92.5$ <span class=\"nt\">(k students passed out of n)</span><br>The percent failing is then more than 7.5% and at most 8.5%, so exactly $n - k$ students failed with $0.075 < \\frac{n - k}{n} \\le 0.085$.<br>1 student failing needs $\\frac{1}{n}$ between 0.075 and 0.085 <span class=\"nt\">(the fewest possible failures)</span><br>$\\frac{1}{0.085} \\le n < \\frac{1}{0.075}$, so $11.8 \\le n < 13.3$ <span class=\"nt\">(solve for n)</span><br>$n = 12$ or $n = 13$ <span class=\"nt\">(whole numbers in that range)</span><br>With 2 or more students failing, $n$ would have to be at least $\\frac{2}{0.085} \\approx 23.5$, which is larger.<br>So the least possible class size is 12.",
+    "check": "$\\frac{11}{12} \\approx 91.67\\%$, which rounds to 92% ✓; with 11 students, $\\frac{10}{11} \\approx 90.9\\%$ rounds to 91% ✗",
+    "be_careful": "A rounded percent describes a range, not one exact fraction.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-048",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C5",
+    "P2.C4"
+   ],
+   "family": "offsetting-changes-reveal-mix",
+   "signature": "shirts revenue +20%, hats -30%, total unchanged -> shirts were 60% of revenue; traps 20, 40, 50",
+   "abilities": [
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A shop sells only shirts and hats. From May to June, the shop’s revenue from shirts increased by 20%, and its revenue from hats decreased by 30%. The shop’s total revenue was the same in both months. What percent of the shop’s May revenue came from shirts?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$20\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "20% is the change in shirt revenue, not shirt revenue’s share."
+    },
+    {
+     "key": "B",
+     "text": "$40\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D9",
+     "feedback": "40% is the share of hats. The larger change (30%) belongs to the smaller part."
+    },
+    {
+     "key": "C",
+     "text": "$50\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Equal parts would make the changes $+10\\%$ and $-15\\%$ of the total, which do not cancel."
+    },
+    {
+     "key": "D",
+     "text": "$60\\%$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The dollar gain on shirts must equal the dollar loss on hats: $0.20S = 0.30H$.",
+    "steps": "The question asks for shirts’ share of May revenue.<br>Let $S$ = May shirt revenue and $H$ = May hat revenue, in dollars.<br>$0.20S = 0.30H$ <span class=\"nt\">(total unchanged, so gain equals loss)</span><br>$S = 1.5H$ <span class=\"nt\">(divide by 0.20)</span><br>share $= \\frac{S}{S + H} = \\frac{1.5H}{2.5H} = 0.6$ <span class=\"nt\">(shirts over total)</span><br>So 60% of May revenue came from shirts.<br>In dollars, shirts rose by $0.20 \\times 60 = 12$ and hats fell by $0.30 \\times 40 = 12$, so the two changes cancel exactly and the total stays the same. A 50% split fails because the larger percent drop would win.",
+    "check": "May: shirts $\\$60$, hats $\\$40$. June: $72 + 28 = 100$ ✓",
+    "be_careful": "The part with the smaller percent change must be the bigger part for the dollar changes to balance.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-049",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C4",
+    "P2.C1"
+   ],
+   "family": "sub-one-percent-net-change-spr",
+   "signature": "+25% then -k% = 0.4% less than original -> k = 20.32; wrong 25.4 (additive), 20",
+   "abilities": [
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 140,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "The price of a stock increased by 25% on Monday and then decreased by $k\\%$ on Tuesday. At the end of Tuesday, the price was 0.4% less than it was at the start of Monday. What is the value of $k$?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "20.32"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "25.4",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 25 and 0.4, as if percent changes added."
+    },
+    {
+     "value": "20",
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This undoes only the 25% increase (back to the start) and forgets the extra 0.4% drop."
+    }
+   ],
+   "solution": {
+    "key_idea": "The two multipliers combine to $0.996$: $1.25\\left(1 - \\frac{k}{100}\\right) = 0.996$.",
+    "steps": "The question asks for the percent decrease on Tuesday.<br>net multiplier $= 1 - 0.004 = 0.996$ <span class=\"nt\">(0.4% less than the start)</span><br>$1.25\\left(1 - \\frac{k}{100}\\right) = 0.996$ <span class=\"nt\">(Monday then Tuesday)</span><br>$1 - \\frac{k}{100} = \\frac{0.996}{1.25} = 0.7968$ <span class=\"nt\">(divide by 1.25)</span><br>$\\frac{k}{100} = 0.2032$ <span class=\"nt\">(subtract from 1)</span><br>So $k = 20.32$.<br>Sense check: a 20% drop exactly undoes a 25% rise, so a slightly bigger drop is needed for a small net loss.<br>The Monday increase uses the starting price as its base, while the Tuesday decrease uses the larger Monday price, which is why $k$ is not simply $25 + 0.4$.",
+    "check": "Start at 1,000: up to 1,250, then down 20.32% of 1,250 = 254, to 996, which is 0.4% below 1,000 ✓",
+    "be_careful": "0.4% is 0.004, not 0.04.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P2-050",
+   "version": 1,
+   "skill": {
+    "code": "P2",
+    "domain": "psda",
+    "cb_skill": "Percentages"
+   },
+   "level": "H+",
+   "concepts": [
+    "P2.C2"
+   ],
+   "family": "must-be-same-p-greater-less",
+   "signature": "x is p% greater than y; y is p% less than z; 0<p<100 -> x < z always; traps x = z, x > z, cannot be determined",
+   "abilities": [
+    "S",
+    "N"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The positive numbers $x$, $y$, and $z$ satisfy these conditions for some number $p$, where $0 < p < 100$:<br>$x$ is $p\\%$ greater than $y$.<br>$y$ is $p\\%$ less than $z$.<br>Which statement must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$x < z$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$x = z$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This assumes \"$p\\%$ less\" and \"$p\\%$ greater\" cancel. They use different bases."
+    },
+    {
+     "key": "C",
+     "text": "$x > z$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "The increase is $p\\%$ of $y$, which is smaller than $z$, so it cannot make up the decrease."
+    },
+    {
+     "key": "D",
+     "text": "The relationship between $x$ and $z$ cannot be determined without knowing $p$.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The value of $p$ changes how far apart $x$ and $z$ are, but not which one is larger."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Combine the multipliers: $x = \\left(1 + \\frac{p}{100}\\right)\\left(1 - \\frac{p}{100}\\right)z = \\left(1 - \\frac{p^{2}}{10{,}000}\\right)z$.",
+    "steps": "The question asks which comparison of $x$ and $z$ holds for every allowed $p$.<br>$y = \\left(1 - \\frac{p}{100}\\right)z$ <span class=\"nt\">(p% less than z)</span><br>$x = \\left(1 + \\frac{p}{100}\\right)y$ <span class=\"nt\">(p% greater than y)</span><br>$x = \\left(1 + \\frac{p}{100}\\right)\\left(1 - \\frac{p}{100}\\right)z$ <span class=\"nt\">(substitute)</span><br>$x = \\left(1 - \\frac{p^{2}}{10{,}000}\\right)z$ <span class=\"nt\">(difference of squares)</span><br>$\\frac{p^{2}}{10{,}000} > 0$ for every $p$ with $0 < p < 100$ <span class=\"nt\">(a positive square)</span><br>So the multiplier is less than 1, and $x < z$ for every allowed $p$.<br>Reading the result: the increase is $p\\%$ of $y$, and $y$ is smaller than $z$, so the increase can never make up the full decrease. Different values of $p$ change how far $x$ falls below $z$, but $x$ always ends up below $z$, so the answer does not depend on knowing $p$.",
+    "check": "$p = 50$: $z = 100$, $y = 50$, $x = 75 < 100$ ✓; $p = 10$: $z = 100$, $y = 90$, $x = 99 < 100$ ✓",
+    "be_careful": "Unknown $p$ does not mean \"cannot be determined\"; check whether the comparison depends on $p$.",
+    "desmos": null,
+    "another_way": null
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

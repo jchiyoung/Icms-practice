@@ -1,0 +1,3436 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "P7",
+ "skill": "Evaluating statistical claims: Observational studies and experiments",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-P7-001",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "scope-population",
+   "signature": "random 120 of ninth graders at Lakeview HS -> all ninth graders at Lakeview; traps all students at Lakeview, all ninth graders in the state, only the 120",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A librarian selected 120 ninth-grade students at random from all ninth-grade students at Lakeview High School and asked each student how many books the student had read that summer. To which of the following groups can the results of the survey most appropriately be generalized?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "All students in every grade at Lakeview High School",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only ninth graders could be selected. Students in other grades may read very differently."
+    },
+    {
+     "key": "B",
+     "text": "All ninth-grade students at Lakeview High School",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "All ninth-grade students in the state",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only Lakeview students could be selected, so the results cannot be stretched to the whole state."
+    },
+    {
+     "key": "D",
+     "text": "Only the 120 students who were surveyed",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Because the 120 were selected at random, the results CAN reach beyond them to the group they were selected from."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Results from a random sample apply to the group the sample was selected from, and no larger.",
+    "steps": "What does the question ask? The group the survey results describe.<br>Who could have been selected? <span class=\"nt\">(look at where the random selection happened)</span><br>Only ninth graders at Lakeview High School <span class=\"nt\">(both qualifiers matter: grade AND school)</span><br>So the results generalize to all ninth-grade students at Lakeview High School.",
+    "check": "Every person in that group had a chance to be picked, and nobody outside it did ✓",
+    "be_careful": "Check every qualifier in the description of the group: here both “ninth-grade” and “Lakeview”.",
+    "desmos": "Not needed.",
+    "another_way": "Cross out any choice that includes people who could never have been selected; then cross out “only the sample”, since the selection was random."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-002",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "random-assignment-cause",
+   "signature": "60 volunteers randomly assigned to stretch / no stretch, stretch group less soreness -> stretching likely caused less soreness for volunteers; traps all adults, association only, nothing",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A trainer recruited 60 adult volunteers. The trainer randomly assigned 30 of the volunteers to do a 10-minute stretching routine after exercise and the other 30 to do no stretching. The group that stretched reported significantly less muscle soreness the next day. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "For adults like these volunteers, the routine likely causes less soreness.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "For all adults, the stretching routine likely causes less soreness.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The volunteers were not selected at random from all adults, so the result cannot be generalized to all adults."
+    },
+    {
+     "key": "C",
+     "text": "Stretching is linked to less soreness, but it cannot be a cause.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Random assignment makes the groups alike except for stretching, so a cause-and-effect conclusion IS allowed."
+    },
+    {
+     "key": "D",
+     "text": "Nothing can be concluded, since the 60 were all volunteers.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Volunteers limit WHO the result applies to, but random assignment still supports a conclusion about cause for them."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Random assignment to groups lets us conclude cause and effect; random selection is what lets us generalize to a larger population.",
+    "steps": "What does the question ask? What the study can and cannot conclude.<br>Were the groups assigned at random? Yes <span class=\"nt\">(so a cause-and-effect conclusion is allowed)</span><br>Were the 60 selected at random from all adults? No <span class=\"nt\">(they were volunteers)</span><br>So the conclusion about cause applies to adults like the volunteers, not to all adults.",
+    "check": "The chosen conclusion uses both facts: cause (random assignment) and a limited group (no random selection) ✓",
+    "be_careful": "Ask two separate questions: random assignment (cause?) and random selection (whom?).",
+    "desmos": "Not needed.",
+    "another_way": "Sort the choices: two say “no cause” (wrong, since assignment was random), and one says “all adults” (wrong, since the selection was not random)."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-003",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C3"
+   ],
+   "family": "observational-association",
+   "signature": "random 400 city residents; those who walk to work report fewer sick days -> association only for city residents; traps causation x2, only 400",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A researcher selected 400 adults at random from all working adults in a city. Each adult reported whether he or she walks to work and how many sick days he or she took last year. On average, the adults who walk to work took fewer sick days. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "For the city’s working adults, walking to work causes fewer sick days.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "No one was assigned to walk. Walkers may differ in other ways (age, health, distance to work), so cause is not shown."
+    },
+    {
+     "key": "B",
+     "text": "If a working adult in the city starts walking, that adult will take fewer sick days.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This is a cause-and-effect claim about an individual, which an observational study cannot support."
+    },
+    {
+     "key": "C",
+     "text": "Among the city’s working adults, walking to work is linked to fewer sick days.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The link between walking and sick days holds only for the 400 adults studied.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The 400 were selected at random from the city’s working adults, so the link can be generalized to that group."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "When people choose their own groups (an observational study), the study can show a link (association) but not a cause.",
+    "steps": "What does the question ask? What this study allows us to say.<br>Random selection from the city’s working adults? Yes <span class=\"nt\">(the result reaches all of them)</span><br>Random assignment to walk or not walk? No <span class=\"nt\">(the adults chose for themselves)</span><br>So: a link (association) among the city’s working adults, but no cause-and-effect claim.",
+    "check": "The chosen statement says “linked” (not “causes”) and names the sampled population ✓",
+    "be_careful": "“Will take fewer sick days if they start walking” is a cause claim in disguise.",
+    "desmos": "Not needed.",
+    "another_way": "Any choice that predicts what happens when someone CHANGES behavior is a cause claim; without random assignment, those are out."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-004",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "biased-sample-online",
+   "signature": "radio station online poll, listeners who choose to respond -> results not reliable for all residents because respondents chose to take part; traps size, percent, random",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A radio station asked listeners to vote online on whether a new bridge should be built in the town. Of the 1,850 listeners who voted, 72% said the bridge should be built. Which of the following best explains why the results may not represent the opinions of all adults in the town?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The sample of 1,850 people is too small to say anything about the town.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "1,850 is a large sample. The problem is HOW the people were chosen, not how many there were."
+    },
+    {
+     "key": "B",
+     "text": "A percent as high as 72% cannot be estimated accurately from a sample.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The size of the percent has nothing to do with whether the sample is representative."
+    },
+    {
+     "key": "C",
+     "text": "The station should have reported the number of votes rather than a percent.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Reporting a count instead of a percent does not fix a sample that chose itself."
+    },
+    {
+     "key": "D",
+     "text": "The people who voted chose to take part, and they may feel more strongly than others.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A sample whose members choose to take part (a voluntary response sample) is not random, so it may not represent the population.",
+    "steps": "What does the question ask? Why the poll might not reflect the whole town.<br>How were the 1,850 people chosen? They chose themselves <span class=\"nt\">(anyone who wanted to vote online)</span><br>Also, only radio listeners heard about it <span class=\"nt\">(not every adult in the town)</span><br>People who bother to vote often care more about the issue, so the poll can be biased.",
+    "check": "The correct reason is about how the sample was chosen, which is the only thing that makes a sample unrepresentative here ✓",
+    "be_careful": "A big sample does not fix bias. A biased sample stays biased at any size.",
+    "desmos": "Not needed.",
+    "another_way": "Ask: could every adult in town have been picked, with equal chance? No, so the poll is not random."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-005",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "estimate-in-sampled-population",
+   "signature": "gym 900 members, city 40,000: random 60 members, 24 prefer morning -> 360; traps 16,000 (city), 24",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A gym in a city of 40,000 people has 900 members. The manager selected 60 of the gym’s members at random, and 24 of them said they prefer to work out in the morning. Based on this survey, what is the best estimate of the number of the gym’s members who prefer to work out in the morning?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "360"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "16000",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The sample was selected from the gym’s members, not from the whole city, so it says nothing about all 40,000 people."
+    },
+    {
+     "value": "540",
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "540 members are estimated to NOT prefer the morning: $\\frac{36}{60} \\times 900$."
+    }
+   ],
+   "solution": {
+    "key_idea": "A random sample estimates the fraction for the group it was selected from; scale that fraction to that group only.",
+    "steps": "What does the question ask? How many of the gym’s 900 members prefer the morning.<br>sample fraction $= \\frac{24}{60} = 0.4$ <span class=\"nt\">(24 of the 60 sampled members)</span><br>estimate $= 0.4 \\times 900$ <span class=\"nt\">(the sample came from the 900 members)</span><br>$= 360$ <span class=\"nt\">(multiply)</span>",
+    "check": "$\\frac{360}{900} = 0.4 = \\frac{24}{60}$ ✓",
+    "be_careful": "The 40,000 city residents are extra information. The sample was not selected from them.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled member stands for $900 \\div 60 = 15$ members, so $24 \\times 15 = 360$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-006",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C5"
+   ],
+   "family": "no-comparison-group",
+   "signature": "50 students use flash-card app 4 weeks, scores up 9 points -> cannot conclude app caused it, no comparison group; traps",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A teacher had 50 students use a vocabulary app for 4 weeks. The students’ mean score on a vocabulary test rose by 9 points from the start to the end of the 4 weeks. Which of the following is the best reason the teacher cannot conclude that the app caused the increase?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "A 9-point increase is too small to be caused by anything.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The size of the increase is not the problem; the design has nothing to compare it with."
+    },
+    {
+     "key": "B",
+     "text": "There was no group of similar students who did not use the app.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "The teacher should have used 50 different students for the second test.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Testing different students would make the change harder to measure, not easier."
+    },
+    {
+     "key": "D",
+     "text": "The students did not use the app for a whole school year.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "A longer study would still have no comparison group, so it would still not show cause."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "To show that a treatment causes a change, we need a comparison group that is similar but does not get the treatment.",
+    "steps": "What does the question ask? Why “the app caused the increase” is not justified.<br>Scores could rise anyway <span class=\"nt\">(classes, homework, or simply taking the test twice)</span><br>No students went without the app <span class=\"nt\">(so there is nothing to compare with)</span><br>Without a comparison group, we cannot separate the app from everything else that happened in 4 weeks.",
+    "check": "Adding a randomly assigned no-app group would fix exactly this problem ✓",
+    "be_careful": "“Before and after” alone is not an experiment with a comparison.",
+    "desmos": "Not needed.",
+    "another_way": "Imagine a group with no app also rising by 9 points. Then the app did nothing. Without that group, we cannot rule this out."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-007",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "design-for-cause",
+   "signature": "want to know if a new feed causes faster growth in chickens: randomly assign feeds; traps let farmer choose, compare farms, survey",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A farm has 200 chickens. A scientist wants to determine whether a new type of feed causes chickens to gain weight faster than the current feed does. Which of the following study designs is most appropriate?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Give the new feed to the 100 chickens that the farmer thinks are the healthiest.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The healthiest chickens might gain weight faster on any feed, so the feed’s effect would be mixed up with health."
+    },
+    {
+     "key": "B",
+     "text": "Give all 200 chickens the new feed and compare with last year’s weights.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Last year’s chickens may differ in many ways (weather, age, breed), so this has no fair comparison group."
+    },
+    {
+     "key": "C",
+     "text": "Randomly assign 100 of the chickens to the new feed and the rest to the current feed.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Survey other farms about which feed their chickens grow fastest on.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "A survey of other farms is observational; the farms differ in many ways besides feed."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Random assignment makes the two groups alike on average, so a difference in results can be credited to the treatment.",
+    "steps": "What does the question ask? A design that can show the feed CAUSES faster growth.<br>Need: two groups that differ only in feed <span class=\"nt\">(a fair comparison)</span><br>Random assignment creates such groups <span class=\"nt\">(chance, not a person, decides who gets which feed)</span><br>So randomly assign 100 chickens to each feed.",
+    "check": "Every other design lets something besides the feed differ between the groups ✓",
+    "be_careful": "When a person picks the groups, the person’s choice can create differences.",
+    "desmos": "Not needed.",
+    "another_way": "For each design, ask: could the groups differ in something besides feed? Only random assignment says “not on average”."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-008",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "size-does-not-fix-bias",
+   "signature": "survey at basketball game, 2,000 fans vs 2,000 more fans: more of same biased -> still biased; key: random sample of town residents",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A town council wants to estimate the percent of all town residents who support building a new sports arena. A council member surveyed 300 people at a basketball game. Which of the following changes would most likely give a more accurate estimate?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Surveying 300 residents selected at random from a list of all residents",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Surveying 3,000 people at basketball games instead of 300",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "A larger sample of sports fans is still a sample of sports fans. More people do not fix the bias."
+    },
+    {
+     "key": "C",
+     "text": "Surveying 300 people at a basketball game played on a weekend afternoon",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Changing the day does not change who goes to basketball games."
+    },
+    {
+     "key": "D",
+     "text": "Surveying the same 300 people again a month later",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Asking the same biased group again repeats the same bias."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Accuracy comes from a sample that represents the population; selecting at random from the whole population does that, and size alone does not.",
+    "steps": "What does the question ask? The change that best fixes the estimate.<br>Problem: fans at a basketball game <span class=\"nt\">(they probably like sports more than the average resident)</span><br>Fix: give every resident a chance to be chosen <span class=\"nt\">(random selection from a list of all residents)</span><br>So survey 300 residents selected at random from a list of all residents.",
+    "check": "The chosen change is the only one that removes the sports-fan bias ✓",
+    "be_careful": "Ten times as many fans is still a sample of fans.",
+    "desmos": "Not needed.",
+    "another_way": "Ask of each choice: who is being surveyed? Only one choice reaches the whole town."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-009",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "scope-time-qualifier",
+   "signature": "random 150 customers who visited Main Street store on weekdays in May -> weekday customers of that store; traps all customers, all stores, weekend",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A bakery chain has stores in several cities. The manager of the Main Street store selected 150 customers at random from all customers who visited that store on weekdays in May, and asked them to rate a new bread. To which of the following groups can the results of the survey most appropriately be generalized?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "All customers who visited the Main Street store in May",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Weekend customers could not be selected, and they may differ from weekday customers."
+    },
+    {
+     "key": "B",
+     "text": "All customers who visited any of the chain’s stores on weekdays in May",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only the Main Street store’s customers could be selected."
+    },
+    {
+     "key": "C",
+     "text": "All people who have ever bought bread from the bakery chain",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This stretches the results to times and stores that were never sampled."
+    },
+    {
+     "key": "D",
+     "text": "All customers who visited the Main Street store on weekdays in May",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The population is exactly the group the random sample was drawn from, including any limits on place and time.",
+    "steps": "What does the question ask? The group the results describe.<br>Where? Main Street store only <span class=\"nt\">(not the whole chain)</span><br>When? Weekdays in May <span class=\"nt\">(not weekends)</span><br>So the results generalize to all customers who visited the Main Street store on weekdays in May.",
+    "check": "The chosen group keeps all three limits: store, weekdays, May ✓",
+    "be_careful": "Time limits (“on weekdays”) count as much as place limits.",
+    "desmos": "Not needed.",
+    "another_way": "The other three choices each drop at least one limit; drop a limit and the group grows beyond what was sampled."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-010",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C3"
+   ],
+   "family": "lurking-variable",
+   "signature": "cities with more ice cream sales have more sunburn cases -> warm sunny weather explains both; traps causal stories",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A study of 50 cities found that cities with higher ice cream sales in a given month tended to have more sunburn cases that month. Which of the following is the most likely explanation for this relationship that does not involve one causing the other?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Eating ice cream makes a person’s skin more likely to get sunburned.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This is a cause-and-effect story, which the question rules out, and the study does not support it."
+    },
+    {
+     "key": "B",
+     "text": "Getting a sunburn makes a person more likely to want ice cream.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This is also a cause story, just in the other direction."
+    },
+    {
+     "key": "C",
+     "text": "Sunny, warm weather tends to raise both ice cream sales and sunburn cases.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The relationship holds only because exactly 50 cities were studied.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The number of cities does not create a relationship between two variables."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Two variables can move together because a third variable affects both of them.",
+    "steps": "What does the question ask? A reason for the link with no cause between ice cream and sunburn.<br>What makes people buy ice cream? Hot weather <span class=\"nt\">(one effect of sunny days)</span><br>What causes sunburn? Strong sun <span class=\"nt\">(another effect of sunny days)</span><br>So sunny, warm weather pushes both up, which creates the link.",
+    "check": "In a cold, cloudy month both would fall together, matching the pattern ✓",
+    "be_careful": "A link between two variables can come from a third one.",
+    "desmos": "Not needed.",
+    "another_way": "Ask: what else changes from month to month that could affect BOTH? Weather."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-011",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "experiment-mean-difference",
+   "signature": "random assignment 2 groups, mean scores 81.6 vs 76.4 -> estimated effect 5.2; trap 158 sum, 76.4",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A total of 80 students were randomly assigned to two groups of 40. One group studied with a practice quiz before a test, and the other group reread their notes. The mean test score was 81.6 for the practice quiz group and 76.4 for the reread group. Based on this experiment, by how many points is using the practice quiz estimated to raise a student’s mean test score, compared with rereading?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5.2",
+      "26/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "2.6",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "2.6 is half of the difference. The estimate is the whole difference between the two group means."
+    },
+    {
+     "value": "81.6",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "81.6 is the practice quiz group’s mean, not the change it causes."
+    }
+   ],
+   "solution": {
+    "key_idea": "In a randomized experiment, the difference between the group means estimates the effect of the treatment.",
+    "steps": "What does the question ask? How much the practice quiz raises the mean score compared with rereading.<br>The groups were randomly assigned <span class=\"nt\">(so they were alike except for the study method)</span><br>effect $\\approx 81.6 - 76.4$ <span class=\"nt\">(treatment mean minus comparison mean)</span><br>$= 5.2$ points <span class=\"nt\">(subtract)</span>",
+    "check": "$76.4 + 5.2 = 81.6$ ✓",
+    "be_careful": "The effect is a difference of means, not one group’s mean.",
+    "desmos": "Not needed.",
+    "another_way": "Think of the reread group as “what would have happened anyway”; the extra 5.2 points come from the quiz."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-012",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C6"
+   ],
+   "family": "identify-design",
+   "signature": "random sample of 200 drivers, asked about phone use and accidents -> random selection yes, random assignment no; traps",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A researcher selected 200 drivers at random from all licensed drivers in a county. Each driver was asked how often he or she uses a phone while driving and how many accidents he or she had been in during the past five years. Which of the following correctly describes this study?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Its drivers were randomly assigned to groups, but the sample was not selected at random.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The drivers were selected at random, but nobody was told how often to use a phone."
+    },
+    {
+     "key": "B",
+     "text": "Its sample was selected at random, but the drivers were not randomly assigned to groups.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Its drivers were both selected at random and randomly assigned to groups.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Phone use was the drivers’ own choice, so there was no random assignment."
+    },
+    {
+     "key": "D",
+     "text": "Its drivers were neither selected at random nor randomly assigned to groups.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The 200 drivers WERE selected at random from the county’s licensed drivers."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Random selection is how people get INTO a study; random assignment is how they are put into treatment groups. They are different steps.",
+    "steps": "What does the question ask? Which random steps this study used.<br>Selection: 200 at random from the county’s drivers <span class=\"nt\">(random selection: yes)</span><br>Groups: the drivers’ own phone habits <span class=\"nt\">(random assignment: no)</span><br>So the sample was random, but there was no random assignment (it is an observational study).",
+    "check": "The study only asked questions; it never told anyone what to do ✓",
+    "be_careful": "“At random” in the stem refers to selection here, not to assignment.",
+    "desmos": "Not needed.",
+    "another_way": "If the researcher never controls what the subjects do, there is no assignment at all."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-013",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "convenience-only-sample",
+   "signature": "nurse surveys first 40 patients in waiting room -> results apply only to those 40; traps all patients, all hospital, all adults",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A clinic nurse surveyed the first 40 patients who arrived at the clinic on a Monday morning about how long they were willing to wait to see a doctor. The patients were not selected at random. Which of the following is the most appropriate statement about the results?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The results represent all patients of the clinic, because 40 is a large sample.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Size is not the issue; Monday-morning early arrivals may differ from other patients."
+    },
+    {
+     "key": "B",
+     "text": "The results represent all patients who visit any clinic on a Monday.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This stretches a non-random sample from one clinic to every clinic."
+    },
+    {
+     "key": "C",
+     "text": "The results cannot even describe the 40 patients who were surveyed.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "A survey always describes the people who answered it; the problem is generalizing beyond them."
+    },
+    {
+     "key": "D",
+     "text": "The results describe the 40 patients but may not represent other patients of the clinic.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Without random selection, results describe the people studied but cannot be safely extended to a larger group.",
+    "steps": "What does the question ask? What the results can describe.<br>How were the 40 chosen? The first to arrive on Monday <span class=\"nt\">(not at random)</span><br>Early Monday patients may differ <span class=\"nt\">(for example, more people with urgent problems)</span><br>So the results describe those 40 but may not represent other patients.",
+    "check": "The chosen statement claims nothing beyond the 40 surveyed ✓",
+    "be_careful": "“First to arrive” is a convenience sample, not a random one.",
+    "desmos": "Not needed.",
+    "another_way": "Ask: could a Thursday-afternoon patient have been selected? No, so Thursday patients are not represented."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-014",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "percent-in-sampled-population",
+   "signature": "random 250 of 4,000 students at college, 35 commute by bike -> 14%; traps 35, 560",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A college has 4,000 students. A random sample of 250 of the students was selected, and 35 of the students in the sample said they ride a bike to campus. Based on the sample, what percent of all students at the college are estimated to ride a bike to campus?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "14"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "560",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "560 is the estimated NUMBER of students, $0.14 \\times 4{,}000$. The question asks for a percent."
+    },
+    {
+     "value": "86",
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "86% is the estimated percent who do NOT ride a bike."
+    }
+   ],
+   "solution": {
+    "key_idea": "The percent in a random sample is the best estimate of the percent in the population it came from.",
+    "steps": "What does the question ask? A PERCENT of all the college’s students.<br>sample fraction $= \\frac{35}{250}$ <span class=\"nt\">(35 of the 250 sampled students)</span><br>$= 0.14$ <span class=\"nt\">(divide)</span><br>$= 14\\%$ <span class=\"nt\">(write as a percent)</span>",
+    "check": "$14\\%$ of 250 is $0.14 \\times 250 = 35$ ✓",
+    "be_careful": "The 4,000 is not needed for a percent; it would be needed only for a count.",
+    "desmos": "Not needed.",
+    "another_way": "$\\frac{35}{250} = \\frac{14}{100}$, so 14 out of every 100 students."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-015",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C5"
+   ],
+   "family": "self-selected-groups",
+   "signature": "employees choose to join wellness program; joiners fewer sick days -> cannot conclude cause, employees chose; traps",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A company offered a voluntary wellness program. After a year, the employees who chose to join the program had taken fewer sick days, on average, than the employees who did not join. Which of the following is the best reason this result does NOT show that the program caused the decrease in sick days?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Employees who chose to join may have been healthier to begin with.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The company did not offer the program for at least two years.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "A longer program would still let employees choose, so the groups could still differ."
+    },
+    {
+     "key": "C",
+     "text": "Too few employees chose not to join the program to compare.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The problem is not the group sizes; it is that the employees picked their own groups."
+    },
+    {
+     "key": "D",
+     "text": "Sick days can be counted only for employees who joined.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Sick days were counted for both groups; that is how they were compared."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "When people choose their own groups, the groups can differ in ways that affect the result, so cause cannot be concluded.",
+    "steps": "What does the question ask? Why the program is not shown to be the cause.<br>Who decided which group each employee was in? The employees <span class=\"nt\">(no random assignment)</span><br>Health-minded employees are likely to join <span class=\"nt\">(and likely to take fewer sick days anyway)</span><br>So the difference might come from who joined, not from the program.",
+    "check": "Randomly assigning employees to the program would remove this problem ✓",
+    "be_careful": "“Chose to join” is the warning sign: self-selected groups.",
+    "desmos": "Not needed.",
+    "another_way": "Picture the joiners as gym regulars. They would have fewer sick days with or without the program."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-016",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "scope-occupation",
+   "signature": "random 80 of nurses at Riverside Hospital -> nurses at Riverside; traps all hospital employees, all nurses in country, Riverside patients",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 35,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A survey about work schedules was given to 80 nurses selected at random from all nurses who work at Riverside Hospital. Which of the following is the largest group to which the results can most appropriately be applied?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "All employees who work at Riverside Hospital",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only nurses could be selected; doctors and other staff have different schedules."
+    },
+    {
+     "key": "B",
+     "text": "All nurses who work at hospitals in the country",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only Riverside nurses could be selected."
+    },
+    {
+     "key": "C",
+     "text": "All nurses who work at Riverside Hospital",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "All patients treated at Riverside Hospital",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The patients were not the people surveyed at all."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The largest group a random sample can describe is the group it was selected from.",
+    "steps": "What does the question ask? The largest group the results fit.<br>Selected from: nurses at Riverside Hospital <span class=\"nt\">(random selection, so the results reach every nurse there)</span><br>Not selectable: other staff, patients, nurses elsewhere <span class=\"nt\">(they had no chance to be in the sample)</span><br>So the results apply to all nurses who work at Riverside Hospital, and no larger group.",
+    "check": "Each other choice includes people who could not have been selected ✓",
+    "be_careful": "“Largest” still means only as large as the sampled group.",
+    "desmos": "Not needed.",
+    "another_way": "Start from the sentence “selected at random from ___”; the blank is the answer."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-017",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C3"
+   ],
+   "family": "observational-random-sample-claim",
+   "signature": "random 500 teens in state, those with more screen time sleep less -> among state teens more screen time is associated with less sleep; traps cause, opposite cause, only 500",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of 500 teenagers in a state was surveyed. The survey found that teenagers who reported more daily screen time tended to report fewer hours of sleep. Which of the following conclusions is best supported by the survey?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "More screen time causes teenagers in the state to sleep less.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "No one was assigned an amount of screen time, so this cause claim is not supported."
+    },
+    {
+     "key": "B",
+     "text": "Less sleep causes teenagers in the state to use screens more.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This is a cause claim in the other direction; it is not supported either."
+    },
+    {
+     "key": "C",
+     "text": "The pattern holds for the 500 surveyed teenagers only.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The 500 were selected at random from the state’s teens, so the pattern can be generalized to them."
+    },
+    {
+     "key": "D",
+     "text": "Teenagers in the state with more screen time tend to sleep less.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A random sample with no random assignment supports a “tend to” (association) statement about the population, but no cause.",
+    "steps": "What does the question ask? Which conclusion the survey supports.<br>Random selection from the state’s teenagers? Yes <span class=\"nt\">(generalize to them)</span><br>Random assignment of screen time? No <span class=\"nt\">(association only)</span><br>So: teenagers in the state with more screen time tend to sleep less.",
+    "check": "“Tend to” describes a pattern without claiming a cause ✓",
+    "be_careful": "Both cause directions are unsupported, not just one.",
+    "desmos": "Not needed.",
+    "another_way": "Replace “causes” with “goes along with”: that is all an observational study can say."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-018",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "experiment-effect-scaled",
+   "signature": "80 seeds random 40/40, 32 vs 22 sprouted -> 80% vs 55%; 600 seeds soaked vs not: 150 more expected; traps 480 (soaked only), 6000 (10 x 600)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A gardener randomly assigned 80 seeds of the same type to two groups of 40. The seeds in one group were soaked in water overnight before planting, and the seeds in the other group were not soaked. Of the soaked seeds, 32 sprouted, and of the unsoaked seeds, 22 sprouted. Based on the experiment, if 600 seeds of this type are planted, how many more of them are expected to sprout if all 600 are soaked than if none of them are soaked?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "150"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "480",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "480 is the number expected to sprout when all 600 are soaked. The question asks how many MORE than with no soaking."
+    },
+    {
+     "value": "6000",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies the 10-seed difference by 600. The difference must first be turned into a fraction of a 40-seed group."
+    }
+   ],
+   "solution": {
+    "key_idea": "Because the seeds were randomly assigned, the difference between the two groups’ sprouting rates estimates the effect of soaking.",
+    "steps": "What does the question ask? How many MORE of 600 seeds sprout with soaking than without.<br>soaked rate: $\\frac{32}{40} = 0.80$ <span class=\"nt\">(32 of 40 soaked seeds)</span><br>unsoaked rate: $\\frac{22}{40} = 0.55$ <span class=\"nt\">(22 of 40 unsoaked seeds)</span><br>soaked: $0.80 \\times 600 = 480$ <span class=\"nt\">(expected sprouts if all are soaked)</span><br>unsoaked: $0.55 \\times 600 = 330$ <span class=\"nt\">(expected sprouts if none are soaked)</span><br>$480 - 330 = 150$ <span class=\"nt\">(how many more)</span>",
+    "check": "$(0.80 - 0.55) \\times 600 = 0.25 \\times 600 = 150$ ✓",
+    "be_careful": "Turn each count into a rate of its own 40-seed group before scaling to 600.",
+    "desmos": "Not needed.",
+    "another_way": "Soaking adds $32 - 22 = 10$ sprouts per 40 seeds; 600 seeds is 15 groups of 40, so $10 \\times 15 = 150$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-019",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "bias-direction",
+   "signature": "survey members at public library on reading -> likely overestimates; traps underestimates, accurate because random among library visitors, no effect",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "To estimate the mean number of books read per year by adults in a city, a researcher surveyed 200 adults as they left the city’s main public library. Which of the following is most likely true about the researcher’s estimate?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is likely too high, because library visitors probably read more than most adults.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "It is likely too low, because library visitors borrow books instead of buying them.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Borrowing is still reading. People at a library are likely to read MORE, not less."
+    },
+    {
+     "key": "C",
+     "text": "It is likely accurate, because 200 adults is a large enough sample.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "A sample of 200 library visitors is biased whatever its size."
+    },
+    {
+     "key": "D",
+     "text": "It is likely accurate, because every adult in the city can visit the library.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Being able to visit is not the same as being chosen at random; the actual visitors are a special group."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A sample taken where people share a habit tends to push the estimate in the direction of that habit.",
+    "steps": "What does the question ask? How the estimate is likely off.<br>Who was surveyed? Adults leaving a library <span class=\"nt\">(a group that reads more than average)</span><br>Who is mostly missed? Adults who rarely visit a library <span class=\"nt\">(they likely read fewer books)</span><br>Heavy readers are overrepresented and light readers are underrepresented, so the estimated mean is likely too high. A larger sample taken the same way would keep the same bias.",
+    "check": "The direction matches the bias: readers in, non-readers mostly out ✓",
+    "be_careful": "Decide the DIRECTION of the bias, not just that it exists.",
+    "desmos": "Not needed.",
+    "another_way": "Ask who is missing: adults who never visit the library, who probably read less. Leaving them out pulls the mean up."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-020",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "M",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "both-random-full-claim",
+   "signature": "random sample of 300 from all city bus riders, randomly assigned app vs paper schedule; app group waited less -> app likely causes less waiting for city bus riders; traps volunteers, association, only 300",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A transit agency selected 300 riders at random from all riders of a city’s buses. The agency randomly assigned 150 of these riders to use a new arrival-time app and the other 150 to use printed schedules. The riders using the app waited significantly less time at bus stops. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "For the 300 riders studied only, the app likely causes shorter waits.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The 300 riders were selected at random from all city bus riders, so the conclusion can be generalized to them."
+    },
+    {
+     "key": "B",
+     "text": "For the city’s bus riders, using the app likely causes shorter waits.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "For the city’s bus riders, the app is linked to shorter waits but is not a cause.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The riders were randomly assigned to the app, so a cause conclusion IS allowed."
+    },
+    {
+     "key": "D",
+     "text": "For riders of buses in every city, the app likely causes shorter waits.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only this city’s riders could be selected."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Random selection lets us generalize to the population; random assignment lets us conclude cause. With both, we get a cause conclusion for the population.",
+    "steps": "What does the question ask? The strongest conclusion this study supports.<br>Random selection from the city’s bus riders? Yes <span class=\"nt\">(generalize to all of them)</span><br>Random assignment to app or schedule? Yes <span class=\"nt\">(cause is allowed)</span><br>So: for the city’s bus riders, the app likely causes shorter waits.",
+    "check": "The conclusion goes no further than the city’s riders and uses “causes” ✓",
+    "be_careful": "With both kinds of randomness, under-claiming is also wrong.",
+    "desmos": "Not needed.",
+    "another_way": "Use a 2-by-2 checklist: selection (whom?) and assignment (cause?). Both checked = cause, for the population."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-021",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C3"
+   ],
+   "family": "claim-reason-cause",
+   "signature": "random 600 of state adults; those who eat breakfast daily lower BMI; claim \"breakfast causes\" -> No, no random assignment; traps \"No, sample not random\" (it was), \"Yes random sample\", \"Yes large sample\"",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A health agency selected 600 adults at random from all adults in a state. The adults who reported eating breakfast every day had a lower mean body weight than the adults who did not. A news article claimed, “Eating breakfast every day causes adults in the state to weigh less.” Which of the following best evaluates the article’s claim?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is not supported, because the 600 adults were not a random sample of the state.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The 600 adults WERE selected at random from the state’s adults. The missing piece is random assignment."
+    },
+    {
+     "key": "B",
+     "text": "It is supported, because the 600 adults were selected at random from the state.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Random selection lets the result reach all adults in the state, but it does not make it a cause."
+    },
+    {
+     "key": "C",
+     "text": "It is not supported, because the adults were not randomly assigned to eat breakfast.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "It is supported, because a sample of 600 adults is large enough to show a cause.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "No sample size turns an observational study into evidence of cause."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Random selection answers “to whom?”; only random assignment answers “does it cause?”.",
+    "steps": "What does the question ask? Whether the claim “breakfast causes lower weight” is supported, and why.<br>Random selection? Yes <span class=\"nt\">(the link can be generalized to the state’s adults)</span><br>Random assignment? No <span class=\"nt\">(the adults chose whether to eat breakfast)</span><br>Breakfast eaters may differ in other ways <span class=\"nt\">(more exercise, different jobs, more sleep)</span><br>So the cause claim is not supported, and the reason is the missing random assignment.",
+    "check": "The chosen reason names the step that is actually missing ✓",
+    "be_careful": "Two choices say “not supported”; only one gives a TRUE reason.",
+    "desmos": "Not needed.",
+    "another_way": "Check the reason in each choice against the stem: was the sample random? yes. Was there assignment? no. Only one reason matches the facts."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-022",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "claim-reason-generalize",
+   "signature": "90 volunteers from one HS randomly assigned tutoring; principal: will raise scores of all students -> No, volunteers not random sample; traps \"No, no random assignment\" (there was), Yes x2",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "At a high school, 90 students volunteered for a study. Half of them were randomly assigned to an after-school tutoring program, and the other half were not. The tutored students’ mean math score rose significantly more. The principal concluded that the program would raise the math scores of all students at the school. Which of the following best evaluates the principal’s conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is not justified, because the volunteers may not represent all students at the school.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "It is not justified, because the students were not randomly assigned to the two groups.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The students WERE randomly assigned, which is why a cause conclusion is fine for students like the volunteers."
+    },
+    {
+     "key": "C",
+     "text": "It is justified, because random assignment shows the program caused the rise.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Random assignment supports cause for the volunteers, but it does not stretch the result to every student."
+    },
+    {
+     "key": "D",
+     "text": "It is justified, because 90 students is a large share of the school.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "A large share chosen by volunteering is still not a random sample."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Random assignment supports a cause conclusion, but only random selection lets that conclusion reach a whole population.",
+    "steps": "What does the question ask? Whether “all students at the school” is justified, and why.<br>Random assignment? Yes <span class=\"nt\">(the program likely caused the rise for these students)</span><br>Random selection from the school? No <span class=\"nt\">(the 90 volunteered)</span><br>Volunteers may be more motivated <span class=\"nt\">(so the program may not work the same for everyone)</span><br>So the conclusion about ALL students is not justified, because the participants were volunteers.",
+    "check": "The principal’s claim fails only on “whom”, which is exactly what the chosen reason says ✓",
+    "be_careful": "Do not reject a part of the design that was done correctly.",
+    "desmos": "Not needed.",
+    "another_way": "Split the principal’s claim in two: “the program causes a rise” (OK) and “for all students” (not OK)."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-023",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "subgroup-in-full-sample",
+   "signature": "club 1,500 members; random 60 of ALL members; 16 of the 60 joined in the past year, and 4 of those 16 attended a meeting -> 4/60 of 1,500 = 100; traps 375 (4/16 x 1,500), 400 (16/60 x 1,500)",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A hiking club has 1,500 members. The club selected 60 of its members at random. Of these 60 members, 16 joined the club in the past year, and 4 of those 16 have attended at least one club meeting. Based on the sample, what is the best estimate of the number of the club’s members who joined in the past year and have attended at least one club meeting?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "100"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "375",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "$\\frac{4}{16}$ is the fraction among NEW members, but it was multiplied by all 1,500 members."
+    },
+    {
+     "value": "400",
+     "error_type": "slip",
+     "misconception": "D5",
+     "feedback": "400 estimates all members who joined in the past year, attended or not."
+    }
+   ],
+   "solution": {
+    "key_idea": "A random sample of the whole club estimates any subgroup of the club: use (members of the subgroup in the sample) ÷ (whole sample).",
+    "steps": "What does the question ask? A count of club members who are BOTH new and have attended a meeting.<br>The 60 were selected from all 1,500 members, so the whole sample stands for the whole club.<br>In the sample, members who are new AND attended: 4 <span class=\"nt\">(the 4 of the 16 new members)</span><br>fraction of the club $= \\frac{4}{60} = \\frac{1}{15}$ <span class=\"nt\">(out of the WHOLE sample of 60)</span><br>estimate $= \\frac{1}{15} \\times 1{,}500$ <span class=\"nt\">(scale to the whole club)</span><br>$= 100$ <span class=\"nt\">(multiply)</span>",
+    "check": "New members: $\\frac{16}{60} \\times 1{,}500 = 400$; of those, $\\frac{4}{16} = \\frac{1}{4}$ attended: $\\frac{1}{4} \\times 400 = 100$ ✓",
+    "be_careful": "$\\frac{4}{16}$ is a fraction of NEW members only; it must be applied to the estimated number of new members, not to all 1,500.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled member stands for $1{,}500 \\div 60 = 25$ members, so the 4 stand for $4 \\times 25 = 100$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-024",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C5"
+   ],
+   "family": "nonrandom-comparison-groups",
+   "signature": "new therapy at Hospital X, usual at Hospital Y; X patients recovered faster -> groups may differ (hospital care, patients); traps size, therapy proven, should use one hospital w/o assignment",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Patients at Hospital X received a new physical therapy after knee surgery, while patients at Hospital Y received the usual therapy. On average, the patients at Hospital X recovered faster. Which of the following is the strongest criticism of concluding that the new therapy caused faster recovery?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The patients were not selected at random from all knee-surgery patients in the country.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "True, but that limits WHO the result applies to; it does not explain why X’s patients recovered faster."
+    },
+    {
+     "key": "B",
+     "text": "The new therapy may not work as well for patients recovering from other surgeries.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Possibly true, but the claim is only about knee surgery, so this does not weaken it."
+    },
+    {
+     "key": "C",
+     "text": "The study should have included more patients from Hospital Y than from Hospital X.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "More Hospital Y patients would still not be comparable with Hospital X patients."
+    },
+    {
+     "key": "D",
+     "text": "The hospitals may differ in other ways, such as their surgeons or their patients’ ages.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "If the groups were not formed by random assignment, any difference between them could come from something other than the treatment.",
+    "steps": "What does the question ask? The best reason the cause conclusion is weak.<br>How were patients put into groups? By hospital <span class=\"nt\">(not by random assignment)</span><br>The hospitals can differ <span class=\"nt\">(surgeons, equipment, patient ages, aftercare)</span><br>Any of these could explain faster recovery, so the therapy’s effect is mixed up with the hospital’s.",
+    "check": "Randomly assigning patients within the same hospital would remove this criticism ✓",
+    "be_careful": "A comparison group exists here, but it is not a FAIR one.",
+    "desmos": "Not needed.",
+    "another_way": "Ask: if both hospitals used the same therapy, could X still be faster? Yes, so the difference may not be the therapy."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-025",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C3"
+   ],
+   "family": "reverse-cause",
+   "signature": "adults who own a home exercise bike are fitter -> fitter people more likely to buy bike (reverse direction); traps bike causes, third-variable wrong, sample size",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A survey of a random sample of adults in a city found that adults who own a home exercise bike tend to have lower resting heart rates than adults who do not. Which of the following is a possible explanation for this result, other than owning a bike causing lower heart rates?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Riding an exercise bike regularly lowers an adult’s resting heart rate.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This is the very cause claim the question tells us to set aside."
+    },
+    {
+     "key": "B",
+     "text": "Adults who are already fit are more likely to choose to buy an exercise bike.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Adults with high heart rates may buy exercise bikes to try to improve their health.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "This would make bike owners have HIGHER heart rates, the opposite of what was found."
+    },
+    {
+     "key": "D",
+     "text": "Adults who own an exercise bike may be more likely to own other exercise equipment too.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Owning more equipment does not explain heart rates unless it is used; this is another form of the same cause story."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "In an observational study, the direction can run backward: the outcome may influence the “treatment” people choose.",
+    "steps": "What does the question ask? Another explanation for the link, not “the bike causes it”.<br>Who buys exercise bikes? People who like exercise <span class=\"nt\">(they choose to own one)</span><br>Those people are already fit <span class=\"nt\">(so they have lower resting heart rates anyway)</span><br>So fitness could lead to bike ownership, the reverse of the cause in the claim.",
+    "check": "This explanation fits the data without the bike doing anything ✓",
+    "be_careful": "An association can be explained by the direction running the other way.",
+    "desmos": "Not needed.",
+    "another_way": "Swap the roles: does low heart rate (fitness) make bike ownership more likely? Plausibly yes."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-026",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "diff-in-diff",
+   "signature": "random assignment; new method 62 -> 75 (+13), usual 61 -> 66 (+5) -> estimated effect 8; traps 13 (ignore control), 9 (75 - 66)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A teacher randomly assigned students to learn with a new method or the usual method. The table shows each group’s mean score on a test given before and after the unit.<table class=\"dt\"><tr><th></th><th>Mean score before</th><th>Mean score after</th></tr><tr><th>New method</th><td>62</td><td>75</td></tr><tr><th>Usual method</th><td>61</td><td>66</td></tr></table>Based on these results, by how many points is the new method estimated to increase a student’s gain from the before test to the after test, compared with the usual method?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "8"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "13",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "13 is the new method’s gain alone. Students in the usual group also gained, so part of the 13 would have happened anyway."
+    },
+    {
+     "value": "9",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "9 compares the after scores only, $75 - 66$, and ignores that the groups started 1 point apart."
+    }
+   ],
+   "solution": {
+    "key_idea": "Compare GAINS: the treatment group’s gain minus the comparison group’s gain is the extra gain due to the treatment.",
+    "steps": "What does the question ask? How much MORE the new method raises the gain.<br>Step 1: Gain in each group.<br>new: $75 - 62 = 13$ <span class=\"nt\">(after minus before)</span><br>usual: $66 - 61 = 5$ <span class=\"nt\">(after minus before)</span><br>Step 2: Compare the gains.<br>$13 - 5 = 8$ <span class=\"nt\">(extra gain from the new method)</span>",
+    "check": "With 8 extra points, the new group gains $5 + 8 = 13$, and $62 + 13 = 75$ ✓",
+    "be_careful": "The usual group improved too; that improvement is not caused by the new method.",
+    "desmos": "Not needed.",
+    "another_way": "After-score gap $75 - 66 = 9$, minus the before-score gap $62 - 61 = 1$, is also $8$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-027",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "nonresponse",
+   "signature": "random 1,000 residents mailed survey, 180 returned, 70% favor -> concern: those who returned may differ; traps sample random so fine, 70% too high, 180 > 100",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A city mailed a survey about a proposed tax to 1,000 residents selected at random from a list of all residents. Only 180 of the surveys were returned, and 70% of those returned favored the tax. Which of the following is the main reason the 70% may not be a good estimate for all residents of the city?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The 1,000 residents were not selected at random from a list of all residents.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "They were. The problem began after selection, when most people did not respond."
+    },
+    {
+     "key": "B",
+     "text": "A sample of 180 residents is too small to estimate a percent for a whole city.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "A random sample of 180 could work; the trouble is that the 180 chose themselves by returning the survey."
+    },
+    {
+     "key": "C",
+     "text": "The residents who returned the survey may feel differently about the tax than the others.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The survey should have been mailed to all residents instead of only 1,000.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Mailing to everyone would still let people choose whether to answer, so the same bias would remain."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A random sample can lose its value if many selected people do not respond, because those who respond may differ from those who do not.",
+    "steps": "What does the question ask? Why 70% may not describe the whole city.<br>Selection was random <span class=\"nt\">(that part was done well)</span><br>Response: 180 of 1,000, or 18% <span class=\"nt\">(most selected residents did not answer)</span><br>People who answer often care more <span class=\"nt\">(for example, strong supporters)</span><br>So the 180 who answered may not represent the city; this is nonresponse.",
+    "check": "The chosen reason is about the 820 missing answers, the real weakness ✓",
+    "be_careful": "A random sample with low response is no longer clearly random.",
+    "desmos": "Not needed.",
+    "another_way": "Imagine the 820 nonresponders all opposed the tax: the city could be far below 70%."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-028",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "purpose-random-assignment",
+   "signature": "why randomly assign 40 plots to new / old fertilizer: groups alike in soil, sun -> difference due to fertilizer; traps generalize (selection), equal sizes, guarantee",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An agricultural scientist has 40 plots of land on one farm. The scientist randomly assigned 20 plots to receive a new fertilizer and the other 20 to receive the old fertilizer. Which of the following is the main purpose of randomly assigning the plots?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "To make sure that the results can be generalized to all farmland in the region",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Generalizing depends on random SELECTION of the plots, and all 40 came from one farm."
+    },
+    {
+     "key": "B",
+     "text": "To make sure that the two groups each have exactly 20 plots in them",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Equal sizes could be arranged without any randomness; that is not the purpose."
+    },
+    {
+     "key": "C",
+     "text": "To guarantee that the new fertilizer will give larger crops than the old one does",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "No design guarantees a result; random assignment only makes the comparison fair."
+    },
+    {
+     "key": "D",
+     "text": "To make the groups alike in other ways, so a difference can be credited to the fertilizer",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Random assignment spreads other differences (soil, water, sun) evenly between groups on average, so the treatment is the main systematic difference.",
+    "steps": "What does the question ask? Why the plots were assigned at random.<br>Plots differ in soil, sunlight, drainage <span class=\"nt\">(these affect crop growth)</span><br>Random assignment mixes these differences into both groups <span class=\"nt\">(neither group gets all the good plots)</span><br>So a difference between the groups can be credited to the fertilizer.",
+    "check": "If the scientist had picked the plots, the new fertilizer might get the sunniest ones ✓",
+    "be_careful": "Random ASSIGNMENT is about cause; random SELECTION is about generalizing.",
+    "desmos": "Not needed.",
+    "another_way": "Match each purpose to a step: “fair comparison” goes with assignment; “all farmland” would need selection."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-029",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "experiment-scope-multi",
+   "signature": "90 tomato plants in one greenhouse randomly assigned to 3 fertilizers; B tallest -> B caused more growth than A and C for plants like these; traps all farms, association, B best for every plant",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A grower randomly assigned 90 tomato plants in one greenhouse to three groups of 30. Each group received a different fertilizer: A, B, or C. After 6 weeks, the plants given fertilizer B were significantly taller, on average, than the plants in the other two groups. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "For plants like these, fertilizer B likely causes more growth than A or C.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "For tomato plants on every farm, fertilizer B likely causes the most growth.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The plants all came from one greenhouse and were not a random sample of all tomato plants."
+    },
+    {
+     "key": "C",
+     "text": "Fertilizer B is linked to more growth, but it cannot be called a cause.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The plants were randomly assigned, so a cause conclusion is allowed."
+    },
+    {
+     "key": "D",
+     "text": "Every plant given fertilizer B grew taller than every plant given A or C.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "The result is about the MEAN heights; some B plants could be shorter than some A or C plants."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A randomized experiment supports cause for subjects like those in the study, and it describes groups on average, not every individual.",
+    "steps": "What does the question ask? What the experiment supports.<br>Random assignment? Yes <span class=\"nt\">(cause is allowed)</span><br>Random selection from all tomato plants? No <span class=\"nt\">(one greenhouse only)</span><br>Result: taller on average <span class=\"nt\">(a statement about means)</span><br>So: for plants like these, B likely causes more growth than A or C.",
+    "check": "The chosen conclusion uses “causes”, limits the scope, and makes no claim about every plant ✓",
+    "be_careful": "“On average” never means “every one”.",
+    "desmos": "Not needed.",
+    "another_way": "Three filters: cause OK? (yes) scope = these plants? (yes) about averages? (yes). Only one choice passes all three."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-030",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "unequal-groups-rate-ratio",
+   "signature": "random assignment unequal sizes, non-improvers given: 16 of 64 and 27 of 54 did not improve -> improved 48 of 64 vs 27 of 54 -> 75% / 50% = 1.5; traps 16/27 or 27/16 (non-improver counts), 0.5 (non-improver ratio), 48/27 (counts)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "In an experiment, 118 volunteers with back pain were randomly assigned to two groups. Of the 64 volunteers who did a daily exercise routine, 16 did NOT report improvement. Of the 54 volunteers who did not do the routine, 27 did NOT report improvement. Every other volunteer reported improvement. The proportion of the exercise group that reported improvement is how many times the proportion of the other group that reported improvement?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1.5",
+      "3/2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "16/9",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This compares the counts, $\\frac{48}{27}$. The groups have different sizes, so each count must be divided by its own group first."
+    },
+    {
+     "value": ".5",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "0.5 compares the proportions who did NOT improve, $\\frac{16/64}{27/54}$. The question asks about those who did improve."
+    }
+   ],
+   "solution": {
+    "key_idea": "When groups have different sizes, compare proportions (count ÷ group size), not raw counts.",
+    "steps": "What does the question ask? A ratio of two proportions (how many times as large).<br>The counts given are for volunteers who did NOT improve, so first find who did improve. The groups have different sizes, 64 and 54, so each count must then be turned into a proportion of its own group.<br>improved: $64 - 16 = 48$ and $54 - 27 = 27$ <span class=\"nt\">(everyone else improved)</span><br>exercise: $\\frac{48}{64} = 0.75$ <span class=\"nt\">(48 of the 64 in that group)</span><br>no routine: $\\frac{27}{54} = 0.5$ <span class=\"nt\">(27 of the 54 in that group)</span><br>$\\frac{0.75}{0.5} = 1.5$ <span class=\"nt\">(how many times)</span>",
+    "check": "$1.5 \\times 0.5 = 0.75$ ✓",
+    "be_careful": "$\\frac{48}{27}$ ignores that the groups are different sizes.",
+    "desmos": "Not needed.",
+    "another_way": "$\\frac{48/64}{27/54} = \\frac{48 \\times 54}{64 \\times 27} = \\frac{2{,}592}{1{,}728} = 1.5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-031",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "sampling-frame",
+   "signature": "random 500 from the list of county residents who voted in the 2024 election -> largest group = 2024 county voters; traps all registered voters (tempting), all adults, only the 500",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A county election office selected 500 people at random from its list of all county residents who voted in the 2024 election and asked whether they would use a mail-in ballot in the next election. Which of the following is the largest group to which the results of the survey can most appropriately be applied?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "All registered voters in the county, whether or not they voted",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Registered voters who did not vote in 2024 were not on the list, so they could not be selected, and they may feel differently about mail-in ballots."
+    },
+    {
+     "key": "B",
+     "text": "All county residents who voted in the 2024 election",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "All adults who live in the county, registered or not",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Adults who did not vote in 2024 could not be selected."
+    },
+    {
+     "key": "D",
+     "text": "Only the 500 county residents who were surveyed",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The 500 were selected at random from the list, so the results reach everyone on it."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The population is the list the random sample was drawn from. People who are not on that list are not represented.",
+    "steps": "What does the question ask? The LARGEST group the results fit.<br>Selected from: the list of county residents who voted in 2024 <span class=\"nt\">(that list is the population)</span><br>Not on the list: registered voters who skipped 2024, unregistered adults <span class=\"nt\">(they had no chance of selection)</span><br>People who skipped an election may be the very people who would choose (or not choose) a mail-in ballot, so they cannot be assumed similar.<br>So the largest group is all county residents who voted in the 2024 election.",
+    "check": "The 500 alone is too small; registered voters and all adults include people not on the list ✓",
+    "be_careful": "“Registered voters” sounds right, but the list was narrower: only people who actually voted in 2024.",
+    "desmos": "Not needed.",
+    "another_way": "Copy the list name word for word: “county residents who voted in the 2024 election”. That is the population."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-032",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "average-not-individual",
+   "signature": "experiment random 50/50, music group mean 12 min faster on puzzle -> must be true: music group mean shorter; traps every student faster, each by 12, cause for all students",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A researcher randomly assigned 100 student volunteers to two groups of 50. Students in one group listened to music while solving a puzzle, and students in the other group worked in silence. The mean solving time for the music group was 12 minutes shorter than the mean solving time for the silent group. Which of the following must be true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Each student in the music group solved the puzzle faster than each student in the silent group.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "A difference in MEANS allows some music students to be slower than some silent students."
+    },
+    {
+     "key": "B",
+     "text": "Each student in the music group would have taken 12 minutes longer in silence.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "12 minutes is an average difference between groups, not a fixed amount for each student."
+    },
+    {
+     "key": "C",
+     "text": "For these 100 students, the mean solving time was shorter for the music group.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Listening to music shortens solving time for all students in the country.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The students were volunteers, not a random sample of all students in the country."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A difference in group means is a fact about the groups on average; it says nothing certain about any single person.",
+    "steps": "What does the question ask? A statement that MUST be true.<br>Fact: music mean = silent mean $-$ 12 <span class=\"nt\">(given)</span><br>Means describe groups <span class=\"nt\">(individual times can overlap)</span><br>Volunteers, not a random sample <span class=\"nt\">(no generalizing to all students)</span><br>Only the statement about the two group means must be true.",
+    "check": "The chosen statement restates the given result without adding anything ✓",
+    "be_careful": "“Must be true” allows no stretching: not individuals, not other people.",
+    "desmos": "Not needed.",
+    "another_way": "Build a counterexample for the others: one music student taking 30 minutes and one silent student taking 10 still fits the means."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-033",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "bias-direction-coverage",
+   "signature": "phone survey 10 a.m. to 2 p.m. weekdays on home landlines -> % employed full-time likely too low; traps too high, accurate random, no direction",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "To estimate the percent of adults in a town who work full time, a researcher called randomly chosen home phone numbers between 10:00 a.m. and 2:00 p.m. on weekdays and interviewed the adult who answered. Which of the following is most likely true about the researcher’s estimate?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is likely too high, because adults who work full time are more likely to have a home phone.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D4",
+     "feedback": "Even if they have a phone, full-time workers are usually AT WORK at those hours, so they are missed."
+    },
+    {
+     "key": "B",
+     "text": "It is likely accurate, because the phone numbers were chosen at random.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Random numbers do not help if the calling time screens out a whole group."
+    },
+    {
+     "key": "C",
+     "text": "It is likely accurate, because each adult who answered was interviewed.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Interviewing everyone who answers still misses those not home."
+    },
+    {
+     "key": "D",
+     "text": "It is likely too low, because adults who work full time are often away from home then.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "If the way a sample is collected misses a group, the estimate moves away from that group.",
+    "steps": "What does the question ask? The likely direction of the error.<br>When were calls made? Weekdays, 10 a.m. to 2 p.m. <span class=\"nt\">(normal working hours)</span><br>Who is home then? Mostly people not working full time <span class=\"nt\">(full-time workers are missed)</span><br>So the percent who work full time is likely too low.",
+    "check": "The missed group (full-time workers) is exactly the group being counted, so the count shrinks ✓",
+    "be_careful": "Random phone numbers do not fix a biased calling time.",
+    "desmos": "Not needed.",
+    "another_way": "Ask who answers at noon on a Tuesday: retirees, students, part-time and stay-at-home adults."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-034",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "choose-right-comparison",
+   "signature": "three unequal groups (20/25/15) with TOTAL heights; means 41.2, 47.0, 44.5; A instead of B -> 2.5; traps 507.5 (total diff), 5.8, 3.3",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A botanist randomly assigned 60 seedlings of the same type to three groups: one group received no fertilizer, one received fertilizer A, and one received fertilizer B. The table shows the number of seedlings in each group and the total of their heights after 4 weeks.<table class=\"dt\"><tr><th>Group</th><th>Number of seedlings</th><th>Total height (cm)</th></tr><tr><th>No fertilizer</th><td>20</td><td>824.0</td></tr><tr><th>Fertilizer A</th><td>25</td><td>1,175.0</td></tr><tr><th>Fertilizer B</th><td>15</td><td>667.5</td></tr></table>Based on the experiment, by how many centimeters is using fertilizer A instead of fertilizer B estimated to increase the mean height of these seedlings after 4 weeks?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2.5",
+      "5/2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "507.5",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "507.5 compares TOTALS, but the groups have different numbers of seedlings."
+    },
+    {
+     "value": "5.8",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "5.8 compares fertilizer A with no fertilizer. The question compares A with B."
+    }
+   ],
+   "solution": {
+    "key_idea": "The estimated effect of switching treatments is the difference between those two treatment groups’ means.",
+    "steps": "What does the question ask? The effect of using A INSTEAD OF B.<br>Because the seedlings were randomly assigned, the groups were alike except for the fertilizer, so a difference in means estimates an effect.<br>The groups have different sizes, so totals cannot be compared directly; turn each total into a mean.<br>A: $\\frac{1{,}175.0}{25} = 47.0$ <span class=\"nt\">(total ÷ number of seedlings)</span><br>B: $\\frac{667.5}{15} = 44.5$ <span class=\"nt\">(same for B)</span><br>$47.0 - 44.5 = 2.5$ <span class=\"nt\">(A mean minus B mean; the no-fertilizer group is not part of this comparison)</span>",
+    "check": "$25 \\times 47.0 = 1{,}175$ and $15 \\times 44.5 = 667.5$ ✓",
+    "be_careful": "Compare MEANS, not totals, and only the two groups the question names.",
+    "desmos": "Not needed.",
+    "another_way": "No-fertilizer mean is $824 \\div 20 = 41.2$. A beats it by 5.8 and B by 3.3, so A beats B by $5.8 - 3.3 = 2.5$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-035",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "big-biased-vs-small-random",
+   "signature": "Poll 1: 12,000 website visitors, 64%; Poll 2: random 400 residents, 51% -> Poll 2 more trustworthy since random; traps Poll 1 bigger, both equal, neither",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two polls asked whether the state should lower its speed limit. Poll 1 collected 12,000 responses from visitors to a news website, and 64% said yes. Poll 2 surveyed 400 adults selected at random from all adults in the state, and 51% said yes. Which poll gives the more trustworthy estimate of the percent of all adults in the state who would say yes, and why?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Poll 2, because every adult in the state had a chance to be selected for it",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Poll 1, because a larger sample gives an estimate with a smaller margin of error",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "A margin of error only describes random samples. Website visitors who choose to answer are not one, and size cannot fix that bias."
+    },
+    {
+     "key": "C",
+     "text": "Poll 2, because its result of 51% is closer to an even split of the state",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Right poll, wrong reason: a result is not more trustworthy because it is near 50%."
+    },
+    {
+     "key": "D",
+     "text": "The two polls are equally trustworthy, because each asked the same question",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The same question asked of a biased sample still gives a biased answer."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A small random sample beats a huge self-selected sample, because bias does not shrink as the sample grows.",
+    "steps": "What does the question ask? Which poll better represents all adults in the state.<br>Poll 1: website visitors who chose to answer <span class=\"nt\">(voluntary response, likely biased)</span><br>Poll 2: random from all adults in the state <span class=\"nt\">(representative)</span><br>So Poll 2 is more trustworthy, because its sample was random.",
+    "check": "The chosen reason names random selection, the feature Poll 1 lacks ✓",
+    "be_careful": "12,000 is impressive but irrelevant when the sample chose itself.",
+    "desmos": "Not needed.",
+    "another_way": "If 12,000 is good, 120,000 from the same website would be better; but it would carry the same bias. So size is not the issue."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-036",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "roman-must-be-true",
+   "signature": "volunteers at one college randomly assigned 2 or 6 hours sleep before memory test; 6 h group higher mean. I cause for volunteers (T), II all college students (F), III every 6 h student higher (F) -> I only",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Researchers recruited 70 student volunteers at a college and randomly assigned half of them to sleep 4 hours and the other half to sleep 8 hours before a memory test. The 8-hour group had a significantly higher mean score. Which of the following statements is supported by the study?<br>I. For students like these volunteers, more sleep likely causes higher memory test scores.<br>II. For all students at the college, more sleep likely causes higher memory test scores.<br>III. Every student in the 8-hour group scored higher than every student in the 4-hour group.",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "I only",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "II only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "II reaches all students at the college, but the participants were volunteers, not a random sample."
+    },
+    {
+     "key": "C",
+     "text": "I and II only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "I is supported, but II needs random selection from the whole college."
+    },
+    {
+     "key": "D",
+     "text": "I and III only",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "III is about every individual; a higher MEAN allows overlap between the groups."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Random assignment supports cause for the participants; volunteers limit the scope; means do not describe every individual.",
+    "steps": "What does the question ask? Which statements the study supports.<br>I: cause, for students like the volunteers <span class=\"nt\">(random assignment: supported)</span><br>II: cause, for ALL students at the college <span class=\"nt\">(no random selection: not supported)</span><br>III: every student higher <span class=\"nt\">(means only: not supported)</span><br>So only I is supported.",
+    "check": "I uses exactly what the design provides and nothing more ✓",
+    "be_careful": "Test each Roman numeral against both random steps and against “average vs every”.",
+    "desmos": "Not needed.",
+    "another_way": "II and III each add something the study did not do (random selection, or individual-level data)."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-037",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C5"
+   ],
+   "family": "what-data-supports-cause",
+   "signature": "city added bike lanes in 2025, bike injuries fell 20% in 2026 -> best additional data: injury changes in similar cities without new lanes; traps more years before in same city, number of lanes, injuries in 2026 only",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A city added bike lanes to its downtown streets in 2025. The number of bike injuries downtown in 2026 was 20% lower than in 2024. A city official claims the bike lanes caused the decrease. Which of the following additional information would best help evaluate the official’s claim?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The total number of miles of bike lanes the city added to downtown streets in 2025",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Knowing how many lanes were added does not show whether the lanes are what lowered injuries."
+    },
+    {
+     "key": "B",
+     "text": "The change in bike injuries from 2024 to 2026 in similar cities that did not add bike lanes",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "The number of bike injuries that happened downtown in each month of 2026",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "More detail about 2026 alone gives no comparison with what would have happened without the lanes."
+    },
+    {
+     "key": "D",
+     "text": "The percent of downtown residents who said they like the new bike lanes",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "Opinions about the lanes are not evidence about injuries."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A before-and-after change needs a comparison: what happened over the same time where nothing changed.",
+    "steps": "What does the question ask? Information that best tests “the lanes caused the drop”.<br>Other things changed from 2024 to 2026 <span class=\"nt\">(weather, gas prices, fewer riders, new laws)</span><br>Similar cities with no new lanes show what happens anyway <span class=\"nt\">(a comparison group)</span><br>If those cities also dropped about 20%, the lanes probably were not the cause.",
+    "check": "The chosen data is the only one that separates the lanes from everything else that changed ✓",
+    "be_careful": "More data about the same city does not create a comparison group.",
+    "desmos": "Not needed.",
+    "another_way": "Ask: “Would injuries have fallen without the lanes?” Only a no-lanes comparison can answer that."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-038",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "no-difference-claim",
+   "signature": "random assignment 2 detergents, no significant difference -> no evidence one cleans better for these shirts; traps proves equal, detergent useless, design wrong",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A lab randomly assigned 80 stained shirts to be washed with either Detergent P or Detergent Q. The researchers found no significant difference between the two groups in how clean the shirts were after washing. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The study proves that the two detergents always clean exactly equally well.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "“No significant difference” means a difference was not shown, not that the detergents are proven identical."
+    },
+    {
+     "key": "B",
+     "text": "The study shows that the two detergents clean these shirts equally well.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Not finding a difference is not the same as showing there is none; a small difference could have been missed."
+    },
+    {
+     "key": "C",
+     "text": "The study does not give evidence that either detergent cleans these shirts better.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The study is useless, because the shirts were assigned at random.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Random assignment is what makes the comparison fair; it is a strength."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "“No significant difference” means the study found no evidence of a difference; it does not prove there is none.",
+    "steps": "What does the question ask? What a “no difference” result allows us to say.<br>Random assignment <span class=\"nt\">(fair comparison of P and Q)</span><br>No significant difference found <span class=\"nt\">(no evidence that one beats the other)</span><br>So the study does not give evidence that either cleans these shirts better; it does not prove they are equal.",
+    "check": "The chosen statement claims only an absence of evidence ✓",
+    "be_careful": "Not finding a difference is different from proving there is none.",
+    "desmos": "Not needed.",
+    "another_way": "Compare with a trial: “not proven guilty” is not the same as “proven innocent”."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-039",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "nonresponse-arithmetic",
+   "signature": "400 randomly selected, 250 responded, 150 yes; reported 60% -> of all 400 selected, known no = 100/400 = 25%; traps 40 (responder base), 37.5 (yes)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A school selected 400 parents at random and asked whether they support a later start time. Only 250 of the selected parents responded, and 150 of them said yes. The school reported that 60% of parents support the change. Of all 400 parents who were selected, what percent are known to have said no?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "40",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "40% is the no share of the 250 responders. The question asks about all 400 selected parents."
+    },
+    {
+     "value": "37.5",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "37.5% is the known YES share of the 400, $\\frac{150}{400}$."
+    }
+   ],
+   "solution": {
+    "key_idea": "The base of a percent decides its meaning: of the responders, or of everyone selected.",
+    "steps": "What does the question ask? A percent of ALL 400 selected parents.<br>The school’s 60% uses only the 250 parents who answered; the other 150 selected parents said nothing, so they cannot be counted as yes or as no.<br>known no: $250 - 150 = 100$ <span class=\"nt\">(responders who did not say yes)</span><br>$\\frac{100}{400} = 0.25$ <span class=\"nt\">(base is the 400 selected)</span><br>$= 25\\%$ <span class=\"nt\">(as a percent)</span>",
+    "check": "Known yes $37.5\\%$ + known no $25\\%$ + no answer $37.5\\%$ $= 100\\%$ ✓",
+    "be_careful": "The 60% hides the 150 parents who never answered.",
+    "desmos": "Not needed.",
+    "another_way": "$40\\%$ of the $62.5\\%$ who responded: $0.4 \\times 0.625 = 0.25$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-040",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H",
+   "concepts": [
+    "P7.C3"
+   ],
+   "family": "scope-and-association",
+   "signature": "random 200 of weekend customers of one shop; app users spend more -> association among weekend Elm Street customers; traps all Elm Street customers (assoc), weekend cause, only the 200",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "The owner of a coffee chain selected 200 customers at random from all customers who visited the chain’s Elm Street shop on weekends last month. Customers who used the chain’s rewards app spent more per visit, on average, than customers who did not. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Among the shop’s weekend customers, using the app causes customers to spend more.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Customers chose whether to use the app, so this study cannot show cause."
+    },
+    {
+     "key": "B",
+     "text": "Among all of the shop’s customers, using the app is associated with spending more.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only weekend customers could be selected; weekday customers may behave differently."
+    },
+    {
+     "key": "C",
+     "text": "Only for the 200 customers sampled is using the app associated with spending more.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The 200 were selected at random from the weekend customers, so the link can be generalized to that group."
+    },
+    {
+     "key": "D",
+     "text": "Among the shop’s weekend customers, using the app is associated with spending more.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Scope comes from selection, cause from assignment. Here: weekend customers of one shop, association only.",
+    "steps": "What does the question ask? The conclusion with the right scope and the right strength.<br>Selection: random from weekend customers of the Elm Street shop <span class=\"nt\">(scope = those weekend customers)</span><br>Assignment: none; customers chose the app <span class=\"nt\">(association only)</span><br>Weekday customers had no chance to be selected, so “all of the shop’s customers” is too wide.<br>So: among the shop’s weekend customers, app use is associated with spending more.",
+    "check": "The chosen conclusion passes both checks; each other choice fails one ✓",
+    "be_careful": "The scope has two limits here: one shop AND weekends only.",
+    "desmos": "Not needed.",
+    "another_way": "Cross out every “causes”, then every scope that is wider or narrower than “weekend customers of the shop”."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-041",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "two-stage-selection-scope",
+   "signature": "district 40 schools: 10 schools at random, then 30 grade 4-5 students at random from each -> all grade 4-5 students in the 40 schools; traps all elementary students (drops the grade limit), the 10 schools, the state",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A school district has 40 elementary schools, each with about the same number of students in grades 4 and 5. To survey students about lunch, a researcher selected 10 of the 40 schools at random. Then, from each of the 10 schools, the researcher selected 30 students at random from the students in grades 4 and 5. Which of the following is the largest group to which the results of the survey can most appropriately be generalized?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "All students in grades 4 and 5 in the 10 selected schools",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "The 10 schools were themselves chosen at random from all 40, so every grade 4 or 5 student in the district had a chance to be selected."
+    },
+    {
+     "key": "B",
+     "text": "All students in grades 4 and 5 in the district’s 40 schools",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "All elementary students in the district’s 40 schools",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Stage 1 reaches all 40 schools, but stage 2 drew only from grades 4 and 5. Students in other grades had no chance to be selected."
+    },
+    {
+     "key": "D",
+     "text": "All students in grades 4 and 5 in the state",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only students in this district’s schools could be selected."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The population is everyone who had a chance to be selected. Check every stage: each one can widen the reach (random) or narrow it (a limit on who is eligible).",
+    "steps": "What does the question ask? The largest group the results fit.<br>Step 1: Which schools could be chosen?<br>10 of the 40 schools, at random <span class=\"nt\">(every school in the district had a chance, so the reach is all 40 schools, not just the 10)</span><br>Step 2: Which students could be chosen within a school?<br>30 at random from grades 4 and 5 only <span class=\"nt\">(students in kindergarten through grade 3 had no chance)</span><br>Step 3: Combine both stages.<br>any grade 4 or 5 student in any of the 40 schools <span class=\"nt\">(chance at both stages; equal school sizes give each such student about the same chance)</span><br>So the results generalize to all students in grades 4 and 5 in the district’s 40 schools.",
+    "check": "A grade 3 student could never be selected; a grade 5 student at an unselected school could have been ✓",
+    "be_careful": "Two opposite traps: stopping at the 10 schools (too narrow) and dropping the grade limit (too wide).",
+    "desmos": "Not needed.",
+    "another_way": "Ask of each group in the choices: could every member of it have been selected? Only the key passes, and it is the widest group that does."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-042",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C1"
+   ],
+   "family": "estimate-difference-in-subpopulation",
+   "signature": "company 2,500 employees, Plant B 750; random 50 of Plant B, 18 ride bus -> non-riders 32/50 x 750 = 480, which is 19.2% of 2,500; traps 64 (sample %), 30 (Plant B share), 7.2 / 10.8 (riders)",
+   "abilities": [
+    "R",
+    "J",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A company has 2,500 employees, and 750 of them work at its Plant B. A random sample of 50 employees was selected from the employees at Plant B, and 18 of them said they ride a bus to work. Based on the sample, the employees at Plant B who do NOT ride a bus to work are estimated to make up what percent of all 2,500 employees of the company?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "19.2",
+      "96/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "64",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "64% is the share of Plant B’s sample who do not ride. The question uses all 2,500 employees as the base."
+    },
+    {
+     "value": "10.8",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "10.8% describes the Plant B bus riders, the wrong group."
+    }
+   ],
+   "solution": {
+    "key_idea": "Scale the sample only to the group it came from (Plant B). Then change the base to the whole company for the final percent.",
+    "steps": "What does the question ask? A percent of ALL 2,500 employees, for one group: Plant B non-riders.<br>The sample came only from Plant B, so it can estimate counts for Plant B’s 750 employees, not for the other plants.<br>Step 1: Plant B share who do not ride.<br>$\\frac{50 - 18}{50} = \\frac{32}{50} = 0.64$ <span class=\"nt\">(non-riders in the sample)</span><br>Step 2: Estimate the count at Plant B.<br>$0.64 \\times 750 = 480$ <span class=\"nt\">(Plant B has 750 employees)</span><br>Step 3: Change the base to the company.<br>$\\frac{480}{2{,}500} = 0.192 = 19.2\\%$ <span class=\"nt\">(part of all 2,500 employees)</span>",
+    "check": "$0.64 \\times \\frac{750}{2{,}500} = 0.64 \\times 0.30 = 0.192$ ✓",
+    "be_careful": "The 2,500 is not the population of the sample; it is only the base of the final percent.",
+    "desmos": "Not needed.",
+    "another_way": "Plant B is $30\\%$ of the company, and $64\\%$ of Plant B do not ride, so $0.30 \\times 0.64 = 0.192$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-043",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C6"
+   ],
+   "family": "design-both-goals",
+   "signature": "goal: cause + all city adults. Designs: random sample let choose; volunteers randomly assigned; random sample + random assignment (key); random samples of users and non-users compared",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A researcher wants to determine whether using a certain sleep app causes adults in a city to sleep longer, and wants the conclusion to apply to all adults in the city. Which of the following study designs best meets both goals?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Select 400 adults at random from the city, then let each adult decide whether to use the app.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Random selection covers the city, but adults who choose the app may differ, so cause is not shown."
+    },
+    {
+     "key": "B",
+     "text": "Recruit 400 adult volunteers in the city, then randomly assign 200 of them to use the app.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Random assignment supports cause, but volunteers do not represent all adults in the city."
+    },
+    {
+     "key": "C",
+     "text": "Select 400 adults at random from the city, then randomly assign 200 of them to use the app.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Select 200 app users and 200 nonusers at random from the city’s adults and compare them.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Both samples are random, but the adults chose whether to use the app, so this is still observational."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "To get cause for a whole population, a study needs random selection from that population AND random assignment to treatments.",
+    "steps": "What does the question ask? A design that gives cause AND reaches all city adults.<br>Cause needs random assignment <span class=\"nt\">(chance decides who uses the app)</span><br>All city adults needs random selection <span class=\"nt\">(chance decides who is in the study)</span><br>Two random samples of users and nonusers: assignment? No <span class=\"nt\">(people still chose the app)</span><br>Only “select at random, then randomly assign” has both.",
+    "check": "Each other design is missing exactly one of the two random steps ✓",
+    "be_careful": "Two random SAMPLES of users and nonusers sound random, but nobody was assigned.",
+    "desmos": "Not needed.",
+    "another_way": "Make a 2-column checklist (random selection, random assignment) and tick each design; only one gets two ticks."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-044",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C6"
+   ],
+   "family": "two-studies-combined",
+   "signature": "Study 1 random 1,000 county adults, tea drinkers lower BP (obs); Study 2 80 volunteers randomized tea vs water, tea lowered BP -> association in county + cause for volunteers-like; traps cause for all county (merge), Study 1 cause, neither",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two studies looked at green tea and blood pressure. In Study 1, 1,000 adults were selected at random from a county, and those who drink green tea daily had lower blood pressure, on average. In Study 2, 80 adult volunteers were randomly assigned to drink green tea or water daily for 8 weeks, and the tea group’s blood pressure fell significantly more. Which conclusion is best supported?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Together, the two studies show that tea likely lowers blood pressure for all adults in the county.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Combining studies does not combine their strengths: no single study had both random selection from the county and random assignment."
+    },
+    {
+     "key": "B",
+     "text": "Study 1 alone shows that drinking tea likely lowers blood pressure for all adults in the county.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Study 1 is observational; tea drinkers chose to drink tea."
+    },
+    {
+     "key": "C",
+     "text": "Neither study supports any cause conclusion, because the two studies used different groups of adults.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Study 2 used random assignment, so it supports cause for adults like its volunteers."
+    },
+    {
+     "key": "D",
+     "text": "Tea is linked to lower blood pressure in the county, and it likely lowers it for adults like the volunteers.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Each study supports only what its own design allows; two partial designs do not add up to one complete design.",
+    "steps": "What does the question ask? The conclusion the two studies, each on its own terms, support.<br>Study 1: random selection, no assignment <span class=\"nt\">(association, for the county)</span><br>Study 2: assignment, volunteers <span class=\"nt\">(cause, for adults like the volunteers)</span><br>Merge them? No <span class=\"nt\">(no single group of people had both random steps)</span><br>So: a link in the county, and a likely cause for adults like the volunteers.",
+    "check": "Each half of the chosen conclusion matches one study’s design ✓",
+    "be_careful": "The tempting answer glues the two studies into a design that was never carried out.",
+    "desmos": "Not needed.",
+    "another_way": "Ask of any cause claim for “all adults in the county”: which one study had random selection from the county AND random assignment? None."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-045",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "unequal-groups-effect-scaled-population",
+   "signature": "school 1,200; random 80 students, randomly assigned 44 reminders / 36 none; 33 vs 18 submitted all -> (0.75 - 0.5) x 1,200 = 300; traps 450 (15/40 equal-group), 900",
+   "abilities": [
+    "R",
+    "J",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 100,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A high school has 1,200 students. A random sample of 80 of the students was selected, and the students were randomly assigned to two groups: 44 received daily homework reminders by text, and 36 did not. Of the students who received reminders, 33 turned in every homework assignment that month, and of the others, 18 did. Based on the study, how many more of the school’s 1,200 students are estimated to turn in every assignment if all receive reminders than if none do?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "300"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "450",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This uses the count difference $33 - 18 = 15$ as if each group had 40 students. The groups have 44 and 36 students."
+    },
+    {
+     "value": "900",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "900 is the number expected to turn in every assignment WITH reminders, not how many more."
+    }
+   ],
+   "solution": {
+    "key_idea": "Random assignment makes the difference in rates an estimate of the effect; random selection lets that effect be scaled to the whole school.",
+    "steps": "What does the question ask? (all reminded) $-$ (none reminded), for 1,200 students.<br>Two facts make this possible: random assignment (so the difference is caused by the reminders) and random selection from the school (so it can be scaled to all 1,200).<br>Step 1: Rate in each group.<br>reminders: $\\frac{33}{44} = 0.75$ <span class=\"nt\">(33 of the 44)</span><br>no reminders: $\\frac{18}{36} = 0.5$ <span class=\"nt\">(18 of the 36)</span><br>Step 2: Scale to the school.<br>$0.75 \\times 1{,}200 = 900$ <span class=\"nt\">(expected with reminders)</span><br>$0.5 \\times 1{,}200 = 600$ <span class=\"nt\">(expected without)</span><br>Step 3: Finish line.<br>$900 - 600 = 300$ <span class=\"nt\">(how many more)</span>",
+    "check": "$(0.75 - 0.5) \\times 1{,}200 = 0.25 \\times 1{,}200 = 300$ ✓",
+    "be_careful": "Unequal groups: divide each count by its own group size before comparing.",
+    "desmos": "Not needed.",
+    "another_way": "The reminders raise the rate by 25 out of every 100 students; the school has 12 hundreds, so $25 \\times 12 = 300$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-046",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C5"
+   ],
+   "family": "assignment-confounded-by-procedure",
+   "signature": "60 volunteers randomly assigned keyboards, but new group tested at 9 a.m., old at 4 p.m. -> time of day confounds; traps not random sample (scope, not cause for these), too few, should let choose",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A researcher randomly assigned 60 office-worker volunteers to type on either a new keyboard or their usual keyboard. Everyone using the new keyboard was tested at 9:00 a.m., and everyone using the usual keyboard was tested at 4:00 p.m. The new-keyboard group typed faster. The researcher concluded that, for these volunteers, the new keyboard caused faster typing. Which of the following is the strongest criticism of this conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Workers may type differently early and late in the day, so the time could explain the result.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The volunteers were not selected at random from all office workers in the country.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "True, but the conclusion was only about these volunteers, so this does not weaken it."
+    },
+    {
+     "key": "C",
+     "text": "The volunteers should have been allowed to choose which keyboard they used.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Letting them choose would make the groups LESS comparable."
+    },
+    {
+     "key": "D",
+     "text": "Sixty volunteers is too few people for random assignment to have any effect.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Sixty is enough for random assignment to balance the groups on average; the problem is the testing times."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Random assignment only supports cause if the groups are then treated the same in every other way.",
+    "steps": "What does the question ask? The criticism that actually weakens “the keyboard caused it, for these volunteers”.<br>Assignment was random <span class=\"nt\">(good start)</span><br>But each group was tested at a different time <span class=\"nt\">(a second difference between the groups)</span><br>Morning vs late afternoon <span class=\"nt\">(tiredness can change typing speed)</span><br>So the time of day, not the keyboard, could explain the result.<br>The criticism about random selection is true but misses: the conclusion was only about these volunteers.",
+    "check": "Testing both groups at mixed times would remove the criticism ✓",
+    "be_careful": "A criticism must hit the claim that was made. The claim was limited to the volunteers, so “not a random sample” misses.",
+    "desmos": "Not needed.",
+    "another_way": "List every way the two groups differ: keyboard AND test time. Two differences means the effect cannot be pinned on one."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-047",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C3"
+   ],
+   "family": "disguised-cause-claims",
+   "signature": "random 150 farms in region, drip farms higher yield -> only \"among region farms, drip farms tend to have higher yields\"; traps switch -> rise (cause), stop -> fall (counterfactual cause), all farms in country",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An agency selected 150 farms at random from all farms in a region and found that farms using drip irrigation had higher crop yields per acre, on average, than farms not using it. Which of the following statements is best supported by this information?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "A farm in the region that switches to drip irrigation will likely see its yield per acre rise.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Predicting what happens when a farm CHANGES is a cause claim; the farms chose their own irrigation."
+    },
+    {
+     "key": "B",
+     "text": "Among farms in the region, those using drip irrigation tend to have higher yields per acre.",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "Farms in the region now using drip irrigation would likely have lower yields if they stopped.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This is also a cause claim, about what would happen without drip irrigation."
+    },
+    {
+     "key": "D",
+     "text": "Among all farms in the country, those using drip irrigation tend to have higher yields per acre.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only farms in this region could be selected."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Any statement about what would happen if something CHANGED is a cause claim, even without the word “cause”.",
+    "steps": "What does the question ask? The one statement this observational study supports.<br>Random selection: farms in the region <span class=\"nt\">(scope = the region)</span><br>Random assignment: none <span class=\"nt\">(no cause claims)</span><br>“switches → rise” and “stopped → lower” <span class=\"nt\">(both predict effects of a change: cause)</span><br>So only the “tend to have” statement about farms in the region is supported.<br>The country-wide statement has the right strength (association) but the wrong scope.",
+    "check": "The chosen statement describes a pattern among existing farms and stays in the region ✓",
+    "be_careful": "Cause claims can hide in “if … then … will” sentences.",
+    "desmos": "Not needed.",
+    "another_way": "Drip farms may be newer or richer; those differences, not the irrigation, could explain the yields, which is why change-predictions are unsupported."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-048",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C4"
+   ],
+   "family": "nonresponse-bounds",
+   "signature": "500 selected, 320 responded, 208 support -> greatest possible percent of the 500: (208 + 180)/500 = 77.6; traps 65 (of responders), 41.6 (least)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A town selected 500 residents at random and asked whether they support a new park. Of the 500 selected residents, 320 responded, and 208 of those who responded said they support the park. If every selected resident has an opinion, what is the greatest possible percent of the 500 selected residents who support the park?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "77.6",
+      "388/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "65",
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "65% is $\\frac{208}{320}$, the percent of RESPONDERS. It assumes the 180 nonresponders split the same way."
+    },
+    {
+     "value": "41.6",
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "41.6% is the LEAST possible percent, when none of the nonresponders support the park."
+    }
+   ],
+   "solution": {
+    "key_idea": "Nonresponders’ opinions are unknown, so the true percent of those selected can be anywhere from “none of them agree” to “all of them agree”.",
+    "steps": "What does the question ask? The GREATEST possible percent of all 500 selected residents.<br>We know the answers of only 320 people. The rest could support or oppose, so to make the percent as large as possible, assume every nonresponder supports the park.<br>nonresponders: $500 - 320 = 180$ <span class=\"nt\">(their opinions are unknown)</span><br>greatest: all 180 support <span class=\"nt\">(the most supporters possible)</span><br>supporters $= 208 + 180 = 388$ <span class=\"nt\">(known plus all unknown)</span><br>$\\frac{388}{500} = 0.776 = 77.6\\%$ <span class=\"nt\">(percent of the 500)</span>",
+    "check": "Least possible: $\\frac{208}{500} = 41.6\\%$; the true value lies between 41.6% and 77.6%, and 65% is inside ✓",
+    "be_careful": "65% quietly assumes the nonresponders think like the responders.",
+    "desmos": "Not needed.",
+    "another_way": "Count the residents who do NOT support for sure: $320 - 208 = 112$. At most $500 - 112 = 388$ can support."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-049",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C2"
+   ],
+   "family": "factorial-cell-choice",
+   "signature": "2x2 randomized: no fert/normal 30.4, no/extra 33.1, fert/normal 34.0, fert/extra 38.9 -> fertilizer effect 3.6 (normal) and 5.8 (extra), difference 2.2; traps 3.6, 5.8, 8.5 (diagonal)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 95,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A scientist randomly assigned 120 pepper plants to four groups of 30. Each group received a different combination of fertilizer (none or some) and watering (normal or extra). The table shows the mean height of each group after 6 weeks.<table class=\"dt\"><tr><th>Mean height (cm)</th><th>Normal watering</th><th>Extra watering</th></tr><tr><th>No fertilizer</th><td>30.4</td><td>33.1</td></tr><tr><th>Fertilizer</th><td>34.0</td><td>38.9</td></tr></table>Based on the experiment, the fertilizer’s estimated effect on mean height is how many centimeters greater for plants that receive extra watering than for plants that receive normal watering?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2.2",
+      "11/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5.8",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "5.8 is the fertilizer’s effect with extra watering only; the question compares it with the effect under normal watering."
+    },
+    {
+     "value": "8.5",
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "8.5 compares fertilizer with extra watering to no fertilizer with normal watering: two things changed at once."
+    }
+   ],
+   "solution": {
+    "key_idea": "A treatment’s effect is a difference between two groups that differ ONLY in that treatment. Find the fertilizer effect within each watering level, then compare the two effects.",
+    "steps": "What does the question ask? How much LARGER the fertilizer effect is with extra watering than with normal watering.<br>The plants were randomly assigned, so the groups differ only in their treatments. Each fertilizer effect must compare two groups with the SAME watering.<br>Step 1: Fertilizer effect with normal watering.<br>$34.0 - 30.4 = 3.6$ <span class=\"nt\">(Normal watering column)</span><br>Step 2: Fertilizer effect with extra watering.<br>$38.9 - 33.1 = 5.8$ <span class=\"nt\">(Extra watering column)</span><br>Step 3: Compare the two effects.<br>$5.8 - 3.6 = 2.2$ <span class=\"nt\">(how many centimeters greater)</span>",
+    "check": "Same result by rows: watering effect with fertilizer $38.9 - 34.0 = 4.9$, without $33.1 - 30.4 = 2.7$, and $4.9 - 2.7 = 2.2$ ✓",
+    "be_careful": "Do not stop at 5.8, and never subtract across a diagonal: that changes fertilizer AND watering.",
+    "desmos": "Not needed.",
+    "another_way": "Both columns change only the fertilizer, so each gives a fair effect; the answer is the gap between those two fair effects."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P7-050",
+   "version": 1,
+   "skill": {
+    "code": "P7",
+    "domain": "psda",
+    "cb_skill": "Evaluating statistical claims: Observational studies and experiments"
+   },
+   "level": "H+",
+   "concepts": [
+    "P7.C6"
+   ],
+   "family": "not-supported-scope-qualifier",
+   "signature": "random 300 of adults aged 18-30 in County R, randomly assigned meditation app; app group lower stress -> NOT supported: all ages in County R; supported: 18-30 cause, participants means, difference unlikely from chance alone",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Researchers selected 300 adults at random from all adults aged 18 to 30 in County R and randomly assigned half of them to use a meditation app daily. After 8 weeks, the app group had a significantly lower mean stress score than the other group. Which of the following is NOT supported by the study?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "For adults aged 18 to 30 in County R, the app likely lowers mean stress scores.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This IS supported: random selection from that age group plus random assignment."
+    },
+    {
+     "key": "B",
+     "text": "For the 300 participants, the app group’s mean stress score was lower.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This IS supported: it simply restates the result."
+    },
+    {
+     "key": "C",
+     "text": "For adults of all ages in County R, the app likely lowers mean stress scores.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The groups’ difference is unlikely to be due only to chance in the assignment.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "This IS supported: “significantly lower” means the difference is too large to be explained by chance alone."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Even a study with both random steps reaches only the population it sampled, including its age limits.",
+    "steps": "What does the question ask? The ONE statement that goes too far.<br>Random selection: adults aged 18 to 30 in County R <span class=\"nt\">(scope)</span><br>Random assignment: yes <span class=\"nt\">(cause is allowed)</span><br>“adults of all ages in County R” <span class=\"nt\">(older adults could not be selected)</span><br>So the all-ages statement is not supported.<br>Check the others: the 18-to-30 statement matches the design, the participant statement restates the result, and “significantly” means chance alone is an unlikely explanation.",
+    "check": "The other three statements stay within the age limit or within the 300 participants ✓",
+    "be_careful": "In NOT questions, the right answer is a statement that sounds fine but breaks one limit.",
+    "desmos": "Not needed.",
+    "another_way": "Strong designs make students relax; reread the population line word by word: “aged 18 to 30”."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

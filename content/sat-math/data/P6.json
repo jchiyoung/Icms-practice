@@ -1,0 +1,3442 @@
+{
+ "bank": "ICMS SAT Math Question Bank",
+ "code": "P6",
+ "skill": "Inference from sample statistics and margin of error",
+ "count": 50,
+ "math": "LaTeX between $...$ (literal dollar written as \\$; enable processEscapes)",
+ "items": [
+  {
+   "id": "QB-P6-001",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C1"
+   ],
+   "family": "scale-proportion",
+   "signature": "80 of 2,400 members, 18 hike weekly -> 540; traps 432 (18 as percent), 1,860 (complement), 2,382 (subtract)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A hiking club has 2,400 members. A random sample of 80 members was selected, and 18 of the members in the sample said they hike every week during the winter. Based on the sample, which of the following is the best estimate of the number of club members who hike every week during the winter?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$432$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This treats 18 as a percent: $0.18 \\times 2{,}400 = 432$. But 18 is a count out of 80 members, which is $22.5\\%$."
+    },
+    {
+     "key": "B",
+     "text": "$540$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$1{,}860$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "This estimates the members who do NOT hike every week: $\\frac{62}{80} \\times 2{,}400$."
+    },
+    {
+     "key": "D",
+     "text": "$2{,}382$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts 18 from 2,400. A sample count must be scaled up, not subtracted."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "A random sample mirrors its population, so the fraction in the sample is the best estimate of the fraction in the whole club.",
+    "steps": "The question asks for the number of ALL club members who hike every week.<br>sample fraction $= \\frac{18}{80}$ <span class=\"nt\">(18 out of the 80 sampled members)</span><br>estimate $= \\frac{18}{80} \\times 2{,}400$ <span class=\"nt\">(apply the same fraction to the whole club)</span><br>$= 18 \\times 30 = 540$ <span class=\"nt\">($2{,}400 \\div 80 = 30$)</span><br>About 540 of the 2,400 members hike every week in winter, the same share as 18 out of 80.",
+    "check": "$\\frac{540}{2{,}400} = 0.225$ and $\\frac{18}{80} = 0.225$ ✓",
+    "be_careful": "18 is a count, not a percent. Turn it into a fraction of the 80 sampled members first.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled member stands for $\\frac{2{,}400}{80} = 30$ members, so $18 \\times 30 = 540$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-002",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C3"
+   ],
+   "family": "interpret-mean-interval",
+   "signature": "mean commute 23.4, MOE 1.8: plausible population mean 21.6 to 25.2; traps individuals, exact, one-sided",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of employees at a large hospital was asked how long their commute to work takes. Based on the sample, the mean commute time of all employees at the hospital is estimated to be 23.4 minutes, with an associated margin of error of 1.8 minutes. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is plausible that every employee at the hospital has a commute time between 21.6 and 25.2 minutes.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The interval is about the MEAN commute time, not about each employee. Individual commutes can be much shorter or longer."
+    },
+    {
+     "key": "B",
+     "text": "The mean commute time of all employees at the hospital is exactly 23.4 minutes, since the sample was random.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "23.4 is only an estimate. A random sample does not give the exact population mean."
+    },
+    {
+     "key": "C",
+     "text": "It is plausible that the mean commute time of all employees at the hospital is between 21.6 and 25.2 minutes.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "It is plausible that the mean commute time of all employees at the hospital is between 23.4 and 25.2 minutes.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "The margin of error goes both ways: subtract 1.8 as well as add it."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Estimate $\\pm$ margin of error gives the plausible values of the POPULATION mean, not of individual values.",
+    "steps": "The question asks what the estimate and margin of error let us say.<br>lower end: $23.4 - 1.8 = 21.6$ <span class=\"nt\">(subtract the margin)</span><br>upper end: $23.4 + 1.8 = 25.2$ <span class=\"nt\">(add the margin)</span><br>So the plausible values for the mean commute time of all hospital employees run from 21.6 to 25.2 minutes.",
+    "check": "The center of 21.6 and 25.2 is $\\frac{21.6 + 25.2}{2} = 23.4$ ✓",
+    "be_careful": "The interval describes the population mean, not every person.",
+    "desmos": "Not needed.",
+    "another_way": "Eliminate: “exactly” is too strong, “every employee” is about individuals, and the one-sided interval forgets the minus side."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-003",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "moe-from-endpoints",
+   "signature": "plausible proportion 0.37 to 0.53 -> MOE .08; common wrong .16 width, .45 center",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "Based on a random sample of households in a county, a researcher concluded that the proportion of all households in the county that have a vegetable garden is plausibly between 0.37 and 0.53. This range is the estimate plus or minus the margin of error. What is the margin of error?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      ".08",
+      "0.08",
+      "2/25"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": ".16",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "0.16 is the whole width of the range. The margin of error is half of the width, since it is added and subtracted."
+    },
+    {
+     "value": ".45",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "0.45 is the estimate (the center), not the margin of error."
+    }
+   ],
+   "solution": {
+    "key_idea": "The margin of error is the distance from the estimate to either end, so it is half the width of the range.",
+    "steps": "The question asks for the margin of error.<br>width $= 0.53 - 0.37 = 0.16$ <span class=\"nt\">(distance from end to end)</span><br>margin of error $= \\frac{0.16}{2} = 0.08$ <span class=\"nt\">(the margin is added on one side and subtracted on the other)</span><br>So the range is the estimate, 0.45, plus or minus 0.08.",
+    "check": "The estimate is $\\frac{0.37 + 0.53}{2} = 0.45$, and $0.45 \\pm 0.08$ gives 0.37 and 0.53 ✓",
+    "be_careful": "The width counts the margin twice.",
+    "desmos": "Not needed.",
+    "another_way": "Find the center 0.45 first; the margin is $0.53 - 0.45 = 0.08$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-004",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "plausible-value-mean",
+   "signature": "mean sleep 6.2 h, MOE 0.4: plausible 5.8 to 6.6 -> 6.5; traps 5.7 (just below), 6.7 (just above), 7.0 (6.2 + 0.8)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of adults in a city was surveyed about their sleep. Based on the sample, the mean number of hours of sleep per night for all adults in the city is estimated to be 6.2 hours, with an associated margin of error of 0.4 hour. Which of the following is a plausible value for the mean number of hours of sleep per night for all adults in the city?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$5.7$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "The lowest plausible value is $6.2 - 0.4 = 5.8$, so 5.7 is just outside the range."
+    },
+    {
+     "key": "B",
+     "text": "$6.5$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$6.7$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "The highest plausible value is $6.2 + 0.4 = 6.6$, so 6.7 is just outside the range."
+    },
+    {
+     "key": "D",
+     "text": "$7.0$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds twice the margin of error: $6.2 + 0.8 = 7.0$. The margin is added only once."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Plausible values of the population mean are the values within one margin of error of the estimate.",
+    "steps": "The question asks which value lies in the plausible range.<br>lowest: $6.2 - 0.4 = 5.8$ <span class=\"nt\">(subtract the margin)</span><br>highest: $6.2 + 0.4 = 6.6$ <span class=\"nt\">(add the margin)</span><br>$5.8 \\le 6.5 \\le 6.6$ <span class=\"nt\">(only 6.5 is inside)</span>",
+    "check": "5.7 and 6.7 are each 0.1 outside, and 7.0 is far outside ✓",
+    "be_careful": "Values close to the estimate are not automatically plausible; check them against both ends.",
+    "desmos": "Not needed.",
+    "another_way": "A value is plausible when its distance from 6.2 is at most 0.4: $|6.5 - 6.2| = 0.3$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-005",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "mean-to-total",
+   "signature": "40 of 1,250 apartments, sample mean 2.6 residents -> 3,250; traps 104 sample total, 481 divide, 32,500 decimal slip",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "An apartment complex has 1,250 apartments. A random sample of 40 apartments was selected, and the mean number of residents per apartment in the sample was 2.6. Based on the sample, which of the following is the best estimate of the total number of residents in all the apartments in the complex?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$104$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "104 is $40 \\times 2.6$, the total for the 40 sampled apartments only."
+    },
+    {
+     "key": "B",
+     "text": "$481$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides 1,250 by 2.6. The mean is residents PER apartment, so multiply."
+    },
+    {
+     "key": "C",
+     "text": "$3{,}250$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$32{,}500$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This multiplies by 26 instead of 2.6, a decimal slip."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The sample mean estimates the mean for all apartments, and total = mean $\\times$ number of apartments.",
+    "steps": "The question asks for the total number of residents in the whole complex.<br>estimated mean for all apartments $= 2.6$ <span class=\"nt\">(a random sample mirrors the population)</span><br>total $\\approx 2.6 \\times 1{,}250$ <span class=\"nt\">(mean per apartment times apartments)</span><br>$= 3{,}250$ <span class=\"nt\">(multiply)</span>",
+    "check": "$3{,}250 \\div 1{,}250 = 2.6$ residents per apartment ✓",
+    "be_careful": "The 40 sampled apartments are only used to find the mean; the total is for all 1,250.",
+    "desmos": "Not needed.",
+    "another_way": "Sample total 104 for 40 apartments; scale by $\\frac{1{,}250}{40}$: $104 \\times 31.25 = 3{,}250$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-006",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C5"
+   ],
+   "family": "sample-size-direction",
+   "signature": "want smaller MOE: larger random sample; traps volunteers, smaller sample, one location",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A researcher used a random sample of 300 shoppers at a mall to estimate the mean amount spent per visit by all shoppers at the mall. The researcher wants a new estimate with a smaller margin of error. Which of the following would most likely produce a smaller margin of error?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Selecting a random sample of 900 shoppers at the mall",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Selecting a random sample of 100 shoppers at the mall",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "A smaller random sample usually gives a LARGER margin of error."
+    },
+    {
+     "key": "C",
+     "text": "Surveying 900 shoppers who volunteer at an information desk",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Volunteers are not a random sample. A biased sample does not give a trustworthy estimate, whatever its size."
+    },
+    {
+     "key": "D",
+     "text": "Surveying 300 shoppers who all visit the same store at the mall",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Shoppers at one store do not represent all shoppers at the mall, and the size has not grown."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "When the sample is selected at random, a larger sample usually gives a smaller margin of error.",
+    "steps": "The question asks which change most likely shrinks the margin of error.<br>A margin of error is meaningful only for a random sample, so the volunteer and one-store choices are out.<br>Between the two random samples, the larger one (900) gives the more precise estimate, so its margin of error is most likely smaller.",
+    "check": "The 900 random shoppers keep the method the same and only grow the sample ✓",
+    "be_careful": "More people does not help if they are not selected at random.",
+    "desmos": "Not needed.",
+    "another_way": "Ask two questions of each choice: is it random, and is it bigger? Only one choice passes both."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-007",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C6"
+   ],
+   "family": "scope-population",
+   "signature": "random 500 seniors at Westfield HS -> generalize to seniors at Westfield HS; traps state, all students, only sample",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of 500 seniors at Westfield High School was surveyed about their plans after graduation. To which of the following groups can the results of the survey be generalized?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "All seniors at Westfield High School",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "All high school seniors in the state",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only Westfield seniors could have been selected, so the results cannot be stretched to the whole state."
+    },
+    {
+     "key": "C",
+     "text": "All students at Westfield High School",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only seniors were sampled. Students in other grades may plan very differently."
+    },
+    {
+     "key": "D",
+     "text": "Only the 500 seniors who were surveyed",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Because the sample was random, the results CAN be generalized beyond the 500 to the group they were selected from."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Results from a random sample apply to the population the sample was selected from, and no larger.",
+    "steps": "The question asks for the population the results describe.<br>The sample was selected at random from seniors at Westfield High School.<br>So the results generalize to all seniors at Westfield High School.",
+    "check": "Every person in that group had a chance to be selected ✓",
+    "be_careful": "Check both qualifiers: “seniors” and “at Westfield High School”.",
+    "desmos": "Not needed.",
+    "another_way": "Ask: who could have been picked? That group is the population."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-008",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "endpoint-from-other",
+   "signature": "MOE 4%, upper end 63% -> lower end 55; common wrong 59 (estimate), 51",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A survey of a random sample of a town’s residents estimated the percent of all residents who use the town’s public library. The margin of error of the estimate is 4%, and the greatest plausible value for the percent of all residents who use the library is 63%. What is the least plausible value, as a percent, for the percent of all residents who use the library? (Disregard the % sign when entering your answer. For example, if your answer is 12%, enter 12)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "55"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "59",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "59% is the estimate itself ($63 - 4$). The least plausible value is one more margin below it."
+    },
+    {
+     "value": "51",
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This subtracts the margin three times."
+    }
+   ],
+   "solution": {
+    "key_idea": "The estimate sits in the middle; each end is one margin of error away from it.",
+    "steps": "The question asks for the lower end of the plausible range.<br>estimate $= 63 - 4 = 59$ <span class=\"nt\">(the upper end is estimate + margin)</span><br>lower end $= 59 - 4 = 55$ <span class=\"nt\">(estimate $-$ margin)</span><br>The estimate, 59%, sits in the middle, 4 points from each end.",
+    "check": "$59 \\pm 4$ gives 55 and 63 ✓",
+    "be_careful": "Going from one end to the other takes TWO margins of error.",
+    "desmos": "Not needed.",
+    "another_way": "Lower end = upper end $-$ 2 margins: $63 - 8 = 55$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-009",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "plausible-count",
+   "signature": "18,000 residents, 30% +/- 4% -> 4,680 to 6,120; key 5,900; traps 4,500, 6,300, 12,600 complement",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A town has 18,000 residents. Based on a random sample of residents, it is estimated that 30% of all residents ride a bicycle at least once a week, with an associated margin of error of 4%. Which of the following is a plausible value for the number of residents of the town who ride a bicycle at least once a week?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$4{,}500$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "4,500 is 25% of 18,000, below the lowest plausible percent, 26%."
+    },
+    {
+     "key": "B",
+     "text": "$5{,}900$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$6{,}300$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "6,300 is 35% of 18,000, above the highest plausible percent, 34%."
+    },
+    {
+     "key": "D",
+     "text": "$12{,}600$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "12,600 is 70% of 18,000, the residents who do NOT ride weekly."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Turn the plausible range of percents into a plausible range of counts by taking each end of the range of 18,000.",
+    "steps": "The question asks which count is plausible.<br>percents: $30\\% - 4\\% = 26\\%$ to $30\\% + 4\\% = 34\\%$ <span class=\"nt\">(estimate $\\pm$ margin)</span><br>$0.26 \\times 18{,}000 = 4{,}680$ <span class=\"nt\">(lowest count)</span><br>$0.34 \\times 18{,}000 = 6{,}120$ <span class=\"nt\">(highest count)</span><br>$4{,}680 \\le 5{,}900 \\le 6{,}120$ <span class=\"nt\">(only 5,900 fits)</span>",
+    "check": "$\\frac{5{,}900}{18{,}000} \\approx 32.8\\%$, which is between 26% and 34% ✓",
+    "be_careful": "Compare counts with counts, or percents with percents, never a count with a percent.",
+    "desmos": "Not needed.",
+    "another_way": "Convert each choice to a percent of 18,000: 25%, 32.8%, 35%, 70%. Only 32.8% is in 26% to 34%."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-010",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C1"
+   ],
+   "family": "scale-proportion-defect",
+   "signature": "75 of 900 boxes, 5 damaged -> 60; traps 45 (5 as percent), 180 (900/5), 840 complement",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A shipment contains 900 boxes. An inspector selected 75 of the boxes at random and found that 5 of them were damaged. Based on this sample, which of the following is the best estimate of the number of damaged boxes in the shipment?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$45$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D19",
+     "feedback": "This treats 5 as 5%: $0.05 \\times 900 = 45$. But 5 is a count out of 75 boxes."
+    },
+    {
+     "key": "B",
+     "text": "$60$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$180$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This divides 900 by 5. The fraction damaged is $\\frac{5}{75}$, not $\\frac{1}{5}$."
+    },
+    {
+     "key": "D",
+     "text": "$840$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "840 is the estimate of boxes that are NOT damaged."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The fraction of damaged boxes in a random sample estimates the fraction in the whole shipment.",
+    "steps": "What does the question ask? It asks for the best estimate of the number of damaged boxes in the shipment.<br>Each box in a random sample stands in for many boxes in the shipment.<br>The question asks for damaged boxes in all 900.<br>$\\frac{5}{75} = \\frac{1}{15}$ <span class=\"nt\">(fraction damaged in the sample)</span><br>$\\frac{1}{15} \\times 900 = 60$ <span class=\"nt\">(same fraction of the shipment)</span>",
+    "check": "$\\frac{60}{900} = \\frac{1}{15} = \\frac{5}{75}$ ✓",
+    "be_careful": "Reduce $\\frac{5}{75}$ before scaling; it is $\\frac{1}{15}$, about 6.7%, not 5%.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled box stands for $\\frac{900}{75} = 12$ boxes: $5 \\times 12 = 60$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-011",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "estimate-from-endpoints",
+   "signature": "plausible mean 12.6 to 15.0 -> estimate 13.8, MOE 1.2; traps (13.8, 2.4), (12.6, 2.4), (15.0, 1.2)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of the tomato plants on a farm was measured. The researchers concluded that the mean height of all tomato plants on the farm is plausibly between 12.6 inches and 15.0 inches, which is the sample estimate plus or minus the margin of error. Which of the following gives the sample estimate and the margin of error, in inches?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Estimate: 13.8 · Margin of error: 2.4",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "2.4 is the whole width. The margin is half of it."
+    },
+    {
+     "key": "B",
+     "text": "Estimate: 12.6 · Margin of error: 2.4",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "12.6 is an end of the range, and 2.4 is the width; neither is asked for."
+    },
+    {
+     "key": "C",
+     "text": "Estimate: 13.8 · Margin of error: 1.2",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Estimate: 15.0 · Margin of error: 1.2",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D14",
+     "feedback": "15.0 is the upper end of the range, not its center."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "The estimate is the midpoint of the plausible range, and the margin of error is half its width.",
+    "steps": "The question asks for both the estimate and the margin of error.<br>estimate $= \\frac{12.6 + 15.0}{2} = 13.8$ <span class=\"nt\">(midpoint of the two ends)</span><br>margin $= 15.0 - 13.8 = 1.2$ <span class=\"nt\">(distance from the center to an end)</span>",
+    "check": "$13.8 - 1.2 = 12.6$ and $13.8 + 1.2 = 15.0$ ✓",
+    "be_careful": "The margin of error is NOT the full width $15.0 - 12.6$.",
+    "desmos": "Not needed.",
+    "another_way": "Half the width: $\\frac{15.0 - 12.6}{2} = 1.2$, then $12.6 + 1.2 = 13.8$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-012",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "count-to-percent-interval",
+   "signature": "85 of 250 -> 34% +/- 6% -> 28% to 40%; traps 79 to 91 (count), 31 to 37 (half), 22 to 46 (double)",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "In a random sample of 250 adults in a county, 85 said they had volunteered in the past month. The margin of error for the estimate of the percent of all adults in the county who volunteered in the past month is 6%. Which of the following gives the plausible values for this percent?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "From 28% to 40%",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "From 79% to 91%",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This applies the margin to the count 85 instead of to the percent $\\frac{85}{250} = 34\\%$."
+    },
+    {
+     "key": "C",
+     "text": "From 31% to 37%",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This uses half the margin on each side. The full margin, 6%, goes on each side."
+    },
+    {
+     "key": "D",
+     "text": "From 22% to 46%",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "This uses twice the margin on each side."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Find the sample percent first, then add and subtract the margin of error.",
+    "steps": "What does the question ask? It asks which choice gives the plausible values for this percent.<br>First change the count 85 into a percent of the 250 sampled adults.<br>The question asks for the plausible range of the county percent.<br>$\\frac{85}{250} = 0.34 = 34\\%$ <span class=\"nt\">(sample percent)</span><br>$34\\% - 6\\% = 28\\%$ <span class=\"nt\">(lower end)</span><br>$34\\% + 6\\% = 40\\%$ <span class=\"nt\">(upper end)</span>",
+    "check": "The midpoint of 28% and 40% is 34%, and $0.34 \\times 250 = 85$ ✓",
+    "be_careful": "The margin of error is in percents, so apply it to 34%, not to 85.",
+    "desmos": "Not needed.",
+    "another_way": "Check the width: $40 - 28 = 12 = 2 \\times 6$ ✓"
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-013",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C5"
+   ],
+   "family": "sample-size-direction",
+   "signature": "1,200 random voters MOE 2.8%; if 300 random instead -> larger; traps smaller, same, cannot say anything",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A polling company selected 1,200 voters at random from a city and estimated the percent of all voters in the city who favor a new park. The margin of error was 2.8%. Suppose the company had instead selected only 300 voters at random from the same city, using the same method. How would the margin of error most likely compare with 2.8%?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It would most likely be less than 2.8%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This reverses the effect. Fewer people give a less precise estimate."
+    },
+    {
+     "key": "B",
+     "text": "It would most likely be equal to 2.8%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The margin of error depends on the sample size, so it would most likely change."
+    },
+    {
+     "key": "C",
+     "text": "It would most likely be exactly 4 times 2.8%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "The margin grows, but not in proportion to the drop in sample size; it does not become 4 times as large."
+    },
+    {
+     "key": "D",
+     "text": "It would most likely be greater than 2.8%.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "With the same random method, a smaller sample usually gives a larger margin of error.",
+    "steps": "The question asks how the margin changes when the random sample shrinks from 1,200 to 300.<br>A smaller random sample carries less information about the city, so the estimate is less precise.<br>Less precision means a wider plausible range, so the margin of error would most likely be greater than 2.8%.",
+    "check": "Direction check: bigger random sample, smaller margin; smaller random sample, bigger margin ✓",
+    "be_careful": "Only the direction is predictable here, not an exact new value.",
+    "desmos": "Not needed.",
+    "another_way": "Think of the extreme: a sample of 1 person would tell almost nothing, so its margin would be huge."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-014",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C1"
+   ],
+   "family": "scale-complement",
+   "signature": "120 of 3,000 riders, 45 use monthly pass -> riders NOT using pass 1,875; common wrong 1,125",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A bus system has 3,000 regular riders. In a random sample of 120 regular riders, 45 said they use a monthly pass. Based on the sample, what is the best estimate of the number of regular riders who do NOT use a monthly pass?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1875"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1125",
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "1,125 is the estimate of riders who DO use a monthly pass."
+    },
+    {
+     "value": "2955",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This subtracts 45 from 3,000 instead of scaling the sample."
+    }
+   ],
+   "solution": {
+    "key_idea": "Use the sample fraction of riders without a pass, then apply it to all 3,000 riders.",
+    "steps": "The question asks for riders who do NOT use a monthly pass.<br>$120 - 45 = 75$ <span class=\"nt\">(sampled riders without a pass)</span><br>$\\frac{75}{120} = \\frac{5}{8}$ <span class=\"nt\">(fraction without a pass)</span><br>$\\frac{5}{8} \\times 3{,}000 = 1{,}875$ <span class=\"nt\">(same fraction of all riders)</span>",
+    "check": "With a pass: $\\frac{3}{8} \\times 3{,}000 = 1{,}125$, and $1{,}125 + 1{,}875 = 3{,}000$ ✓",
+    "be_careful": "Read the word NOT. The 45 in the sample are the riders who DO use a pass.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled rider stands for 25 riders: $75 \\times 25 = 1{,}875$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-015",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "interval-statement",
+   "signature": "random 400 students, 62% +/- 5% -> plausibly 57% to 67% of ALL students; traps exactly 62%, sample range, doubled margin",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of 400 students at a large college was asked whether they use the campus shuttle. Based on the sample, it is estimated that 62% of all students at the college use the shuttle, with an associated margin of error of 5%. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Plausibly, between 57% and 67% of all the students use the shuttle.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Exactly 62% of all the students at the college use the shuttle.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "62% is only the estimate. The margin of error says the true percent may be a bit higher or lower."
+    },
+    {
+     "key": "C",
+     "text": "Between 57% and 67% of the 400 sampled students use the shuttle.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The sample percent is known exactly: it is 62%. The range is about ALL students."
+    },
+    {
+     "key": "D",
+     "text": "Plausibly, between 52% and 72% of all the students use the shuttle.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D17",
+     "feedback": "This subtracts and adds 10%, twice the margin of error. The range is the estimate plus or minus 5%."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Estimate $\\pm$ margin of error gives the plausible values for the whole population, not for the sample.",
+    "steps": "The question asks what the survey tells us about all students.<br>$62\\% - 5\\% = 57\\%$ <span class=\"nt\">(least plausible value)</span><br>$62\\% + 5\\% = 67\\%$ <span class=\"nt\">(greatest plausible value)</span><br>So it is plausible that between 57% and 67% of ALL students at the college use the shuttle.",
+    "check": "The key keeps both parts: the population (all students) and the range (57% to 67%) ✓",
+    "be_careful": "The margin of error describes the population value, not the sample, which is known exactly.",
+    "desmos": "Not needed.",
+    "another_way": "Draw a number line from 57 to 67 with 62 in the middle."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-016",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C1"
+   ],
+   "family": "scale-difference",
+   "signature": "200 voters: 112 favor, 88 oppose; 8,500 voters -> 1,020 more favor than oppose; traps 24, 3,740, 4,760",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 60,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of 200 of the 8,500 voters in a town was asked about a proposed bike lane. Of the voters in the sample, 112 favor the bike lane and the rest oppose it. Based on the sample, which of the following is the best estimate of how many more voters in the town favor the bike lane than oppose it?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$24$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "24 is the difference in the sample ($112 - 88$). It must be scaled up to the town."
+    },
+    {
+     "key": "B",
+     "text": "$1{,}020$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$3{,}740$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "3,740 is the estimate of voters who OPPOSE the bike lane."
+    },
+    {
+     "key": "D",
+     "text": "$4{,}760$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4,760 is the estimate of voters who FAVOR the bike lane, before subtracting."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Estimate both groups in the town, or scale the sample difference, and subtract.",
+    "steps": "The question asks for (town voters in favor) $-$ (town voters opposed).<br>$200 - 112 = 88$ <span class=\"nt\">(sampled voters who oppose)</span><br>$\\frac{112}{200} \\times 8{,}500 = 4{,}760$ <span class=\"nt\">(estimated voters in favor)</span><br>$\\frac{88}{200} \\times 8{,}500 = 3{,}740$ <span class=\"nt\">(estimated voters opposed)</span><br>$4{,}760 - 3{,}740 = 1{,}020$ <span class=\"nt\">(the difference)</span>",
+    "check": "Scale the sample difference: $\\frac{24}{200} \\times 8{,}500 = 1{,}020$ ✓",
+    "be_careful": "Do not stop at one group; the question asks how many MORE.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled voter stands for 42.5 voters: $24 \\times 42.5 = 1{,}020$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-017",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C3"
+   ],
+   "family": "not-plausible-value",
+   "signature": "proportion 0.58, MOE 0.05: plausible .53 to .63; which is NOT plausible: 0.65; traps .54, .60, .62",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 40,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Based on a random sample of customers, a store estimates that the proportion of all its customers who use its mobile app is 0.58, with an associated margin of error of 0.05. Which of the following is NOT a plausible value for the proportion of all the store’s customers who use the app?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$0.54$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "0.54 is inside the range 0.53 to 0.63, so it IS plausible."
+    },
+    {
+     "key": "B",
+     "text": "$0.60$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "0.60 is inside the range, so it IS plausible."
+    },
+    {
+     "key": "C",
+     "text": "$0.62$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "0.62 is inside the range, so it IS plausible."
+    },
+    {
+     "key": "D",
+     "text": "$0.65$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Values outside estimate $\\pm$ margin of error are not plausible for the population.",
+    "steps": "What does the question ask? It asks which choice is NOT a plausible value for the proportion of all the store’s customers who use the app.<br>A value is plausible only if it lies between the two ends of the range.<br>The question asks for the value OUTSIDE the plausible range.<br>$0.58 - 0.05 = 0.53$ <span class=\"nt\">(lower end)</span><br>$0.58 + 0.05 = 0.63$ <span class=\"nt\">(upper end)</span><br>$0.65 > 0.63$ <span class=\"nt\">(only 0.65 is outside)</span>",
+    "check": "0.54, 0.60, and 0.62 all lie between 0.53 and 0.63 ✓",
+    "be_careful": "Read NOT: three choices are plausible and one is not.",
+    "desmos": "Not needed.",
+    "another_way": "Distances from 0.58: 0.04, 0.02, 0.04, 0.07. Only 0.07 is more than 0.05."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-018",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C6"
+   ],
+   "family": "best-sampling-method",
+   "signature": "estimate mean study hours of university students: random from registrar list; traps library, volunteers online, one dorm",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 45,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A researcher wants to estimate the mean number of hours per week that students at a large university spend studying. Which of the following methods of selecting students is most likely to give an unbiased estimate?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Surveying the first 200 students who enter the university library on a Monday",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Students in the library are likely to study more than others, so the estimate would be biased high."
+    },
+    {
+     "key": "B",
+     "text": "Posting the survey online and using the first 200 students who respond",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Students who choose to respond are volunteers and may not represent all students."
+    },
+    {
+     "key": "C",
+     "text": "Surveying all 200 students who live in one dormitory at the university",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "One dormitory is not a random group of all students at the university."
+    },
+    {
+     "key": "D",
+     "text": "Selecting 200 students at random from a list of all students at the university",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "An unbiased estimate needs a sample selected at random from the whole population of interest.",
+    "steps": "The question asks which method gives every student the same chance to be selected.<br>The library and dormitory methods only reach certain students, and the online method relies on volunteers.<br>Only selecting at random from a list of ALL students gives every student an equal chance.",
+    "check": "All four samples have 200 students, so only the method differs ✓",
+    "be_careful": "All four samples are the same size, so size cannot be the deciding factor.",
+    "desmos": "Not needed.",
+    "another_way": "For each method, name a group of students who could never be picked. Only the random list leaves no one out."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-019",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "mean-to-total",
+   "signature": "30 of 450 hives, sample total 360 lb -> mean 12 -> 5,400; common wrong 360, 16,200",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 50,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A beekeeping cooperative manages 450 beehives. A random sample of 30 of the hives produced a total of 360 pounds of honey this season. Based on the sample, what is the best estimate of the total amount of honey, in pounds, produced this season by all 450 hives?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5400"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "16200",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This multiplies the sample total 360 by 45 instead of using the mean per hive."
+    },
+    {
+     "value": "12",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "12 pounds is the mean per hive. The question asks for the total for all 450 hives."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find the mean per hive in the sample, then multiply by the number of hives.",
+    "steps": "What does the question ask? It asks for the best estimate of the total honey, in pounds, from all 450 hives.<br>The sample tells us about honey per hive, so find that first.<br>The question asks for total honey from all 450 hives.<br>mean per hive $= \\frac{360}{30} = 12$ <span class=\"nt\">(sample mean)</span><br>total $\\approx 12 \\times 450 = 5{,}400$ <span class=\"nt\">(mean times number of hives)</span><br>So the 450 hives are expected to produce about 5,400 pounds of honey.",
+    "check": "$\\frac{5{,}400}{450} = 12$, the same mean as the sample ✓",
+    "be_careful": "360 is the total of the SAMPLE, not a mean.",
+    "desmos": "Not needed.",
+    "another_way": "450 hives is 15 times 30 hives: $15 \\times 360 = 5{,}400$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-020",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "M",
+   "concepts": [
+    "P6.C1"
+   ],
+   "family": "table-cell-scale",
+   "signature": "table of 150 sampled residents by age and support; town 12,000 -> 65+ and support 24/150 -> 1,920; traps 2,400 (row), 7,280 (column), 9,120",
+   "abilities": [
+    "R"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 55,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of 150 residents of a town was asked whether they support building a new community center. The results are shown in the table.<table class=\"dt\"><tr><th></th><th>Supports</th><th>Does not support</th><th>Total</th></tr><tr><th>Under 40</th><td>38</td><td>22</td><td>60</td></tr><tr><th>40 to 64</th><td>29</td><td>31</td><td>60</td></tr><tr><th>65 or older</th><td>24</td><td>6</td><td>30</td></tr><tr><th>Total</th><td>91</td><td>59</td><td>150</td></tr></table>The town has 12,000 residents. Based on the sample, which of the following is the best estimate of the number of residents of the town who are 65 or older and support building the community center?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$1{,}920$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$2{,}400$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "2,400 is the estimate of ALL residents 65 or older ($\\frac{30}{150}$), not only those who support it."
+    },
+    {
+     "key": "C",
+     "text": "$7{,}280$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "7,280 is the estimate of all supporters ($\\frac{91}{150}$), of every age."
+    },
+    {
+     "key": "D",
+     "text": "$9{,}600$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This uses $\\frac{24}{30}$, the share of residents 65 or older who support it, times all 12,000 residents."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "The cell count out of the whole sample estimates the fraction of the whole town in that cell.",
+    "steps": "The question asks for town residents who are BOTH 65 or older AND supporters.<br>cell: 65 or older and supports $= 24$ <span class=\"nt\">(read the table)</span><br>$\\frac{24}{150} = 0.16$ <span class=\"nt\">(fraction of the whole sample)</span><br>$0.16 \\times 12{,}000 = 1{,}920$ <span class=\"nt\">(same fraction of the town)</span><br>Use 150, the whole sample, as the bottom, because the question is about the whole town, not only residents 65 or older.",
+    "check": "$\\frac{1{,}920}{12{,}000} = 0.16 = \\frac{24}{150}$ ✓",
+    "be_careful": "The denominator is the whole sample (150), because the question is about the whole town.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled resident stands for 80 residents: $24 \\times 80 = 1{,}920$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-021",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "count-interval-complement-max",
+   "signature": "6,000 households, 35% +/- 4% have thermostat; greatest plausible NOT -> 69% -> 4,140; traps 2,340 (39% with), 3,660 (61%), 3,900 (65%)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A utility company serves 6,000 households. Based on a random sample of these households, the company estimates that 35% of the households it serves have a smart thermostat, with an associated margin of error of 4%. Based on this estimate, what is the greatest plausible number of households served by the company that do NOT have a smart thermostat?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2{,}340$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D5",
+     "feedback": "2,340 is 39% of 6,000, the greatest plausible number that DO have a smart thermostat."
+    },
+    {
+     "key": "B",
+     "text": "$3{,}660$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "3,660 is 61% of 6,000, the LEAST plausible number without one. It comes from subtracting the margin on the wrong side."
+    },
+    {
+     "key": "C",
+     "text": "$3{,}900$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "3,900 is 65% of 6,000, the estimate without a thermostat. The margin of error was never used."
+    },
+    {
+     "key": "D",
+     "text": "$4{,}140$",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "The fewest households WITH a thermostat leaves the most households WITHOUT one.",
+    "steps": "The question asks for the greatest plausible count WITHOUT a smart thermostat.<br>Step 1: Plausible percents with a thermostat.<br>$35\\% - 4\\% = 31\\%$ to $35\\% + 4\\% = 39\\%$ <span class=\"nt\">(estimate $\\pm$ margin)</span><br>Step 2: Switch to households without one.<br>$100\\% - 39\\% = 61\\%$ to $100\\% - 31\\% = 69\\%$ <span class=\"nt\">(the least WITH gives the most WITHOUT)</span><br>Step 3: Count.<br>$0.69 \\times 6{,}000 = 4{,}140$ <span class=\"nt\">(greatest plausible count without)</span>",
+    "check": "$4{,}140 + 0.31 \\times 6{,}000 = 4{,}140 + 1{,}860 = 6{,}000$ ✓",
+    "be_careful": "On switching to the complement, the ends swap: the greatest “without” comes from the LEAST “with”.",
+    "desmos": "Not needed.",
+    "another_way": "Estimate without is 65%; the margin is the same size for the complement, so the greatest is $65\\% + 4\\% = 69\\%$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-022",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C7"
+   ],
+   "family": "two-interval-overlap",
+   "signature": "X 54 +/- 3 (51-57), Y 49 +/- 4 (45-53): overlap -> cannot conclude; traps estimates compared, X low end vs Y estimate, same value",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two school districts each surveyed a random sample of their own parents about a later school start time. In District X, 54% of the parents in the sample were in favor, with an associated margin of error of 3%. In District Y, 49% of the parents in the sample were in favor, with an associated margin of error of 4%. Which of the following is the most appropriate conclusion about the percents of ALL parents in the two districts who are in favor?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "District X has the greater percent, because 54% is greater than 49%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "The estimates differ, but each has a margin of error. 52% is plausible for BOTH districts, so either could be greater."
+    },
+    {
+     "key": "B",
+     "text": "District X has the greater percent, because its least plausible value, 51%, is greater than 49%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This compares X’s lower end with Y’s estimate, ignoring Y’s margin. Y’s upper end is 53%."
+    },
+    {
+     "key": "C",
+     "text": "Neither district can be said to be greater, because the plausible ranges overlap.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The two districts have the same percent, because the plausible values for the two districts overlap.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Overlap means the percents COULD be equal, not that they must be."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Two population values can be ordered only when their plausible ranges do not overlap.",
+    "steps": "The question asks whether we can tell which district’s parents favor the change more.<br>X: $54\\% \\pm 3\\%$ gives 51% to 57% <span class=\"nt\">(plausible values for X)</span><br>Y: $49\\% \\pm 4\\%$ gives 45% to 53% <span class=\"nt\">(plausible values for Y)</span><br>51% to 53% is in both ranges <span class=\"nt\">(the ranges overlap)</span><br>For example, X could be 51% while Y is 53%, or X could be 57% while Y is 45%. So no order can be concluded.",
+    "check": "52% lies in 51% to 57% and in 45% to 53% ✓",
+    "be_careful": "Compare range with range, not an end with an estimate.",
+    "desmos": "Not needed.",
+    "another_way": "Draw both ranges on one number line; they share the piece from 51 to 53."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-023",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "mean-interval-to-total-max",
+   "signature": "mean spend $14.20 +/- $1.10, 25,000 visitors -> greatest plausible total 382.5 thousand; common wrong 355, 27.5",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A random sample of visitors to a three-day festival was surveyed. Based on the sample, the mean amount spent on food per visitor at the festival is estimated to be \\$14.20, with an associated margin of error of \\$1.10. The festival had 25,000 visitors. Based on this estimate, what is the greatest plausible total amount, in thousands of dollars, that the festival’s visitors spent on food?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "382.5",
+      "765/2"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "355",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "355 thousand dollars uses the estimate \\$14.20 per visitor. The greatest plausible total uses the greatest plausible mean."
+    },
+    {
+     "value": "382500",
+     "error_type": "slip",
+     "misconception": "D28",
+     "feedback": "This is the total in dollars. The answer must be in thousands of dollars (and 382,500 does not fit the grid)."
+    }
+   ],
+   "solution": {
+    "key_idea": "The greatest plausible MEAN per visitor, times the number of visitors, gives the greatest plausible TOTAL.",
+    "steps": "What does the question ask? It asks for the greatest plausible total, in thousands of dollars, that visitors spent on food.<br>The greatest plausible total comes from the greatest plausible mean, so start there.<br>The question asks for the greatest plausible total spending, in thousands of dollars.<br>greatest plausible mean $= 14.20 + 1.10 = 15.30$ <span class=\"nt\">(estimate + margin)</span><br>total $= 15.30 \\times 25{,}000 = 382{,}500$ dollars <span class=\"nt\">(mean per visitor times visitors)</span><br>$382{,}500 \\div 1{,}000 = 382.5$ <span class=\"nt\">(convert to thousands of dollars)</span>",
+    "check": "$\\frac{382{,}500}{25{,}000} = 15.30 = 14.20 + 1.10$ ✓",
+    "be_careful": "Finish the units: the answer is in THOUSANDS of dollars.",
+    "desmos": "Not needed.",
+    "another_way": "25,000 visitors is 25 thousand visitors, so $15.30 \\times 25 = 382.5$ thousand dollars directly."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-024",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C5"
+   ],
+   "family": "margin-to-sample-size",
+   "signature": "two random polls same population: MOE 3.1% vs 4.4% -> poll 1 likely larger sample; traps reversed, poll 2 closer, same estimate",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two polls each selected adults at random from the same state and used the same method to estimate the percent of all adults in the state who own an electric car. Poll 1 reported a margin of error of 3.1%, and Poll 2 reported a margin of error of 4.4%. Which of the following is most likely true?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Poll 2 surveyed more adults than Poll 1 did.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This reverses the effect. A larger random sample usually gives a SMALLER margin of error."
+    },
+    {
+     "key": "B",
+     "text": "Poll 2’s estimate is closer to the true percent than Poll 1’s.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "A larger margin means LESS precision. Nothing suggests Poll 2 is closer."
+    },
+    {
+     "key": "C",
+     "text": "Poll 1 surveyed more adults than Poll 2 did.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Both polls must have reported the same estimate.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "Different random samples usually give different estimates; nothing forces them to be equal."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "With the same random method and population, the poll with the smaller margin of error most likely used the larger sample.",
+    "steps": "The question asks what the two margins of error tell us.<br>Same population, same method, both random: the main thing that changes the margin of error is the sample size.<br>$3.1\\% < 4.4\\%$ <span class=\"nt\">(Poll 1 is more precise)</span><br>More precision comes from more people, so Poll 1 most likely surveyed more adults.",
+    "check": "Reverse check: a bigger random sample gives a smaller margin, which matches Poll 1 ✓",
+    "be_careful": "Work backward: the margins are given, and the question is about the sample sizes.",
+    "desmos": "Not needed.",
+    "another_way": "Picture a sample of 10 adults versus 1,000 adults. The 10-adult poll would have the much larger margin."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-025",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C7"
+   ],
+   "family": "two-interval-intersection",
+   "signature": "A 41 +/- 3 (38-44), B 45 +/- 3 (42-48): greatest plausible for both 44; traps 42 (least), 43 (average), 48 (B upper)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two research groups each surveyed a different random sample of adults in the same city about whether they work from home at least one day a week. Group A estimated 41%, with an associated margin of error of 3%. Group B estimated 45%, with an associated margin of error of 3%. What is the greatest value for the percent of all adults in the city who work from home at least one day a week that is plausible based on BOTH estimates?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$42\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "42% is the LEAST value plausible for both estimates."
+    },
+    {
+     "key": "B",
+     "text": "$43\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "43% averages the two estimates. It is plausible for both, but it is not the greatest such value."
+    },
+    {
+     "key": "C",
+     "text": "$44\\%$",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "$48\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "48% is plausible for Group B only. Group A’s range stops at 44%."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A value plausible for both estimates must lie in the part where the two plausible ranges overlap.",
+    "steps": "The question asks for the largest value inside BOTH plausible ranges.<br>A: $41\\% \\pm 3\\%$ gives 38% to 44% <span class=\"nt\">(range for A)</span><br>B: $45\\% \\pm 3\\%$ gives 42% to 48% <span class=\"nt\">(range for B)</span><br>overlap: 42% to 44% <span class=\"nt\">(the larger lower end to the smaller upper end)</span><br>greatest value in the overlap $= 44\\%$ <span class=\"nt\">(the smaller upper end)</span>",
+    "check": "44% is in 38% to 44% and in 42% to 48% ✓; 44.5% would be outside A’s range ✓",
+    "be_careful": "The overlap ends at the SMALLER of the two upper ends.",
+    "desmos": "Not needed.",
+    "another_way": "Shade both ranges on a number line and read the right edge of the shared piece."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-026",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "counts-to-percent-to-least-count",
+   "signature": "sample 36 yes 84 no -> 30%; MOE 5%; 5,400 members -> least plausible 1,350; common wrong 1,620, 1,890",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A credit union has 5,400 members. In a random sample of members, 36 said they use the credit union’s mobile app every day and 84 said they do not. Based on the sample, the percent of all members who use the app every day was estimated with an associated margin of error of 5%. What is the least plausible number of the credit union’s members who use the app every day?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "1350"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1620",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "1,620 is the estimate (30% of 5,400). The margin of error was not used."
+    },
+    {
+     "value": "1890",
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "1,890 is 35% of 5,400, the GREATEST plausible number."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find the sample percent from the counts, subtract the margin of error, then take that percent of all members.",
+    "steps": "The question asks for the least plausible number of members who use the app daily.<br>Step 1: Sample percent.<br>sample size $= 36 + 84 = 120$ <span class=\"nt\">(everyone answered yes or no)</span><br>$\\frac{36}{120} = 0.30 = 30\\%$ <span class=\"nt\">(sample percent)</span><br>Step 2: Least plausible percent.<br>$30\\% - 5\\% = 25\\%$ <span class=\"nt\">(estimate $-$ margin)</span><br>Step 3: Count.<br>$0.25 \\times 5{,}400 = 1{,}350$ <span class=\"nt\">(apply to all members)</span>",
+    "check": "$\\frac{1{,}350}{5{,}400} = 0.25 = 0.30 - 0.05$ ✓",
+    "be_careful": "84 is NOT the sample size; the sample is $36 + 84$.",
+    "desmos": "Not needed.",
+    "another_way": "Estimate 1,620; the margin in members is $0.05 \\times 5{,}400 = 270$; $1{,}620 - 270 = 1{,}350$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-027",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C2",
+    "P6.C6"
+   ],
+   "family": "plausible-count-below-threshold",
+   "signature": "9,000 card holders, 34% +/- 3% -> 2,790 to 3,330 includes 3,000 -> fewer than 3,000 plausible; traps residents (scope), exactly 3,060, estimate-only rules it out",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A library has 9,000 card holders. The library selected a random sample of its card holders and asked whether they had borrowed an e-book in the past month. Based on the sample, it is estimated that 34% of all card holders had borrowed an e-book, with an associated margin of error of 3%. Which of the following is supported by the survey?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is plausible that between 2,790 and 3,330 of all residents of the city borrowed an e-book.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The numbers are right, but only card holders could be selected, so the results describe card holders, not every resident."
+    },
+    {
+     "key": "B",
+     "text": "Exactly 3,060 card holders borrowed an e-book in the past month.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "3,060 is 34% of 9,000, which is only the estimate. The true number is plausibly anywhere from 2,790 to 3,330."
+    },
+    {
+     "key": "C",
+     "text": "It is not plausible that fewer than 3,000 card holders borrowed an e-book, because 34% of 9,000 is 3,060.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "This uses only the estimate. The least plausible count, 2,790, is below 3,000."
+    },
+    {
+     "key": "D",
+     "text": "It is plausible that fewer than 3,000 card holders borrowed an e-book.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Turn the plausible percents into plausible counts of card holders, then check whether the range reaches below 3,000.",
+    "steps": "The question asks which statement about the 9,000 card holders the survey supports.<br>$34\\% \\pm 3\\%$ gives 31% to 37% <span class=\"nt\">(plausible percents for all card holders)</span><br>$0.31 \\times 9{,}000 = 2{,}790$ <span class=\"nt\">(least plausible count)</span><br>$0.37 \\times 9{,}000 = 3{,}330$ <span class=\"nt\">(greatest plausible count)</span><br>Counts from 2,790 up to 2,999 are inside the range and are less than 3,000.<br>So fewer than 3,000 is plausible, even though the estimate itself, 3,060, is more than 3,000.",
+    "check": "$\\frac{3{,}000}{9{,}000} \\approx 33.3\\%$, which is between 31% and 37% ✓",
+    "be_careful": "An estimate above a cutoff does not prove the true value is above it when the range crosses the cutoff.",
+    "desmos": "Not needed.",
+    "another_way": "Compare percents: 3,000 out of 9,000 is one-third, about 33.3%, and 31% is below that."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-028",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C1"
+   ],
+   "family": "subgroup-base-two-step",
+   "signature": "2,400 students; random 300 incl 75 juniors, 30 of them own car -> juniors about 600 -> 30/75 x 600 = 240; traps 60 (30/300 of 600), 360 (non-owners), 960 (30/75 of 2,400)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A high school has 2,400 students. A random sample of 300 students at the school included 75 juniors, and 30 of these juniors said they own a car. Based on the sample, which of the following is the best estimate of the number of juniors at the school who own a car?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$60$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This takes $\\frac{30}{300}$ of the 600 juniors. 30 out of 300 is a share of ALL sampled students, not of the juniors."
+    },
+    {
+     "key": "B",
+     "text": "$240$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$360$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D3",
+     "feedback": "This uses $\\frac{45}{75}$, the share of sampled juniors who do NOT own a car."
+    },
+    {
+     "key": "D",
+     "text": "$960$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes $\\frac{30}{75}$ of all 2,400 students instead of the juniors only."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The number of juniors at the school is not given, so estimate it from the sample first. Then apply the share of sampled JUNIORS who own a car to the juniors.",
+    "steps": "The question asks for juniors at the school who own a car. The school’s number of juniors is not given.<br>Step 1: Estimate the juniors at the school.<br>$\\frac{75}{300} = \\frac{1}{4}$ <span class=\"nt\">(share of sampled students who are juniors)</span><br>$\\frac{1}{4} \\times 2{,}400 = 600$ <span class=\"nt\">(estimated juniors at the school)</span><br>Step 2: Apply the juniors’ car share.<br>$\\frac{30}{75} = \\frac{2}{5}$ <span class=\"nt\">(share of sampled juniors who own a car)</span><br>$\\frac{2}{5} \\times 600 = 240$ <span class=\"nt\">(estimated juniors who own a car)</span><br>Shortcut check: 30 of all 300 sampled students are juniors with a car, and $\\frac{30}{300} \\times 2{,}400 = 240$ too.",
+    "check": "$\\frac{30}{300} \\times 2{,}400 = 240$ ✓",
+    "be_careful": "Each fraction must be applied to the same group it came from: juniors out of juniors, students out of students.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled student stands for $\\frac{2{,}400}{300} = 8$ students, so the 30 juniors with a car stand for $30 \\times 8 = 240$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-029",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C3"
+   ],
+   "family": "threshold-plausible",
+   "signature": "8,000 voters all vote, 47% +/- 4% yes -> 3,440 to 4,080; needs 4,000 -> could pass; traps will fail, will pass, margin on count",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "All 8,000 voters in a town will vote on a measure, and the measure passes if at least 4,000 voters vote yes. Based on a random sample of the voters, it is estimated that 47% of all the voters will vote yes, with an associated margin of error of 4%. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The measure could pass, because 4,000 yes votes is within the plausible range of yes votes.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "The measure will fail, because 47% of 8,000 is 3,760, which is less than 4,000.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "3,760 is only the estimate. The plausible values reach up to 51% of 8,000, which is 4,080."
+    },
+    {
+     "key": "C",
+     "text": "The measure will pass, because 47% + 4% = 51%, which is more than 50%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "51% is only the greatest plausible value. Values below 50% are plausible too, so passing is not certain."
+    },
+    {
+     "key": "D",
+     "text": "The measure cannot pass, because the greatest plausible number of yes votes is $3{,}760 + 4 = 3{,}764$.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D7",
+     "feedback": "The margin of error is 4%, not 4 votes. 4% of 8,000 is 320 votes."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "A plausible range that contains the cutoff means the outcome could go either way: possible, not certain.",
+    "steps": "The question asks what the poll lets us conclude about passing.<br>percents: $47\\% \\pm 4\\%$ gives 43% to 51% <span class=\"nt\">(plausible values)</span><br>$0.43 \\times 8{,}000 = 3{,}440$ <span class=\"nt\">(least plausible yes votes)</span><br>$0.51 \\times 8{,}000 = 4{,}080$ <span class=\"nt\">(greatest plausible yes votes)</span><br>$3{,}440 \\le 4{,}000 \\le 4{,}080$ <span class=\"nt\">(the cutoff is inside the range)</span><br>So passing is plausible, but so is failing. The measure could pass.",
+    "check": "4,000 out of 8,000 is 50%, which is between 43% and 51% ✓",
+    "be_careful": "“Will” is too strong in both directions when the cutoff sits inside the plausible range.",
+    "desmos": "Not needed.",
+    "another_way": "Work in percents: the cutoff is $\\frac{4{,}000}{8{,}000} = 50\\%$, and 50% is between 43% and 51%."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-030",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "count-range-to-margin",
+   "signature": "plausible blight trees 1,980 to 2,520 of 9,000 -> MOE 3%; traps 6% (width), 22% (low end), 25% (estimate)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A forest has 9,000 trees. Based on a random sample of the trees, a ranger concluded that the plausible number of trees in the forest that have a certain blight is from 1,980 to 2,520. This range comes from an estimated percent plus or minus a margin of error. What is the margin of error?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$3\\%$",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "$6\\%$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "6% is the whole width of the range, $\\frac{540}{9{,}000}$. The margin is half of it."
+    },
+    {
+     "key": "C",
+     "text": "$22\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "22% is the lower end, $\\frac{1{,}980}{9{,}000}$, not the margin."
+    },
+    {
+     "key": "D",
+     "text": "$25\\%$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "25% is the estimate, the center of the range."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Turn the counts into percents of 9,000; the margin of error is half the width of that percent range.",
+    "steps": "What does the question ask? It asks for the margin of error.<br>The margin is asked as a percent, so first change both counts into percents of all 9,000 trees.<br>The question asks for the margin of error, as a percent.<br>$\\frac{1{,}980}{9{,}000} = 22\\%$ <span class=\"nt\">(lower end as a percent)</span><br>$\\frac{2{,}520}{9{,}000} = 28\\%$ <span class=\"nt\">(upper end as a percent)</span><br>width $= 28\\% - 22\\% = 6\\%$ <span class=\"nt\">(end to end)</span><br>margin $= \\frac{6\\%}{2} = 3\\%$ <span class=\"nt\">(half the width)</span>",
+    "check": "Estimate 25%: $25\\% \\pm 3\\%$ gives 22% and 28%, which are 1,980 and 2,520 trees ✓",
+    "be_careful": "The range is given in trees, but the margin is asked as a percent of the forest.",
+    "desmos": "Not needed.",
+    "another_way": "Half the count width: $\\frac{2{,}520 - 1{,}980}{2} = 270$ trees, and $\\frac{270}{9{,}000} = 3\\%$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-031",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C6"
+   ],
+   "family": "sampling-frame-qualifiers",
+   "signature": "random 250 from list of Marlow County adults with library card who visited county library in 2025; traps drop qualifiers",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Researchers selected 250 people at random from a list of all adults in Marlow County who hold a county library card and who visited a county library at least once in 2025. The selected adults were asked how many books they read in 2025. To which of the following populations can the results be generalized?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Adults in Marlow County who hold a county library card, whether or not they visited a library",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Card holders who did not visit a library in 2025 could not be selected."
+    },
+    {
+     "key": "B",
+     "text": "Adults in Marlow County who hold a county library card and visited a county library in 2025",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "All adults in Marlow County, including those without a library card",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Adults without a library card could not be selected, and they may read differently."
+    },
+    {
+     "key": "D",
+     "text": "All adults in the country who hold a library card and visited a library in 2025",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only Marlow County adults were on the list."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The largest population the results can be generalized to is exactly the group the sample was selected from, with every qualifier.",
+    "steps": "The question asks for the population the results describe.<br>The list had three qualifiers: (1) adults in Marlow County, (2) who hold a county library card, (3) who visited a county library in 2025.<br>Random selection from that list lets the results stand for everyone on it, and only them.<br>So the population keeps all three qualifiers.",
+    "check": "Each wrong choice drops at least one qualifier ✓",
+    "be_careful": "Library visitors probably read more than other adults, so dropping a qualifier is not harmless.",
+    "desmos": "Not needed.",
+    "another_way": "Check each choice for someone who could NOT have been on the list; if such a person exists, the choice is too broad."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-032",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C3"
+   ],
+   "family": "claim-vs-interval",
+   "signature": "boxes labeled 500 g; sample mean 496, MOE 3 -> 493 to 499, 500 not plausible; traps 500 plausible (within 5), every box, exactly 496",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A company labels its boxes of cereal as containing 500 grams. An inspector weighed a random sample of 60 boxes and estimated that the mean weight of all the company’s boxes is 496 grams, with an associated margin of error of 3 grams. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "500 grams is a plausible value for the mean weight of all the boxes, because 496 is within 5 grams of 500.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "The margin of error is 3 grams, not 5. 500 is 4 grams above 496."
+    },
+    {
+     "key": "B",
+     "text": "Every box made by the company weighs between 493 and 499 grams.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The range is about the MEAN weight, not about each box."
+    },
+    {
+     "key": "C",
+     "text": "The mean weight of all the boxes is plausibly between 493 and 499 grams, so 500 grams is not a plausible value for the mean.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "The mean weight of all the boxes is exactly 496 grams, so the label is 4 grams too high.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "496 is an estimate; the true mean could be anywhere from 493 to 499."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "A claimed value that falls outside the plausible range is not supported by the sample.",
+    "steps": "The question asks whether the 500-gram label fits the sample.<br>$496 - 3 = 493$ <span class=\"nt\">(lower end)</span><br>$496 + 3 = 499$ <span class=\"nt\">(upper end)</span><br>$500 > 499$ <span class=\"nt\">(the label is above the plausible range)</span><br>So 500 grams is not a plausible value for the mean weight, while 493 to 499 grams are.",
+    "check": "500 is 4 grams from 496, more than the 3-gram margin ✓",
+    "be_careful": "Two different misreadings tempt here: individual boxes, and “exactly”.",
+    "desmos": "Not needed.",
+    "another_way": "Ask: is $|500 - 496| \\le 3$? No, it is 4."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-033",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "count-interval-width",
+   "signature": "4,800 employees, 18% +/- 2.5% -> difference greatest-least plausible 240; common wrong 120, 864",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 75,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A company has 4,800 employees. Based on a random sample of the employees, it is estimated that 18% of all the employees bike to work at least once a month, with an associated margin of error of 2.5%. What is the difference between the greatest plausible number and the least plausible number of the company’s employees who bike to work at least once a month?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "240"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "120",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "120 employees is ONE margin of error (2.5% of 4,800). The range spans two margins."
+    },
+    {
+     "value": "864",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "864 is the estimate, 18% of 4,800, not a difference."
+    }
+   ],
+   "solution": {
+    "key_idea": "From the least to the greatest plausible value is two margins of error.",
+    "steps": "Find the two ends of the plausible range of counts, one for each end of the percent range, and then subtract them.<br>The question asks for (greatest plausible count) $-$ (least plausible count).<br>$18\\% + 2.5\\% = 20.5\\%$ <span class=\"nt\">(greatest plausible percent)</span><br>$18\\% - 2.5\\% = 15.5\\%$ <span class=\"nt\">(least plausible percent)</span><br>$0.205 \\times 4{,}800 = 984$ <span class=\"nt\">(greatest count)</span><br>$0.155 \\times 4{,}800 = 744$ <span class=\"nt\">(least count)</span><br>$984 - 744 = 240$ <span class=\"nt\">(difference)</span>",
+    "check": "$2 \\times 0.025 \\times 4{,}800 = 240$ ✓",
+    "be_careful": "The estimate 18% cancels out; only the margin matters, and it counts twice.",
+    "desmos": "Not needed.",
+    "another_way": "Width in percent is $2 \\times 2.5\\% = 5\\%$; 5% of 4,800 is 240."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-034",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C1"
+   ],
+   "family": "stratified-table",
+   "signature": "random 80 grade 9 and 120 grade 10 selected separately; school 540 ninth graders; bike 8/80 -> 54; traps 48 (8/200 of 1,200), 120 (8/80 of 1,200), 198 (33/200 of 1,200)",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 85,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A school has 540 students in grade 9 and 660 students in grade 10. A researcher selected 80 grade 9 students at random and, separately, 120 grade 10 students at random, and asked how each usually gets to school. The results are shown in the table.<table class=\"dt\"><tr><th></th><th>Walk</th><th>Bus</th><th>Bike</th><th>Car</th><th>Total</th></tr><tr><th>Grade 9</th><td>12</td><td>30</td><td>8</td><td>30</td><td>80</td></tr><tr><th>Grade 10</th><td>15</td><td>40</td><td>25</td><td>40</td><td>120</td></tr><tr><th>Total</th><td>27</td><td>70</td><td>33</td><td>70</td><td>200</td></tr></table>Based on the samples, which of the following is the best estimate of the number of grade 9 students at the school who usually bike to school?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$48$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This takes $\\frac{8}{200}$ of all 1,200 students. The two grades were sampled separately in set amounts, so the 200 students do not mirror the school’s mix of grades."
+    },
+    {
+     "key": "B",
+     "text": "$54$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$120$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes $\\frac{8}{80}$ of all 1,200 students. The share applies only to grade 9 students."
+    },
+    {
+     "key": "D",
+     "text": "$198$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D16",
+     "feedback": "This estimates bikers in BOTH grades, $\\frac{33}{200} \\times 1{,}200$."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "Each grade was sampled on its own, so use the grade 9 share for the grade 9 population.",
+    "steps": "What does the question ask? It asks for the best estimate of the number of grade 9 students at the school who usually bike to school.<br>Grade 9 and grade 10 were sampled separately, so use only the grade 9 row.<br>The question asks for grade 9 students at the school who bike.<br>grade 9 sample $= 12 + 30 + 8 + 30 = 80$ <span class=\"nt\">(row total)</span><br>$\\frac{8}{80} = 0.1$ <span class=\"nt\">(share of sampled grade 9 students who bike)</span><br>$0.1 \\times 540 = 54$ <span class=\"nt\">(same share of all grade 9 students)</span>",
+    "check": "$\\frac{54}{540} = 0.1 = \\frac{8}{80}$ ✓",
+    "be_careful": "The researcher chose 80 and 120 on purpose, so the overall table is not a random mix of the school.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled grade 9 student stands for $\\frac{540}{80} = 6.75$ students: $8 \\times 6.75 = 54$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-035",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "freq-table-mean-to-total",
+   "signature": "random 20 of 3,600 households, cars 0-3 counts 3,7,8,2 -> mean 1.45 -> 5,220; common wrong 5,400, 29",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "checker",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A town has 3,600 households. A random sample of 20 households was selected, and the number of cars owned by each household in the sample is summarized in the table.<table class=\"dt\"><tr><th>Number of cars</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><th>Number of households</th><td>3</td><td>7</td><td>8</td><td>2</td></tr></table>Based on the sample, what is the best estimate of the total number of cars owned by all the households in the town?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "5220"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5400",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This uses 1.5, the average of the values 0, 1, 2, 3, instead of weighting each value by its number of households."
+    },
+    {
+     "value": "7200",
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This uses 2 cars per household, the most common value in the sample, not the mean."
+    }
+   ],
+   "solution": {
+    "key_idea": "Find the sample mean from the frequency table, then multiply by the number of households.",
+    "steps": "The question asks for the total number of cars in the town.<br>Step 1: Cars in the sample.<br>$0(3) + 1(7) + 2(8) + 3(2) = 0 + 7 + 16 + 6 = 29$ <span class=\"nt\">(each value times its count)</span><br>Step 2: Mean per household.<br>$\\frac{29}{20} = 1.45$ <span class=\"nt\">(divide by the 20 households)</span><br>Step 3: Scale to the town.<br>$1.45 \\times 3{,}600 = 5{,}220$ <span class=\"nt\">(mean times households)</span>",
+    "check": "Households in the table: $3 + 7 + 8 + 2 = 20$ ✓; $5{,}220 \\div 3{,}600 = 1.45$ ✓",
+    "be_careful": "The bottom row gives how MANY households have each number of cars; weight by it.",
+    "desmos": "Desmos can compute the mean: enter lists [0,1,2,3] and [3,7,8,2] and use total(L1 L2)/total(L2), but setting up the scale-up is the real work.",
+    "another_way": "Each sampled household stands for $\\frac{3{,}600}{20} = 180$ households: $29 \\times 180 = 5{,}220$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-036",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C4",
+    "P6.C7"
+   ],
+   "family": "count-range-vs-cutoff",
+   "signature": "60,000 voters, sample 690 of 1,500 (46%) +/- 2.5% -> 26,100 to 29,100, all below 30,000 (half); traps 51% (margin doubled), 690 sample count, sample range",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A random sample of 1,500 of the 60,000 registered voters in a county was asked about a proposed park, and 690 of the voters in the sample said they support the park. Based on the sample, the percent of all registered voters in the county who support the park is estimated with an associated margin of error of 2.5%. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is plausible that more than half of the county’s voters support the park, because the plausible percents reach 51%.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This adds 5%, the full width of the range, to 46%. The margin is 2.5%, so the plausible percents reach only 48.5%."
+    },
+    {
+     "key": "B",
+     "text": "About 690 of the county’s registered voters support the park.",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "690 is the number of supporters in the 1,500-voter sample. The sample percent must be applied to all 60,000 voters."
+    },
+    {
+     "key": "C",
+     "text": "Between 43.5% and 48.5% of the 1,500 sampled voters support the park.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The sample percent is exactly 46%. The range describes all voters in the county."
+    },
+    {
+     "key": "D",
+     "text": "Every plausible number of supporters in the county is less than 30,000.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Change the sample count into a percent, build the plausible percents, and turn them into plausible counts for the whole county. Then compare with half of 60,000.",
+    "steps": "The question asks what the survey supports about all 60,000 voters.<br>$\\frac{690}{1{,}500} = 0.46 = 46\\%$ <span class=\"nt\">(sample percent)</span><br>$46\\% \\pm 2.5\\%$ gives 43.5% to 48.5% <span class=\"nt\">(plausible percents)</span><br>$0.435 \\times 60{,}000 = 26{,}100$ <span class=\"nt\">(least plausible count)</span><br>$0.485 \\times 60{,}000 = 29{,}100$ <span class=\"nt\">(greatest plausible count)</span><br>Even the greatest plausible count, 29,100, is less than 30,000. So every plausible number of supporters is less than 30,000.",
+    "check": "30,000 is half of 60,000, and $48.5\\% < 50\\%$, so the counts must stay below 30,000 ✓",
+    "be_careful": "The margin of error is added once to the estimate, not twice.",
+    "desmos": "Not needed.",
+    "another_way": "Compare percents first: the top of the range, 48.5%, is below 50%, so supporters are plausibly fewer than half."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-037",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "count-range-to-estimate",
+   "signature": "12,000 residents, plausible 3,360 to 4,320 -> estimate 32%; common wrong 4, 8",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 70,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A city has 12,000 residents. Based on a random sample of residents, it was concluded that the plausible number of the city’s residents who ride the train to work is from 3,360 to 4,320. This range comes from an estimated percent plus or minus a margin of error. What is the estimated percent? (Disregard the % sign when entering your answer. For example, if your answer is 12%, enter 12)",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "32"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "4",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "4% is the margin of error, not the estimate."
+    },
+    {
+     "value": "3840",
+     "error_type": "slip",
+     "misconception": "D28",
+     "feedback": "3,840 is the estimated NUMBER of residents. The question asks for a percent."
+    }
+   ],
+   "solution": {
+    "key_idea": "The estimate is the center of the range; turn the center count into a percent of 12,000.",
+    "steps": "What does the question ask? It asks for the estimated percent.<br>The estimate is always in the middle of the plausible range, so find the middle count first and then change it into a percent.<br>The question asks for the estimated percent.<br>center $= \\frac{3{,}360 + 4{,}320}{2} = 3{,}840$ <span class=\"nt\">(midpoint of the counts)</span><br>$\\frac{3{,}840}{12{,}000} = 0.32 = 32\\%$ <span class=\"nt\">(as a percent of the city)</span>",
+    "check": "Ends as percents: $\\frac{3{,}360}{12{,}000} = 28\\%$ and $\\frac{4{,}320}{12{,}000} = 36\\%$; their center is 32% ✓",
+    "be_careful": "The finish is a percent, not a count.",
+    "desmos": "Not needed.",
+    "another_way": "Convert the ends first (28% and 36%) and take the midpoint."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-038",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "chained-percent-to-count",
+   "signature": "random 250 of 20,000 adults: 40% own dog; of owners 30% own more than one -> 12% -> 2,400; common wrong 6,000, 8,000",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A random sample of 250 of the 20,000 adults in a town was surveyed about pets. Of the adults in the sample, 40% own at least one dog. Of the adults in the sample who own at least one dog, 30% own more than one dog. Based on the sample, what is the best estimate of the number of adults in the town who own more than one dog?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "2400"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "6000",
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "This takes 30% of all 20,000 adults. The 30% is a share of dog owners only."
+    },
+    {
+     "value": "8000",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "8,000 is the estimate of adults who own at least one dog."
+    }
+   ],
+   "solution": {
+    "key_idea": "A percent “of the dog owners” must be applied to the dog owners, then the result scales to the town.",
+    "steps": "What does the question ask? It asks for the best estimate of the number of adults in the town who own more than one dog.<br>The 30% is a share of dog owners only, so count the dog owners in the sample first.<br>The question asks for town adults who own MORE than one dog.<br>$0.40 \\times 250 = 100$ <span class=\"nt\">(sampled dog owners)</span><br>$0.30 \\times 100 = 30$ <span class=\"nt\">(sampled adults with more than one dog)</span><br>$\\frac{30}{250} = 0.12$ <span class=\"nt\">(share of all sampled adults)</span><br>$0.12 \\times 20{,}000 = 2{,}400$ <span class=\"nt\">(same share of the town)</span>",
+    "check": "$0.40 \\times 0.30 = 0.12$ ✓",
+    "be_careful": "Percents of percents multiply; the 30% is not a share of everyone.",
+    "desmos": "Not needed.",
+    "another_way": "Dog owners in town $\\approx 0.40 \\times 20{,}000 = 8{,}000$; of these, 30% is 2,400."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-039",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C6"
+   ],
+   "family": "scope-interval",
+   "signature": "1,200 students, 300 ninth graders; random 40 ninth graders, 10 walk, MOE 7% -> 54 to 96 ninth graders; traps school-wide 216 to 384, 18 to 32, exactly 75",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 90,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A school has 1,200 students, 300 of whom are in grade 9. A random sample of 40 grade 9 students found that 10 of them walk to school. Based on the sample, the percent of grade 9 students at the school who walk to school is estimated with an associated margin of error of 7%. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "It is plausible that between 216 and 384 of the school’s 1,200 students walk to school.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Only grade 9 students were sampled, so the results cannot be applied to the whole school."
+    },
+    {
+     "key": "B",
+     "text": "It is plausible that between 18 and 32 of the school’s grade 9 students walk to school.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "18% and 32% are percents. They must be applied to the 300 grade 9 students."
+    },
+    {
+     "key": "C",
+     "text": "Exactly 75 of the school’s grade 9 students walk to school.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "75 is the estimate. The true number is only plausibly between 54 and 96."
+    },
+    {
+     "key": "D",
+     "text": "It is plausible that between 54 and 96 of the school’s grade 9 students walk to school.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "Build the plausible percent range, apply it to the population that was sampled (grade 9 only), and keep it a range.",
+    "steps": "What does the question ask? It asks which choice is the most appropriate conclusion.<br>Only grade 9 students could be selected, so every conclusion must stay inside grade 9.<br>The question asks what can be concluded from the grade 9 sample.<br>$\\frac{10}{40} = 25\\%$ <span class=\"nt\">(sample percent)</span><br>$25\\% \\pm 7\\%$ gives 18% to 32% <span class=\"nt\">(plausible percents)</span><br>$0.18 \\times 300 = 54$ and $0.32 \\times 300 = 96$ <span class=\"nt\">(apply to the 300 grade 9 students)</span>",
+    "check": "Center: $\\frac{54 + 96}{2} = 75 = 0.25 \\times 300$ ✓",
+    "be_careful": "Grade 9 students were the only ones who could be selected, so the conclusion stays inside grade 9.",
+    "desmos": "Not needed.",
+    "another_way": "Margin in students: $0.07 \\times 300 = 21$, and $75 \\pm 21$ gives 54 to 96."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-040",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H",
+   "concepts": [
+    "P6.C7"
+   ],
+   "family": "two-interval-no-overlap",
+   "signature": "Lake A 31.0 +/- 1.2 (29.8-32.2), Lake B 27.5 +/- 1.5 (26.0-29.0) no overlap -> A mean greater; traps cannot conclude margins differ, every fish, sizes unknown",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 80,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Biologists measured random samples of trout from two lakes. Based on the samples, the mean length of all trout in Lake A is estimated to be 31.0 centimeters, with an associated margin of error of 1.2 centimeters, and the mean length of all trout in Lake B is estimated to be 27.5 centimeters, with an associated margin of error of 1.5 centimeters. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "The mean length in Lake A is plausibly greater, because the ranges do not overlap.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "No conclusion can be made, because the two margins of error are not equal.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Unequal margins do not stop a comparison. What matters is whether the plausible ranges overlap."
+    },
+    {
+     "key": "C",
+     "text": "Every trout in Lake A is longer than every trout in Lake B, because the plausible ranges do not overlap.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "The ranges are about MEAN lengths. Individual trout in Lake B can be longer than individual trout in Lake A."
+    },
+    {
+     "key": "D",
+     "text": "No conclusion can be made, because the samples from the two lakes might have different sizes.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Sample size is already reflected in each margin of error."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "When two plausible ranges do not overlap, every plausible value for one mean is greater than every plausible value for the other.",
+    "steps": "The question asks how the two population means compare.<br>A: $31.0 \\pm 1.2$ gives 29.8 to 32.2 <span class=\"nt\">(range for Lake A)</span><br>B: $27.5 \\pm 1.5$ gives 26.0 to 29.0 <span class=\"nt\">(range for Lake B)</span><br>$29.0 < 29.8$ <span class=\"nt\">(B’s top is below A’s bottom)</span><br>So the mean length in Lake A is plausibly greater than in Lake B.",
+    "check": "Gap between the ranges: $29.8 - 29.0 = 0.8 > 0$ ✓",
+    "be_careful": "A comparison of MEANS says nothing about every single fish.",
+    "desmos": "Not needed.",
+    "another_way": "Compare the upper end of the lower range with the lower end of the higher range."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-041",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C7"
+   ],
+   "family": "two-sample-not-supported",
+   "signature": "same population, A 38 +/- 4.3 (33.7-42.3, n 500), B 35 +/- 2.5 (32.5-37.5, n 1,500); NOT supported: \"must be between 33.7 and 37.5\"; true: 37 in both, 40 in A only, B more precise",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two different random samples were selected from the adults in the same county, and each was used to estimate the percent of all adults in the county who have a library card. The results are shown in the table.<table class=\"dt\"><tr><th></th><th>Sample size</th><th>Estimate</th><th>Margin of error</th></tr><tr><th>Sample A</th><td>500</td><td>38%</td><td>4.3%</td></tr><tr><th>Sample B</th><td>1,500</td><td>35%</td><td>2.5%</td></tr></table>Which of the following statements is NOT supported by these results?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "A value of 37% for the county percent is plausible according to each sample.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "37% is inside 33.7% to 42.3% (A) and inside 32.5% to 37.5% (B), so this IS supported."
+    },
+    {
+     "key": "B",
+     "text": "A value of 40% for the county percent is plausible according to Sample A but not Sample B.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "40% is inside A’s range but above B’s top, 37.5%, so this IS supported."
+    },
+    {
+     "key": "C",
+     "text": "The percent of all adults in the county who have a library card must be between 33.7% and 37.5%.",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Sample B most likely gives a more precise estimate than Sample A does.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "Sample B is larger and has the smaller margin of error, so this IS supported."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Each range lists PLAUSIBLE values; even where they overlap, nothing is certain.",
+    "steps": "The question asks which statement goes beyond what the samples show.<br>A: $38\\% \\pm 4.3\\%$ gives 33.7% to 42.3% <span class=\"nt\">(plausible values from A)</span><br>B: $35\\% \\pm 2.5\\%$ gives 32.5% to 37.5% <span class=\"nt\">(plausible values from B)</span><br>37%: in both ranges <span class=\"nt\">(supported)</span><br>40%: in A, above B’s top 37.5% <span class=\"nt\">(supported)</span><br>B: 1,500 adults, margin 2.5% < 4.3% <span class=\"nt\">(more precise, supported)</span><br>The overlap 33.7% to 37.5% is where values are plausible for BOTH samples, but plausible is not certain. “Must be” is too strong, so that statement is NOT supported.",
+    "check": "Three statements check out with the ranges; only the “must” claim has no support ✓",
+    "be_careful": "The overlap of two plausible ranges is still only plausible.",
+    "desmos": "Not needed.",
+    "another_way": "Look for absolute words like “must”, “exactly”, or “every”, then test them against what a margin of error can promise."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-042",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C4"
+   ],
+   "family": "complement-max-to-boxes",
+   "signature": "7,500 households, HAVE internet 78% +/- 3% -> without 19% to 25% -> 1,875 kits -> boxes of 40 -> 47; common wrong 42, 46",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A city has 7,500 households. Based on a random sample, it is estimated that 78% of the city’s households have home internet service, with an associated margin of error of 3%. The city will give one free router kit to each household without home internet service, and it wants to buy enough kits for the greatest plausible number of such households. If the kits come only in boxes of 40, what is the least number of boxes the city should buy?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "47"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "42",
+     "error_type": "concept",
+     "misconception": "D2",
+     "feedback": "42 boxes covers the ESTIMATE of 22% (1,650 households), not the greatest plausible number."
+    },
+    {
+     "value": "46",
+     "error_type": "slip",
+     "misconception": "D6",
+     "feedback": "$1{,}875 \\div 40 = 46.875$. 46 boxes holds only 1,840 kits, which is not enough."
+    }
+   ],
+   "solution": {
+    "key_idea": "The greatest plausible number WITHOUT internet comes from the least plausible percent WITH internet.",
+    "steps": "The question asks for the least number of boxes of 40 kits that covers the greatest plausible number of households without internet.<br>Step 1: Plausible percents with internet.<br>$78\\% - 3\\% = 75\\%$ to $78\\% + 3\\% = 81\\%$ <span class=\"nt\">(estimate $\\pm$ margin)</span><br>Step 2: Greatest plausible percent without internet.<br>$100\\% - 75\\% = 25\\%$ <span class=\"nt\">(the least WITH gives the most WITHOUT)</span><br>Step 3: Households.<br>$0.25 \\times 7{,}500 = 1{,}875$ <span class=\"nt\">(kits needed)</span><br>Step 4: Boxes.<br>$1{,}875 \\div 40 = 46.875$ <span class=\"nt\">(not a whole number of boxes)</span><br>round UP to 47 <span class=\"nt\">(46 boxes hold only 1,840 kits)</span>",
+    "check": "$47 \\times 40 = 1{,}880 \\ge 1{,}875$ ✓ and $46 \\times 40 = 1{,}840 < 1{,}875$ ✓",
+    "be_careful": "Two finish-line traps: the complement swaps the ends, and boxes must round UP.",
+    "desmos": "Not needed.",
+    "another_way": "Estimate without is 22%; the margin of 3% applies to it too, so the greatest is 25%."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-043",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "count-range-to-sample-count",
+   "signature": "50,000 items, plausible defective 600 to 1,400, random sample of 400 -> center 1,000 = 2% -> 8 in sample; traps 2, 11, 1,000",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A factory produced 50,000 light bulbs last month. Based on a random sample of 400 of these bulbs, a quality engineer concluded that the plausible number of defective bulbs among all 50,000 is from 600 to 1,400. This range comes from the percent of defective bulbs in the sample plus or minus a margin of error. How many defective bulbs were in the sample?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$2$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "2 is the PERCENT of bulbs in the sample that were defective, not the number."
+    },
+    {
+     "key": "B",
+     "text": "$8$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$11$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "This uses the upper end, $\\frac{1{,}400}{50{,}000} = 2.8\\%$, of 400 (about 11). The sample percent is the CENTER of the range."
+    },
+    {
+     "key": "D",
+     "text": "$1{,}000$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "1,000 is the estimated number of defective bulbs among all 50,000, not in the sample of 400."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The center of the range is the estimate, and the estimate is the sample percent.",
+    "steps": "What does the question ask? It asks how many defective bulbs were in the sample.<br>This works backward: from the population range to the sample.<br>The question asks for the number of defective bulbs among the 400 sampled bulbs.<br>Step 1: Center of the range.<br>$\\frac{600 + 1{,}400}{2} = 1{,}000$ <span class=\"nt\">(estimated defective bulbs in all 50,000)</span><br>Step 2: As a percent.<br>$\\frac{1{,}000}{50{,}000} = 0.02 = 2\\%$ <span class=\"nt\">(this is the sample percent)</span><br>Step 3: Back to the sample.<br>$0.02 \\times 400 = 8$ <span class=\"nt\">(defective bulbs in the sample)</span>",
+    "check": "$\\frac{8}{400} = 2\\%$, and $2\\% \\times 50{,}000 = 1{,}000$, the center of 600 and 1,400 ✓",
+    "be_careful": "The answer lives in the SAMPLE of 400, the opposite direction from the usual scale-up.",
+    "desmos": "Not needed.",
+    "another_way": "Each sampled bulb stands for $\\frac{50{,}000}{400} = 125$ bulbs, so the sample had $\\frac{1{,}000}{125} = 8$ defective bulbs."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-044",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C6"
+   ],
+   "family": "bias-not-in-margin",
+   "signature": "online 20,000 volunteers 62 +/- 0.7 vs random 600 at 51 +/- 4; key: random more trustworthy, MOE does not measure bias; traps smaller margin wins, must be miscalculated, average",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two groups estimated the percent of all adults in a state who support a new highway. Group 1 posted an online survey that 20,000 adults in the state chose to complete and reported 62%, with an associated margin of error of 0.7%. Group 2 selected 600 adults in the state at random and reported 51%, with an associated margin of error of 4%. Which of the following is the most appropriate conclusion?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Group 1’s estimate is more trustworthy, because its margin of error is much smaller.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "The small margin reflects only the large size. It says nothing about who chose to answer."
+    },
+    {
+     "key": "B",
+     "text": "Because the two plausible ranges do not overlap, at least one of the margins of error must have been calculated incorrectly.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Both margins can be computed correctly. The ranges disagree because Group 1’s sample is biased."
+    },
+    {
+     "key": "C",
+     "text": "The best estimate is about 56.5%, the average of the two estimates, because both groups surveyed adults in the state.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "Averaging mixes a biased estimate into a trustworthy one; the result is not a valid estimate."
+    },
+    {
+     "key": "D",
+     "text": "Group 2’s estimate is more trustworthy, because a margin of error does not account for the bias of a self-selected sample.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "A margin of error measures random sampling variation only; it cannot detect or fix bias.",
+    "steps": "The question asks which estimate to trust for ALL adults in the state.<br>Group 1: $62\\% \\pm 0.7\\%$ gives 61.3% to 62.7% <span class=\"nt\">(narrow, but from volunteers)</span><br>Group 2: $51\\% \\pm 4\\%$ gives 47% to 55% <span class=\"nt\">(wider, but random)</span><br>Adults who choose to answer an online survey about a highway may feel more strongly than others, so Group 1’s sample can be biased.<br>A margin of error is computed as if the sample were random. A small margin from a biased sample only makes a wrong answer look precise.<br>So Group 2’s estimate is more trustworthy.",
+    "check": "The key is the only choice that uses how the samples were selected ✓",
+    "be_careful": "Precision (small margin) and accuracy (no bias) are different things.",
+    "desmos": "Not needed.",
+    "another_way": "Picture a scale that is always 5 pounds off but very steady. Its readings agree closely with each other, yet every one is wrong."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-045",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C3"
+   ],
+   "family": "least-moe-for-claim",
+   "signature": "2,000 hens, claim total at least 11,000 eggs/week -> mean 5.5; sample mean 5.3 -> least MOE .2; common wrong 5.5, .1",
+   "abilities": [
+    "R",
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 120,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A farm has 2,000 hens. The farm claims that its hens lay a total of at least 11,000 eggs per week. Based on a random sample of the hens, the mean number of eggs laid per hen per week is estimated to be 5.3. The estimate will be reported with a margin of error. What is the least margin of error, in eggs per hen per week, for which the farm’s claim would be consistent with the plausible values for the mean?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      ".2",
+      "0.2",
+      "1/5"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "5.5",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "5.5 eggs per hen is the mean the claim requires, not the margin of error."
+    },
+    {
+     "value": ".1",
+     "error_type": "concept",
+     "misconception": "D7",
+     "feedback": "This halves the gap as if it were a width. The upper end, $5.3 + m$, alone must reach 5.5."
+    }
+   ],
+   "solution": {
+    "key_idea": "Turn the claim about a total into a claim about the mean, then ask how far the upper end must reach.",
+    "steps": "The question asks for the smallest margin $m$ that makes the claim plausible.<br>Step 1: Claim as a mean.<br>$\\frac{11{,}000}{2{,}000} = 5.5$ <span class=\"nt\">(at least 5.5 eggs per hen per week)</span><br>Step 2: Plausible values for the mean.<br>from $5.3 - m$ to $5.3 + m$ <span class=\"nt\">(estimate $\\pm$ margin)</span><br>Step 3: The claim is plausible when some value of at least 5.5 is in the range.<br>$5.3 + m \\ge 5.5$ <span class=\"nt\">(the upper end must reach 5.5)</span><br>$m \\ge 0.2$ <span class=\"nt\">(subtract 5.3)</span><br>The least margin of error is 0.2 egg per hen per week.",
+    "check": "With $m = 0.2$ the range is 5.1 to 5.5, which includes 5.5, and $5.5 \\times 2{,}000 = 11{,}000$ ✓",
+    "be_careful": "Compare means with means: the claim is about a total for 2,000 hens.",
+    "desmos": "Not needed.",
+    "another_way": "Work in totals: the estimated total is $5.3 \\times 2{,}000 = 10{,}600$, which is 400 eggs short; 400 eggs over 2,000 hens is 0.2 egg per hen."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-046",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C1"
+   ],
+   "family": "stratified-reverse",
+   "signature": "under 40: 3,000 adults, 42 of 60 yes; 40+: 5,000 adults, 40 sampled; town estimate 3,850 -> 14 of the 40; traps 6 (pooled), 21 (wrong sample size), 28 (younger rate)",
+   "abilities": [
+    "R",
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A town has 3,000 adults under age 40 and 5,000 adults age 40 or older. A researcher selected 60 adults under age 40 at random and, separately, 40 adults age 40 or older at random. Of the 60 younger adults selected, 42 said they would use a new skate park. Using a separate estimate for each age group, the researcher estimated that 3,850 adults in the town would use the skate park. How many of the 40 older adults selected said they would use the skate park?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "$6$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D11",
+     "feedback": "This pools the samples: 3,850 is about 48% of 8,000, and 48 of 100 minus 42 is 6. The groups were sampled separately, so they must be estimated separately."
+    },
+    {
+     "key": "B",
+     "text": "$14$",
+     "correct": true
+    },
+    {
+     "key": "C",
+     "text": "$21$",
+     "correct": false,
+     "error_type": "slip",
+     "misconception": "D3",
+     "feedback": "This applies the older group’s rate, 35%, to 60, the size of the younger sample."
+    },
+    {
+     "key": "D",
+     "text": "$28$",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "This applies the younger group’s rate, 70%, to the 40 older adults."
+    }
+   ],
+   "answer": {
+    "mcq": "B"
+   },
+   "solution": {
+    "key_idea": "The town estimate is the sum of two group estimates. Remove the younger group’s part to find the older group’s rate.",
+    "steps": "What does the question ask? It asks how many of the 40 older adults selected said they would use the skate park.<br>Each group was estimated from its own sample, and the two estimates were added to get 3,850.<br>The question asks how many of the 40 older adults in the sample said yes.<br>Step 1: The younger group’s estimate.<br>$\\frac{42}{60} \\times 3{,}000 = 0.70 \\times 3{,}000 = 2{,}100$ <span class=\"nt\">(younger adults)</span><br>Step 2: The older group’s estimate.<br>$3{,}850 - 2{,}100 = 1{,}750$ <span class=\"nt\">(older adults)</span><br>$\\frac{1{,}750}{5{,}000} = 0.35$ <span class=\"nt\">(rate in the older group)</span><br>Step 3: Back to the sample.<br>$0.35 \\times 40 = 14$ <span class=\"nt\">(older adults in the sample)</span>",
+    "check": "$\\frac{14}{40} \\times 5{,}000 + \\frac{42}{60} \\times 3{,}000 = 1{,}750 + 2{,}100 = 3{,}850$ ✓",
+    "be_careful": "The researcher chose the sample sizes 60 and 40, so the combined sample does not mirror the town; pooling gives a wrong rate.",
+    "desmos": "Not needed.",
+    "another_way": "Let $k$ be the count: $2{,}100 + \\frac{k}{40} \\times 5{,}000 = 3{,}850$, so $125k = 1{,}750$ and $k = 14$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-047",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C5"
+   ],
+   "family": "size-and-scope-combined",
+   "signature": "random 400 teens in Oakdale city -> MOE 5%; redo with 4,000 random Oakdale teens; key smaller MOE but still Oakdale only; traps state now, same MOE, larger MOE",
+   "abilities": [
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A researcher selected 400 teenagers at random from all teenagers in the city of Oakdale and estimated the percent who have a part-time job, with an associated margin of error of 5%. The researcher now plans to select 4,000 teenagers at random from all teenagers in Oakdale and ask the same question, in order to describe teenagers in the whole state. Which of the following is most likely true about the new survey?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Its margin of error will be less than 5%, but its results will still apply only to teenagers in Oakdale.",
+     "correct": true
+    },
+    {
+     "key": "B",
+     "text": "Its margin of error will be less than 5%, and its results will apply to teenagers in the whole state.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "A bigger sample from Oakdale is still a sample of Oakdale only. Size does not widen the population."
+    },
+    {
+     "key": "C",
+     "text": "Its margin of error will still be 5%, because the teenagers are selected from the same city.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "The same population does not mean the same margin; ten times as many teens gives a more precise estimate."
+    },
+    {
+     "key": "D",
+     "text": "Its margin of error will be greater than 5%, because a larger group of teenagers varies more.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D10",
+     "feedback": "This reverses the effect. A larger random sample gives a smaller margin of error."
+    }
+   ],
+   "answer": {
+    "mcq": "A"
+   },
+   "solution": {
+    "key_idea": "Sample size controls precision; the sampling frame controls who the results describe. Changing one does not change the other.",
+    "steps": "The question asks two things: what happens to the margin of error, and whom the results describe.<br>Margin of error: the sample grows from 400 to 4,000, still random, so the estimate becomes more precise and the margin most likely drops below 5%.<br>Scope: every teenager selected still comes from Oakdale. Teens elsewhere in the state could never be chosen.<br>So the margin of error will be smaller, but the results still describe only Oakdale teenagers.",
+    "check": "Each wrong choice gets exactly one of the two parts wrong ✓",
+    "be_careful": "The goal of describing the whole state does not change who could be selected.",
+    "desmos": "Not needed.",
+    "another_way": "Ask separately: is it bigger? (yes, smaller margin) Is it from a wider group? (no, same city)."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-048",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C7"
+   ],
+   "family": "strongest-evidence-above-cutoff",
+   "signature": "4 studies (52,3),(54,5),(51.5,1),(56,7); only Study 3 range excludes 50 -> strongest evidence mean > 50; traps largest estimate, smallest margin-ignorant",
+   "abilities": [
+    "R",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "A company claims that the mean battery life of its new phone is greater than 50 hours. Four independent studies each tested a random sample of the phones. The results are shown in the table.<table class=\"dt\"><tr><th></th><th>Estimated mean (hours)</th><th>Margin of error (hours)</th></tr><tr><th>Study 1</th><td>52.0</td><td>3.0</td></tr><tr><th>Study 2</th><td>54.0</td><td>5.0</td></tr><tr><th>Study 3</th><td>51.5</td><td>1.0</td></tr><tr><th>Study 4</th><td>56.0</td><td>7.0</td></tr></table>Which study provides the strongest evidence that the mean battery life of all the company’s new phones is greater than 50 hours?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Study 1",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Study 1’s plausible values run from 49.0 to 55.0, which include values at or below 50."
+    },
+    {
+     "key": "B",
+     "text": "Study 2",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D16",
+     "feedback": "Study 2’s plausible values run from 49.0 to 59.0, which include values at or below 50."
+    },
+    {
+     "key": "C",
+     "text": "Study 3",
+     "correct": true
+    },
+    {
+     "key": "D",
+     "text": "Study 4",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D14",
+     "feedback": "Study 4 has the largest estimate, but its plausible values run from 49.0 to 63.0, which include values below 50."
+    }
+   ],
+   "answer": {
+    "mcq": "C"
+   },
+   "solution": {
+    "key_idea": "Evidence that the mean is above 50 requires the WHOLE plausible range to be above 50, so look at each lower end.",
+    "steps": "What does the question ask? It asks which study gives the strongest evidence that the mean battery life is greater than 50 hours.<br>A study supports the claim only if its whole plausible range is above 50 hours.<br>The question asks which study rules out a mean of 50 hours or less.<br>Study 1: $52.0 - 3.0 = 49.0$ <span class=\"nt\">(lower end below 50)</span><br>Study 2: $54.0 - 5.0 = 49.0$ <span class=\"nt\">(lower end below 50)</span><br>Study 3: $51.5 - 1.0 = 50.5$ <span class=\"nt\">(lower end ABOVE 50)</span><br>Study 4: $56.0 - 7.0 = 49.0$ <span class=\"nt\">(lower end below 50)</span><br>Only Study 3 has every plausible value above 50, even though its estimate is the smallest.",
+    "check": "Study 3 range: 50.5 to 52.5, entirely above 50 ✓",
+    "be_careful": "The largest estimate is not the strongest evidence when its margin of error is also large.",
+    "desmos": "Not needed.",
+    "another_way": "For each study ask: is the estimate more than one margin of error above 50? $51.5 - 50 = 1.5 > 1.0$ only for Study 3."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-049",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C7"
+   ],
+   "family": "count-ranges-overlap",
+   "signature": "Town A 4,000 at 30 +/- 4 -> 1,040-1,360; Town B 10,000 at 15 +/- 3 -> 1,200-1,800: overlap, cannot conclude; traps percent, estimate counts, different bases",
+   "abilities": [
+    "R",
+    "S",
+    "J"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 130,
+   "difficulty_measured": null,
+   "format": "mcq",
+   "stem": "Two towns each surveyed a random sample of their adults about whether they commute by bicycle. Town A has 4,000 adults, and its survey estimated 30%, with an associated margin of error of 4%. Town B has 10,000 adults, and its survey estimated 15%, with an associated margin of error of 3%. Which of the following is the most appropriate conclusion about the NUMBER of adults who commute by bicycle in the two towns?",
+   "stem_after_figure": "",
+   "figures": [],
+   "choices": [
+    {
+     "key": "A",
+     "text": "Town A has more such adults, because its estimated percent is twice Town B’s.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D20",
+     "feedback": "Percents of different-sized towns cannot be compared as counts. Town B is 2.5 times as large."
+    },
+    {
+     "key": "B",
+     "text": "Town B has more such adults, because its estimate, 1,500, is greater than Town A’s estimate, 1,200.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D26",
+     "feedback": "The estimates ignore the margins. Plausible values for A reach 1,360 and for B go down to 1,200, so A could have more."
+    },
+    {
+     "key": "C",
+     "text": "The towns cannot be compared at all, because the two percents are based on different populations.",
+     "correct": false,
+     "error_type": "concept",
+     "misconception": "D27",
+     "feedback": "Converting each percent to a count of its own town makes the comparison possible."
+    },
+    {
+     "key": "D",
+     "text": "Neither town can be said to have more, because the plausible counts overlap.",
+     "correct": true
+    }
+   ],
+   "answer": {
+    "mcq": "D"
+   },
+   "solution": {
+    "key_idea": "To compare numbers of people, turn each plausible percent range into a plausible count range for its own town, then check for overlap.",
+    "steps": "The question asks which town has more bicycle commuters, as a number.<br>Step 1: Town A.<br>$30\\% \\pm 4\\%$ gives 26% to 34% <span class=\"nt\">(plausible percents)</span><br>$0.26 \\times 4{,}000 = 1{,}040$ to $0.34 \\times 4{,}000 = 1{,}360$ <span class=\"nt\">(plausible counts)</span><br>Step 2: Town B.<br>$15\\% \\pm 3\\%$ gives 12% to 18% <span class=\"nt\">(plausible percents)</span><br>$0.12 \\times 10{,}000 = 1{,}200$ to $0.18 \\times 10{,}000 = 1{,}800$ <span class=\"nt\">(plausible counts)</span><br>Step 3: Compare.<br>1,200 to 1,360 is in both ranges <span class=\"nt\">(the count ranges overlap)</span><br>For example, A could have 1,350 while B has 1,250. So neither town can be said to have more.",
+    "check": "1,300 is plausible for both towns ✓",
+    "be_careful": "Higher percent does not mean more people, and higher estimate does not mean certainly more.",
+    "desmos": "Not needed.",
+    "another_way": "Margins in people: A $\\pm 160$ around 1,200; B $\\pm 300$ around 1,500. The gap of 300 is less than $160 + 300 = 460$, so the ranges overlap."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  },
+  {
+   "id": "QB-P6-050",
+   "version": 1,
+   "skill": {
+    "code": "P6",
+    "domain": "psda",
+    "cb_skill": "Inference from sample statistics and margin of error"
+   },
+   "level": "H+",
+   "concepts": [
+    "P6.C2"
+   ],
+   "family": "reverse-population-from-end",
+   "signature": "estimate 40% +/- 5%; least plausible count 630 -> N = 1,800 -> estimated count 720; common wrong 1,800, 810",
+   "abilities": [
+    "R",
+    "S"
+   ],
+   "desmos": "proof",
+   "time_est_sec": 110,
+   "difficulty_measured": null,
+   "format": "spr",
+   "stem": "A gym surveyed a random sample of its members and estimated that 40% of all its members use the pool each week, with an associated margin of error of 5%. Based on this, the least plausible number of members who use the pool each week is 630. What is the estimated number of members who use the pool each week?",
+   "stem_after_figure": "",
+   "figures": [],
+   "answer": {
+    "spr": {
+     "values": [
+      "720"
+     ],
+     "decimal_rule": "bluebook"
+    }
+   },
+   "common_wrong": [
+    {
+     "value": "1800",
+     "error_type": "slip",
+     "misconception": "D2",
+     "feedback": "1,800 is the total number of members, found along the way."
+    },
+    {
+     "value": "810",
+     "error_type": "slip",
+     "misconception": "D10",
+     "feedback": "810 is the GREATEST plausible number (45% of 1,800), not the estimate."
+    }
+   ],
+   "solution": {
+    "key_idea": "The least plausible count matches the least plausible percent; which recovers the number of members first.",
+    "steps": "What does the question ask? It asks for the estimated number of members who use the pool each week.<br>The 630 belongs to the lowest plausible percent, which lets us find how many members the gym has.<br>The question asks for the estimated number of pool users (40% of all members).<br>Step 1: Least plausible percent.<br>$40\\% - 5\\% = 35\\%$ <span class=\"nt\">(estimate $-$ margin)</span><br>Step 2: Number of members.<br>Let $N$ = the number of members.<br>$0.35N = 630$ <span class=\"nt\">(least plausible count)</span><br>$N = 1{,}800$ <span class=\"nt\">(divide by 0.35)</span><br>Step 3: Estimate.<br>$0.40 \\times 1{,}800 = 720$ <span class=\"nt\">(estimated pool users)</span>",
+    "check": "$720 - 0.05 \\times 1{,}800 = 720 - 90 = 630$ ✓",
+    "be_careful": "630 matches 35%, not 40%; dividing 630 by 0.40 gives the wrong membership.",
+    "desmos": "Not needed.",
+    "another_way": "Ratio: estimate : least $= 40 : 35 = 8 : 7$, so the estimate is $630 \\times \\frac{8}{7} = 720$."
+   },
+   "provenance": {
+    "origin": "icms-original",
+    "created": "2026-10-23"
+   }
+  }
+ ]
+}

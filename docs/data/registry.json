@@ -1,0 +1,8 @@
+{
+  "subjects": [
+    {
+      "id": "sat-math",
+      "file": "data/subjects/sat-math.json"
+    }
+  ]
+}
